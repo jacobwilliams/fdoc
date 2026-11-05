@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>add_entry &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">subroutine</span>add_entry<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> add_entry(<span class="intent attr-inout" title="intent(inout)">entries</span>, <span class="intent attr-in" title="intent(in)">key</span>, <span class="intent attr-in" title="intent(in)">value</span>)</div>
+<div class="doc">
+<p>Set <code>key</code> in <code>entries</code>, replacing any entry it has.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-entries"><td class="name">entries</td><td class="type">type(<a href="../type/map_entry_t.html">map_entry_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the map</p></td></tr>
+<tr id="variable-key"><td class="name">key</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the key</p></td></tr>
+<tr id="variable-value"><td class="name">value</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>its value</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/add_intrinsic_modules.html">add_intrinsic_modules</a></li><li><a href="../proc/set_map.html">set_map</a></li></ul>
+<div class="graph"><svg width="859pt" height="187pt"
+ viewBox="0 0 859 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 182.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_entry.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-138.6" width="72.2" height="21.6"/><text x="36.1" y="-123.1">add_entry</text></a><a href="../proc/set_map.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="108.2" y="-119.6" width="64.3" height="21.6"/><text x="140.4" y="-104.1">set_map</text></a><path d="M107.8,-114.7C99.4,-116.2 90.1,-118 81.1,-119.6"/><polygon fill="#8a93a5" points="80.9,-117.2 74.5,-120.9 81.8,-122"/><a href="../proc/add_intrinsic_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="208.5" y="-168.6" width="143.8" height="21.6"/><text x="280.4" y="-153.1">add_intrinsic_modules</text></a><path d="M208,-149C166.9,-143.9 116.6,-137.6 81.2,-133.3"/><polygon fill="#8a93a5" points="81.8,-130.9 74.5,-132.4 81.1,-135.7"/><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="243.2" y="-119.6" width="74.4" height="21.6"/><text x="280.4" y="-104.1">set_option</text></a><path d="M242.7,-108.8C223.8,-108.8 200.7,-108.8 181.3,-108.8"/><polygon fill="#8a93a5" points="181.5,-106.4 174.5,-108.8 181.5,-111.3"/><a href="../proc/check_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="661" y="-178.6" width="100.4" height="21.6"/><text x="711.2" y="-163.1">check_settings</text></a><path d="M660.6,-166.6C587.1,-164.9 448.6,-161.7 360.9,-159.7"/><polygon fill="#8a93a5" points="361.1,-157.2 354.1,-159.5 361,-162.1"/><a href="../proc/apply_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="389.7" y="-139.6" width="78" height="21.6"/><text x="428.7" y="-124.1">apply_args</text></a><path d="M389.2,-123.5C370,-120.9 346.5,-117.7 326.4,-115"/><polygon fill="#8a93a5" points="326.8,-112.5 319.5,-114 326.1,-117.4"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="668.6" y="-100.6" width="85.2" height="21.6"/><text x="711.2" y="-85.1">load_project</text></a><path d="M668.3,-91.7C587.3,-95.2 409.8,-103.1 326.4,-106.8"/><polygon fill="#8a93a5" points="326.3,-104.4 319.4,-107.1 326.5,-109.3"/><a href="../proc/load_fpm_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="505.1" y="-61.6" width="119.9" height="21.6"/><text x="565.1" y="-46.1">load_fpm_settings</text></a><path d="M668.5,-78.5C652,-74 632.7,-68.8 615.5,-64.2"/><polygon fill="#8a93a5" points="616.5,-61.9 609.1,-62.5 615.3,-66.6"/><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="388.2" y="-61.6" width="80.9" height="21.6"/><text x="428.7" y="-46.1">apply_table</text></a><path d="M399.5,-62C376.2,-71.2 342.9,-84.4 317.6,-94.4"/><polygon fill="#8a93a5" points="316.7,-92.1 311.1,-97 318.6,-96.7"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="797.4" y="-119.6" width="54" height="21.6"/><text x="824.4" y="-104.1">run</text></a><path d="M803.4,-120C791.3,-126.7 775.5,-135.3 761.4,-142.8 755.1,-146.1 748.3,-149.7 741.8,-153"/><polygon fill="#8a93a5" points="740.8,-150.7 735.7,-156.1 743.1,-155.1"/><path d="M797,-110.1C731.2,-113.5 559.6,-122.2 476.3,-126.4"/><polygon fill="#8a93a5" points="476.5,-124 469.6,-126.8 476.7,-128.9"/><path d="M797.1,-104.3C786.6,-102.5 774.3,-100.4 762.3,-98.4"/><polygon fill="#8a93a5" points="762.9,-96 755.5,-97.2 762,-100.8"/><a href="../proc/apply_toml_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="506.9" y="-21.6" width="116.3" height="21.6"/><text x="565.1" y="-6.1">apply_toml_string</text></a><path d="M808.3,-97.6C796.1,-89.1 778.3,-77.5 761.4,-69.8 717.2,-49.6 664.2,-34.1 624.6,-24.1"/><polygon fill="#8a93a5" points="625.3,-21.7 617.9,-22.4 624.1,-26.5"/><path d="M504.7,-50.8C495.7,-50.8 486.4,-50.8 477.7,-50.8"/><polygon fill="#8a93a5" points="477.9,-48.4 470.9,-50.8 477.9,-53.3"/><path d="M526.3,-22C510.4,-26.8 491.8,-32.3 475.2,-37.3"/><polygon fill="#8a93a5" points="474.7,-34.9 468.6,-39.2 476.1,-39.6"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> add_entry(entries, key, <span class="k">value</span>)
+    <span class="k">type</span>(map_entry_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: entries(:) <span class="d">!! the map</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key                         <span class="d">!! the key</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">value</span>                       <span class="d">!! its value</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(entries)
+        <span class="k">if</span> (entries(k)%key == key) <span class="k">then</span>
+            entries(k)%<span class="k">value</span> = <span class="k">value</span>
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    entries = [entries, map_entry_t(key, <span class="k">value</span>)]
+<span class="k">end</span> <span class="k">subroutine</span> add_entry</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rename_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-local"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>local</a></li><li><a href="#variable-used"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>used</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_model.f90.html">fdoc_model.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_model.html">fdoc_model</a></div>
+<h1><span class="kind">type</span>rename_t</h1>
+<div class="doc">
+<p>A name in the <code>only</code> list of a <code>use</code> statement.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-local"><td class="name">local</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the name in the using scope, in lowercase</p></td></tr>
+<tr id="variable-used"><td class="name">used</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the name in the used module, in lowercase</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Argument of (1)</h3>
+<ul class="chips kinds"><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/read_use_spec.html">read_use_spec</a></li></ul>
+<h3>Component of (1)</h3>
+<ul class="chips kinds"><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/use_t.html">use_t</a></li></ul>
+<h2 id="inherited-by">Inherited by</h2>
+<div class="graph"><svg width="979pt" height="72pt"
+ viewBox="0 0 979 72" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 68)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/rename_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-39.6" width="69.3" height="21.6"/><text x="34.7" y="-24.1">rename_t</text></a><a href="../type/use_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="148.1" y="-39.6" width="54" height="21.6"/><text x="175.1" y="-24.1">use_t</text></a><path stroke-dasharray="5,2" d="M147.7,-28.8C128.3,-28.8 101.3,-28.8 78.7,-28.8"/><polygon fill="#8a93a5" points="78.8,-26.4 71.8,-28.8 78.8,-31.3"/><text x="108.7" y="-31.4" font-size="11" fill="#8a93a5">renames</text><a href="../type/entity_more_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="261.4" y="-39.6" width="93.2" height="21.6"/><text x="307.9" y="-24.1">entity_more_t</text></a><path stroke-dasharray="5,2" d="M261.2,-28.8C244.6,-28.8 226.3,-28.8 210.8,-28.8"/><polygon fill="#8a93a5" points="211.1,-26.4 204.1,-28.8 211.1,-31.3"/><text x="231.7" y="-31.4" font-size="11" fill="#8a93a5">uses</text><a href="../type/entity_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="415.6" y="-39.6" width="56.3" height="21.6"/><text x="443.7" y="-24.1">entity_t</text></a><path stroke-dasharray="5,2" d="M415.3,-28.8C400.3,-28.8 381.1,-28.8 363.1,-28.8"/><polygon fill="#8a93a5" points="363.5,-26.4 356.5,-28.8 363.5,-31.3"/><text x="385" y="-31.4" font-size="11" fill="#8a93a5">more</text><a href="../type/entity_box_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="514" y="-39.6" width="84.5" height="21.6"/><text x="556.3" y="-24.1">entity_box_t</text></a><path stroke-dasharray="5,2" d="M513.8,-28.8C502.9,-28.8 491.2,-28.8 480.6,-28.8"/><polygon fill="#8a93a5" points="480.9,-26.4 473.9,-28.8 480.9,-31.3"/><text x="492.9" y="-31.4" font-size="11" fill="#8a93a5">e</text><a href="../type/entity_list_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="652.2" y="-39.6" width="79.4" height="21.6"/><text x="692" y="-24.1">entity_list_t</text></a><path stroke-dasharray="5,2" d="M651.9,-28.8C638,-28.8 622.1,-28.8 607.4,-28.8"/><polygon fill="#8a93a5" points="607.4,-26.4 600.4,-28.8 607.4,-31.3"/><text x="625.4" y="-31.4" font-size="11" fill="#8a93a5">box</text><a href="../type/project_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="795.9" y="-61.6" width="64.3" height="21.6"/><text x="828.1" y="-46.1">project_t</text></a><path stroke-dasharray="5,2" d="M795.6,-45.6C779.1,-42.9 758.5,-39.6 740.1,-36.5"/><polygon fill="#8a93a5" points="740.7,-34.1 733.4,-35.4 739.9,-39"/><text x="756.4" y="-42.4" font-size="11" fill="#8a93a5">list</text><a href="../type/link_context_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="781.1" y="-21.6" width="93.9" height="21.6"/><text x="828.1" y="-6.1">link_context_t</text></a><path stroke-dasharray="5,2" d="M780.7,-10.8C770.4,-11.2 759.6,-12.1 749.7,-13.6 746,-14.2 742.2,-14.9 738.5,-15.7"/><polygon fill="#8a93a5" points="738,-13.2 731.7,-17.2 739.1,-18"/><text x="756.4" y="-16.2" font-size="11" fill="#8a93a5">list</text><a href="../type/site_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="917.1" y="-61.6" width="54" height="21.6"/><text x="944.1" y="-46.1">site_t</text></a><path stroke-dasharray="5,2" d="M916.7,-50.8C902.4,-50.8 884.6,-50.8 868.7,-50.8"/><polygon fill="#8a93a5" points="869.2,-48.4 862.2,-50.8 869.2,-53.3"/><text x="896.1" y="-53.4" font-size="11" fill="#8a93a5">p</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span>, <span class="k">public</span> :: rename_t
+    <span class="d">!! A name in the `only` list of a `use` statement.</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: used   <span class="d">!! the name in the used module, in lowercase</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: local  <span class="d">!! the name in the using scope, in lowercase</span>
+<span class="k">end</span> <span class="k">type</span> rename_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

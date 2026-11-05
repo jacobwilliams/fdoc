@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>parse_procedure_header &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_decl.f90.html">fdoc_decl.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_decl.html">fdoc_decl</a></div>
+<h1><span class="kind">subroutine</span>parse_procedure_header</h1>
+<div class="sig"><span class="k">subroutine</span> parse_procedure_header(<span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-out" title="intent(out)">h</span>)</div>
+<div class="doc">
+<p>Read a <code>subroutine</code> or <code>function</code> statement.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-line"><td class="name">line</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the statement</p></td></tr>
+<tr id="variable-h"><td class="name">h</td><td class="type">type(<a href="../type/procedure_header_t.html">procedure_header_t</a>)</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the result</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/word_at.html">word_at</a></li><li><a href="../proc/push.html">push</a></li><li><a href="../proc/original_prefix.html">original_prefix</a></li><li><a href="../proc/remove_blanks.html">remove_blanks</a></li><li><a href="../proc/closing_paren.html">closing_paren</a></li><li><a href="../proc/strip.html">strip</a></li><li><a href="../proc/top_split.html">top_split</a></li></ul>
+<div class="graph"><svg width="414pt" height="307pt"
+ viewBox="0 0 414 307" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 302.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/parse_procedure_header.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-160.6" width="160.4" height="21.6"/><text x="80.2" y="-145.1">parse_procedure_header</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="211.2" y="-298.6" width="72.9" height="21.6"/><text x="247.7" y="-283.1">lowercase</text></a><path d="M89.8,-161.4C107.4,-184.6 149.9,-236.8 196.4,-267.8 199.1,-269.6 202.1,-271.3 205.1,-272.9"/><polygon fill="#8a93a5" points="204,-275.1 211.3,-275.9 206.1,-270.7"/><a href="../proc/word_at.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="217.3" y="-258.6" width="60.6" height="21.6"/><text x="247.7" y="-243.1">word_at</text></a><path d="M98.4,-161.5C120.6,-176.4 160.7,-202.7 196.4,-222.8 202.5,-226.2 209.1,-229.7 215.5,-232.9"/><polygon fill="#8a93a5" points="214.2,-235 221.5,-235.9 216.3,-230.6"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="343.3" y="-160.6" width="54" height="21.6"/><text x="370.3" y="-145.1">push</text></a><path d="M106.3,-161.5C147.1,-179 230.2,-208 299,-189.8 316.7,-185.1 334.7,-174.8 348.1,-165.8"/><polygon fill="#8a93a5" points="349.4,-167.8 353.7,-161.8 346.6,-163.8"/><a href="../proc/original_prefix.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="200" y="-180.6" width="95.3" height="21.6"/><text x="247.7" y="-165.1">original_prefix</text></a><path d="M161,-159.4C171.3,-160.7 181.5,-161.9 191.3,-163.1"/><polygon fill="#8a93a5" points="190.9,-165.5 198.1,-163.9 191.5,-160.7"/><a href="../proc/remove_blanks.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="196.4" y="-140.6" width="102.6" height="21.6"/><text x="247.7" y="-125.1">remove_blanks</text></a><path d="M161,-140.2C170,-139.1 179.1,-138 187.8,-136.9"/><polygon fill="#8a93a5" points="187.8,-139.4 194.5,-136.1 187.2,-134.5"/><a href="../proc/closing_paren.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="200" y="-100.6" width="95.3" height="21.6"/><text x="247.7" y="-85.1">closing_paren</text></a><path d="M113.5,-138.1C140.5,-128.3 179.1,-114.3 207.8,-103.9"/><polygon fill="#8a93a5" points="208.4,-106.3 214.2,-101.6 206.7,-101.7"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="343.3" y="-21.6" width="54" height="21.6"/><text x="370.3" y="-6.1">strip</text></a><path d="M88.4,-138C104.2,-113 145.1,-55.1 196.4,-29.8 240.4,-8.1 298.2,-6.3 334.6,-7.9"/><polygon fill="#8a93a5" points="334.3,-10.3 341.4,-8.2 334.5,-5.4"/><a href="../proc/top_split.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="216.3" y="-60.6" width="62.8" height="21.6"/><text x="247.7" y="-45.1">top_split</text></a><path d="M95.8,-138C117,-121.3 158,-90.4 196.4,-69.8 200.1,-67.8 204.1,-65.9 208.1,-64.1"/><polygon fill="#8a93a5" points="209,-66.4 214.5,-61.4 207.1,-61.9"/><path d="M279.4,-59.3C286.1,-62.2 293,-65.6 299,-69.8 323.4,-87 345,-114.4 357.6,-132.2"/><polygon fill="#8a93a5" points="355.3,-133.1 361.3,-137.5 359.4,-130.4"/><path d="M279.4,-39.9C296.5,-34.3 317.8,-27.5 335.4,-21.8"/><polygon fill="#8a93a5" points="335.8,-24.2 341.7,-19.7 334.3,-19.6"/><a href="../proc/top_index.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="335" y="-61.6" width="70.8" height="21.6"/><text x="370.3" y="-46.1">top_index</text></a><path d="M279.4,-50.1C293.7,-50.2 310.9,-50.3 326.4,-50.4"/><polygon fill="#8a93a5" points="326.3,-52.9 333.3,-50.5 326.3,-48"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/open_procedure.html">open_procedure</a></li></ul>
+<div class="graph"><svg width="792pt" height="30pt"
+ viewBox="0 0 792 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/parse_procedure_header.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="160.4" height="21.6"/><text x="80.2" y="-6.1">parse_procedure_header</text></a><a href="../proc/open_procedure.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="196.4" y="-21.6" width="109.1" height="21.6"/><text x="250.9" y="-6.1">open_procedure</text></a><path d="M196.1,-10.8C187.6,-10.8 178.6,-10.8 169.6,-10.8"/><polygon fill="#8a93a5" points="169.8,-8.4 162.8,-10.8 169.8,-13.3"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="341.5" y="-21.6" width="71.5" height="21.6"/><text x="377.2" y="-6.1">open_unit</text></a><path d="M341.3,-10.8C332.7,-10.8 323.3,-10.8 313.9,-10.8"/><polygon fill="#8a93a5" points="314.2,-8.4 307.2,-10.8 314.2,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="449" y="-21.6" width="70.8" height="21.6"/><text x="484.4" y="-6.1">parse_file</text></a><path d="M448.7,-10.8C440,-10.8 430.7,-10.8 421.7,-10.8"/><polygon fill="#8a93a5" points="421.8,-8.4 414.8,-10.8 421.8,-13.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="555.8" y="-21.6" width="138" height="21.6"/><text x="624.7" y="-6.1">load_project_sources</text></a><path d="M555.4,-10.8C546.2,-10.8 537,-10.8 528.4,-10.8"/><polygon fill="#8a93a5" points="528.6,-8.4 521.6,-10.8 528.6,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="729.7" y="-21.6" width="54" height="21.6"/><text x="756.7" y="-6.1">run</text></a><path d="M729.4,-10.8C721.3,-10.8 711.9,-10.8 702.2,-10.8"/><polygon fill="#8a93a5" points="702.5,-8.4 695.5,-10.8 702.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> parse_procedure_header(line, h)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line            <span class="d">!! the statement</span>
+    <span class="k">type</span>(procedure_header_t), <span class="k">intent</span>(out) :: h      <span class="d">!! the result</span>
+    <span class="k">character</span>(<span class="k">len</span>=<span class="k">len</span>(line)) :: low
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: prefix
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: PREFIXES(*) = [<span class="k">character</span>(<span class="k">len</span>=<span class="n">13</span>) :: <span class="s">'impure'</span>, <span class="s">'pure'</span>, <span class="s">'elemental'</span>, <span class="s">'non_recursive'</span>, &amp;
+                                                  <span class="s">'recursive'</span>, <span class="s">'module'</span>]
+    <span class="k">integer</span> :: k, at, <span class="k">open</span>, <span class="k">close</span>, depth, n
+
+    low = lowercase(line)
+    <span class="k">allocate</span> (h%attribs(<span class="n">0</span>), h%args(<span class="n">0</span>))
+    depth = <span class="n">0</span>
+    at = <span class="n">0</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(low)
+        <span class="k">if</span> (low(k:k) == <span class="s">'('</span>) depth = depth + <span class="n">1</span>
+        <span class="k">if</span> (low(k:k) == <span class="s">')'</span>) depth = depth - <span class="n">1</span>
+        <span class="k">if</span> (depth /= <span class="n">0</span>) <span class="k">cycle</span>
+        <span class="k">if</span> (word_at(low, k, <span class="s">'subroutine'</span>)) <span class="k">then</span>
+            at = k + <span class="n">10</span>
+            <span class="k">exit</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (word_at(low, k, <span class="s">'function'</span>)) <span class="k">then</span>
+            at = k + <span class="n">8</span>
+            h%is_function = <span class="k">.true.</span>
+            <span class="k">exit</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (at == <span class="n">0</span>) <span class="k">return</span>
+
+    prefix = low(<span class="n">1</span>:at - <span class="k">merge</span>(<span class="n">9</span>, <span class="n">11</span>, h%is_function))
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(PREFIXES)
+        n = <span class="k">len_trim</span>(PREFIXES(k))
+        <span class="k">open</span> = <span class="k">index</span>(prefix, PREFIXES(k) (<span class="n">1</span>:n))
+        <span class="k">if</span> (<span class="k">open</span> &gt; <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> push(h%attribs, PREFIXES(k) (<span class="n">1</span>:n))
+            prefix = prefix(:<span class="k">open</span> - <span class="n">1</span>)//prefix(<span class="k">open</span> + n:)
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> original_prefix(line, low, at - <span class="k">merge</span>(<span class="n">8</span>, <span class="n">10</span>, h%is_function) - <span class="n">1</span>, h%attribs, prefix)
+    h%prefix = remove_blanks(prefix)
+
+    <span class="k">open</span> = at + <span class="k">verify</span>(line(at:)//<span class="s">'x'</span>, <span class="s">' '</span>) - <span class="n">1</span>
+    <span class="k">close</span> = <span class="k">open</span> + <span class="k">verify</span>(low(<span class="k">open</span>:)//<span class="s">' '</span>, <span class="s">'abcdefghijklmnopqrstuvwxyz0123456789_'</span>) - <span class="n">2</span>
+    h%name = line(<span class="k">open</span>:<span class="k">close</span>)
+    <span class="k">open</span> = <span class="k">close</span> + <span class="k">verify</span>(line(<span class="k">close</span> + <span class="n">1</span>:)//<span class="s">'x'</span>, <span class="s">' '</span>)
+    <span class="k">close</span> = <span class="k">open</span> - <span class="n">1</span>
+    <span class="k">if</span> (<span class="k">open</span> &lt;= <span class="k">len</span>(line)) <span class="k">then</span>
+        <span class="k">if</span> (line(<span class="k">open</span>:<span class="k">open</span>) == <span class="s">'('</span>) <span class="k">then</span>
+            <span class="k">close</span> = closing_paren(line, <span class="k">open</span>)
+            <span class="k">if</span> (<span class="k">close</span> == <span class="n">0</span>) <span class="k">return</span>
+            <span class="k">if</span> (<span class="k">close</span> &gt; <span class="k">open</span> + <span class="n">1</span>) <span class="k">then</span>
+                <span class="k">if</span> (<span class="k">len</span>(strip(line(<span class="k">open</span> + <span class="n">1</span>:<span class="k">close</span> - <span class="n">1</span>))) &gt; <span class="n">0</span>) h%args = top_split(line(<span class="k">open</span> + <span class="n">1</span>:<span class="k">close</span> - <span class="n">1</span>), <span class="s">','</span>)
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">if</span>
+
+    <span class="k">do</span> k = <span class="k">close</span> + <span class="n">1</span>, <span class="k">len</span>(low)
+        <span class="k">if</span> (word_at(low, k, <span class="s">'result'</span>)) <span class="k">then</span>
+            <span class="k">open</span> = k + <span class="k">index</span>(low(k:), <span class="s">'('</span>) - <span class="n">1</span>
+            at = closing_paren(low, <span class="k">open</span>)
+            <span class="k">if</span> (at &gt; <span class="n">0</span>) h%result_name = strip(line(<span class="k">open</span> + <span class="n">1</span>:at - <span class="n">1</span>))
+        <span class="k">else</span> <span class="k">if</span> (word_at(low, k, <span class="s">'bind'</span>)) <span class="k">then</span>
+            <span class="k">open</span> = k + <span class="k">index</span>(low(k:), <span class="s">'('</span>) - <span class="n">1</span>
+            at = closing_paren(low, <span class="k">open</span>)
+            <span class="k">if</span> (at &gt; <span class="n">0</span>) h%bind_c = strip(line(<span class="k">open</span> + <span class="n">1</span>:at - <span class="n">1</span>))
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    h%ok = <span class="k">.true.</span>
+<span class="k">end</span> <span class="k">subroutine</span> parse_procedure_header</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

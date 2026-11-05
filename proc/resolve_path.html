@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>resolve_path &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">function</span>resolve_path</h1>
+<div class="sig">character(len=:) <span class="k">function</span> resolve_path(<span class="intent attr-in" title="intent(in)">base</span>, <span class="intent attr-in" title="intent(in)">path</span>) <span class="k">result</span>(out)</div>
+<div class="doc">
+<p>The absolute form of <code>path</code> relative to directory <code>base</code>, with variables expanded and <code>.</code> and <code>..</code>
+removed, and with <code>/</code> as the separator on paths with a drive letter. Links are left as they are, and
+the path does not have to exist.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-base"><td class="name">base</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>directory for relative paths</p></td></tr>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the path</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-out"><td class="name">out</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-allocatable">allocatable</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/expand_vars.html">expand_vars</a></li><li><a href="../proc/has_root.html">has_root</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/absolute_path.html">absolute_path</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/join_path.html">join_path</a></li><li><a href="../proc/has_drive.html">has_drive</a></li><li><a href="../proc/lexical_clean.html">lexical_clean</a></li></ul>
+<div class="graph"><svg width="426pt" height="268pt"
+ viewBox="0 0 426 268" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 263.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/resolve_path.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-159.6" width="88.8" height="21.6"/><text x="44.4" y="-144.1">resolve_path</text></a><a href="../proc/expand_vars.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="128.5" y="-259.6" width="88.8" height="21.6"/><text x="172.9" y="-244.1">expand_vars</text></a><path d="M54.6,-160.5C68.3,-177.5 95.7,-209 124.8,-228.8 127.5,-230.6 130.3,-232.3 133.3,-233.9"/><polygon fill="#8a93a5" points="131.9,-235.9 139.3,-236.9 134.1,-231.5"/><a href="../proc/has_root.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="140.4" y="-219.6" width="65" height="21.6"/><text x="172.9" y="-204.1">has_root</text></a><path d="M67.8,-160.6C83.6,-168.8 105.4,-179.8 124.8,-188.8 128.9,-190.7 133.1,-192.6 137.3,-194.4"/><polygon fill="#8a93a5" points="136.1,-196.5 143.5,-197.1 138,-192"/><a href="https://jacobwilliams.github.io/fformat/proc/absolute_path.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="124.8" y="-179.6" width="96.1" height="21.6"/><text x="172.9" y="-164.1">absolute_path</text></a><path d="M89.6,-155.8C98.2,-157.1 107.2,-158.6 116.1,-160"/><polygon fill="#8a93a5" points="115.7,-162.4 123,-161.1 116.4,-157.5"/><a href="https://jacobwilliams.github.io/fformat/proc/join_path.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="139.3" y="-139.6" width="67.2" height="21.6"/><text x="172.9" y="-124.1">join_path</text></a><path d="M89.6,-141.8C103,-139.7 117.5,-137.4 130.7,-135.3"/><polygon fill="#8a93a5" points="131,-137.7 137.5,-134.2 130.2,-132.9"/><a href="../proc/has_drive.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="256.9" y="-101.6" width="70.8" height="21.6"/><text x="292.3" y="-86.1">has_drive</text></a><path d="M63.9,-137.1C79.5,-127.8 102.8,-115.3 124.8,-108.8 165.6,-96.8 214,-92.6 248.1,-91.3"/><polygon fill="#8a93a5" points="248.1,-93.7 255,-91 247.9,-88.8"/><a href="../proc/lexical_clean.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="128.5" y="-61.6" width="88.8" height="21.6"/><text x="172.9" y="-46.1">lexical_clean</text></a><path d="M56.2,-137.2C70.8,-121.9 98.1,-94.7 124.8,-75.8 129.8,-72.3 135.4,-68.9 140.8,-65.8"/><polygon fill="#8a93a5" points="141.9,-68.1 146.9,-62.6 139.6,-63.8"/><path d="M205.6,-198.2C211,-195.6 216.3,-192.5 220.9,-188.8 248.6,-166.6 270.4,-131 282.1,-109.3"/><polygon fill="#8a93a5" points="284.1,-110.7 285.2,-103.4 279.8,-108.4"/><path d="M206.9,-62C220.5,-66.7 236.4,-72.1 250.8,-77"/><polygon fill="#8a93a5" points="249.7,-79.2 257.1,-79.1 251.3,-74.6"/><a href="../proc/split_on.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="262.7" y="-61.6" width="59.2" height="21.6"/><text x="292.3" y="-46.1">split_on</text></a><path d="M217.6,-50.8C229.7,-50.8 242.6,-50.8 254.3,-50.8"/><polygon fill="#8a93a5" points="254,-53.3 261,-50.8 254,-48.4"/><a href="../proc/join.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="265.3" y="-21.6" width="54" height="21.6"/><text x="292.3" y="-6.1">join</text></a><path d="M206.9,-39.6C222.5,-34.2 241.1,-27.9 256.9,-22.5"/><polygon fill="#8a93a5" points="257.6,-24.9 263.4,-20.3 256,-20.2"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="363.7" y="-61.6" width="54" height="21.6"/><text x="390.7" y="-46.1">push</text></a><path d="M322.2,-50.8C332.5,-50.8 344.3,-50.8 355,-50.8"/><polygon fill="#8a93a5" points="354.9,-53.3 361.9,-50.8 354.9,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/finish_settings.html">finish_settings</a></li><li><a href="../proc/load_external_project.html">load_external_project</a></li></ul>
+<div class="graph"><svg width="644pt" height="70pt"
+ viewBox="0 0 644 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/resolve_path.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="88.8" height="21.6"/><text x="44.4" y="-25.1">resolve_path</text></a><a href="../proc/load_external_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="124.8" y="-21.6" width="138.7" height="21.6"/><text x="194.2" y="-6.1">load_external_project</text></a><path d="M124.5,-19.6C115.5,-20.8 106.3,-22 97.7,-23.1"/><polygon fill="#8a93a5" points="97.6,-20.6 91,-23.9 98.2,-25.5"/><a href="../proc/finish_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="324.1" y="-61.6" width="96.8" height="21.6"/><text x="372.5" y="-46.1">finish_settings</text></a><path d="M323.7,-47.7C263.5,-43.8 160.2,-37.2 97.8,-33.2"/><polygon fill="#8a93a5" points="98.3,-30.8 91.2,-32.7 98,-35.6"/><a href="../proc/add_external_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="299.5" y="-21.6" width="145.9" height="21.6"/><text x="372.5" y="-6.1">add_external_modules</text></a><path d="M299.3,-10.8C290.4,-10.8 281.3,-10.8 272.4,-10.8"/><polygon fill="#8a93a5" points="272.4,-8.4 265.4,-10.8 272.4,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="582.5" y="-40.6" width="54" height="21.6"/><text x="609.5" y="-25.1">run</text></a><path d="M582,-32.2C545.2,-35.5 477.7,-41.5 429.5,-45.8"/><polygon fill="#8a93a5" points="429.3,-43.4 422.5,-46.4 429.7,-48.2"/><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="481.5" y="-21.6" width="65" height="21.6"/><text x="514" y="-6.1">correlate</text></a><path d="M582.4,-24.5C574,-22.8 564.4,-20.8 555.2,-19"/><polygon fill="#8a93a5" points="555.7,-16.6 548.3,-17.6 554.7,-21.4"/><path d="M481.3,-10.8C473.1,-10.8 463.8,-10.8 454.2,-10.8"/><polygon fill="#8a93a5" points="454.2,-8.4 447.2,-10.8 454.2,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">function</span> resolve_path(base, path) <span class="k">result</span>(out)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: base    <span class="d">!! directory for relative paths</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the path</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: out, head
+    <span class="k">integer</span> :: k
+
+    head = expand_vars(path)
+    <span class="k">if</span> (<span class="k">.not.</span> has_root(head)) head = absolute_path(join_path(base, head))
+    <span class="k">if</span> (has_drive(head)) <span class="k">then</span>
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(head)
+            <span class="k">if</span> (head(k:k) == <span class="s">'\'</span>) head(k:k) = <span class="s">'/'</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">if</span>
+    out = lexical_clean(head)
+<span class="k">end</span> <span class="k">function</span> resolve_path</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

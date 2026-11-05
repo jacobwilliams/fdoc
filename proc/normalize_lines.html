@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>normalize_lines &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>normalize_lines<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> normalize_lines(<span class="intent attr-inout" title="intent(inout)">lines</span>)</div>
+<div class="doc">
+<p>Expand tabs and blank lines of only spaces.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-lines"><td class="name">lines</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the lines</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/take.html">take</a></li></ul>
+<div class="graph"><svg width="203pt" height="70pt"
+ viewBox="0 0 203 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/normalize_lines.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="104.7" height="21.6"/><text x="52.4" y="-26.1">normalize_lines</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140.7" y="-61.6" width="54" height="21.6"/><text x="167.7" y="-46.1">add</text></a><path d="M105.4,-40C114.5,-41.6 123.7,-43.2 132.2,-44.7"/><polygon fill="#8a93a5" points="131.5,-47.1 138.8,-45.9 132.4,-42.3"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140.7" y="-21.6" width="54" height="21.6"/><text x="167.7" y="-6.1">take</text></a><path d="M105.4,-21.6C114.5,-20 123.7,-18.4 132.2,-16.9"/><polygon fill="#8a93a5" points="132.4,-19.3 138.8,-15.7 131.5,-14.5"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/expand_file_includes.html">expand_file_includes</a></li><li><a href="../proc/markdown_to_html.html">markdown_to_html</a></li></ul>
+<div class="graph"><svg width="1091pt" height="129pt"
+ viewBox="0 0 1091 129" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 124.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/normalize_lines.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-120.6" width="104.7" height="21.6"/><text x="52.4" y="-105.1">normalize_lines</text></a><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="312.5" y="-81.6" width="124.2" height="21.6"/><text x="374.7" y="-66.1">markdown_to_html</text></a><path d="M353.2,-82C334,-91.8 304.3,-105.3 276.5,-110.8 222.2,-121.6 158.8,-120 113.6,-116.5"/><polygon fill="#8a93a5" points="114,-114.1 106.8,-115.9 113.6,-119"/><a href="../proc/expand_file_includes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140.7" y="-101.6" width="135.8" height="21.6"/><text x="208.6" y="-86.1">expand_file_includes</text></a><path d="M312.1,-78.3C303.3,-79.4 294.2,-80.5 285.2,-81.6"/><polygon fill="#8a93a5" points="285.2,-79.1 278.5,-82.4 285.8,-84"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="148" y="-61.6" width="121.3" height="21.6"/><text x="208.6" y="-46.1">stash_html_blocks</text></a><path d="M303.9,-62.3C295.3,-61.2 286.6,-60.2 278.1,-59.1"/><polygon fill="#8a93a5" points="303.4,-64.7 310.6,-63.1 304,-59.8"/><polygon fill="#8a93a5" points="278.4,-56.7 271.1,-58.3 277.8,-61.6"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="152.3" y="-21.6" width="112.7" height="21.6"/><text x="208.6" y="-6.1">render_footnotes</text></a><path d="M340.7,-56.3C322.1,-48.3 298.2,-38.5 276.5,-30.8 270.4,-28.6 264,-26.5 257.5,-24.5"/><polygon fill="#8a93a5" points="339.6,-58.4 347,-59 341.5,-53.9"/><polygon fill="#8a93a5" points="258.3,-22.2 250.9,-22.4 256.9,-26.8"/><path d="M140.4,-99.1C131.6,-100.2 122.5,-101.3 113.8,-102.4"/><polygon fill="#8a93a5" points="113.7,-99.9 107,-103.2 114.3,-104.8"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="588.9" y="-101.6" width="97.5" height="21.6"/><text x="637.7" y="-86.1">markdown_list</text></a><path d="M588.5,-87.1C548.3,-84 490.4,-79.6 445.2,-76.1"/><polygon fill="#8a93a5" points="445.6,-73.7 438.4,-75.6 445.2,-78.6"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="472.8" y="-62.6" width="80.2" height="21.6"/><text x="512.9" y="-47.1">render_text</text></a><path d="M472.5,-57.3C463.9,-58.5 454.6,-59.8 445.2,-61.1"/><polygon fill="#8a93a5" points="445.1,-58.6 438.5,-62 445.8,-63.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1029.2" y="-62.6" width="54" height="21.6"/><text x="1056.2" y="-47.1">run</text></a><path d="M766.6,-90.8C743.2,-89.1 717.4,-88.7 695.1,-89"/><polygon fill="#8a93a5" points="695.2,-86.5 688.2,-89.1 695.3,-91.4"/><path d="M1029,-61.7C1018.1,-65.5 1005.2,-69.4 993.2,-71.8 895,-91.5 868.5,-98.3 768.6,-90.8"/><path d="M766.6,-90.8C707.2,-87.9 697.9,-56.2 638.7,-51.8"/><a href="../proc/render_documentation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="848.7" y="-62.6" width="144.5" height="21.6"/><text x="920.9" y="-47.1">render_documentation</text></a><path d="M1028.9,-51.8C1020.8,-51.8 1011.5,-51.8 1001.8,-51.8"/><polygon fill="#8a93a5" points="1002.1,-49.4 995.1,-51.8 1002.1,-54.3"/><a href="../proc/load_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="880.1" y="-22.6" width="81.6" height="21.6"/><text x="920.9" y="-7.1">load_pages</text></a><path d="M1028.7,-43C1017.7,-39.4 1004.9,-35.3 993.2,-31.8 985.6,-29.5 977.6,-27.2 969.7,-24.9"/><polygon fill="#8a93a5" points="970.8,-22.7 963.4,-23.2 969.5,-27.4"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="722.4" y="-62.6" width="90.3" height="21.6"/><text x="767.6" y="-47.1">render_entity</text></a><path d="M722.1,-53.4C697.5,-53.9 666.4,-53.9 638.7,-51.8"/><path d="M636.7,-51.8C612,-50 584.4,-49.8 561.6,-50.1"/><polygon fill="#8a93a5" points="561.6,-47.7 554.7,-50.3 561.7,-52.6"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="599.4" y="-23.6" width="76.6" height="21.6"/><text x="637.7" y="-8.1">read_page</text></a><path d="M601.2,-24.1C587.4,-28.4 571.5,-33.5 557.1,-38.1"/><polygon fill="#8a93a5" points="556.7,-35.6 550.7,-40.1 558.2,-40.3"/><path d="M848.2,-51.8C839.1,-51.8 829.9,-51.8 821.1,-51.8"/><polygon fill="#8a93a5" points="821.4,-49.4 814.4,-51.8 821.4,-54.3"/><a href="../proc/read_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="732.5" y="-22.6" width="70" height="21.6"/><text x="767.6" y="-7.1">read_tree</text></a><path d="M732.3,-12.1C717.5,-12.2 700.1,-12.3 684.3,-12.4"/><polygon fill="#8a93a5" points="684.7,-10 677.7,-12.5 684.7,-14.9"/><path d="M879.8,-11.8C858.6,-11.8 832.6,-11.8 811.1,-11.8"/><polygon fill="#8a93a5" points="811.3,-9.4 804.3,-11.8 811.3,-14.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> normalize_lines(lines)
+    <span class="k">type</span>(string_t), <span class="k">intent</span>(inout) :: lines(:)   <span class="d">!! the lines</span>
+    <span class="k">integer</span> :: k, j, column
+    <span class="k">type</span>(buffer_t) :: b
+
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(lines)
+        <span class="k">if</span> (<span class="k">index</span>(lines(k)%s, <span class="k">achar</span>(<span class="n">9</span>)) &gt; <span class="n">0</span>) <span class="k">then</span>
+            column = <span class="n">0</span>
+            <span class="k">do</span> j = <span class="n">1</span>, <span class="k">len</span>(lines(k)%s)
+                <span class="k">if</span> (lines(k)%s(j:j) == <span class="k">achar</span>(<span class="n">9</span>)) <span class="k">then</span>
+                    <span class="k">call</span> add(b, <span class="k">repeat</span>(<span class="s">' '</span>, <span class="n">4</span> - <span class="k">mod</span>(column, <span class="n">4</span>)))
+                    column = column + <span class="n">4</span> - <span class="k">mod</span>(column, <span class="n">4</span>)
+                <span class="k">else</span>
+                    <span class="k">call</span> add(b, lines(k)%s(j:j))
+                    column = column + <span class="n">1</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">call</span> take(b, lines(k)%s)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (<span class="k">verify</span>(lines(k)%s, <span class="s">' '</span>) == <span class="n">0</span>) lines(k)%s = <span class="s">''</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> normalize_lines</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

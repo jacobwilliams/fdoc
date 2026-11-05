@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_fypp &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a class="here" href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Variables</h4><ul><li><a href="#variable-c_eq"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>C_EQ</a></li><li><a href="#variable-c_ge"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>C_GE</a></li><li><a href="#variable-c_gt"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>C_GT</a></li><li><a href="#variable-c_in"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>C_IN</a></li><li><a href="#variable-c_le"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>C_LE</a></li><li><a href="#variable-c_lt"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>C_LT</a></li><li><a href="#variable-c_ne"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>C_NE</a></li><li><a href="#variable-c_not_in"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>C_NOT_IN</a></li><li><a href="#variable-e_add"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_ADD</a></li><li><a href="#variable-e_and"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_AND</a></li><li><a href="#variable-e_call"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_CALL</a></li><li><a href="#variable-e_clause"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_CLAUSE</a></li><li><a href="#variable-e_comp"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_COMP</a></li><li><a href="#variable-e_compare"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_COMPARE</a></li><li><a href="#variable-e_const"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_CONST</a></li><li><a href="#variable-e_fstring"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_FSTRING</a></li><li><a href="#variable-e_if"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_IF</a></li><li><a href="#variable-e_index"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_INDEX</a></li><li><a href="#variable-e_list"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_LIST</a></li><li><a href="#variable-e_method"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_METHOD</a></li><li><a href="#variable-e_mul"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_MUL</a></li><li><a href="#variable-e_name"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_NAME</a></li><li><a href="#variable-e_neg"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_NEG</a></li><li><a href="#variable-e_not"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_NOT</a></li><li><a href="#variable-e_or"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_OR</a></li><li><a href="#variable-e_slice"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_SLICE</a></li><li><a href="#variable-e_sub"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_SUB</a></li><li><a href="#variable-e_tuple"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>E_TUPLE</a></li><li><a href="#variable-fold_indent"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>FOLD_INDENT</a></li><li><a href="#variable-max_frames"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>MAX_FRAMES</a></li><li><a href="#variable-max_line"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>MAX_LINE</a></li><li><a href="#variable-n_assert"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>N_ASSERT</a></li><li><a href="#variable-n_call"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>N_CALL</a></li><li><a href="#variable-n_def"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>N_DEF</a></li><li><a href="#variable-n_eval"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>N_EVAL</a></li><li><a href="#variable-n_for"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>N_FOR</a></li><li><a href="#variable-n_if"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>N_IF</a></li><li><a href="#variable-n_mute"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>N_MUTE</a></li><li><a href="#variable-n_set"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>N_SET</a></li><li><a href="#variable-n_text"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>N_TEXT</a></li><li><a href="#variable-nl"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>NL</a></li><li><a href="#variable-t_end"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>T_END</a></li><li><a href="#variable-t_fstr"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>T_FSTR</a></li><li><a href="#variable-t_int"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>T_INT</a></li><li><a href="#variable-t_name"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>T_NAME</a></li><li><a href="#variable-t_op"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>T_OP</a></li><li><a href="#variable-t_str"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>T_STR</a></li><li><a href="#variable-tab"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>TAB</a></li><li><a href="#variable-v_bool"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>V_BOOL</a></li><li><a href="#variable-v_dict"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>V_DICT</a></li><li><a href="#variable-v_int"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>V_INT</a></li><li><a href="#variable-v_list"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>V_LIST</a></li><li><a href="#variable-v_macro"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>V_MACRO</a></li><li><a href="#variable-v_none"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>V_NONE</a></li><li><a href="#variable-v_str"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>V_STR</a></li><li><a href="#variable-v_tuple"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>V_TUPLE</a></li></ul>
+<h4>Types</h4><ul><li><a href="../type/block_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>block_t</a></li><li><a href="../type/body_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>body_t</a></li><li><a href="../type/expr_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>expr_t</a></li><li><a href="../type/frame_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>frame_t</a></li><li><a href="../type/fypp_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>fypp_t</a></li><li><a href="../type/macro_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>macro_t</a></li><li><a href="../type/node_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>node_t</a></li><li><a href="../type/scan_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>scan_t</a></li><li><a href="../type/span_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>span_t</a></li><li><a href="../type/value_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>value_t</a></li></ul>
+<h4>Functions</h4><ul><li><a href="../proc/at_word.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>at_word</a></li><li><a href="../proc/end_of_line.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>end_of_line</a></li><li><a href="../proc/equal.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>equal</a></li><li><a href="../proc/find_name.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>find_name</a></li><li><a href="../proc/fold_position.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>fold_position</a></li><li><a href="../proc/in_name.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>in_name</a></li><li><a href="../proc/is_blank.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>is_blank</a></li><li><a href="../proc/is_space.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>is_space</a></li><li><a href="../proc/new_expr.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>new_expr</a></li><li><a href="../proc/new_node.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>new_node</a></li><li><a href="../proc/skip_blanks.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>skip_blanks</a></li><li><a href="../proc/starts_name.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>starts_name</a></li><li><a href="../proc/trim_length.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>trim_length</a></li><li><a href="../proc/trim_right.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>trim_right</a></li><li><a href="../proc/truth_of.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>truth_of</a></li></ul>
+<h4>Subroutines</h4><ul><li><a href="../proc/add_body.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>add_body</a></li><li><a href="../proc/append.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>append</a></li><li><a href="../proc/arithmetic.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>arithmetic</a></li><li><a href="../proc/assign_targets.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>assign_targets</a></li><li><a href="../proc/bind_one.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>bind_one</a></li><li><a href="../proc/bind_targets.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>bind_targets</a></li><li><a href="../proc/call_builtin.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>call_builtin</a></li><li><a href="../proc/call_directive.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>call_directive</a></li><li><a href="../proc/call_macro.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>call_macro</a></li><li><a href="../proc/call_method.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>call_method</a></li><li><a href="../proc/close_block.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>close_block</a></li><li><a href="../proc/close_scope.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>close_scope</a></li><li><a href="../proc/compare.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>compare</a></li><li><a href="../proc/compare_two.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>compare_two</a></li><li><a href="../proc/compile.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>compile</a></li><li><a href="../proc/control_directive.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>control_directive</a></li><li><a href="../proc/copy_items.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>copy_items</a></li><li><a href="../proc/copy_value.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>copy_value</a></li><li><a href="../proc/def_directive.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>def_directive</a></li><li><a href="../proc/define.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>define</a></li><li><a href="../proc/define_macro.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>define_macro</a></li><li><a href="../proc/evaluate.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>evaluate</a></li><li><a href="../proc/evaluate_args.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>evaluate_args</a></li><li><a href="../proc/evaluate_call.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>evaluate_call</a></li><li><a href="../proc/evaluate_fstring.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>evaluate_fstring</a></li><li><a href="../proc/evaluate_slice.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>evaluate_slice</a></li><li><a href="../proc/expect.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>expect</a></li><li><a href="../proc/fail.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>fail</a></li><li><a href="../proc/flush_text.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>flush_text</a></li><li><a href="../proc/fold_line.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>fold_line</a></li><li><a href="../proc/fold_output.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>fold_output</a></li><li><a href="../proc/fold_region.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>fold_region</a></li><li><a href="../proc/for_directive.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>for_directive</a></li><li><a href="../proc/format_string.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>format_string</a></li><li><a href="../proc/frame_room.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>frame_room</a></li><li><a href="../proc/fypp_process.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>fypp_process</a></li><li><a href="../proc/handle_directive.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>handle_directive</a></li><li><a href="../proc/include_directive.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>include_directive</a></li><li><a href="../proc/intern.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>intern</a></li><li><a href="../proc/items_of.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>items_of</a></li><li><a href="../proc/lookup.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>lookup</a></li><li><a href="../proc/make_bool.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>make_bool</a></li><li><a href="../proc/make_int.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>make_int</a></li><li><a href="../proc/make_range.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>make_range</a></li><li><a href="../proc/make_string.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>make_string</a></li><li><a href="../proc/make_zip.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>make_zip</a></li><li><a href="../proc/move_expr.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>move_expr</a></li><li><a href="../proc/move_node.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>move_node</a></li><li><a href="../proc/move_value.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>move_value</a></li><li><a href="../proc/next_token.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>next_token</a></li><li><a href="../proc/open_block.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>open_block</a></li><li><a href="../proc/open_scope.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>open_scope</a></li><li><a href="../proc/parse_and.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_and</a></li><li><a href="../proc/parse_arguments.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_arguments</a></li><li><a href="../proc/parse_compare.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_compare</a></li><li><a href="../proc/parse_comprehension.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_comprehension</a></li><li><a href="../proc/parse_file.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_file</a></li><li><a href="../proc/parse_fstring.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_fstring</a></li><li><a href="../proc/parse_items.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_items</a></li><li><a href="../proc/parse_list.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_list</a></li><li><a href="../proc/parse_not.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_not</a></li><li><a href="../proc/parse_or.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_or</a></li><li><a href="../proc/parse_postfix.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_postfix</a></li><li><a href="../proc/parse_primary.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_primary</a></li><li><a href="../proc/parse_product.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_product</a></li><li><a href="../proc/parse_subscript.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_subscript</a></li><li><a href="../proc/parse_sum.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_sum</a></li><li><a href="../proc/parse_test.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_test</a></li><li><a href="../proc/parse_text.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_text</a></li><li><a href="../proc/parse_unary.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_unary</a></li><li><a href="../proc/push_id.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>push_id</a></li><li><a href="../proc/read_line_directive.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>read_line_directive</a></li><li><a href="../proc/read_name.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>read_name</a></li><li><a href="../proc/read_string.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>read_string</a></li><li><a href="../proc/read_targets.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>read_targets</a></li><li><a href="../proc/record_span.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>record_span</a></li><li><a href="../proc/render_body.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>render_body</a></li><li><a href="../proc/render_call.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>render_call</a></li><li><a href="../proc/render_loop.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>render_loop</a></li><li><a href="../proc/render_node.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>render_node</a></li><li><a href="../proc/run_clause.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>run_clause</a></li><li><a href="../proc/set_directive.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>set_directive</a></li><li><a href="../proc/split_string.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>split_string</a></li><li><a href="../proc/subscript.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>subscript</a></li><li><a href="../proc/without_carriage_returns.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>without_carriage_returns</a></li><li><a href="../proc/write_value.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>write_value</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><ul data-list="modules"></ul>
+<h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a></div>
+<h1><span class="kind">module</span>fdoc_fypp</h1>
+<div class="doc">
+<p>A port to Fortran of the parts of Fypp, the preprocessor by Balint Aradi, that the Fortran standard
+library needs, so that fdoc can read Fypp sources without running Python.</p>
+<p>Fypp's directives hold Python expressions. A small evaluator here covers the ones in use: literals,
+lists, tuples, comprehensions, f-strings, slices, conditional expressions, and the functions and
+string methods listed in <a href="../proc/call_builtin.html">call_builtin</a> and <a href="../proc/call_method.html">call_method</a>. Anything else stops with an error
+that names it, and is left for later, as are the directives <code>del</code>, <code>global</code>, <code>stop</code>, <code>nextarg</code> and
+<code>contains</code>, direct calls with <code>@:</code> and <code>@{...}@</code>, and line numbering.</p>
+<p>All state is in a <a href="../type/fypp_t.html">fypp_t</a> made for each file, so that files can be processed in parallel. As in
+the rest of fdoc, no function returns a deferred-length string (see <code>example/slen_race.f90</code>).</p>
+<p>Fypp is Copyright (c) 2016-2023 Balint Aradi, Universitat Bremen, and is distributed under the
+BSD 2-clause license. This port follows its design and keeps its notice:</p>
+<p>Redistribution and use in source and binary forms, with or without modification, are permitted
+provided that the following conditions are met:</p>
+<ol>
+<li>Redistributions of source code must retain the above copyright notice, this list of conditions
+   and the following disclaimer.</li>
+<li>Redistributions in binary form must reproduce the above copyright notice, this list of
+   conditions and the following disclaimer in the documentation and/or other materials provided
+   with the distribution.</li>
+</ol>
+<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
+OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+</div>
+<h2 id="uses">Uses</h2>
+<ul class="chips"><li><a href="../module/fdoc_buffer.html">fdoc_buffer</a></li><li><a href="../module/fdoc_util.html">fdoc_util</a></li></ul>
+<div class="graph"><svg width="334pt" height="150pt"
+ viewBox="0 0 334 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 145.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_fypp.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="255.5" y="-101.6" width="70.8" height="21.6"/><text x="290.8" y="-86.1">fdoc_fypp</text></a><a href="../module/fdoc_buffer.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="140" y="-121.6" width="79.4" height="21.6"/><text x="179.7" y="-106.1">fdoc_buffer</text></a><path d="M254.7,-97.2C246.2,-98.8 237,-100.5 228.1,-102.1"/><polygon fill="#8a93a5" points="227.9,-99.7 221.4,-103.3 228.8,-104.5"/><a href="../module/fdoc_util.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="148.3" y="-81.6" width="62.8" height="21.6"/><text x="179.7" y="-66.1">fdoc_util</text></a><path d="M254.7,-84.4C243.5,-82.3 231,-80 219.5,-77.9"/><polygon fill="#8a93a5" points="220.2,-75.5 212.9,-76.7 219.3,-80.4"/><a href="http://fortranwiki.org/fortran/show/iso_fortran_env" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-141.6" width="104" height="21.6"/><text x="52" y="-126.1">iso_fortran_env</text></a><path d="M157,-81.9C151.4,-84.8 145.5,-87.9 140,-90.8 123.9,-99.4 120.6,-103 104,-110.8 100,-112.7 95.7,-114.6 91.4,-116.4"/><polygon fill="#8a93a5" points="90.7,-114 85.2,-118.9 92.6,-118.6"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_strings.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="11.2" y="-101.6" width="81.6" height="21.6"/><text x="52" y="-86.1">ffmt_strings</text></a><path d="M148,-75.7C133.9,-77.9 116.8,-80.7 101,-83.2"/><polygon fill="#8a93a5" points="101,-80.7 94.4,-84.2 101.7,-85.5"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_fs.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-61.6" width="54" height="21.6"/><text x="52" y="-46.1">ffmt_fs</text></a><path d="M148,-65.9C129.7,-63 106.5,-59.3 87.5,-56.3"/><polygon fill="#8a93a5" points="88,-53.9 80.7,-55.2 87.2,-58.7"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_io.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-21.6" width="54" height="21.6"/><text x="52" y="-6.1">ffmt_io</text></a><path d="M159.4,-59.6C144.5,-51.2 123.2,-39.7 104,-30.8 98.6,-28.3 92.8,-25.8 87.1,-23.5"/><polygon fill="#8a93a5" points="88.3,-21.4 80.9,-21.1 86.5,-25.9"/></g>
+</svg>
+</div>
+<h2 id="used-by">Used by</h2>
+<ul class="chips"><li><a href="../module/fdoc_input.html">fdoc_input</a></li></ul>
+<div class="graph"><svg width="750pt" height="223pt"
+ viewBox="0 0 750 223" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 219)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_fypp.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-138.6" width="70.8" height="21.6"/><text x="35.4" y="-123.1">fdoc_fypp</text></a><a href="../module/fdoc_input.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="106.8" y="-138.6" width="74.4" height="21.6"/><text x="144" y="-123.1">fdoc_input</text></a><path d="M106.3,-127.8C97.8,-127.8 88.7,-127.8 79.9,-127.8"/><polygon fill="#8a93a5" points="80.2,-125.4 73.2,-127.8 80.2,-130.3"/><a href="../module/fdoc_project.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="217.2" y="-138.6" width="85.2" height="21.6"/><text x="259.8" y="-123.1">fdoc_project</text></a><path d="M216.7,-127.8C208,-127.8 198.8,-127.8 189.9,-127.8"/><polygon fill="#8a93a5" points="190.1,-125.4 183.1,-127.8 190.1,-130.3"/><a href="../module/fdoc.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="688.3" y="-99.6" width="54" height="21.6"/><text x="715.3" y="-84.1">fdoc</text></a><path d="M490,-205.8C422.3,-200.1 401.3,-212.5 338.4,-186.8 314.5,-177.1 291.6,-158 276.9,-144.2"/><polygon fill="#8a93a5" points="279,-142.8 272.3,-139.7 275.6,-146.3"/><a href="../module/fdoc_docs.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="338.4" y="-177.6" width="73.7" height="21.6"/><text x="375.2" y="-162.1">fdoc_docs</text></a><path d="M610.2,-205.8C560.7,-223.4 544.4,-210.2 492,-205.8"/><path d="M490,-205.8C460.2,-203.3 428.2,-191.4 405.7,-181.4"/><polygon fill="#8a93a5" points="406.9,-179.3 399.6,-178.6 404.9,-183.7"/><a href="../module/fdoc_links.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="339.1" y="-80.6" width="72.2" height="21.6"/><text x="375.2" y="-65.1">fdoc_links</text></a><path d="M688.1,-85C653.1,-80.1 589,-71.8 534,-68.8 495.9,-66.7 486.2,-68.5 448,-68.8 439,-68.9 429.3,-69 420,-69.1"/><polygon fill="#8a93a5" points="420.1,-66.6 413.2,-69.2 420.2,-71.5"/><a href="../module/fdoc_output.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="570" y="-21.6" width="82.3" height="21.6"/><text x="611.2" y="-6.1">fdoc_output</text></a><path d="M702.4,-77.7C690.3,-66.5 670.6,-49.2 652.3,-35.8 648,-32.6 643.2,-29.4 638.6,-26.4"/><polygon fill="#8a93a5" points="639.9,-24.4 632.6,-22.7 637.3,-28.5"/><a href="../module/fdoc_pages.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="450.2" y="-177.6" width="81.6" height="21.6"/><text x="491" y="-162.1">fdoc_pages</text></a><path d="M709.5,-99.8C697.4,-125.3 663.5,-187.6 612.2,-205.8"/><path d="M610.2,-205.8C593.8,-211.6 551.5,-194.8 522.2,-181.4"/><polygon fill="#8a93a5" points="523.4,-179.3 516,-178.6 521.4,-183.7"/><a href="../module/fdoc_site.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="578" y="-119.6" width="66.4" height="21.6"/><text x="611.2" y="-104.1">fdoc_site</text></a><path d="M688,-94C677.3,-96.1 664.6,-98.5 652.7,-100.9"/><polygon fill="#8a93a5" points="652.5,-98.4 646.1,-102.2 653.4,-103.2"/><path d="M341.4,-155.5C328.9,-151.2 314.6,-146.3 301.5,-141.8"/><polygon fill="#8a93a5" points="302.4,-139.5 294.9,-139.5 300.8,-144.1"/><a href="../module/fdoc_graphs.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="448" y="-99.6" width="86" height="21.6"/><text x="491" y="-84.1">fdoc_graphs</text></a><path d="M470.2,-100.1C448,-111.6 410.7,-127.8 376.2,-127.8"/><path d="M374.2,-127.8C353.6,-127.8 330.9,-127.8 311.3,-127.8"/><polygon fill="#8a93a5" points="311.3,-125.4 304.3,-127.8 311.3,-130.3"/><path d="M352.3,-81C334.6,-90 309.5,-102.9 290,-112.9"/><polygon fill="#8a93a5" points="289,-110.6 283.9,-116 291.3,-115"/><path d="M569.6,-8.8C514.3,-7.8 413.6,-12.1 338.4,-49.8 310.7,-63.7 286.9,-91.4 273.2,-109.7"/><polygon fill="#8a93a5" points="271.3,-108.2 269.2,-115.3 275.3,-111"/><path d="M470.2,-155.5C448,-144 410.7,-127.8 376.2,-127.8"/><path d="M449.9,-166.8C440.4,-166.8 430.2,-166.8 420.5,-166.8"/><polygon fill="#8a93a5" points="420.7,-164.4 413.7,-166.8 420.7,-169.3"/><path d="M577.7,-113.1C532.6,-118.7 448.3,-127.8 376.2,-127.8"/><path d="M577.6,-103.3C566.7,-101.4 554.3,-99.3 542.4,-97.3"/><polygon fill="#8a93a5" points="543.1,-95 535.8,-96.2 542.2,-99.8"/><path d="M587.4,-120C568.8,-129.1 542.5,-142 522.2,-152"/><polygon fill="#8a93a5" points="521.3,-149.7 516.1,-155 523.5,-154.1"/></g>
+</svg>
+</div>
+<h2 id="variables">Variables</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c_eq"><td class="name">C_EQ</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">1</td><td></td></tr>
+<tr id="variable-c_ge"><td class="name">C_GE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">6</td><td></td></tr>
+<tr id="variable-c_gt"><td class="name">C_GT</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">4</td><td></td></tr>
+<tr id="variable-c_in"><td class="name">C_IN</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">7</td><td></td></tr>
+<tr id="variable-c_le"><td class="name">C_LE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">5</td><td></td></tr>
+<tr id="variable-c_lt"><td class="name">C_LT</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">3</td><td></td></tr>
+<tr id="variable-c_ne"><td class="name">C_NE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">2</td><td></td></tr>
+<tr id="variable-c_not_in"><td class="name">C_NOT_IN</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">8</td><td></td></tr>
+<tr id="variable-e_add"><td class="name">E_ADD</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">5</td><td></td></tr>
+<tr id="variable-e_and"><td class="name">E_AND</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">10</td><td></td></tr>
+<tr id="variable-e_call"><td class="name">E_CALL</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">14</td><td></td></tr>
+<tr id="variable-e_clause"><td class="name">E_CLAUSE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">19</td><td></td></tr>
+<tr id="variable-e_comp"><td class="name">E_COMP</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">18</td><td></td></tr>
+<tr id="variable-e_compare"><td class="name">E_COMPARE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">12</td><td></td></tr>
+<tr id="variable-e_const"><td class="name">E_CONST</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">1</td><td></td></tr>
+<tr id="variable-e_fstring"><td class="name">E_FSTRING</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">20</td><td></td></tr>
+<tr id="variable-e_if"><td class="name">E_IF</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">13</td><td></td></tr>
+<tr id="variable-e_index"><td class="name">E_INDEX</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">16</td><td></td></tr>
+<tr id="variable-e_list"><td class="name">E_LIST</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">3</td><td></td></tr>
+<tr id="variable-e_method"><td class="name">E_METHOD</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">15</td><td></td></tr>
+<tr id="variable-e_mul"><td class="name">E_MUL</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">7</td><td></td></tr>
+<tr id="variable-e_name"><td class="name">E_NAME</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">2</td><td></td></tr>
+<tr id="variable-e_neg"><td class="name">E_NEG</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">8</td><td></td></tr>
+<tr id="variable-e_not"><td class="name">E_NOT</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">9</td><td></td></tr>
+<tr id="variable-e_or"><td class="name">E_OR</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">11</td><td></td></tr>
+<tr id="variable-e_slice"><td class="name">E_SLICE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">17</td><td></td></tr>
+<tr id="variable-e_sub"><td class="name">E_SUB</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">6</td><td></td></tr>
+<tr id="variable-e_tuple"><td class="name">E_TUPLE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">4</td><td></td></tr>
+<tr id="variable-fold_indent"><td class="name">FOLD_INDENT</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">4</td><td><p>Fypp's default indentation of continuation lines</p></td></tr>
+<tr id="variable-max_frames"><td class="name">MAX_FRAMES</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">256</td><td><p>how deeply scopes can nest</p></td></tr>
+<tr id="variable-max_line"><td class="name">MAX_LINE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">132</td><td><p>Fypp's default longest line</p></td></tr>
+<tr id="variable-n_assert"><td class="name">N_ASSERT</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">9</td><td></td></tr>
+<tr id="variable-n_call"><td class="name">N_CALL</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">7</td><td></td></tr>
+<tr id="variable-n_def"><td class="name">N_DEF</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">6</td><td></td></tr>
+<tr id="variable-n_eval"><td class="name">N_EVAL</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">2</td><td></td></tr>
+<tr id="variable-n_for"><td class="name">N_FOR</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">4</td><td></td></tr>
+<tr id="variable-n_if"><td class="name">N_IF</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">3</td><td></td></tr>
+<tr id="variable-n_mute"><td class="name">N_MUTE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">8</td><td></td></tr>
+<tr id="variable-n_set"><td class="name">N_SET</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">5</td><td></td></tr>
+<tr id="variable-n_text"><td class="name">N_TEXT</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">1</td><td></td></tr>
+<tr id="variable-nl"><td class="name">NL</td><td class="type">character(len=1)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">achar(10)</td><td></td></tr>
+<tr id="variable-t_end"><td class="name">T_END</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">0</td><td></td></tr>
+<tr id="variable-t_fstr"><td class="name">T_FSTR</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">4</td><td></td></tr>
+<tr id="variable-t_int"><td class="name">T_INT</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">2</td><td></td></tr>
+<tr id="variable-t_name"><td class="name">T_NAME</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">1</td><td></td></tr>
+<tr id="variable-t_op"><td class="name">T_OP</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">5</td><td></td></tr>
+<tr id="variable-t_str"><td class="name">T_STR</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">3</td><td></td></tr>
+<tr id="variable-tab"><td class="name">TAB</td><td class="type">character(len=1)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">achar(9)</td><td></td></tr>
+<tr id="variable-v_bool"><td class="name">V_BOOL</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">1</td><td></td></tr>
+<tr id="variable-v_dict"><td class="name">V_DICT</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">6</td><td></td></tr>
+<tr id="variable-v_int"><td class="name">V_INT</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">2</td><td></td></tr>
+<tr id="variable-v_list"><td class="name">V_LIST</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">4</td><td></td></tr>
+<tr id="variable-v_macro"><td class="name">V_MACRO</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">7</td><td></td></tr>
+<tr id="variable-v_none"><td class="name">V_NONE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">0</td><td></td></tr>
+<tr id="variable-v_str"><td class="name">V_STR</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">3</td><td></td></tr>
+<tr id="variable-v_tuple"><td class="name">V_TUPLE</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">5</td><td></td></tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<div class="item" id="type-block_t"><h3><a href="../type/block_t.html">block_t</a><span class="attr attr-private">private</span></h3>
+<p>The parts of a directive.</p>
+</div>
+<div class="item" id="type-body_t"><h3><a href="../type/body_t.html">body_t</a><span class="attr attr-private">private</span></h3>
+<p>The nodes of a block.</p>
+</div>
+<div class="item" id="type-expr_t"><h3><a href="../type/expr_t.html">expr_t</a><span class="attr attr-private">private</span></h3>
+<p>An expression, compiled.</p>
+</div>
+<div class="item" id="type-frame_t"><h3><a href="../type/frame_t.html">frame_t</a><span class="attr attr-private">private</span></h3>
+<p>Local variables.</p>
+</div>
+<div class="item" id="type-fypp_t"><h3><a href="../type/fypp_t.html">fypp_t</a><span class="attr attr-private">private</span></h3>
+<p>The state of processing a file.</p>
+</div>
+<div class="item" id="type-macro_t"><h3><a href="../type/macro_t.html">macro_t</a><span class="attr attr-private">private</span></h3>
+<p>A macro.</p>
+</div>
+<div class="item" id="type-node_t"><h3><a href="../type/node_t.html">node_t</a><span class="attr attr-private">private</span></h3>
+<p>A piece of the document.</p>
+</div>
+<div class="item" id="type-scan_t"><h3><a href="../type/scan_t.html">scan_t</a><span class="attr attr-private">private</span></h3>
+<p>Reading an expression.</p>
+</div>
+<div class="item" id="type-span_t"><h3><a href="../type/span_t.html">span_t</a><span class="attr attr-private">private</span></h3>
+<p>Where a result of evaluation is in the output.</p>
+</div>
+<div class="item" id="type-value_t"><h3><a href="../type/value_t.html">value_t</a><span class="attr attr-private">private</span></h3>
+<p>A Python value.</p>
+</div>
+<h2 id="functions">Functions</h2>
+<div class="item" id="proc-at_word"><h3><a href="../proc/at_word.html">at_word</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> at_word(<span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-in" title="intent(in)">word</span>)</div>
+<p>True if the current token is <code>word</code>, as an operator or keyword.</p>
+</div>
+<div class="item" id="proc-end_of_line"><h3><a href="../proc/end_of_line.html">end_of_line</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> end_of_line(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">from</span>) <span class="k">result</span>(at)</div>
+<p>The position of the end of the line with position <code>from</code>: of its newline, or after the last line.</p>
+</div>
+<div class="item" id="proc-equal"><h3><a href="../proc/equal.html">equal</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">recursive</span> logical <span class="k">function</span> equal(<span class="intent attr-in" title="intent(in)">a</span>, <span class="intent attr-in" title="intent(in)">b</span>) <span class="k">result</span>(same)</div>
+<p>True if <code>a</code> equals <code>b</code>.</p>
+</div>
+<div class="item" id="proc-find_name"><h3><a href="../proc/find_name.html">find_name</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> find_name(<span class="intent attr-in" title="intent(in)">c</span>, <span class="intent attr-in" title="intent(in)">name</span>) <span class="k">result</span>(id)</div>
+<p>The number of name <code>name</code>, or 0.</p>
+</div>
+<div class="item" id="proc-fold_position"><h3><a href="../proc/fold_position.html">fold_position</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> fold_position(<span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-in" title="intent(in)">first</span>, <span class="intent attr-in" title="intent(in)">last</span>) <span class="k">result</span>(at)</div>
+<p>Where to end the part of <code>line</code> after <code>first</code>, at most at <code>last</code>. Positions count from 0.</p>
+</div>
+<div class="item" id="proc-in_name"><h3><a href="../proc/in_name.html">in_name</a><span class="attr attr-elemental" title="Works on each element of arrays of any rank">elemental</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">elemental</span> logical <span class="k">function</span> in_name(<span class="intent attr-in" title="intent(in)">ch</span>)</div>
+<p>True if <code>ch</code> can be part of a name.</p>
+</div>
+<div class="item" id="proc-is_blank"><h3><a href="../proc/is_blank.html">is_blank</a><span class="attr attr-elemental" title="Works on each element of arrays of any rank">elemental</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">elemental</span> logical <span class="k">function</span> is_blank(<span class="intent attr-in" title="intent(in)">ch</span>)</div>
+<p>True if <code>ch</code> is a blank or a tab.</p>
+</div>
+<div class="item" id="proc-is_space"><h3><a href="../proc/is_space.html">is_space</a><span class="attr attr-elemental" title="Works on each element of arrays of any rank">elemental</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">elemental</span> logical <span class="k">function</span> is_space(<span class="intent attr-in" title="intent(in)">ch</span>)</div>
+<p>True if <code>ch</code> is white space.</p>
+</div>
+<div class="item" id="proc-new_expr"><h3><a href="../proc/new_expr.html">new_expr</a><span class="attr attr-private">private</span></h3>
+<div class="sig">integer <span class="k">function</span> new_expr(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">kind</span>, <span class="intent attr-in" title="intent(in)">a</span>, <span class="intent attr-in" title="intent(in)">b</span>, <span class="intent attr-in" title="intent(in)">third</span>) <span class="k">result</span>(id)</div>
+<p>A new expression.</p>
+</div>
+<div class="item" id="proc-new_node"><h3><a href="../proc/new_node.html">new_node</a><span class="attr attr-private">private</span></h3>
+<div class="sig">integer <span class="k">function</span> new_node(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">kind</span>) <span class="k">result</span>(id)</div>
+<p>A new node.</p>
+</div>
+<div class="item" id="proc-skip_blanks"><h3><a href="../proc/skip_blanks.html">skip_blanks</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> skip_blanks(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">from</span>) <span class="k">result</span>(at)</div>
+<p>The first position from <code>from</code> that is not a blank.</p>
+</div>
+<div class="item" id="proc-starts_name"><h3><a href="../proc/starts_name.html">starts_name</a><span class="attr attr-elemental" title="Works on each element of arrays of any rank">elemental</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">elemental</span> logical <span class="k">function</span> starts_name(<span class="intent attr-in" title="intent(in)">ch</span>)</div>
+<p>True if <code>ch</code> can start a name.</p>
+</div>
+<div class="item" id="proc-trim_length"><h3><a href="../proc/trim_length.html">trim_length</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> trim_length(<span class="intent attr-in" title="intent(in)">text</span>) <span class="k">result</span>(n)</div>
+<p>The length of <code>text</code> without blanks at its end.</p>
+</div>
+<div class="item" id="proc-trim_right"><h3><a href="../proc/trim_right.html">trim_right</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> character(len=trim_length(text)) <span class="k">function</span> trim_right(<span class="intent attr-in" title="intent(in)">text</span>) <span class="k">result</span>(out)</div>
+<p><code>text</code> without blanks at its end.</p>
+</div>
+<div class="item" id="proc-truth_of"><h3><a href="../proc/truth_of.html">truth_of</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> truth_of(<span class="intent attr-in" title="intent(in)">v</span>) <span class="k">result</span>(truth)</div>
+<p>The truth of <code>v</code>.</p>
+</div>
+<h2 id="subroutines">Subroutines</h2>
+<div class="item" id="proc-add_body"><h3><a href="../proc/add_body.html">add_body</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> add_body(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">node</span>, <span class="intent attr-in" title="intent(in)">condition</span>)</div>
+<p>Add a block to <code>node</code>, with condition <code>condition</code>.</p>
+</div>
+<div class="item" id="proc-append"><h3><a href="../proc/append.html">append</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> append(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">node</span>)</div>
+<p>Put <code>node</code> at the end of the block being read.</p>
+</div>
+<div class="item" id="proc-arithmetic"><h3><a href="../proc/arithmetic.html">arithmetic</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> arithmetic(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">kind</span>, <span class="intent attr-in" title="intent(in)">a</span>, <span class="intent attr-in" title="intent(in)">b</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p><code>a + b</code>, <code>a - b</code> or <code>a * b</code>.</p>
+</div>
+<div class="item" id="proc-assign_targets"><h3><a href="../proc/assign_targets.html">assign_targets</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> assign_targets(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">targets</span>, <span class="intent attr-in" title="intent(in)">v</span>)</div>
+<p>Set the variables <code>targets</code> to <code>v</code>, unpacking it if there are several.</p>
+</div>
+<div class="item" id="proc-bind_one"><h3><a href="../proc/bind_one.html">bind_one</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> bind_one(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">v</span>)</div>
+<p>Bind one name in a comprehension.</p>
+</div>
+<div class="item" id="proc-bind_targets"><h3><a href="../proc/bind_targets.html">bind_targets</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> bind_targets(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">targets</span>, <span class="intent attr-in" title="intent(in)">v</span>)</div>
+<p>Bind the names of a loop to <code>v</code> in a comprehension.</p>
+</div>
+<div class="item" id="proc-call_builtin"><h3><a href="../proc/call_builtin.html">call_builtin</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> call_builtin(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">args</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>A builtin function: <code>defined</code>, <code>dict</code>, <code>len</code>, <code>list</code>, <code>range</code>, <code>reversed</code>, <code>str</code>, <code>zip</code>.</p>
+</div>
+<div class="item" id="proc-call_directive"><h3><a href="../proc/call_directive.html">call_directive</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> call_directive(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">param</span>, <span class="intent attr-in" title="intent(in)">on_lines</span>)</div>
+<p><code>#:call name(arguments)</code> or <code>#:block name(arguments)</code>.</p>
+</div>
+<div class="item" id="proc-call_macro"><h3><a href="../proc/call_macro.html">call_macro</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> call_macro(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">which</span>, <span class="intent attr-in" title="intent(in)">positional</span>, <span class="intent attr-in" title="intent(in)">keywords</span>, <span class="intent attr-in" title="intent(in)">by_keyword</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>Call macro <code>which</code>.</p>
+</div>
+<div class="item" id="proc-call_method"><h3><a href="../proc/call_method.html">call_method</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> call_method(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>A method: of strings <code>startswith</code>, <code>format</code>, <code>join</code>, <code>strip</code> and <code>split</code>, and of dicts <code>get</code>.</p>
+</div>
+<div class="item" id="proc-close_block"><h3><a href="../proc/close_block.html">close_block</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> close_block(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">kind</span>, <span class="intent attr-in" title="intent(in)">word</span>)</div>
+<p>Leave a block, which must be of kind <code>kind</code>.</p>
+</div>
+<div class="item" id="proc-close_scope"><h3><a href="../proc/close_scope.html">close_scope</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> close_scope(<span class="intent attr-inout" title="intent(inout)">c</span>)</div>
+<p>Close the current scope.</p>
+</div>
+<div class="item" id="proc-compare"><h3><a href="../proc/compare.html">compare</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> compare(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>A chain of comparisons.</p>
+</div>
+<div class="item" id="proc-compare_two"><h3><a href="../proc/compare_two.html">compare_two</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> compare_two(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">op</span>, <span class="intent attr-in" title="intent(in)">a</span>, <span class="intent attr-in" title="intent(in)">b</span>, <span class="intent attr-out" title="intent(out)">holds</span>)</div>
+<p>One comparison.</p>
+</div>
+<div class="item" id="proc-compile"><h3><a href="../proc/compile.html">compile</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> compile(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>Compile expression <code>text</code>.</p>
+</div>
+<div class="item" id="proc-control_directive"><h3><a href="../proc/control_directive.html">control_directive</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> control_directive(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">word</span>, <span class="intent attr-in" title="intent(in)">param</span>, <span class="intent attr-in" title="intent(in)">on_lines</span>, <span class="intent attr-in" title="intent(in)">path</span>)</div>
+<p>Act on control directive <code>word</code>.</p>
+</div>
+<div class="item" id="proc-copy_items"><h3><a href="../proc/copy_items.html">copy_items</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> copy_items(<span class="intent attr-in" title="intent(in)">from</span>, <span class="intent attr-out" title="intent(out)">to</span>)</div>
+<p>Copy <code>from</code> to the new array <code>to</code>.</p>
+</div>
+<div class="item" id="proc-copy_value"><h3><a href="../proc/copy_value.html">copy_value</a><span class="attr attr-elemental" title="Works on each element of arrays of any rank">elemental</span><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">elemental</span> <span class="k">recursive</span> <span class="k">subroutine</span> copy_value(<span class="intent attr-inout" title="intent(inout)">to</span>, <span class="intent attr-in" title="intent(in)">from</span>)</div>
+<p>Copy a value, with what it holds.</p>
+</div>
+<div class="item" id="proc-def_directive"><h3><a href="../proc/def_directive.html">def_directive</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> def_directive(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">param</span>)</div>
+<p><code>#:def name(arguments)</code>. Each argument's default is compiled to an entry of <code>args</code>, or 0 if none.</p>
+</div>
+<div class="item" id="proc-define"><h3><a href="../proc/define.html">define</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> define(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">v</span>)</div>
+<p>Set variable <code>id</code> in the current scope.</p>
+</div>
+<div class="item" id="proc-define_macro"><h3><a href="../proc/define_macro.html">define_macro</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> define_macro(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>)</div>
+<p>Define the macro of node <code>id</code>, evaluating its defaults now.</p>
+</div>
+<div class="item" id="proc-evaluate"><h3><a href="../proc/evaluate.html">evaluate</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> evaluate(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>Evaluate expression <code>id</code>.</p>
+</div>
+<div class="item" id="proc-evaluate_args"><h3><a href="../proc/evaluate_args.html">evaluate_args</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> evaluate_args(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">positional</span>, <span class="intent attr-out" title="intent(out)">num_positional</span>, <span class="intent attr-out" title="intent(out)">keywords</span>, <span class="intent attr-out" title="intent(out)">by_keyword</span>)</div>
+<p>Evaluate the arguments of call <code>id</code>.</p>
+</div>
+<div class="item" id="proc-evaluate_call"><h3><a href="../proc/evaluate_call.html">evaluate_call</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> evaluate_call(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>A call of a macro or a builtin function.</p>
+</div>
+<div class="item" id="proc-evaluate_fstring"><h3><a href="../proc/evaluate_fstring.html">evaluate_fstring</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> evaluate_fstring(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>An f-string.</p>
+</div>
+<div class="item" id="proc-evaluate_slice"><h3><a href="../proc/evaluate_slice.html">evaluate_slice</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> evaluate_slice(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p><code>a[first:last]</code>.</p>
+</div>
+<div class="item" id="proc-expect"><h3><a href="../proc/expect.html">expect</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> expect(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-in" title="intent(in)">word</span>)</div>
+<p>Go past token <code>word</code>, which must come next.</p>
+</div>
+<div class="item" id="proc-fail"><h3><a href="../proc/fail.html">fail</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> fail(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">message</span>)</div>
+<p>Record the first problem.</p>
+</div>
+<div class="item" id="proc-flush_text"><h3><a href="../proc/flush_text.html">flush_text</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> flush_text(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">first</span>, <span class="intent attr-in" title="intent(in)">last</span>)</div>
+<p>Add the text between <code>first</code> and <code>last</code> as a text node.</p>
+</div>
+<div class="item" id="proc-fold_line"><h3><a href="../proc/fold_line.html">fold_line</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> fold_line(<span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<p>Fold a line in Fypp's default way, at a blank near the end of the line if there is one.</p>
+</div>
+<div class="item" id="proc-fold_output"><h3><a href="../proc/fold_output.html">fold_output</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> fold_output(<span class="intent attr-in" title="intent(in)">c</span>, <span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">out</span>)</div>
+<p>Fold the long lines of <code>text</code> that hold results of evaluation. Others stay as they are.</p>
+</div>
+<div class="item" id="proc-fold_region"><h3><a href="../proc/fold_region.html">fold_region</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> fold_region(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<p>Fold each line of <code>text</code>.</p>
+</div>
+<div class="item" id="proc-for_directive"><h3><a href="../proc/for_directive.html">for_directive</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> for_directive(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">param</span>)</div>
+<p><code>#:for names in iterable</code>.</p>
+</div>
+<div class="item" id="proc-format_string"><h3><a href="../proc/format_string.html">format_string</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> format_string(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">args</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p><code>text.format(args)</code>, for fields <code>{}</code> and <code>{n}</code>.</p>
+</div>
+<div class="item" id="proc-frame_room"><h3><a href="../proc/frame_room.html">frame_room</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> frame_room(<span class="intent attr-inout" title="intent(inout)">frame</span>)</div>
+<p>Make sure that one more variable fits in <code>frame</code>.</p>
+</div>
+<div class="item" id="proc-fypp_process"><h3><a href="../proc/fypp_process.html">fypp_process</a></h3>
+<div class="sig"><span class="k">subroutine</span> fypp_process(<span class="intent attr-in" title="intent(in)">path</span>, <span class="intent attr-in" title="intent(in)">defines</span>, <span class="intent attr-in" title="intent(in)">includes</span>, <span class="intent attr-out" title="intent(out)">text</span>, <span class="intent attr-out" title="intent(out)">stat</span>, <span class="intent attr-out" title="intent(out)">errmsg</span>)</div>
+<p>The output of Fypp for file <code>path</code>. Each of <code>defines</code> is <code>NAME</code> or <code>NAME=expression</code>.</p>
+</div>
+<div class="item" id="proc-handle_directive"><h3><a href="../proc/handle_directive.html">handle_directive</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> handle_directive(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">kind</span>, <span class="intent attr-in" title="intent(in)">content</span>, <span class="intent attr-in" title="intent(in)">on_lines</span>, <span class="intent attr-in" title="intent(in)">path</span>)</div>
+<p>Act on a directive of type <code>kind</code>, which is <code>$</code>, <code>#</code> or <code>@</code>.</p>
+</div>
+<div class="item" id="proc-include_directive"><h3><a href="../proc/include_directive.html">include_directive</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> include_directive(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">param</span>, <span class="intent attr-in" title="intent(in)">path</span>)</div>
+<p><code>#:include "file"</code>.</p>
+</div>
+<div class="item" id="proc-intern"><h3><a href="../proc/intern.html">intern</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> intern(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>The number of name <code>name</code>, added if it is new.</p>
+</div>
+<div class="item" id="proc-items_of"><h3><a href="../proc/items_of.html">items_of</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> items_of(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">v</span>, <span class="intent attr-out" title="intent(out)">list</span>)</div>
+<p>The items of <code>v</code>, which is iterated over.</p>
+</div>
+<div class="item" id="proc-lookup"><h3><a href="../proc/lookup.html">lookup</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> lookup(<span class="intent attr-in" title="intent(in)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">v</span>, <span class="intent attr-out" title="intent(out)">found</span>)</div>
+<p>Find the value of name <code>id</code>.</p>
+</div>
+<div class="item" id="proc-make_bool"><h3><a href="../proc/make_bool.html">make_bool</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> make_bool(<span class="intent attr-in" title="intent(in)">truth</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>Make a bool value.</p>
+</div>
+<div class="item" id="proc-make_int"><h3><a href="../proc/make_int.html">make_int</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> make_int(<span class="intent attr-in" title="intent(in)">number</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>Make an integer value.</p>
+</div>
+<div class="item" id="proc-make_range"><h3><a href="../proc/make_range.html">make_range</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> make_range(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">args</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p><code>range(...)</code>, as a list.</p>
+</div>
+<div class="item" id="proc-make_string"><h3><a href="../proc/make_string.html">make_string</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> make_string(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>Make a string value.</p>
+</div>
+<div class="item" id="proc-make_zip"><h3><a href="../proc/make_zip.html">make_zip</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> make_zip(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">args</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p><code>zip(...)</code>, as a list of tuples.</p>
+</div>
+<div class="item" id="proc-move_expr"><h3><a href="../proc/move_expr.html">move_expr</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> move_expr(<span class="intent attr-inout" title="intent(inout)">from</span>, <span class="intent attr-inout" title="intent(inout)">to</span>)</div>
+<p>Move an expression, without copying what it holds.</p>
+</div>
+<div class="item" id="proc-move_node"><h3><a href="../proc/move_node.html">move_node</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> move_node(<span class="intent attr-inout" title="intent(inout)">from</span>, <span class="intent attr-inout" title="intent(inout)">to</span>)</div>
+<p>Move a node, without copying what it holds.</p>
+</div>
+<div class="item" id="proc-move_value"><h3><a href="../proc/move_value.html">move_value</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> move_value(<span class="intent attr-inout" title="intent(inout)">from</span>, <span class="intent attr-inout" title="intent(inout)">to</span>)</div>
+<p>Move a value, without copying what it holds.</p>
+</div>
+<div class="item" id="proc-next_token"><h3><a href="../proc/next_token.html">next_token</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> next_token(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>)</div>
+<p>Go to the next token.</p>
+</div>
+<div class="item" id="proc-open_block"><h3><a href="../proc/open_block.html">open_block</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> open_block(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">node</span>)</div>
+<p>Enter block <code>node</code>.</p>
+</div>
+<div class="item" id="proc-open_scope"><h3><a href="../proc/open_scope.html">open_scope</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> open_scope(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">up</span>)</div>
+<p>Open a scope that also sees frame <code>up</code>.</p>
+</div>
+<div class="item" id="proc-parse_and"><h3><a href="../proc/parse_and.html">parse_and</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_and(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>Operands of <code>and</code>.</p>
+</div>
+<div class="item" id="proc-parse_arguments"><h3><a href="../proc/parse_arguments.html">parse_arguments</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_arguments(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">closing</span>)</div>
+<p>The arguments of call <code>id</code>, up to <code>closing</code>.</p>
+</div>
+<div class="item" id="proc-parse_compare"><h3><a href="../proc/parse_compare.html">parse_compare</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_compare(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>Comparisons.</p>
+</div>
+<div class="item" id="proc-parse_comprehension"><h3><a href="../proc/parse_comprehension.html">parse_comprehension</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_comprehension(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-in" title="intent(in)">element</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>The <code>for</code> clauses after the item <code>element</code>.</p>
+</div>
+<div class="item" id="proc-parse_file"><h3><a href="../proc/parse_file.html">parse_file</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_file(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">path</span>)</div>
+<p>Read file <code>path</code> into the block being read.</p>
+</div>
+<div class="item" id="proc-parse_fstring"><h3><a href="../proc/parse_fstring.html">parse_fstring</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_fstring(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>An f-string, whose quotes and escapes are already gone.</p>
+</div>
+<div class="item" id="proc-parse_items"><h3><a href="../proc/parse_items.html">parse_items</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_items(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">first</span>, <span class="intent attr-in" title="intent(in)">closing</span>)</div>
+<p>The items of a list or tuple, after the first, which is <code>first</code>.</p>
+</div>
+<div class="item" id="proc-parse_list"><h3><a href="../proc/parse_list.html">parse_list</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_list(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>An expression, or several separated by commas, which make a tuple.</p>
+</div>
+<div class="item" id="proc-parse_not"><h3><a href="../proc/parse_not.html">parse_not</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_not(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>An operand of <code>not</code>.</p>
+</div>
+<div class="item" id="proc-parse_or"><h3><a href="../proc/parse_or.html">parse_or</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_or(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>Operands of <code>or</code>.</p>
+</div>
+<div class="item" id="proc-parse_postfix"><h3><a href="../proc/parse_postfix.html">parse_postfix</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_postfix(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>A primary with what follows it: calls, subscripts and methods.</p>
+</div>
+<div class="item" id="proc-parse_primary"><h3><a href="../proc/parse_primary.html">parse_primary</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_primary(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>A primary: a literal, a name, or something in brackets.</p>
+</div>
+<div class="item" id="proc-parse_product"><h3><a href="../proc/parse_product.html">parse_product</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_product(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>Factors multiplied.</p>
+</div>
+<div class="item" id="proc-parse_subscript"><h3><a href="../proc/parse_subscript.html">parse_subscript</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_subscript(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-in" title="intent(in)">object</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>A subscript of <code>object</code>, or a slice.</p>
+</div>
+<div class="item" id="proc-parse_sum"><h3><a href="../proc/parse_sum.html">parse_sum</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_sum(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>Terms added and subtracted.</p>
+</div>
+<div class="item" id="proc-parse_test"><h3><a href="../proc/parse_test.html">parse_test</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_test(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>An expression, which may be conditional.</p>
+</div>
+<div class="item" id="proc-parse_text"><h3><a href="../proc/parse_text.html">parse_text</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_text(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">path</span>)</div>
+<p>Split <code>text</code>, the contents of file <code>path</code>, into text and directives.</p>
+</div>
+<div class="item" id="proc-parse_unary"><h3><a href="../proc/parse_unary.html">parse_unary</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> parse_unary(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<p>A factor, perhaps negated.</p>
+</div>
+<div class="item" id="proc-push_id"><h3><a href="../proc/push_id.html">push_id</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> push_id(<span class="intent attr-inout" title="intent(inout)">list</span>, <span class="intent attr-in" title="intent(in)">value</span>)</div>
+<p>Append <code>value</code> to <code>list</code>.</p>
+</div>
+<div class="item" id="proc-read_line_directive"><h3><a href="../proc/read_line_directive.html">read_line_directive</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> read_line_directive(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">from</span>, <span class="intent attr-out" title="intent(out)">content</span>, <span class="intent attr-out" title="intent(out)">next</span>)</div>
+<p>Read a line directive whose text starts at <code>from</code>, joining continuation lines.</p>
+</div>
+<div class="item" id="proc-read_name"><h3><a href="../proc/read_name.html">read_name</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> read_name(<span class="intent attr-inout" title="intent(inout)">s</span>)</div>
+<p>Read a name.</p>
+</div>
+<div class="item" id="proc-read_string"><h3><a href="../proc/read_string.html">read_string</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> read_string(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-inout" title="intent(inout)">s</span>)</div>
+<p>Read a string in quotes, undoing its escapes.</p>
+</div>
+<div class="item" id="proc-read_targets"><h3><a href="../proc/read_targets.html">read_targets</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> read_targets(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">targets</span>, <span class="intent attr-out" title="intent(out)">next</span>)</div>
+<p>Read the names separated by commas at the start of <code>text</code>.</p>
+</div>
+<div class="item" id="proc-record_span"><h3><a href="../proc/record_span.html">record_span</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> record_span(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">first</span>, <span class="intent attr-in" title="intent(in)">last</span>)</div>
+<p>Record that the output from after <code>first</code> to <code>last</code> was evaluated.</p>
+</div>
+<div class="item" id="proc-render_body"><h3><a href="../proc/render_body.html">render_body</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> render_body(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">body</span>, <span class="intent attr-inout" title="intent(inout)">out</span>, <span class="intent attr-in" title="intent(in)">top</span>)</div>
+<p>Render the nodes of <code>body</code>. With <code>top</code>, what is evaluated is recorded for line folding.</p>
+</div>
+<div class="item" id="proc-render_call"><h3><a href="../proc/render_call.html">render_call</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> render_call(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-inout" title="intent(inout)">out</span>, <span class="intent attr-in" title="intent(in)">top</span>)</div>
+<p>Render a call: the block is the last positional argument.</p>
+</div>
+<div class="item" id="proc-render_loop"><h3><a href="../proc/render_loop.html">render_loop</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> render_loop(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-inout" title="intent(inout)">out</span>, <span class="intent attr-in" title="intent(in)">top</span>)</div>
+<p>Render a loop.</p>
+</div>
+<div class="item" id="proc-render_node"><h3><a href="../proc/render_node.html">render_node</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> render_node(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-inout" title="intent(inout)">out</span>, <span class="intent attr-in" title="intent(in)">top</span>)</div>
+<p>Render a node.</p>
+</div>
+<div class="item" id="proc-run_clause"><h3><a href="../proc/run_clause.html">run_clause</a><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> run_clause(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">k</span>, <span class="intent attr-inout" title="intent(inout)">items</span>, <span class="intent attr-inout" title="intent(inout)">n</span>)</div>
+<p>Run clause <code>k</code> of comprehension <code>id</code>, collecting items.</p>
+</div>
+<div class="item" id="proc-set_directive"><h3><a href="../proc/set_directive.html">set_directive</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> set_directive(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">param</span>)</div>
+<p><code>#:set names = expression</code>.</p>
+</div>
+<div class="item" id="proc-split_string"><h3><a href="../proc/split_string.html">split_string</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> split_string(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">separator</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p><code>text.split(separator)</code>.</p>
+</div>
+<div class="item" id="proc-subscript"><h3><a href="../proc/subscript.html">subscript</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> subscript(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">a</span>, <span class="intent attr-in" title="intent(in)">index</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<p>Item <code>index</code> of <code>a</code>, counting from 0, and from the end if negative.</p>
+</div>
+<div class="item" id="proc-without_carriage_returns"><h3><a href="../proc/without_carriage_returns.html">without_carriage_returns</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> without_carriage_returns(<span class="intent attr-inout" title="intent(inout)">text</span>)</div>
+<p>Turn the line ends of <code>text</code> into a line feed, as Python does when it reads text.</p>
+</div>
+<div class="item" id="proc-write_value"><h3><a href="../proc/write_value.html">write_value</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">recursive</span> <span class="k">subroutine</span> write_value(<span class="intent attr-in" title="intent(in)">v</span>, <span class="intent attr-in" title="intent(in)">quoted</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<p>Write <code>v</code> as <code>str()</code> does, or as <code>repr()</code> does if <code>quoted</code>.</p>
+</div>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>inherited_permission &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">function</span>inherited_permission<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> character(len=permission_length(list,id)) <span class="k">function</span> inherited_permission(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>) <span class="k">result</span>(permission)</div>
+<div class="doc">
+<p>The permission of what is declared now in <code>id</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-list"><td class="name">list</td><td class="type">type(<a href="../type/entity_list_t.html">entity_list_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entities</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entity</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-permission"><td class="name">permission</td><td class="type">character(len=permission_length(list,id))</td><td class="attributes"><span class="attr attr-private">private</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/open_procedure.html">open_procedure</a></li><li><a href="../proc/open_unit.html">open_unit</a></li><li><a href="../proc/read_declaration.html">read_declaration</a></li><li><a href="../proc/read_namelist.html">read_namelist</a></li></ul>
+<div class="graph"><svg width="808pt" height="124pt"
+ viewBox="0 0 808 124" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 120.5)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/inherited_permission.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="134.4" height="21.6"/><text x="67.2" y="-66.1">inherited_permission</text></a><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="337.5" y="-101.6" width="71.5" height="21.6"/><text x="373.2" y="-86.1">open_unit</text></a><path d="M337.2,-100.4C320.5,-104.5 300.2,-108.8 281.6,-110.8 232.4,-116.2 218.9,-120 170.4,-110.8 145.2,-106.1 118.4,-95.3 98.5,-86.1"/><polygon fill="#8a93a5" points="99.7,-84 92.3,-83.2 97.6,-88.4"/><a href="../proc/open_procedure.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="171.4" y="-101.6" width="109.1" height="21.6"/><text x="226" y="-86.1">open_procedure</text></a><path d="M337.1,-90.8C322.7,-90.8 305.6,-90.8 289.3,-90.8"/><polygon fill="#8a93a5" points="289.3,-88.4 282.3,-90.8 289.3,-93.3"/><path d="M171,-83.9C162.2,-82.8 152.9,-81.6 143.7,-80.4"/><polygon fill="#8a93a5" points="144,-78 136.8,-79.5 143.4,-82.9"/><a href="../proc/read_declaration.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="170.4" y="-61.6" width="111.2" height="21.6"/><text x="226" y="-46.1">read_declaration</text></a><path d="M170.1,-57.8C161.5,-58.9 152.4,-60.1 143.4,-61.2"/><polygon fill="#8a93a5" points="143.3,-58.8 136.6,-62.1 143.9,-63.6"/><a href="../proc/read_namelist.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="177.9" y="-21.6" width="96.1" height="21.6"/><text x="226" y="-6.1">read_namelist</text></a><path d="M194,-22C186.3,-24.8 178,-27.9 170.4,-30.8 148.7,-39 124.7,-48.4 105.3,-56"/><polygon fill="#8a93a5" points="104.6,-53.7 99,-58.5 106.4,-58.2"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="464.8" y="-81.6" width="70.8" height="21.6"/><text x="500.2" y="-66.1">parse_file</text></a><path d="M464.4,-76.4C449.9,-78.7 432.9,-81.4 417.6,-83.9"/><polygon fill="#8a93a5" points="417.3,-81.4 410.8,-85 418.1,-86.3"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="317.6" y="-61.6" width="111.2" height="21.6"/><text x="373.2" y="-46.1">parse_statement</text></a><path d="M464.4,-65.2C455.9,-63.9 446.6,-62.4 437.2,-60.9"/><polygon fill="#8a93a5" points="437.8,-58.5 430.5,-59.8 437,-63.3"/><path d="M317.3,-50.8C308.5,-50.8 299.4,-50.8 290.5,-50.8"/><polygon fill="#8a93a5" points="290.5,-48.4 283.5,-50.8 290.5,-53.3"/><path d="M331.4,-39.6C314.1,-34.8 293.9,-29.2 275.9,-24.3"/><polygon fill="#8a93a5" points="276.6,-21.9 269.2,-22.4 275.3,-26.7"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="571.6" y="-81.6" width="138" height="21.6"/><text x="640.6" y="-66.1">load_project_sources</text></a><path d="M571.2,-70.8C562,-70.8 552.8,-70.8 544.2,-70.8"/><polygon fill="#8a93a5" points="544.4,-68.4 537.4,-70.8 544.4,-73.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="745.6" y="-81.6" width="54" height="21.6"/><text x="772.6" y="-66.1">run</text></a><path d="M745.3,-70.8C737.2,-70.8 727.8,-70.8 718,-70.8"/><polygon fill="#8a93a5" points="718.3,-68.4 711.3,-70.8 718.3,-73.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">function</span> inherited_permission(list, id) <span class="k">result</span>(permission)
+    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list <span class="d">!! the entities</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! the entity</span>
+    <span class="k">character</span>(<span class="k">len</span>=permission_length(list, id)) :: permission
+
+    <span class="k">if</span> (<span class="k">allocated</span>(list%box(id)%e%child_permission)) <span class="k">then</span>
+        permission = list%box(id)%e%child_permission
+    <span class="k">else</span>
+        permission = <span class="s">'public'</span>
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">function</span> inherited_permission</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

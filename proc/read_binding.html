@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>read_binding &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">subroutine</span>read_binding<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> read_binding(<span class="intent attr-inout" title="intent(inout)">list</span>, <span class="intent attr-in" title="intent(in)">unit</span>, <span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-in" title="intent(in)">doc</span>, <span class="intent attr-in" title="intent(in)">s</span>)</div>
+<div class="doc">
+<p>Read a type-bound <code>procedure</code> or <code>generic</code> statement.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-list"><td class="name">list</td><td class="type">type(<a href="../type/entity_list_t.html">entity_list_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the entities</p></td></tr>
+<tr id="variable-unit"><td class="name">unit</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the type</p></td></tr>
+<tr id="variable-line"><td class="name">line</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the statement</p></td></tr>
+<tr id="variable-doc"><td class="name">doc</td><td class="type">type(<a href="../type/doc_lines_t.html">doc_lines_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the statement's documentation</p></td></tr>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/starts_word.html">starts_word</a></li><li><a href="../proc/strip.html">strip</a></li><li><a href="../proc/closing_paren.html">closing_paren</a></li><li><a href="../proc/split_attributes.html">split_attributes</a></li><li><a href="../proc/push.html">push</a></li><li><a href="../proc/top_split.html">top_split</a></li><li><a href="../type/entity_list_t.html#boundprocedure-add">add</a></li><li><a href="../proc/set_doc.html">set_doc</a></li></ul>
+<div class="graph"><svg width="689pt" height="560pt"
+ viewBox="0 0 689 560" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 555.7)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/read_binding.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-433.7" width="89.6" height="21.6"/><text x="44.8" y="-418.3">read_binding</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="594.4" y="-71.7" width="72.9" height="21.6"/><text x="630.8" y="-56.3">lowercase</text></a><path d="M46.8,-411.4C51.7,-355.4 75.6,-113.7 125.6,-60.9 147.2,-38.1 169.2,-61.5 193.9,-41.9"/><path d="M195.9,-41.9C252.4,2.7 282.5,-16.3 353.4,-3.9"/><path d="M355.4,-3.9C443.7,11.5 546.9,-24.8 598,-46.3"/><polygon fill="#8a93a5" points="596.9,-48.5 604.3,-49.1 598.8,-44"/><a href="../proc/starts_word.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="154.1" y="-551.7" width="81.6" height="21.6"/><text x="194.9" y="-536.3">starts_word</text></a><path d="M52.9,-434.6C65.4,-454.1 92.9,-493.3 125.6,-515.9 131.8,-520.3 138.9,-523.9 146.1,-527"/><polygon fill="#8a93a5" points="145.1,-529.3 152.5,-529.6 146.9,-524.7"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="603.8" y="-367.7" width="54" height="21.6"/><text x="630.8" y="-352.3">strip</text></a><path d="M85.6,-411.2C98.3,-408 112.4,-404.8 125.6,-402.9 225.9,-388.5 252.1,-397.4 353.4,-393.9"/><path d="M355.4,-393.9C418.8,-388.8 431.7,-340.5 493.4,-355.9"/><a href="../proc/closing_paren.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="147.2" y="-433.7" width="95.3" height="21.6"/><text x="194.9" y="-418.3">closing_paren</text></a><path d="M90.2,-422.9C105.5,-422.9 122.7,-422.9 138.7,-422.9"/><polygon fill="#8a93a5" points="138.4,-425.4 145.4,-422.9 138.4,-420.5"/><a href="../proc/split_attributes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="305.3" y="-502.7" width="98.2" height="21.6"/><text x="354.4" y="-487.3">split_attributes</text></a><path d="M56.6,-434.6C70.8,-449 97.3,-472.9 125.6,-482.9 181.3,-502.8 249.7,-502.5 296.9,-498.9"/><polygon fill="#8a93a5" points="296.9,-501.3 303.6,-498.3 296.5,-496.4"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="603.8" y="-287.7" width="54" height="21.6"/><text x="630.8" y="-272.3">push</text></a><path d="M195.9,-41.9C258,6 481.4,-51.9 544.2,-98.9 571.6,-119.4 608.2,-215.9 623.1,-257.6"/><polygon fill="#8a93a5" points="620.8,-258.4 625.4,-264.2 625.4,-256.8"/><a href="../proc/top_split.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="463" y="-405.7" width="62.8" height="21.6"/><text x="494.4" y="-390.3">top_split</text></a><path d="M355.4,-393.9C388.8,-392.8 426.8,-393.2 454.5,-393.8"/><polygon fill="#8a93a5" points="454.1,-396.2 461.2,-393.9 454.2,-391.3"/><a href="../proc/list_add.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="none" rx="7.2" x="125.6" y="-473.7" width="138.6" height="21.6"/><text x="234.6" y="-458.3" fill="white">list_add</text></a><a href="../type/entity_list_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M132.8,-473.7H205V-452.1H132.8A7.2,7.2 0 0 1 125.6,-459.3V-466.5A7.2,7.2 0 0 1 132.8,-473.7Z"/><text x="165.3" y="-458.3" fill="white">entity_list_t</text></a><path d="M89.4,-434.7C106.6,-439.4 126.4,-444.7 144.1,-449.5"/><polygon fill="#8a93a5" points="143.2,-451.8 150.6,-451.3 144.5,-447.1"/><a href="../proc/set_doc.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="164.9" y="-91.7" width="59.9" height="21.6"/><text x="194.9" y="-76.3">set_doc</text></a><path d="M50.9,-411.2C72.8,-360.6 159,-161.4 185.9,-99.5"/><polygon fill="#8a93a5" points="188,-100.7 188.5,-93.4 183.5,-98.8"/><a href="../proc/word_at.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="324.1" y="-551.7" width="60.6" height="21.6"/><text x="354.4" y="-536.3">word_at</text></a><path d="M236,-540.9C260.4,-540.9 291.3,-540.9 315.3,-540.9"/><polygon fill="#8a93a5" points="315.2,-543.4 322.2,-540.9 315.2,-538.5"/><path d="M386.2,-480.7C393.5,-477.9 401.4,-474.9 408.6,-471.9 446.8,-456.2 454.4,-447.5 493.4,-433.9"/><path d="M495.4,-433.9C517.4,-426.3 523.6,-425.8 544.2,-414.9 567.5,-402.7 592.1,-385.6 608.9,-373.1"/><polygon fill="#8a93a5" points="610.3,-375.1 614.4,-368.9 607.3,-371.2"/><path d="M393.8,-480.7C399,-478.3 404.1,-475.4 408.6,-471.9 430.7,-454.6 423.4,-438.5 444.6,-419.9 448.7,-416.3 453.5,-413 458.4,-410.2"/><polygon fill="#8a93a5" points="459.3,-412.5 464.2,-407 456.9,-408.2"/><a href="../proc/top_index.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="595.4" y="-444.7" width="70.8" height="21.6"/><text x="630.8" y="-429.3">top_index</text></a><path d="M495.4,-433.9C524.6,-423.8 559.7,-424.2 586.6,-426.9"/><polygon fill="#8a93a5" points="586.4,-429.3 593.6,-427.7 586.9,-424.4"/><path d="M526.2,-386.2C546.9,-380.4 574.1,-372.7 595.5,-366.6"/><polygon fill="#8a93a5" points="596.1,-369 602.2,-364.7 594.8,-364.3"/><path d="M504.8,-383.8C526,-358.8 575.6,-300.2 580.2,-296.9 584.9,-293.6 590.2,-290.7 595.6,-288.2"/><polygon fill="#8a93a5" points="596.5,-290.5 602,-285.5 594.6,-286"/><path d="M526.2,-403.9C544.4,-409.1 567.5,-415.9 587.4,-421.6"/><polygon fill="#8a93a5" points="586.5,-423.9 593.9,-423.5 587.8,-419.2"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="322.6" y="-462.7" width="63.5" height="21.6"/><text x="354.4" y="-447.3">push_int</text></a><path d="M264.5,-458.1C281.6,-456.9 299.3,-455.7 314.4,-454.7"/><polygon fill="#8a93a5" points="314.1,-457.1 320.9,-454.2 313.8,-452.2"/><path d="M225.3,-71.5C237.5,-67.2 251.8,-61.8 264.2,-55.9 305.7,-36.4 308.2,-11.8 353.4,-3.9"/><path d="M200.1,-92.2C211.8,-122.2 247.5,-205.7 300.2,-256.9 369.4,-324.2 398.6,-338.2 493.4,-355.9"/><a href="../proc/doxygen_meta.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="444.6" y="-327.7" width="99.7" height="21.6"/><text x="494.4" y="-312.3">doxygen_meta</text></a><path d="M205.1,-92.2C221.9,-112.3 259.9,-154.4 300.2,-178.9 343.8,-205.4 370,-183.5 408.6,-216.9 434.7,-239.6 421.2,-260.5 444.6,-285.9 450,-291.8 456.7,-297 463.4,-301.4"/><polygon fill="#8a93a5" points="462.1,-303.5 469.4,-305 464.7,-299.3"/><a href="../proc/parse_metadata.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="300.2" y="-169.7" width="108.4" height="21.6"/><text x="354.4" y="-154.3">parse_metadata</text></a><path d="M218.5,-92.1C246,-105.7 292.6,-128.8 323.2,-144"/><polygon fill="#8a93a5" points="321.9,-146.1 329.3,-147 324.1,-141.7"/><a href="../proc/join.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="327.4" y="-247.7" width="54" height="21.6"/><text x="354.4" y="-232.3">join</text></a><path d="M202.4,-92.2C217,-116.8 254.8,-176.1 300.2,-211.9 306.1,-216.6 313,-220.6 319.8,-224"/><polygon fill="#8a93a5" points="318.4,-226.1 325.8,-226.8 320.5,-221.6"/><path d="M533.2,-328.2C552.7,-334 576.3,-341 595.3,-346.7"/><polygon fill="#8a93a5" points="594.5,-349 601.9,-348.6 595.9,-344.3"/><path d="M533.2,-305.7C552.7,-299.9 576.3,-292.9 595.3,-287.2"/><polygon fill="#8a93a5" points="595.9,-289.6 601.9,-285.2 594.5,-284.9"/><a href="../proc/first_word_of.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="586.4" y="-327.7" width="88.8" height="21.6"/><text x="630.8" y="-312.3">first_word_of</text></a><path d="M544.7,-316.9C555.6,-316.9 567.1,-316.9 578.1,-316.9"/><polygon fill="#8a93a5" points="577.8,-319.4 584.8,-316.9 577.8,-314.5"/><path d="M368.6,-170.1C380.6,-180.9 398,-198.4 408.6,-216.9 436.1,-265.3 406.8,-296 444.6,-336.9 460.4,-354 470.5,-351.7 493.4,-355.9"/><path d="M495.4,-355.9C528.8,-362.2 567.8,-361.6 595.1,-360"/><polygon fill="#8a93a5" points="595.2,-362.5 602,-359.6 594.9,-357.6"/><path d="M388.3,-170.1C395.6,-173.7 402.8,-178.3 408.6,-183.9 434.8,-210 414.3,-237.8 444.6,-258.9 489.1,-290.1 555.1,-288.1 595.1,-283"/><polygon fill="#8a93a5" points="595.4,-285.5 602,-282.1 594.7,-280.6"/><a href="../proc/split_lines.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="458.7" y="-129.7" width="71.5" height="21.6"/><text x="494.4" y="-114.3">split_lines</text></a><path d="M394.2,-147.7C411.6,-142.6 432.2,-136.7 450.2,-131.5"/><polygon fill="#8a93a5" points="450.7,-133.9 456.7,-129.6 449.3,-129.2"/><a href="../proc/is_marker.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="458.7" y="-249.7" width="71.5" height="21.6"/><text x="494.4" y="-234.3">is_marker</text></a><path d="M383.7,-170.1C392,-174 400.9,-178.7 408.6,-183.9 426.9,-196.6 425.9,-206.7 444.6,-218.9 447.3,-220.7 450.3,-222.4 453.3,-224"/><polygon fill="#8a93a5" points="452.3,-226.2 459.6,-227.1 454.4,-221.8"/><a href="../proc/match_key.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="455.8" y="-169.7" width="77.3" height="21.6"/><text x="494.4" y="-154.3">match_key</text></a><path d="M408.8,-158.9C421.4,-158.9 434.9,-158.9 447.2,-158.9"/><polygon fill="#8a93a5" points="447.1,-161.4 454.1,-158.9 447.1,-156.5"/><a href="../proc/add_value.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="457.2" y="-209.7" width="74.4" height="21.6"/><text x="494.4" y="-194.3">add_value</text></a><path d="M394.2,-170.2C411.2,-175.1 431.3,-180.9 448.9,-186"/><polygon fill="#8a93a5" points="447.9,-188.3 455.3,-187.9 449.3,-183.6"/><a href="../proc/leading_blanks.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="580.2" y="-129.7" width="101.1" height="21.6"/><text x="630.8" y="-114.3">leading_blanks</text></a><path d="M366.9,-147.8C382.8,-133.3 413.2,-108.5 444.6,-98.9 492.8,-84.2 551,-94.8 589.1,-105.4"/><polygon fill="#8a93a5" points="588.1,-107.7 595.5,-107.2 589.4,-102.9"/><path d="M528.8,-147.6C534.2,-145.2 539.5,-142.3 544.2,-138.9 563.8,-125.2 562.7,-115.2 580.2,-98.9 588.5,-91.3 598.3,-83.6 606.9,-77.1"/><polygon fill="#8a93a5" points="608.2,-79.2 612.4,-73.1 605.3,-75.3"/><path d="M533.2,-169.9C537.3,-172.3 541.2,-175.3 544.2,-178.9 590.8,-233.9 533.5,-282.1 580.2,-336.9 584.4,-341.9 590,-345.6 595.9,-348.4"/><polygon fill="#8a93a5" points="594.7,-350.5 602.1,-350.9 596.5,-346"/><path d="M533.2,-147.7C549.1,-143 567.7,-137.4 584.3,-132.5"/><polygon fill="#8a93a5" points="584.8,-134.9 590.9,-130.5 583.4,-130.2"/><path d="M525.6,-210.1C531.8,-212.8 538.4,-215.8 544.2,-218.9 567.2,-231.3 591.7,-248.3 608.5,-260.7"/><polygon fill="#8a93a5" points="607,-262.6 614,-264.8 609.9,-258.6"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/parse_statement.html">parse_statement</a></li></ul>
+<div class="graph"><svg width="616pt" height="30pt"
+ viewBox="0 0 616 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/read_binding.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="89.6" height="21.6"/><text x="44.8" y="-6.1">read_binding</text></a><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="125.6" y="-21.6" width="111.2" height="21.6"/><text x="181.2" y="-6.1">parse_statement</text></a><path d="M125.1,-10.8C116.3,-10.8 107.3,-10.8 98.5,-10.8"/><polygon fill="#8a93a5" points="98.8,-8.4 91.8,-10.8 98.8,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="272.8" y="-21.6" width="70.8" height="21.6"/><text x="308.2" y="-6.1">parse_file</text></a><path d="M272.4,-10.8C264,-10.8 254.7,-10.8 245.5,-10.8"/><polygon fill="#8a93a5" points="245.5,-8.4 238.5,-10.8 245.5,-13.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="379.6" y="-21.6" width="138" height="21.6"/><text x="448.6" y="-6.1">load_project_sources</text></a><path d="M379.2,-10.8C370,-10.8 360.8,-10.8 352.2,-10.8"/><polygon fill="#8a93a5" points="352.4,-8.4 345.4,-10.8 352.4,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="553.6" y="-21.6" width="54" height="21.6"/><text x="580.6" y="-6.1">run</text></a><path d="M553.2,-10.8C545.1,-10.8 535.8,-10.8 526,-10.8"/><polygon fill="#8a93a5" points="526.3,-8.4 519.3,-10.8 526.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> read_binding(list, unit, line, doc, s)
+    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(inout) :: list  <span class="d">!! the entities</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: unit                 <span class="d">!! the type</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line        <span class="d">!! the statement</span>
+    <span class="k">type</span>(doc_lines_t), <span class="k">intent</span>(in) :: doc        <span class="d">!! the statement's documentation</span>
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s           <span class="d">!! the settings</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: names(:), attributes(:), kept(:), bindings(:)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: rest, proto, permission, low, name
+    <span class="k">logical</span> :: <span class="k">generic</span>, <span class="k">deferred</span>
+    <span class="k">integer</span> :: k, id, <span class="k">open</span>, <span class="k">close</span>
+
+    low = lowercase(line)
+    <span class="k">generic</span> = starts_word(low, <span class="s">'generic'</span>)
+    rest = strip(line(<span class="k">merge</span>(<span class="n">8</span>, <span class="n">10</span>, <span class="k">generic</span>):))
+    proto = <span class="s">''</span>
+    <span class="k">if</span> (<span class="k">len</span>(rest) &gt; <span class="n">0</span>) <span class="k">then</span>
+        <span class="k">if</span> (rest(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'('</span>) <span class="k">then</span>
+            <span class="k">close</span> = closing_paren(rest, <span class="n">1</span>)
+            proto = strip(rest(<span class="n">2</span>:<span class="k">close</span> - <span class="n">1</span>))
+            rest = strip(rest(<span class="k">close</span> + <span class="n">1</span>:))
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">call</span> split_attributes(rest, attributes, name)
+    rest = name
+    <span class="k">allocate</span> (kept(<span class="n">0</span>))
+    permission = list%box(unit)%e%child_permission
+    <span class="k">deferred</span> = <span class="k">.false.</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(attributes)
+        low = lowercase(attributes(k)%s)
+        <span class="k">select</span> <span class="k">case</span> (low)
+        <span class="k">case</span> (<span class="s">'public'</span>, <span class="s">'private'</span>)
+            permission = low
+        <span class="k">case</span> (<span class="s">'deferred'</span>)
+            <span class="k">deferred</span> = <span class="k">.true.</span>
+        <span class="k">case</span> default
+            <span class="k">call</span> push(kept, low)
+        <span class="k">end</span> <span class="k">select</span>
+    <span class="k">end</span> <span class="k">do</span>
+
+    <span class="k">if</span> (<span class="k">generic</span>) <span class="k">then</span>
+        <span class="k">allocate</span> (names(<span class="n">1</span>))
+        names(<span class="n">1</span>)%s = rest
+    <span class="k">else</span>
+        names = top_split(rest, <span class="s">','</span>)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">do</span> k = <span class="k">size</span>(names), <span class="n">1</span>, -<span class="n">1</span>
+        id = list%add(E_BOUNDPROC, unit)
+        <span class="k">associate</span> (b =&gt; list%box(id)%e, text =&gt; names(k)%s)
+            <span class="k">open</span> = <span class="k">index</span>(text, <span class="s">'=&gt;'</span>)
+            <span class="k">if</span> (<span class="k">open</span> &gt; <span class="n">0</span>) <span class="k">then</span>
+                b%name = strip(text(:<span class="k">open</span> - <span class="n">1</span>))
+                b%more%bindings = top_split(text(<span class="k">open</span> + <span class="n">2</span>:), <span class="s">','</span>)
+            <span class="k">else</span>
+                b%name = strip(text)
+                bindings = [string_t(b%name)]
+                <span class="k">call</span> <span class="k">move_alloc</span>(bindings, b%more%bindings)
+            <span class="k">end</span> <span class="k">if</span>
+            b%<span class="k">generic</span> = <span class="k">generic</span>
+            b%<span class="k">deferred</span> = <span class="k">deferred</span>
+            b%permission = permission
+            b%attribs = kept
+            <span class="k">if</span> (<span class="k">len</span>(proto) &gt; <span class="n">0</span>) b%more%proto_text = proto
+            <span class="k">if</span> (<span class="k">allocated</span>(doc%lines)) <span class="k">then</span>
+                <span class="k">call</span> set_doc(b, s, doc%lines)
+            <span class="k">else</span>
+                <span class="k">call</span> set_doc(b, s, [string_t ::])
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> read_binding</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

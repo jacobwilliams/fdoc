@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>expand_vars &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">function</span>expand_vars</h1>
+<div class="sig">character(len=:) <span class="k">function</span> expand_vars(<span class="intent attr-in" title="intent(in)">path</span>) <span class="k">result</span>(out)</div>
+<div class="doc">
+<p><code>path</code> with <code>$NAME</code> and <code>${NAME}</code> replaced by environment variables. Unset variables are left
+as written.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-out"><td class="name">out</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-allocatable">allocatable</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/resolve_path.html">resolve_path</a></li></ul>
+<div class="graph"><svg width="769pt" height="70pt"
+ viewBox="0 0 769 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/expand_vars.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="88.8" height="21.6"/><text x="44.4" y="-25.1">expand_vars</text></a><a href="../proc/resolve_path.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="124.8" y="-40.6" width="88.8" height="21.6"/><text x="169.3" y="-25.1">resolve_path</text></a><path d="M124.6,-29.8C116,-29.8 107,-29.8 98.1,-29.8"/><polygon fill="#8a93a5" points="98.3,-27.4 91.3,-29.8 98.3,-32.3"/><a href="../proc/load_external_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="249.7" y="-21.6" width="138.7" height="21.6"/><text x="319" y="-6.1">load_external_project</text></a><path d="M249.3,-19.6C240.2,-20.8 231,-22 222.2,-23.1"/><polygon fill="#8a93a5" points="222,-20.7 215.4,-24 222.7,-25.5"/><a href="../proc/finish_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="449" y="-61.6" width="96.8" height="21.6"/><text x="497.4" y="-46.1">finish_settings</text></a><path d="M448.6,-47.7C388.1,-43.8 284.4,-37.2 222.1,-33.1"/><polygon fill="#8a93a5" points="222.6,-30.7 215.5,-32.7 222.3,-35.6"/><a href="../proc/add_external_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="424.4" y="-21.6" width="145.9" height="21.6"/><text x="497.4" y="-6.1">add_external_modules</text></a><path d="M424.1,-10.8C415.3,-10.8 406.2,-10.8 397.2,-10.8"/><polygon fill="#8a93a5" points="397.2,-8.4 390.2,-10.8 397.2,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="707.3" y="-40.6" width="54" height="21.6"/><text x="734.3" y="-25.1">run</text></a><path d="M706.8,-32.2C670,-35.5 602.5,-41.5 554.3,-45.8"/><polygon fill="#8a93a5" points="554.1,-43.4 547.4,-46.4 554.5,-48.2"/><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="606.3" y="-21.6" width="65" height="21.6"/><text x="638.8" y="-6.1">correlate</text></a><path d="M707.3,-24.5C698.8,-22.8 689.3,-20.8 680,-19"/><polygon fill="#8a93a5" points="680.5,-16.6 673.2,-17.6 679.6,-21.4"/><path d="M606.2,-10.8C597.9,-10.8 588.6,-10.8 579,-10.8"/><polygon fill="#8a93a5" points="579.1,-8.4 572.1,-10.8 579.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">function</span> expand_vars(path) <span class="k">result</span>(out)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the text</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: out, name, <span class="k">value</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: NAME_CHARS = <span class="s">'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_'</span>
+    <span class="k">integer</span> :: i, j, n, <span class="k">stat</span>
+    <span class="k">logical</span> :: braced
+
+    out = <span class="s">''</span>
+    i = <span class="n">1</span>
+    <span class="k">do</span> <span class="k">while</span> (i &lt;= <span class="k">len</span>(path))
+        <span class="k">if</span> (path(i:i) /= <span class="s">'$'</span>) <span class="k">then</span>
+            out = out//path(i:i)
+            i = i + <span class="n">1</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        braced = <span class="k">.false.</span>
+        <span class="k">if</span> (i &lt; <span class="k">len</span>(path)) braced = path(i + <span class="n">1</span>:i + <span class="n">1</span>) == <span class="s">'{'</span>
+        <span class="k">if</span> (braced) <span class="k">then</span>
+            j = <span class="k">index</span>(path(i + <span class="n">2</span>:), <span class="s">'}'</span>)
+            <span class="k">if</span> (j &gt; <span class="n">0</span>) j = i + <span class="n">1</span> + j
+        <span class="k">else</span>
+            j = <span class="k">verify</span>(path(i + <span class="n">1</span>:), NAME_CHARS)
+            j = <span class="k">merge</span>(<span class="k">len</span>(path), i + j - <span class="n">1</span>, j == <span class="n">0</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (j == <span class="n">0</span> <span class="k">.or.</span> j == i) <span class="k">then</span>
+            out = out//<span class="s">'$'</span>
+            i = i + <span class="n">1</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (braced) <span class="k">then</span>
+            name = path(i + <span class="n">2</span>:j - <span class="n">1</span>)
+        <span class="k">else</span>
+            name = path(i + <span class="n">1</span>:j)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> <span class="k">get_environment_variable</span>(name, length=n, status=<span class="k">stat</span>)
+        <span class="k">if</span> (<span class="k">stat</span> == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">allocate</span> (<span class="k">character</span>(<span class="k">len</span>=n) :: <span class="k">value</span>)
+            <span class="k">call</span> <span class="k">get_environment_variable</span>(name, <span class="k">value</span>)
+            out = out//<span class="k">value</span>
+            <span class="k">deallocate</span> (<span class="k">value</span>)
+        <span class="k">else</span>
+            out = out//path(i:j)
+        <span class="k">end</span> <span class="k">if</span>
+        i = j + <span class="n">1</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">function</span> expand_vars</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>entity_json &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_output.f90.html">fdoc_output.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_output.html">fdoc_output</a></div>
+<h1><span class="kind">subroutine</span>entity_json<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> entity_json(<span class="intent attr-inout" title="intent(inout)">json</span>, <span class="intent attr-in" title="intent(in)">p</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">key</span>, <span class="intent attr-in" title="intent(in)">module_index</span>, <span class="intent attr-out" title="intent(out)">node</span>)</div>
+<div class="doc">
+<p>The JSON form of entity <code>id</code>, for <code>modules.json</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-json"><td class="name">json</td><td class="type">type(json_core)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the JSON handler</p></td></tr>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entity</p></td></tr>
+<tr id="variable-key"><td class="name">key</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>its key in the parent's JSON</p></td></tr>
+<tr id="variable-module_index"><td class="name">module_index</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>position in <code>p%modules</code>, or 0 if not a module</p></td></tr>
+<tr id="variable-node"><td class="name">node</td><td class="type">type(json_value)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-pointer">pointer</span></td><td><p>the result</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/object_word.html">object_word</a></li><li><a href="../proc/entity_url.html">entity_url</a></li><li>empty_array</li><li>children</li><li>children_iface</li><li>strings</li><li>public_dicts</li></ul>
+<div class="graph"><svg width="470pt" height="149pt"
+ viewBox="0 0 470 149" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 144.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/entity_json.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="76.5" height="21.6"/><text x="38.3" y="-66.1">entity_json</text></a><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="251.8" y="-140.6" width="84.5" height="21.6"/><text x="294.1" y="-125.1">object_word</text></a><path d="M56.2,-82.6C70.5,-91.9 91.9,-104.4 112.5,-110.8 155.5,-124.2 206.6,-128.6 243.5,-129.8"/><polygon fill="#8a93a5" points="243.1,-132.2 250.1,-130 243.2,-127.3"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="130.6" y="-101.6" width="67.1" height="21.6"/><text x="164.2" y="-86.1">entity_url</text></a><path d="M77.5,-77C91.6,-79.2 107.7,-81.8 122.1,-84.2"/><polygon fill="#8a93a5" points="121.6,-86.6 128.9,-85.3 122.3,-81.7"/><a href="../proc/contains_string.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="113.3" y="-61.6" width="101.8" height="21.6"/><text x="164.2" y="-46.1">contains_string</text></a><path d="M77.5,-64.6C86.2,-63.2 95.6,-61.7 104.9,-60.2"/><polygon fill="#8a93a5" points="105,-62.7 111.5,-59.1 104.2,-57.8"/><a href="../proc/public_symbols.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="112.5" y="-21.6" width="103.3" height="21.6"/><text x="164.2" y="-6.1">public_symbols</text></a><path d="M59.1,-59.1C73.7,-50.7 94,-39.5 112.5,-30.8 116.6,-28.9 120.9,-27 125.2,-25.2"/><polygon fill="#8a93a5" points="126,-27.5 131.5,-22.6 124.1,-23"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="372.3" y="-140.6" width="89.6" height="21.6"/><text x="417.1" y="-125.1">is_procedure</text></a><path d="M336.7,-129.8C345.3,-129.8 354.5,-129.8 363.4,-129.8"/><polygon fill="#8a93a5" points="363.4,-132.3 370.4,-129.8 363.4,-127.4"/><path d="M198.1,-100.8C213.4,-105.5 231.8,-111.1 248.3,-116.1"/><polygon fill="#8a93a5" points="247.3,-118.4 254.7,-118.1 248.8,-113.7"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="252.5" y="-100.6" width="83.1" height="21.6"/><text x="294.1" y="-85.1">page_name</text></a><path d="M198.1,-90.5C212.1,-90.4 228.7,-90.3 244.1,-90.2"/><polygon fill="#8a93a5" points="244,-92.6 251,-90.1 243.9,-87.7"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="259.8" y="-60.6" width="68.6" height="21.6"/><text x="294.1" y="-45.1">url_quote</text></a><path d="M198.1,-80.2C214.4,-75 234.3,-68.7 251.6,-63.1"/><polygon fill="#8a93a5" points="252,-65.5 257.9,-61.1 250.5,-60.9"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="378.1" y="-100.6" width="78" height="21.6"/><text x="417.1" y="-85.1">lower_char</text></a><path d="M336,-89.8C346.8,-89.8 358.4,-89.8 369.4,-89.8"/><polygon fill="#8a93a5" points="369.1,-92.3 376.1,-89.8 369.1,-87.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_modules.html">write_modules</a></li></ul>
+<div class="graph"><svg width="309pt" height="30pt"
+ viewBox="0 0 309 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/entity_json.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="76.5" height="21.6"/><text x="38.3" y="-6.1">entity_json</text></a><a href="../proc/write_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="112.5" y="-21.6" width="98.2" height="21.6"/><text x="161.7" y="-6.1">write_modules</text></a><path d="M112.3,-10.8C103.6,-10.8 94.5,-10.8 85.8,-10.8"/><polygon fill="#8a93a5" points="85.9,-8.4 78.9,-10.8 85.9,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="246.8" y="-21.6" width="54" height="21.6"/><text x="273.8" y="-6.1">run</text></a><path d="M246.4,-10.8C238.2,-10.8 228.9,-10.8 219.5,-10.8"/><polygon fill="#8a93a5" points="219.7,-8.4 212.7,-10.8 219.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> entity_json(json, p, id, key, module_index, node)
+    <span class="k">type</span>(json_core), <span class="k">intent</span>(inout) :: json          <span class="d">!! the JSON handler</span>
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(in) :: p                <span class="d">!! the project</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id                       <span class="d">!! the entity</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key             <span class="d">!! its key in the parent's JSON</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: module_index             <span class="d">!! position in `p%modules`, or 0 if not a module</span>
+    <span class="k">type</span>(json_value), <span class="k">pointer</span>, <span class="k">intent</span>(out) :: node  <span class="d">!! the result</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: word, url
+    <span class="k">type</span>(json_value), <span class="k">pointer</span> :: array
+
+    <span class="k">call</span> json%create_object(node, key)
+    <span class="k">associate</span> (e =&gt; p%list%box(id)%e)
+        <span class="k">call</span> object_word(e, word)
+        <span class="k">call</span> entity_url(p%list, id, url)
+        <span class="k">call</span> json%add(node, <span class="s">'name'</span>, e%name)
+        <span class="k">call</span> json%add(node, <span class="s">'external_url'</span>, <span class="s">'./'</span>//url)
+        <span class="k">call</span> json%add(node, <span class="s">'obj'</span>, word)
+        <span class="k">select</span> <span class="k">case</span> (e%<span class="k">kind</span>)
+        <span class="k">case</span> (E_SUBROUTINE, E_FUNCTION, E_MODPROC)
+            <span class="k">if</span> (e%iface /= IFACE_NONE) <span class="k">then</span>
+                <span class="k">call</span> json%add(node, <span class="s">'proctype'</span>, <span class="s">'Interface'</span>)
+                <span class="k">call</span> json%add(node, <span class="s">'generic'</span>, <span class="s">'False'</span>)
+                <span class="k">call</span> empty_array(<span class="s">'variables'</span>)
+            <span class="k">else</span>
+                <span class="k">call</span> json%add(node, <span class="s">'proctype'</span>, <span class="k">trim</span>(<span class="k">merge</span>(<span class="s">'Function  '</span>, <span class="s">'Subroutine'</span>, e%<span class="k">kind</span> == E_FUNCTION)))
+                <span class="k">call</span> children(<span class="s">'functions'</span>, [E_FUNCTION], <span class="k">.false.</span>)
+                <span class="k">call</span> children(<span class="s">'subroutines'</span>, [E_SUBROUTINE], <span class="k">.false.</span>)
+                <span class="k">call</span> children_iface(<span class="s">'interfaces'</span>, <span class="k">.false.</span>)
+                <span class="k">call</span> children_iface(<span class="s">'absinterfaces'</span>, <span class="k">.true.</span>)
+                <span class="k">call</span> children(<span class="s">'types'</span>, [E_TYPE], <span class="k">.false.</span>)
+                <span class="k">call</span> children(<span class="s">'variables'</span>, [E_VARIABLE], <span class="k">.false.</span>)
+                <span class="k">call</span> strings(<span class="s">'attribs'</span>, e%attribs)
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">case</span> (E_MODULE, E_SUBMODULE)
+            <span class="k">if</span> (module_index &gt; <span class="n">0</span>) <span class="k">call</span> public_dicts(module_index)
+            <span class="k">call</span> children(<span class="s">'functions'</span>, [E_FUNCTION], <span class="k">.false.</span>)
+            <span class="k">call</span> children(<span class="s">'subroutines'</span>, [E_SUBROUTINE], <span class="k">.false.</span>)
+            <span class="k">call</span> children_iface(<span class="s">'interfaces'</span>, <span class="k">.false.</span>)
+            <span class="k">call</span> children_iface(<span class="s">'absinterfaces'</span>, <span class="k">.true.</span>)
+            <span class="k">call</span> children(<span class="s">'types'</span>, [E_TYPE], <span class="k">.false.</span>)
+            <span class="k">call</span> children(<span class="s">'variables'</span>, [E_VARIABLE], <span class="k">.false.</span>)
+        <span class="k">case</span> (E_INTERFACE)
+            <span class="k">call</span> json%add(node, <span class="s">'proctype'</span>, <span class="s">'Interface'</span>)
+            <span class="k">call</span> json%add(node, <span class="s">'generic'</span>, <span class="s">'True'</span>)
+            <span class="k">call</span> children(<span class="s">'functions'</span>, [E_FUNCTION], <span class="k">.true.</span>)
+            <span class="k">call</span> children(<span class="s">'subroutines'</span>, [E_SUBROUTINE], <span class="k">.true.</span>)
+            <span class="k">call</span> empty_array(<span class="s">'variables'</span>)
+        <span class="k">case</span> (E_TYPE)
+            <span class="k">call</span> strings(<span class="s">'attribs'</span>, e%attribs)
+            <span class="k">call</span> children(<span class="s">'variables'</span>, [E_VARIABLE], <span class="k">.false.</span>)
+            <span class="k">call</span> children(<span class="s">'boundprocs'</span>, [E_BOUNDPROC], <span class="k">.false.</span>)
+        <span class="k">case</span> (E_BOUNDPROC)
+            <span class="k">call</span> strings(<span class="s">'attribs'</span>, e%attribs)
+            <span class="k">call</span> json%add(node, <span class="s">'deferred'</span>, <span class="k">trim</span>(<span class="k">merge</span>(<span class="s">'True '</span>, <span class="s">'False'</span>, e%<span class="k">deferred</span>)))
+            <span class="k">call</span> json%add(node, <span class="s">'generic'</span>, <span class="k">trim</span>(<span class="k">merge</span>(<span class="s">'True '</span>, <span class="s">'False'</span>, e%<span class="k">generic</span>)))
+        <span class="k">case</span> (E_VARIABLE)
+            <span class="k">call</span> strings(<span class="s">'attribs'</span>, e%attribs)
+            <span class="k">call</span> json%add(node, <span class="s">'vartype'</span>, e%vartype)
+        <span class="k">end</span> <span class="k">select</span>
+        <span class="k">call</span> json%add(node, <span class="s">'permission'</span>, e%permission)
+    <span class="k">end</span> <span class="k">associate</span>
+
+<span class="k">contains</span>
+
+    <span class="d">!&gt; Add an empty array.</span>
+    <span class="k">subroutine</span> empty_array(name)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! its key</span>
+        <span class="k">call</span> json%create_array(array, name)
+        <span class="k">call</span> json%add(node, array)
+    <span class="k">end</span> <span class="k">subroutine</span> empty_array
+
+    <span class="d">!&gt; Add an array of strings.</span>
+    <span class="k">subroutine</span> strings(name, list)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! its key</span>
+        <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: list(:)   <span class="d">!! the strings</span>
+        <span class="k">integer</span> :: j
+        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: a
+        <span class="k">call</span> json%create_array(a, name)
+        <span class="k">call</span> json%add(node, a)
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(list)
+            <span class="k">call</span> json%add(a, <span class="s">''</span>, list(j)%s)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">subroutine</span> strings
+
+    <span class="d">!&gt; Add an array of the visible children of the kinds given.</span>
+    <span class="k">recursive</span> <span class="k">subroutine</span> children(name, kinds, <span class="k">all</span>)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! its key</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: kinds(:)         <span class="d">!! the `E_*` constants</span>
+        <span class="k">logical</span>, <span class="k">intent</span>(in) :: <span class="k">all</span>              <span class="d">!! true to include those of interfaces</span>
+        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: a, item
+        <span class="k">integer</span> :: j, child
+        <span class="k">call</span> json%create_array(a, name)
+        <span class="k">call</span> json%add(node, a)
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(p%list%box(id)%e%children)
+            child = p%list%box(id)%e%children(j)
+            <span class="k">associate</span> (c =&gt; p%list%box(child)%e)
+                <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>(c%<span class="k">kind</span> == kinds)) <span class="k">cycle</span>
+                <span class="k">if</span> (<span class="k">.not.</span> c%visible) <span class="k">cycle</span>
+                <span class="k">if</span> (c%<span class="k">kind</span> == E_VARIABLE <span class="k">.and.</span> c%var_role /= VAR_PLAIN) <span class="k">cycle</span>
+                <span class="k">if</span> (c%iface /= IFACE_NONE <span class="k">.and.</span> <span class="k">.not.</span> <span class="k">all</span>) <span class="k">cycle</span>
+                <span class="k">call</span> entity_json(json, p, child, <span class="s">''</span>, <span class="n">0</span>, item)
+                <span class="k">call</span> json%add(a, item)
+            <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(p%list%box(id)%e%more%inherited)) <span class="k">return</span>
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(p%list%box(id)%e%more%inherited)
+            child = p%list%box(id)%e%more%inherited(j)
+            <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>(p%list%box(child)%e%<span class="k">kind</span> == kinds)) <span class="k">cycle</span>
+            <span class="k">if</span> (<span class="k">.not.</span> contains_string(p%list%box(id)%e%display, p%list%box(child)%e%permission)) <span class="k">cycle</span>
+            <span class="k">call</span> entity_json(json, p, child, <span class="s">''</span>, <span class="n">0</span>, item)
+            <span class="k">call</span> json%add(a, item)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">subroutine</span> children
+
+    <span class="d">!&gt; Add an array of the visible interfaces.</span>
+    <span class="k">recursive</span> <span class="k">subroutine</span> children_iface(name, <span class="k">abstract</span>)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! its key</span>
+        <span class="k">logical</span>, <span class="k">intent</span>(in) :: <span class="k">abstract</span>         <span class="d">!! true for abstract interfaces</span>
+        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: a, item
+        <span class="k">integer</span> :: j, child
+        <span class="k">logical</span> :: wanted
+        <span class="k">call</span> json%create_array(a, name)
+        <span class="k">call</span> json%add(node, a)
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(p%list%box(id)%e%children)
+            child = p%list%box(id)%e%children(j)
+            <span class="k">associate</span> (c =&gt; p%list%box(child)%e)
+                <span class="k">if</span> (<span class="k">.not.</span> c%visible) <span class="k">cycle</span>
+                wanted = (<span class="k">abstract</span> <span class="k">.and.</span> c%iface == IFACE_ABSTRACT) <span class="k">.or.</span> &amp;
+                         (<span class="k">.not.</span> <span class="k">abstract</span> <span class="k">.and.</span> (c%iface == IFACE_EXPLICIT <span class="k">.or.</span> c%<span class="k">kind</span> == E_INTERFACE))
+                <span class="k">if</span> (<span class="k">.not.</span> wanted) <span class="k">cycle</span>
+                <span class="k">call</span> entity_json(json, p, child, <span class="s">''</span>, <span class="n">0</span>, item)
+                <span class="k">call</span> json%add(a, item)
+            <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">subroutine</span> children_iface
+
+    <span class="d">!&gt; Add the public names of the module.</span>
+    <span class="k">recursive</span> <span class="k">subroutine</span> public_dicts(which)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: which    <span class="d">!! position in `p%modules`</span>
+        <span class="k">call</span> dict(<span class="s">'pub_procs'</span>, public_symbols(p, which, <span class="n">1</span>))
+        <span class="k">call</span> dict(<span class="s">'pub_absints'</span>, public_symbols(p, which, <span class="n">2</span>))
+        <span class="k">call</span> dict(<span class="s">'pub_types'</span>, public_symbols(p, which, <span class="n">3</span>))
+        <span class="k">call</span> dict(<span class="s">'pub_vars'</span>, public_symbols(p, which, <span class="n">4</span>))
+    <span class="k">end</span> <span class="k">subroutine</span> public_dicts
+
+    <span class="d">!&gt; Add an object of `symbols`.</span>
+    <span class="k">recursive</span> <span class="k">subroutine</span> dict(name, symbols)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name        <span class="d">!! its key</span>
+        <span class="k">type</span>(symbol_t), <span class="k">intent</span>(in) :: symbols(:)    <span class="d">!! the names</span>
+        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: object, item
+        <span class="k">integer</span> :: j
+        <span class="k">call</span> json%create_object(object, name)
+        <span class="k">call</span> json%add(node, object)
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(symbols)
+            <span class="k">if</span> (<span class="k">allocated</span>(p%list%box(symbols(j)%id)%e%external_url)) <span class="k">cycle</span>
+            <span class="k">call</span> entity_json(json, p, symbols(j)%id, symbols(j)%name, <span class="n">0</span>, item)
+            <span class="k">call</span> json%add(object, item)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">subroutine</span> dict
+
+<span class="k">end</span> <span class="k">subroutine</span> entity_json</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

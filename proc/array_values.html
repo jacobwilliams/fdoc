@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>array_values &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project_file.f90.html">fdoc_project_file.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project_file.html">fdoc_project_file</a></div>
+<h1><span class="kind">subroutine</span>array_values<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> array_values(<span class="intent attr-inout" title="intent(inout)">array</span>, <span class="intent attr-inout" title="intent(inout)">values</span>, <span class="intent attr-inout" title="intent(inout)">stat</span>, <span class="intent attr-out" title="intent(out)">errmsg</span>)</div>
+<div class="doc">
+<p>The items of a TOML array as text. An array of tables is taken to be <code>extra_filetypes</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-array"><td class="name">array</td><td class="type">type(toml_array)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the array</p></td></tr>
+<tr id="variable-values"><td class="name">values</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the items</p></td></tr>
+<tr id="variable-stat"><td class="name">stat</td><td class="type">integer</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>nonzero on failure</p></td></tr>
+<tr id="variable-errmsg"><td class="name">errmsg</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>what is wrong</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push.html">push</a></li></ul>
+<div class="graph"><svg width="187pt" height="30pt"
+ viewBox="0 0 187 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/array_values.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="88.8" height="21.6"/><text x="44.4" y="-6.1">array_values</text></a><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="124.8" y="-21.6" width="54" height="21.6"/><text x="151.8" y="-6.1">push</text></a><path d="M89.8,-10.8C98.6,-10.8 107.7,-10.8 116.1,-10.8"/><polygon fill="#8a93a5" points="116,-13.3 123,-10.8 116,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/apply_table.html">apply_table</a></li></ul>
+<div class="graph"><svg width="581pt" height="70pt"
+ viewBox="0 0 581 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/array_values.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="88.8" height="21.6"/><text x="44.4" y="-26.1">array_values</text></a><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="124.8" y="-41.6" width="80.9" height="21.6"/><text x="165.3" y="-26.1">apply_table</text></a><path d="M124.4,-30.8C115.9,-30.8 106.8,-30.8 97.9,-30.8"/><polygon fill="#8a93a5" points="98,-28.4 91,-30.8 98,-33.3"/><a href="../proc/load_fpm_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="241.7" y="-21.6" width="119.9" height="21.6"/><text x="301.7" y="-6.1">load_fpm_settings</text></a><path d="M241.3,-19.6C232.3,-21 223,-22.4 214.2,-23.7"/><polygon fill="#8a93a5" points="214.1,-21.2 207.5,-24.7 214.8,-26.1"/><a href="../proc/apply_toml_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="243.5" y="-61.6" width="116.3" height="21.6"/><text x="301.7" y="-46.1">apply_toml_string</text></a><path d="M243.3,-42.3C233.7,-40.8 223.8,-39.4 214.4,-38"/><polygon fill="#8a93a5" points="214.8,-35.5 207.5,-36.9 214.1,-40.4"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="397.6" y="-21.6" width="85.2" height="21.6"/><text x="440.2" y="-6.1">load_project</text></a><path d="M397.2,-10.8C388.6,-10.8 379.5,-10.8 370.3,-10.8"/><polygon fill="#8a93a5" points="370.5,-8.4 363.5,-10.8 370.5,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="518.9" y="-40.6" width="54" height="21.6"/><text x="545.9" y="-25.1">run</text></a><path d="M518.5,-32.1C482.8,-35.2 417.9,-40.8 368.6,-45.1"/><polygon fill="#8a93a5" points="368.4,-42.6 361.7,-45.7 368.9,-47.5"/><path d="M518.4,-25C510.2,-23.4 500.8,-21.7 491.5,-20"/><polygon fill="#8a93a5" points="492.1,-17.6 484.8,-18.8 491.3,-22.5"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> array_values(array, values, <span class="k">stat</span>, errmsg)
+    <span class="k">type</span>(toml_array), <span class="k">intent</span>(inout) :: array            <span class="d">!! the array</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: values(:)   <span class="d">!! the items</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(inout) :: <span class="k">stat</span>                      <span class="d">!! nonzero on failure</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+    <span class="k">type</span>(toml_table), <span class="k">pointer</span> :: item
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text, part
+    <span class="k">integer</span> :: k, ios
+
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(array)
+        <span class="k">call</span> get_value(array, k, text, <span class="k">stat</span>=ios)
+        <span class="k">if</span> (ios == <span class="n">0</span> <span class="k">.and.</span> <span class="k">allocated</span>(text)) <span class="k">then</span>
+            <span class="k">call</span> push(values, text)
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> get_value(array, k, item, <span class="k">stat</span>=ios)
+        <span class="k">if</span> (ios /= <span class="n">0</span> <span class="k">.or.</span> <span class="k">.not.</span> <span class="k">associated</span>(item)) <span class="k">then</span>
+            <span class="k">stat</span> = <span class="n">1</span>
+            errmsg = <span class="s">'expected strings or tables in an array'</span>
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        text = <span class="s">''</span>
+        <span class="k">call</span> get_value(item, <span class="s">'extension'</span>, part, <span class="s">''</span>)
+        text = part
+        <span class="k">call</span> get_value(item, <span class="s">'comment'</span>, part, <span class="s">''</span>)
+        text = text//<span class="s">' '</span>//part
+        <span class="k">call</span> get_value(item, <span class="s">'lexer'</span>, part, <span class="s">''</span>)
+        <span class="k">if</span> (part /= <span class="s">''</span>) text = text//<span class="s">' '</span>//part
+        <span class="k">call</span> push(values, text)
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> array_values</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

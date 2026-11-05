@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>scan_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-kind"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>kind</a></li><li><a href="#variable-number"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>number</a></li><li><a href="#variable-pos"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>pos</a></li><li><a href="#variable-text"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>text</a></li><li><a href="#variable-word"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>word</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">type</span>scan_t<span class="attr attr-private">private</span></h1>
+<div class="doc">
+<p>Reading an expression.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-kind"><td class="name">kind</td><td class="type">integer</td><td class="attributes"></td><td class="default">T_END</td><td><p>the kind of the current token</p></td></tr>
+<tr id="variable-number"><td class="name">number</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>the value of an integer token</p></td></tr>
+<tr id="variable-pos"><td class="name">pos</td><td class="type">integer</td><td class="attributes"></td><td class="default">1</td><td><p>where the next token starts</p></td></tr>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the expression</p></td></tr>
+<tr id="variable-word"><td class="name">word</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the current token</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Argument of (20)</h3>
+<ul class="chips kinds"><li class="ico-f"><span class="ico ico-f" title="function" aria-hidden="true">F</span><a href="../proc/at_word.html">at_word</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/expect.html">expect</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/next_token.html">next_token</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_and.html">parse_and</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_arguments.html">parse_arguments</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_compare.html">parse_compare</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_comprehension.html">parse_comprehension</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_items.html">parse_items</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_list.html">parse_list</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_not.html">parse_not</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_or.html">parse_or</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_postfix.html">parse_postfix</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_primary.html">parse_primary</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_product.html">parse_product</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_subscript.html">parse_subscript</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_sum.html">parse_sum</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_test.html">parse_test</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_unary.html">parse_unary</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/read_name.html">read_name</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/read_string.html">read_string</a></li></ul>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: scan_t
+    <span class="d">!! Reading an expression.</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text   <span class="d">!! the expression</span>
+    <span class="k">integer</span> :: pos = <span class="n">1</span>                      <span class="d">!! where the next token starts</span>
+    <span class="k">integer</span> :: <span class="k">kind</span> = T_END                 <span class="d">!! the kind of the current token</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: word   <span class="d">!! the current token</span>
+    <span class="k">integer</span> :: number = <span class="n">0</span>                   <span class="d">!! the value of an integer token</span>
+<span class="k">end</span> <span class="k">type</span> scan_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>markdown_options_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-abbreviations"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>abbreviations</a></li><li><a href="#variable-aliases"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>aliases</a></li><li><a href="#variable-base_path"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>base_path</a></li><li><a href="#variable-resolver"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>resolver</a></li><li><a href="#variable-resolver_data"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>resolver_data</a></li><li><a href="#variable-smarty"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>smarty</a></li><li><a href="#variable-toc"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>toc</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">type</span>markdown_options_t</h1>
+<div class="doc">
+<p>What rendering depends on.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-abbreviations"><td class="name">abbreviations</td><td class="type">type(<a href="../type/map_entry_t.html">map_entry_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>abbreviations that apply everywhere</p></td></tr>
+<tr id="variable-aliases"><td class="name">aliases</td><td class="type">type(<a href="../type/map_entry_t.html">map_entry_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the <code>|alias|</code> replacements</p></td></tr>
+<tr id="variable-base_path"><td class="name">base_path</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>where file include directives paths start from</p></td></tr>
+<tr id="variable-resolver"><td class="name">resolver</td><td class="type">procedure(<a href="../interface/link_resolver.html">link_resolver</a>)</td><td class="attributes"><span class="attr attr-pointer">pointer</span><span class="attr attr-nopass">nopass</span></td><td class="default">=&gt; null()</td><td><p>finds <code>[[...]]</code> links</p></td></tr>
+<tr id="variable-resolver_data"><td class="name">resolver_data</td><td class="type">class(*)</td><td class="attributes"><span class="attr attr-pointer">pointer</span></td><td class="default">=&gt; null()</td><td><p>passed to <code>resolver</code></p></td></tr>
+<tr id="variable-smarty"><td class="name">smarty</td><td class="type">logical</td><td class="attributes"></td><td class="default">.false.</td><td><p>the <code>smarty</code> extension: typographic punctuation</p></td></tr>
+<tr id="variable-toc"><td class="name">toc</td><td class="type">logical</td><td class="attributes"></td><td class="default">.false.</td><td><p>the <code>toc</code> extension: ids on headers, <code>[TOC]</code></p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Argument of (22)</h3>
+<ul class="chips kinds"><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/base_options.html">base_options</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/collect_abbreviations.html">collect_abbreviations</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/expand_file_includes.html">expand_file_includes</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/ford_link.html">ford_link</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/inline.html">inline</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/inline_bracket.html">inline_bracket</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/inline_emphasis.html">inline_emphasis</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/load_pages.html">load_pages</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/markdown_to_html.html">markdown_to_html</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/read_page.html">read_page</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/read_tree.html">read_tree</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/render_children.html">render_children</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/render_documentation.html">render_documentation</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/render_entity.html">render_entity</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/render_footnotes.html">render_footnotes</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/render_heading.html">render_heading</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/render_node~2.html">render_node</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/render_table.html">render_table</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/render_text.html">render_text</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/stash_html_blocks.html">stash_html_blocks</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/table_row.html">table_row</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/write_link.html">write_link</a></li></ul>
+<h2 id="inherits">Inherits</h2>
+<div class="graph"><svg width="371pt" height="32pt"
+ viewBox="0 0 371 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 28)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/markdown_options_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="228.4" y="-21.6" width="134.4" height="21.6"/><text x="295.6" y="-6.1">markdown_options_t</text></a><a href="../type/map_entry_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="0" y="-21.6" width="86.7" height="21.6"/><text x="43.3" y="-6.1">map_entry_t</text></a><path stroke-dasharray="5,2" d="M227.6,-10.8C186,-10.8 133.4,-10.8 95.2,-10.8"/><polygon fill="#8a93a5" points="95.3,-8.4 88.3,-10.8 95.3,-13.3"/><text x="157.6" y="-13.4" font-size="11" fill="#8a93a5">aliases, abbreviations</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: markdown_options_t
+    <span class="d">!! What rendering depends on.</span>
+    <span class="k">type</span>(map_entry_t), <span class="k">allocatable</span> :: aliases(:)    <span class="d">!! the `|alias|` replacements</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: base_path      <span class="d">!! where file include directives paths start from</span>
+    <span class="k">logical</span> :: toc = <span class="k">.false.</span>                        <span class="d">!! the `toc` extension: ids on headers, `[TOC]`</span>
+    <span class="k">logical</span> :: smarty = <span class="k">.false.</span>                     <span class="d">!! the `smarty` extension: typographic punctuation</span>
+    <span class="k">procedure</span>(link_resolver), <span class="k">pointer</span>, <span class="k">nopass</span> :: resolver =&gt; <span class="k">null</span>() <span class="d">!! finds `[[...]]` links</span>
+    <span class="k">class</span>(*), <span class="k">pointer</span> :: resolver_data =&gt; <span class="k">null</span>()    <span class="d">!! passed to `resolver`</span>
+    <span class="k">type</span>(map_entry_t), <span class="k">allocatable</span> :: abbreviations(:)  <span class="d">!! abbreviations that apply everywhere</span>
+<span class="k">end</span> <span class="k">type</span> markdown_options_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

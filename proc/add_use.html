@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>add_use &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>add_use<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> add_use(<span class="intent attr-inout" title="intent(inout)">ids</span>, <span class="intent attr-in" title="intent(in)">id</span>)</div>
+<div class="doc">
+<p>Add entity <code>id</code> to <code>ids</code>, once.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-ids"><td class="name">ids</td><td class="type">integer</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the entities</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entity</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push_int.html">push_int</a></li></ul>
+<div class="graph"><svg width="172pt" height="30pt"
+ viewBox="0 0 172 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_use.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="64.3" height="21.6"/><text x="32.1" y="-6.1">add_use</text></a><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="100.3" y="-21.6" width="63.5" height="21.6"/><text x="132.1" y="-6.1">push_int</text></a><path d="M65.2,-10.8C73.7,-10.8 82.9,-10.8 91.7,-10.8"/><polygon fill="#8a93a5" points="91.4,-13.3 98.4,-10.8 91.4,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/find_type_uses.html">find_type_uses</a></li></ul>
+<div class="graph"><svg width="405pt" height="30pt"
+ viewBox="0 0 405 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_use.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="64.3" height="21.6"/><text x="32.1" y="-6.1">add_use</text></a><a href="../proc/find_type_uses.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="100.3" y="-21.6" width="101.9" height="21.6"/><text x="151.2" y="-6.1">find_type_uses</text></a><path d="M99.9,-10.8C91,-10.8 82,-10.8 73.5,-10.8"/><polygon fill="#8a93a5" points="73.7,-8.4 66.7,-10.8 73.7,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="238.1" y="-21.6" width="69.3" height="21.6"/><text x="272.8" y="-6.1">write_site</text></a><path d="M237.8,-10.8C229.4,-10.8 220.1,-10.8 210.8,-10.8"/><polygon fill="#8a93a5" points="210.8,-8.4 203.8,-10.8 210.8,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="343.4" y="-21.6" width="54" height="21.6"/><text x="370.4" y="-6.1">run</text></a><path d="M343,-10.8C334.7,-10.8 325.2,-10.8 316,-10.8"/><polygon fill="#8a93a5" points="316.1,-8.4 309.1,-10.8 316.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> add_use(ids, id)
+    <span class="k">integer</span>, <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: ids(:)   <span class="d">!! the entities</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id                       <span class="d">!! the entity</span>
+
+    <span class="k">if</span> (<span class="k">allocated</span>(ids)) <span class="k">then</span>
+        <span class="k">if</span> (<span class="k">any</span>(ids == id)) <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">call</span> push_int(ids, id)
+<span class="k">end</span> <span class="k">subroutine</span> add_use</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

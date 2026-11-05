@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_buffer.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_buffer.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_buffer"><h3><a href="../module/fdoc_buffer.html">fdoc_buffer</a><span class="attr attr-private">private</span></h3>
+<p>Building text piece by piece, without functions returning deferred-length strings, so that it can be
+used in parallel regions (see <code>example/slen_race.f90</code>).</p>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="1086pt" height="376pt"
+ viewBox="0 0 1086 376" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 372.3)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_buffer.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-304.3" width="101.1" height="21.6"/><text x="50.6" y="-288.9">fdoc_buffer.f90</text></a><a href="../sourcefile/fdoc_assets.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="137.1" y="-324.3" width="105.5" height="21.6"/><text x="189.9" y="-308.9">fdoc_assets.f90</text></a><path d="M137,-306C128.1,-304.7 118.9,-303.3 109.9,-302"/><polygon fill="#8a93a5" points="110.5,-299.6 103.2,-301.1 109.8,-304.5"/><a href="../sourcefile/fdoc_fypp.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="143.6" y="-207.3" width="92.5" height="21.6"/><text x="189.9" y="-191.9">fdoc_fypp.f90</text></a><path d="M173.1,-207.7C149,-224.7 102.6,-257.5 74.7,-277.2"/><polygon fill="#8a93a5" points="73.5,-275 69.2,-281.1 76.3,-279"/><a href="../sourcefile/fdoc_generics.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="594.7" y="-325.3" width="117" height="21.6"/><text x="653.3" y="-309.9">fdoc_generics.f90</text></a><path d="M594.3,-314.4C531.2,-314.1 427.3,-313.6 337.7,-312.5"/><a href="../sourcefile/fdoc_urls.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="450.4" y="-208.3" width="88.8" height="21.6"/><text x="494.8" y="-192.9">fdoc_urls.f90</text></a><path d="M637.3,-303.3C609.4,-282.5 549.5,-237.7 517.4,-213.6"/><polygon fill="#8a93a5" points="518.8,-211.7 511.8,-209.5 515.9,-215.6"/><a href="../sourcefile/fdoc_graphs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="599.4" y="-247.3" width="107.6" height="21.6"/><text x="653.3" y="-231.9">fdoc_graphs.f90</text></a><path d="M625.9,-247.7C572.4,-269.2 447.3,-314 337.7,-312.5"/><path d="M335.7,-312.5C269.3,-306.3 257.1,-266 190.9,-273.5"/><path d="M607,-225.3C588.5,-220.6 566.9,-215.2 547.7,-210.5"/><polygon fill="#8a93a5" points="548.5,-208.1 541.1,-208.8 547.3,-212.9"/><a href="../sourcefile/fdoc_project.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="441.4" y="-128.3" width="106.9" height="21.6"/><text x="494.8" y="-112.9">fdoc_project.f90</text></a><path d="M615.8,-225.3C608.2,-221.8 600.7,-217.3 594.7,-211.5 568.3,-186.2 586.4,-161.5 558.7,-137.5 556.7,-135.8 554.5,-134.2 552.2,-132.7"/><polygon fill="#8a93a5" points="553.6,-130.7 546.3,-129.4 551.3,-135"/><a href="../sourcefile/fdoc_highlight.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="278.6" y="-284.3" width="116.3" height="21.6"/><text x="336.7" y="-268.9">fdoc_highlight.f90</text></a><path d="M278.1,-270.6C251.5,-269.9 219.5,-270.3 190.9,-273.5"/><a href="../sourcefile/fdoc_markdown.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="430.9" y="-168.3" width="127.9" height="21.6"/><text x="494.8" y="-152.9">fdoc_markdown.f90</text></a><path d="M444.6,-168.8C413.7,-176.2 373.1,-186.5 337.7,-197.5"/><path d="M335.7,-197.5C266.3,-219.1 263.1,-265.3 190.9,-273.5"/><path d="M188.9,-273.5C163.1,-276.5 134.6,-280.5 110.4,-284.1"/><polygon fill="#8a93a5" points="110,-281.7 103.5,-285.2 110.8,-286.6"/><path d="M448.9,-168.8C442.7,-171.2 436.5,-174.1 430.9,-177.5 421.8,-183.1 377.9,-230 353.8,-256.1"/><polygon fill="#8a93a5" points="352.1,-254.4 349.1,-261.2 355.7,-257.7"/><a href="../sourcefile/fdoc_site.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="890" y="-150.3" width="88.1" height="21.6"/><text x="934" y="-134.9">fdoc_site.f90</text></a><path d="M335.7,-353.5C247.5,-344.3 222.7,-357.1 137.1,-333.5 116.7,-327.9 95.1,-317.8 78.7,-309.1"/><polygon fill="#8a93a5" points="80.2,-307.1 72.9,-306 77.9,-311.5"/><path d="M798.4,-275.5C755.6,-294 755.9,-319.7 711.8,-334.5 554,-387.6 503.8,-364.8 337.7,-353.5"/><path d="M335.7,-353.5C298.3,-349.6 257,-337.4 228.1,-327.5"/><polygon fill="#8a93a5" points="229.1,-325.2 221.7,-325.2 227.5,-329.9"/><path d="M798.4,-275.5C772.6,-286.3 743,-294.9 717.3,-301.3"/><polygon fill="#8a93a5" points="716.8,-298.9 710.6,-302.9 718,-303.6"/><path d="M798.4,-275.5C778.7,-283.8 724.5,-265.2 688.5,-250.9"/><polygon fill="#8a93a5" points="689.4,-248.7 682,-248.4 687.6,-253.2"/><path d="M798.4,-275.5C729.1,-304.5 513.4,-289.9 403.6,-280"/><polygon fill="#8a93a5" points="403.9,-277.6 396.7,-279.4 403.4,-282.5"/><path d="M652.3,-197.5C619.1,-184.7 579,-185 547.7,-188.3"/><polygon fill="#8a93a5" points="547.7,-185.9 541,-189.1 548.3,-190.7"/><a href="../sourcefile/fdoc_pages.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="747.8" y="-111.3" width="103.3" height="21.6"/><text x="799.4" y="-95.9">fdoc_pages.f90</text></a><path d="M894.7,-128.3C879.7,-123.8 862.4,-118.8 846.7,-114.1"/><polygon fill="#8a93a5" points="847.5,-111.8 840.1,-112.2 846.2,-116.5"/><path d="M926.8,-150.5C910.3,-178 862.8,-249.5 800.4,-275.5"/><path d="M798.4,-275.5C755.4,-293.5 753.6,-237.2 711.8,-216.5 687.6,-204.6 679.4,-207.2 654.3,-197.5"/><path d="M652.3,-197.5C606.2,-179.7 603.4,-158.5 558.7,-137.5 554.2,-135.4 549.3,-133.4 544.4,-131.6"/><polygon fill="#8a93a5" points="545.5,-129.4 538.1,-129.3 543.9,-134"/><path d="M450.1,-190.7C418.2,-187.3 374.4,-186.1 337.7,-197.5"/><a href="../sourcefile/fdoc_input.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="288.7" y="-149.3" width="96.1" height="21.6"/><text x="336.7" y="-133.9">fdoc_input.f90</text></a><path d="M307.8,-149.7C284.7,-159 251.6,-172.2 226.5,-182.3"/><polygon fill="#8a93a5" points="225.7,-179.9 220.1,-184.8 227.5,-184.5"/><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="1017" y="-111.3" width="60.7" height="21.6"/><text x="1047.3" y="-95.9">fdoc.f90</text></a><path d="M798.4,-61.5C735.1,-48.3 717.3,-67.1 654.3,-81.5"/><path d="M652.3,-81.5C626,-87.6 617.6,-86.3 594.7,-100.5 575.3,-112.7 578.3,-125.5 558.7,-137.5 555.4,-139.6 551.9,-141.4 548.3,-143.1"/><polygon fill="#8a93a5" points="547.6,-140.7 542.1,-145.7 549.5,-145.2"/><path d="M1016.5,-111C1003.7,-115.5 988.5,-120.8 974.8,-125.6"/><polygon fill="#8a93a5" points="974.1,-123.2 968.3,-127.9 975.7,-127.9"/><path d="M798.4,-159.5C708.2,-172.3 685.1,-171.8 594.7,-183.5 579.5,-185.5 563,-187.8 547.9,-189.9"/><polygon fill="#8a93a5" points="547.7,-187.5 541.1,-190.9 548.4,-192.3"/><a href="../sourcefile/fdoc_docs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="605.6" y="-131.3" width="95.3" height="21.6"/><text x="653.3" y="-115.9">fdoc_docs.f90</text></a><path d="M933,-100.5C868.5,-102.1 864.3,-150.5 800.4,-159.5"/><path d="M798.4,-159.5C778.1,-162.4 728,-146.9 692.5,-134.6"/><polygon fill="#8a93a5" points="693.6,-132.3 686.2,-132.3 692,-137"/><path d="M933,-100.5C909,-101.1 882.6,-101.2 859.7,-101.2"/><polygon fill="#8a93a5" points="860,-98.7 852.9,-101.1 859.9,-103.6"/><a href="../sourcefile/fdoc_output.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="601.2" y="-53.3" width="104" height="21.6"/><text x="653.3" y="-37.9">fdoc_output.f90</text></a><path d="M798.4,-61.5C770.9,-55.8 740,-51.4 713.9,-48.4"/><polygon fill="#8a93a5" points="714.4,-46 707.1,-47.6 713.8,-50.8"/><path d="M1016.5,-100.1C994.1,-99.9 962.6,-99.9 935,-100.5"/><path d="M933,-100.5C871.6,-102.1 860.6,-74.1 800.4,-61.5"/><path d="M798.4,-61.5C730.8,-47.4 722.7,5.8 654.3,-3.5"/><a href="../sourcefile/fdoc_links.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="887.1" y="-53.3" width="93.9" height="21.6"/><text x="934" y="-37.9">fdoc_links.f90</text></a><path d="M1024.8,-89.4C1007.5,-80.3 983,-67.5 963.9,-57.6"/><polygon fill="#8a93a5" points="965.1,-55.4 957.8,-54.4 962.8,-59.8"/><path d="M605.3,-131.6C588.4,-135.6 569.1,-140.2 551.5,-144.4"/><polygon fill="#8a93a5" points="551.3,-141.9 545,-145.9 552.4,-146.7"/><path d="M621.5,-131.8C612.6,-135.6 603,-140.3 594.7,-145.5 576.7,-157.1 577.4,-167 558.7,-177.5 555.1,-179.6 551.2,-181.5 547.2,-183.2"/><polygon fill="#8a93a5" points="546.5,-180.9 540.9,-185.7 548.3,-185.4"/><path d="M605.3,-119.6C590.1,-119.3 573.1,-119 557,-118.7"/><polygon fill="#8a93a5" points="557.3,-116.3 550.3,-118.6 557.2,-121.2"/><path d="M764.3,-89.3C734.9,-81.2 691.4,-73 654.3,-81.5"/><path d="M747.6,-107.6C735.2,-109.3 721.9,-111.1 709.4,-112.9"/><polygon fill="#8a93a5" points="709.4,-110.4 702.8,-113.8 710,-115.3"/><path d="M769.2,-89.3C761.8,-85.6 754.1,-81 747.8,-75.5 726.3,-56.8 734.5,-39.7 711.8,-22.5 690.3,-6.3 680.9,0.3 654.3,-3.5"/><path d="M639.1,-53.4C626.5,-64.4 607.6,-82.2 594.7,-100.5 573.1,-131.5 587.1,-152.6 558.7,-177.5 555.3,-180.6 551.4,-183.1 547.3,-185.3"/><polygon fill="#8a93a5" points="546.3,-183 541,-188.2 548.4,-187.5"/><path d="M625.5,-53.8C615.8,-58 604.7,-62.9 594.7,-67.5 570.9,-78.7 544.3,-92.2 524.7,-102.4"/><polygon fill="#8a93a5" points="523.7,-100.2 518.6,-105.6 525.9,-104.5"/><path d="M441,-124.6C425.5,-126.7 408.6,-129 393,-131.1"/><polygon fill="#8a93a5" points="393.1,-128.6 386.5,-132 393.8,-133.5"/><path d="M898.2,-31.4C845.5,-15.8 742.1,9 654.3,-3.5"/><path d="M652.3,-3.5C625.6,-7.2 617.8,-8.6 594.7,-22.5 559.8,-43.6 527.3,-79.1 509.6,-100.2"/><polygon fill="#8a93a5" points="507.9,-98.4 505.4,-105.3 511.7,-101.5"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_buffer
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! Building text piece by piece, without functions returning deferred-length strings, so that it can be</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="d">!! used in parallel regions (see `example/slen_race.f90`).</span>
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="k">private</span>
+<a class="ln" id="ln-6" href="#ln-6"></a>
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="k">public</span> :: buffer_t, add, take, html_escape, int_text
+<a class="ln" id="ln-8" href="#ln-8"></a>
+<a class="ln" id="ln-9" href="#ln-9"></a><span class="k">type</span> :: buffer_t
+<a class="ln" id="ln-10" href="#ln-10"></a>    <span class="d">!! Text being built.</span>
+<a class="ln" id="ln-11" href="#ln-11"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: s      <span class="d">!! storage; only `s(1:n)` is in use</span>
+<a class="ln" id="ln-12" href="#ln-12"></a>    <span class="k">integer</span> :: n = <span class="n">0</span>                        <span class="d">!! length of the text</span>
+<a class="ln" id="ln-13" href="#ln-13"></a><span class="k">end</span> <span class="k">type</span> buffer_t
+<a class="ln" id="ln-14" href="#ln-14"></a>
+<a class="ln" id="ln-15" href="#ln-15"></a><span class="k">contains</span>
+<a class="ln" id="ln-16" href="#ln-16"></a>
+<a class="ln" id="ln-17" href="#ln-17"></a><span class="d">!&gt; `k` as text, in a fixed width. This is for parallel code, as an internal `write` takes a lock that</span>
+<a class="ln" id="ln-18" href="#ln-18"></a><span class="d">!&gt; threads end up spending most of their time on.</span>
+<a class="ln" id="ln-19" href="#ln-19"></a><span class="k">pure</span> <span class="k">function</span> int_text(k) <span class="k">result</span>(text)
+<a class="ln" id="ln-20" href="#ln-20"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: k    <span class="d">!! the number</span>
+<a class="ln" id="ln-21" href="#ln-21"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="n">12</span>) :: text
+<a class="ln" id="ln-22" href="#ln-22"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="n">12</span>) :: <span class="k">digits</span>
+<a class="ln" id="ln-23" href="#ln-23"></a>    <span class="k">integer</span> :: at, rest
+<a class="ln" id="ln-24" href="#ln-24"></a>
+<a class="ln" id="ln-25" href="#ln-25"></a>    at = <span class="k">len</span>(<span class="k">digits</span>) + <span class="n">1</span>
+<a class="ln" id="ln-26" href="#ln-26"></a>    rest = <span class="k">abs</span>(k)
+<a class="ln" id="ln-27" href="#ln-27"></a>    <span class="k">do</span>
+<a class="ln" id="ln-28" href="#ln-28"></a>        at = at - <span class="n">1</span>
+<a class="ln" id="ln-29" href="#ln-29"></a>        <span class="k">digits</span>(at:at) = <span class="k">achar</span>(<span class="k">iachar</span>(<span class="s">'0'</span>) + <span class="k">mod</span>(rest, <span class="n">10</span>))
+<a class="ln" id="ln-30" href="#ln-30"></a>        rest = rest/<span class="n">10</span>
+<a class="ln" id="ln-31" href="#ln-31"></a>        <span class="k">if</span> (rest == <span class="n">0</span>) <span class="k">exit</span>
+<a class="ln" id="ln-32" href="#ln-32"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-33" href="#ln-33"></a>    <span class="k">if</span> (k &lt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-34" href="#ln-34"></a>        at = at - <span class="n">1</span>
+<a class="ln" id="ln-35" href="#ln-35"></a>        <span class="k">digits</span>(at:at) = <span class="s">'-'</span>
+<a class="ln" id="ln-36" href="#ln-36"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-37" href="#ln-37"></a>    text = <span class="k">digits</span>(at:)
+<a class="ln" id="ln-38" href="#ln-38"></a><span class="k">end</span> <span class="k">function</span> int_text
+<a class="ln" id="ln-39" href="#ln-39"></a>
+<a class="ln" id="ln-40" href="#ln-40"></a><span class="d">!&gt; Append `text` to `b`.</span>
+<a class="ln" id="ln-41" href="#ln-41"></a><span class="k">pure</span> <span class="k">subroutine</span> add(b, text)
+<a class="ln" id="ln-42" href="#ln-42"></a>    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the buffer</span>
+<a class="ln" id="ln-43" href="#ln-43"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+<a class="ln" id="ln-44" href="#ln-44"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: grown
+<a class="ln" id="ln-45" href="#ln-45"></a>    <span class="k">integer</span> :: capacity
+<a class="ln" id="ln-46" href="#ln-46"></a>
+<a class="ln" id="ln-47" href="#ln-47"></a>    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(b%s)) <span class="k">allocate</span> (<span class="k">character</span>(<span class="k">len</span>=<span class="k">max</span>(<span class="n">256</span>, <span class="n">2</span>*<span class="k">len</span>(text))) :: b%s)
+<a class="ln" id="ln-48" href="#ln-48"></a>    capacity = <span class="k">len</span>(b%s)
+<a class="ln" id="ln-49" href="#ln-49"></a>    <span class="k">if</span> (b%n + <span class="k">len</span>(text) &gt; capacity) <span class="k">then</span>
+<a class="ln" id="ln-50" href="#ln-50"></a>        <span class="k">allocate</span> (<span class="k">character</span>(<span class="k">len</span>=<span class="k">max</span>(<span class="n">2</span>*capacity, b%n + <span class="k">len</span>(text))) :: grown)
+<a class="ln" id="ln-51" href="#ln-51"></a>        grown(<span class="n">1</span>:b%n) = b%s(<span class="n">1</span>:b%n)
+<a class="ln" id="ln-52" href="#ln-52"></a>        <span class="k">call</span> <span class="k">move_alloc</span>(grown, b%s)
+<a class="ln" id="ln-53" href="#ln-53"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-54" href="#ln-54"></a>    b%s(b%n + <span class="n">1</span>:b%n + <span class="k">len</span>(text)) = text
+<a class="ln" id="ln-55" href="#ln-55"></a>    b%n = b%n + <span class="k">len</span>(text)
+<a class="ln" id="ln-56" href="#ln-56"></a><span class="k">end</span> <span class="k">subroutine</span> add
+<a class="ln" id="ln-57" href="#ln-57"></a>
+<a class="ln" id="ln-58" href="#ln-58"></a><span class="d">!&gt; Move the text of `b` to `text`.</span>
+<a class="ln" id="ln-59" href="#ln-59"></a><span class="k">pure</span> <span class="k">subroutine</span> take(b, text)
+<a class="ln" id="ln-60" href="#ln-60"></a>    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b                  <span class="d">!! the buffer</span>
+<a class="ln" id="ln-61" href="#ln-61"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: text  <span class="d">!! its text</span>
+<a class="ln" id="ln-62" href="#ln-62"></a>
+<a class="ln" id="ln-63" href="#ln-63"></a>    <span class="k">if</span> (<span class="k">allocated</span>(b%s)) <span class="k">then</span>
+<a class="ln" id="ln-64" href="#ln-64"></a>        text = b%s(<span class="n">1</span>:b%n)
+<a class="ln" id="ln-65" href="#ln-65"></a>    <span class="k">else</span>
+<a class="ln" id="ln-66" href="#ln-66"></a>        text = <span class="s">''</span>
+<a class="ln" id="ln-67" href="#ln-67"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-68" href="#ln-68"></a>    b%n = <span class="n">0</span>
+<a class="ln" id="ln-69" href="#ln-69"></a><span class="k">end</span> <span class="k">subroutine</span> take
+<a class="ln" id="ln-70" href="#ln-70"></a>
+<a class="ln" id="ln-71" href="#ln-71"></a><span class="d">!&gt; Append `text`, escaped for HTML.</span>
+<a class="ln" id="ln-72" href="#ln-72"></a><span class="k">pure</span> <span class="k">subroutine</span> html_escape(text, b, quotes)
+<a class="ln" id="ln-73" href="#ln-73"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+<a class="ln" id="ln-74" href="#ln-74"></a>    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the buffer</span>
+<a class="ln" id="ln-75" href="#ln-75"></a>    <span class="k">logical</span>, <span class="k">intent</span>(in) :: quotes           <span class="d">!! true to escape `"` as well, for attribute values</span>
+<a class="ln" id="ln-76" href="#ln-76"></a>    <span class="k">integer</span> :: k, start
+<a class="ln" id="ln-77" href="#ln-77"></a>
+<a class="ln" id="ln-78" href="#ln-78"></a>    start = <span class="n">1</span>
+<a class="ln" id="ln-79" href="#ln-79"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(text)
+<a class="ln" id="ln-80" href="#ln-80"></a>        <span class="k">select</span> <span class="k">case</span> (text(k:k))
+<a class="ln" id="ln-81" href="#ln-81"></a>        <span class="k">case</span> (<span class="s">'&amp;'</span>, <span class="s">'&lt;'</span>, <span class="s">'&gt;'</span>, <span class="s">'"'</span>)
+<a class="ln" id="ln-82" href="#ln-82"></a>            <span class="k">if</span> (text(k:k) == <span class="s">'"'</span> <span class="k">.and.</span> <span class="k">.not.</span> quotes) <span class="k">cycle</span>
+<a class="ln" id="ln-83" href="#ln-83"></a>            <span class="k">if</span> (k &gt; start) <span class="k">call</span> add(b, text(start:k - <span class="n">1</span>))
+<a class="ln" id="ln-84" href="#ln-84"></a>            start = k + <span class="n">1</span>
+<a class="ln" id="ln-85" href="#ln-85"></a>            <span class="k">select</span> <span class="k">case</span> (text(k:k))
+<a class="ln" id="ln-86" href="#ln-86"></a>            <span class="k">case</span> (<span class="s">'&amp;'</span>); <span class="k">call</span> add(b, <span class="s">'&amp;amp;'</span>)
+<a class="ln" id="ln-87" href="#ln-87"></a>            <span class="k">case</span> (<span class="s">'&lt;'</span>); <span class="k">call</span> add(b, <span class="s">'&amp;lt;'</span>)
+<a class="ln" id="ln-88" href="#ln-88"></a>            <span class="k">case</span> (<span class="s">'&gt;'</span>); <span class="k">call</span> add(b, <span class="s">'&amp;gt;'</span>)
+<a class="ln" id="ln-89" href="#ln-89"></a>            <span class="k">case</span> default; <span class="k">call</span> add(b, <span class="s">'&amp;quot;'</span>)
+<a class="ln" id="ln-90" href="#ln-90"></a>            <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-91" href="#ln-91"></a>        <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-92" href="#ln-92"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-93" href="#ln-93"></a>    <span class="k">if</span> (start &lt;= <span class="k">len</span>(text)) <span class="k">call</span> add(b, text(start:))
+<a class="ln" id="ln-94" href="#ln-94"></a><span class="k">end</span> <span class="k">subroutine</span> html_escape
+<a class="ln" id="ln-95" href="#ln-95"></a>
+<a class="ln" id="ln-96" href="#ln-96"></a><span class="k">end</span> <span class="k">module</span> fdoc_buffer
+<a class="ln" id="ln-97" href="#ln-97"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_generics.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_generics.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_generics"><h3><a href="../module/fdoc_generics.html">fdoc_generics</a><span class="attr attr-private">private</span></h3>
+<p>The overview of a generic interface: which ways there are to call it, and which types and ranks each
+one takes. Specific procedures with the same arguments make a call form, and each form gets a table
+with a row for each combination of types and a column for each rank. Types are compared as written,
+so two names of one kind count as different types. Pages are rendered in parallel, so nothing here
+calls a function returning a deferred-length string (see <code>example/slen_race.f90</code>).</p>
+</div>
+<h2 id="files-this-one-depends-on">Files this one depends on</h2>
+<div class="graph"><svg width="510pt" height="140pt"
+ viewBox="0 0 510 140" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 136.5)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_generics.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="384.6" y="-93.5" width="117" height="21.6"/><text x="443.1" y="-78">fdoc_generics.f90</text></a><a href="../sourcefile/fdoc_util.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="0" y="-54.5" width="84.5" height="21.6"/><text x="42.3" y="-39">fdoc_util.f90</text></a><path d="M429,-71C405.9,-51.7 355.8,-14 305.2,-4.7"/><path d="M303.2,-4.7C225,9.8 132.9,-13.5 82,-29.8"/><polygon fill="#8a93a5" points="81.5,-27.4 75.6,-31.9 83,-32.1"/><a href="../sourcefile/fdoc_buffer.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="121.6" y="-132.5" width="101.1" height="21.6"/><text x="172.1" y="-117">fdoc_buffer.f90</text></a><path d="M391.8,-94.4C377.9,-97.4 362.7,-100.4 348.6,-102.7 309.6,-108.9 265.2,-113.7 230.9,-116.9"/><polygon fill="#8a93a5" points="231.1,-114.4 224.4,-117.5 231.6,-119.3"/><a href="../sourcefile/fdoc_model.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="120.5" y="-54.5" width="103.3" height="21.6"/><text x="172.1" y="-39">fdoc_model.f90</text></a><path d="M303.2,-4.7C284.9,-1.3 239.9,-16.9 207.9,-29.3"/><polygon fill="#8a93a5" points="207.1,-27 201.5,-31.8 208.9,-31.6"/><a href="../sourcefile/fdoc_urls.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="259.8" y="-93.5" width="88.8" height="21.6"/><text x="304.2" y="-78">fdoc_urls.f90</text></a><path d="M383.7,-82.7C375,-82.7 366,-82.7 357.4,-82.7"/><polygon fill="#8a93a5" points="357.5,-80.2 350.5,-82.7 357.5,-85.1"/><path d="M120.2,-43.7C111.4,-43.7 102.1,-43.7 93.3,-43.7"/><polygon fill="#8a93a5" points="93.5,-41.2 86.5,-43.7 93.5,-46.1"/><path d="M259.4,-79.9C222.2,-77.2 167.6,-72.1 120.5,-63.7 110.6,-61.9 100.1,-59.5 90.1,-57"/><polygon fill="#8a93a5" points="90.8,-54.6 83.4,-55.2 89.5,-59.4"/><path d="M265.6,-93.9C250.9,-98.3 233.9,-103.4 218.6,-108"/><polygon fill="#8a93a5" points="218.1,-105.6 212.1,-110 219.5,-110.3"/><path d="M265.6,-71.4C250.9,-67 233.9,-61.9 218.6,-57.3"/><polygon fill="#8a93a5" points="219.5,-55 212.1,-55.3 218.1,-59.7"/></g>
+</svg>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="346pt" height="30pt"
+ viewBox="0 0 346 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_generics.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="117" height="21.6"/><text x="58.5" y="-6.1">fdoc_generics.f90</text></a><a href="../sourcefile/fdoc_site.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="153" y="-21.6" width="88.1" height="21.6"/><text x="197.1" y="-6.1">fdoc_site.f90</text></a><path d="M152.9,-10.8C144.4,-10.8 135.3,-10.8 126.2,-10.8"/><polygon fill="#8a93a5" points="126.4,-8.4 119.4,-10.8 126.4,-13.3"/><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="277.1" y="-21.6" width="60.7" height="21.6"/><text x="307.5" y="-6.1">fdoc.f90</text></a><path d="M276.8,-10.8C268.5,-10.8 259.2,-10.8 249.9,-10.8"/><polygon fill="#8a93a5" points="250,-8.4 243,-10.8 250,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_generics
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! The overview of a generic interface: which ways there are to call it, and which types and ranks each</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="d">!! one takes. Specific procedures with the same arguments make a call form, and each form gets a table</span>
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="d">!! with a row for each combination of types and a column for each rank. Types are compared as written,</span>
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="d">!! so two names of one kind count as different types. Pages are rendered in parallel, so nothing here</span>
+<a class="ln" id="ln-6" href="#ln-6"></a><span class="d">!! calls a function returning a deferred-length string (see `example/slen_race.f90`).</span>
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="k">use</span> fdoc_util
+<a class="ln" id="ln-8" href="#ln-8"></a><span class="k">use</span> fdoc_buffer
+<a class="ln" id="ln-9" href="#ln-9"></a><span class="k">use</span> fdoc_model
+<a class="ln" id="ln-10" href="#ln-10"></a><span class="k">use</span> fdoc_urls, <span class="k">only</span>: entity_anchor
+<a class="ln" id="ln-11" href="#ln-11"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-12" href="#ln-12"></a><span class="k">private</span>
+<a class="ln" id="ln-13" href="#ln-13"></a>
+<a class="ln" id="ln-14" href="#ln-14"></a><span class="k">public</span> :: write_call_forms
+<a class="ln" id="ln-15" href="#ln-15"></a>
+<a class="ln" id="ln-16" href="#ln-16"></a><span class="k">integer</span>, <span class="k">parameter</span> :: ANY_RANK = -<span class="n">1</span>     <span class="d">!! the rank of an assumed-rank argument</span>
+<a class="ln" id="ln-17" href="#ln-17"></a>
+<a class="ln" id="ln-18" href="#ln-18"></a><span class="k">contains</span>
+<a class="ln" id="ln-19" href="#ln-19"></a>
+<a class="ln" id="ln-20" href="#ln-20"></a><span class="d">!&gt; Write the call forms of generic `name`, if it has more than one specific procedure. `shown` says</span>
+<a class="ln" id="ln-21" href="#ln-21"></a><span class="d">!&gt; whether anything was written.</span>
+<a class="ln" id="ln-22" href="#ln-22"></a><span class="k">subroutine</span> write_call_forms(list, name, specifics, b, shown)
+<a class="ln" id="ln-23" href="#ln-23"></a>    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list <span class="d">!! the entities</span>
+<a class="ln" id="ln-24" href="#ln-24"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the generic</span>
+<a class="ln" id="ln-25" href="#ln-25"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: specifics(:)     <span class="d">!! its specific procedures</span>
+<a class="ln" id="ln-26" href="#ln-26"></a>    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+<a class="ln" id="ln-27" href="#ln-27"></a>    <span class="k">logical</span>, <span class="k">intent</span>(out) :: shown           <span class="d">!! whether anything was written</span>
+<a class="ln" id="ln-28" href="#ln-28"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: keys(:)
+<a class="ln" id="ln-29" href="#ln-29"></a>    <span class="k">integer</span>, <span class="k">allocatable</span> :: form_of(:)
+<a class="ln" id="ln-30" href="#ln-30"></a>    <span class="k">logical</span>, <span class="k">allocatable</span> :: usable(:)
+<a class="ln" id="ln-31" href="#ln-31"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: key
+<a class="ln" id="ln-32" href="#ln-32"></a>    <span class="k">integer</span> :: k, j, forms
+<a class="ln" id="ln-33" href="#ln-33"></a>
+<a class="ln" id="ln-34" href="#ln-34"></a>    shown = <span class="k">.false.</span>
+<a class="ln" id="ln-35" href="#ln-35"></a>    <span class="k">allocate</span> (keys(<span class="k">size</span>(specifics)), form_of(<span class="k">size</span>(specifics)), usable(<span class="k">size</span>(specifics)))
+<a class="ln" id="ln-36" href="#ln-36"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(specifics)
+<a class="ln" id="ln-37" href="#ln-37"></a>        usable(k) = <span class="k">allocated</span>(list%box(specifics(k))%e%more%arg_ids)
+<a class="ln" id="ln-38" href="#ln-38"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-39" href="#ln-39"></a>    <span class="k">if</span> (<span class="k">count</span>(usable) &lt; <span class="n">2</span>) <span class="k">return</span>
+<a class="ln" id="ln-40" href="#ln-40"></a>    shown = <span class="k">.true.</span>
+<a class="ln" id="ln-41" href="#ln-41"></a>    forms = <span class="n">0</span>
+<a class="ln" id="ln-42" href="#ln-42"></a>    form_of = <span class="n">0</span>
+<a class="ln" id="ln-43" href="#ln-43"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(specifics)
+<a class="ln" id="ln-44" href="#ln-44"></a>        <span class="k">if</span> (<span class="k">.not.</span> usable(k)) <span class="k">cycle</span>
+<a class="ln" id="ln-45" href="#ln-45"></a>        <span class="k">call</span> form_key(list, specifics(k), key)
+<a class="ln" id="ln-46" href="#ln-46"></a>        <span class="k">do</span> j = <span class="n">1</span>, forms
+<a class="ln" id="ln-47" href="#ln-47"></a>            <span class="k">if</span> (keys(j)%s == key) form_of(k) = j
+<a class="ln" id="ln-48" href="#ln-48"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-49" href="#ln-49"></a>        <span class="k">if</span> (form_of(k) == <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-50" href="#ln-50"></a>            forms = forms + <span class="n">1</span>
+<a class="ln" id="ln-51" href="#ln-51"></a>            keys(forms)%s = key
+<a class="ln" id="ln-52" href="#ln-52"></a>            form_of(k) = forms
+<a class="ln" id="ln-53" href="#ln-53"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-54" href="#ln-54"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-55" href="#ln-55"></a>    <span class="k">call</span> add(b, <span class="s">'&lt;h2 id="call-forms"&gt;Call forms&lt;/h2&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-56" href="#ln-56"></a>    <span class="k">do</span> j = <span class="n">1</span>, forms
+<a class="ln" id="ln-57" href="#ln-57"></a>        <span class="k">call</span> write_form(list, name, <span class="k">pack</span>(specifics, form_of == j), b)
+<a class="ln" id="ln-58" href="#ln-58"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-59" href="#ln-59"></a><span class="k">end</span> <span class="k">subroutine</span> write_call_forms
+<a class="ln" id="ln-60" href="#ln-60"></a>
+<a class="ln" id="ln-61" href="#ln-61"></a><span class="d">!&gt; What specific procedure `id` has in common with those of its call form.</span>
+<a class="ln" id="ln-62" href="#ln-62"></a><span class="k">subroutine</span> form_key(list, id, key)
+<a class="ln" id="ln-63" href="#ln-63"></a>    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list             <span class="d">!! the entities</span>
+<a class="ln" id="ln-64" href="#ln-64"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id                           <span class="d">!! the procedure</span>
+<a class="ln" id="ln-65" href="#ln-65"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: key   <span class="d">!! the key</span>
+<a class="ln" id="ln-66" href="#ln-66"></a>    <span class="k">type</span>(buffer_t) :: b
+<a class="ln" id="ln-67" href="#ln-67"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-68" href="#ln-68"></a>
+<a class="ln" id="ln-69" href="#ln-69"></a>    <span class="k">associate</span> (e =&gt; list%box(id)%e)
+<a class="ln" id="ln-70" href="#ln-70"></a>        <span class="k">call</span> add(b, <span class="k">merge</span>(<span class="s">'f'</span>, <span class="s">'s'</span>, e%<span class="k">kind</span> == E_FUNCTION))
+<a class="ln" id="ln-71" href="#ln-71"></a>        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(e%more%arg_ids)
+<a class="ln" id="ln-72" href="#ln-72"></a>            <span class="k">call</span> add(b, <span class="s">','</span>)
+<a class="ln" id="ln-73" href="#ln-73"></a>            <span class="k">if</span> (e%more%arg_ids(k) == <span class="n">0</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-74" href="#ln-74"></a>            <span class="k">associate</span> (a =&gt; list%box(e%more%arg_ids(k))%e)
+<a class="ln" id="ln-75" href="#ln-75"></a>                <span class="k">call</span> add(b, lowercase(a%name))
+<a class="ln" id="ln-76" href="#ln-76"></a>                <span class="k">if</span> (a%<span class="k">optional</span>) <span class="k">call</span> add(b, <span class="s">'?'</span>)
+<a class="ln" id="ln-77" href="#ln-77"></a>            <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-78" href="#ln-78"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-79" href="#ln-79"></a>    <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-80" href="#ln-80"></a>    <span class="k">call</span> take(b, key)
+<a class="ln" id="ln-81" href="#ln-81"></a><span class="k">end</span> <span class="k">subroutine</span> form_key
+<a class="ln" id="ln-82" href="#ln-82"></a>
+<a class="ln" id="ln-83" href="#ln-83"></a><span class="d">!&gt; Write one call form, whose specific procedures are `ids`.</span>
+<a class="ln" id="ln-84" href="#ln-84"></a><span class="k">subroutine</span> write_form(list, name, ids, b)
+<a class="ln" id="ln-85" href="#ln-85"></a>    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list <span class="d">!! the entities</span>
+<a class="ln" id="ln-86" href="#ln-86"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the generic</span>
+<a class="ln" id="ln-87" href="#ln-87"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: ids(:)           <span class="d">!! the specific procedures of the form</span>
+<a class="ln" id="ln-88" href="#ln-88"></a>    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+<a class="ln" id="ln-89" href="#ln-89"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: types(:, :), labels(:, :), result_types(:), result_labels(:), rows(:)
+<a class="ln" id="ln-90" href="#ln-90"></a>    <span class="k">integer</span>, <span class="k">allocatable</span> :: ranks(:, :), result_ranks(:), row_of(:), columns(:), offset(:)
+<a class="ln" id="ln-91" href="#ln-91"></a>    <span class="k">logical</span>, <span class="k">allocatable</span> :: in_table(:), varies(:), tied(:)
+<a class="ln" id="ln-92" href="#ln-92"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: key, relative
+<a class="ln" id="ln-93" href="#ln-93"></a>    <span class="k">logical</span> :: has_result, <span class="k">elemental</span>, new
+<a class="ln" id="ln-94" href="#ln-94"></a>    <span class="k">integer</span> :: n, m, a, j, r, c, primary, num_rows, column
+<a class="ln" id="ln-95" href="#ln-95"></a>
+<a class="ln" id="ln-96" href="#ln-96"></a>    n = <span class="k">size</span>(ids)
+<a class="ln" id="ln-97" href="#ln-97"></a>    m = <span class="k">size</span>(list%box(ids(<span class="n">1</span>))%e%more%arg_ids)
+<a class="ln" id="ln-98" href="#ln-98"></a>    <span class="k">allocate</span> (types(m, n), labels(m, n), ranks(m, n), result_types(n), result_labels(n), result_ranks(n))
+<a class="ln" id="ln-99" href="#ln-99"></a>    <span class="k">allocate</span> (rows(n), row_of(n), in_table(m), varies(m), tied(m), offset(m))
+<a class="ln" id="ln-100" href="#ln-100"></a>    has_result = <span class="k">.true.</span>
+<a class="ln" id="ln-101" href="#ln-101"></a>    <span class="k">elemental</span> = <span class="k">.true.</span>
+<a class="ln" id="ln-102" href="#ln-102"></a>    <span class="k">do</span> j = <span class="n">1</span>, n
+<a class="ln" id="ln-103" href="#ln-103"></a>        <span class="k">associate</span> (e =&gt; list%box(ids(j))%e)
+<a class="ln" id="ln-104" href="#ln-104"></a>            <span class="k">do</span> a = <span class="n">1</span>, m
+<a class="ln" id="ln-105" href="#ln-105"></a>                <span class="k">call</span> describe(list, e%more%arg_ids(a), types(a, j)%s, ranks(a, j))
+<a class="ln" id="ln-106" href="#ln-106"></a>            <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-107" href="#ln-107"></a>            has_result = has_result <span class="k">.and.</span> e%<span class="k">kind</span> == E_FUNCTION <span class="k">.and.</span> e%<span class="k">result</span> &gt; <span class="n">0</span>
+<a class="ln" id="ln-108" href="#ln-108"></a>            <span class="k">elemental</span> = <span class="k">elemental</span> <span class="k">.and.</span> is_elemental(e)
+<a class="ln" id="ln-109" href="#ln-109"></a>        <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-110" href="#ln-110"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-111" href="#ln-111"></a>    <span class="k">if</span> (has_result) <span class="k">then</span>
+<a class="ln" id="ln-112" href="#ln-112"></a>        <span class="k">do</span> j = <span class="n">1</span>, n
+<a class="ln" id="ln-113" href="#ln-113"></a>            <span class="k">call</span> describe(list, list%box(ids(j))%e%<span class="k">result</span>, result_types(j)%s, result_ranks(j))
+<a class="ln" id="ln-114" href="#ln-114"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-115" href="#ln-115"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-116" href="#ln-116"></a>
+<a class="ln" id="ln-117" href="#ln-117"></a>    <span class="c">! the first argument of varying rank gives the columns</span>
+<a class="ln" id="ln-118" href="#ln-118"></a>    primary = <span class="n">0</span>
+<a class="ln" id="ln-119" href="#ln-119"></a>    <span class="k">do</span> a = <span class="n">1</span>, m
+<a class="ln" id="ln-120" href="#ln-120"></a>        varies(a) = <span class="k">any</span>(ranks(a, :) /= ranks(a, <span class="n">1</span>))
+<a class="ln" id="ln-121" href="#ln-121"></a>        <span class="k">if</span> (varies(a) <span class="k">.and.</span> primary == <span class="n">0</span>) primary = a
+<a class="ln" id="ln-122" href="#ln-122"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-123" href="#ln-123"></a>    relative = <span class="s">''</span>
+<a class="ln" id="ln-124" href="#ln-124"></a>    <span class="k">if</span> (primary &gt; <span class="n">0</span>) relative = <span class="s">'rank('</span>//list%box(list%box(ids(<span class="n">1</span>))%e%more%arg_ids(primary))%e%name//<span class="s">')'</span>
+<a class="ln" id="ln-125" href="#ln-125"></a>    <span class="k">do</span> a = <span class="n">1</span>, m
+<a class="ln" id="ln-126" href="#ln-126"></a>        tied(a) = <span class="k">.false.</span>
+<a class="ln" id="ln-127" href="#ln-127"></a>        <span class="k">if</span> (primary &gt; <span class="n">0</span> <span class="k">.and.</span> a /= primary) tied(a) = <span class="k">all</span>(ranks(a, :) - ranks(primary, :) == ranks(a, <span class="n">1</span>) - ranks(primary, <span class="n">1</span>))
+<a class="ln" id="ln-128" href="#ln-128"></a>        in_table(a) = (varies(a) <span class="k">.and.</span> a /= primary <span class="k">.and.</span> <span class="k">.not.</span> tied(a))
+<a class="ln" id="ln-129" href="#ln-129"></a>        <span class="k">do</span> j = <span class="n">2</span>, n
+<a class="ln" id="ln-130" href="#ln-130"></a>            <span class="k">if</span> (types(a, j)%s /= types(a, <span class="n">1</span>)%s) in_table(a) = <span class="k">.true.</span>
+<a class="ln" id="ln-131" href="#ln-131"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-132" href="#ln-132"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-133" href="#ln-133"></a>    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>(in_table) <span class="k">.and.</span> primary &gt; <span class="n">0</span>) in_table(primary) = <span class="k">.true.</span>
+<a class="ln" id="ln-134" href="#ln-134"></a>    <span class="k">do</span> a = <span class="n">1</span>, m
+<a class="ln" id="ln-135" href="#ln-135"></a>        offset(a) = <span class="n">0</span>
+<a class="ln" id="ln-136" href="#ln-136"></a>        <span class="k">if</span> (tied(a)) offset(a) = ranks(a, <span class="n">1</span>) - ranks(primary, <span class="n">1</span>)
+<a class="ln" id="ln-137" href="#ln-137"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-138" href="#ln-138"></a>    <span class="k">do</span> j = <span class="n">1</span>, n
+<a class="ln" id="ln-139" href="#ln-139"></a>        <span class="k">do</span> a = <span class="n">1</span>, m
+<a class="ln" id="ln-140" href="#ln-140"></a>            <span class="k">call</span> rank_label(types(a, j)%s, ranks(a, j), a == primary, tied(a), relative, &amp;
+<a class="ln" id="ln-141" href="#ln-141"></a>                            offset(a), labels(a, j)%s)
+<a class="ln" id="ln-142" href="#ln-142"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-143" href="#ln-143"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-144" href="#ln-144"></a>    <span class="k">if</span> (has_result) <span class="k">then</span>
+<a class="ln" id="ln-145" href="#ln-145"></a>        <span class="k">call</span> label_results(ranks, primary, relative, result_types, result_ranks, result_labels)
+<a class="ln" id="ln-146" href="#ln-146"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-147" href="#ln-147"></a>
+<a class="ln" id="ln-148" href="#ln-148"></a>    <span class="c">! a row for each combination of types</span>
+<a class="ln" id="ln-149" href="#ln-149"></a>    num_rows = <span class="n">0</span>
+<a class="ln" id="ln-150" href="#ln-150"></a>    <span class="k">do</span> j = <span class="n">1</span>, n
+<a class="ln" id="ln-151" href="#ln-151"></a>        key = <span class="s">''</span>
+<a class="ln" id="ln-152" href="#ln-152"></a>        <span class="k">do</span> a = <span class="n">1</span>, m
+<a class="ln" id="ln-153" href="#ln-153"></a>            <span class="k">if</span> (in_table(a)) key = key//labels(a, j)%s//<span class="s">'|'</span>
+<a class="ln" id="ln-154" href="#ln-154"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-155" href="#ln-155"></a>        <span class="k">if</span> (has_result) key = key//result_labels(j)%s
+<a class="ln" id="ln-156" href="#ln-156"></a>        <span class="k">if</span> (primary == <span class="n">0</span>) key = key//<span class="s">'|'</span>//<span class="k">trim</span>(int_text(j))
+<a class="ln" id="ln-157" href="#ln-157"></a>        new = <span class="k">.true.</span>
+<a class="ln" id="ln-158" href="#ln-158"></a>        <span class="k">do</span> r = <span class="n">1</span>, num_rows
+<a class="ln" id="ln-159" href="#ln-159"></a>            <span class="k">if</span> (rows(r)%s /= key) <span class="k">cycle</span>
+<a class="ln" id="ln-160" href="#ln-160"></a>            row_of(j) = r
+<a class="ln" id="ln-161" href="#ln-161"></a>            new = <span class="k">.false.</span>
+<a class="ln" id="ln-162" href="#ln-162"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-163" href="#ln-163"></a>        <span class="k">if</span> (new) <span class="k">then</span>
+<a class="ln" id="ln-164" href="#ln-164"></a>            num_rows = num_rows + <span class="n">1</span>
+<a class="ln" id="ln-165" href="#ln-165"></a>            rows(num_rows)%s = key
+<a class="ln" id="ln-166" href="#ln-166"></a>            row_of(j) = num_rows
+<a class="ln" id="ln-167" href="#ln-167"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-168" href="#ln-168"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-169" href="#ln-169"></a>
+<a class="ln" id="ln-170" href="#ln-170"></a>    <span class="c">! a column for each rank, in order</span>
+<a class="ln" id="ln-171" href="#ln-171"></a>    <span class="k">allocate</span> (columns(<span class="n">0</span>))
+<a class="ln" id="ln-172" href="#ln-172"></a>    <span class="k">if</span> (primary &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-173" href="#ln-173"></a>        <span class="k">do</span> j = <span class="n">1</span>, n
+<a class="ln" id="ln-174" href="#ln-174"></a>            <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>(columns == ranks(primary, j))) <span class="k">call</span> push_int(columns, ranks(primary, j))
+<a class="ln" id="ln-175" href="#ln-175"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-176" href="#ln-176"></a>        <span class="k">call</span> sort_ints(columns)
+<a class="ln" id="ln-177" href="#ln-177"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-178" href="#ln-178"></a>
+<a class="ln" id="ln-179" href="#ln-179"></a>    <span class="k">call</span> add(b, <span class="s">'&lt;div class="form"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;div class="sig"&gt;'</span>)
+<a class="ln" id="ln-180" href="#ln-180"></a>    <span class="k">call</span> call_text(list, name, ids(<span class="n">1</span>), has_result, b)
+<a class="ln" id="ln-181" href="#ln-181"></a>    <span class="k">if</span> (<span class="k">elemental</span>) <span class="k">call</span> add(b, <span class="s">' &lt;span class="attr attr-elemental"&gt;elemental&lt;/span&gt;'</span>)
+<a class="ln" id="ln-182" href="#ln-182"></a>    <span class="k">call</span> add(b, <span class="s">'&lt;/div&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-183" href="#ln-183"></a>    <span class="k">call</span> shared_summary(list, ids, b)
+<a class="ln" id="ln-184" href="#ln-184"></a>    <span class="k">call</span> add(b, <span class="s">'&lt;table class="forms"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;thead&gt;&lt;tr&gt;'</span>)
+<a class="ln" id="ln-185" href="#ln-185"></a>    <span class="k">do</span> a = <span class="n">1</span>, m
+<a class="ln" id="ln-186" href="#ln-186"></a>        <span class="k">if</span> (<span class="k">.not.</span> in_table(a)) <span class="k">cycle</span>
+<a class="ln" id="ln-187" href="#ln-187"></a>        <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;'</span>)
+<a class="ln" id="ln-188" href="#ln-188"></a>        <span class="k">call</span> html_escape(list%box(list%box(ids(<span class="n">1</span>))%e%more%arg_ids(a))%e%name, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-189" href="#ln-189"></a>        <span class="k">call</span> add(b, <span class="s">'&lt;/th&gt;'</span>)
+<a class="ln" id="ln-190" href="#ln-190"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-191" href="#ln-191"></a>    <span class="k">if</span> (primary == <span class="n">0</span>) <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;Procedure&lt;/th&gt;'</span>)
+<a class="ln" id="ln-192" href="#ln-192"></a>    <span class="k">do</span> c = <span class="n">1</span>, <span class="k">size</span>(columns)
+<a class="ln" id="ln-193" href="#ln-193"></a>        <span class="k">call</span> add(b, <span class="s">'&lt;th class="rank"&gt;'</span>)
+<a class="ln" id="ln-194" href="#ln-194"></a>        <span class="k">call</span> html_escape(relative, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-195" href="#ln-195"></a>        <span class="k">call</span> add(b, <span class="s">' = '</span>)
+<a class="ln" id="ln-196" href="#ln-196"></a>        <span class="k">if</span> (columns(c) == ANY_RANK) <span class="k">then</span>
+<a class="ln" id="ln-197" href="#ln-197"></a>            <span class="k">call</span> add(b, <span class="s">'any'</span>)
+<a class="ln" id="ln-198" href="#ln-198"></a>        <span class="k">else</span>
+<a class="ln" id="ln-199" href="#ln-199"></a>            <span class="k">call</span> add(b, <span class="k">trim</span>(int_text(columns(c))))
+<a class="ln" id="ln-200" href="#ln-200"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-201" href="#ln-201"></a>        <span class="k">call</span> add(b, <span class="s">'&lt;/th&gt;'</span>)
+<a class="ln" id="ln-202" href="#ln-202"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-203" href="#ln-203"></a>    <span class="k">if</span> (has_result) <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;Result&lt;/th&gt;'</span>)
+<a class="ln" id="ln-204" href="#ln-204"></a>    <span class="k">call</span> add(b, <span class="s">'&lt;/tr&gt;&lt;/thead&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;tbody&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-205" href="#ln-205"></a>    <span class="k">do</span> r = <span class="n">1</span>, num_rows
+<a class="ln" id="ln-206" href="#ln-206"></a>        j = <span class="k">findloc</span>(row_of, r, <span class="n">1</span>)
+<a class="ln" id="ln-207" href="#ln-207"></a>        <span class="k">call</span> add(b, <span class="s">'&lt;tr&gt;'</span>)
+<a class="ln" id="ln-208" href="#ln-208"></a>        <span class="k">do</span> a = <span class="n">1</span>, m
+<a class="ln" id="ln-209" href="#ln-209"></a>            <span class="k">if</span> (<span class="k">.not.</span> in_table(a)) <span class="k">cycle</span>
+<a class="ln" id="ln-210" href="#ln-210"></a>            <span class="k">call</span> add(b, <span class="s">'&lt;td class="type"&gt;'</span>)
+<a class="ln" id="ln-211" href="#ln-211"></a>            <span class="k">call</span> html_escape(labels(a, j)%s, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-212" href="#ln-212"></a>            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+<a class="ln" id="ln-213" href="#ln-213"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-214" href="#ln-214"></a>        <span class="k">if</span> (primary == <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-215" href="#ln-215"></a>            <span class="k">call</span> add(b, <span class="s">'&lt;td class="name"&gt;'</span>)
+<a class="ln" id="ln-216" href="#ln-216"></a>            <span class="k">call</span> specific_link(list, ids(j), list%box(ids(j))%e%name, b)
+<a class="ln" id="ln-217" href="#ln-217"></a>            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+<a class="ln" id="ln-218" href="#ln-218"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-219" href="#ln-219"></a>        <span class="k">do</span> c = <span class="n">1</span>, <span class="k">size</span>(columns)
+<a class="ln" id="ln-220" href="#ln-220"></a>            <span class="k">call</span> add(b, <span class="s">'&lt;td class="rank"&gt;'</span>)
+<a class="ln" id="ln-221" href="#ln-221"></a>            <span class="k">do</span> column = <span class="n">1</span>, n
+<a class="ln" id="ln-222" href="#ln-222"></a>                <span class="k">if</span> (row_of(column) /= r) <span class="k">cycle</span>
+<a class="ln" id="ln-223" href="#ln-223"></a>                <span class="k">if</span> (ranks(primary, column) == columns(c)) <span class="k">call</span> specific_link(list, ids(column), <span class="s">'&amp;#10003;'</span>, b)
+<a class="ln" id="ln-224" href="#ln-224"></a>            <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-225" href="#ln-225"></a>            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+<a class="ln" id="ln-226" href="#ln-226"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-227" href="#ln-227"></a>        <span class="k">if</span> (has_result) <span class="k">then</span>
+<a class="ln" id="ln-228" href="#ln-228"></a>            <span class="k">call</span> add(b, <span class="s">'&lt;td class="type"&gt;'</span>)
+<a class="ln" id="ln-229" href="#ln-229"></a>            <span class="k">call</span> html_escape(result_labels(j)%s, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-230" href="#ln-230"></a>            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+<a class="ln" id="ln-231" href="#ln-231"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-232" href="#ln-232"></a>        <span class="k">call</span> add(b, <span class="s">'&lt;/tr&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-233" href="#ln-233"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-234" href="#ln-234"></a>    <span class="k">call</span> add(b, <span class="s">'&lt;/tbody&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;/table&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-235" href="#ln-235"></a>
+<a class="ln" id="ln-236" href="#ln-236"></a>    <span class="c">! what is the same in every specific procedure of the form</span>
+<a class="ln" id="ln-237" href="#ln-237"></a>    new = <span class="k">.true.</span>
+<a class="ln" id="ln-238" href="#ln-238"></a>    <span class="k">do</span> a = <span class="n">1</span>, m
+<a class="ln" id="ln-239" href="#ln-239"></a>        <span class="k">if</span> (in_table(a) <span class="k">.or.</span> a == primary) <span class="k">cycle</span>
+<a class="ln" id="ln-240" href="#ln-240"></a>        <span class="k">if</span> (new) <span class="k">then</span>
+<a class="ln" id="ln-241" href="#ln-241"></a>            <span class="k">call</span> add(b, <span class="s">'&lt;p class="fixed"&gt;'</span>)
+<a class="ln" id="ln-242" href="#ln-242"></a>        <span class="k">else</span>
+<a class="ln" id="ln-243" href="#ln-243"></a>            <span class="k">call</span> add(b, <span class="s">', '</span>)
+<a class="ln" id="ln-244" href="#ln-244"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-245" href="#ln-245"></a>        new = <span class="k">.false.</span>
+<a class="ln" id="ln-246" href="#ln-246"></a>        <span class="k">call</span> add(b, <span class="s">'&lt;code&gt;'</span>)
+<a class="ln" id="ln-247" href="#ln-247"></a>        <span class="k">call</span> html_escape(list%box(list%box(ids(<span class="n">1</span>))%e%more%arg_ids(a))%e%name, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-248" href="#ln-248"></a>        <span class="k">call</span> add(b, <span class="s">'&lt;/code&gt; is '</span>)
+<a class="ln" id="ln-249" href="#ln-249"></a>        <span class="k">call</span> html_escape(labels(a, <span class="n">1</span>)%s, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-250" href="#ln-250"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-251" href="#ln-251"></a>    <span class="k">if</span> (<span class="k">.not.</span> new) <span class="k">call</span> add(b, <span class="s">'&lt;/p&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-252" href="#ln-252"></a>    <span class="k">call</span> add(b, <span class="s">'&lt;/div&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-253" href="#ln-253"></a><span class="k">end</span> <span class="k">subroutine</span> write_form
+<a class="ln" id="ln-254" href="#ln-254"></a>
+<a class="ln" id="ln-255" href="#ln-255"></a><span class="d">!&gt; The text and rank of the type of variable `id`. Anything else, such as a dummy procedure, is `procedure`.</span>
+<a class="ln" id="ln-256" href="#ln-256"></a><span class="k">subroutine</span> describe(list, id, text, <span class="k">rank</span>)
+<a class="ln" id="ln-257" href="#ln-257"></a>    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list             <span class="d">!! the entities</span>
+<a class="ln" id="ln-258" href="#ln-258"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id                           <span class="d">!! the variable</span>
+<a class="ln" id="ln-259" href="#ln-259"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: text  <span class="d">!! its type</span>
+<a class="ln" id="ln-260" href="#ln-260"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">rank</span>                        <span class="d">!! its rank</span>
+<a class="ln" id="ln-261" href="#ln-261"></a>    <span class="k">type</span>(buffer_t) :: b
+<a class="ln" id="ln-262" href="#ln-262"></a>
+<a class="ln" id="ln-263" href="#ln-263"></a>    <span class="k">rank</span> = <span class="n">0</span>
+<a class="ln" id="ln-264" href="#ln-264"></a>    text = <span class="s">'procedure'</span>
+<a class="ln" id="ln-265" href="#ln-265"></a>    <span class="k">if</span> (id == <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-266" href="#ln-266"></a>    <span class="k">associate</span> (e =&gt; list%box(id)%e)
+<a class="ln" id="ln-267" href="#ln-267"></a>        <span class="k">if</span> (e%<span class="k">kind</span> /= E_VARIABLE <span class="k">.or.</span> <span class="k">.not.</span> <span class="k">allocated</span>(e%vartype)) <span class="k">return</span>
+<a class="ln" id="ln-268" href="#ln-268"></a>        <span class="k">call</span> add(b, e%vartype)
+<a class="ln" id="ln-269" href="#ln-269"></a>        <span class="k">if</span> (<span class="k">allocated</span>(e%type_kind) <span class="k">.and.</span> <span class="k">allocated</span>(e%strlen)) <span class="k">then</span>
+<a class="ln" id="ln-270" href="#ln-270"></a>            <span class="k">call</span> add(b, <span class="s">'(len='</span>//e%strlen//<span class="s">', '</span>//e%type_kind//<span class="s">')'</span>)
+<a class="ln" id="ln-271" href="#ln-271"></a>        <span class="k">else</span> <span class="k">if</span> (<span class="k">allocated</span>(e%type_kind)) <span class="k">then</span>
+<a class="ln" id="ln-272" href="#ln-272"></a>            <span class="k">call</span> add(b, <span class="s">'('</span>//e%type_kind//<span class="s">')'</span>)
+<a class="ln" id="ln-273" href="#ln-273"></a>        <span class="k">else</span> <span class="k">if</span> (<span class="k">allocated</span>(e%strlen)) <span class="k">then</span>
+<a class="ln" id="ln-274" href="#ln-274"></a>            <span class="k">call</span> add(b, <span class="s">'(len='</span>//e%strlen//<span class="s">')'</span>)
+<a class="ln" id="ln-275" href="#ln-275"></a>        <span class="k">else</span> <span class="k">if</span> (<span class="k">allocated</span>(e%proto)) <span class="k">then</span>
+<a class="ln" id="ln-276" href="#ln-276"></a>            <span class="k">call</span> add(b, <span class="s">'('</span>//e%proto(<span class="n">1</span>)%s//<span class="s">')'</span>)
+<a class="ln" id="ln-277" href="#ln-277"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-278" href="#ln-278"></a>        <span class="k">if</span> (<span class="k">allocated</span>(e%<span class="k">dimension</span>)) <span class="k">rank</span> = rank_of(e%<span class="k">dimension</span>)
+<a class="ln" id="ln-279" href="#ln-279"></a>    <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-280" href="#ln-280"></a>    <span class="k">call</span> take(b, text)
+<a class="ln" id="ln-281" href="#ln-281"></a><span class="k">end</span> <span class="k">subroutine</span> describe
+<a class="ln" id="ln-282" href="#ln-282"></a>
+<a class="ln" id="ln-283" href="#ln-283"></a><span class="d">!&gt; The rank given by `dimension`, such as `(:,:)`: one more than the commas outside inner parentheses.</span>
+<a class="ln" id="ln-284" href="#ln-284"></a><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> rank_of(<span class="k">dimension</span>)
+<a class="ln" id="ln-285" href="#ln-285"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">dimension</span>   <span class="d">!! the dimensions</span>
+<a class="ln" id="ln-286" href="#ln-286"></a>    <span class="k">integer</span> :: k, depth
+<a class="ln" id="ln-287" href="#ln-287"></a>
+<a class="ln" id="ln-288" href="#ln-288"></a>    rank_of = <span class="n">0</span>
+<a class="ln" id="ln-289" href="#ln-289"></a>    <span class="k">if</span> (<span class="k">len</span>(<span class="k">dimension</span>) &lt; <span class="n">2</span>) <span class="k">return</span>
+<a class="ln" id="ln-290" href="#ln-290"></a>    <span class="k">if</span> (<span class="k">dimension</span>(<span class="n">1</span>:<span class="n">1</span>) /= <span class="s">'('</span>) <span class="k">return</span>
+<a class="ln" id="ln-291" href="#ln-291"></a>    <span class="k">if</span> (<span class="k">index</span>(<span class="k">dimension</span>, <span class="s">'..'</span>) &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-292" href="#ln-292"></a>        rank_of = ANY_RANK
+<a class="ln" id="ln-293" href="#ln-293"></a>        <span class="k">return</span>
+<a class="ln" id="ln-294" href="#ln-294"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-295" href="#ln-295"></a>    rank_of = <span class="n">1</span>
+<a class="ln" id="ln-296" href="#ln-296"></a>    depth = <span class="n">0</span>
+<a class="ln" id="ln-297" href="#ln-297"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(<span class="k">dimension</span>)
+<a class="ln" id="ln-298" href="#ln-298"></a>        <span class="k">select</span> <span class="k">case</span> (<span class="k">dimension</span>(k:k))
+<a class="ln" id="ln-299" href="#ln-299"></a>        <span class="k">case</span> (<span class="s">'('</span>); depth = depth + <span class="n">1</span>
+<a class="ln" id="ln-300" href="#ln-300"></a>        <span class="k">case</span> (<span class="s">')'</span>); depth = depth - <span class="n">1</span>
+<a class="ln" id="ln-301" href="#ln-301"></a>        <span class="k">case</span> (<span class="s">','</span>); <span class="k">if</span> (depth == <span class="n">1</span>) rank_of = rank_of + <span class="n">1</span>
+<a class="ln" id="ln-302" href="#ln-302"></a>        <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-303" href="#ln-303"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-304" href="#ln-304"></a><span class="k">end</span> <span class="k">function</span> rank_of
+<a class="ln" id="ln-305" href="#ln-305"></a>
+<a class="ln" id="ln-306" href="#ln-306"></a><span class="d">!&gt; The text of type `text` with its rank. A rank in `columns` is left out, and a tied one is relative.</span>
+<a class="ln" id="ln-307" href="#ln-307"></a><span class="k">subroutine</span> rank_label(text, <span class="k">rank</span>, in_columns, tied, relative, offset, label)
+<a class="ln" id="ln-308" href="#ln-308"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text                <span class="d">!! the type</span>
+<a class="ln" id="ln-309" href="#ln-309"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: <span class="k">rank</span>                         <span class="d">!! the rank</span>
+<a class="ln" id="ln-310" href="#ln-310"></a>    <span class="k">logical</span>, <span class="k">intent</span>(in) :: in_columns                   <span class="d">!! true if the columns of the table show the rank</span>
+<a class="ln" id="ln-311" href="#ln-311"></a>    <span class="k">logical</span>, <span class="k">intent</span>(in) :: tied                         <span class="d">!! true if it is a fixed distance from the columns</span>
+<a class="ln" id="ln-312" href="#ln-312"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: relative            <span class="d">!! the rank of the columns, as text</span>
+<a class="ln" id="ln-313" href="#ln-313"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: offset                       <span class="d">!! that distance</span>
+<a class="ln" id="ln-314" href="#ln-314"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: label <span class="d">!! the result</span>
+<a class="ln" id="ln-315" href="#ln-315"></a>    <span class="k">type</span>(buffer_t) :: b
+<a class="ln" id="ln-316" href="#ln-316"></a>
+<a class="ln" id="ln-317" href="#ln-317"></a>    <span class="k">call</span> add(b, text)
+<a class="ln" id="ln-318" href="#ln-318"></a>    <span class="k">if</span> (<span class="k">rank</span> == ANY_RANK) <span class="k">then</span>
+<a class="ln" id="ln-319" href="#ln-319"></a>        <span class="k">call</span> add(b, <span class="s">', any rank'</span>)
+<a class="ln" id="ln-320" href="#ln-320"></a>    <span class="k">else</span> <span class="k">if</span> (in_columns) <span class="k">then</span>
+<a class="ln" id="ln-321" href="#ln-321"></a>        <span class="k">continue</span>
+<a class="ln" id="ln-322" href="#ln-322"></a>    <span class="k">else</span> <span class="k">if</span> (tied) <span class="k">then</span>
+<a class="ln" id="ln-323" href="#ln-323"></a>        <span class="k">call</span> add(b, <span class="s">', '</span>//relative)
+<a class="ln" id="ln-324" href="#ln-324"></a>        <span class="k">if</span> (offset &gt; <span class="n">0</span>) <span class="k">call</span> add(b, <span class="s">' + '</span>//<span class="k">trim</span>(int_text(offset)))
+<a class="ln" id="ln-325" href="#ln-325"></a>        <span class="k">if</span> (offset &lt; <span class="n">0</span>) <span class="k">call</span> add(b, <span class="s">' - '</span>//<span class="k">trim</span>(int_text(-offset)))
+<a class="ln" id="ln-326" href="#ln-326"></a>    <span class="k">else</span> <span class="k">if</span> (<span class="k">rank</span> &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-327" href="#ln-327"></a>        <span class="k">call</span> add(b, <span class="s">', rank '</span>//<span class="k">trim</span>(int_text(<span class="k">rank</span>)))
+<a class="ln" id="ln-328" href="#ln-328"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-329" href="#ln-329"></a>    <span class="k">call</span> take(b, label)
+<a class="ln" id="ln-330" href="#ln-330"></a><span class="k">end</span> <span class="k">subroutine</span> rank_label
+<a class="ln" id="ln-331" href="#ln-331"></a>
+<a class="ln" id="ln-332" href="#ln-332"></a><span class="d">!&gt; The text of each result.</span>
+<a class="ln" id="ln-333" href="#ln-333"></a><span class="k">subroutine</span> label_results(ranks, primary, relative, types, result_ranks, labels)
+<a class="ln" id="ln-334" href="#ln-334"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: ranks(:, :)                  <span class="d">!! the rank of each argument of each procedure</span>
+<a class="ln" id="ln-335" href="#ln-335"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: primary                      <span class="d">!! the argument of the columns, or 0</span>
+<a class="ln" id="ln-336" href="#ln-336"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: relative            <span class="d">!! its rank, as text</span>
+<a class="ln" id="ln-337" href="#ln-337"></a>    <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: types(:)              <span class="d">!! the type of each result</span>
+<a class="ln" id="ln-338" href="#ln-338"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: result_ranks(:)              <span class="d">!! the rank of each result</span>
+<a class="ln" id="ln-339" href="#ln-339"></a>    <span class="k">type</span>(string_t), <span class="k">intent</span>(inout) :: labels(:)          <span class="d">!! the text of each result</span>
+<a class="ln" id="ln-340" href="#ln-340"></a>    <span class="k">logical</span> :: tied
+<a class="ln" id="ln-341" href="#ln-341"></a>    <span class="k">integer</span> :: j, offset
+<a class="ln" id="ln-342" href="#ln-342"></a>
+<a class="ln" id="ln-343" href="#ln-343"></a>    tied = <span class="k">.false.</span>
+<a class="ln" id="ln-344" href="#ln-344"></a>    offset = <span class="n">0</span>
+<a class="ln" id="ln-345" href="#ln-345"></a>    <span class="k">if</span> (primary &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-346" href="#ln-346"></a>        offset = result_ranks(<span class="n">1</span>) - ranks(primary, <span class="n">1</span>)
+<a class="ln" id="ln-347" href="#ln-347"></a>        tied = <span class="k">all</span>(result_ranks - ranks(primary, :) == offset) <span class="k">.and.</span> <span class="k">any</span>(result_ranks /= result_ranks(<span class="n">1</span>))
+<a class="ln" id="ln-348" href="#ln-348"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-349" href="#ln-349"></a>    <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(types)
+<a class="ln" id="ln-350" href="#ln-350"></a>        <span class="k">call</span> rank_label(types(j)%s, result_ranks(j), <span class="k">.false.</span>, tied, relative, offset, labels(j)%s)
+<a class="ln" id="ln-351" href="#ln-351"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-352" href="#ln-352"></a><span class="k">end</span> <span class="k">subroutine</span> label_results
+<a class="ln" id="ln-353" href="#ln-353"></a>
+<a class="ln" id="ln-354" href="#ln-354"></a><span class="d">!&gt; True if procedure `e` is elemental.</span>
+<a class="ln" id="ln-355" href="#ln-355"></a><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> is_elemental(e)
+<a class="ln" id="ln-356" href="#ln-356"></a>    <span class="k">type</span>(entity_t), <span class="k">intent</span>(in) :: e <span class="d">!! the procedure</span>
+<a class="ln" id="ln-357" href="#ln-357"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-358" href="#ln-358"></a>
+<a class="ln" id="ln-359" href="#ln-359"></a>    is_elemental = <span class="k">.false.</span>
+<a class="ln" id="ln-360" href="#ln-360"></a>    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(e%attribs)) <span class="k">return</span>
+<a class="ln" id="ln-361" href="#ln-361"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(e%attribs)
+<a class="ln" id="ln-362" href="#ln-362"></a>        <span class="k">if</span> (lowercase(e%attribs(k)%s) == <span class="s">'elemental'</span>) is_elemental = <span class="k">.true.</span>
+<a class="ln" id="ln-363" href="#ln-363"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-364" href="#ln-364"></a><span class="k">end</span> <span class="k">function</span> is_elemental
+<a class="ln" id="ln-365" href="#ln-365"></a>
+<a class="ln" id="ln-366" href="#ln-366"></a><span class="d">!&gt; Write the summary of the procedures `ids`, if they all have the same one.</span>
+<a class="ln" id="ln-367" href="#ln-367"></a><span class="k">subroutine</span> shared_summary(list, ids, b)
+<a class="ln" id="ln-368" href="#ln-368"></a>    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list <span class="d">!! the entities</span>
+<a class="ln" id="ln-369" href="#ln-369"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: ids(:)           <span class="d">!! the procedures</span>
+<a class="ln" id="ln-370" href="#ln-370"></a>    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+<a class="ln" id="ln-371" href="#ln-371"></a>    <span class="k">integer</span> :: j
+<a class="ln" id="ln-372" href="#ln-372"></a>
+<a class="ln" id="ln-373" href="#ln-373"></a>    <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(ids)
+<a class="ln" id="ln-374" href="#ln-374"></a>        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(list%box(ids(j))%e%summary)) <span class="k">return</span>
+<a class="ln" id="ln-375" href="#ln-375"></a>        <span class="k">if</span> (list%box(ids(j))%e%summary /= list%box(ids(<span class="n">1</span>))%e%summary) <span class="k">return</span>
+<a class="ln" id="ln-376" href="#ln-376"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-377" href="#ln-377"></a>    <span class="k">call</span> add(b, list%box(ids(<span class="n">1</span>))%e%summary//<span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-378" href="#ln-378"></a><span class="k">end</span> <span class="k">subroutine</span> shared_summary
+<a class="ln" id="ln-379" href="#ln-379"></a>
+<a class="ln" id="ln-380" href="#ln-380"></a><span class="d">!&gt; Write how a call of a form looks. Square brackets mark what is optional.</span>
+<a class="ln" id="ln-381" href="#ln-381"></a><span class="k">subroutine</span> call_text(list, name, id, has_result, b)
+<a class="ln" id="ln-382" href="#ln-382"></a>    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list <span class="d">!! the entities</span>
+<a class="ln" id="ln-383" href="#ln-383"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the generic</span>
+<a class="ln" id="ln-384" href="#ln-384"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! a procedure of the form</span>
+<a class="ln" id="ln-385" href="#ln-385"></a>    <span class="k">logical</span>, <span class="k">intent</span>(in) :: has_result       <span class="d">!! true for a function</span>
+<a class="ln" id="ln-386" href="#ln-386"></a>    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+<a class="ln" id="ln-387" href="#ln-387"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: low, symbol, left, right
+<a class="ln" id="ln-388" href="#ln-388"></a>    <span class="k">integer</span> :: k, n
+<a class="ln" id="ln-389" href="#ln-389"></a>
+<a class="ln" id="ln-390" href="#ln-390"></a>    <span class="k">associate</span> (e =&gt; list%box(id)%e)
+<a class="ln" id="ln-391" href="#ln-391"></a>        n = <span class="k">size</span>(e%more%arg_ids)
+<a class="ln" id="ln-392" href="#ln-392"></a>        low = lowercase(name)
+<a class="ln" id="ln-393" href="#ln-393"></a>        <span class="k">if</span> (<span class="k">index</span>(low, <span class="s">'operator('</span>) == <span class="n">1</span> <span class="k">.and.</span> n &gt;= <span class="n">1</span> <span class="k">.and.</span> n &lt;= <span class="n">2</span>) <span class="k">then</span>
+<a class="ln" id="ln-394" href="#ln-394"></a>            symbol = name(<span class="n">10</span>:<span class="k">len</span>(name) - <span class="n">1</span>)
+<a class="ln" id="ln-395" href="#ln-395"></a>            <span class="k">call</span> argument_name(list, e%more%arg_ids(<span class="n">1</span>), left)
+<a class="ln" id="ln-396" href="#ln-396"></a>            <span class="k">call</span> add(b, <span class="s">'result = '</span>)
+<a class="ln" id="ln-397" href="#ln-397"></a>            <span class="k">if</span> (n == <span class="n">1</span>) <span class="k">then</span>
+<a class="ln" id="ln-398" href="#ln-398"></a>                <span class="k">call</span> html_escape(symbol//<span class="s">' '</span>//left, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-399" href="#ln-399"></a>            <span class="k">else</span>
+<a class="ln" id="ln-400" href="#ln-400"></a>                <span class="k">call</span> argument_name(list, e%more%arg_ids(<span class="n">2</span>), right)
+<a class="ln" id="ln-401" href="#ln-401"></a>                <span class="k">call</span> html_escape(left//<span class="s">' '</span>//symbol//<span class="s">' '</span>//right, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-402" href="#ln-402"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-403" href="#ln-403"></a>            <span class="k">return</span>
+<a class="ln" id="ln-404" href="#ln-404"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-405" href="#ln-405"></a>        <span class="k">if</span> (<span class="k">index</span>(low, <span class="s">'assignment('</span>) == <span class="n">1</span> <span class="k">.and.</span> n == <span class="n">2</span>) <span class="k">then</span>
+<a class="ln" id="ln-406" href="#ln-406"></a>            <span class="k">call</span> argument_name(list, e%more%arg_ids(<span class="n">1</span>), left)
+<a class="ln" id="ln-407" href="#ln-407"></a>            <span class="k">call</span> argument_name(list, e%more%arg_ids(<span class="n">2</span>), right)
+<a class="ln" id="ln-408" href="#ln-408"></a>            <span class="k">call</span> html_escape(left//<span class="s">' = '</span>//right, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-409" href="#ln-409"></a>            <span class="k">return</span>
+<a class="ln" id="ln-410" href="#ln-410"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-411" href="#ln-411"></a>        <span class="k">if</span> (has_result) <span class="k">then</span>
+<a class="ln" id="ln-412" href="#ln-412"></a>            <span class="k">call</span> add(b, <span class="s">'result = '</span>)
+<a class="ln" id="ln-413" href="#ln-413"></a>        <span class="k">else</span>
+<a class="ln" id="ln-414" href="#ln-414"></a>            <span class="k">call</span> add(b, <span class="s">'call '</span>)
+<a class="ln" id="ln-415" href="#ln-415"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-416" href="#ln-416"></a>        <span class="k">call</span> html_escape(name, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-417" href="#ln-417"></a>        <span class="k">call</span> add(b, <span class="s">'('</span>)
+<a class="ln" id="ln-418" href="#ln-418"></a>        <span class="k">do</span> k = <span class="n">1</span>, n
+<a class="ln" id="ln-419" href="#ln-419"></a>            <span class="k">call</span> argument_name(list, e%more%arg_ids(k), left)
+<a class="ln" id="ln-420" href="#ln-420"></a>            <span class="k">if</span> (e%more%arg_ids(k) &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-421" href="#ln-421"></a>                <span class="k">if</span> (list%box(e%more%arg_ids(k))%e%<span class="k">optional</span>) <span class="k">then</span>
+<a class="ln" id="ln-422" href="#ln-422"></a>                    <span class="k">if</span> (k &gt; <span class="n">1</span>) <span class="k">call</span> add(b, <span class="s">' '</span>)
+<a class="ln" id="ln-423" href="#ln-423"></a>                    <span class="k">call</span> add(b, <span class="s">'['</span>)
+<a class="ln" id="ln-424" href="#ln-424"></a>                    <span class="k">if</span> (k &gt; <span class="n">1</span>) <span class="k">call</span> add(b, <span class="s">', '</span>)
+<a class="ln" id="ln-425" href="#ln-425"></a>                    <span class="k">call</span> html_escape(left, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-426" href="#ln-426"></a>                    <span class="k">call</span> add(b, <span class="s">']'</span>)
+<a class="ln" id="ln-427" href="#ln-427"></a>                    <span class="k">cycle</span>
+<a class="ln" id="ln-428" href="#ln-428"></a>                <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-429" href="#ln-429"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-430" href="#ln-430"></a>            <span class="k">if</span> (k &gt; <span class="n">1</span>) <span class="k">call</span> add(b, <span class="s">', '</span>)
+<a class="ln" id="ln-431" href="#ln-431"></a>            <span class="k">call</span> html_escape(left, b, <span class="k">.false.</span>)
+<a class="ln" id="ln-432" href="#ln-432"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-433" href="#ln-433"></a>        <span class="k">call</span> add(b, <span class="s">')'</span>)
+<a class="ln" id="ln-434" href="#ln-434"></a>    <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-435" href="#ln-435"></a><span class="k">end</span> <span class="k">subroutine</span> call_text
+<a class="ln" id="ln-436" href="#ln-436"></a>
+<a class="ln" id="ln-437" href="#ln-437"></a><span class="d">!&gt; The name of argument `id`.</span>
+<a class="ln" id="ln-438" href="#ln-438"></a><span class="k">subroutine</span> argument_name(list, id, name)
+<a class="ln" id="ln-439" href="#ln-439"></a>    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list             <span class="d">!! the entities</span>
+<a class="ln" id="ln-440" href="#ln-440"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id                           <span class="d">!! the argument, or 0</span>
+<a class="ln" id="ln-441" href="#ln-441"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: name  <span class="d">!! its name</span>
+<a class="ln" id="ln-442" href="#ln-442"></a>
+<a class="ln" id="ln-443" href="#ln-443"></a>    name = <span class="s">'*'</span>
+<a class="ln" id="ln-444" href="#ln-444"></a>    <span class="k">if</span> (id &gt; <span class="n">0</span>) name = list%box(id)%e%name
+<a class="ln" id="ln-445" href="#ln-445"></a><span class="k">end</span> <span class="k">subroutine</span> argument_name
+<a class="ln" id="ln-446" href="#ln-446"></a>
+<a class="ln" id="ln-447" href="#ln-447"></a><span class="d">!&gt; Write a link to specific procedure `id`, further down the page.</span>
+<a class="ln" id="ln-448" href="#ln-448"></a><span class="k">subroutine</span> specific_link(list, id, text, b)
+<a class="ln" id="ln-449" href="#ln-449"></a>    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list <span class="d">!! the entities</span>
+<a class="ln" id="ln-450" href="#ln-450"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! the procedure</span>
+<a class="ln" id="ln-451" href="#ln-451"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text, as HTML</span>
+<a class="ln" id="ln-452" href="#ln-452"></a>    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+<a class="ln" id="ln-453" href="#ln-453"></a>
+<a class="ln" id="ln-454" href="#ln-454"></a>    <span class="k">call</span> add(b, <span class="s">'&lt;a href="#'</span>)
+<a class="ln" id="ln-455" href="#ln-455"></a>    <span class="k">call</span> entity_anchor(list, id, b)
+<a class="ln" id="ln-456" href="#ln-456"></a>    <span class="k">call</span> add(b, <span class="s">'" title="'</span>)
+<a class="ln" id="ln-457" href="#ln-457"></a>    <span class="k">call</span> html_escape(list%box(id)%e%name, b, <span class="k">.true.</span>)
+<a class="ln" id="ln-458" href="#ln-458"></a>    <span class="k">call</span> add(b, <span class="s">'"&gt;'</span>//text//<span class="s">'&lt;/a&gt;'</span>)
+<a class="ln" id="ln-459" href="#ln-459"></a><span class="k">end</span> <span class="k">subroutine</span> specific_link
+<a class="ln" id="ln-460" href="#ln-460"></a>
+<a class="ln" id="ln-461" href="#ln-461"></a><span class="d">!&gt; Put `list` in order.</span>
+<a class="ln" id="ln-462" href="#ln-462"></a><span class="k">pure</span> <span class="k">subroutine</span> sort_ints(list)
+<a class="ln" id="ln-463" href="#ln-463"></a>    <span class="k">integer</span>, <span class="k">intent</span>(inout) :: list(:)   <span class="d">!! the list</span>
+<a class="ln" id="ln-464" href="#ln-464"></a>    <span class="k">integer</span> :: k, j, <span class="k">value</span>
+<a class="ln" id="ln-465" href="#ln-465"></a>
+<a class="ln" id="ln-466" href="#ln-466"></a>    <span class="k">do</span> k = <span class="n">2</span>, <span class="k">size</span>(list)
+<a class="ln" id="ln-467" href="#ln-467"></a>        <span class="k">value</span> = list(k)
+<a class="ln" id="ln-468" href="#ln-468"></a>        j = k - <span class="n">1</span>
+<a class="ln" id="ln-469" href="#ln-469"></a>        <span class="k">do</span> <span class="k">while</span> (j &gt;= <span class="n">1</span>)
+<a class="ln" id="ln-470" href="#ln-470"></a>            <span class="k">if</span> (list(j) &lt;= <span class="k">value</span>) <span class="k">exit</span>
+<a class="ln" id="ln-471" href="#ln-471"></a>            list(j + <span class="n">1</span>) = list(j)
+<a class="ln" id="ln-472" href="#ln-472"></a>            j = j - <span class="n">1</span>
+<a class="ln" id="ln-473" href="#ln-473"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-474" href="#ln-474"></a>        list(j + <span class="n">1</span>) = <span class="k">value</span>
+<a class="ln" id="ln-475" href="#ln-475"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-476" href="#ln-476"></a><span class="k">end</span> <span class="k">subroutine</span> sort_ints
+<a class="ln" id="ln-477" href="#ln-477"></a>
+<a class="ln" id="ln-478" href="#ln-478"></a><span class="k">end</span> <span class="k">module</span> fdoc_generics
+<a class="ln" id="ln-479" href="#ln-479"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

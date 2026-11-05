@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_stats &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a class="here" href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Types</h4><ul><li><a href="../type/file_stats_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>file_stats_t</a></li></ul>
+<h4>Subroutines</h4><ul><li><a href="../proc/add_stats.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>add_stats</a></li><li><a href="../proc/count_source.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>count_source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><ul data-list="modules"></ul>
+<h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_stats.f90.html">fdoc_stats.f90</a></div>
+<h1><span class="kind">module</span>fdoc_stats</h1>
+<div class="doc">
+<p>The size of source files: how many lines hold code, comments or nothing. This uses fformat's tokens,
+so that a <code>!</code> in a string is not taken for a comment. It runs in parallel, so nothing here calls a
+function returning a deferred-length string (see <code>example/slen_race.f90</code>).</p>
+</div>
+<h2 id="uses">Uses</h2>
+<ul class="chips"><li><a href="http://fortranwiki.org/fortran/show/iso_fortran_env">iso_fortran_env</a></li><li><a href="https://jacobwilliams.github.io/fformat/module/ffmt_tokens.html">ffmt_tokens</a></li><li><a href="https://jacobwilliams.github.io/fformat/module/ffmt_lexer.html">ffmt_lexer</a></li></ul>
+<div class="graph"><svg width="222pt" height="110pt"
+ viewBox="0 0 222 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_stats.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="140" y="-61.6" width="73.7" height="21.6"/><text x="176.8" y="-46.1">fdoc_stats</text></a><a href="http://fortranwiki.org/fortran/show/iso_fortran_env" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-101.6" width="104" height="21.6"/><text x="52" y="-86.1">iso_fortran_env</text></a><path d="M139.6,-62.6C125.8,-67.1 109.9,-72.3 95.5,-77"/><polygon fill="#8a93a5" points="95,-74.5 89.1,-79 96.5,-79.2"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_tokens.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="11.2" y="-61.6" width="81.6" height="21.6"/><text x="52" y="-46.1">ffmt_tokens</text></a><path d="M139.3,-50.8C127.4,-50.8 113.9,-50.8 101.2,-50.8"/><polygon fill="#8a93a5" points="101.5,-48.4 94.5,-50.8 101.5,-53.3"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_lexer.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="16.3" y="-21.6" width="71.5" height="21.6"/><text x="52" y="-6.1">ffmt_lexer</text></a><path d="M139.6,-39C125.8,-34.5 109.9,-29.3 95.5,-24.6"/><polygon fill="#8a93a5" points="96.5,-22.4 89.1,-22.6 95,-27.1"/></g>
+</svg>
+</div>
+<h2 id="used-by">Used by</h2>
+<ul class="chips"><li><a href="../module/fdoc_site.html">fdoc_site</a></li></ul>
+<div class="graph"><svg width="274pt" height="30pt"
+ viewBox="0 0 274 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_stats.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="73.7" height="21.6"/><text x="36.8" y="-6.1">fdoc_stats</text></a><a href="../module/fdoc_site.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="109.7" y="-21.6" width="66.4" height="21.6"/><text x="142.9" y="-6.1">fdoc_site</text></a><path d="M109.2,-10.8C100.8,-10.8 91.6,-10.8 82.7,-10.8"/><polygon fill="#8a93a5" points="82.8,-8.4 75.8,-10.8 82.8,-13.3"/><a href="../module/fdoc.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="212.1" y="-21.6" width="54" height="21.6"/><text x="239.1" y="-6.1">fdoc</text></a><path d="M211.6,-10.8C203.3,-10.8 194,-10.8 185,-10.8"/><polygon fill="#8a93a5" points="185.1,-8.4 178.1,-10.8 185.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="types">Types</h2>
+<div class="item" id="type-file_stats_t"><h3><a href="../type/file_stats_t.html">file_stats_t</a></h3>
+<p>The size of a source file, or of several.</p>
+</div>
+<h2 id="subroutines">Subroutines</h2>
+<div class="item" id="proc-add_stats"><h3><a href="../proc/add_stats.html">add_stats</a><span class="attr attr-pure" title="Has no side effects">pure</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> add_stats(<span class="intent attr-inout" title="intent(inout)">total</span>, <span class="intent attr-in" title="intent(in)">item</span>)</div>
+<p>Add the counts of <code>item</code> to <code>total</code>.</p>
+</div>
+<div class="item" id="proc-count_source"><h3><a href="../proc/count_source.html">count_source</a></h3>
+<div class="sig"><span class="k">subroutine</span> count_source(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-inout" title="intent(inout)">stats</span>)</div>
+<p>Count the lines of <code>text</code>. A last line with no line ending counts as a line.</p>
+</div>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

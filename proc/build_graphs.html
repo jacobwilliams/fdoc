@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>build_graphs &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_graphs.f90.html">fdoc_graphs.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_graphs.html">fdoc_graphs</a></div>
+<h1><span class="kind">subroutine</span>build_graphs</h1>
+<div class="sig"><span class="k">subroutine</span> build_graphs(<span class="intent attr-in" title="intent(in)">p</span>, <span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-in" title="intent(in)">members</span>, <span class="intent attr-in" title="intent(in)">list_codes</span>, <span class="intent attr-out" title="intent(out)">set</span>, <span class="intent attr-out" title="intent(out)">stat</span>, <span class="intent attr-out" title="intent(out)">errmsg</span>)</div>
+<div class="doc">
+<p>Build the graphs of the project: those of <code>s%graph</code>, and of entities that ask for them.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-members"><td class="name">members</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the entities that have pages</p></td></tr>
+<tr id="variable-list_codes"><td class="name">list_codes</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(4)</span></td><td><p>the list pages of files, modules, procedures, types</p></td></tr>
+<tr id="variable-set"><td class="name">set</td><td class="type">type(<a href="../type/graph_set_t.html">graph_set_t</a>)</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the graphs</p></td></tr>
+<tr id="variable-stat"><td class="name">stat</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>nonzero on failure</p></td></tr>
+<tr id="variable-errmsg"><td class="name">errmsg</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>what is wrong</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/progress_start.html">progress_start</a></li><li><a href="../proc/build_relations.html">build_relations</a></li><li><a href="../proc/progress_tick.html">progress_tick</a></li><li><a href="../proc/graphs_wanted.html">graphs_wanted</a></li><li>one</li><li>project_graph</li><li><a href="../proc/progress_finish.html">progress_finish</a></li><li><a href="../proc/draw_graphs.html">draw_graphs</a></li><li><a href="../proc/unique_tag.html">unique_tag</a></li><li><a href="../proc/make_directory.html">make_directory</a></li><li><a href="../proc/warn.html">warn</a></li><li><a href="../proc/write_whole_file.html">write_whole_file</a></li><li><a href="../proc/int_text.html">int_text</a></li><li><a href="../proc/neighbours_of.html">neighbours_of</a></li></ul>
+<div class="graph"><svg width="1282pt" height="700pt"
+ viewBox="0 0 1282 700" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 695.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-396.6" width="88.8" height="21.6"/><text x="44.4" y="-381.1">build_graphs</text></a><a href="../proc/progress_start.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="416.4" y="-455.6" width="97.5" height="21.6"/><text x="465.2" y="-440.1">progress_start</text></a><path d="M179.3,-444.8C240.8,-449.3 256.9,-436.4 318,-444.8"/><a href="../proc/build_relations.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="129.2" y="-651.6" width="98.2" height="21.6"/><text x="178.3" y="-636.1">build_relations</text></a><path d="M46.3,-397.4C49.7,-434 64.9,-548.7 124.8,-615.8 128.1,-619.5 132,-622.6 136.3,-625.4"/><polygon fill="#8a93a5" points="134.9,-627.4 142.2,-628.8 137.4,-623.2"/><a href="../proc/progress_tick.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="419.3" y="-299.6" width="91.7" height="21.6"/><text x="465.2" y="-284.1">progress_tick</text></a><path d="M64.3,-374.2C79.9,-365.1 103.1,-352.8 124.8,-345.8 230,-312.1 261.6,-327.2 370.3,-307.8 383.4,-305.5 397.6,-302.7 410.8,-300"/><polygon fill="#8a93a5" points="411,-302.5 417.4,-298.7 410.1,-297.7"/><a href="../proc/graphs_wanted.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="126.6" y="-534.6" width="103.3" height="21.6"/><text x="178.3" y="-519.1">graphs_wanted</text></a><path d="M50.2,-397.2C60.5,-420.5 86.9,-473.7 124.8,-503.8 127.2,-505.6 129.7,-507.3 132.3,-508.9"/><polygon fill="#8a93a5" points="130.7,-510.8 138,-511.9 133,-506.5"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="580.3" y="-611.6" width="63.5" height="21.6"/><text x="612" y="-596.1">push_int</text></a><path d="M47.8,-397.4C54.5,-426.6 76.1,-503.9 124.8,-543.8 192.9,-599.5 468.6,-602.4 571.8,-601.5"/><polygon fill="#8a93a5" points="571.6,-603.9 578.6,-601.4 571.6,-599"/><a href="../proc/warn.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="438.2" y="-259.6" width="54" height="21.6"/><text x="465.2" y="-244.1">warn</text></a><path d="M49.3,-374.1C58.1,-349.3 82.3,-292 124.8,-267.8 223.3,-211.8 364.8,-229.1 429.5,-241.2"/><polygon fill="#8a93a5" points="428.9,-243.6 436.2,-242.6 429.8,-238.8"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="150.1" y="-416.6" width="56.3" height="21.6"/><text x="178.3" y="-401.1">int_text</text></a><path d="M89.7,-392.5C106.6,-395.1 125.7,-398 141.8,-400.4"/><polygon fill="#8a93a5" points="141.1,-402.8 148.3,-401.4 141.8,-397.9"/><a href="../proc/progress_finish.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="267.7" y="-377.6" width="102.6" height="21.6"/><text x="319" y="-362.1">progress_finish</text></a><path d="M61.5,-397.4C85.4,-413.7 132.3,-441.5 177.3,-444.8"/><path d="M179.3,-444.8C229.1,-448.4 277.8,-408 302.1,-384"/><polygon fill="#8a93a5" points="303.7,-385.7 306.9,-379 300.2,-382.3"/><a href="../proc/draw_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="133.5" y="-376.6" width="89.6" height="21.6"/><text x="178.3" y="-361.1">draw_graphs</text></a><path d="M89.7,-379.1C101,-377.4 113.3,-375.5 125,-373.7"/><polygon fill="#8a93a5" points="125.3,-376.2 131.9,-372.7 124.6,-371.3"/><a href="../proc/unique_tag.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="138.9" y="-298.6" width="78.7" height="21.6"/><text x="178.3" y="-283.1">unique_tag</text></a><path d="M56.1,-374C70.5,-358.5 97.7,-331.1 124.8,-312.8 130.3,-309.1 136.3,-305.7 142.3,-302.7"/><polygon fill="#8a93a5" points="143.2,-305 148.4,-299.7 141,-300.6"/><a href="../proc/make_directory.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="126.7" y="-141.6" width="103.3" height="21.6"/><text x="178.3" y="-126.1">make_directory</text></a><path d="M51.4,-374.2C72.3,-333.8 142,-199 167.7,-149.4"/><polygon fill="#8a93a5" points="169.8,-150.6 170.9,-143.3 165.5,-148.3"/><a href="../proc/write_whole_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="124.8" y="-61.6" width="106.9" height="21.6"/><text x="178.3" y="-46.1">write_whole_file</text></a><path d="M46.9,-374.1C52.4,-334.8 73.6,-204.6 124.8,-110.8 133.7,-94.6 147.5,-79 158.8,-67.8"/><polygon fill="#8a93a5" points="160.3,-69.7 163.6,-63.1 156.9,-66.2"/><a href="../proc/neighbours_of.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="129.9" y="-494.6" width="96.8" height="21.6"/><text x="178.3" y="-479.1">neighbours_of</text></a><path d="M56.1,-397.6C70.5,-413.1 97.7,-440.5 124.8,-458.8 130.3,-462.5 136.3,-465.9 142.3,-468.9"/><polygon fill="#8a93a5" points="141,-471 148.4,-471.9 143.2,-466.6"/><a href="../proc/draw.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="585" y="-338.6" width="54" height="21.6"/><text x="612" y="-323.1">draw</text></a><path d="M480.1,-433.6C505.9,-412.7 561.3,-368 591.1,-343.9"/><polygon fill="#8a93a5" points="592.3,-346.1 596.2,-339.8 589.2,-342.3"/><a href="../proc/write_line.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="577.4" y="-406.6" width="69.3" height="21.6"/><text x="612" y="-391.1">write_line</text></a><path d="M499.4,-433.6C520.4,-426.5 547.6,-417.2 570,-409.7"/><polygon fill="#8a93a5" points="570.7,-412 576.5,-407.5 569.1,-407.4"/><a href="../proc/connect.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="435.2" y="-651.6" width="59.9" height="21.6"/><text x="465.2" y="-636.1">connect</text></a><path d="M227.6,-640.8C283.7,-640.8 375.1,-640.8 426.3,-640.8"/><polygon fill="#8a93a5" points="426.3,-643.3 433.3,-640.8 426.3,-638.4"/><a href="../proc/visible_calls.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="277.1" y="-690.6" width="83.8" height="21.6"/><text x="319" y="-675.1">visible_calls</text></a><path d="M219.4,-652.1C235.2,-656.5 253.5,-661.7 270,-666.3"/><polygon fill="#8a93a5" points="269.1,-668.6 276.5,-668.1 270.4,-663.9"/><path d="M508.1,-300.1C529.8,-305.9 556,-313 576.6,-318.5"/><polygon fill="#8a93a5" points="575.9,-320.9 583.3,-320.3 577.1,-316.1"/><path d="M481.4,-300C507.2,-319.1 559.7,-357.9 589.3,-379.8"/><polygon fill="#8a93a5" points="587.7,-381.6 594.8,-383.8 590.6,-377.7"/><a href="../proc/parse_bool.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="279.7" y="-533.6" width="78.7" height="21.6"/><text x="319" y="-518.1">parse_bool</text></a><path d="M230.2,-523.4C243.5,-523.3 257.8,-523.2 270.9,-523.1"/><polygon fill="#8a93a5" points="270.8,-525.6 277.8,-523.1 270.8,-520.7"/><a href="../proc/parse_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="285.1" y="-573.6" width="67.9" height="21.6"/><text x="319" y="-558.1">parse_int</text></a><path d="M219.4,-535.1C237.5,-540.2 258.7,-546.1 276.9,-551.2"/><polygon fill="#8a93a5" points="276.1,-553.6 283.5,-553.1 277.5,-548.9"/><path d="M492.4,-256.2C502.5,-259.5 514.1,-263.8 524,-268.8 548.2,-280.9 573.6,-298.8 590.7,-311.7"/><polygon fill="#8a93a5" points="588.7,-313.3 595.8,-315.6 591.7,-309.4"/><path d="M363.2,-355.6C376.9,-352.3 392.2,-349.1 406.3,-346.8 465.7,-337.2 535.6,-332 576.5,-329.6"/><polygon fill="#8a93a5" points="576.4,-332 583.2,-329.2 576.1,-327.1"/><path d="M361.4,-378C375.6,-381.4 391.5,-384.8 406.3,-386.8 462.1,-394.4 527.1,-396.1 568.7,-396.2"/><polygon fill="#8a93a5" points="568.7,-398.7 575.7,-396.2 568.7,-393.8"/><a href="../proc/seconds_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="419.7" y="-377.6" width="91" height="21.6"/><text x="465.2" y="-362.1">seconds_text</text></a><path d="M370.4,-366.8C383.6,-366.8 397.9,-366.8 411.2,-366.8"/><polygon fill="#8a93a5" points="410.8,-369.3 417.8,-366.8 410.8,-364.4"/><path d="M212.3,-377C218.8,-379.6 225.6,-382.6 231.7,-385.8 272.9,-407.3 272,-438.5 318,-444.8"/><path d="M320,-444.8C348.8,-448.8 381,-449.1 407.8,-448.4"/><polygon fill="#8a93a5" points="407.8,-450.8 414.7,-448.1 407.6,-445.9"/><path d="M223.6,-366.1C234.9,-366.2 247.3,-366.3 259.2,-366.4"/><polygon fill="#8a93a5" points="258.9,-368.8 265.9,-366.4 258.9,-363.9"/><a href="../proc/draw_some.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="278.2" y="-298.6" width="81.6" height="21.6"/><text x="319" y="-283.1">draw_some</text></a><path d="M199.2,-354.6C223.3,-341.1 264,-318.2 291,-303"/><polygon fill="#8a93a5" points="292,-305.3 296.9,-299.7 289.6,-301"/><a href="../proc/is_windows.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="571.6" y="-160.6" width="80.9" height="21.6"/><text x="612" y="-145.1">is_windows</text></a><path d="M224.1,-142.1C238,-145.3 253.4,-148.5 267.7,-150.8 354.3,-164.7 376.5,-169.9 464.2,-169.8"/><a href="../proc/run_command.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="270.3" y="-61.6" width="97.5" height="21.6"/><text x="319" y="-46.1">run_command</text></a><path d="M193.7,-119.6C210.7,-106.7 240.2,-85.4 267.7,-70.8 271.4,-68.9 275.2,-67 279.2,-65.3"/><polygon fill="#8a93a5" points="279.8,-67.6 285.3,-62.6 277.9,-63.1"/><a href="../proc/quoted_path.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="275.7" y="-141.6" width="86.7" height="21.6"/><text x="319" y="-126.1">quoted_path</text></a><path d="M230.2,-130.8C242.2,-130.8 255.1,-130.8 267.2,-130.8"/><polygon fill="#8a93a5" points="266.8,-133.3 273.8,-130.8 266.8,-128.4"/><a href="https://jacobwilliams.github.io/fformat/proc/is_directory.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="278.6" y="-101.6" width="80.9" height="21.6"/><text x="319" y="-86.1">is_directory</text></a><path d="M218.3,-119.6C234.8,-114.8 254.3,-109.2 271.5,-104.2"/><polygon fill="#8a93a5" points="271.8,-106.7 277.8,-102.4 270.4,-102"/><a href="https://jacobwilliams.github.io/fformat/proc/write_file.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="286.2" y="-21.6" width="65.7" height="21.6"/><text x="319" y="-6.1">write_file</text></a><path d="M218.3,-39.6C236.9,-34.2 259.1,-27.8 277.8,-22.4"/><polygon fill="#8a93a5" points="278.3,-24.8 284.4,-20.5 277,-20.1"/><path d="M227,-475.4C296.3,-465.5 427,-455.9 524,-502.8 559.7,-520 587.2,-559.2 601,-582.5"/><polygon fill="#8a93a5" points="598.8,-583.6 604.4,-588.4 603.1,-581.1"/><a href="../proc/bar_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="715.6" y="-357.6" width="61.4" height="21.6"/><text x="746.3" y="-342.1">bar_text</text></a><path d="M639.5,-331.6C658.8,-334.4 685.2,-338.2 706.9,-341.3"/><polygon fill="#8a93a5" points="706.4,-343.7 713.7,-342.3 707.1,-338.8"/><path d="M643.4,-384.6C662.5,-377.5 687.3,-368.3 707.7,-360.7"/><polygon fill="#8a93a5" points="708.4,-363.1 714.1,-358.3 706.7,-358.5"/><a href="../proc/progress_line.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="700" y="-406.6" width="92.4" height="21.6"/><text x="746.3" y="-391.1">progress_line</text></a><path d="M647.1,-395.8C660.7,-395.8 676.6,-395.8 691.6,-395.8"/><polygon fill="#8a93a5" points="691.4,-398.3 698.4,-395.8 691.4,-393.4"/><path d="M495.5,-632.7C517.5,-626.6 548,-618.2 572.1,-611.6"/><polygon fill="#8a93a5" points="572.5,-614 578.6,-609.8 571.2,-609.3"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="585" y="-651.6" width="54" height="21.6"/><text x="612" y="-636.1">push</text></a><path d="M495.5,-640.8C518.9,-640.8 551.6,-640.8 576.3,-640.8"/><polygon fill="#8a93a5" points="576.2,-643.3 583.2,-640.8 576.2,-638.4"/><path d="M361.3,-668.6C381.9,-663 406.7,-656.3 426.8,-650.9"/><polygon fill="#8a93a5" points="427.2,-653.3 433.3,-649.2 425.9,-648.6"/><a href="../proc/is_simple_binding.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="406.3" y="-691.6" width="117.7" height="21.6"/><text x="465.2" y="-676.1">is_simple_binding</text></a><path d="M361.3,-680.1C372.6,-680.2 385.1,-680.3 397.5,-680.3"/><polygon fill="#8a93a5" points="397.4,-682.8 404.4,-680.4 397.4,-677.9"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="428.7" y="-533.6" width="72.9" height="21.6"/><text x="465.2" y="-518.1">lowercase</text></a><path d="M358.6,-522.8C377.5,-522.8 400.4,-522.8 419.9,-522.8"/><polygon fill="#8a93a5" points="419.9,-525.3 426.9,-522.8 419.9,-520.4"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="438.2" y="-573.6" width="54" height="21.6"/><text x="465.2" y="-558.1">strip</text></a><path d="M353.4,-562.8C376.3,-562.8 406.5,-562.8 429.6,-562.8"/><polygon fill="#8a93a5" points="429.6,-565.3 436.6,-562.8 429.6,-560.4"/><path d="M360.2,-288.1C375.8,-288.2 394.1,-288.3 410.8,-288.4"/><polygon fill="#8a93a5" points="410.4,-290.9 417.4,-288.5 410.4,-286"/><a href="../proc/draw_graph.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="423.6" y="-219.6" width="83.1" height="21.6"/><text x="465.2" y="-204.1">draw_graph</text></a><path d="M333.9,-276.5C350.4,-263.6 379.1,-242.5 406.3,-228.8 410.3,-226.8 414.6,-224.9 419,-223.1"/><polygon fill="#8a93a5" points="419.8,-225.4 425.4,-220.6 418,-220.8"/><path d="M345.2,-142C373.6,-153.5 421.3,-169.9 464.2,-169.8"/><path d="M466.2,-169.8C498.7,-169.8 535.1,-164.7 563.2,-159.7"/><polygon fill="#8a93a5" points="563.3,-162.2 569.8,-158.5 562.5,-157.4"/><a href="../proc/quoted.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="438.1" y="-141.6" width="54.2" height="21.6"/><text x="465.2" y="-126.1">quoted</text></a><path d="M362.5,-130.8C383.8,-130.8 409.4,-130.8 429.6,-130.8"/><polygon fill="#8a93a5" points="429.3,-133.3 436.3,-130.8 429.3,-128.4"/><a href="../proc/describe_graph.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="560" y="-219.6" width="104" height="21.6"/><text x="612" y="-204.1">describe_graph</text></a><path d="M506.9,-208.8C520.7,-208.8 536.5,-208.8 551.5,-208.8"/><polygon fill="#8a93a5" points="551.2,-211.3 558.2,-208.8 551.2,-206.4"/><path d="M492.7,-134.3C512.3,-136.9 539.5,-140.4 562.8,-143.5"/><polygon fill="#8a93a5" points="562.5,-145.9 569.7,-144.4 563.1,-141"/><a href="../proc/grow_edges.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="703.7" y="-219.6" width="85.2" height="21.6"/><text x="746.3" y="-204.1">grow_edges</text></a><path d="M664.5,-208.8C674.6,-208.8 685.2,-208.8 695.2,-208.8"/><polygon fill="#8a93a5" points="695,-211.3 702,-208.8 695,-206.4"/><a href="../proc/add_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="710.2" y="-179.6" width="72.2" height="21.6"/><text x="746.3" y="-164.1">add_node</text></a><path d="M650.2,-197.6C666.2,-192.7 685.1,-187 701.7,-182"/><polygon fill="#8a93a5" points="702.3,-184.4 708.3,-180 700.9,-179.7"/><a href="../proc/add_edge.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="710.2" y="-259.6" width="72.2" height="21.6"/><text x="746.3" y="-244.1">add_edge</text></a><path d="M650.2,-220C666.2,-224.9 685.1,-230.6 701.7,-235.6"/><polygon fill="#8a93a5" points="700.9,-237.9 708.3,-237.6 702.3,-233.2"/><a href="../proc/last_separator.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="828.5" y="-219.6" width="96.8" height="21.6"/><text x="876.9" y="-204.1">last_separator</text></a><path d="M782.8,-179.8C798,-184.6 815.9,-190.1 831.9,-195.1"/><polygon fill="#8a93a5" points="830.8,-197.3 838.2,-197.1 832.2,-192.7"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="961.3" y="-159.6" width="67.1" height="21.6"/><text x="994.8" y="-144.1">entity_url</text></a><path d="M782.5,-158.2C796.7,-154.4 813.2,-150.7 828.5,-148.8 870.7,-143.7 919.3,-144.5 952.9,-146.1"/><polygon fill="#8a93a5" points="952.5,-148.5 959.6,-146.4 952.7,-143.6"/><a href="../proc/node_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="841.9" y="-179.6" width="70.1" height="21.6"/><text x="876.9" y="-164.1">node_link</text></a><path d="M782.8,-168.8C798.3,-168.8 816.8,-168.8 833.1,-168.8"/><polygon fill="#8a93a5" points="832.9,-171.3 839.9,-168.8 832.9,-166.4"/><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1064.4" y="-199.6" width="84.5" height="21.6"/><text x="1106.7" y="-184.1">object_word</text></a><path d="M1026.7,-160C1039.4,-164.6 1054.1,-170 1067.4,-174.9"/><polygon fill="#8a93a5" points="1066.2,-177 1073.6,-177.1 1067.9,-172.4"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1065.1" y="-159.6" width="83.1" height="21.6"/><text x="1106.7" y="-144.1">page_name</text></a><path d="M1028.8,-148.8C1037.5,-148.8 1047.1,-148.8 1056.5,-148.8"/><polygon fill="#8a93a5" points="1056.5,-151.3 1063.5,-148.8 1056.5,-146.4"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1072.4" y="-119.6" width="68.6" height="21.6"/><text x="1106.7" y="-104.1">url_quote</text></a><path d="M1026.7,-137.6C1039.4,-133 1054.1,-127.6 1067.4,-122.7"/><polygon fill="#8a93a5" points="1067.9,-125.2 1073.6,-120.5 1066.2,-120.6"/><path d="M912.4,-162.9C925.1,-160.7 939.6,-158.2 952.8,-155.9"/><polygon fill="#8a93a5" points="952.9,-158.3 959.4,-154.7 952.1,-153.5"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1184.9" y="-199.6" width="89.6" height="21.6"/><text x="1229.7" y="-184.1">is_procedure</text></a><path d="M1149.3,-188.8C1157.9,-188.8 1167.1,-188.8 1176,-188.8"/><polygon fill="#8a93a5" points="1176,-191.3 1183,-188.8 1176,-186.4"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1190.7" y="-159.6" width="78" height="21.6"/><text x="1229.7" y="-144.1">lower_char</text></a><path d="M1148.6,-148.8C1159.4,-148.8 1171,-148.8 1182,-148.8"/><polygon fill="#8a93a5" points="1181.7,-151.3 1188.7,-148.8 1181.7,-146.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="292pt" height="30pt"
+ viewBox="0 0 292 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="88.8" height="21.6"/><text x="44.4" y="-6.1">build_graphs</text></a><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="124.8" y="-21.6" width="69.3" height="21.6"/><text x="159.5" y="-6.1">write_site</text></a><path d="M124.6,-10.8C116.3,-10.8 107.2,-10.8 98.3,-10.8"/><polygon fill="#8a93a5" points="98.3,-8.4 91.3,-10.8 98.3,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="230.2" y="-21.6" width="54" height="21.6"/><text x="257.2" y="-6.1">run</text></a><path d="M229.8,-10.8C221.4,-10.8 211.9,-10.8 202.7,-10.8"/><polygon fill="#8a93a5" points="202.9,-8.4 195.9,-10.8 202.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> build_graphs(p, s, members, list_codes, set, <span class="k">stat</span>, errmsg)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(in) :: p                    <span class="d">!! the project</span>
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s                   <span class="d">!! the settings</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: members(:)                   <span class="d">!! the entities that have pages</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: list_codes(<span class="n">4</span>)                <span class="d">!! the list pages of files, modules, procedures, types</span>
+    <span class="k">type</span>(graph_set_t), <span class="k">intent</span>(out) :: set               <span class="d">!! the graphs</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg <span class="d">!! what is wrong</span>
+    <span class="k">type</span>(adjacency_t) :: relations(NUM_RELATIONS)
+    <span class="k">type</span>(graph_job_t), <span class="k">allocatable</span> :: jobs(:)
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: drawings(:), descriptions(:)
+    <span class="k">logical</span>, <span class="k">allocatable</span> :: failed(:)
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: roots(:)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: directory
+    <span class="k">character</span>(<span class="k">len</span>=<span class="n">32</span>) :: tag
+    <span class="k">logical</span> :: any_wanted, keep
+    <span class="k">integer</span> :: k, m, n, depth, nodes, status, count_jobs
+
+    <span class="k">stat</span> = <span class="n">0</span>
+    <span class="k">allocate</span> (set%graphs(<span class="n">0</span>))
+    any_wanted = s%graph
+    <span class="k">do</span> k = <span class="n">1</span>, p%list%n
+        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(p%list%box(k)%e%meta)) <span class="k">cycle</span>
+        <span class="k">if</span> (<span class="k">any</span>([(p%list%box(k)%e%meta(n)%key == <span class="s">'graph'</span>, n=<span class="n">1</span>, <span class="k">size</span>(p%list%box(k)%e%meta))])) any_wanted = <span class="k">.true.</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (<span class="k">.not.</span> any_wanted) <span class="k">return</span>
+
+    <span class="k">call</span> progress_start(<span class="s">'Finding dependencies'</span>, <span class="k">size</span>(members))
+    <span class="k">call</span> build_relations(p, relations)
+    <span class="k">allocate</span> (jobs(<span class="n">0</span>))
+    count_jobs = <span class="n">0</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(members)
+        <span class="k">call</span> progress_tick()
+        <span class="k">associate</span> (id =&gt; members(k))
+            <span class="k">if</span> (<span class="k">.not.</span> graphs_wanted(p, s, id, depth, nodes)) <span class="k">cycle</span>
+            <span class="k">select</span> <span class="k">case</span> (p%list%box(id)%e%<span class="k">kind</span>)
+            <span class="k">case</span> (E_MODULE, E_SUBMODULE)
+                <span class="k">call</span> one(id, REL_USES, <span class="k">.true.</span>, <span class="s">'Uses'</span>, RANK_RL)
+                <span class="k">call</span> one(id, REL_USES, <span class="k">.false.</span>, <span class="s">'Used by'</span>, RANK_RL)
+            <span class="k">case</span> (E_TYPE)
+                <span class="k">call</span> one(id, REL_INHERITS, <span class="k">.true.</span>, <span class="s">'Inherits'</span>, RANK_RL)
+                <span class="k">call</span> one(id, REL_INHERITS, <span class="k">.false.</span>, <span class="s">'Inherited by'</span>, RANK_RL)
+            <span class="k">case</span> (E_SUBROUTINE, E_FUNCTION, E_MODPROC, E_INTERFACE)
+                <span class="k">call</span> one(id, REL_CALLS, <span class="k">.true.</span>, <span class="s">'Calls'</span>, RANK_LR)
+                <span class="k">call</span> one(id, REL_CALLS, <span class="k">.false.</span>, <span class="s">'Called by'</span>, RANK_RL)
+            <span class="k">case</span> (E_PROGRAM)
+                <span class="k">call</span> one(id, REL_CALLS, <span class="k">.true.</span>, <span class="s">'Calls'</span>, RANK_LR)
+                <span class="k">call</span> one(id, REL_USES, <span class="k">.true.</span>, <span class="s">'Uses'</span>, RANK_RL)
+            <span class="k">case</span> (E_BLOCKDATA)
+                <span class="k">call</span> one(id, REL_USES, <span class="k">.true.</span>, <span class="s">'Uses'</span>, RANK_RL)
+            <span class="k">case</span> (E_FILE)
+                <span class="k">call</span> one(id, REL_FILES, <span class="k">.true.</span>, <span class="s">'Files this one depends on'</span>, RANK_RL)
+                <span class="k">call</span> one(id, REL_FILES, <span class="k">.false.</span>, <span class="s">'Files that depend on this one'</span>, RANK_RL)
+            <span class="k">end</span> <span class="k">select</span>
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (s%graph) <span class="k">then</span>
+        <span class="k">call</span> project_graph([E_MODULE, E_SUBMODULE], REL_USES, list_codes(<span class="n">2</span>), <span class="s">'Module graph'</span>)
+        <span class="k">call</span> project_graph([E_TYPE], REL_INHERITS, list_codes(<span class="n">4</span>), <span class="s">'Type graph'</span>)
+        <span class="k">call</span> project_graph([E_SUBROUTINE, E_FUNCTION, E_PROGRAM, E_INTERFACE], REL_CALLS, list_codes(<span class="n">3</span>), <span class="s">'Call graph'</span>)
+        <span class="k">call</span> project_graph([E_FILE], REL_FILES, list_codes(<span class="n">1</span>), <span class="s">'File graph'</span>)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">call</span> progress_finish()
+
+    n = count_jobs
+    <span class="k">if</span> (n == <span class="n">0</span>) <span class="k">return</span>
+    keep = <span class="k">allocated</span>(s%graph_dir)
+    <span class="k">allocate</span> (drawings(n), descriptions(n), failed(n))
+    <span class="k">call</span> draw_graphs(p, s, relations, jobs(<span class="n">1</span>:n), keep, drawings, descriptions, failed, <span class="k">max</span>(<span class="n">1</span>, s%parallel))
+
+    <span class="k">if</span> (keep) <span class="k">then</span>
+        <span class="k">call</span> unique_tag(tag)
+        <span class="c">! a directory of this run's own, as the names of the files inside are the same in every run</span>
+        directory = s%graph_dir//<span class="s">'/'</span>//<span class="k">trim</span>(tag)
+        <span class="k">call</span> make_directory(directory, status)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">deallocate</span> (set%graphs)
+    <span class="k">allocate</span> (set%graphs(<span class="k">count</span>([(<span class="k">allocated</span>(drawings(k)%s), k=<span class="n">1</span>, n)])))
+    m = <span class="n">0</span>
+    <span class="k">do</span> k = <span class="n">1</span>, n
+        <span class="k">if</span> (failed(k)) <span class="k">call</span> warn(<span class="s">'no layout for a graph of '</span>//jobs(k)%title)
+        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(drawings(k)%s)) <span class="k">cycle</span>
+        m = m + <span class="n">1</span>
+        <span class="k">if</span> (keep) <span class="k">then</span>
+            <span class="k">call</span> write_whole_file(directory//<span class="s">'/g'</span>//<span class="k">trim</span>(int_text(m))//<span class="s">'.gv'</span>, descriptions(k)%s, <span class="k">stat</span>, errmsg)
+            <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">return</span>
+            <span class="k">call</span> write_whole_file(directory//<span class="s">'/g'</span>//<span class="k">trim</span>(int_text(m))//<span class="s">'.gv.svg'</span>, drawings(k)%s, <span class="k">stat</span>, errmsg)
+            <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> <span class="k">move_alloc</span>(drawings(k)%s, set%graphs(m)%svg)
+        <span class="k">call</span> <span class="k">move_alloc</span>(jobs(k)%title, set%graphs(m)%title)
+        set%graphs(m)%owner = jobs(k)%owner
+        set%graphs(m)%list_page = jobs(k)%list_page
+        <span class="k">if</span> (jobs(k)%owner &gt; <span class="n">0</span>) <span class="k">call</span> neighbours_of(p, relations(jobs(k)%relation), jobs(k), set%graphs(m)%neighbours)
+    <span class="k">end</span> <span class="k">do</span>
+
+<span class="k">contains</span>
+
+    <span class="d">!&gt; Add a graph of the page of `id`.</span>
+    <span class="k">subroutine</span> one(id, relation, forward, title, direction)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: id                   <span class="d">!! the entity</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: relation             <span class="d">!! the relation</span>
+        <span class="k">logical</span>, <span class="k">intent</span>(in) :: forward              <span class="d">!! true to follow edges forward</span>
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: title       <span class="d">!! the heading</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: direction            <span class="d">!! which way ranks go</span>
+
+        <span class="k">call</span> add_job([id], relation, forward, depth, nodes, direction, title, id, <span class="n">0</span>)
+    <span class="k">end</span> <span class="k">subroutine</span> one
+
+    <span class="d">!&gt; Add the graph of a whole relation to a list page.</span>
+    <span class="k">subroutine</span> project_graph(kinds, relation, page, title)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: kinds(:)         <span class="d">!! the kinds of entity</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: relation         <span class="d">!! the relation</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: page             <span class="d">!! the list page</span>
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: title   <span class="d">!! the heading</span>
+        <span class="k">integer</span> :: j
+
+        <span class="k">allocate</span> (roots(<span class="n">0</span>))
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(members)
+            <span class="k">if</span> (p%list%box(members(j))%e%iface == IFACE_ABSTRACT) <span class="k">cycle</span>
+            <span class="k">if</span> (<span class="k">any</span>(p%list%box(members(j))%e%<span class="k">kind</span> == kinds)) <span class="k">call</span> push_int(roots, members(j))
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (<span class="k">size</span>(roots) &gt; s%graph_project_maxnodes) <span class="k">then</span>
+            <span class="k">call</span> warn(title//<span class="s">' left out: it would have more than '</span>//<span class="k">trim</span>(int_text(s%graph_project_maxnodes))// &amp;
+                      <span class="s">' nodes (see graph_project_maxnodes)'</span>)
+        <span class="k">else</span> <span class="k">if</span> (<span class="k">size</span>(roots) &gt; <span class="n">1</span>) <span class="k">then</span>
+            <span class="k">call</span> add_job(roots, relation, <span class="k">.true.</span>, <span class="n">1</span>, <span class="k">huge</span>(<span class="n">1</span>), RANK_RL, title, <span class="n">0</span>, page)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">deallocate</span> (roots)
+    <span class="k">end</span> <span class="k">subroutine</span> project_graph
+
+    <span class="d">!&gt; Add a graph to the list.</span>
+    <span class="k">subroutine</span> add_job(start, relation, forward, max_depth, max_nodes, direction, title, owner, page)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: start(:)         <span class="d">!! where to start</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: relation         <span class="d">!! the relation</span>
+        <span class="k">logical</span>, <span class="k">intent</span>(in) :: forward          <span class="d">!! true to follow edges forward</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: max_depth        <span class="d">!! how many hops to follow</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: max_nodes        <span class="d">!! how many nodes to allow</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: direction        <span class="d">!! which way ranks go</span>
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: title   <span class="d">!! its heading</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: owner            <span class="d">!! the entity whose page shows it, or 0</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: page             <span class="d">!! the list page that shows it, or 0</span>
+        <span class="k">type</span>(graph_job_t), <span class="k">allocatable</span> :: grown(:)
+        <span class="k">integer</span> :: j
+
+        <span class="k">if</span> (count_jobs == <span class="k">size</span>(jobs)) <span class="k">then</span>
+            <span class="k">allocate</span> (grown(<span class="k">max</span>(<span class="n">64</span>, <span class="n">2</span>*count_jobs)))
+            <span class="k">do</span> j = <span class="n">1</span>, count_jobs
+                <span class="k">call</span> <span class="k">move_alloc</span>(jobs(j)%roots, grown(j)%roots)
+                <span class="k">call</span> <span class="k">move_alloc</span>(jobs(j)%title, grown(j)%title)
+                grown(j)%relation = jobs(j)%relation
+                grown(j)%forward = jobs(j)%forward
+                grown(j)%max_depth = jobs(j)%max_depth
+                grown(j)%max_nodes = jobs(j)%max_nodes
+                grown(j)%direction = jobs(j)%direction
+                grown(j)%owner = jobs(j)%owner
+                grown(j)%list_page = jobs(j)%list_page
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">call</span> <span class="k">move_alloc</span>(grown, jobs)
+        <span class="k">end</span> <span class="k">if</span>
+        count_jobs = count_jobs + <span class="n">1</span>
+        <span class="k">associate</span> (job =&gt; jobs(count_jobs))
+            job%roots = start
+            job%title = title
+            job%relation = relation
+            job%forward = forward
+            job%max_depth = max_depth
+            job%max_nodes = max_nodes
+            job%direction = direction
+            job%owner = owner
+            job%list_page = page
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">subroutine</span> add_job
+
+<span class="k">end</span> <span class="k">subroutine</span> build_graphs</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

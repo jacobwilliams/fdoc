@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>bracket_end &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">function</span>bracket_end<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> bracket_end(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">i</span>)</div>
+<div class="doc">
+<p>The end of the <code>[...]</code> that opens at <code>i</code>, or 0.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-i"><td class="name">i</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>where it opens</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-bracket_end"><td class="name">bracket_end</td><td class="type">integer</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/inline_bracket.html">inline_bracket</a></li><li><a href="../proc/inline_image.html">inline_image</a></li></ul>
+<div class="graph"><svg width="1433pt" height="321pt"
+ viewBox="0 0 1433 321" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 316.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/bracket_end.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-306.6" width="86" height="21.6"/><text x="43" y="-291.1">bracket_end</text></a><a href="../proc/inline_bracket.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="510.4" y="-296.6" width="94.6" height="21.6"/><text x="557.7" y="-281.1">inline_bracket</text></a><path d="M512.2,-297.1C496.2,-300.6 477.9,-304.1 461,-305.8 329.7,-319.4 173.8,-308.5 95,-301.2"/><polygon fill="#8a93a5" points="95.5,-298.8 88.3,-300.5 95,-303.6"/><a href="../proc/write_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="374" y="-296.6" width="68.6" height="21.6"/><text x="408.3" y="-281.1">write_link</text></a><path d="M510.1,-285.8C491.2,-285.8 469.6,-285.8 451.2,-285.8"/><polygon fill="#8a93a5" points="451.5,-283.4 444.5,-285.8 451.5,-288.3"/><a href="../proc/inline_image.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="132.1" y="-278.6" width="87.4" height="21.6"/><text x="175.8" y="-263.1">inline_image</text></a><path d="M131.6,-277C119.8,-279.6 107,-282.3 94.9,-284.9"/><polygon fill="#8a93a5" points="94.5,-282.5 88.2,-286.3 95.5,-287.3"/><a href="../proc/inline.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="265.6" y="-228.6" width="54" height="21.6"/><text x="292.6" y="-213.1">inline</text></a><path d="M319.9,-224.6C363,-235.7 449.6,-258.1 505.3,-272.5"/><polygon fill="#8a93a5" points="504.4,-274.8 511.8,-274.2 505.6,-270.1"/><path d="M265.8,-229C249.3,-236.2 227.6,-245.7 209.8,-253.4"/><polygon fill="#8a93a5" points="209.3,-251 203.8,-256 211.2,-255.5"/><a href="../proc/inline_emphasis.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="122" y="-228.6" width="107.6" height="21.6"/><text x="175.8" y="-213.1">inline_emphasis</text></a><path d="M256.9,-217.8C250.9,-217.8 244.5,-217.8 237.9,-217.8"/><polygon fill="#8a93a5" points="256.7,-220.3 263.7,-217.8 256.7,-215.4"/><polygon fill="#8a93a5" points="238.2,-215.4 231.2,-217.8 238.2,-220.3"/><a href="../proc/render_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="672.4" y="-160.6" width="88.1" height="21.6"/><text x="716.5" y="-145.1">render_node</text></a><path d="M556.7,-208.8C475.1,-218.1 378.5,-218.8 328.1,-218.3"/><polygon fill="#8a93a5" points="328.4,-215.9 321.3,-218.3 328.3,-220.8"/><a href="../proc/render_heading.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="355.6" y="-180.6" width="105.5" height="21.6"/><text x="408.3" y="-165.1">render_heading</text></a><path d="M695.5,-161C666.5,-176.4 610.4,-202.9 558.7,-208.8"/><path d="M556.7,-208.8C514.9,-213.5 468.3,-197.4 438.9,-184.4"/><polygon fill="#8a93a5" points="440.2,-182.3 432.8,-181.7 438.1,-186.8"/><a href="../proc/render_children.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="505.4" y="-120.6" width="104.7" height="21.6"/><text x="557.7" y="-105.1">render_children</text></a><path d="M664.2,-136.7C647.2,-132.4 628.3,-127.5 611.2,-123.2"/><polygon fill="#8a93a5" points="663.4,-139 670.8,-138.4 664.6,-134.3"/><polygon fill="#8a93a5" points="611.8,-120.8 604.4,-121.5 610.6,-125.6"/><a href="../proc/render_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="514" y="-160.6" width="87.4" height="21.6"/><text x="557.7" y="-145.1">render_table</text></a><path d="M672.2,-149.8C653.1,-149.8 630.3,-149.8 610.3,-149.8"/><polygon fill="#8a93a5" points="610.3,-147.4 603.3,-149.8 610.3,-152.3"/><path d="M380.6,-181.1C364.8,-187.7 344.6,-196.3 327.6,-203.4"/><polygon fill="#8a93a5" points="327,-201 321.5,-206 328.9,-205.6"/><a href="../proc/table_row.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="372.9" y="-140.6" width="70.8" height="21.6"/><text x="408.3" y="-125.1">table_row</text></a><path d="M372.5,-140.7C366.6,-143.2 360.7,-146.3 355.6,-149.8 335.5,-163.6 317.3,-185.1 305.9,-200.2"/><polygon fill="#8a93a5" points="304.2,-198.4 302.1,-205.5 308.2,-201.3"/><path d="M382.2,-274.6C373.6,-270.5 364,-265.7 355.6,-260.8 341.7,-252.7 326.9,-242.5 315.2,-234.1"/><polygon fill="#8a93a5" points="316.7,-232.1 309.6,-230 313.8,-236.1"/><path d="M513.7,-144C494.3,-141.3 471.4,-138.2 452.1,-135.6"/><polygon fill="#8a93a5" points="452.5,-133.2 445.2,-134.7 451.8,-138"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="654.4" y="-80.6" width="124.2" height="21.6"/><text x="716.5" y="-65.1">markdown_to_html</text></a><path d="M671.4,-81C652.6,-85.8 630.6,-91.5 611,-96.5"/><polygon fill="#8a93a5" points="610.4,-94.1 604.2,-98.2 611.6,-98.8"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="497" y="-80.6" width="121.3" height="21.6"/><text x="557.7" y="-65.1">stash_html_blocks</text></a><path d="M645.5,-69.8C639.4,-69.8 633.2,-69.8 627,-69.8"/><polygon fill="#8a93a5" points="645.5,-72.3 652.5,-69.8 645.5,-67.4"/><polygon fill="#8a93a5" points="627.3,-67.4 620.3,-69.8 627.3,-72.3"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="501.4" y="-40.6" width="112.7" height="21.6"/><text x="557.7" y="-25.1">render_footnotes</text></a><path d="M663.2,-56.5C646.3,-52.2 627.7,-47.4 610.8,-43.1"/><polygon fill="#8a93a5" points="662.6,-58.8 669.9,-58.2 663.8,-54.1"/><polygon fill="#8a93a5" points="611.6,-40.8 604.2,-41.4 610.4,-45.5"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="930.8" y="-100.6" width="97.5" height="21.6"/><text x="979.5" y="-85.1">markdown_list</text></a><path d="M930.3,-86.1C890.1,-83 832.3,-78.6 787,-75.1"/><polygon fill="#8a93a5" points="787.4,-72.7 780.3,-74.6 787.1,-77.6"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="814.6" y="-61.6" width="80.2" height="21.6"/><text x="854.7" y="-46.1">render_text</text></a><path d="M814.3,-56.3C805.7,-57.5 796.4,-58.8 787.1,-60.1"/><polygon fill="#8a93a5" points="787,-57.6 780.4,-61 787.6,-62.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1371" y="-61.6" width="54" height="21.6"/><text x="1398" y="-46.1">run</text></a><path d="M1108.4,-89.8C1085,-88.1 1059.2,-87.7 1036.9,-88"/><polygon fill="#8a93a5" points="1037,-85.5 1030.1,-88.1 1037.1,-90.4"/><path d="M1370.8,-60.7C1359.9,-64.5 1347,-68.4 1335,-70.8 1236.8,-90.5 1210.3,-97.3 1110.4,-89.8"/><path d="M1108.4,-89.8C1049,-86.9 1039.8,-55.2 980.5,-50.8"/><a href="../proc/render_documentation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1190.5" y="-61.6" width="144.5" height="21.6"/><text x="1262.8" y="-46.1">render_documentation</text></a><path d="M1370.7,-50.8C1362.6,-50.8 1353.3,-50.8 1343.6,-50.8"/><polygon fill="#8a93a5" points="1343.9,-48.4 1336.9,-50.8 1343.9,-53.3"/><a href="../proc/load_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1222" y="-21.6" width="81.6" height="21.6"/><text x="1262.8" y="-6.1">load_pages</text></a><path d="M1370.5,-42C1359.6,-38.4 1346.7,-34.3 1335,-30.8 1327.5,-28.5 1319.4,-26.2 1311.6,-23.9"/><polygon fill="#8a93a5" points="1312.7,-21.7 1305.3,-22.2 1311.3,-26.4"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1064.3" y="-61.6" width="90.3" height="21.6"/><text x="1109.4" y="-46.1">render_entity</text></a><path d="M1064,-52.4C1039.3,-52.9 1008.2,-52.9 980.5,-50.8"/><path d="M978.5,-50.8C953.8,-49 926.2,-48.8 903.5,-49.1"/><polygon fill="#8a93a5" points="903.5,-46.7 896.5,-49.3 903.6,-51.6"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="941.2" y="-22.6" width="76.6" height="21.6"/><text x="979.5" y="-7.1">read_page</text></a><path d="M943,-23.1C929.2,-27.4 913.4,-32.5 899,-37.1"/><polygon fill="#8a93a5" points="898.5,-34.6 892.6,-39.1 900,-39.3"/><path d="M1190.1,-50.8C1180.9,-50.8 1171.7,-50.8 1162.9,-50.8"/><polygon fill="#8a93a5" points="1163.2,-48.4 1156.2,-50.8 1163.2,-53.3"/><a href="../proc/read_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1074.4" y="-21.6" width="70" height="21.6"/><text x="1109.4" y="-6.1">read_tree</text></a><path d="M1074.1,-11.1C1059.4,-11.2 1041.9,-11.3 1026.1,-11.4"/><polygon fill="#8a93a5" points="1026.5,-9 1019.5,-11.5 1026.6,-13.9"/><path d="M1221.6,-10.8C1200.4,-10.8 1174.4,-10.8 1152.9,-10.8"/><polygon fill="#8a93a5" points="1153.1,-8.4 1146.1,-10.8 1153.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> bracket_end(text, i)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: i                <span class="d">!! where it opens</span>
+    <span class="k">integer</span> :: k, depth
+
+    bracket_end = <span class="n">0</span>
+    depth = <span class="n">0</span>
+    k = i
+    <span class="k">do</span> <span class="k">while</span> (k &lt;= <span class="k">len</span>(text))
+        <span class="k">select</span> <span class="k">case</span> (text(k:k))
+        <span class="k">case</span> (<span class="s">'\'</span>)
+            k = k + <span class="n">1</span>
+        <span class="k">case</span> (<span class="s">'['</span>)
+            depth = depth + <span class="n">1</span>
+        <span class="k">case</span> (<span class="s">']'</span>)
+            depth = depth - <span class="n">1</span>
+            <span class="k">if</span> (depth == <span class="n">0</span>) <span class="k">then</span>
+                bracket_end = k
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">select</span>
+        k = k + <span class="n">1</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">function</span> bracket_end</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>page_links &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>page_links<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> page_links(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">parent</span>, <span class="intent attr-in" title="intent(in)">prefix</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write the pages below page <code>parent</code>, or the top one if that is 0, as a tree of links.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-parent"><td class="name">parent</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the page</p></td></tr>
+<tr id="variable-prefix"><td class="name">prefix</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>from the current page to the root of the site</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/html_escape.html">html_escape</a></li><li><a href="../proc/page_links.html">page_links</a></li></ul>
+<div class="graph"><svg width="299pt" height="49pt"
+ viewBox="0 0 299 49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 44.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/page_links.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="76.6" height="21.6"/><text x="38.3" y="-25.1">page_links</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="236.7" y="-40.6" width="54" height="21.6"/><text x="263.7" y="-25.1">add</text></a><path d="M77.3,-30.4C88.6,-30.6 101.1,-30.7 112.6,-30.8 151.7,-31.1 161.5,-31.1 200.7,-30.8 209.6,-30.7 219.2,-30.6 228.1,-30.5"/><polygon fill="#8a93a5" points="227.9,-32.9 234.9,-30.3 227.9,-28"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="112.6" y="-21.6" width="88.1" height="21.6"/><text x="156.6" y="-6.1">html_escape</text></a><path d="M77.4,-23.6C85.9,-22.2 95.1,-20.7 104,-19.2"/><polygon fill="#8a93a5" points="104.2,-21.7 110.7,-18.1 103.4,-16.8"/><path d="M200.9,-18.6C209.9,-20.3 219.3,-22 227.9,-23.5"/><polygon fill="#8a93a5" points="227.5,-25.9 234.8,-24.8 228.3,-21.1"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/static_page.html">static_page</a></li></ul>
+<div class="graph"><svg width="397pt" height="30pt"
+ viewBox="0 0 397 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/page_links.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="76.6" height="21.6"/><text x="38.3" y="-6.1">page_links</text></a><a href="../proc/static_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="112.6" y="-21.6" width="80.9" height="21.6"/><text x="153" y="-6.1">static_page</text></a><path d="M112.3,-10.8C103.7,-10.8 94.6,-10.8 85.8,-10.8"/><polygon fill="#8a93a5" points="86,-8.4 79,-10.8 86,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="229.4" y="-21.6" width="69.3" height="21.6"/><text x="264.1" y="-6.1">write_site</text></a><path d="M229.2,-10.8C220.6,-10.8 211.1,-10.8 202,-10.8"/><polygon fill="#8a93a5" points="202.1,-8.4 195.1,-10.8 202.1,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="334.8" y="-21.6" width="54" height="21.6"/><text x="361.8" y="-6.1">run</text></a><path d="M334.4,-10.8C326,-10.8 316.5,-10.8 307.3,-10.8"/><polygon fill="#8a93a5" points="307.5,-8.4 300.5,-10.8 307.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> page_links(site, parent, prefix, b)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site        <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent           <span class="d">!! the page</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: prefix  <span class="d">!! from the current page to the root of the site</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(site%pages)
+        <span class="k">if</span> (site%pages(k)%parent /= parent) <span class="k">cycle</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;li&gt;&lt;a href="'</span>//prefix//<span class="s">'page/'</span>//site%pages(k)%path//<span class="s">'"&gt;'</span>)
+        <span class="k">call</span> html_escape(site%pages(k)%title, b, <span class="k">.false.</span>)
+        <span class="k">call</span> add(b, <span class="s">'&lt;/a&gt;'</span>)
+        <span class="k">if</span> (<span class="k">any</span>(site%pages%parent == k)) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;ul&gt;'</span>)
+            <span class="k">call</span> page_links(site, k, prefix, b)
+            <span class="k">call</span> add(b, <span class="s">'&lt;/ul&gt;'</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;/li&gt;'</span>)
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> page_links</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

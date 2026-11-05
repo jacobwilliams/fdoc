@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_text &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">subroutine</span>set_text<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> set_text(<span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-in" title="intent(in)">key</span>, <span class="intent attr-in" title="intent(in)">value</span>)</div>
+<div class="doc">
+<p>Set a text or path option.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-key"><td class="name">key</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the option</p></td></tr>
+<tr id="variable-value"><td class="name">value</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>its value</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/set_option.html">set_option</a></li></ul>
+<div class="graph"><svg width="693pt" height="128pt"
+ viewBox="0 0 693 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 123.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/set_text.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-60.6" width="59.9" height="21.6"/><text x="30" y="-45.1">set_text</text></a><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="95.9" y="-60.6" width="74.4" height="21.6"/><text x="133.1" y="-45.1">set_option</text></a><path d="M95.6,-49.8C87,-49.8 77.9,-49.8 69.2,-49.8"/><polygon fill="#8a93a5" points="69.3,-47.4 62.3,-49.8 69.3,-52.3"/><a href="../proc/apply_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="344.2" y="-119.6" width="78" height="21.6"/><text x="383.2" y="-104.1">apply_args</text></a><path d="M351.4,-97.5C324.5,-88.2 284.1,-75.6 247.8,-69.8"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="494.7" y="-70.6" width="85.2" height="21.6"/><text x="537.3" y="-55.1">load_project</text></a><path d="M494.4,-66.3C438,-73.8 334.6,-83.6 247.8,-69.8"/><path d="M245.8,-69.8C223.7,-66.1 199.3,-61.8 179,-58.1"/><polygon fill="#8a93a5" points="179.6,-55.7 172.3,-56.8 178.7,-60.5"/><a href="../proc/load_fpm_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="323.2" y="-41.6" width="119.9" height="21.6"/><text x="383.2" y="-26.1">load_fpm_settings</text></a><path d="M494.3,-51.8C481,-49.3 466,-46.4 451.4,-43.6"/><polygon fill="#8a93a5" points="452.2,-41.3 444.8,-42.4 451.3,-46.1"/><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="206.3" y="-41.6" width="80.9" height="21.6"/><text x="246.8" y="-26.1">apply_table</text></a><path d="M206.1,-37.6C197.3,-39.1 187.8,-40.7 178.8,-42.2"/><polygon fill="#8a93a5" points="178.7,-39.7 172.2,-43.3 179.5,-44.6"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="631.4" y="-70.6" width="54" height="21.6"/><text x="658.4" y="-55.1">run</text></a><path d="M631.1,-69.4C620.2,-73.1 607.3,-77.1 595.4,-79.8 539.4,-92.6 473.7,-100.5 430.6,-104.8"/><polygon fill="#8a93a5" points="430.5,-102.3 423.8,-105.5 431,-107.2"/><path d="M631,-59.8C618.5,-59.8 603.1,-59.8 588.6,-59.8"/><polygon fill="#8a93a5" points="588.6,-57.4 581.6,-59.8 588.6,-62.3"/><a href="../proc/apply_toml_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="479.1" y="-21.6" width="116.3" height="21.6"/><text x="537.3" y="-6.1">apply_toml_string</text></a><path d="M631,-48.9C613.9,-41.9 591.6,-32.7 573.1,-25.1"/><polygon fill="#8a93a5" points="574.3,-23 566.9,-22.6 572.4,-27.5"/><path d="M322.8,-30.8C313.8,-30.8 304.5,-30.8 295.7,-30.8"/><polygon fill="#8a93a5" points="296,-28.4 289,-30.8 296,-33.3"/><path d="M479,-6.8C436,-4.8 375.7,-4 323.2,-10.8 312.6,-12.2 301.4,-14.6 290.9,-17.3"/><polygon fill="#8a93a5" points="290.3,-14.9 284.2,-19.1 291.6,-19.7"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> set_text(s, key, <span class="k">value</span>)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s    <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the option</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">value</span>   <span class="d">!! its value</span>
+
+    <span class="k">select</span> <span class="k">case</span> (key)
+    <span class="k">case</span> (<span class="s">'author'</span>); s%author = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'author_description'</span>); s%author_description = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'author_pic'</span>); s%author_pic = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'bitbucket'</span>); s%bitbucket = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'creation_date'</span>); s%creation_date = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'doc_license'</span>); s%doc_license = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'docmark'</span>); s%docmark = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'docmark_alt'</span>); s%docmark_alt = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'email'</span>); s%email = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'encoding'</span>); s%encoding = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'facebook'</span>); s%facebook = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'github'</span>); s%github = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'gitlab'</span>); s%gitlab = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'gitter_sidecar'</span>); s%gitter_sidecar = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'google_plus'</span>); s%google_plus = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'license'</span>); s%license = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'linkedin'</span>); s%linkedin = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'predocmark'</span>); s%predocmark = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'predocmark_alt'</span>); s%predocmark_alt = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'preprocessor'</span>); s%preprocessor = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'privacy_policy_url'</span>); s%privacy_policy_url = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'project'</span>); s%project = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'project_bitbucket'</span>); s%project_bitbucket = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'project_download'</span>); s%project_download = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'project_github'</span>); s%project_github = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'project_gitlab'</span>); s%project_gitlab = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'project_sourceforge'</span>); s%project_sourceforge = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'project_url'</span>); s%project_url = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'project_website'</span>); s%project_website = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'revision'</span>); s%revision = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'sort'</span>); s%sort = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'summary'</span>); s%summary = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'terms_of_service_url'</span>); s%terms_of_service_url = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'twitter'</span>); s%twitter = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'version'</span>); s%version = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'website'</span>); s%website = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'year'</span>); s%year = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'css'</span>); s%css = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'favicon'</span>); s%favicon = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'logo'</span>); s%logo = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'graph_dir'</span>); s%graph_dir = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'mathjax_config'</span>); s%mathjax_config = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'md_base_dir'</span>); s%md_base_dir = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'media_dir'</span>); s%media_dir = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'output_dir'</span>); s%output_dir = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'page_dir'</span>); s%page_dir = <span class="k">value</span>
+    <span class="k">end</span> <span class="k">select</span>
+<span class="k">end</span> <span class="k">subroutine</span> set_text</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

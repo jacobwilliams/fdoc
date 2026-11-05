@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stash_html &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>stash_html<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> stash_html(<span class="intent attr-inout" title="intent(inout)">t</span>, <span class="intent attr-in" title="intent(in)">html</span>, <span class="intent attr-out" title="intent(out)">placeholder</span>)</div>
+<div class="doc">
+<p>Keep <code>html</code> aside, returning the placeholder for it.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/tree_t.html">tree_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the conversion</p></td></tr>
+<tr id="variable-html"><td class="name">html</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+<tr id="variable-placeholder"><td class="name">placeholder</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>what stands for it</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push.html">push</a></li><li><a href="../proc/int_text.html">int_text</a></li></ul>
+<div class="graph"><svg width="178pt" height="70pt"
+ viewBox="0 0 178 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/stash_html.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="77.3" height="21.6"/><text x="38.6" y="-26.1">stash_html</text></a><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="114.4" y="-61.6" width="54" height="21.6"/><text x="141.4" y="-46.1">push</text></a><path d="M78,-38.4C87.1,-40.2 96.8,-42.1 105.7,-43.9"/><polygon fill="#8a93a5" points="105.2,-46.3 112.5,-45.3 106.1,-41.5"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="113.3" y="-21.6" width="56.3" height="21.6"/><text x="141.4" y="-6.1">int_text</text></a><path d="M78,-23.2C86.7,-21.5 95.9,-19.6 104.5,-17.9"/><polygon fill="#8a93a5" points="104.9,-20.3 111.3,-16.6 104,-15.5"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/stash_fenced_code.html">stash_fenced_code</a></li><li><a href="../proc/stash_html_blocks.html">stash_html_blocks</a></li></ul>
+<div class="graph"><svg width="1055pt" height="129pt"
+ viewBox="0 0 1055 129" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 124.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/stash_html.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-100.6" width="77.3" height="21.6"/><text x="38.6" y="-85.1">stash_html</text></a><a href="../proc/stash_fenced_code.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="113.3" y="-80.6" width="127.2" height="21.6"/><text x="176.8" y="-65.1">stash_fenced_code</text></a><path d="M112.9,-79C104,-80.3 95,-81.7 86.5,-82.9"/><polygon fill="#8a93a5" points="86.2,-80.5 79.7,-83.9 87,-85.3"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="116.2" y="-120.6" width="121.3" height="21.6"/><text x="176.8" y="-105.1">stash_html_blocks</text></a><path d="M115.7,-101C105.8,-99.5 95.6,-98 86.1,-96.6"/><polygon fill="#8a93a5" points="86.7,-94.2 79.4,-95.6 86,-99.1"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="276.4" y="-80.6" width="124.2" height="21.6"/><text x="338.5" y="-65.1">markdown_to_html</text></a><path d="M276.2,-69.8C267.4,-69.8 258.1,-69.8 249.1,-69.8"/><polygon fill="#8a93a5" points="249.3,-67.4 242.3,-69.8 249.3,-72.3"/><path d="M284.5,-83.1C267.1,-87.4 247.8,-92.3 230.5,-96.6"/><polygon fill="#8a93a5" points="285,-85.5 291.2,-81.4 283.8,-80.7"/><polygon fill="#8a93a5" points="230.3,-94.1 224.2,-98.2 231.5,-98.9"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="120.5" y="-40.6" width="112.7" height="21.6"/><text x="176.8" y="-25.1">render_footnotes</text></a><path d="M284.5,-56.5C267.1,-52.2 247.8,-47.3 230.5,-43"/><polygon fill="#8a93a5" points="283.8,-58.9 291.2,-58.2 285,-54.1"/><polygon fill="#8a93a5" points="231.5,-40.7 224.2,-41.4 230.3,-45.5"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="552.8" y="-100.6" width="97.5" height="21.6"/><text x="601.5" y="-85.1">markdown_list</text></a><path d="M552.4,-86.1C512.2,-83 454.3,-78.6 409.1,-75.1"/><polygon fill="#8a93a5" points="409.5,-72.7 402.3,-74.6 409.1,-77.6"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="436.6" y="-61.6" width="80.2" height="21.6"/><text x="476.7" y="-46.1">render_text</text></a><path d="M436.3,-56.3C427.8,-57.5 418.5,-58.8 409.1,-60.1"/><polygon fill="#8a93a5" points="409,-57.6 402.4,-61 409.7,-62.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="993.1" y="-61.6" width="54" height="21.6"/><text x="1020.1" y="-46.1">run</text></a><path d="M730.4,-89.8C707.1,-88.1 681.2,-87.7 658.9,-88"/><polygon fill="#8a93a5" points="659.1,-85.5 652.1,-88.1 659.1,-90.4"/><path d="M992.9,-60.7C981.9,-64.5 969,-68.4 957.1,-70.8 858.8,-90.5 832.3,-97.3 732.4,-89.8"/><path d="M730.4,-89.8C671.1,-86.9 661.8,-55.2 602.5,-50.8"/><a href="../proc/render_documentation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="812.6" y="-61.6" width="144.5" height="21.6"/><text x="884.8" y="-46.1">render_documentation</text></a><path d="M992.7,-50.8C984.7,-50.8 975.4,-50.8 965.6,-50.8"/><polygon fill="#8a93a5" points="965.9,-48.4 958.9,-50.8 965.9,-53.3"/><a href="../proc/load_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="844" y="-21.6" width="81.6" height="21.6"/><text x="884.8" y="-6.1">load_pages</text></a><path d="M992.6,-42C981.6,-38.4 968.8,-34.3 957.1,-30.8 949.5,-28.5 941.5,-26.2 933.6,-23.9"/><polygon fill="#8a93a5" points="934.7,-21.7 927.3,-22.2 933.4,-26.4"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="686.3" y="-61.6" width="90.3" height="21.6"/><text x="731.4" y="-46.1">render_entity</text></a><path d="M686,-52.4C661.4,-52.9 630.2,-52.9 602.5,-50.8"/><path d="M600.5,-50.8C575.8,-49 548.3,-48.8 525.5,-49.1"/><polygon fill="#8a93a5" points="525.5,-46.7 518.6,-49.3 525.6,-51.6"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="563.3" y="-22.6" width="76.6" height="21.6"/><text x="601.5" y="-7.1">read_page</text></a><path d="M565,-23.1C551.3,-27.4 535.4,-32.5 521,-37.1"/><polygon fill="#8a93a5" points="520.5,-34.6 514.6,-39.1 522,-39.3"/><path d="M812.1,-50.8C803,-50.8 793.7,-50.8 785,-50.8"/><polygon fill="#8a93a5" points="785.2,-48.4 778.2,-50.8 785.2,-53.3"/><a href="../proc/read_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="696.4" y="-21.6" width="70" height="21.6"/><text x="731.4" y="-6.1">read_tree</text></a><path d="M696.2,-11.1C681.4,-11.2 664,-11.3 648.2,-11.4"/><polygon fill="#8a93a5" points="648.6,-9 641.6,-11.5 648.6,-13.9"/><path d="M843.6,-10.8C822.5,-10.8 796.5,-10.8 774.9,-10.8"/><polygon fill="#8a93a5" points="775.1,-8.4 768.1,-10.8 775.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> stash_html(t, html, placeholder)
+    <span class="k">type</span>(tree_t), <span class="k">intent</span>(inout) :: t                            <span class="d">!! the conversion</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: html                        <span class="d">!! the HTML</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: placeholder   <span class="d">!! what stands for it</span>
+    <span class="k">character</span>(<span class="k">len</span>=<span class="n">12</span>) :: number
+
+    <span class="k">call</span> push(t%stash, html)
+    number = int_text(<span class="k">size</span>(t%stash))
+    placeholder = STX//<span class="k">trim</span>(number)//ETX
+<span class="k">end</span> <span class="k">subroutine</span> stash_html</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

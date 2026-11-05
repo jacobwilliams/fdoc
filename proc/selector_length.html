@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>selector_length &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_decl.f90.html">fdoc_decl.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_decl.html">fdoc_decl</a></div>
+<h1><span class="kind">function</span>selector_length<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> selector_length(<span class="intent attr-in" title="intent(in)">text</span>)</div>
+<div class="doc">
+<p>The length of the kind selector at the start of <code>text</code>, which is <code>(...)</code>, <code>*n</code> or <code>*(...)</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-selector_length"><td class="name">selector_length</td><td class="type">integer</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/closing_paren.html">closing_paren</a></li></ul>
+<div class="graph"><svg width="242pt" height="30pt"
+ viewBox="0 0 242 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/selector_length.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="102.6" height="21.6"/><text x="51.3" y="-6.1">selector_length</text></a><a href="../proc/closing_paren.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="138.6" y="-21.6" width="95.3" height="21.6"/><text x="186.2" y="-6.1">closing_paren</text></a><path d="M103.3,-10.8C112.1,-10.8 121.2,-10.8 130.1,-10.8"/><polygon fill="#8a93a5" points="130,-13.3 137,-10.8 130,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/parse_type.html">parse_type</a></li></ul>
+<div class="graph"><svg width="891pt" height="70pt"
+ viewBox="0 0 891 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/selector_length.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="102.6" height="21.6"/><text x="51.3" y="-26.1">selector_length</text></a><a href="../proc/parse_type.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="138.6" y="-41.6" width="78.7" height="21.6"/><text x="177.9" y="-26.1">parse_type</text></a><path d="M138.2,-30.8C129.8,-30.8 120.8,-30.8 111.9,-30.8"/><polygon fill="#8a93a5" points="111.9,-28.4 104.9,-30.8 111.9,-33.3"/><a href="../proc/open_procedure.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="254.4" y="-61.6" width="109.1" height="21.6"/><text x="308.9" y="-46.1">open_procedure</text></a><path d="M254,-42.4C244.7,-41 235.1,-39.5 226,-38.1"/><polygon fill="#8a93a5" points="226.5,-35.7 219.3,-37.1 225.8,-40.5"/><a href="../proc/read_declaration.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="253.3" y="-21.6" width="111.2" height="21.6"/><text x="308.9" y="-6.1">read_declaration</text></a><path d="M252.8,-19.3C243.8,-20.7 234.5,-22.2 225.7,-23.5"/><polygon fill="#8a93a5" points="225.5,-21.1 219,-24.6 226.2,-25.9"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="420.4" y="-61.6" width="71.5" height="21.6"/><text x="456.2" y="-46.1">open_unit</text></a><path d="M420,-50.8C405.6,-50.8 388.6,-50.8 372.2,-50.8"/><polygon fill="#8a93a5" points="372.3,-48.4 365.3,-50.8 372.3,-53.3"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="400.5" y="-21.6" width="111.2" height="21.6"/><text x="456.2" y="-6.1">parse_statement</text></a><path d="M400.2,-10.8C391.5,-10.8 382.3,-10.8 373.4,-10.8"/><polygon fill="#8a93a5" points="373.4,-8.4 366.4,-10.8 373.4,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="547.8" y="-41.6" width="70.8" height="21.6"/><text x="583.2" y="-26.1">parse_file</text></a><path d="M547.3,-36.4C532.8,-38.7 515.8,-41.4 500.5,-43.9"/><polygon fill="#8a93a5" points="500.2,-41.4 493.7,-45 501,-46.3"/><path d="M547.3,-25.2C538.8,-23.9 529.5,-22.4 520.1,-20.9"/><polygon fill="#8a93a5" points="520.7,-18.5 513.4,-19.8 519.9,-23.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="654.5" y="-41.6" width="138" height="21.6"/><text x="723.5" y="-26.1">load_project_sources</text></a><path d="M654.1,-30.8C645,-30.8 635.7,-30.8 627.2,-30.8"/><polygon fill="#8a93a5" points="627.3,-28.4 620.3,-30.8 627.3,-33.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="828.5" y="-41.6" width="54" height="21.6"/><text x="855.5" y="-26.1">run</text></a><path d="M828.2,-30.8C820.1,-30.8 810.7,-30.8 801,-30.8"/><polygon fill="#8a93a5" points="801.3,-28.4 794.3,-30.8 801.3,-33.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> selector_length(text)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">integer</span> :: k
+
+    selector_length = <span class="n">0</span>
+    <span class="k">if</span> (<span class="k">len</span>(text) == <span class="n">0</span>) <span class="k">return</span>
+    <span class="k">if</span> (text(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'('</span>) <span class="k">then</span>
+        selector_length = closing_paren(text, <span class="n">1</span>)
+    <span class="k">else</span> <span class="k">if</span> (text(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'*'</span>) <span class="k">then</span>
+        k = <span class="n">1</span> + <span class="k">verify</span>(text(<span class="n">2</span>:)//<span class="s">'x'</span>, <span class="s">' '</span>)
+        <span class="k">if</span> (k &gt; <span class="k">len</span>(text)) <span class="k">return</span>
+        <span class="k">if</span> (text(k:k) == <span class="s">'('</span>) <span class="k">then</span>
+            selector_length = closing_paren(text, k)
+        <span class="k">else</span>
+            selector_length = k + <span class="k">verify</span>(text(k:)//<span class="s">'x'</span>, <span class="s">'0123456789'</span>) - <span class="n">2</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">function</span> selector_length</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

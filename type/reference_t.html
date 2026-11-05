@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>reference_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-id"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>id</a></li><li><a href="#variable-title"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>title</a></li><li><a href="#variable-url"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>url</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">type</span>reference_t<span class="attr attr-private">private</span></h1>
+<div class="doc">
+<p>A link reference definition.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-id"><td class="name">id</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>its name, normalized</p></td></tr>
+<tr id="variable-title"><td class="name">title</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the title, or <code>''</code></p></td></tr>
+<tr id="variable-url"><td class="name">url</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the address</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Component of (1)</h3>
+<ul class="chips kinds"><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/tree_t.html">tree_t</a></li></ul>
+<h2 id="inherited-by">Inherited by</h2>
+<div class="graph"><svg width="196pt" height="32pt"
+ viewBox="0 0 196 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 28)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/reference_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="80.2" height="21.6"/><text x="40.1" y="-6.1">reference_t</text></a><a href="../type/tree_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="134.5" y="-21.6" width="54" height="21.6"/><text x="161.5" y="-6.1">tree_t</text></a><path stroke-dasharray="5,2" d="M134.3,-10.8C121.1,-10.8 104.6,-10.8 89.3,-10.8"/><polygon fill="#8a93a5" points="89.4,-8.4 82.4,-10.8 89.4,-13.3"/><text x="107.3" y="-13.4" font-size="11" fill="#8a93a5">refs</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: reference_t
+    <span class="d">!! A link reference definition.</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: id     <span class="d">!! its name, normalized</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: url    <span class="d">!! the address</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: title  <span class="d">!! the title, or `''`</span>
+<span class="k">end</span> <span class="k">type</span> reference_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>attach_arguments &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">subroutine</span>attach_arguments<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> attach_arguments(<span class="intent attr-inout" title="intent(inout)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>)</div>
+<div class="doc">
+<p>Connect the dummy arguments and result of a procedure with their declarations.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-list"><td class="name">list</td><td class="type">type(<a href="../type/entity_list_t.html">entity_list_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the entities</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the procedure</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/implicit_variable.html">implicit_variable</a></li><li><a href="../proc/doxygen_params.html">doxygen_params</a></li></ul>
+<div class="graph"><svg width="551pt" height="268pt"
+ viewBox="0 0 551 268" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 263.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/attach_arguments.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-199.6" width="118.5" height="21.6"/><text x="59.2" y="-184.1">attach_arguments</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="337.4" y="-219.6" width="72.9" height="21.6"/><text x="373.9" y="-204.1">lowercase</text></a><path d="M119.4,-192.6C180.4,-196.5 274.1,-202.5 328.9,-206"/><polygon fill="#8a93a5" points="328.7,-208.4 335.8,-206.4 329,-203.5"/><a href="../proc/implicit_variable.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="158.1" y="-238.6" width="106.9" height="21.6"/><text x="211.5" y="-223.1">implicit_variable</text></a><path d="M105.3,-200.5C122.3,-204.9 141.7,-209.9 159.1,-214.5"/><polygon fill="#8a93a5" points="158.2,-216.7 165.5,-216.1 159.4,-212"/><a href="../proc/doxygen_params.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="154.5" y="-141.6" width="114.1" height="21.6"/><text x="211.5" y="-126.1">doxygen_params</text></a><path d="M90.6,-177.1C114.7,-167.8 148.3,-154.8 173.8,-145"/><polygon fill="#8a93a5" points="174.4,-147.4 180,-142.6 172.6,-142.8"/><path d="M265,-221.6C285.7,-219.1 309.1,-216.4 328.8,-214"/><polygon fill="#8a93a5" points="328.8,-216.5 335.5,-213.2 328.3,-211.6"/><a href="../proc/list_add.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="none" rx="7.2" x="304.6" y="-259.6" width="138.6" height="21.6"/><text x="413.6" y="-244.1" fill="white">list_add</text></a><a href="../type/entity_list_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M311.8,-259.6H384V-238H311.8A7.2,7.2 0 0 1 304.6,-245.2V-252.4A7.2,7.2 0 0 1 311.8,-259.6Z"/><text x="344.3" y="-244.1" fill="white">entity_list_t</text></a><path d="M265,-234.7C274.9,-236 285.4,-237.3 295.9,-238.7"/><polygon fill="#8a93a5" points="295.5,-241.1 302.7,-239.6 296.1,-236.3"/><path d="M230,-142.1C248.2,-153.5 277.7,-171.2 304.6,-183.8 312.9,-187.7 322,-191.4 330.8,-194.7"/><polygon fill="#8a93a5" points="329.9,-197 337.3,-197.1 331.6,-192.4"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="346.9" y="-101.6" width="54" height="21.6"/><text x="373.9" y="-86.1">strip</text></a><path d="M257.6,-119.6C283.3,-113.1 315,-105.2 338.6,-99.3"/><polygon fill="#8a93a5" points="339,-101.8 345.2,-97.7 337.8,-97"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="335.6" y="-61.6" width="76.5" height="21.6"/><text x="373.9" y="-46.1">starts_with</text></a><path d="M226.7,-119.6C244.2,-106.4 275.1,-84.4 304.6,-70.8 311.8,-67.5 319.8,-64.5 327.6,-62"/><polygon fill="#8a93a5" points="327.9,-64.5 333.9,-60.1 326.5,-59.8"/><a href="../proc/split_words.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="334.2" y="-21.6" width="79.4" height="21.6"/><text x="373.9" y="-6.1">split_words</text></a><path d="M219.7,-119.7C233.6,-99 266.1,-54.7 304.6,-30.8 311.1,-26.8 318.4,-23.5 325.8,-20.9"/><polygon fill="#8a93a5" points="326.4,-23.3 332.3,-18.8 324.9,-18.6"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="484" y="-101.6" width="54" height="21.6"/><text x="511" y="-86.1">push</text></a><path d="M244,-142C289.5,-156.4 375.8,-176.6 443.2,-150.8 465.3,-142.3 484.7,-122.8 496.8,-108.3"/><polygon fill="#8a93a5" points="498.4,-110.3 500.9,-103.3 494.6,-107.2"/><a href="../proc/join.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="346.9" y="-141.6" width="54" height="21.6"/><text x="373.9" y="-126.1">join</text></a><path d="M269.1,-130.8C292.1,-130.8 318,-130.8 338.2,-130.8"/><polygon fill="#8a93a5" points="337.9,-133.3 344.9,-130.8 337.9,-128.4"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="479.2" y="-259.6" width="63.5" height="21.6"/><text x="511" y="-244.1">push_int</text></a><path d="M443.6,-248.8C452.9,-248.8 462.2,-248.8 470.7,-248.8"/><polygon fill="#8a93a5" points="470.5,-251.3 477.5,-248.8 470.5,-246.4"/><path d="M414.1,-19C423.9,-21.9 434.3,-25.8 443.2,-30.8 463.4,-42 482.5,-60.3 495.1,-73.7"/><polygon fill="#8a93a5" points="493.2,-75.2 499.7,-78.8 496.8,-71.9"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/close_unit.html">close_unit</a></li></ul>
+<div class="graph"><svg width="606pt" height="30pt"
+ viewBox="0 0 606 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/attach_arguments.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="118.5" height="21.6"/><text x="59.2" y="-6.1">attach_arguments</text></a><a href="../proc/close_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="154.5" y="-21.6" width="72.9" height="21.6"/><text x="190.9" y="-6.1">close_unit</text></a><path d="M154.1,-10.8C145.9,-10.8 136.8,-10.8 127.7,-10.8"/><polygon fill="#8a93a5" points="127.8,-8.4 120.8,-10.8 127.8,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="263.4" y="-21.6" width="70.8" height="21.6"/><text x="298.8" y="-6.1">parse_file</text></a><path d="M263.1,-10.8C254.5,-10.8 245.2,-10.8 236.2,-10.8"/><polygon fill="#8a93a5" points="236.3,-8.4 229.3,-10.8 236.3,-13.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="370.2" y="-21.6" width="138" height="21.6"/><text x="439.2" y="-6.1">load_project_sources</text></a><path d="M369.8,-10.8C360.6,-10.8 351.4,-10.8 342.8,-10.8"/><polygon fill="#8a93a5" points="343,-8.4 336,-10.8 343,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="544.1" y="-21.6" width="54" height="21.6"/><text x="571.1" y="-6.1">run</text></a><path d="M543.8,-10.8C535.7,-10.8 526.3,-10.8 516.6,-10.8"/><polygon fill="#8a93a5" points="516.9,-8.4 509.9,-10.8 516.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> attach_arguments(list, id)
+    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(inout) :: list  <span class="d">!! the entities</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id                   <span class="d">!! the procedure</span>
+    <span class="k">integer</span> :: a, c, child, var
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: wanted
+
+    <span class="k">associate</span> (p =&gt; list%box(id)%e)
+        <span class="k">if</span> (p%<span class="k">kind</span> == E_FUNCTION <span class="k">.and.</span> p%<span class="k">result</span> == <span class="n">0</span>) <span class="k">then</span>
+            wanted = lowercase(p%more%result_name)
+            <span class="k">do</span> c = <span class="n">1</span>, <span class="k">size</span>(p%children)
+                child = p%children(c)
+                <span class="k">if</span> (list%box(child)%e%<span class="k">kind</span> /= E_VARIABLE) <span class="k">cycle</span>
+                <span class="k">if</span> (lowercase(list%box(child)%e%name) == wanted) <span class="k">then</span>
+                    p%<span class="k">result</span> = child
+                    list%box(child)%e%var_role = VAR_RESULT
+                    <span class="k">exit</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">if</span> (p%<span class="k">result</span> == <span class="n">0</span>) p%<span class="k">result</span> = implicit_variable(list, id, p%more%result_name, VAR_RESULT)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> doxygen_params(list, id)
+        <span class="k">do</span> a = <span class="n">1</span>, <span class="k">size</span>(p%more%args)
+            wanted = lowercase(p%more%args(a)%s)
+            <span class="k">do</span> c = <span class="n">1</span>, <span class="k">size</span>(p%children)
+                child = p%children(c)
+                <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(list%box(child)%e%name)) <span class="k">cycle</span>
+                <span class="k">if</span> (list%box(child)%e%<span class="k">kind</span> == E_VARIABLE) <span class="k">then</span>
+                    <span class="k">if</span> (list%box(child)%e%var_role == VAR_PLAIN <span class="k">.and.</span> lowercase(list%box(child)%e%name) == wanted) <span class="k">then</span>
+                        p%more%arg_ids(a) = child
+                        list%box(child)%e%var_role = VAR_ARGUMENT
+                        <span class="k">exit</span>
+                    <span class="k">end</span> <span class="k">if</span>
+                <span class="k">else</span> <span class="k">if</span> (list%box(child)%e%iface == IFACE_EXPLICIT <span class="k">.and.</span> lowercase(list%box(child)%e%name) == wanted) <span class="k">then</span>
+                    p%more%arg_ids(a) = child
+                    <span class="k">exit</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">if</span> (p%more%arg_ids(a) == <span class="n">0</span>) <span class="k">then</span>
+                var = implicit_variable(list, id, p%more%args(a)%s, VAR_ARGUMENT)
+                p%more%arg_ids(a) = var
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">subroutine</span> attach_arguments</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

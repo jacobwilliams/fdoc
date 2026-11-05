@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>append &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>append<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> append(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">node</span>)</div>
+<div class="doc">
+<p>Put <code>node</code> at the end of the block being read.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-node"><td class="name">node</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the node</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/control_directive.html">control_directive</a></li><li><a href="../proc/flush_text.html">flush_text</a></li><li><a href="../proc/handle_directive.html">handle_directive</a></li><li><a href="../proc/open_block.html">open_block</a></li><li><a href="../proc/set_directive.html">set_directive</a></li></ul>
+<div class="graph"><svg width="1251pt" height="301pt"
+ viewBox="0 0 1251 301" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 297.3)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/append.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="57.8" height="21.6"/><text x="28.9" y="-86.1">append</text></a><a href="../proc/open_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="362.2" y="-218.6" width="80.9" height="21.6"/><text x="402.7" y="-203.1">open_block</text></a><path d="M362,-211.3C329,-214.4 280.7,-219.7 238.9,-226.8 198.7,-233.6 185.9,-264.9 149.3,-246.8"/><path d="M147.3,-246.8C89.6,-217.1 52.5,-144.4 37.5,-109.8"/><polygon fill="#8a93a5" points="39.9,-109.1 34.9,-103.6 35.3,-111"/><a href="../proc/flush_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="113.3" y="-61.6" width="70" height="21.6"/><text x="148.3" y="-46.1">flush_text</text></a><path d="M114.3,-62C99.4,-67.1 81.7,-73.1 66.4,-78.4"/><polygon fill="#8a93a5" points="65.9,-75.9 60.1,-80.5 67.5,-80.6"/><a href="../proc/handle_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="93.8" y="-101.6" width="109.1" height="21.6"/><text x="148.3" y="-86.1">handle_directive</text></a><path d="M93.4,-90.8C84.5,-90.8 75.4,-90.8 67,-90.8"/><polygon fill="#8a93a5" points="67,-88.4 60,-90.8 67,-93.3"/><a href="../proc/control_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="626.4" y="-179.6" width="109.1" height="21.6"/><text x="680.9" y="-164.1">control_directive</text></a><path d="M203.2,-83.8C288,-74.8 456.7,-65.2 590.4,-108.8 617.8,-117.8 644.8,-137.8 661.8,-152.2"/><polygon fill="#8a93a5" points="660,-153.9 666.9,-156.6 663.2,-150.2"/><path d="M401.7,-285.8C288.4,-279.2 250.2,-298.7 149.3,-246.8"/><path d="M634.6,-180C620.5,-183.2 604.8,-186.5 590.4,-188.8 543.6,-196.4 489.7,-201.5 451.9,-204.5"/><polygon fill="#8a93a5" points="451.9,-202 445.1,-205 452.2,-206.9"/><a href="../proc/set_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="238.9" y="-257.6" width="87.4" height="21.6"/><text x="282.5" y="-242.1">set_directive</text></a><path d="M673.5,-180.1C660.8,-201.3 630.1,-246.8 590.4,-266.8 515.9,-304.3 486.8,-292.5 403.7,-285.8"/><path d="M401.7,-285.8C370.5,-284 336.8,-271.8 313.5,-261.5"/><polygon fill="#8a93a5" points="314.7,-259.4 307.3,-258.7 312.7,-263.8"/><a href="../proc/for_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="492.1" y="-179.6" width="85.2" height="21.6"/><text x="534.7" y="-164.1">for_directive</text></a><path d="M626.2,-168.8C613.1,-168.8 599.1,-168.8 586.1,-168.8"/><polygon fill="#8a93a5" points="586.3,-166.4 579.3,-168.8 586.3,-171.3"/><a href="../proc/def_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="490.7" y="-139.6" width="88.1" height="21.6"/><text x="534.7" y="-124.1">def_directive</text></a><path d="M639.4,-157.6C622.2,-152.8 602,-147.2 584.1,-142.2"/><polygon fill="#8a93a5" points="584.8,-139.9 577.4,-140.4 583.5,-144.6"/><a href="../proc/call_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="490" y="-257.6" width="89.5" height="21.6"/><text x="534.7" y="-242.1">call_directive</text></a><path d="M662.4,-179.9C644.5,-191.1 616,-208.4 590.4,-221.8 583.6,-225.3 576.3,-228.8 569.3,-232.1"/><polygon fill="#8a93a5" points="568.6,-229.8 563.2,-234.9 570.6,-234.2"/><a href="../proc/include_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="479.1" y="-61.6" width="111.2" height="21.6"/><text x="534.7" y="-46.1">include_directive</text></a><path d="M671.6,-157.8C656.9,-138.9 624.7,-100.2 590.4,-75.8 585,-72 579.1,-68.6 573.1,-65.6"/><polygon fill="#8a93a5" points="574.2,-63.4 566.9,-62.6 572.1,-67.9"/><path d="M238.6,-256.1C211.6,-259.8 176.8,-260.4 149.3,-246.8"/><path d="M496.1,-180.1C481.4,-184.5 464.5,-189.6 449.1,-194.2"/><polygon fill="#8a93a5" points="448.7,-191.8 442.7,-196.1 450.1,-196.4"/><path d="M498.1,-140C491.6,-142.6 485,-145.5 479.1,-148.8 457.7,-160.7 435.9,-178.5 421.3,-191.4"/><polygon fill="#8a93a5" points="419.8,-189.4 416.3,-195.9 423.1,-193.1"/><path d="M496.1,-235.5C481.4,-231.1 464.5,-226 449.1,-221.4"/><polygon fill="#8a93a5" points="450.1,-219.2 442.7,-219.5 448.7,-223.8"/><a href="../proc/parse_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="245" y="-61.6" width="75.1" height="21.6"/><text x="282.5" y="-46.1">parse_text</text></a><path d="M244.7,-50.8C228.3,-50.8 208.9,-50.8 191.8,-50.8"/><polygon fill="#8a93a5" points="192.2,-48.4 185.2,-50.8 192.2,-53.3"/><path d="M244.7,-61.9C229.1,-66.7 210.7,-72.2 194.3,-77.2"/><polygon fill="#8a93a5" points="193.9,-74.8 187.9,-79.1 195.3,-79.5"/><a href="../proc/parse_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="367.3" y="-61.6" width="70.8" height="21.6"/><text x="402.7" y="-46.1">parse_file</text></a><path d="M366.9,-50.8C354.9,-50.8 341.4,-50.8 328.7,-50.8"/><polygon fill="#8a93a5" points="329.1,-48.4 322.1,-50.8 329.1,-53.3"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="488.9" y="-21.6" width="91.7" height="21.6"/><text x="534.7" y="-6.1">fypp_process</text></a><path d="M497.2,-22C481.3,-26.9 462.6,-32.7 446.1,-37.8"/><polygon fill="#8a93a5" points="445.6,-35.3 439.6,-39.7 447.1,-40"/><path d="M479,-50.8C468.2,-50.8 457.1,-50.8 446.8,-50.8"/><polygon fill="#8a93a5" points="446.9,-48.4 439.9,-50.8 446.9,-53.3"/><a href="../proc/fypp_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="638.3" y="-21.6" width="85.2" height="21.6"/><text x="680.9" y="-6.1">fypp_source</text></a><path d="M637.8,-10.8C622.6,-10.8 605.2,-10.8 589.2,-10.8"/><polygon fill="#8a93a5" points="589.4,-8.4 582.4,-10.8 589.4,-13.3"/><a href="../proc/load_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="771.4" y="-21.6" width="85.2" height="21.6"/><text x="814" y="-6.1">load_source</text></a><path d="M771.2,-10.8C758.8,-10.8 745,-10.8 732.1,-10.8"/><polygon fill="#8a93a5" points="732.3,-8.4 725.3,-10.8 732.3,-13.3"/><a href="../proc/read_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="892.6" y="-21.6" width="86.7" height="21.6"/><text x="936" y="-6.1">read_source</text></a><path d="M892.4,-10.8C883.7,-10.8 874.5,-10.8 865.6,-10.8"/><polygon fill="#8a93a5" points="865.6,-8.4 858.6,-10.8 865.6,-13.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1015.3" y="-21.6" width="138" height="21.6"/><text x="1084.3" y="-6.1">load_project_sources</text></a><path d="M1014.9,-10.8C1005.8,-10.8 996.7,-10.8 988,-10.8"/><polygon fill="#8a93a5" points="988,-8.4 981,-10.8 988,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1189.3" y="-21.6" width="54" height="21.6"/><text x="1216.3" y="-6.1">run</text></a><path d="M1189,-10.8C1180.9,-10.8 1171.5,-10.8 1161.8,-10.8"/><polygon fill="#8a93a5" points="1162,-8.4 1155,-10.8 1162,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> append(c, node)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c    <span class="d">!! the state</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: node         <span class="d">!! the node</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: grown(:)
+    <span class="k">integer</span> :: parent, body, n
+
+    parent = c%root
+    <span class="k">if</span> (c%depth &gt; <span class="n">0</span>) parent = c%stack(c%depth)
+    body = <span class="k">size</span>(c%nodes(parent)%<span class="k">block</span>%bodies)
+    <span class="k">associate</span> (b =&gt; c%nodes(parent)%<span class="k">block</span>%bodies(body))
+        n = b%n
+        <span class="k">if</span> (n == <span class="k">size</span>(b%ids)) <span class="k">then</span>
+            <span class="k">allocate</span> (grown(<span class="n">2</span>*n))
+            grown(<span class="n">1</span>:n) = b%ids(<span class="n">1</span>:n)
+            <span class="k">call</span> <span class="k">move_alloc</span>(grown, b%ids)
+        <span class="k">end</span> <span class="k">if</span>
+        b%ids(n + <span class="n">1</span>) = node
+        b%n = n + <span class="n">1</span>
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">subroutine</span> append</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

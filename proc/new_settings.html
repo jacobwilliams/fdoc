@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>new_settings &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">function</span>new_settings</h1>
+<div class="sig">type(<a href="../type/settings_t.html">settings_t</a>) <span class="k">function</span> new_settings() <span class="k">result</span>(s)</div>
+<div class="doc">
+<p>The defaults.</p>
+</div>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td class="attributes"><span class="attr attr-private">private</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/to_s.html">to_s</a></li></ul>
+<div class="graph"><svg width="188pt" height="30pt"
+ viewBox="0 0 188 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/new_settings.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="90.3" height="21.6"/><text x="45.1" y="-6.1">new_settings</text></a><a href="https://jacobwilliams.github.io/fformat/proc/to_s.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="126.3" y="-21.6" width="54" height="21.6"/><text x="153.3" y="-6.1">to_s</text></a><path d="M91.2,-10.8C100,-10.8 109.1,-10.8 117.5,-10.8"/><polygon fill="#8a93a5" points="117.4,-13.3 124.4,-10.8 117.4,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/load_project.html">load_project</a></li></ul>
+<div class="graph"><svg width="310pt" height="30pt"
+ viewBox="0 0 310 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/new_settings.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="90.3" height="21.6"/><text x="45.1" y="-6.1">new_settings</text></a><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="126.3" y="-21.6" width="85.2" height="21.6"/><text x="168.9" y="-6.1">load_project</text></a><path d="M126,-10.8C117.4,-10.8 108.3,-10.8 99.5,-10.8"/><polygon fill="#8a93a5" points="99.5,-8.4 92.5,-10.8 99.5,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="247.5" y="-21.6" width="54" height="21.6"/><text x="274.5" y="-6.1">run</text></a><path d="M247.1,-10.8C238.9,-10.8 229.6,-10.8 220.4,-10.8"/><polygon fill="#8a93a5" points="220.5,-8.4 213.5,-10.8 220.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">function</span> new_settings() <span class="k">result</span>(s)
+    <span class="k">type</span>(settings_t) :: s
+    <span class="k">integer</span> :: values(<span class="n">8</span>)
+
+    <span class="k">call</span> <span class="k">date_and_time</span>(values=values)
+    s%creation_date = <span class="s">'%Y-%m-%dT%H:%M:%S.%f%z'</span>
+    s%parallel = omp_get_num_procs()
+    s%docmark = <span class="s">'!'</span>
+    s%docmark_alt = <span class="s">'*'</span>
+    s%predocmark = <span class="s">'&gt;'</span>
+    s%predocmark_alt = <span class="s">'|'</span>
+    s%encoding = <span class="s">'utf-8'</span>
+    s%preprocessor = <span class="s">'pcpp -D__GFORTRAN__ --passthru-comments'</span>
+    s%project = <span class="s">'Fortran Program'</span>
+    s%project_url = <span class="s">''</span>
+    s%sort = <span class="s">'src'</span>
+    s%year = to_s(values(<span class="n">1</span>))
+    s%doc_license = <span class="s">''</span>
+    s%license = <span class="s">''</span>
+    s%md_base_dir = <span class="s">'.'</span>
+    s%output_dir = <span class="s">'./doc'</span>
+    s%display = [string_t(<span class="s">'public'</span>), string_t(<span class="s">'protected'</span>)]
+    s%src_dir = [string_t(<span class="s">'./src'</span>)]
+    s%extensions = [string_t(<span class="s">'f90'</span>), string_t(<span class="s">'f95'</span>), string_t(<span class="s">'f03'</span>), string_t(<span class="s">'f08'</span>), string_t(<span class="s">'f15'</span>)]
+    s%fixed_extensions = [string_t(<span class="s">'f'</span>), string_t(<span class="s">'for'</span>), string_t(<span class="s">'F'</span>), string_t(<span class="s">'FOR'</span>)]
+    s%fpp_extensions = [string_t(<span class="s">'F90'</span>), string_t(<span class="s">'F95'</span>), string_t(<span class="s">'F03'</span>), string_t(<span class="s">'F08'</span>), string_t(<span class="s">'F15'</span>), &amp;
+                        string_t(<span class="s">'F'</span>), string_t(<span class="s">'FOR'</span>)]
+    <span class="k">allocate</span> (s%copy_subdir(<span class="n">0</span>), s%exclude(<span class="n">0</span>), s%exclude_dir(<span class="n">0</span>), s%extra_vartypes(<span class="n">0</span>), s%html_template_dir(<span class="n">0</span>))
+    <span class="k">allocate</span> (s%<span class="k">include</span>(<span class="n">0</span>), s%macro(<span class="n">0</span>), s%md_extensions(<span class="n">0</span>))
+    <span class="k">allocate</span> (s%alias(<span class="n">0</span>), s%<span class="k">external</span>(<span class="n">0</span>), s%extra_mods(<span class="n">0</span>), s%extra_filetypes(<span class="n">0</span>))
+<span class="k">end</span> <span class="k">function</span> new_settings</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

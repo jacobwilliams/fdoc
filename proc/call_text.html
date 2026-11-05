@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>call_text &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_generics.f90.html">fdoc_generics.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_generics.html">fdoc_generics</a></div>
+<h1><span class="kind">subroutine</span>call_text<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> call_text(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">has_result</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write how a call of a form looks. Square brackets mark what is optional.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-list"><td class="name">list</td><td class="type">type(<a href="../type/entity_list_t.html">entity_list_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entities</p></td></tr>
+<tr id="variable-name"><td class="name">name</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the generic</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>a procedure of the form</p></td></tr>
+<tr id="variable-has_result"><td class="name">has_result</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>true for a function</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/argument_name.html">argument_name</a></li><li><a href="../proc/add.html">add</a></li><li><a href="../proc/html_escape.html">html_escape</a></li></ul>
+<div class="graph"><svg width="305pt" height="148pt"
+ viewBox="0 0 305 148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 143.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/call_text.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-79.6" width="62.1" height="21.6"/><text x="31" y="-64.1">call_text</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="116.2" y="-139.6" width="72.9" height="21.6"/><text x="152.6" y="-124.1">lowercase</text></a><path d="M49.5,-80.6C62.5,-89.1 81,-100.5 98.1,-108.8 102.2,-110.8 106.5,-112.7 110.8,-114.5"/><polygon fill="#8a93a5" points="109.8,-116.7 117.3,-117 111.7,-112.2"/><a href="../proc/argument_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="98.1" y="-99.6" width="109.1" height="21.6"/><text x="152.6" y="-84.1">argument_name</text></a><path d="M62.8,-74C71.1,-75.3 80.3,-76.9 89.6,-78.4"/><polygon fill="#8a93a5" points="88.9,-80.8 96.2,-79.5 89.7,-76"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="243.2" y="-40.6" width="54" height="21.6"/><text x="270.2" y="-25.1">add</text></a><path d="M63,-63.7C107.4,-56.4 188.6,-43.1 234.7,-35.5"/><polygon fill="#8a93a5" points="234.9,-37.9 241.4,-34.4 234.1,-33.1"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="108.6" y="-21.6" width="88.1" height="21.6"/><text x="152.6" y="-6.1">html_escape</text></a><path d="M55.2,-57C67.8,-50.7 83.8,-42.7 98.1,-35.8 105.1,-32.4 112.6,-28.9 119.8,-25.5"/><polygon fill="#8a93a5" points="120.6,-27.8 125.9,-22.6 118.6,-23.4"/><path d="M197,-17.9C209.3,-20 222.6,-22.2 234.4,-24.1"/><polygon fill="#8a93a5" points="233.9,-26.5 241.2,-25.2 234.7,-21.6"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_form.html">write_form</a></li></ul>
+<div class="graph"><svg width="1085pt" height="30pt"
+ viewBox="0 0 1085 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/call_text.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="62.1" height="21.6"/><text x="31" y="-6.1">call_text</text></a><a href="../proc/write_form.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="98.1" y="-21.6" width="75.1" height="21.6"/><text x="135.6" y="-6.1">write_form</text></a><path d="M97.6,-10.8C89.1,-10.8 80,-10.8 71.4,-10.8"/><polygon fill="#8a93a5" points="71.5,-8.4 64.5,-10.8 71.5,-13.3"/><a href="../proc/write_call_forms.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="209.2" y="-21.6" width="108.3" height="21.6"/><text x="263.3" y="-6.1">write_call_forms</text></a><path d="M209,-10.8C200,-10.8 190.7,-10.8 181.9,-10.8"/><polygon fill="#8a93a5" points="182.2,-8.4 175.2,-10.8 182.2,-13.3"/><a href="../proc/interface_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="353.5" y="-21.6" width="99.7" height="21.6"/><text x="403.3" y="-6.1">interface_body</text></a><path d="M353.3,-10.8C344.5,-10.8 335.3,-10.8 326.2,-10.8"/><polygon fill="#8a93a5" points="326.4,-8.4 319.4,-10.8 326.4,-13.3"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="489.2" y="-21.6" width="81.6" height="21.6"/><text x="530" y="-6.1">entity_page</text></a><path d="M488.8,-10.8C480.2,-10.8 471,-10.8 461.9,-10.8"/><polygon fill="#8a93a5" points="462.1,-8.4 455.1,-10.8 462.1,-13.3"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="606.8" y="-21.6" width="116.3" height="21.6"/><text x="664.9" y="-6.1">write_entity_page</text></a><path d="M606.4,-10.8C597.3,-10.8 588.1,-10.8 579.3,-10.8"/><polygon fill="#8a93a5" points="579.5,-8.4 572.5,-10.8 579.5,-13.3"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="759.1" y="-21.6" width="122.8" height="21.6"/><text x="820.5" y="-6.1">write_entity_pages</text></a><path d="M758.8,-10.8C749.8,-10.8 740.5,-10.8 731.4,-10.8"/><polygon fill="#8a93a5" points="731.7,-8.4 724.7,-10.8 731.7,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="917.9" y="-21.6" width="69.3" height="21.6"/><text x="952.5" y="-6.1">write_site</text></a><path d="M917.7,-10.8C909.3,-10.8 900,-10.8 890.6,-10.8"/><polygon fill="#8a93a5" points="890.9,-8.4 883.9,-10.8 890.9,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1023.2" y="-21.6" width="54" height="21.6"/><text x="1050.2" y="-6.1">run</text></a><path d="M1022.8,-10.8C1014.4,-10.8 1004.9,-10.8 995.7,-10.8"/><polygon fill="#8a93a5" points="995.9,-8.4 988.9,-10.8 995.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> call_text(list, name, id, has_result, b)
+    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list <span class="d">!! the entities</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the generic</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! a procedure of the form</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: has_result       <span class="d">!! true for a function</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: low, symbol, left, right
+    <span class="k">integer</span> :: k, n
+
+    <span class="k">associate</span> (e =&gt; list%box(id)%e)
+        n = <span class="k">size</span>(e%more%arg_ids)
+        low = lowercase(name)
+        <span class="k">if</span> (<span class="k">index</span>(low, <span class="s">'operator('</span>) == <span class="n">1</span> <span class="k">.and.</span> n &gt;= <span class="n">1</span> <span class="k">.and.</span> n &lt;= <span class="n">2</span>) <span class="k">then</span>
+            symbol = name(<span class="n">10</span>:<span class="k">len</span>(name) - <span class="n">1</span>)
+            <span class="k">call</span> argument_name(list, e%more%arg_ids(<span class="n">1</span>), left)
+            <span class="k">call</span> add(b, <span class="s">'result = '</span>)
+            <span class="k">if</span> (n == <span class="n">1</span>) <span class="k">then</span>
+                <span class="k">call</span> html_escape(symbol//<span class="s">' '</span>//left, b, <span class="k">.false.</span>)
+            <span class="k">else</span>
+                <span class="k">call</span> argument_name(list, e%more%arg_ids(<span class="n">2</span>), right)
+                <span class="k">call</span> html_escape(left//<span class="s">' '</span>//symbol//<span class="s">' '</span>//right, b, <span class="k">.false.</span>)
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (<span class="k">index</span>(low, <span class="s">'assignment('</span>) == <span class="n">1</span> <span class="k">.and.</span> n == <span class="n">2</span>) <span class="k">then</span>
+            <span class="k">call</span> argument_name(list, e%more%arg_ids(<span class="n">1</span>), left)
+            <span class="k">call</span> argument_name(list, e%more%arg_ids(<span class="n">2</span>), right)
+            <span class="k">call</span> html_escape(left//<span class="s">' = '</span>//right, b, <span class="k">.false.</span>)
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (has_result) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'result = '</span>)
+        <span class="k">else</span>
+            <span class="k">call</span> add(b, <span class="s">'call '</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> html_escape(name, b, <span class="k">.false.</span>)
+        <span class="k">call</span> add(b, <span class="s">'('</span>)
+        <span class="k">do</span> k = <span class="n">1</span>, n
+            <span class="k">call</span> argument_name(list, e%more%arg_ids(k), left)
+            <span class="k">if</span> (e%more%arg_ids(k) &gt; <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">if</span> (list%box(e%more%arg_ids(k))%e%<span class="k">optional</span>) <span class="k">then</span>
+                    <span class="k">if</span> (k &gt; <span class="n">1</span>) <span class="k">call</span> add(b, <span class="s">' '</span>)
+                    <span class="k">call</span> add(b, <span class="s">'['</span>)
+                    <span class="k">if</span> (k &gt; <span class="n">1</span>) <span class="k">call</span> add(b, <span class="s">', '</span>)
+                    <span class="k">call</span> html_escape(left, b, <span class="k">.false.</span>)
+                    <span class="k">call</span> add(b, <span class="s">']'</span>)
+                    <span class="k">cycle</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (k &gt; <span class="n">1</span>) <span class="k">call</span> add(b, <span class="s">', '</span>)
+            <span class="k">call</span> html_escape(left, b, <span class="k">.false.</span>)
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> add(b, <span class="s">')'</span>)
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">subroutine</span> call_text</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

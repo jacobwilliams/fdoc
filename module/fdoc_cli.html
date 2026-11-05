@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_cli &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a class="here" href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Variables</h4><ul><li><a href="#variable-action_dump"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>ACTION_DUMP</a></li><li><a href="#variable-action_dump_links"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>ACTION_DUMP_LINKS</a></li><li><a href="#variable-action_help"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>ACTION_HELP</a></li><li><a href="#variable-action_markdown"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>ACTION_MARKDOWN</a></li><li><a href="#variable-action_run"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>ACTION_RUN</a></li><li><a href="#variable-action_version"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>ACTION_VERSION</a></li><li><a href="#variable-version"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>VERSION</a></li></ul>
+<h4>Types</h4><ul><li><a href="../type/args_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>args_t</a></li><li><a href="../type/option_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>option_t</a></li></ul>
+<h4>Functions</h4><ul><li><a href="../proc/usage.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>usage</a></li></ul>
+<h4>Subroutines</h4><ul><li><a href="../proc/apply_args.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>apply_args</a></li><li><a href="../proc/parse_args.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_args</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><ul data-list="modules"></ul>
+<h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_cli.f90.html">fdoc_cli.f90</a></div>
+<h1><span class="kind">module</span>fdoc_cli</h1>
+<div class="doc">
+<p>The command line. Options are those of FORD, and override the project file.</p>
+</div>
+<h2 id="uses">Uses</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/module/ffmt_fs.html">ffmt_fs</a></li><li><a href="../module/fdoc_util.html">fdoc_util</a></li><li><a href="../module/fdoc_settings.html">fdoc_settings</a></li></ul>
+<div class="graph"><svg width="432pt" height="168pt"
+ viewBox="0 0 432 168" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 163.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_cli.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="365.8" y="-99.6" width="58.5" height="21.6"/><text x="395.1" y="-84.1">fdoc_cli</text></a><a href="https://jacobwilliams.github.io/fformat/module/ffmt_fs.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-159.6" width="54" height="21.6"/><text x="52" y="-144.1">ffmt_fs</text></a><path d="M283.3,-127.8C213.8,-133.6 132.5,-141.2 87.5,-145.5"/><polygon fill="#8a93a5" points="87.5,-143 80.8,-146.1 88,-147.9"/><a href="../module/fdoc_util.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="140" y="-99.6" width="62.8" height="21.6"/><text x="171.4" y="-84.1">fdoc_util</text></a><path d="M372.3,-100.4C350.9,-110.9 316.9,-125.1 285.3,-127.8"/><path d="M283.3,-127.8C252.4,-130.4 219.1,-116.1 197.1,-104.1"/><polygon fill="#8a93a5" points="198.5,-102.1 191.2,-100.8 196.1,-106.4"/><a href="../module/fdoc_settings.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="238.8" y="-80.6" width="91" height="21.6"/><text x="284.3" y="-65.1">fdoc_settings</text></a><path d="M364.9,-83.7C356.7,-82.3 347.6,-80.7 338.5,-79.1"/><polygon fill="#8a93a5" points="338.9,-76.7 331.6,-77.9 338.1,-81.5"/><path d="M153.7,-100C140.5,-108.5 121.5,-120.2 104,-128.8 98.6,-131.5 92.8,-134 87,-136.4"/><polygon fill="#8a93a5" points="86.3,-134 80.7,-138.9 88.1,-138.6"/><a href="http://fortranwiki.org/fortran/show/iso_fortran_env" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-119.6" width="104" height="21.6"/><text x="52" y="-104.1">iso_fortran_env</text></a><path d="M139.6,-94.1C131.2,-95.5 121.8,-97.1 112.3,-98.7"/><polygon fill="#8a93a5" points="112.1,-96.3 105.6,-99.8 112.9,-101.1"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_strings.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="11.2" y="-39.6" width="81.6" height="21.6"/><text x="52" y="-24.1">ffmt_strings</text></a><path d="M153.7,-77.6C140.5,-69.1 121.5,-57.4 104,-48.8 100.1,-46.9 95.9,-45 91.7,-43.2"/><polygon fill="#8a93a5" points="92.9,-41 85.5,-40.6 91,-45.6"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_io.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-79.6" width="54" height="21.6"/><text x="52" y="-64.1">ffmt_io</text></a><path d="M139.6,-83.5C123.6,-80.8 104.1,-77.5 87.6,-74.7"/><polygon fill="#8a93a5" points="88.1,-72.3 80.8,-73.5 87.3,-77.1"/><path d="M238.5,-77.5C229.5,-79 220.1,-80.6 211.3,-82.1"/><polygon fill="#8a93a5" points="211.1,-79.7 204.6,-83.3 211.9,-84.5"/><path d="M238.4,-61.8C199,-54.8 142,-44.6 101.6,-37.4"/><polygon fill="#8a93a5" points="102,-35 94.7,-36.2 101.2,-39.9"/><a href="https://www.openmp.org/spec-html/5.1/openmpch3.html#x156-1890003" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="141.5" y="-21.6" width="59.9" height="21.6"/><text x="171.4" y="-6.1">omp_lib</text></a><path d="M262.2,-58.6C244.8,-49.3 219.9,-36.1 200.8,-25.9"/><polygon fill="#8a93a5" points="202.1,-23.8 194.8,-22.7 199.8,-28.2"/></g>
+</svg>
+</div>
+<h2 id="used-by">Used by</h2>
+<ul class="chips"><li><a href="../module/fdoc.html">fdoc</a></li></ul>
+<div class="graph"><svg width="156pt" height="30pt"
+ viewBox="0 0 156 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_cli.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="58.5" height="21.6"/><text x="29.2" y="-6.1">fdoc_cli</text></a><a href="../module/fdoc.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="94.5" y="-21.6" width="54" height="21.6"/><text x="121.5" y="-6.1">fdoc</text></a><path d="M94.4,-10.8C86.1,-10.8 76.8,-10.8 67.8,-10.8"/><polygon fill="#8a93a5" points="68,-8.4 61,-10.8 68,-13.3"/></g>
+</svg>
+</div>
+<h2 id="variables">Variables</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-action_dump"><td class="name">ACTION_DUMP</td><td class="type">integer</td><td class="attributes"><span class="attr attr-parameter">parameter</span></td><td class="default">3</td><td><p>print the settings</p></td></tr>
+<tr id="variable-action_dump_links"><td class="name">ACTION_DUMP_LINKS</td><td class="type">integer</td><td class="attributes"><span class="attr attr-parameter">parameter</span></td><td class="default">4</td><td><p>print how entities are connected</p></td></tr>
+<tr id="variable-action_help"><td class="name">ACTION_HELP</td><td class="type">integer</td><td class="attributes"><span class="attr attr-parameter">parameter</span></td><td class="default">1</td><td><p>print the usage</p></td></tr>
+<tr id="variable-action_markdown"><td class="name">ACTION_MARKDOWN</td><td class="type">integer</td><td class="attributes"><span class="attr attr-parameter">parameter</span></td><td class="default">5</td><td><p>convert a JSON list of Markdown texts</p></td></tr>
+<tr id="variable-action_run"><td class="name">ACTION_RUN</td><td class="type">integer</td><td class="attributes"><span class="attr attr-parameter">parameter</span></td><td class="default">0</td><td><p>generate the documentation</p></td></tr>
+<tr id="variable-action_version"><td class="name">ACTION_VERSION</td><td class="type">integer</td><td class="attributes"><span class="attr attr-parameter">parameter</span></td><td class="default">2</td><td><p>print the version</p></td></tr>
+<tr id="variable-version"><td class="name">VERSION</td><td class="type">character(len=*)</td><td class="attributes"><span class="attr attr-parameter">parameter</span></td><td class="default">'0.0.1'</td><td></td></tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<div class="item" id="type-args_t"><h3><a href="../type/args_t.html">args_t</a></h3>
+<p>The parsed command line.</p>
+</div>
+<div class="item" id="type-option_t"><h3><a href="../type/option_t.html">option_t</a></h3>
+<p>An option given on the command line, in the form <a href="../proc/set_option.html">set_option</a> takes.</p>
+</div>
+<h2 id="functions">Functions</h2>
+<div class="item" id="proc-usage"><h3><a href="../proc/usage.html">usage</a></h3>
+<div class="sig">character(len=:) <span class="k">function</span> usage() <span class="k">result</span>(text)</div>
+<p>The help text.</p>
+</div>
+<h2 id="subroutines">Subroutines</h2>
+<div class="item" id="proc-apply_args"><h3><a href="../proc/apply_args.html">apply_args</a></h3>
+<div class="sig"><span class="k">subroutine</span> apply_args(<span class="intent attr-in" title="intent(in)">parsed</span>, <span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">stat</span>, <span class="intent attr-out" title="intent(out)">errmsg</span>)</div>
+<p>Apply command line options to the settings.</p>
+</div>
+<div class="item" id="proc-parse_args"><h3><a href="../proc/parse_args.html">parse_args</a></h3>
+<div class="sig"><span class="k">subroutine</span> parse_args(<span class="intent attr-in" title="intent(in)">args</span>, <span class="intent attr-out" title="intent(out)">parsed</span>, <span class="intent attr-out" title="intent(out)">stat</span>, <span class="intent attr-out" title="intent(out)">errmsg</span>)</div>
+<p>Read the command line.</p>
+</div>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

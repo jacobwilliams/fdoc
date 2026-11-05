@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>expand_file_includes &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>expand_file_includes<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> expand_file_includes(<span class="intent attr-inout" title="intent(inout)">lines</span>, <span class="intent attr-in" title="intent(in)">options</span>, <span class="intent attr-in" title="intent(in)">depth</span>)</div>
+<div class="doc">
+<p>Replace file include directives by the contents of the file.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-lines"><td class="name">lines</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the lines</p></td></tr>
+<tr id="variable-options"><td class="name">options</td><td class="type">type(<a href="../type/markdown_options_t.html">markdown_options_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>what rendering depends on</p></td></tr>
+<tr id="variable-depth"><td class="name">depth</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>how many includes deep this is</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push.html">push</a></li><li><a href="../proc/strip.html">strip</a></li><li><a href="../proc/starts_with.html">starts_with</a></li><li><a href="../proc/read_whole_file.html">read_whole_file</a></li><li><a href="../proc/warn.html">warn</a></li><li><a href="../proc/split_lines.html">split_lines</a></li><li><a href="../proc/normalize_lines.html">normalize_lines</a></li><li><a href="../proc/expand_file_includes.html">expand_file_includes</a></li></ul>
+<div class="graph"><svg width="483pt" height="290pt"
+ viewBox="0 0 483 290" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 285.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/expand_file_includes.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-161.6" width="135.8" height="21.6"/><text x="67.9" y="-146.1">expand_file_includes</text></a><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="197.6" y="-281.6" width="54" height="21.6"/><text x="224.6" y="-266.1">push</text></a><path d="M78.2,-162.5C95,-183 132.2,-225.4 171.8,-250.8 177.3,-254.3 183.5,-257.4 189.6,-259.9"/><polygon fill="#8a93a5" points="188.5,-262.1 195.9,-262.4 190.3,-257.6"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="197.6" y="-241.6" width="54" height="21.6"/><text x="224.6" y="-226.1">strip</text></a><path d="M87,-162.5C107.2,-175.4 141.1,-196 171.8,-210.8 177.4,-213.5 183.4,-216.1 189.3,-218.4"/><polygon fill="#8a93a5" points="188.3,-220.7 195.8,-221 190.1,-216.1"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="186.3" y="-201.6" width="76.5" height="21.6"/><text x="224.6" y="-186.1">starts_with</text></a><path d="M114.5,-162.6C134.4,-167.7 157.8,-173.8 177.8,-179"/><polygon fill="#8a93a5" points="177,-181.3 184.4,-180.7 178.2,-176.5"/><a href="../proc/read_whole_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="171.8" y="-161.6" width="105.5" height="21.6"/><text x="224.6" y="-146.1">read_whole_file</text></a><path d="M136.7,-150.8C145.6,-150.8 154.6,-150.8 163.3,-150.8"/><polygon fill="#8a93a5" points="163.1,-153.3 170.1,-150.8 163.1,-148.4"/><a href="../proc/warn.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="197.6" y="-121.6" width="54" height="21.6"/><text x="224.6" y="-106.1">warn</text></a><path d="M114.5,-139C138.3,-132.8 167.1,-125.4 189.1,-119.7"/><polygon fill="#8a93a5" points="189.5,-122.1 195.7,-118 188.3,-117.4"/><a href="../proc/split_lines.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="188.8" y="-81.6" width="71.5" height="21.6"/><text x="224.6" y="-66.1">split_lines</text></a><path d="M87,-139.1C107.2,-126.2 141.1,-105.6 171.8,-90.8 175.8,-88.9 180.1,-87 184.4,-85.2"/><polygon fill="#8a93a5" points="185.1,-87.5 190.6,-82.6 183.2,-83"/><a href="../proc/normalize_lines.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="172.2" y="-41.6" width="104.7" height="21.6"/><text x="224.6" y="-26.1">normalize_lines</text></a><path d="M78.2,-139.1C95,-118.6 132.2,-76.2 171.8,-50.8 174.7,-48.9 177.9,-47.2 181.1,-45.6"/><polygon fill="#8a93a5" points="182,-47.9 187.3,-42.7 179.9,-43.4"/><a href="https://jacobwilliams.github.io/fformat/proc/read_file.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="313.3" y="-161.6" width="64.3" height="21.6"/><text x="345.4" y="-146.1">read_file</text></a><path d="M277.7,-150.8C286.7,-150.8 295.9,-150.8 304.5,-150.8"/><polygon fill="#8a93a5" points="304.3,-153.3 311.3,-150.8 304.3,-148.4"/><a href="../proc/draw.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="318.4" y="-121.6" width="54" height="21.6"/><text x="345.4" y="-106.1">draw</text></a><path d="M251.9,-110.8C268.9,-110.8 291.2,-110.8 309.7,-110.8"/><polygon fill="#8a93a5" points="309.6,-113.3 316.6,-110.8 309.6,-108.4"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="318.4" y="-61.6" width="54" height="21.6"/><text x="345.4" y="-46.1">add</text></a><path d="M277.3,-39.5C288.3,-41.4 299.6,-43.3 309.7,-45"/><polygon fill="#8a93a5" points="309.1,-47.3 316.4,-46.1 309.9,-42.5"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="318.4" y="-21.6" width="54" height="21.6"/><text x="345.4" y="-6.1">take</text></a><path d="M277.3,-22.1C288.3,-20.2 299.6,-18.3 309.7,-16.6"/><polygon fill="#8a93a5" points="309.9,-19.1 316.4,-15.5 309.1,-14.3"/><a href="../proc/bar_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="413.6" y="-121.6" width="61.4" height="21.6"/><text x="444.2" y="-106.1">bar_text</text></a><path d="M372.9,-110.8C382.8,-110.8 394.2,-110.8 405,-110.8"/><polygon fill="#8a93a5" points="404.9,-113.3 411.9,-110.8 404.9,-108.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/markdown_to_html.html">markdown_to_html</a></li></ul>
+<div class="graph"><svg width="950pt" height="129pt"
+ viewBox="0 0 950 129" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 124.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/expand_file_includes.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-120.6" width="135.8" height="21.6"/><text x="67.9" y="-105.1">expand_file_includes</text></a><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="171.8" y="-80.6" width="124.2" height="21.6"/><text x="233.9" y="-65.1">markdown_to_html</text></a><path d="M186.8,-81C167.7,-85.7 145.4,-91.1 125.4,-96"/><polygon fill="#8a93a5" points="125,-93.6 118.7,-97.6 126.1,-98.4"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="7.2" y="-80.6" width="121.3" height="21.6"/><text x="67.9" y="-65.1">stash_html_blocks</text></a><path d="M163.2,-69.8C154.6,-69.8 145.9,-69.8 137.3,-69.8"/><polygon fill="#8a93a5" points="162.9,-72.3 169.9,-69.8 162.9,-67.4"/><polygon fill="#8a93a5" points="137.4,-67.4 130.4,-69.8 137.4,-72.3"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="11.6" y="-40.6" width="112.7" height="21.6"/><text x="67.9" y="-25.1">render_footnotes</text></a><path d="M178.7,-56.6C160.8,-52.2 140.9,-47.4 123,-43"/><polygon fill="#8a93a5" points="178,-58.9 185.3,-58.2 179.1,-54.2"/><polygon fill="#8a93a5" points="123.8,-40.7 116.4,-41.4 122.7,-45.4"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="448.2" y="-100.6" width="97.5" height="21.6"/><text x="497" y="-85.1">markdown_list</text></a><path d="M447.8,-86.1C407.6,-83 349.7,-78.6 304.5,-75.1"/><polygon fill="#8a93a5" points="304.9,-72.7 297.7,-74.6 304.5,-77.6"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="332.1" y="-61.6" width="80.2" height="21.6"/><text x="372.1" y="-46.1">render_text</text></a><path d="M331.7,-56.3C323.2,-57.5 313.9,-58.8 304.5,-60.1"/><polygon fill="#8a93a5" points="304.4,-57.6 297.8,-61 305.1,-62.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="888.5" y="-61.6" width="54" height="21.6"/><text x="915.5" y="-46.1">run</text></a><path d="M625.8,-89.8C602.5,-88.1 576.6,-87.7 554.4,-88"/><polygon fill="#8a93a5" points="554.5,-85.5 547.5,-88.1 554.5,-90.4"/><path d="M888.3,-60.7C877.3,-64.5 864.4,-68.4 852.5,-70.8 754.2,-90.5 727.8,-97.3 627.8,-89.8"/><path d="M625.8,-89.8C566.5,-86.9 557.2,-55.2 498,-50.8"/><a href="../proc/render_documentation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="708" y="-61.6" width="144.5" height="21.6"/><text x="780.2" y="-46.1">render_documentation</text></a><path d="M888.1,-50.8C880.1,-50.8 870.8,-50.8 861.1,-50.8"/><polygon fill="#8a93a5" points="861.3,-48.4 854.3,-50.8 861.3,-53.3"/><a href="../proc/load_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="739.4" y="-21.6" width="81.6" height="21.6"/><text x="780.2" y="-6.1">load_pages</text></a><path d="M888,-42C877,-38.4 864.2,-34.3 852.5,-30.8 844.9,-28.5 836.9,-26.2 829,-23.9"/><polygon fill="#8a93a5" points="830.1,-21.7 822.7,-22.2 828.8,-26.4"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="581.7" y="-61.6" width="90.3" height="21.6"/><text x="626.8" y="-46.1">render_entity</text></a><path d="M581.4,-52.4C556.8,-52.9 525.6,-52.9 498,-50.8"/><path d="M496,-50.8C471.3,-49 443.7,-48.8 420.9,-49.1"/><polygon fill="#8a93a5" points="420.9,-46.7 414,-49.3 421,-51.6"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="458.7" y="-22.6" width="76.6" height="21.6"/><text x="497" y="-7.1">read_page</text></a><path d="M460.4,-23.1C446.7,-27.4 430.8,-32.5 416.4,-37.1"/><polygon fill="#8a93a5" points="416,-34.6 410,-39.1 417.4,-39.3"/><path d="M707.5,-50.8C698.4,-50.8 689.1,-50.8 680.4,-50.8"/><polygon fill="#8a93a5" points="680.6,-48.4 673.6,-50.8 680.6,-53.3"/><a href="../proc/read_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="591.8" y="-21.6" width="70" height="21.6"/><text x="626.8" y="-6.1">read_tree</text></a><path d="M591.6,-11.1C576.8,-11.2 559.4,-11.3 543.6,-11.4"/><polygon fill="#8a93a5" points="544,-9 537,-11.5 544,-13.9"/><path d="M739.1,-10.8C717.9,-10.8 691.9,-10.8 670.3,-10.8"/><polygon fill="#8a93a5" points="670.5,-8.4 663.5,-10.8 670.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> expand_file_includes(lines, options, depth)
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: lines(:)  <span class="d">!! the lines</span>
+    <span class="k">type</span>(markdown_options_t), <span class="k">intent</span>(in) :: options         <span class="d">!! what rendering depends on</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: depth                            <span class="d">!! how many includes deep this is</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: out(:), included(:)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: contents, msg, path, before, after
+    <span class="k">integer</span> :: k, a, b, <span class="k">stat</span>, j
+
+    <span class="k">if</span> (depth &gt; <span class="n">16</span>) <span class="k">return</span>
+    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(options%base_path)) <span class="k">return</span>
+    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>([(<span class="k">index</span>(lines(k)%s, <span class="s">'{!'</span>) &gt; <span class="n">0</span>, k=<span class="n">1</span>, <span class="k">size</span>(lines))])) <span class="k">return</span>
+    <span class="k">allocate</span> (out(<span class="n">0</span>))
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(lines)
+        a = <span class="k">index</span>(lines(k)%s, <span class="s">'{!'</span>)
+        b = <span class="n">0</span>
+        <span class="k">if</span> (a &gt; <span class="n">0</span>) b = <span class="k">index</span>(lines(k)%s(a + <span class="n">2</span>:), <span class="s">'!}'</span>)
+        <span class="k">if</span> (a == <span class="n">0</span> <span class="k">.or.</span> b == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> push(out, lines(k)%s)
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="c">! not `join_path`, which returns a deferred-length string</span>
+        path = strip(lines(k)%s(a + <span class="n">2</span>:a + b))
+        <span class="k">if</span> (<span class="k">.not.</span> starts_with(path, <span class="s">'/'</span>)) path = options%base_path//<span class="s">'/'</span>//path
+        <span class="k">call</span> read_whole_file(path, contents, <span class="k">stat</span>, msg)
+        <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> warn(<span class="s">'could not include '</span>//path)
+            <span class="k">call</span> push(out, lines(k)%s)
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        included = split_lines(contents)
+        <span class="k">call</span> normalize_lines(included)
+        <span class="k">call</span> expand_file_includes(included, options, depth + <span class="n">1</span>)
+        before = lines(k)%s(:a - <span class="n">1</span>)
+        after = lines(k)%s(a + b + <span class="n">3</span>:)
+        <span class="k">if</span> (<span class="k">size</span>(included) == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> push(out, before//after)
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        included(<span class="n">1</span>)%s = before//included(<span class="n">1</span>)%s
+        included(<span class="k">size</span>(included))%s = included(<span class="k">size</span>(included))%s//after
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(included)
+            <span class="k">call</span> push(out, included(j)%s)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> <span class="k">move_alloc</span>(out, lines)
+<span class="k">end</span> <span class="k">subroutine</span> expand_file_includes</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

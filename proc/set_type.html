@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_type &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">subroutine</span>set_type<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> set_type(<span class="intent attr-inout" title="intent(inout)">v</span>, <span class="intent attr-in" title="intent(in)">t</span>)</div>
+<div class="doc">
+<p>Copy a parsed type to variable <code>v</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-v"><td class="name">v</td><td class="type">type(<a href="../type/entity_t.html">entity_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the variable</p></td></tr>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/parsed_type_t.html">parsed_type_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the type</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/open_procedure.html">open_procedure</a></li><li><a href="../proc/read_declaration.html">read_declaration</a></li></ul>
+<div class="graph"><svg width="737pt" height="70pt"
+ viewBox="0 0 737 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/set_type.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="63.5" height="21.6"/><text x="31.8" y="-26.1">set_type</text></a><a href="../proc/open_procedure.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="100.6" y="-61.6" width="109.1" height="21.6"/><text x="155.2" y="-46.1">open_procedure</text></a><path d="M100.2,-41.9C90.9,-40.4 81.4,-38.8 72.5,-37.4"/><polygon fill="#8a93a5" points="73.1,-35 65.8,-36.2 72.3,-39.8"/><a href="../proc/read_declaration.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="99.5" y="-21.6" width="111.2" height="21.6"/><text x="155.2" y="-6.1">read_declaration</text></a><path d="M99.2,-19.9C90.2,-21.3 81.1,-22.8 72.6,-24.2"/><polygon fill="#8a93a5" points="72.4,-21.8 65.9,-25.3 73.2,-26.6"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="266.7" y="-61.6" width="71.5" height="21.6"/><text x="302.4" y="-46.1">open_unit</text></a><path d="M266.2,-50.8C251.9,-50.8 234.8,-50.8 218.5,-50.8"/><polygon fill="#8a93a5" points="218.5,-48.4 211.5,-50.8 218.5,-53.3"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="246.8" y="-21.6" width="111.2" height="21.6"/><text x="302.4" y="-6.1">parse_statement</text></a><path d="M246.5,-10.8C237.7,-10.8 228.6,-10.8 219.7,-10.8"/><polygon fill="#8a93a5" points="219.7,-8.4 212.7,-10.8 219.7,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="394" y="-41.6" width="70.8" height="21.6"/><text x="429.4" y="-26.1">parse_file</text></a><path d="M393.6,-36.4C379.1,-38.7 362.1,-41.4 346.8,-43.9"/><polygon fill="#8a93a5" points="346.5,-41.4 340,-45 347.3,-46.3"/><path d="M393.6,-25.2C385.1,-23.9 375.7,-22.4 366.4,-20.9"/><polygon fill="#8a93a5" points="367,-18.5 359.7,-19.8 366.2,-23.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="500.8" y="-41.6" width="138" height="21.6"/><text x="569.8" y="-26.1">load_project_sources</text></a><path d="M500.4,-30.8C491.2,-30.8 482,-30.8 473.4,-30.8"/><polygon fill="#8a93a5" points="473.6,-28.4 466.6,-30.8 473.6,-33.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="674.8" y="-41.6" width="54" height="21.6"/><text x="701.8" y="-26.1">run</text></a><path d="M674.5,-30.8C666.3,-30.8 657,-30.8 647.2,-30.8"/><polygon fill="#8a93a5" points="647.5,-28.4 640.5,-30.8 647.5,-33.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> set_type(v, t)
+    <span class="k">type</span>(entity_t), <span class="k">intent</span>(inout) :: v      <span class="d">!! the variable</span>
+    <span class="k">type</span>(parsed_type_t), <span class="k">intent</span>(in) :: t    <span class="d">!! the type</span>
+
+    v%vartype = t%vartype
+    <span class="k">if</span> (<span class="k">allocated</span>(t%<span class="k">kind</span>)) v%type_kind = t%<span class="k">kind</span>
+    <span class="k">if</span> (<span class="k">allocated</span>(t%strlen)) v%strlen = t%strlen
+    <span class="k">if</span> (<span class="k">allocated</span>(t%proto)) v%proto = t%proto
+<span class="k">end</span> <span class="k">subroutine</span> set_type</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

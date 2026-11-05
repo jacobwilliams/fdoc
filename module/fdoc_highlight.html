@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_highlight &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a class="here" href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Subroutines</h4><ul><li><a href="../proc/highlight_data.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>highlight_data</a></li><li><a href="../proc/highlight_fortran.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>highlight_fortran</a></li><li><a href="../proc/line_start.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>line_start</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><ul data-list="modules"></ul>
+<h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_highlight.f90.html">fdoc_highlight.f90</a></div>
+<h1><span class="kind">module</span>fdoc_highlight</h1>
+<div class="doc">
+<p>Syntax highlighting of Fortran, from fformat's tokens. Classes: <code>k</code> keywords and intrinsics,
+<code>c</code> comments, <code>d</code> doc comments, <code>s</code> strings, <code>n</code> numbers, <code>p</code> preprocessor lines.</p>
+<p>JSON and TOML get a simple scan of their own, with the same classes: <code>k</code> keys, <code>s</code> strings, <code>n</code>
+numbers, dates and literals such as <code>true</code>, <code>p</code> TOML table headers and <code>c</code> TOML comments.</p>
+</div>
+<h2 id="uses">Uses</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/module/ffmt_tokens.html">ffmt_tokens</a></li><li><a href="https://jacobwilliams.github.io/fformat/module/ffmt_lexer.html">ffmt_lexer</a></li><li><a href="../module/fdoc_buffer.html">fdoc_buffer</a></li><li><a href="../module/fdoc_util.html">fdoc_util</a></li><li><a href="../module/fdoc_intrinsics.html">fdoc_intrinsics</a></li></ul>
+<div class="graph"><svg width="375pt" height="210pt"
+ viewBox="0 0 375 210" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 205.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_highlight.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="272.8" y="-121.6" width="94.6" height="21.6"/><text x="320.1" y="-106.1">fdoc_highlight</text></a><a href="https://jacobwilliams.github.io/fformat/module/ffmt_tokens.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="147.6" y="-201.6" width="81.6" height="21.6"/><text x="188.4" y="-186.1">ffmt_tokens</text></a><path d="M305.2,-122.5C289.4,-135.4 262.3,-156.4 236.8,-170.8 233.5,-172.6 230.1,-174.4 226.6,-176.1"/><polygon fill="#8a93a5" points="225.7,-173.8 220.3,-178.9 227.7,-178.2"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_lexer.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="152.7" y="-161.6" width="71.5" height="21.6"/><text x="188.4" y="-146.1">ffmt_lexer</text></a><path d="M280.9,-122.6C265.6,-127.3 248,-132.7 232.2,-137.6"/><polygon fill="#8a93a5" points="231.6,-135.2 225.7,-139.6 233.1,-139.9"/><a href="../module/fdoc_buffer.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="148.7" y="-121.6" width="79.4" height="21.6"/><text x="188.4" y="-106.1">fdoc_buffer</text></a><path d="M271.9,-110.8C260.4,-110.8 248,-110.8 236.5,-110.8"/><polygon fill="#8a93a5" points="236.8,-108.4 229.8,-110.8 236.8,-113.3"/><a href="../module/fdoc_util.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="157" y="-81.6" width="62.8" height="21.6"/><text x="188.4" y="-66.1">fdoc_util</text></a><path d="M280.9,-99C264.2,-93.9 244.6,-87.8 227.9,-82.7"/><polygon fill="#8a93a5" points="228.8,-80.4 221.4,-80.7 227.4,-85.1"/><a href="../module/fdoc_intrinsics.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="140" y="-41.6" width="96.8" height="21.6"/><text x="188.4" y="-26.1">fdoc_intrinsics</text></a><path d="M305.2,-99.1C289.4,-86.2 262.3,-65.2 236.8,-50.8 233.5,-49 230.1,-47.2 226.6,-45.5"/><polygon fill="#8a93a5" points="227.7,-43.4 220.3,-42.7 225.7,-47.8"/><a href="http://fortranwiki.org/fortran/show/iso_fortran_env" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-141.6" width="104" height="21.6"/><text x="52" y="-126.1">iso_fortran_env</text></a><path d="M159.4,-82C152.9,-84.8 146.2,-87.8 140,-90.8 123.6,-98.8 120.6,-103 104,-110.8 100,-112.7 95.7,-114.6 91.4,-116.4"/><polygon fill="#8a93a5" points="90.7,-114 85.2,-118.9 92.6,-118.6"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_strings.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="11.2" y="-101.6" width="81.6" height="21.6"/><text x="52" y="-86.1">ffmt_strings</text></a><path d="M156.6,-75.4C140.2,-77.8 119.8,-80.9 101.4,-83.6"/><polygon fill="#8a93a5" points="101.2,-81.2 94.6,-84.6 101.9,-86"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_fs.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-61.6" width="54" height="21.6"/><text x="52" y="-46.1">ffmt_fs</text></a><path d="M156.6,-66.2C135.9,-63.1 108.7,-59.1 87.3,-55.9"/><polygon fill="#8a93a5" points="87.9,-53.5 80.7,-54.9 87.2,-58.4"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_io.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-21.6" width="54" height="21.6"/><text x="52" y="-6.1">ffmt_io</text></a><path d="M159.4,-59.6C152.9,-56.8 146.2,-53.8 140,-50.8 123.6,-42.8 120.6,-38.6 104,-30.8 98.6,-28.3 92.8,-25.8 87.1,-23.5"/><polygon fill="#8a93a5" points="88.3,-21.3 80.9,-21 86.5,-25.8"/></g>
+</svg>
+</div>
+<h2 id="used-by">Used by</h2>
+<ul class="chips"><li><a href="../module/fdoc_markdown.html">fdoc_markdown</a></li><li><a href="../module/fdoc_site.html">fdoc_site</a></li></ul>
+<div class="graph"><svg width="665pt" height="108pt"
+ viewBox="0 0 665 108" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 104)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_highlight.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="94.6" height="21.6"/><text x="47.3" y="-6.1">fdoc_highlight</text></a><a href="../module/fdoc_markdown.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="130.6" y="-50.6" width="106.2" height="21.6"/><text x="183.7" y="-35.1">fdoc_markdown</text></a><path d="M130.4,-28.5C121.7,-26.6 112.6,-24.7 103.8,-22.8"/><polygon fill="#8a93a5" points="104.3,-20.4 97,-21.3 103.3,-25.2"/><a href="../module/fdoc_site.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="500.1" y="-69.6" width="66.4" height="21.6"/><text x="533.3" y="-54.1">fdoc_site</text></a><path d="M499.7,-47.8C488.5,-44.4 475.8,-41 464.1,-38.8 336.8,-15.1 184.3,-10.8 104,-10.4"/><polygon fill="#8a93a5" points="104,-8 97,-10.4 104,-12.9"/><a href="../module/fdoc_pages.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="382.5" y="-69.6" width="81.6" height="21.6"/><text x="423.3" y="-54.1">fdoc_pages</text></a><path d="M499.6,-58.8C491.1,-58.8 481.8,-58.8 472.8,-58.8"/><polygon fill="#8a93a5" points="473,-56.4 466,-58.8 473,-61.3"/><a href="../module/fdoc.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="602.5" y="-88.6" width="54" height="21.6"/><text x="629.5" y="-73.1">fdoc</text></a><path d="M422.3,-97.8C355.5,-92.1 337.3,-96.8 272.8,-78.8 252,-73 229.7,-63.1 212.8,-54.8"/><polygon fill="#8a93a5" points="214.1,-52.7 206.8,-51.7 211.9,-57.1"/><path d="M602,-72.5C593.7,-70.8 584.3,-68.9 575.2,-67"/><polygon fill="#8a93a5" points="575.8,-64.7 568.4,-65.7 574.8,-69.5"/><a href="../module/fdoc_docs.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="272.8" y="-69.6" width="73.7" height="21.6"/><text x="309.6" y="-54.1">fdoc_docs</text></a><path d="M532.3,-97.8C484.3,-98.5 472.1,-101.9 424.3,-97.8"/><path d="M422.3,-97.8C393.1,-95.3 361.8,-83.5 339.8,-73.5"/><polygon fill="#8a93a5" points="340.9,-71.3 333.5,-70.6 338.8,-75.8"/><path d="M602,-86.3C583.3,-91.6 557.5,-97.5 534.3,-97.8"/><path d="M532.3,-97.8C502.8,-98.2 471.4,-85.2 450,-74"/><polygon fill="#8a93a5" points="451.3,-71.9 444,-70.8 449,-76.3"/><path d="M272.5,-53.3C264,-52 254.8,-50.6 245.7,-49.1"/><polygon fill="#8a93a5" points="246.1,-46.7 238.8,-48.1 245.3,-51.6"/><path d="M387.2,-47.5C374.5,-44 360,-40.6 346.5,-38.8 313.2,-34.5 275.9,-34.4 245.4,-35.6"/><polygon fill="#8a93a5" points="245.4,-33.1 238.5,-35.9 245.6,-38"/><path d="M382,-58.8C373.3,-58.8 364,-58.8 355.1,-58.8"/><polygon fill="#8a93a5" points="355.3,-56.4 348.3,-58.8 355.3,-61.3"/></g>
+</svg>
+</div>
+<h2 id="subroutines">Subroutines</h2>
+<div class="item" id="proc-highlight_data"><h3><a href="../proc/highlight_data.html">highlight_data</a></h3>
+<div class="sig"><span class="k">subroutine</span> highlight_data(<span class="intent attr-in" title="intent(in)">code</span>, <span class="intent attr-in" title="intent(in)">toml</span>, <span class="intent attr-inout" title="intent(inout)">out</span>)</div>
+<p>Write <code>code</code>, JSON or TOML, as highlighted HTML. A key is a string followed by <code>:</code> in JSON, and what
+comes before <code>=</code> at the start of a line or after <code>{</code> or <code>,</code> in TOML.</p>
+</div>
+<div class="item" id="proc-highlight_fortran"><h3><a href="../proc/highlight_fortran.html">highlight_fortran</a></h3>
+<div class="sig"><span class="k">subroutine</span> highlight_fortran(<span class="intent attr-in" title="intent(in)">code</span>, <span class="intent attr-inout" title="intent(inout)">out</span>, <span class="intent attr-in" title="intent(in)">line_anchors</span>)</div>
+<p>Write <code>code</code> as highlighted HTML. With <code>line_anchors</code>, each line starts with an anchor <code>ln-N</code>.</p>
+</div>
+<div class="item" id="proc-line_start"><h3><a href="../proc/line_start.html">line_start</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> line_start(<span class="intent attr-inout" title="intent(inout)">out</span>, <span class="intent attr-in" title="intent(in)">line</span>)</div>
+<p>Write the anchor of line <code>line</code>.</p>
+</div>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

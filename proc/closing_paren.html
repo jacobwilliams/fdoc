@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>closing_paren &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">function</span>closing_paren<span class="attr attr-pure" title="Has no side effects">pure</span></h1>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> closing_paren(<span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-in" title="intent(in)">open</span>)</div>
+<div class="doc">
+<p>Position of the <code>)</code> matching the <code>(</code> at <code>open</code> in <code>s</code>, skipping strings, or 0.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-open"><td class="name">open</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>position of the <code>(</code></p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-closing_paren"><td class="name">closing_paren</td><td class="type">integer</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/parse_procedure_header.html">parse_procedure_header</a></li><li><a href="../proc/read_attribute_statement.html">read_attribute_statement</a></li><li><a href="../proc/read_binding.html">read_binding</a></li><li><a href="../proc/selector_length.html">selector_length</a></li></ul>
+<div class="graph"><svg width="1091pt" height="148pt"
+ viewBox="0 0 1091 148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 143.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/closing_paren.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-80.6" width="95.3" height="21.6"/><text x="47.7" y="-65.1">closing_paren</text></a><a href="../proc/selector_length.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="160.3" y="-61.6" width="102.6" height="21.6"/><text x="211.5" y="-46.1">selector_length</text></a><path d="M159.8,-56.8C142.2,-58.8 122.3,-61.2 104.3,-63.3"/><polygon fill="#8a93a5" points="104.4,-60.8 97.7,-64 105,-65.7"/><a href="../proc/parse_procedure_header.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="131.3" y="-21.6" width="160.4" height="21.6"/><text x="211.5" y="-6.1">parse_procedure_header</text></a><path d="M159.8,-22.1C150.3,-24.6 140.4,-27.5 131.3,-30.8 113.1,-37.3 93.5,-46.5 77.9,-54.3"/><polygon fill="#8a93a5" points="77.1,-52 72,-57.3 79.3,-56.3"/><a href="../proc/read_attribute_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="132.1" y="-139.6" width="158.9" height="21.6"/><text x="211.5" y="-124.1">read_attribute_statement</text></a><path d="M172.9,-117.6C159.6,-113.5 144.8,-108.7 131.3,-103.8 115.3,-98 97.8,-90.9 83.1,-84.7"/><polygon fill="#8a93a5" points="84.4,-82.6 77,-82.1 82.5,-87.1"/><a href="../proc/read_binding.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="327.7" y="-100.6" width="89.6" height="21.6"/><text x="372.5" y="-85.1">read_binding</text></a><path d="M327.3,-87.1C269.4,-83.5 167.8,-77.2 104.6,-73.3"/><polygon fill="#8a93a5" points="104.9,-70.8 97.8,-72.8 104.6,-75.7"/><a href="../proc/parse_type.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="333.2" y="-60.6" width="78.7" height="21.6"/><text x="372.5" y="-45.1">parse_type</text></a><path d="M333,-50C314.6,-50.2 292.2,-50.3 271.7,-50.4"/><polygon fill="#8a93a5" points="271.8,-48 264.8,-50.5 271.8,-52.9"/><a href="../proc/open_procedure.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="454.4" y="-41.6" width="109.1" height="21.6"/><text x="508.9" y="-26.1">open_procedure</text></a><path d="M454.1,-27.2C411.2,-24.3 350.3,-20.1 300.4,-16.7"/><polygon fill="#8a93a5" points="300.8,-14.3 293.7,-16.3 300.5,-19.2"/><path d="M454,-38.4C442.9,-40 431.2,-41.7 420.3,-43.2"/><polygon fill="#8a93a5" points="420.2,-40.7 413.6,-44.1 420.9,-45.6"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="600.6" y="-81.6" width="111.2" height="21.6"/><text x="656.2" y="-66.1">parse_statement</text></a><path d="M507.9,-128.8C438.3,-137 358.7,-136.4 299.7,-134.1"/><polygon fill="#8a93a5" points="300.1,-131.7 293,-133.8 299.9,-136.6"/><path d="M636.8,-81.9C610,-97 558.2,-123.1 509.9,-128.8"/><path d="M507.9,-128.8C469.9,-133.3 427.8,-117.5 401.1,-104.7"/><polygon fill="#8a93a5" points="402.3,-102.6 394.9,-101.7 400.1,-106.9"/><a href="../proc/read_declaration.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="453.3" y="-81.6" width="111.2" height="21.6"/><text x="508.9" y="-66.1">read_declaration</text></a><path d="M600.3,-70.8C591.5,-70.8 582.4,-70.8 573.4,-70.8"/><polygon fill="#8a93a5" points="573.4,-68.4 566.4,-70.8 573.4,-73.3"/><path d="M452.9,-62.2C442.1,-60.5 430.9,-58.8 420.5,-57.1"/><polygon fill="#8a93a5" points="421.1,-54.7 413.8,-56.1 420.3,-59.6"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="620.4" y="-41.6" width="71.5" height="21.6"/><text x="656.2" y="-26.1">open_unit</text></a><path d="M620,-30.8C605.7,-30.8 588.6,-30.8 572.2,-30.8"/><polygon fill="#8a93a5" points="572.3,-28.4 565.3,-30.8 572.3,-33.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="747.8" y="-61.6" width="70.8" height="21.6"/><text x="783.2" y="-46.1">parse_file</text></a><path d="M747.4,-56.4C738.9,-57.7 729.5,-59.2 720.2,-60.7"/><polygon fill="#8a93a5" points="720,-58.3 713.4,-61.8 720.7,-63.1"/><path d="M747.4,-45.2C732.9,-42.9 715.9,-40.2 700.5,-37.7"/><polygon fill="#8a93a5" points="701,-35.3 693.7,-36.6 700.3,-40.2"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="854.6" y="-61.6" width="138" height="21.6"/><text x="923.6" y="-46.1">load_project_sources</text></a><path d="M854.2,-50.8C845,-50.8 835.8,-50.8 827.2,-50.8"/><polygon fill="#8a93a5" points="827.4,-48.4 820.4,-50.8 827.4,-53.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1028.5" y="-61.6" width="54" height="21.6"/><text x="1055.5" y="-46.1">run</text></a><path d="M1028.2,-50.8C1020.1,-50.8 1010.7,-50.8 1001,-50.8"/><polygon fill="#8a93a5" points="1001.3,-48.4 994.3,-50.8 1001.3,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> closing_paren(s, <span class="k">open</span>)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: s   <span class="d">!! the text</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: <span class="k">open</span>         <span class="d">!! position of the `(`</span>
+    <span class="k">integer</span> :: k, depth
+    <span class="k">character</span> :: quote
+
+    closing_paren = <span class="n">0</span>
+    depth = <span class="n">0</span>
+    quote = <span class="s">' '</span>
+    <span class="k">do</span> k = <span class="k">open</span>, <span class="k">len</span>(s)
+        <span class="k">if</span> (quote /= <span class="s">' '</span>) <span class="k">then</span>
+            <span class="k">if</span> (s(k:k) == quote) quote = <span class="s">' '</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">select</span> <span class="k">case</span> (s(k:k))
+        <span class="k">case</span> (<span class="s">'"'</span>, <span class="s">"'"</span>)
+            quote = s(k:k)
+        <span class="k">case</span> (<span class="s">'('</span>, <span class="s">'['</span>)
+            depth = depth + <span class="n">1</span>
+        <span class="k">case</span> (<span class="s">')'</span>, <span class="s">']'</span>)
+            depth = depth - <span class="n">1</span>
+            <span class="k">if</span> (depth == <span class="n">0</span>) <span class="k">then</span>
+                closing_paren = k
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">select</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">function</span> closing_paren</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>argument_table &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>argument_table<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> argument_table(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">ids</span>, <span class="intent attr-in" title="intent(in)">components</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write a table of dummy arguments, or with <code>components</code> of other variables, such as the components
+of a type. Those have no intent, and may have a default value and a permission.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-ids"><td class="name">ids</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the variables</p></td></tr>
+<tr id="variable-components"><td class="name">components</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>true for variables that are not arguments</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/anchor.html">anchor</a></li><li><a href="../proc/html_escape.html">html_escape</a></li><li><a href="../proc/write_type.html">write_type</a></li><li><a href="../proc/badge.html">badge</a></li><li><a href="../proc/argument_attributes.html">argument_attributes</a></li></ul>
+<div class="graph"><svg width="777pt" height="303pt"
+ viewBox="0 0 777 303" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 299.4)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/argument_table.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-218.6" width="104.7" height="21.6"/><text x="52.4" y="-203.1">argument_table</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="574.6" y="-179.6" width="54" height="21.6"/><text x="601.6" y="-164.1">add</text></a><path d="M66.1,-219.5C82.2,-233.5 111.3,-256.2 140.7,-266.8 229.5,-298.6 257.9,-280.4 352,-286.8"/><a href="../proc/anchor.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="178.7" y="-139.6" width="54.1" height="21.6"/><text x="205.8" y="-124.1">anchor</text></a><path d="M67.7,-196.2C84.4,-183.1 113.2,-162.1 140.7,-148.8 150,-144.3 160.5,-140.6 170.3,-137.6"/><polygon fill="#8a93a5" points="170.8,-140 176.8,-135.6 169.4,-135.3"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="435.2" y="-218.6" width="88.1" height="21.6"/><text x="479.3" y="-203.1">html_escape</text></a><path d="M206.8,-207.8C271.2,-203.6 287.6,-212 352,-207.8"/><path d="M354,-207.8C377.8,-206.2 404.1,-206 426.5,-206.3"/><polygon fill="#8a93a5" points="426.2,-208.7 433.3,-206.4 426.3,-203.8"/><a href="../proc/write_type.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="168.9" y="-257.6" width="73.6" height="21.6"/><text x="205.8" y="-242.1">write_type</text></a><path d="M98.8,-219.5C118.3,-224.5 141,-230.4 160.4,-235.4"/><polygon fill="#8a93a5" points="159.6,-237.7 167,-237.1 160.9,-233"/><a href="../proc/badge.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="326" y="-179.6" width="54" height="21.6"/><text x="353" y="-164.1">badge</text></a><path d="M105.6,-209.5C134.8,-210 171.8,-210 204.8,-207.8"/><path d="M206.8,-207.8C245.7,-205.2 288.7,-192.4 317.7,-182.1"/><polygon fill="#8a93a5" points="318.3,-184.5 324.1,-179.8 316.6,-179.9"/><a href="../proc/argument_attributes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140.7" y="-179.6" width="130" height="21.6"/><text x="205.8" y="-164.1">argument_attributes</text></a><path d="M98.8,-196.1C115.9,-191.7 135.4,-186.7 153,-182.1"/><polygon fill="#8a93a5" points="153.3,-184.6 159.5,-180.5 152.1,-179.8"/><a href="../proc/entity_anchor.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="306.8" y="-120.6" width="92.5" height="21.6"/><text x="353" y="-105.1">entity_anchor</text></a><path d="M233.1,-125.4C251.2,-123 275.9,-119.8 298.1,-116.8"/><polygon fill="#8a93a5" points="298.4,-119.3 305,-115.9 297.7,-114.4"/><path d="M515.1,-196.5C531.1,-191.3 550.2,-185.1 566.2,-179.9"/><polygon fill="#8a93a5" points="566.9,-182.3 572.8,-177.8 565.4,-177.6"/><path d="M234.6,-258.1C263.4,-268.9 310,-284 352,-286.8"/><path d="M354,-286.8C409.1,-290.5 425.6,-303.4 478.3,-286.8"/><path d="M235.4,-235.5C264.3,-225 310.4,-210.5 352,-207.8"/><a href="../proc/link_to.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="326" y="-257.6" width="54" height="21.6"/><text x="353" y="-242.1">link_to</text></a><path d="M243,-246.8C265.8,-246.8 295.1,-246.8 317.5,-246.8"/><polygon fill="#8a93a5" points="317.2,-249.3 324.2,-246.8 317.2,-244.4"/><path d="M380.4,-168.8C425.2,-168.8 516.4,-168.8 566.2,-168.8"/><polygon fill="#8a93a5" points="565.9,-171.3 572.9,-168.8 565.9,-166.4"/><path d="M380.3,-177.1C396,-182 416.4,-188.4 434.4,-194"/><polygon fill="#8a93a5" points="433.7,-196.4 441.1,-196.1 435.1,-191.7"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="442.8" y="-140.6" width="72.9" height="21.6"/><text x="479.3" y="-125.1">lowercase</text></a><path d="M380.3,-160.5C396,-155.6 416.4,-149.2 434.4,-143.6"/><polygon fill="#8a93a5" points="435.1,-145.9 441.1,-141.5 433.7,-141.2"/><path d="M270.9,-168.8C286.9,-168.8 303.4,-168.8 317.3,-168.8"/><polygon fill="#8a93a5" points="317.1,-171.3 324.1,-168.8 317.1,-166.4"/><path d="M480.3,-90.8C523.9,-94.3 564.3,-129.7 585.3,-151.6"/><polygon fill="#8a93a5" points="583.4,-153.1 590,-156.5 587,-149.8"/><path d="M368.2,-121C390.2,-138.3 432.2,-171.5 457.5,-191.4"/><polygon fill="#8a93a5" points="456,-193.3 463,-195.8 459,-189.5"/><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="559.3" y="-21.6" width="84.5" height="21.6"/><text x="601.6" y="-6.1">object_word</text></a><path d="M363.2,-98.7C377.4,-82.3 405.8,-51.5 435.2,-31.8 452.6,-20.2 458,-18.1 478.3,-12.8"/><path d="M480.3,-12.8C502.8,-6.9 528.6,-5.8 550.5,-6.4"/><polygon fill="#8a93a5" points="550.4,-8.8 557.5,-6.7 550.6,-3.9"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="560" y="-101.6" width="83.1" height="21.6"/><text x="601.6" y="-86.1">page_name</text></a><path d="M395.8,-98.5C419.8,-93.3 450.6,-88.6 478.3,-90.8"/><path d="M480.3,-90.8C503.5,-92.7 529.4,-92.9 551.1,-92.6"/><polygon fill="#8a93a5" points="551.1,-95 558.1,-92.4 551,-90.1"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="567.3" y="-61.6" width="68.6" height="21.6"/><text x="601.6" y="-46.1">url_quote</text></a><path d="M480.3,-12.8C497,-8.5 538.6,-23.8 568.2,-36.3"/><polygon fill="#8a93a5" points="567.1,-38.5 574.5,-39 569,-34"/><path d="M377.8,-258.1C408.2,-271.9 459.4,-292.8 478.3,-286.8"/><path d="M480.3,-286.8C500.2,-280.5 506.8,-280.7 523.3,-267.8 552.6,-245 577,-208.9 590.2,-187.1"/><polygon fill="#8a93a5" points="592.1,-188.6 593.6,-181.4 587.9,-186.2"/><path d="M380.3,-238.5C396,-233.6 416.4,-227.2 434.4,-221.6"/><polygon fill="#8a93a5" points="435.1,-223.9 441.1,-219.5 433.7,-219.2"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="445.7" y="-62.6" width="67.1" height="21.6"/><text x="479.3" y="-47.1">entity_url</text></a><path d="M364.6,-235.6C374.8,-224.5 389.8,-206.6 399.2,-188.8 423.7,-142.6 402.4,-117.5 435.2,-76.8 437.9,-73.4 441.2,-70.4 444.8,-67.8"/><polygon fill="#8a93a5" points="446.1,-69.9 450.5,-63.9 443.3,-65.8"/><a href="../proc/is_shown.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="445" y="-258.6" width="68.6" height="21.6"/><text x="479.3" y="-243.1">is_shown</text></a><path d="M380.3,-247C396.7,-247.1 418,-247.3 436.5,-247.5"/><polygon fill="#8a93a5" points="436.3,-249.9 443.3,-247.5 436.3,-245"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="679.8" y="-21.6" width="89.6" height="21.6"/><text x="724.6" y="-6.1">is_procedure</text></a><path d="M644.2,-10.8C652.8,-10.8 662,-10.8 670.9,-10.8"/><polygon fill="#8a93a5" points="670.9,-13.3 677.9,-10.8 670.9,-8.4"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="685.6" y="-101.6" width="78" height="21.6"/><text x="724.6" y="-86.1">lower_char</text></a><path d="M643.5,-90.8C654.3,-90.8 665.9,-90.8 676.9,-90.8"/><polygon fill="#8a93a5" points="676.6,-93.3 683.6,-90.8 676.6,-88.4"/><path d="M513.1,-40.6C527.6,-35.7 544.7,-29.8 560,-24.6"/><polygon fill="#8a93a5" points="560.5,-27.1 566.3,-22.5 558.9,-22.4"/><path d="M513.1,-62.5C527,-66.9 543.3,-72.2 558,-77"/><polygon fill="#8a93a5" points="557.2,-79.3 564.6,-79.1 558.7,-74.7"/><path d="M513.1,-51.5C527.2,-51.4 543.8,-51.3 558.8,-51.1"/><polygon fill="#8a93a5" points="558.4,-53.6 565.4,-51.1 558.4,-48.7"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/entity_page.html">entity_page</a></li><li><a href="../proc/enum_sections.html">enum_sections</a></li><li><a href="../proc/procedure_body.html">procedure_body</a></li><li><a href="../proc/type_body.html">type_body</a></li></ul>
+<div class="graph"><svg width="881pt" height="127pt"
+ viewBox="0 0 881 127" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 123.1)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/argument_table.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="104.7" height="21.6"/><text x="52.4" y="-66.1">argument_table</text></a><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="285.1" y="-81.6" width="81.6" height="21.6"/><text x="325.9" y="-66.1">entity_page</text></a><path d="M309.3,-82C294.6,-91.8 271.5,-105.3 249.1,-110.8 202.4,-122.4 187.8,-121.1 140.7,-110.8 119.3,-106.1 96.7,-95.7 79.9,-86.6"/><polygon fill="#8a93a5" points="81.3,-84.5 74,-83.3 78.9,-88.8"/><a href="../proc/enum_sections.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="144" y="-101.6" width="101.8" height="21.6"/><text x="194.9" y="-86.1">enum_sections</text></a><path d="M284.8,-77C275.1,-78.5 264.6,-80.2 254.2,-81.8"/><polygon fill="#8a93a5" points="254,-79.3 247.5,-82.8 254.8,-84.1"/><a href="../proc/procedure_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140.7" y="-61.6" width="108.4" height="21.6"/><text x="194.9" y="-46.1">procedure_body</text></a><path d="M284.8,-64.6C276.1,-63.2 266.7,-61.8 257.4,-60.3"/><polygon fill="#8a93a5" points="258.1,-58 250.8,-59.3 257.3,-62.8"/><a href="../proc/type_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="157.7" y="-21.6" width="74.4" height="21.6"/><text x="194.9" y="-6.1">type_body</text></a><path d="M305.3,-59.6C290.2,-51.1 268.6,-39.6 249.1,-30.8 244.7,-28.8 240.1,-26.9 235.4,-25"/><polygon fill="#8a93a5" points="236.5,-22.8 229.1,-22.5 234.7,-27.4"/><path d="M143.6,-83.6C134,-82.3 123.8,-80.8 114,-79.4"/><polygon fill="#8a93a5" points="114.5,-77 107.2,-78.5 113.8,-81.9"/><path d="M140.4,-58.4C131.7,-59.7 122.6,-60.9 113.8,-62.2"/><polygon fill="#8a93a5" points="113.4,-59.8 106.9,-63.2 114.1,-64.6"/><path d="M162.8,-22.1C155.6,-24.8 147.8,-27.8 140.7,-30.8 122,-38.6 101.4,-48 84.9,-55.7"/><polygon fill="#8a93a5" points="84.3,-53.3 79,-58.5 86.4,-57.7"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="402.7" y="-81.6" width="116.3" height="21.6"/><text x="460.9" y="-66.1">write_entity_page</text></a><path d="M402.3,-70.8C393.3,-70.8 384,-70.8 375.2,-70.8"/><polygon fill="#8a93a5" points="375.4,-68.4 368.4,-70.8 375.4,-73.3"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="555" y="-81.6" width="122.8" height="21.6"/><text x="616.4" y="-66.1">write_entity_pages</text></a><path d="M554.7,-70.8C545.7,-70.8 536.5,-70.8 527.4,-70.8"/><polygon fill="#8a93a5" points="527.6,-68.4 520.6,-70.8 527.6,-73.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="713.8" y="-81.6" width="69.3" height="21.6"/><text x="748.5" y="-66.1">write_site</text></a><path d="M713.6,-70.8C705.3,-70.8 696,-70.8 686.6,-70.8"/><polygon fill="#8a93a5" points="686.8,-68.4 679.8,-70.8 686.8,-73.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="819.1" y="-81.6" width="54" height="21.6"/><text x="846.1" y="-66.1">run</text></a><path d="M818.7,-70.8C810.4,-70.8 800.9,-70.8 791.7,-70.8"/><polygon fill="#8a93a5" points="791.8,-68.4 784.8,-70.8 791.8,-73.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> argument_table(site, ids, components, b)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site        <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: ids(:)           <span class="d">!! the variables</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: components       <span class="d">!! true for variables that are not arguments</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">logical</span> :: defaults
+    <span class="k">integer</span> :: k
+
+    defaults = <span class="k">.false.</span>
+    <span class="k">if</span> (components) <span class="k">then</span>
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(ids)
+            <span class="k">if</span> (<span class="k">allocated</span>(site%p%list%box(ids(k))%e%initial)) defaults = <span class="k">.true.</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">call</span> add(b, <span class="s">'&lt;table class="arguments"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;'</span>)
+    <span class="k">if</span> (<span class="k">.not.</span> components) <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;Intent&lt;/th&gt;'</span>)
+    <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;Attributes&lt;/th&gt;'</span>)
+    <span class="k">if</span> (defaults) <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;Default&lt;/th&gt;'</span>)
+    <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;Description&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;tbody&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(ids)
+        <span class="k">associate</span> (e =&gt; site%p%list%box(ids(k))%e)
+            <span class="k">call</span> add(b, <span class="s">'&lt;tr id="'</span>)
+            <span class="k">call</span> anchor(site, ids(k), b)
+            <span class="k">call</span> add(b, <span class="s">'"&gt;&lt;td class="name"&gt;'</span>)
+            <span class="k">call</span> html_escape(e%name, b, <span class="k">.false.</span>)
+            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;&lt;td class="type"&gt;'</span>)
+            <span class="k">if</span> (e%<span class="k">kind</span> == E_VARIABLE) <span class="k">then</span>
+                <span class="k">call</span> write_type(site, e, b)
+                <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+                <span class="k">if</span> (<span class="k">.not.</span> components) <span class="k">then</span>
+                    <span class="k">call</span> add(b, <span class="s">'&lt;td&gt;'</span>)
+                    <span class="k">if</span> (<span class="k">allocated</span>(e%<span class="k">intent</span>)) <span class="k">then</span>
+                        <span class="k">if</span> (<span class="k">len</span>(e%<span class="k">intent</span>) &gt; <span class="n">0</span>) <span class="k">call</span> badge(e%<span class="k">intent</span>, b)
+                    <span class="k">end</span> <span class="k">if</span>
+                    <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+                <span class="k">end</span> <span class="k">if</span>
+                <span class="k">call</span> add(b, <span class="s">'&lt;td class="attributes"&gt;'</span>)
+                <span class="k">if</span> (components <span class="k">.and.</span> <span class="k">allocated</span>(e%permission)) <span class="k">then</span>
+                    <span class="k">if</span> (e%permission /= <span class="s">'public'</span>) <span class="k">call</span> badge(e%permission, b)
+                <span class="k">end</span> <span class="k">if</span>
+                <span class="k">call</span> argument_attributes(e, b)
+                <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+                <span class="k">if</span> (defaults) <span class="k">then</span>
+                    <span class="k">call</span> add(b, <span class="s">'&lt;td class="default"&gt;'</span>)
+                    <span class="k">if</span> (<span class="k">allocated</span>(e%initial)) <span class="k">then</span>
+                        <span class="k">if</span> (e%points) <span class="k">call</span> add(b, <span class="s">'=&amp;gt; '</span>)
+                        <span class="k">call</span> html_escape(e%initial, b, <span class="k">.false.</span>)
+                    <span class="k">end</span> <span class="k">if</span>
+                    <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+                <span class="k">end</span> <span class="k">if</span>
+                <span class="k">call</span> add(b, <span class="s">'&lt;td&gt;'</span>)
+                <span class="k">if</span> (<span class="k">allocated</span>(e%html)) <span class="k">call</span> add(b, e%html)
+            <span class="k">else</span>
+                <span class="c">! a dummy procedure with an interface</span>
+                <span class="k">call</span> add(b, <span class="s">'procedure&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td class="attributes"&gt;&lt;/td&gt;&lt;td&gt;'</span>)
+                <span class="k">if</span> (<span class="k">allocated</span>(e%summary)) <span class="k">call</span> add(b, e%summary)
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;&lt;/tr&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> add(b, <span class="s">'&lt;/tbody&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;/table&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<span class="k">end</span> <span class="k">subroutine</span> argument_table</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

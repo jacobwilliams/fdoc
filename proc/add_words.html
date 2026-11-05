@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>add_words &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>add_words<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> add_words(<span class="intent attr-in" title="intent(in)">words</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write <code>words</code> as list items.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-words"><td class="name">words</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the words</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/html_escape.html">html_escape</a></li></ul>
+<div class="graph"><svg width="300pt" height="49pt"
+ viewBox="0 0 300 49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 44.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_words.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="78" height="21.6"/><text x="39" y="-25.1">add_words</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="238.1" y="-40.6" width="54" height="21.6"/><text x="265.1" y="-25.1">add</text></a><path d="M78.8,-30.4C90.1,-30.6 102.6,-30.7 114,-30.8 153.2,-31.1 162.9,-31.1 202.1,-30.8 211,-30.7 220.6,-30.6 229.5,-30.5"/><polygon fill="#8a93a5" points="229.4,-32.9 236.3,-30.3 229.3,-28"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="114" y="-21.6" width="88.1" height="21.6"/><text x="158.1" y="-6.1">html_escape</text></a><path d="M79,-23.5C87.5,-22.1 96.7,-20.6 105.7,-19.1"/><polygon fill="#8a93a5" points="105.8,-21.6 112.3,-18.1 105,-16.8"/><path d="M202.4,-18.6C211.4,-20.3 220.7,-22 229.4,-23.5"/><polygon fill="#8a93a5" points="228.9,-25.9 236.2,-24.8 229.8,-21.1"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/common_sections.html">common_sections</a></li><li><a href="../proc/entity_page.html">entity_page</a></li><li><a href="../proc/type_body.html">type_body</a></li></ul>
+<div class="graph"><svg width="865pt" height="84pt"
+ viewBox="0 0 865 84" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 80)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_words.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="78" height="21.6"/><text x="39" y="-46.1">add_words</text></a><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="269.2" y="-61.6" width="81.6" height="21.6"/><text x="310" y="-46.1">entity_page</text></a><path d="M273.9,-62.1C261.2,-65.6 246.7,-69 233.2,-70.8 180.6,-77.6 166.5,-77.8 114,-70.8 104.1,-69.5 93.7,-67.2 83.8,-64.7"/><polygon fill="#8a93a5" points="84.6,-62.4 77.2,-62.9 83.3,-67.1"/><a href="../proc/common_sections.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="114" y="-61.6" width="119.2" height="21.6"/><text x="173.6" y="-46.1">common_sections</text></a><path d="M269,-50.8C260.5,-50.8 251.3,-50.8 242,-50.8"/><polygon fill="#8a93a5" points="242.1,-48.4 235.1,-50.8 242.1,-53.3"/><a href="../proc/type_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="136.4" y="-21.6" width="74.4" height="21.6"/><text x="173.6" y="-6.1">type_body</text></a><path d="M271.2,-39.6C255,-34.7 236.1,-29.1 219.2,-24.1"/><polygon fill="#8a93a5" points="220,-21.8 212.6,-22.1 218.6,-26.5"/><path d="M113.7,-50.8C104.8,-50.8 95.8,-50.8 87.3,-50.8"/><polygon fill="#8a93a5" points="87.5,-48.4 80.5,-50.8 87.5,-53.3"/><path d="M136,-21.8C120.7,-26.4 102.8,-31.9 86.6,-36.7"/><polygon fill="#8a93a5" points="86.2,-34.3 80.2,-38.7 87.6,-39"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="386.8" y="-61.6" width="116.3" height="21.6"/><text x="444.9" y="-46.1">write_entity_page</text></a><path d="M386.4,-50.8C377.3,-50.8 368.1,-50.8 359.3,-50.8"/><polygon fill="#8a93a5" points="359.5,-48.4 352.5,-50.8 359.5,-53.3"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="539.1" y="-61.6" width="122.8" height="21.6"/><text x="600.5" y="-46.1">write_entity_pages</text></a><path d="M538.8,-50.8C529.8,-50.8 520.5,-50.8 511.4,-50.8"/><polygon fill="#8a93a5" points="511.7,-48.4 504.7,-50.8 511.7,-53.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="697.9" y="-61.6" width="69.3" height="21.6"/><text x="732.5" y="-46.1">write_site</text></a><path d="M697.7,-50.8C689.3,-50.8 680,-50.8 670.6,-50.8"/><polygon fill="#8a93a5" points="670.9,-48.4 663.9,-50.8 670.9,-53.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="803.2" y="-61.6" width="54" height="21.6"/><text x="830.2" y="-46.1">run</text></a><path d="M802.8,-50.8C794.4,-50.8 784.9,-50.8 775.7,-50.8"/><polygon fill="#8a93a5" points="775.9,-48.4 768.9,-50.8 775.9,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> add_words(words, b)
+    <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: words(:)  <span class="d">!! the words</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(words)
+        <span class="k">call</span> add(b, <span class="s">'&lt;li&gt;'</span>)
+        <span class="k">call</span> html_escape(words(k)%s, b, <span class="k">.false.</span>)
+        <span class="k">call</span> add(b, <span class="s">'&lt;/li&gt;'</span>)
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> add_words</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

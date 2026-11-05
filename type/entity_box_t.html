@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>entity_box_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-e"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>e</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_model.f90.html">fdoc_model.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_model.html">fdoc_model</a></div>
+<h1><span class="kind">type</span>entity_box_t</h1>
+<div class="doc">
+<p>Holds an entity, so that it can be moved without being copied.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-e"><td class="name">e</td><td class="type">type(<a href="../type/entity_t.html">entity_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the entity</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Component of (1)</h3>
+<ul class="chips kinds"><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/entity_list_t.html">entity_list_t</a></li></ul>
+<h2 id="inherits">Inherits</h2>
+<div class="graph"><svg width="999pt" height="190pt"
+ viewBox="0 0 999 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 186.1)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/entity_box_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="906.2" y="-68.6" width="84.5" height="21.6"/><text x="948.4" y="-53.1">entity_box_t</text></a><a href="../type/entity_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="807.7" y="-68.6" width="56.3" height="21.6"/><text x="835.9" y="-53.1">entity_t</text></a><path stroke-dasharray="5,2" d="M905.3,-57.8C894.6,-57.8 883.3,-57.8 872.9,-57.8"/><polygon fill="#8a93a5" points="873,-55.4 866,-57.8 873,-60.3"/><text x="885.1" y="-60.4" font-size="11" fill="#8a93a5">e</text><a href="../type/entity_more_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="637.4" y="-123.6" width="93.2" height="21.6"/><text x="684" y="-108.1">entity_more_t</text></a><path stroke-dasharray="5,2" d="M807.4,-67.9C783.9,-76.5 749.8,-89 723.5,-98.7"/><polygon fill="#8a93a5" points="722.8,-96.3 717.1,-101 724.5,-100.9"/><text x="777.2" y="-84.6" font-size="11" fill="#8a93a5">more</text><a href="https://jacobwilliams.github.io/fformat/type/string_t.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="155.7" y="-68.6" width="57" height="21.6"/><text x="184.2" y="-53.1">string_t</text></a><path stroke-dasharray="5,2" d="M807.4,-57.8C704,-57.8 338.2,-57.8 221.4,-57.8"/><polygon fill="#8a93a5" points="221.6,-55.4 214.6,-57.8 221.6,-60.3"/><text x="684" y="-60.4" font-size="11" fill="#8a93a5">doc, attribs, display, proto</text><a href="../type/meta_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="656.9" y="-21.6" width="54.1" height="21.6"/><text x="684" y="-6.1">meta_t</text></a><path stroke-dasharray="5,2" d="M819.3,-46.5C810.9,-40.9 800.2,-34.6 789.7,-30.6 767.2,-22 740.6,-17 719.8,-14.2"/><polygon fill="#8a93a5" points="720.3,-11.8 713,-13.4 719.7,-16.7"/><text x="777.2" y="-33.2" font-size="11" fill="#8a93a5">meta</text><path stroke-dasharray="5,2" d="M637.2,-103.2C626.2,-101.1 614.4,-99.1 603.3,-97.6 442.1,-75.9 399.4,-91.7 238.3,-68.8 232.8,-68 227,-67 221.4,-65.9"/><polygon fill="#8a93a5" points="222.1,-63.6 214.7,-64.6 221.1,-68.4"/><text x="420.8" y="-100.2" font-size="11" fill="#8a93a5">public_list, args, calls, unknown_calls, modprocs, parameters_list, bindings</text><a href="../type/use_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="157.2" y="-177.6" width="54" height="21.6"/><text x="184.2" y="-162.1">use_t</text></a><path stroke-dasharray="5,2" d="M658.1,-124C642.6,-130.4 622.2,-137.9 603.3,-141.8 463.4,-170.8 291.9,-170 219.8,-168.1"/><polygon fill="#8a93a5" points="220.1,-165.6 213,-167.9 219.9,-170.5"/><text x="420.8" y="-171.5" font-size="11" fill="#8a93a5">uses</text><a href="../type/attribute_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="148.1" y="-137.6" width="72.2" height="21.6"/><text x="184.2" y="-122.1">attribute_t</text></a><path stroke-dasharray="5,2" d="M637.1,-114.1C541.6,-116.8 322.9,-122.9 229.2,-125.6"/><polygon fill="#8a93a5" points="229.2,-123.1 222.3,-125.8 229.4,-128"/><text x="420.8" y="-127.7" font-size="11" fill="#8a93a5">pending, parameters</text><path stroke-dasharray="5,2" d="M656.6,-8.1C586.8,-1.9 392.4,10.2 238.3,-30.6 228.4,-33.2 218.2,-37.9 209.5,-42.6"/><polygon fill="#8a93a5" points="208.4,-40.4 203.5,-46 210.8,-44.7"/><text x="420.8" y="-33.2" font-size="11" fill="#8a93a5">values</text><a href="../type/rename_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="0" y="-177.6" width="69.3" height="21.6"/><text x="34.7" y="-162.1">rename_t</text></a><path stroke-dasharray="5,2" d="M156.8,-166.8C134.9,-166.8 103.4,-166.8 78,-166.8"/><polygon fill="#8a93a5" points="78.1,-164.4 71.1,-166.8 78.1,-169.3"/><text x="108.7" y="-169.4" font-size="11" fill="#8a93a5">renames</text></g>
+</svg>
+</div>
+<h2 id="inherited-by">Inherited by</h2>
+<div class="graph"><svg width="465pt" height="72pt"
+ viewBox="0 0 465 72" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 68)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/entity_box_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-39.6" width="84.5" height="21.6"/><text x="42.3" y="-24.1">entity_box_t</text></a><a href="../type/entity_list_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="138.2" y="-39.6" width="79.4" height="21.6"/><text x="178" y="-24.1">entity_list_t</text></a><path stroke-dasharray="5,2" d="M137.9,-28.8C124.1,-28.8 108.4,-28.8 93.8,-28.8"/><polygon fill="#8a93a5" points="93.9,-26.4 86.9,-28.8 93.9,-31.3"/><text x="111.4" y="-31.4" font-size="11" fill="#8a93a5">box</text><a href="../type/project_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="281.9" y="-61.6" width="64.3" height="21.6"/><text x="314.1" y="-46.1">project_t</text></a><path stroke-dasharray="5,2" d="M281.6,-45.6C265.1,-42.9 244.5,-39.6 226.1,-36.5"/><polygon fill="#8a93a5" points="226.7,-34.1 219.4,-35.4 225.9,-39"/><text x="242.4" y="-42.4" font-size="11" fill="#8a93a5">list</text><a href="../type/link_context_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="267.1" y="-21.6" width="93.9" height="21.6"/><text x="314.1" y="-6.1">link_context_t</text></a><path stroke-dasharray="5,2" d="M266.7,-10.8C256.4,-11.2 245.6,-12.1 235.7,-13.6 232,-14.2 228.2,-14.9 224.4,-15.7"/><polygon fill="#8a93a5" points="224,-13.2 217.7,-17.2 225.1,-18"/><text x="242.4" y="-16.2" font-size="11" fill="#8a93a5">list</text><a href="../type/site_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="403.1" y="-61.6" width="54" height="21.6"/><text x="430.1" y="-46.1">site_t</text></a><path stroke-dasharray="5,2" d="M402.7,-50.8C388.4,-50.8 370.6,-50.8 354.7,-50.8"/><polygon fill="#8a93a5" points="355.2,-48.4 348.2,-50.8 355.2,-53.3"/><text x="382.1" y="-53.4" font-size="11" fill="#8a93a5">p</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span>, <span class="k">public</span> :: entity_box_t
+    <span class="d">!! Holds an entity, so that it can be moved without being copied.</span>
+    <span class="k">type</span>(entity_t), <span class="k">allocatable</span> :: e    <span class="d">!! the entity</span>
+<span class="k">end</span> <span class="k">type</span> entity_box_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

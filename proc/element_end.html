@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>element_end &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>element_end<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> element_end(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">start</span>, <span class="intent attr-in" title="intent(in)">tag</span>, <span class="intent attr-out" title="intent(out)">stop_at</span>)</div>
+<div class="doc">
+<p>The position of the end of the element starting at <code>start</code>, or 0.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-start"><td class="name">start</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>where its <code>&lt;</code> is</p></td></tr>
+<tr id="variable-tag"><td class="name">tag</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>its tag, or <code>!--</code> for a comment</p></td></tr>
+<tr id="variable-stop_at"><td class="name">stop_at</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the position of its last <code>&gt;</code></p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/word_at.html">word_at</a></li></ul>
+<div class="graph"><svg width="206pt" height="70pt"
+ viewBox="0 0 206 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/element_end.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="89.6" height="21.6"/><text x="44.8" y="-26.1">element_end</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="125.6" y="-61.6" width="72.9" height="21.6"/><text x="162" y="-46.1">lowercase</text></a><path d="M90.3,-38.5C99.1,-40 108.2,-41.6 117,-43.2"/><polygon fill="#8a93a5" points="116.3,-45.5 123.7,-44.3 117.2,-40.7"/><a href="../proc/word_at.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="131.7" y="-21.6" width="60.6" height="21.6"/><text x="162" y="-6.1">word_at</text></a><path d="M90.3,-23.1C101.2,-21.2 112.8,-19.2 123.3,-17.3"/><polygon fill="#8a93a5" points="123.6,-19.8 130,-16.2 122.7,-15"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/stash_html_blocks.html">stash_html_blocks</a></li></ul>
+<div class="graph"><svg width="969pt" height="148pt"
+ viewBox="0 0 969 148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 143.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/element_end.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="166" y="-139.6" width="89.6" height="21.6"/><text x="210.8" y="-124.1">element_end</text></a><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="308.9" y="-139.6" width="121.3" height="21.6"/><text x="369.6" y="-124.1">stash_html_blocks</text></a><path d="M308.4,-128.8C294,-128.8 278.7,-128.8 264.6,-128.8"/><polygon fill="#8a93a5" points="265,-126.4 258,-128.8 265,-131.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="148.7" y="-99.6" width="124.2" height="21.6"/><text x="210.8" y="-84.1">markdown_to_html</text></a><path d="M316.3,-115.5C299.4,-111.2 280.8,-106.4 263.9,-102.1"/><polygon fill="#8a93a5" points="315.6,-117.8 323,-117.2 316.9,-113.1"/><polygon fill="#8a93a5" points="264.7,-99.8 257.3,-100.4 263.5,-104.5"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="0" y="-99.6" width="112.7" height="21.6"/><text x="56.3" y="-84.1">render_footnotes</text></a><path d="M139.9,-88.8C133.7,-88.8 127.3,-88.8 121.1,-88.8"/><polygon fill="#8a93a5" points="139.7,-91.3 146.7,-88.8 139.7,-86.4"/><polygon fill="#8a93a5" points="121.3,-86.4 114.3,-88.8 121.3,-91.3"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="466.3" y="-100.6" width="97.5" height="21.6"/><text x="515" y="-85.1">markdown_list</text></a><path d="M465.8,-89.6C416,-89.5 337.8,-89.2 281.3,-89"/><polygon fill="#8a93a5" points="281.7,-86.6 274.7,-89 281.7,-91.5"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="329.5" y="-61.6" width="80.2" height="21.6"/><text x="369.6" y="-46.1">render_text</text></a><path d="M329,-60.4C310,-65 287,-70.6 266.4,-75.6"/><polygon fill="#8a93a5" points="266,-73.1 259.8,-77.2 267.2,-77.9"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="906.5" y="-61.6" width="54" height="21.6"/><text x="933.5" y="-46.1">run</text></a><path d="M643.9,-89.8C620.5,-88.1 594.7,-87.7 572.4,-88"/><polygon fill="#8a93a5" points="572.5,-85.5 565.6,-88.1 572.6,-90.4"/><path d="M906.3,-60.7C895.4,-64.5 882.5,-68.4 870.5,-70.8 772.3,-90.5 745.8,-97.3 645.9,-89.8"/><path d="M643.9,-89.8C584.5,-86.9 575.3,-55.2 516,-50.8"/><a href="../proc/render_documentation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="726" y="-61.6" width="144.5" height="21.6"/><text x="798.3" y="-46.1">render_documentation</text></a><path d="M906.2,-50.8C898.1,-50.8 888.8,-50.8 879.1,-50.8"/><polygon fill="#8a93a5" points="879.4,-48.4 872.4,-50.8 879.4,-53.3"/><a href="../proc/load_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="757.5" y="-21.6" width="81.6" height="21.6"/><text x="798.3" y="-6.1">load_pages</text></a><path d="M906,-42C895.1,-38.4 882.2,-34.3 870.5,-30.8 862.9,-28.5 854.9,-26.2 847.1,-23.9"/><polygon fill="#8a93a5" points="848.1,-21.7 840.7,-22.2 846.8,-26.4"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="599.7" y="-61.6" width="90.3" height="21.6"/><text x="644.9" y="-46.1">render_entity</text></a><path d="M599.4,-52.4C574.8,-52.9 543.7,-52.9 516,-50.8"/><path d="M514,-50.8C482.2,-48.4 446.2,-48.4 418.3,-49"/><polygon fill="#8a93a5" points="418.4,-46.6 411.4,-49.2 418.5,-51.5"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="476.7" y="-22.6" width="76.6" height="21.6"/><text x="515" y="-7.1">read_page</text></a><path d="M476.3,-22C458.5,-26.9 437.1,-32.7 418.2,-37.8"/><polygon fill="#8a93a5" points="417.6,-35.5 411.5,-39.7 418.9,-40.2"/><path d="M725.6,-50.8C716.4,-50.8 707.2,-50.8 698.4,-50.8"/><polygon fill="#8a93a5" points="698.7,-48.4 691.7,-50.8 698.7,-53.3"/><a href="../proc/read_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="609.9" y="-21.6" width="70" height="21.6"/><text x="644.9" y="-6.1">read_tree</text></a><path d="M609.6,-11.1C594.9,-11.2 577.4,-11.3 561.6,-11.4"/><polygon fill="#8a93a5" points="562,-9 555,-11.5 562,-13.9"/><path d="M757.1,-10.8C735.9,-10.8 709.9,-10.8 688.4,-10.8"/><polygon fill="#8a93a5" points="688.6,-8.4 681.6,-10.8 688.6,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">subroutine</span> element_end(text, start, tag, stop_at)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: start            <span class="d">!! where its `&lt;` is</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: tag     <span class="d">!! its tag, or `!--` for a comment</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: stop_at         <span class="d">!! the position of its last `&gt;`</span>
+    <span class="k">character</span>(<span class="k">len</span>=<span class="k">len</span>(text)) :: low
+    <span class="k">integer</span> :: i, depth, gt
+
+    stop_at = <span class="n">0</span>
+    <span class="k">if</span> (tag == <span class="s">'!--'</span>) <span class="k">then</span>
+        i = <span class="k">index</span>(text(start:), <span class="s">'--&gt;'</span>)
+        <span class="k">if</span> (i &gt; <span class="n">0</span>) stop_at = start + i + <span class="n">1</span>
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">if</span> (tag == <span class="s">'hr'</span>) <span class="k">then</span>
+        i = <span class="k">index</span>(text(start:), <span class="s">'&gt;'</span>)
+        <span class="k">if</span> (i &gt; <span class="n">0</span>) stop_at = start + i - <span class="n">1</span>
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    low = lowercase(text)
+    depth = <span class="n">0</span>
+    i = start
+    <span class="k">do</span> <span class="k">while</span> (i &lt;= <span class="k">len</span>(text))
+        <span class="k">if</span> (low(i:i) /= <span class="s">'&lt;'</span>) <span class="k">then</span>
+            i = i + <span class="n">1</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (word_at(low, i + <span class="n">1</span>, tag)) <span class="k">then</span>
+            gt = <span class="k">index</span>(low(i:), <span class="s">'&gt;'</span>)
+            <span class="k">if</span> (gt == <span class="n">0</span>) <span class="k">return</span>
+            <span class="k">if</span> (low(i + gt - <span class="n">2</span>:i + gt - <span class="n">2</span>) /= <span class="s">'/'</span>) depth = depth + <span class="n">1</span>
+            <span class="k">if</span> (depth == <span class="n">0</span>) <span class="k">then</span>
+                stop_at = i + gt - <span class="n">1</span>
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+            i = i + gt
+        <span class="k">else</span> <span class="k">if</span> (word_at(low, i + <span class="n">2</span>, tag) <span class="k">.and.</span> low(i + <span class="n">1</span>:i + <span class="n">1</span>) == <span class="s">'/'</span>) <span class="k">then</span>
+            depth = depth - <span class="n">1</span>
+            gt = <span class="k">index</span>(low(i:), <span class="s">'&gt;'</span>)
+            <span class="k">if</span> (gt == <span class="n">0</span>) <span class="k">return</span>
+            <span class="k">if</span> (depth == <span class="n">0</span>) <span class="k">then</span>
+                stop_at = i + gt - <span class="n">1</span>
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+            i = i + gt
+        <span class="k">else</span>
+            i = i + <span class="n">1</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> element_end</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

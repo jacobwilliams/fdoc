@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>write_form &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_generics.f90.html">fdoc_generics.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_generics.html">fdoc_generics</a></div>
+<h1><span class="kind">subroutine</span>write_form<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> write_form(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">ids</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write one call form, whose specific procedures are <code>ids</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-list"><td class="name">list</td><td class="type">type(<a href="../type/entity_list_t.html">entity_list_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entities</p></td></tr>
+<tr id="variable-name"><td class="name">name</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the generic</p></td></tr>
+<tr id="variable-ids"><td class="name">ids</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the specific procedures of the form</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/describe.html">describe</a></li><li><a href="../proc/is_elemental.html">is_elemental</a></li><li><a href="../proc/rank_label.html">rank_label</a></li><li><a href="../proc/label_results.html">label_results</a></li><li><a href="../proc/int_text.html">int_text</a></li><li><a href="../proc/push_int.html">push_int</a></li><li><a href="../proc/sort_ints.html">sort_ints</a></li><li><a href="../proc/add.html">add</a></li><li><a href="../proc/call_text.html">call_text</a></li><li><a href="../proc/shared_summary.html">shared_summary</a></li><li><a href="../proc/html_escape.html">html_escape</a></li><li><a href="../proc/specific_link.html">specific_link</a></li></ul>
+<div class="graph"><svg width="607pt" height="640pt"
+ viewBox="0 0 607 640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 636.4)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/write_form.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-275.6" width="75.1" height="21.6"/><text x="37.5" y="-260.1">write_form</text></a><a href="../proc/describe.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="260.1" y="-567.6" width="63.5" height="21.6"/><text x="291.9" y="-552.1">describe</text></a><path d="M38.5,-276.3C39.2,-323.6 48.6,-504 153.8,-576.8"/><path d="M155.8,-576.8C170.9,-587.3 217.5,-577.7 251.8,-568.5"/><polygon fill="#8a93a5" points="252.2,-570.9 258.3,-566.7 250.9,-566.2"/><a href="../proc/is_elemental.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="111.1" y="-295.6" width="87.4" height="21.6"/><text x="154.8" y="-280.1">is_elemental</text></a><path d="M76,-271.3C84.5,-272.8 93.7,-274.4 102.8,-275.9"/><polygon fill="#8a93a5" points="102.1,-278.3 109.5,-277.1 103,-273.5"/><a href="../proc/rank_label.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="254.7" y="-489.6" width="74.4" height="21.6"/><text x="291.9" y="-474.1">rank_label</text></a><path d="M155.8,-439.8C170.9,-449.3 213,-460.7 246.2,-468.7"/><polygon fill="#8a93a5" points="245.6,-471.1 253,-470.3 246.7,-466.3"/><a href="../proc/label_results.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="111.1" y="-489.6" width="87.4" height="21.6"/><text x="154.8" y="-474.1">label_results</text></a><path d="M40.2,-276.4C45.5,-308.1 63.8,-398.1 111.1,-453.8 114,-457.2 117.5,-460.3 121.3,-463"/><polygon fill="#8a93a5" points="119.7,-465 126.9,-466.7 122.4,-460.9"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="401.2" y="-450.6" width="56.3" height="21.6"/><text x="429.3" y="-435.1">int_text</text></a><path d="M42.3,-276.2C53.3,-308.3 89.4,-399.4 153.8,-439.8"/><path d="M155.8,-439.8C194.2,-464 328.2,-451.9 392.8,-444.3"/><polygon fill="#8a93a5" points="393,-446.8 399.6,-443.5 392.4,-441.9"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="123" y="-61.6" width="63.5" height="21.6"/><text x="154.8" y="-46.1">push_int</text></a><path d="M40.2,-253.2C45.5,-221.5 63.8,-131.5 111.1,-75.8 114,-72.4 117.5,-69.3 121.3,-66.6"/><polygon fill="#8a93a5" points="122.4,-68.7 126.9,-62.9 119.7,-64.6"/><a href="../proc/sort_ints.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="123" y="-21.6" width="63.5" height="21.6"/><text x="154.8" y="-6.1">sort_ints</text></a><path d="M38.9,-253.3C40.8,-216.3 51.4,-99.3 111.1,-30.8 112.5,-29.2 114.1,-27.7 115.7,-26.3"/><polygon fill="#8a93a5" points="117.1,-28.4 121.4,-22.4 114.3,-24.3"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="527.2" y="-411.6" width="54" height="21.6"/><text x="554.2" y="-396.1">add</text></a><path d="M46.3,-253.2C58.2,-236.2 82.7,-204.6 111.1,-186.8 180.8,-143 407.9,-58.8 473.4,-108.8 517.8,-142.7 543.5,-321.7 550.9,-381.4"/><polygon fill="#8a93a5" points="548.4,-381.4 551.7,-388.1 553.3,-380.9"/><a href="../proc/call_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="123.7" y="-335.6" width="62.1" height="21.6"/><text x="154.8" y="-320.1">call_text</text></a><path d="M59,-276.5C73.4,-284.7 93.3,-295.7 111.1,-304.8 114.5,-306.6 118.2,-308.4 121.8,-310.1"/><polygon fill="#8a93a5" points="120.5,-312.2 127.9,-313 122.6,-307.8"/><a href="../proc/shared_summary.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="234.5" y="-607.6" width="114.8" height="21.6"/><text x="291.9" y="-592.1">shared_summary</text></a><path d="M155.8,-576.8C176,-590.8 202,-596.7 225.8,-598.9"/><polygon fill="#8a93a5" points="225.5,-601.3 232.6,-599.3 225.8,-596.4"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="385.3" y="-257.6" width="88.1" height="21.6"/><text x="429.3" y="-242.1">html_escape</text></a><path d="M75.9,-263.1C145.9,-259.8 296.7,-252.9 376.5,-249.2"/><polygon fill="#8a93a5" points="376.5,-251.6 383.4,-248.9 376.3,-246.8"/><a href="../proc/specific_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="112.5" y="-217.6" width="84.5" height="21.6"/><text x="154.8" y="-202.1">specific_link</text></a><path d="M61.9,-253.1C79.9,-244 104.9,-231.4 124.3,-221.7"/><polygon fill="#8a93a5" points="125.2,-223.9 130.3,-218.6 123,-219.6"/><path d="M324.1,-561.6C362.4,-565.7 428,-567.2 473.4,-537.8 516.3,-510.1 538.9,-450.6 548.1,-419.9"/><polygon fill="#8a93a5" points="550.4,-420.9 549.9,-413.5 545.7,-419.6"/><a href="../proc/rank_of.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="400.5" y="-606.6" width="57.8" height="21.6"/><text x="429.3" y="-591.1">rank_of</text></a><path d="M324,-565.7C344.2,-571.6 370.8,-579.2 392,-585.3"/><polygon fill="#8a93a5" points="391.3,-587.7 398.7,-587.3 392.7,-583"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="402.3" y="-528.6" width="54" height="21.6"/><text x="429.3" y="-513.1">take</text></a><path d="M324,-547.9C344.9,-541.8 372.5,-533.9 394,-527.7"/><polygon fill="#8a93a5" points="394.5,-530.1 400.5,-525.8 393.1,-525.4"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="255.4" y="-295.6" width="72.9" height="21.6"/><text x="291.9" y="-280.1">lowercase</text></a><path d="M198.9,-284.8C214.1,-284.8 231.3,-284.8 246.6,-284.8"/><polygon fill="#8a93a5" points="246.4,-287.3 253.4,-284.8 246.4,-282.4"/><path d="M329.5,-468.2C349.3,-462.6 373.5,-455.6 393.1,-450"/><polygon fill="#8a93a5" points="393.6,-452.3 399.7,-448.1 392.3,-447.6"/><path d="M329.5,-480.5C366.9,-481 426.1,-478.2 473.4,-459.8 497.8,-450.3 521.4,-431.2 536.5,-417.3"/><polygon fill="#8a93a5" points="538,-419.4 541.4,-412.8 534.6,-415.8"/><path d="M329.5,-489.4C349.6,-495.1 374.2,-502.2 393.9,-507.9"/><polygon fill="#8a93a5" points="393.1,-510.2 400.5,-509.8 394.5,-505.5"/><path d="M198.9,-478.8C214,-478.8 231,-478.8 246.2,-478.8"/><polygon fill="#8a93a5" points="246,-481.3 253,-478.8 246,-476.4"/><path d="M166.3,-335.8C180.3,-349.6 206.7,-372.8 234.5,-382.8 332.6,-418.2 458.7,-411.3 518.6,-405.1"/><polygon fill="#8a93a5" points="518.8,-407.6 525.5,-404.4 518.3,-402.7"/><path d="M186.1,-326.5C225.2,-327.6 294.6,-325.9 349.3,-304.8 373.2,-295.6 396.3,-277.2 411.3,-263.5"/><polygon fill="#8a93a5" points="412.7,-265.6 416.1,-259.1 409.3,-262"/><path d="M186.1,-315.8C204.1,-310.5 227.4,-303.6 247.3,-297.7"/><polygon fill="#8a93a5" points="247.9,-300.1 253.9,-295.7 246.5,-295.4"/><a href="../proc/argument_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="237.3" y="-373.6" width="109.1" height="21.6"/><text x="291.9" y="-358.1">argument_name</text></a><path d="M186.1,-333.3C202.8,-338 224,-344 243,-349.3"/><polygon fill="#8a93a5" points="242.1,-351.6 249.5,-351.1 243.4,-346.9"/><path d="M315.8,-608.1C352.6,-624.3 425.5,-649.1 473.4,-615.8 538.8,-570.3 550.7,-464.4 552.8,-420.5"/><polygon fill="#8a93a5" points="555.2,-420.7 553,-413.6 550.3,-420.5"/><path d="M439.2,-257.9C460.2,-284.3 513.6,-351.2 539.1,-383.2"/><polygon fill="#8a93a5" points="537.2,-384.7 543.5,-388.6 541,-381.6"/><path d="M197.2,-205.7C224,-205.3 259.5,-205.5 290.9,-207.8"/><path d="M292.9,-207.8C352.9,-212.3 377.6,-175.4 428.3,-207.8"/><path d="M292.9,-207.8C328.3,-210.4 367.1,-222.6 394.1,-232.7"/><polygon fill="#8a93a5" points="392.9,-234.8 400.3,-235 394.6,-230.3"/><a href="../proc/entity_anchor.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="245.7" y="-179.6" width="92.5" height="21.6"/><text x="291.9" y="-164.1">entity_anchor</text></a><path d="M195.9,-195.5C210.8,-191.3 227.7,-186.6 243.2,-182.2"/><polygon fill="#8a93a5" points="243.6,-184.7 249.6,-180.4 242.2,-179.9"/><path d="M338.4,-179C371.6,-186.9 413.3,-198.2 428.3,-207.8"/><path d="M430.3,-207.8C448,-219.1 458.5,-212.1 473.4,-226.8 518.8,-271.5 540.9,-346.9 549.2,-381.9"/><polygon fill="#8a93a5" points="546.7,-382.1 550.7,-388.4 551.5,-381"/><path d="M322,-180.1C331,-184 340.7,-188.7 349.3,-193.8 366.7,-204.2 368.5,-210.5 385.3,-221.8 390.2,-225.1 395.6,-228.5 400.8,-231.6"/><polygon fill="#8a93a5" points="399.3,-233.5 406.5,-234.9 401.7,-229.3"/><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="387.1" y="-61.6" width="84.5" height="21.6"/><text x="429.3" y="-46.1">object_word</text></a><path d="M305.4,-157.9C329.1,-137.2 381,-92 409.2,-67.5"/><polygon fill="#8a93a5" points="410.7,-69.4 414.3,-63 407.4,-65.8"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="387.8" y="-139.6" width="83.1" height="21.6"/><text x="429.3" y="-124.1">page_name</text></a><path d="M331,-157.6C347,-152.8 365.7,-147.3 382.5,-142.3"/><polygon fill="#8a93a5" points="383.1,-144.7 389.1,-140.4 381.7,-140"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="395" y="-179.6" width="68.6" height="21.6"/><text x="429.3" y="-164.1">url_quote</text></a><path d="M338.4,-168.8C353.9,-168.8 371.3,-168.8 386.5,-168.8"/><polygon fill="#8a93a5" points="386.2,-171.3 393.2,-168.8 386.2,-166.4"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="509.4" y="-61.6" width="89.6" height="21.6"/><text x="554.2" y="-46.1">is_procedure</text></a><path d="M471.9,-50.8C481.2,-50.8 491.1,-50.8 500.8,-50.8"/><polygon fill="#8a93a5" points="500.6,-53.3 507.6,-50.8 500.6,-48.4"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="515.2" y="-139.6" width="78" height="21.6"/><text x="554.2" y="-124.1">lower_char</text></a><path d="M471.2,-128.8C482.6,-128.8 495,-128.8 506.6,-128.8"/><polygon fill="#8a93a5" points="506.4,-131.3 513.4,-128.8 506.4,-126.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_call_forms.html">write_call_forms</a></li></ul>
+<div class="graph"><svg width="987pt" height="30pt"
+ viewBox="0 0 987 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/write_form.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="75.1" height="21.6"/><text x="37.5" y="-6.1">write_form</text></a><a href="../proc/write_call_forms.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="111.1" y="-21.6" width="108.3" height="21.6"/><text x="165.2" y="-6.1">write_call_forms</text></a><path d="M110.9,-10.8C102.1,-10.8 93,-10.8 84.4,-10.8"/><polygon fill="#8a93a5" points="84.4,-8.4 77.4,-10.8 84.4,-13.3"/><a href="../proc/interface_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="255.4" y="-21.6" width="99.7" height="21.6"/><text x="305.2" y="-6.1">interface_body</text></a><path d="M255.2,-10.8C246.4,-10.8 237.2,-10.8 228.1,-10.8"/><polygon fill="#8a93a5" points="228.3,-8.4 221.3,-10.8 228.3,-13.3"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="391.1" y="-21.6" width="81.6" height="21.6"/><text x="431.9" y="-6.1">entity_page</text></a><path d="M390.8,-10.8C382.1,-10.8 372.9,-10.8 363.8,-10.8"/><polygon fill="#8a93a5" points="364,-8.4 357,-10.8 364,-13.3"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="508.7" y="-21.6" width="116.3" height="21.6"/><text x="566.8" y="-6.1">write_entity_page</text></a><path d="M508.3,-10.8C499.3,-10.8 490,-10.8 481.2,-10.8"/><polygon fill="#8a93a5" points="481.4,-8.4 474.4,-10.8 481.4,-13.3"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="661" y="-21.6" width="122.8" height="21.6"/><text x="722.4" y="-6.1">write_entity_pages</text></a><path d="M660.7,-10.8C651.7,-10.8 642.4,-10.8 633.3,-10.8"/><polygon fill="#8a93a5" points="633.6,-8.4 626.6,-10.8 633.6,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="819.8" y="-21.6" width="69.3" height="21.6"/><text x="854.4" y="-6.1">write_site</text></a><path d="M819.6,-10.8C811.2,-10.8 801.9,-10.8 792.5,-10.8"/><polygon fill="#8a93a5" points="792.8,-8.4 785.8,-10.8 792.8,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="925.1" y="-21.6" width="54" height="21.6"/><text x="952.1" y="-6.1">run</text></a><path d="M924.7,-10.8C916.3,-10.8 906.8,-10.8 897.6,-10.8"/><polygon fill="#8a93a5" points="897.8,-8.4 890.8,-10.8 897.8,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> write_form(list, name, ids, b)
+    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list <span class="d">!! the entities</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the generic</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: ids(:)           <span class="d">!! the specific procedures of the form</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: types(:, :), labels(:, :), result_types(:), result_labels(:), rows(:)
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: ranks(:, :), result_ranks(:), row_of(:), columns(:), offset(:)
+    <span class="k">logical</span>, <span class="k">allocatable</span> :: in_table(:), varies(:), tied(:)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: key, relative
+    <span class="k">logical</span> :: has_result, <span class="k">elemental</span>, new
+    <span class="k">integer</span> :: n, m, a, j, r, c, primary, num_rows, column
+
+    n = <span class="k">size</span>(ids)
+    m = <span class="k">size</span>(list%box(ids(<span class="n">1</span>))%e%more%arg_ids)
+    <span class="k">allocate</span> (types(m, n), labels(m, n), ranks(m, n), result_types(n), result_labels(n), result_ranks(n))
+    <span class="k">allocate</span> (rows(n), row_of(n), in_table(m), varies(m), tied(m), offset(m))
+    has_result = <span class="k">.true.</span>
+    <span class="k">elemental</span> = <span class="k">.true.</span>
+    <span class="k">do</span> j = <span class="n">1</span>, n
+        <span class="k">associate</span> (e =&gt; list%box(ids(j))%e)
+            <span class="k">do</span> a = <span class="n">1</span>, m
+                <span class="k">call</span> describe(list, e%more%arg_ids(a), types(a, j)%s, ranks(a, j))
+            <span class="k">end</span> <span class="k">do</span>
+            has_result = has_result <span class="k">.and.</span> e%<span class="k">kind</span> == E_FUNCTION <span class="k">.and.</span> e%<span class="k">result</span> &gt; <span class="n">0</span>
+            <span class="k">elemental</span> = <span class="k">elemental</span> <span class="k">.and.</span> is_elemental(e)
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (has_result) <span class="k">then</span>
+        <span class="k">do</span> j = <span class="n">1</span>, n
+            <span class="k">call</span> describe(list, list%box(ids(j))%e%<span class="k">result</span>, result_types(j)%s, result_ranks(j))
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">if</span>
+
+    <span class="c">! the first argument of varying rank gives the columns</span>
+    primary = <span class="n">0</span>
+    <span class="k">do</span> a = <span class="n">1</span>, m
+        varies(a) = <span class="k">any</span>(ranks(a, :) /= ranks(a, <span class="n">1</span>))
+        <span class="k">if</span> (varies(a) <span class="k">.and.</span> primary == <span class="n">0</span>) primary = a
+    <span class="k">end</span> <span class="k">do</span>
+    relative = <span class="s">''</span>
+    <span class="k">if</span> (primary &gt; <span class="n">0</span>) relative = <span class="s">'rank('</span>//list%box(list%box(ids(<span class="n">1</span>))%e%more%arg_ids(primary))%e%name//<span class="s">')'</span>
+    <span class="k">do</span> a = <span class="n">1</span>, m
+        tied(a) = <span class="k">.false.</span>
+        <span class="k">if</span> (primary &gt; <span class="n">0</span> <span class="k">.and.</span> a /= primary) tied(a) = <span class="k">all</span>(ranks(a, :) - ranks(primary, :) == ranks(a, <span class="n">1</span>) - ranks(primary, <span class="n">1</span>))
+        in_table(a) = (varies(a) <span class="k">.and.</span> a /= primary <span class="k">.and.</span> <span class="k">.not.</span> tied(a))
+        <span class="k">do</span> j = <span class="n">2</span>, n
+            <span class="k">if</span> (types(a, j)%s /= types(a, <span class="n">1</span>)%s) in_table(a) = <span class="k">.true.</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>(in_table) <span class="k">.and.</span> primary &gt; <span class="n">0</span>) in_table(primary) = <span class="k">.true.</span>
+    <span class="k">do</span> a = <span class="n">1</span>, m
+        offset(a) = <span class="n">0</span>
+        <span class="k">if</span> (tied(a)) offset(a) = ranks(a, <span class="n">1</span>) - ranks(primary, <span class="n">1</span>)
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">do</span> j = <span class="n">1</span>, n
+        <span class="k">do</span> a = <span class="n">1</span>, m
+            <span class="k">call</span> rank_label(types(a, j)%s, ranks(a, j), a == primary, tied(a), relative, &amp;
+                            offset(a), labels(a, j)%s)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (has_result) <span class="k">then</span>
+        <span class="k">call</span> label_results(ranks, primary, relative, result_types, result_ranks, result_labels)
+    <span class="k">end</span> <span class="k">if</span>
+
+    <span class="c">! a row for each combination of types</span>
+    num_rows = <span class="n">0</span>
+    <span class="k">do</span> j = <span class="n">1</span>, n
+        key = <span class="s">''</span>
+        <span class="k">do</span> a = <span class="n">1</span>, m
+            <span class="k">if</span> (in_table(a)) key = key//labels(a, j)%s//<span class="s">'|'</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (has_result) key = key//result_labels(j)%s
+        <span class="k">if</span> (primary == <span class="n">0</span>) key = key//<span class="s">'|'</span>//<span class="k">trim</span>(int_text(j))
+        new = <span class="k">.true.</span>
+        <span class="k">do</span> r = <span class="n">1</span>, num_rows
+            <span class="k">if</span> (rows(r)%s /= key) <span class="k">cycle</span>
+            row_of(j) = r
+            new = <span class="k">.false.</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (new) <span class="k">then</span>
+            num_rows = num_rows + <span class="n">1</span>
+            rows(num_rows)%s = key
+            row_of(j) = num_rows
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+
+    <span class="c">! a column for each rank, in order</span>
+    <span class="k">allocate</span> (columns(<span class="n">0</span>))
+    <span class="k">if</span> (primary &gt; <span class="n">0</span>) <span class="k">then</span>
+        <span class="k">do</span> j = <span class="n">1</span>, n
+            <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>(columns == ranks(primary, j))) <span class="k">call</span> push_int(columns, ranks(primary, j))
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> sort_ints(columns)
+    <span class="k">end</span> <span class="k">if</span>
+
+    <span class="k">call</span> add(b, <span class="s">'&lt;div class="form"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;div class="sig"&gt;'</span>)
+    <span class="k">call</span> call_text(list, name, ids(<span class="n">1</span>), has_result, b)
+    <span class="k">if</span> (<span class="k">elemental</span>) <span class="k">call</span> add(b, <span class="s">' &lt;span class="attr attr-elemental"&gt;elemental&lt;/span&gt;'</span>)
+    <span class="k">call</span> add(b, <span class="s">'&lt;/div&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">call</span> shared_summary(list, ids, b)
+    <span class="k">call</span> add(b, <span class="s">'&lt;table class="forms"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;thead&gt;&lt;tr&gt;'</span>)
+    <span class="k">do</span> a = <span class="n">1</span>, m
+        <span class="k">if</span> (<span class="k">.not.</span> in_table(a)) <span class="k">cycle</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;'</span>)
+        <span class="k">call</span> html_escape(list%box(list%box(ids(<span class="n">1</span>))%e%more%arg_ids(a))%e%name, b, <span class="k">.false.</span>)
+        <span class="k">call</span> add(b, <span class="s">'&lt;/th&gt;'</span>)
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (primary == <span class="n">0</span>) <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;Procedure&lt;/th&gt;'</span>)
+    <span class="k">do</span> c = <span class="n">1</span>, <span class="k">size</span>(columns)
+        <span class="k">call</span> add(b, <span class="s">'&lt;th class="rank"&gt;'</span>)
+        <span class="k">call</span> html_escape(relative, b, <span class="k">.false.</span>)
+        <span class="k">call</span> add(b, <span class="s">' = '</span>)
+        <span class="k">if</span> (columns(c) == ANY_RANK) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'any'</span>)
+        <span class="k">else</span>
+            <span class="k">call</span> add(b, <span class="k">trim</span>(int_text(columns(c))))
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;/th&gt;'</span>)
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (has_result) <span class="k">call</span> add(b, <span class="s">'&lt;th&gt;Result&lt;/th&gt;'</span>)
+    <span class="k">call</span> add(b, <span class="s">'&lt;/tr&gt;&lt;/thead&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;tbody&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">do</span> r = <span class="n">1</span>, num_rows
+        j = <span class="k">findloc</span>(row_of, r, <span class="n">1</span>)
+        <span class="k">call</span> add(b, <span class="s">'&lt;tr&gt;'</span>)
+        <span class="k">do</span> a = <span class="n">1</span>, m
+            <span class="k">if</span> (<span class="k">.not.</span> in_table(a)) <span class="k">cycle</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;td class="type"&gt;'</span>)
+            <span class="k">call</span> html_escape(labels(a, j)%s, b, <span class="k">.false.</span>)
+            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (primary == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;td class="name"&gt;'</span>)
+            <span class="k">call</span> specific_link(list, ids(j), list%box(ids(j))%e%name, b)
+            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">do</span> c = <span class="n">1</span>, <span class="k">size</span>(columns)
+            <span class="k">call</span> add(b, <span class="s">'&lt;td class="rank"&gt;'</span>)
+            <span class="k">do</span> column = <span class="n">1</span>, n
+                <span class="k">if</span> (row_of(column) /= r) <span class="k">cycle</span>
+                <span class="k">if</span> (ranks(primary, column) == columns(c)) <span class="k">call</span> specific_link(list, ids(column), <span class="s">'&amp;#10003;'</span>, b)
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (has_result) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;td class="type"&gt;'</span>)
+            <span class="k">call</span> html_escape(result_labels(j)%s, b, <span class="k">.false.</span>)
+            <span class="k">call</span> add(b, <span class="s">'&lt;/td&gt;'</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;/tr&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> add(b, <span class="s">'&lt;/tbody&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;/table&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+
+    <span class="c">! what is the same in every specific procedure of the form</span>
+    new = <span class="k">.true.</span>
+    <span class="k">do</span> a = <span class="n">1</span>, m
+        <span class="k">if</span> (in_table(a) <span class="k">.or.</span> a == primary) <span class="k">cycle</span>
+        <span class="k">if</span> (new) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;p class="fixed"&gt;'</span>)
+        <span class="k">else</span>
+            <span class="k">call</span> add(b, <span class="s">', '</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        new = <span class="k">.false.</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;code&gt;'</span>)
+        <span class="k">call</span> html_escape(list%box(list%box(ids(<span class="n">1</span>))%e%more%arg_ids(a))%e%name, b, <span class="k">.false.</span>)
+        <span class="k">call</span> add(b, <span class="s">'&lt;/code&gt; is '</span>)
+        <span class="k">call</span> html_escape(labels(a, <span class="n">1</span>)%s, b, <span class="k">.false.</span>)
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (<span class="k">.not.</span> new) <span class="k">call</span> add(b, <span class="s">'&lt;/p&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">call</span> add(b, <span class="s">'&lt;/div&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<span class="k">end</span> <span class="k">subroutine</span> write_form</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_urls &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a class="here" href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Types</h4><ul><li><a href="../type/link_context_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>link_context_t</a></li></ul>
+<h4>Functions</h4><ul><li><a href="../proc/find_anywhere.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>find_anywhere</a></li><li><a href="../proc/find_child.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>find_child</a></li><li><a href="../proc/is_shown.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>is_shown</a></li><li><a href="../proc/matches.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>matches</a></li><li><a href="../proc/of_class.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>of_class</a></li><li><a href="../proc/top_level.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>top_level</a></li></ul>
+<h4>Subroutines</h4><ul><li><a href="../proc/entity_anchor.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>entity_anchor</a></li><li><a href="../proc/entity_url.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>entity_url</a></li><li><a href="../proc/index_entity_names.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>index_entity_names</a></li><li><a href="../proc/object_word.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>object_word</a></li><li><a href="../proc/page_name.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>page_name</a></li><li><a href="../proc/resolve_link.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>resolve_link</a></li><li><a href="../proc/shown_entity.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>shown_entity</a></li><li><a href="../proc/url_quote.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>url_quote</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><ul data-list="modules"></ul>
+<h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_urls.f90.html">fdoc_urls.f90</a></div>
+<h1><span class="kind">module</span>fdoc_urls</h1>
+<div class="doc">
+<p>Where entities are documented, and what <code>[[name]]</code> links refer to.</p>
+<p>This runs while documentation is rendered in parallel, so nothing here calls a function returning a
+deferred-length string (see <code>example/slen_race.f90</code>).</p>
+</div>
+<h2 id="uses">Uses</h2>
+<ul class="chips"><li><a href="../module/fdoc_util.html">fdoc_util</a></li><li><a href="../module/fdoc_model.html">fdoc_model</a></li><li><a href="../module/fdoc_buffer.html">fdoc_buffer</a></li></ul>
+<div class="graph"><svg width="432pt" height="150pt"
+ viewBox="0 0 432 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 145.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_urls.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="356.4" y="-62.6" width="67.1" height="21.6"/><text x="390" y="-47.1">fdoc_urls</text></a><a href="../module/fdoc_util.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="140" y="-81.6" width="62.8" height="21.6"/><text x="171.4" y="-66.1">fdoc_util</text></a><path d="M355.9,-63.5C344.8,-66.9 332.2,-70.1 320.4,-71.8 283.7,-77 241.3,-76.1 211.3,-74.2"/><polygon fill="#8a93a5" points="211.9,-71.8 204.7,-73.8 211.5,-76.7"/><a href="../module/fdoc_model.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="238.8" y="-62.6" width="81.6" height="21.6"/><text x="279.6" y="-47.1">fdoc_model</text></a><path d="M355.6,-51.8C347.2,-51.8 338,-51.8 329.1,-51.8"/><polygon fill="#8a93a5" points="329.1,-49.4 322.1,-51.8 329.1,-54.3"/><a href="../module/fdoc_buffer.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="239.9" y="-22.6" width="79.4" height="21.6"/><text x="279.6" y="-7.1">fdoc_buffer</text></a><path d="M357.1,-40C345.2,-35.6 331.6,-30.6 319.2,-26"/><polygon fill="#8a93a5" points="320.1,-23.7 312.6,-23.6 318.4,-28.3"/><a href="http://fortranwiki.org/fortran/show/iso_fortran_env" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-141.6" width="104" height="21.6"/><text x="52" y="-126.1">iso_fortran_env</text></a><path d="M153.7,-82C140.5,-90.5 121.5,-102.2 104,-110.8 100.1,-112.7 95.9,-114.6 91.7,-116.4"/><polygon fill="#8a93a5" points="91,-114 85.5,-119 92.9,-118.6"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_strings.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="11.2" y="-101.6" width="81.6" height="21.6"/><text x="52" y="-86.1">ffmt_strings</text></a><path d="M139.6,-76.1C127.9,-78 114.2,-80.4 101.3,-82.6"/><polygon fill="#8a93a5" points="100.9,-80.2 94.4,-83.7 101.7,-85"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_fs.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-61.6" width="54" height="21.6"/><text x="52" y="-46.1">ffmt_fs</text></a><path d="M139.6,-65.5C123.6,-62.8 104.1,-59.5 87.6,-56.7"/><polygon fill="#8a93a5" points="88.1,-54.3 80.8,-55.5 87.3,-59.1"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_io.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-21.6" width="54" height="21.6"/><text x="52" y="-6.1">ffmt_io</text></a><path d="M153.7,-59.6C140.5,-51.1 121.5,-39.4 104,-30.8 98.6,-28.1 92.8,-25.6 87,-23.2"/><polygon fill="#8a93a5" points="88.1,-21 80.7,-20.7 86.3,-25.6"/><path d="M238.5,-59C229.6,-60.6 220.2,-62.3 211.3,-63.8"/><polygon fill="#8a93a5" points="211,-61.4 204.5,-65.1 211.8,-66.2"/></g>
+</svg>
+</div>
+<h2 id="used-by">Used by</h2>
+<ul class="chips"><li><a href="../module/fdoc.html">fdoc</a></li><li><a href="../module/fdoc_docs.html">fdoc_docs</a></li><li><a href="../module/fdoc_generics.html">fdoc_generics</a></li><li><a href="../module/fdoc_graphs.html">fdoc_graphs</a></li><li><a href="../module/fdoc_output.html">fdoc_output</a></li><li><a href="../module/fdoc_site.html">fdoc_site</a></li></ul>
+<div class="graph"><svg width="521pt" height="220pt"
+ viewBox="0 0 521 220" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 216.4)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_urls.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-118.6" width="67.1" height="21.6"/><text x="33.6" y="-103.1">fdoc_urls</text></a><a href="../module/fdoc.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="458.9" y="-138.6" width="54" height="21.6"/><text x="485.9" y="-123.1">fdoc</text></a><path d="M276.5,-205.8C199.2,-199.9 171.8,-222.8 103.1,-186.8 77,-173.1 56.4,-145 44.9,-126.3"/><polygon fill="#8a93a5" points="47.2,-125.4 41.5,-120.7 43,-127.9"/><a href="../module/fdoc_docs.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="114" y="-177.6" width="73.7" height="21.6"/><text x="150.8" y="-162.1">fdoc_docs</text></a><path d="M388.7,-205.8C341.3,-218.1 327.3,-209.5 278.5,-205.8"/><path d="M276.5,-205.8C243.8,-203.3 208.4,-191.2 183.6,-181.2"/><polygon fill="#8a93a5" points="184.8,-179 177.4,-178.6 182.9,-183.5"/><a href="../module/fdoc_output.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="109.6" y="-21.6" width="82.3" height="21.6"/><text x="150.8" y="-6.1">fdoc_output</text></a><path d="M460.7,-116.6C429,-102.1 371.3,-76.6 320.4,-58.8 280.6,-44.8 234.3,-31.9 200.4,-23"/><polygon fill="#8a93a5" points="201.3,-20.7 193.9,-21.3 200.1,-25.4"/><a href="../module/fdoc_site.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="356.4" y="-138.6" width="66.4" height="21.6"/><text x="389.7" y="-123.1">fdoc_site</text></a><path d="M458.4,-127.8C450.1,-127.8 440.8,-127.8 431.8,-127.8"/><polygon fill="#8a93a5" points="431.8,-125.4 424.8,-127.8 431.8,-130.3"/><a href="../module/fdoc_pages.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="236.7" y="-177.6" width="81.6" height="21.6"/><text x="277.5" y="-162.1">fdoc_pages</text></a><path d="M476.9,-139C462.3,-158 429.5,-195.7 390.7,-205.8"/><path d="M388.7,-205.8C373.3,-209.8 335.5,-194.3 308.5,-181.7"/><polygon fill="#8a93a5" points="309.6,-179.5 302.2,-178.7 307.5,-183.9"/><path d="M127.9,-155.6C110,-146.4 84.6,-133.4 64.8,-123.3"/><polygon fill="#8a93a5" points="65.9,-121.1 58.6,-120.1 63.7,-125.5"/><a href="../module/fdoc_generics.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="103.1" y="-99.6" width="95.3" height="21.6"/><text x="150.8" y="-84.1">fdoc_generics</text></a><path d="M102.9,-96.5C94.1,-98 84.8,-99.5 76.1,-100.9"/><polygon fill="#8a93a5" points="76,-98.5 69.5,-102 76.8,-103.3"/><a href="../module/fdoc_graphs.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="234.5" y="-89.6" width="86" height="21.6"/><text x="277.5" y="-74.1">fdoc_graphs</text></a><path d="M234.1,-69.1C198.5,-62.6 146.7,-57.3 103.1,-68.8 86.3,-73.3 69.2,-82.9 56.3,-91.5"/><polygon fill="#8a93a5" points="55.2,-89.3 50.9,-95.3 58,-93.3"/><path d="M125.7,-21.9C118.1,-25.8 110,-30.6 103.1,-35.8 82.1,-51.8 61.7,-74.4 48.7,-90"/><polygon fill="#8a93a5" points="47.1,-88.1 44.6,-95.1 50.9,-91.2"/><path d="M276.5,-127.8C206.1,-122.4 124.3,-115.5 76.1,-111.4"/><polygon fill="#8a93a5" points="76.5,-109 69.3,-110.8 76.1,-113.8"/><path d="M356.3,-129.1C334.3,-129.7 304.6,-129.8 278.5,-127.8"/><path d="M276.5,-127.8C243.8,-125.3 208.4,-113.2 183.6,-103.2"/><polygon fill="#8a93a5" points="184.8,-101 177.4,-100.6 182.9,-105.5"/><path d="M363.4,-116.6C347.8,-109.6 327.8,-100.7 311,-93.3"/><polygon fill="#8a93a5" points="312.4,-91.2 305,-90.6 310.4,-95.7"/><path d="M356.8,-139.1C344.7,-143.4 330.7,-148.3 318,-152.8"/><polygon fill="#8a93a5" points="317.5,-150.4 311.7,-155 319.1,-155"/><path d="M236.3,-166.8C223.6,-166.8 209.5,-166.8 196.4,-166.8"/><polygon fill="#8a93a5" points="196.6,-164.4 189.6,-166.8 196.6,-169.3"/></g>
+</svg>
+</div>
+<h2 id="types">Types</h2>
+<div class="item" id="type-link_context_t"><h3><a href="../type/link_context_t.html">link_context_t</a></h3>
+<p>Where a <code>[[name]]</code> link is being read.</p>
+</div>
+<h2 id="functions">Functions</h2>
+<div class="item" id="proc-find_anywhere"><h3><a href="../proc/find_anywhere.html">find_anywhere</a><span class="attr attr-private">private</span></h3>
+<div class="sig">integer <span class="k">function</span> find_anywhere(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">entity</span>) <span class="k">result</span>(found)</div>
+<p>The entity named <code>name</code> at the top level of the project, or 0.</p>
+</div>
+<div class="item" id="proc-find_child"><h3><a href="../proc/find_child.html">find_child</a><span class="attr attr-private">private</span></h3>
+<div class="sig">integer <span class="k">function</span> find_child(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">parent</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">entity</span>) <span class="k">result</span>(found)</div>
+<p>The child of <code>parent</code> named <code>name</code>, or 0.</p>
+</div>
+<div class="item" id="proc-is_shown"><h3><a href="../proc/is_shown.html">is_shown</a><span class="attr attr-pure" title="Has no side effects">pure</span></h3>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> is_shown(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">item</span>)</div>
+<p>True if <code>item</code> and everything that holds it are shown.</p>
+</div>
+<div class="item" id="proc-matches"><h3><a href="../proc/matches.html">matches</a><span class="attr attr-private">private</span></h3>
+<div class="sig">logical <span class="k">function</span> matches(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">entity</span>)</div>
+<p>True if entity <code>id</code> is named <code>name</code>, in lowercase, and is of class <code>entity</code>.</p>
+</div>
+<div class="item" id="proc-of_class"><h3><a href="../proc/of_class.html">of_class</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> of_class(<span class="intent attr-in" title="intent(in)">e</span>, <span class="intent attr-in" title="intent(in)">entity</span>)</div>
+<p>True if entity <code>e</code> is of class <code>entity</code>, as written in a link. Any entity matches <code>''</code>.</p>
+</div>
+<div class="item" id="proc-top_level"><h3><a href="../proc/top_level.html">top_level</a><span class="attr attr-elemental" title="Works on each element of arrays of any rank">elemental</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">elemental</span> logical <span class="k">function</span> top_level(<span class="intent attr-in" title="intent(in)">kind</span>)</div>
+<p>True if a link to <code>kind</code> can name it from anywhere in the project.</p>
+</div>
+<h2 id="subroutines">Subroutines</h2>
+<div class="item" id="proc-entity_anchor"><h3><a href="../proc/entity_anchor.html">entity_anchor</a></h3>
+<div class="sig"><span class="k">subroutine</span> entity_anchor(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<p>Write the anchor of an entity in a page.</p>
+</div>
+<div class="item" id="proc-entity_url"><h3><a href="../proc/entity_url.html">entity_url</a><span class="attr attr-recursive" title="May call itself">recursive</span></h3>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> entity_url(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">url</span>)</div>
+<p>The URL of an entity relative to the root of the site, or <code>''</code>.</p>
+</div>
+<div class="item" id="proc-index_entity_names"><h3><a href="../proc/index_entity_names.html">index_entity_names</a></h3>
+<div class="sig"><span class="k">subroutine</span> index_entity_names(<span class="intent attr-inout" title="intent(inout)">list</span>)</div>
+<p>Index the entities that links can name from anywhere, for <a href="../proc/find_anywhere.html">find_anywhere</a>.</p>
+</div>
+<div class="item" id="proc-object_word"><h3><a href="../proc/object_word.html">object_word</a></h3>
+<div class="sig"><span class="k">subroutine</span> object_word(<span class="intent attr-in" title="intent(in)">e</span>, <span class="intent attr-out" title="intent(out)">word</span>)</div>
+<p>The word FORD uses for the kind of entity <code>e</code>.</p>
+</div>
+<div class="item" id="proc-page_name"><h3><a href="../proc/page_name.html">page_name</a></h3>
+<div class="sig"><span class="k">subroutine</span> page_name(<span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-out" title="intent(out)">out</span>)</div>
+<p><code>name</code> as used in file names and anchors.</p>
+</div>
+<div class="item" id="proc-resolve_link"><h3><a href="../proc/resolve_link.html">resolve_link</a></h3>
+<div class="sig"><span class="k">subroutine</span> resolve_link(<span class="intent attr-in" title="intent(in)">data</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">entity</span>, <span class="intent attr-in" title="intent(in)">child</span>, <span class="intent attr-in" title="intent(in)">child_entity</span>, <span class="intent attr-out" title="intent(out)">url</span>, <span class="intent attr-out" title="intent(out)">text</span>, <span class="intent attr-out" title="intent(out)">found</span>)</div>
+<p>Find what a <code>[[name]]</code> link means: see <a href="../interface/link_resolver.html">link_resolver</a> in <a href="../module/fdoc_markdown.html">fdoc_markdown</a>.</p>
+</div>
+<div class="item" id="proc-shown_entity"><h3><a href="../proc/shown_entity.html">shown_entity</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> shown_entity(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-inout" title="intent(inout)">item</span>)</div>
+<p>Replace <code>item</code> by what holds it, if it is inside something not shown, which has no page.</p>
+</div>
+<div class="item" id="proc-url_quote"><h3><a href="../proc/url_quote.html">url_quote</a></h3>
+<div class="sig"><span class="k">subroutine</span> url_quote(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">out</span>)</div>
+<p>Percent-encode the characters of <code>text</code> that are not safe in a URL.</p>
+</div>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

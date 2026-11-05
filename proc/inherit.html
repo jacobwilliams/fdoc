@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>inherit &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project.f90.html">fdoc_project.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project.html">fdoc_project</a></div>
+<h1><span class="kind">subroutine</span>inherit<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> inherit(<span class="intent attr-inout" title="intent(inout)">p</span>, <span class="intent attr-in" title="intent(in)">id</span>)</div>
+<div class="doc">
+<p>Work out what type <code>id</code> inherits, after its parent type.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the type</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/find_symbol.html">find_symbol</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/inherit.html">inherit</a></li><li><a href="../proc/push_int.html">push_int</a></li><li><a href="../proc/overrides.html">overrides</a></li><li><a href="../proc/copy_binding.html">copy_binding</a></li></ul>
+<div class="graph"><svg width="717pt" height="228pt"
+ viewBox="0 0 717 228" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 223.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/inherit.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-139.6" width="54" height="21.6"/><text x="27" y="-124.1">inherit</text></a><a href="../proc/find_symbol.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="93.6" y="-139.6" width="83.8" height="21.6"/><text x="135.5" y="-124.1">find_symbol</text></a><path d="M54.9,-128.8C64.1,-128.8 74.8,-128.8 85.2,-128.8"/><polygon fill="#8a93a5" points="85,-131.3 92,-128.8 85,-126.4"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="249.9" y="-219.6" width="72.9" height="21.6"/><text x="286.3" y="-204.1">lowercase</text></a><path d="M36.1,-140.4C46.7,-154.6 66.6,-177.9 90,-188.8 138.2,-211.2 200.1,-213.8 241.2,-212.3"/><polygon fill="#8a93a5" points="241.2,-214.8 248.1,-212 241,-209.9"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="404.7" y="-40.6" width="63.5" height="21.6"/><text x="436.4" y="-25.1">push_int</text></a><path d="M54.8,-120.1C65.7,-116.6 78.5,-112.5 90,-108.8 146.4,-90.8 159.5,-82.9 217,-68.8 278.9,-53.6 352,-41.8 396,-35.3"/><polygon fill="#8a93a5" points="396.4,-37.7 402.9,-34.3 395.6,-32.9"/><a href="../proc/overrides.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="101.6" y="-179.6" width="67.9" height="21.6"/><text x="135.5" y="-164.1">overrides</text></a><path d="M54.9,-138.9C67.5,-143.7 82.9,-149.4 96.7,-154.6"/><polygon fill="#8a93a5" points="95.8,-156.9 103.2,-157 97.5,-152.3"/><a href="../proc/copy_binding.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="90" y="-21.6" width="91" height="21.6"/><text x="135.5" y="-6.1">copy_binding</text></a><path d="M33.4,-117.2C42.8,-98.3 63.5,-60.3 90,-35.8 93.8,-32.2 98.3,-29 102.8,-26.1"/><polygon fill="#8a93a5" points="103.9,-28.3 108.7,-22.6 101.4,-24.1"/><path d="M166.2,-140.1C171.4,-142.6 176.5,-145.5 181,-148.8 200.3,-162.9 196.8,-176.1 217,-188.8 224.5,-193.5 233.1,-197.1 241.6,-199.9"/><polygon fill="#8a93a5" points="240.8,-202.2 248.3,-201.9 242.2,-197.5"/><a href="../proc/in_category.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="245.5" y="-179.6" width="81.6" height="21.6"/><text x="286.3" y="-164.1">in_category</text></a><path d="M177.6,-139.8C196,-144.8 217.9,-150.7 237.1,-155.8"/><polygon fill="#8a93a5" points="236.3,-158.2 243.7,-157.6 237.6,-153.4"/><a href="../proc/module_position.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="231.8" y="-139.6" width="109.1" height="21.6"/><text x="286.3" y="-124.1">module_position</text></a><path d="M177.6,-128.8C191.6,-128.8 207.6,-128.8 222.9,-128.8"/><polygon fill="#8a93a5" points="222.8,-131.3 229.8,-128.8 222.8,-126.4"/><a href="../proc/public_symbol.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="237.9" y="-99.6" width="96.8" height="21.6"/><text x="286.3" y="-84.1">public_symbol</text></a><path d="M177.6,-117.8C195.4,-113 216.5,-107.3 235.2,-102.3"/><polygon fill="#8a93a5" points="235.8,-104.7 241.9,-100.5 234.5,-99.9"/><path d="M169.9,-177.8C191,-183.4 218.4,-190.8 241.3,-197"/><polygon fill="#8a93a5" points="240.6,-199.3 248,-198.8 241.9,-194.6"/><a href="../proc/list_add.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="none" rx="7.2" x="217" y="-21.6" width="138.6" height="21.6"/><text x="326.1" y="-6.1" fill="white">list_add</text></a><a href="../type/entity_list_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M224.2,-21.6H296.4V0H224.2A7.2,7.2 0 0 1 217,-7.2V-14.4A7.2,7.2 0 0 1 224.2,-21.6Z"/><text x="256.7" y="-6.1" fill="white">entity_list_t</text></a><path d="M181.2,-10.8C189.8,-10.8 199.2,-10.8 208.5,-10.8"/><polygon fill="#8a93a5" points="208.3,-13.3 215.3,-10.8 208.3,-8.4"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="391.7" y="-179.6" width="89.6" height="21.6"/><text x="436.4" y="-164.1">is_procedure</text></a><path d="M327.4,-168.8C344.6,-168.8 364.8,-168.8 383.2,-168.8"/><polygon fill="#8a93a5" points="382.9,-171.3 389.9,-168.8 382.9,-166.4"/><a href="../proc/find_in.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="409.4" y="-99.6" width="54" height="21.6"/><text x="436.4" y="-84.1">find_in</text></a><path d="M335,-88.8C356.4,-88.8 381.1,-88.8 400.7,-88.8"/><polygon fill="#8a93a5" points="400.5,-91.3 407.5,-88.8 400.5,-86.4"/><path d="M355.7,-19.6C369.5,-21.3 383.6,-23.1 396,-24.7"/><polygon fill="#8a93a5" points="395.5,-27.1 402.8,-25.6 396.1,-22.3"/><a href="../proc/index_find.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="517.2" y="-99.6" width="73.7" height="21.6"/><text x="554" y="-84.1">index_find</text></a><path d="M463.7,-88.8C476.9,-88.8 493.4,-88.8 508.6,-88.8"/><polygon fill="#8a93a5" points="508.3,-91.3 515.3,-88.8 508.3,-86.4"/><a href="../proc/name_hash.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="626.9" y="-99.6" width="82.3" height="21.6"/><text x="668" y="-84.1">name_hash</text></a><path d="M591.1,-88.8C599.7,-88.8 609.1,-88.8 618.1,-88.8"/><polygon fill="#8a93a5" points="617.9,-91.3 624.9,-88.8 617.9,-86.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/correlate.html">correlate</a></li></ul>
+<div class="graph"><svg width="253pt" height="30pt"
+ viewBox="0 0 253 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/inherit.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="54" height="21.6"/><text x="27" y="-6.1">inherit</text></a><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="90" y="-21.6" width="65" height="21.6"/><text x="122.5" y="-6.1">correlate</text></a><path d="M89.6,-10.8C81.1,-10.8 71.9,-10.8 63.2,-10.8"/><polygon fill="#8a93a5" points="63.3,-8.4 56.3,-10.8 63.3,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="191" y="-21.6" width="54" height="21.6"/><text x="218" y="-6.1">run</text></a><path d="M190.9,-10.8C182.5,-10.8 172.9,-10.8 163.7,-10.8"/><polygon fill="#8a93a5" points="163.9,-8.4 156.9,-10.8 163.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> inherit(p, id)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(inout) :: p     <span class="d">!! the project</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! the type</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: parent_items(:)
+    <span class="k">integer</span> :: base, k, item, copy
+
+    <span class="k">if</span> (p%list%box(id)%e%inherit_state /= <span class="n">0</span>) <span class="k">return</span>
+    p%list%box(id)%e%inherit_state = <span class="n">1</span>
+    <span class="k">allocate</span> (p%list%box(id)%e%more%inherited(<span class="n">0</span>))
+    <span class="k">if</span> (<span class="k">allocated</span>(p%list%box(id)%e%more%<span class="k">extends</span>)) <span class="k">then</span>
+        base = find_symbol(p, p%list%box(id)%e%parent, lowercase(p%list%box(id)%e%more%<span class="k">extends</span>), <span class="n">3</span>)
+        <span class="k">if</span> (base &gt; <span class="n">0</span> <span class="k">.and.</span> base /= id) <span class="k">then</span>
+            p%list%box(id)%e%extends_id = base
+            <span class="k">call</span> inherit(p, base)
+            parent_items = [p%list%box(base)%e%more%inherited, p%list%box(base)%e%children]
+            <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(parent_items)
+                item = parent_items(k)
+                <span class="k">associate</span> (e =&gt; p%list%box(item)%e)
+                    <span class="k">select</span> <span class="k">case</span> (e%<span class="k">kind</span>)
+                    <span class="k">case</span> (E_VARIABLE)
+                        <span class="k">if</span> (e%permission == <span class="s">'public'</span>) <span class="k">call</span> push_int(p%list%box(id)%e%more%inherited, item)
+                    <span class="k">case</span> (E_BOUNDPROC)
+                        <span class="k">if</span> (e%permission == <span class="s">'private'</span>) <span class="k">cycle</span>
+                        <span class="k">if</span> (overrides(p, id, e%name)) <span class="k">cycle</span>
+                        <span class="k">if</span> (e%<span class="k">generic</span>) <span class="k">then</span>
+                            copy = copy_binding(p, item, id)
+                        <span class="k">else</span>
+                            <span class="k">call</span> push_int(p%list%box(id)%e%more%inherited, item)
+                        <span class="k">end</span> <span class="k">if</span>
+                    <span class="k">end</span> <span class="k">select</span>
+                <span class="k">end</span> <span class="k">associate</span>
+            <span class="k">end</span> <span class="k">do</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">if</span>
+    p%list%box(id)%e%inherit_state = <span class="n">2</span>
+<span class="k">end</span> <span class="k">subroutine</span> inherit</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

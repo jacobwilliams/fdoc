@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>link_variable &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_links.f90.html">fdoc_links.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_links.html">fdoc_links</a></div>
+<h1><span class="kind">subroutine</span>link_variable<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> link_variable(<span class="intent attr-inout" title="intent(inout)">p</span>, <span class="intent attr-in" title="intent(in)">id</span>)</div>
+<div class="doc">
+<p>Find the type or interface that a variable declaration names.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the variable</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/find_symbol.html">find_symbol</a></li></ul>
+<div class="graph"><svg width="713pt" height="150pt"
+ viewBox="0 0 713 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 145.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/link_variable.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-120.6" width="86.7" height="21.6"/><text x="43.3" y="-105.1">link_variable</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="260.5" y="-141.6" width="72.9" height="21.6"/><text x="297" y="-126.1">lowercase</text></a><path d="M87.6,-113.4C133.5,-117.2 205.6,-123.3 251.9,-127.1"/><polygon fill="#8a93a5" points="251.5,-129.5 258.7,-127.7 251.9,-124.7"/><a href="../proc/find_symbol.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="122.7" y="-101.6" width="83.8" height="21.6"/><text x="164.5" y="-86.1">find_symbol</text></a><path d="M87.4,-102.9C96,-101.6 105.1,-100.1 113.8,-98.7"/><polygon fill="#8a93a5" points="114.1,-101.2 120.7,-97.6 113.4,-96.3"/><path d="M202.2,-102C217.8,-106.8 236,-112.4 252.2,-117.4"/><polygon fill="#8a93a5" points="251.2,-119.6 258.6,-119.3 252.6,-114.9"/><a href="../proc/in_category.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="256.2" y="-101.6" width="81.6" height="21.6"/><text x="297" y="-86.1">in_category</text></a><path d="M206.8,-90.8C219.8,-90.8 234.2,-90.8 247.7,-90.8"/><polygon fill="#8a93a5" points="247.3,-93.3 254.3,-90.8 247.3,-88.4"/><a href="../proc/module_position.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="242.4" y="-61.6" width="109.1" height="21.6"/><text x="297" y="-46.1">module_position</text></a><path d="M202.2,-79.6C217.6,-74.8 235.7,-69.3 251.8,-64.3"/><polygon fill="#8a93a5" points="252.1,-66.8 258.1,-62.4 250.7,-62.1"/><a href="../proc/public_symbol.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="248.6" y="-21.6" width="96.8" height="21.6"/><text x="297" y="-6.1">public_symbol</text></a><path d="M177.5,-79.6C191.9,-66.4 217.5,-44.8 242.4,-30.8 245.9,-28.9 249.5,-27.1 253.3,-25.4"/><polygon fill="#8a93a5" points="254.1,-27.7 259.6,-22.7 252.2,-23.2"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="387.5" y="-101.6" width="89.6" height="21.6"/><text x="432.3" y="-86.1">is_procedure</text></a><path d="M338,-90.8C350.8,-90.8 365.2,-90.8 378.8,-90.8"/><polygon fill="#8a93a5" points="378.6,-93.3 385.6,-90.8 378.6,-88.4"/><a href="../proc/find_in.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="405.3" y="-21.6" width="54" height="21.6"/><text x="432.3" y="-6.1">find_in</text></a><path d="M345.7,-10.8C362.6,-10.8 381.3,-10.8 396.8,-10.8"/><polygon fill="#8a93a5" points="396.6,-13.3 403.6,-10.8 396.6,-8.4"/><a href="../proc/index_find.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="513.1" y="-21.6" width="73.7" height="21.6"/><text x="549.9" y="-6.1">index_find</text></a><path d="M459.5,-10.8C472.8,-10.8 489.2,-10.8 504.4,-10.8"/><polygon fill="#8a93a5" points="504.2,-13.3 511.2,-10.8 504.2,-8.4"/><a href="../proc/name_hash.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="622.7" y="-21.6" width="82.3" height="21.6"/><text x="663.9" y="-6.1">name_hash</text></a><path d="M586.9,-10.8C595.6,-10.8 604.9,-10.8 614,-10.8"/><polygon fill="#8a93a5" points="613.7,-13.3 620.7,-10.8 613.7,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/link_project.html">link_project</a></li></ul>
+<div class="graph"><svg width="301pt" height="30pt"
+ viewBox="0 0 301 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/link_variable.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="86.7" height="21.6"/><text x="43.3" y="-6.1">link_variable</text></a><a href="../proc/link_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="122.7" y="-21.6" width="80.2" height="21.6"/><text x="162.7" y="-6.1">link_project</text></a><path d="M122.3,-10.8C113.8,-10.8 104.8,-10.8 95.9,-10.8"/><polygon fill="#8a93a5" points="96,-8.4 89,-10.8 96,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="238.8" y="-21.6" width="54" height="21.6"/><text x="265.8" y="-6.1">run</text></a><path d="M238.5,-10.8C230.3,-10.8 220.9,-10.8 211.7,-10.8"/><polygon fill="#8a93a5" points="211.8,-8.4 204.8,-10.8 211.8,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> link_variable(p, id)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(inout) :: p     <span class="d">!! the project</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! the variable</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: name
+
+    <span class="k">associate</span> (v =&gt; p%list%box(id)%e)
+        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(v%proto)) <span class="k">return</span>
+        name = lowercase(v%proto(<span class="n">1</span>)%s)
+        <span class="k">if</span> (name == <span class="s">'*'</span>) <span class="k">return</span>
+        <span class="k">if</span> (v%vartype == <span class="s">'procedure'</span>) <span class="k">then</span>
+            v%proto_id = find_symbol(p, v%parent, name, <span class="n">1</span>)
+            <span class="k">if</span> (v%proto_id == <span class="n">0</span>) v%proto_id = find_symbol(p, v%parent, name, <span class="n">2</span>)
+        <span class="k">else</span>
+            v%proto_id = find_symbol(p, v%parent, name, <span class="n">3</span>)
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">subroutine</span> link_variable</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>search_index &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>search_index<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> search_index(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-out" title="intent(out)">text</span>)</div>
+<div class="doc">
+<p>The search index, as a script: browsers do not let a page opened from a file read JSON.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the script</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/entity_url.html">entity_url</a></li><li><a href="../proc/plain_text.html">plain_text</a></li><li>add_entry</li><li><a href="../proc/display_name.html">display_name</a></li></ul>
+<div class="graph"><svg width="489pt" height="230pt"
+ viewBox="0 0 489 230" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 225.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/search_index.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="91.7" height="21.6"/><text x="45.9" y="-66.1">search_index</text></a><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="141.5" y="-161.6" width="67.1" height="21.6"/><text x="175" y="-146.1">entity_url</text></a><path d="M65.4,-82.4C87.5,-96.3 124.5,-119.7 149.1,-135.1"/><polygon fill="#8a93a5" points="147.8,-137.2 155.1,-138.9 150.4,-133.1"/><a href="../proc/plain_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140" y="-81.6" width="70" height="21.6"/><text x="175" y="-66.1">plain_text</text></a><path d="M92.4,-70.8C105,-70.8 118.7,-70.8 131.2,-70.8"/><polygon fill="#8a93a5" points="131.1,-73.3 138.1,-70.8 131.1,-68.4"/><a href="../proc/display_name.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="127.7" y="-41.6" width="94.6" height="21.6"/><text x="175" y="-26.1">display_name</text></a><path d="M84.3,-59C98.7,-54.5 115.2,-49.3 130.1,-44.6"/><polygon fill="#8a93a5" points="130.8,-47 136.7,-42.5 129.3,-42.3"/><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="264.5" y="-221.6" width="84.5" height="21.6"/><text x="306.7" y="-206.1">object_word</text></a><path d="M198.2,-162C214.7,-170.2 237.8,-181.5 258.3,-190.8 262.4,-192.6 266.6,-194.5 270.8,-196.3"/><polygon fill="#8a93a5" points="269.5,-198.4 276.9,-198.9 271.4,-193.9"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="265.2" y="-181.6" width="83.1" height="21.6"/><text x="306.7" y="-166.1">page_name</text></a><path d="M209.1,-155.9C223.5,-158.1 240.8,-160.8 256.7,-163.2"/><polygon fill="#8a93a5" points="256.1,-165.6 263.3,-164.3 256.8,-160.8"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="272.4" y="-141.6" width="68.6" height="21.6"/><text x="306.7" y="-126.1">url_quote</text></a><path d="M209.1,-145.7C225.9,-143.1 246.5,-139.9 264.3,-137.2"/><polygon fill="#8a93a5" points="264.2,-139.7 270.8,-136.2 263.5,-134.8"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="279.7" y="-101.6" width="54" height="21.6"/><text x="306.7" y="-86.1">add</text></a><path d="M210.5,-76.1C229.2,-79 252.3,-82.6 271.1,-85.5"/><polygon fill="#8a93a5" points="270.6,-87.9 277.9,-86.5 271.3,-83"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="279.7" y="-61.6" width="54" height="21.6"/><text x="306.7" y="-46.1">take</text></a><path d="M210.5,-65.5C229.2,-62.6 252.3,-59 271.1,-56.1"/><polygon fill="#8a93a5" points="271.3,-58.6 277.9,-55.1 270.6,-53.7"/><a href="../proc/last_separator.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="258.3" y="-21.6" width="96.8" height="21.6"/><text x="306.7" y="-6.1">last_separator</text></a><path d="M222.5,-23.6C231.3,-22.3 240.6,-20.8 249.6,-19.5"/><polygon fill="#8a93a5" points="249.8,-21.9 256.4,-18.4 249.1,-17.1"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="391.1" y="-221.6" width="89.6" height="21.6"/><text x="435.9" y="-206.1">is_procedure</text></a><path d="M349.4,-210.8C360,-210.8 371.5,-210.8 382.6,-210.8"/><polygon fill="#8a93a5" points="382.5,-213.3 389.5,-210.8 382.5,-208.4"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="396.9" y="-181.6" width="78" height="21.6"/><text x="435.9" y="-166.1">lower_char</text></a><path d="M348.7,-170.8C361.3,-170.8 375.3,-170.8 388.3,-170.8"/><polygon fill="#8a93a5" points="388.1,-173.3 395.1,-170.8 388.1,-168.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="295pt" height="30pt"
+ viewBox="0 0 295 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/search_index.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="91.7" height="21.6"/><text x="45.9" y="-6.1">search_index</text></a><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127.7" y="-21.6" width="69.3" height="21.6"/><text x="162.4" y="-6.1">write_site</text></a><path d="M127.3,-10.8C119,-10.8 109.8,-10.8 100.7,-10.8"/><polygon fill="#8a93a5" points="101,-8.4 94,-10.8 101,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="233" y="-21.6" width="54" height="21.6"/><text x="260" y="-6.1">run</text></a><path d="M232.6,-10.8C224.3,-10.8 214.8,-10.8 205.6,-10.8"/><polygon fill="#8a93a5" points="205.7,-8.4 198.7,-10.8 205.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> search_index(site, text)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site                    <span class="d">!! the site</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: text  <span class="d">!! the script</span>
+    <span class="k">type</span>(json_core) :: json
+    <span class="k">type</span>(json_value), <span class="k">pointer</span> :: root
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: url, summary, json_text, word
+    <span class="k">integer</span> :: k, which, j
+
+    <span class="k">call</span> json%initialize(no_whitespace=<span class="k">.true.</span>)
+    <span class="k">call</span> json%create_array(root, <span class="s">''</span>)
+    <span class="k">do</span> which = <span class="n">1</span>, NUM_LISTS
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(site%members(which)%ids)
+            k = site%members(which)%ids(j)
+            <span class="k">associate</span> (e =&gt; site%p%list%box(k)%e)
+                <span class="k">call</span> entity_url(site%p%list, k, url)
+                summary = <span class="s">''</span>
+                <span class="k">if</span> (<span class="k">allocated</span>(e%summary)) <span class="k">call</span> plain_text(e%summary, <span class="n">140</span>, summary)
+                word = <span class="k">trim</span>(LIST_TITLE(which))
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_SUBROUTINE) word = <span class="s">'subroutine'</span>
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_FUNCTION) word = <span class="s">'function'</span>
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_INTERFACE) word = <span class="s">'interface'</span>
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_TYPE) word = <span class="s">'type'</span>
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_MODULE) word = <span class="s">'module'</span>
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_SUBMODULE) word = <span class="s">'submodule'</span>
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_PROGRAM) word = <span class="s">'program'</span>
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_FILE) word = <span class="s">'file'</span>
+                <span class="k">call</span> add_entry(display_name(e), url, word, summary)
+            <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(site%pages)
+        <span class="k">call</span> plain_text(site%pages(k)%html, <span class="n">140</span>, summary)
+        <span class="k">call</span> add_entry(site%pages(k)%title, <span class="s">'page/'</span>//site%pages(k)%path, <span class="s">'page'</span>, summary)
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> json%serialize(root, json_text)
+    <span class="k">call</span> json%destroy(root)
+    text = <span class="s">'window.FDOC_INDEX='</span>//json_text//<span class="s">';'</span>//<span class="k">achar</span>(<span class="n">10</span>)
+
+<span class="k">contains</span>
+
+    <span class="d">!&gt; Add an entry.</span>
+    <span class="k">subroutine</span> add_entry(title, <span class="k">link</span>, <span class="k">kind</span>, description)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: title       <span class="d">!! what it is called</span>
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">link</span>        <span class="d">!! where it is</span>
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">kind</span>        <span class="d">!! what it is</span>
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: description <span class="d">!! a line about it</span>
+        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: item
+
+        <span class="k">call</span> json%create_object(item, <span class="s">''</span>)
+        <span class="k">call</span> json%add(item, <span class="s">'t'</span>, title)
+        <span class="k">call</span> json%add(item, <span class="s">'u'</span>, <span class="k">link</span>)
+        <span class="k">call</span> json%add(item, <span class="s">'k'</span>, <span class="k">kind</span>)
+        <span class="k">call</span> json%add(item, <span class="s">'s'</span>, description)
+        <span class="k">call</span> json%add(root, item)
+    <span class="k">end</span> <span class="k">subroutine</span> add_entry
+
+<span class="k">end</span> <span class="k">subroutine</span> search_index</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

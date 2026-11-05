@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>letter_class &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">function</span>letter_class<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> character(len=1) <span class="k">function</span> letter_class(<span class="intent attr-in" title="intent(in)">letter</span>) <span class="k">result</span>(class)</div>
+<div class="doc">
+<p>The lowercase class for icon <code>letter</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-letter"><td class="name">letter</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the letter, or an entity for a symbol</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-class"><td class="name">class</td><td class="type">character(len=1)</td><td class="attributes"><span class="attr attr-private">private</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/lower_char.html">lower_char</a></li></ul>
+<div class="graph"><svg width="202pt" height="30pt"
+ viewBox="0 0 202 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/letter_class.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="80.1" height="21.6"/><text x="40.1" y="-6.1">letter_class</text></a><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="116.1" y="-21.6" width="78" height="21.6"/><text x="155.1" y="-6.1">lower_char</text></a><path d="M80.9,-10.8C89.5,-10.8 98.7,-10.8 107.5,-10.8"/><polygon fill="#8a93a5" points="107.3,-13.3 114.3,-10.8 107.3,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/side_icon.html">side_icon</a></li><li><a href="../proc/use_group.html">use_group</a></li></ul>
+<div class="graph"><svg width="1206pt" height="234pt"
+ viewBox="0 0 1206 234" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 230.3)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/letter_class.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-126.3" width="80.1" height="21.6"/><text x="40.1" y="-110.8">letter_class</text></a><a href="../proc/side_icon.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="116.1" y="-107.3" width="69.3" height="21.6"/><text x="150.8" y="-91.8">side_icon</text></a><path d="M115.7,-102.4C107.2,-103.9 98,-105.5 88.9,-107.1"/><polygon fill="#8a93a5" points="88.7,-104.7 82.3,-108.3 89.6,-109.5"/><a href="../proc/use_group.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="221.5" y="-146.3" width="75.8" height="21.6"/><text x="259.4" y="-130.8">use_group</text></a><path d="M221,-132C184.6,-128.7 128.9,-123.5 89.1,-119.9"/><polygon fill="#8a93a5" points="89.6,-117.5 82.4,-119.3 89.1,-122.3"/><path d="M227.6,-124.2C216,-119.9 202.6,-115.1 190.4,-110.6"/><polygon fill="#8a93a5" points="191.4,-108.3 184,-108.2 189.7,-112.9"/><a href="../proc/side_group.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="355" y="-146.3" width="78.7" height="21.6"/><text x="394.4" y="-130.8">side_group</text></a><path d="M367.5,-124.3C341.1,-113.8 298.8,-99.2 260.4,-96.5"/><a href="../proc/site_side.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="495.7" y="-107.3" width="65.7" height="21.6"/><text x="528.6" y="-91.8">site_side</text></a><path d="M495.5,-97.9C445.2,-99.9 345.1,-102.5 260.4,-96.5"/><path d="M258.4,-96.5C237.3,-94.8 213.9,-94.6 194.3,-95"/><polygon fill="#8a93a5" points="194.4,-92.5 187.5,-95.1 194.5,-97.4"/><a href="../proc/sidebar_script.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="737.8" y="-226.3" width="95.3" height="21.6"/><text x="785.5" y="-210.8">sidebar_script</text></a><path d="M737.5,-215.2C686.4,-214.9 602.2,-214.5 529.6,-214.5 529.6,-214.5 529.6,-214.5 393.4,-214.5 369.9,-214.5 247.6,-170.5 221.5,-155.5 201.4,-143.9 181.6,-126.3 168.2,-113.4"/><polygon fill="#8a93a5" points="170,-111.7 163.3,-108.5 166.5,-115.1"/><a href="../proc/type_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="225.1" y="-68.3" width="68.6" height="21.6"/><text x="259.4" y="-52.8">type_tree</text></a><path d="M227.6,-68.7C216,-73 202.6,-77.9 190.4,-82.3"/><polygon fill="#8a93a5" points="189.7,-80 184,-84.7 191.4,-84.6"/><a href="../proc/names_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="601.8" y="-28.3" width="89.6" height="21.6"/><text x="646.6" y="-12.8">names_page</text></a><path d="M601.5,-10.5C522.3,0 351.8,13.8 221.5,-37.5 199.2,-46.2 179,-65.2 166.1,-79.2"/><polygon fill="#8a93a5" points="164.6,-77.3 161.8,-84.2 168.3,-80.5"/><path d="M618.1,-28.7C612.6,-31.3 606.9,-34.3 601.8,-37.5 581.9,-49.9 561.4,-67.1 547.4,-79.8"/><polygon fill="#8a93a5" points="546,-77.7 542.5,-84.2 549.3,-81.3"/><a href="../proc/type_uses_section.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="333.3" y="-186.3" width="122.1" height="21.6"/><text x="394.4" y="-170.8">type_uses_section</text></a><path d="M356,-164.2C340.3,-159.5 321.8,-154 305.4,-149"/><polygon fill="#8a93a5" points="306.4,-146.7 299,-147.1 305,-151.4"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="605.8" y="-167.3" width="81.6" height="21.6"/><text x="646.6" y="-151.8">entity_page</text></a><path d="M605.4,-153.1C560.9,-149.4 489.3,-143.3 442.3,-139.4"/><polygon fill="#8a93a5" points="442.5,-137 435.3,-138.8 442.1,-141.8"/><path d="M623.8,-145.2C605.4,-135.7 578.9,-122 558.7,-111.5"/><polygon fill="#8a93a5" points="560,-109.4 552.7,-108.4 557.7,-113.8"/><a href="../proc/type_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="491.4" y="-186.3" width="74.4" height="21.6"/><text x="528.6" y="-170.8">type_body</text></a><path d="M605.3,-163.1C595.4,-164.7 584.7,-166.4 574.6,-168.1"/><polygon fill="#8a93a5" points="574.3,-165.7 567.8,-169.2 575.1,-170.5"/><a href="../proc/search_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="740.7" y="-146.3" width="89.6" height="21.6"/><text x="785.5" y="-130.8">search_page</text></a><path d="M757.6,-124.2C730.4,-113.7 686.9,-99.2 647.6,-96.5"/><a href="../proc/list_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="613.4" y="-68.3" width="66.4" height="21.6"/><text x="646.6" y="-52.8">list_page</text></a><path d="M613,-68.4C599.4,-73 583.5,-78.3 569.3,-83.1"/><polygon fill="#8a93a5" points="568.9,-80.7 563,-85.2 570.4,-85.3"/><path d="M613.1,-57.5C543.3,-57.5 379.4,-57.5 302.1,-57.5"/><polygon fill="#8a93a5" points="302.6,-55 295.6,-57.5 302.6,-59.9"/><a href="../proc/index_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="900.2" y="-107.3" width="81.6" height="21.6"/><text x="941.1" y="-91.8">index_page</text></a><path d="M899.8,-98.2C843.3,-100.3 737.5,-102.7 647.6,-96.5"/><path d="M645.6,-96.5C620.5,-94.5 592.2,-94.5 569.9,-95"/><polygon fill="#8a93a5" points="570.1,-92.5 563.2,-95.1 570.2,-97.4"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1038.5" y="-146.3" width="69.3" height="21.6"/><text x="1073.1" y="-130.8">write_site</text></a><path d="M1063.1,-146.4C1050.9,-160.3 1027.9,-183.7 1002.5,-194.5 951.1,-216.2 887,-219.8 842,-219"/><polygon fill="#8a93a5" points="842.1,-216.5 835.1,-218.8 842,-221.4"/><path d="M1063.1,-124.4C1050.9,-110.5 1027.9,-87.1 1002.5,-76.5 913.5,-39.4 882.6,-64.3 786.5,-57.5"/><path d="M784.5,-57.5C748.8,-53.9 709.7,-41.6 682.5,-31.6"/><polygon fill="#8a93a5" points="683.6,-29.4 676.2,-29.2 681.9,-34"/><path d="M1038.2,-135.5C988.9,-135.5 897,-135.5 838.9,-135.5"/><polygon fill="#8a93a5" points="839.1,-133 832.1,-135.5 839.1,-137.9"/><path d="M784.5,-57.5C752.4,-55.2 716,-55.3 688.8,-55.9"/><polygon fill="#8a93a5" points="688.7,-53.5 681.8,-56.1 688.8,-58.4"/><path d="M1038.3,-125.3C1022.8,-120.7 1004.1,-115.1 987.4,-110.1"/><polygon fill="#8a93a5" points="988.2,-107.8 980.8,-108.1 986.8,-112.4"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="879.7" y="-185.3" width="122.8" height="21.6"/><text x="941.1" y="-169.8">write_entity_pages</text></a><path d="M1038.3,-145.6C1022.8,-150.3 1004.1,-155.9 987.4,-160.9"/><polygon fill="#8a93a5" points="986.8,-158.5 980.8,-162.8 988.2,-163.2"/><path d="M491.1,-175.5C482.7,-175.5 473.6,-175.5 464.3,-175.5"/><polygon fill="#8a93a5" points="464.4,-173 457.4,-175.5 464.4,-177.9"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="727.4" y="-186.3" width="116.3" height="21.6"/><text x="785.5" y="-170.8">write_entity_page</text></a><path d="M727.2,-167.5C716.8,-166.1 706,-164.6 695.9,-163.2"/><polygon fill="#8a93a5" points="696.3,-160.8 689.1,-162.2 695.7,-165.6"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1143.8" y="-146.3" width="54" height="21.6"/><text x="1170.8" y="-130.8">run</text></a><path d="M1143.4,-135.5C1135,-135.5 1125.5,-135.5 1116.3,-135.5"/><polygon fill="#8a93a5" points="1116.5,-133 1109.5,-135.5 1116.5,-137.9"/><path d="M879.4,-174.9C870.4,-174.9 861.1,-175 852,-175"/><polygon fill="#8a93a5" points="852.2,-172.6 845.3,-175.1 852.3,-177.5"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">function</span> letter_class(letter) <span class="k">result</span>(<span class="k">class</span>)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: letter  <span class="d">!! the letter, or an entity for a symbol</span>
+    <span class="k">character</span> :: <span class="k">class</span>
+
+    <span class="k">class</span> = <span class="s">'_'</span>
+    <span class="k">if</span> (<span class="k">len</span>(letter) == <span class="n">1</span>) <span class="k">class</span> = lower_char(letter)
+<span class="k">end</span> <span class="k">function</span> letter_class</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

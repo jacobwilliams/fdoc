@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>is_marker &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project_file.f90.html">fdoc_project_file.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project_file.html">fdoc_project_file</a></div>
+<h1><span class="kind">function</span>is_marker<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> is_marker(<span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-in" title="intent(in)">c</span>)</div>
+<div class="doc">
+<p>True if <code>line</code> is three of <code>c</code>, alone or followed by whitespace and anything else.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-line"><td class="name">line</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the line</p></td></tr>
+<tr id="variable-c"><td class="name">c</td><td class="type">character(len=1)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the marker character</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-is_marker"><td class="name">is_marker</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/parse_metadata.html">parse_metadata</a></li></ul>
+<div class="graph"><svg width="1010pt" height="265pt"
+ viewBox="0 0 1010 265" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 260.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_marker.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-216.6" width="71.5" height="21.6"/><text x="35.7" y="-201.1">is_marker</text></a><a href="../proc/parse_metadata.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="107.5" y="-216.6" width="108.4" height="21.6"/><text x="161.6" y="-201.1">parse_metadata</text></a><path d="M107,-205.8C98.2,-205.8 89.1,-205.8 80.6,-205.8"/><polygon fill="#8a93a5" points="80.7,-203.4 73.7,-205.8 80.7,-208.3"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="256.1" y="-216.6" width="76.6" height="21.6"/><text x="294.4" y="-201.1">read_page</text></a><path d="M256,-205.8C246.2,-205.8 235.4,-205.8 224.7,-205.8"/><polygon fill="#8a93a5" points="224.7,-203.4 217.7,-205.8 224.7,-208.3"/><a href="../proc/set_doc.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="264.5" y="-121.6" width="59.9" height="21.6"/><text x="294.4" y="-106.1">set_doc</text></a><path d="M277.9,-122.1C254.8,-138.9 211.2,-170.5 184.8,-189.7"/><polygon fill="#8a93a5" points="183.6,-187.6 179.4,-193.7 186.5,-191.5"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="251.8" y="-256.6" width="85.2" height="21.6"/><text x="294.4" y="-241.1">load_project</text></a><path d="M256.7,-234.6C241.2,-229.8 223.1,-224.3 206.9,-219.3"/><polygon fill="#8a93a5" points="208,-217.1 200.6,-217.4 206.6,-221.8"/><a href="../proc/read_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="667.9" y="-217.6" width="70" height="21.6"/><text x="702.9" y="-202.1">read_tree</text></a><path d="M667.6,-206.7C594.5,-206.5 423.4,-206.1 341.2,-205.9"/><polygon fill="#8a93a5" points="341.5,-203.5 334.5,-205.9 341.5,-208.4"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="667.5" y="-159.6" width="70.8" height="21.6"/><text x="702.9" y="-144.1">parse_file</text></a><path d="M667.4,-156.3C615.5,-166.4 514.6,-181.9 429.7,-169.8"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="540.2" y="-141.6" width="71.5" height="21.6"/><text x="575.9" y="-126.1">open_unit</text></a><path d="M667.1,-143.8C652.6,-141.7 635.6,-139.2 620.3,-137"/><polygon fill="#8a93a5" points="620.7,-134.6 613.5,-136.1 620.1,-139.5"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="520.3" y="-101.6" width="111.2" height="21.6"/><text x="575.9" y="-86.1">parse_statement</text></a><path d="M682.9,-137.6C668.9,-129.5 649.4,-118.8 631.5,-110.8 627.1,-108.8 622.4,-106.9 617.7,-105"/><polygon fill="#8a93a5" points="618.7,-102.8 611.3,-102.5 616.9,-107.3"/><path d="M544.5,-142C508.8,-154.6 451.7,-172.9 429.7,-169.8"/><path d="M427.7,-169.8C387.1,-164 344.6,-141.7 319.1,-126.2"/><polygon fill="#8a93a5" points="320.6,-124.3 313.3,-122.7 318,-128.4"/><a href="../proc/read_declaration.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="373" y="-141.6" width="111.2" height="21.6"/><text x="428.7" y="-126.1">read_declaration</text></a><path d="M372.7,-122.5C359.4,-120.5 345.4,-118.4 333,-116.5"/><polygon fill="#8a93a5" points="333.5,-114.1 326.2,-115.5 332.8,-118.9"/><a href="../proc/read_binding.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="383.9" y="-101.6" width="89.6" height="21.6"/><text x="428.7" y="-86.1">read_binding</text></a><path d="M383.6,-97.5C367.1,-100 348.5,-102.8 332.7,-105.2"/><polygon fill="#8a93a5" points="332.8,-102.7 326.2,-106.1 333.5,-107.5"/><a href="../proc/read_common.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="379.9" y="-61.6" width="97.5" height="21.6"/><text x="428.7" y="-46.1">read_common</text></a><path d="M394.8,-62.1C387.5,-64.8 380,-67.8 373,-70.8 356,-78.3 337.5,-87.8 322.8,-95.6"/><polygon fill="#8a93a5" points="321.8,-93.4 316.9,-98.8 324.2,-97.7"/><a href="../proc/read_namelist.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="380.6" y="-21.6" width="96.1" height="21.6"/><text x="428.7" y="-6.1">read_namelist</text></a><path d="M389.9,-22.1C384,-24.6 378.2,-27.4 373,-30.8 346.8,-47.8 322.8,-75.2 308.6,-93.1"/><polygon fill="#8a93a5" points="306.8,-91.5 304.4,-98.5 310.7,-94.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="948.3" y="-217.6" width="54" height="21.6"/><text x="975.3" y="-202.1">run</text></a><path d="M948.1,-216.7C937.1,-220.4 924.2,-224.4 912.3,-226.8 821.2,-245.4 796.9,-245.8 703.9,-245.8 703.9,-245.8 703.9,-245.8 574.9,-245.8 494.6,-245.8 401.3,-245.8 345.4,-245.8"/><polygon fill="#8a93a5" points="345.6,-243.4 338.6,-245.8 345.6,-248.3"/><a href="../proc/load_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="802.5" y="-217.6" width="81.6" height="21.6"/><text x="843.3" y="-202.1">load_pages</text></a><path d="M948,-206.8C932.1,-206.8 911.5,-206.8 892.8,-206.8"/><polygon fill="#8a93a5" points="892.9,-204.4 885.9,-206.8 892.9,-209.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="774.3" y="-177.6" width="138" height="21.6"/><text x="843.3" y="-162.1">load_project_sources</text></a><path d="M948.1,-198.2C937,-194.6 924,-190.4 912.3,-186.8 905.5,-184.7 898.4,-182.6 891.3,-180.5"/><polygon fill="#8a93a5" points="892,-178.1 884.6,-178.5 890.6,-182.8"/><path d="M802.3,-206.8C784.8,-206.8 764.4,-206.8 746.7,-206.8"/><polygon fill="#8a93a5" points="746.7,-204.4 739.7,-206.8 746.7,-209.3"/><path d="M773.9,-157.9C764.7,-156.7 755.5,-155.5 746.9,-154.4"/><polygon fill="#8a93a5" points="747.3,-152 740.1,-153.5 746.7,-156.8"/><path d="M534.1,-102C516.8,-106.8 496.6,-112.4 478.6,-117.3"/><polygon fill="#8a93a5" points="478,-114.9 471.9,-119.2 479.3,-119.7"/><path d="M520,-90.8C507.6,-90.8 494.5,-90.8 482.2,-90.8"/><polygon fill="#8a93a5" points="482.3,-88.4 475.3,-90.8 482.3,-93.3"/><path d="M534.1,-79.6C516.8,-74.8 496.6,-69.2 478.6,-64.3"/><polygon fill="#8a93a5" points="479.3,-61.9 471.9,-62.4 478,-66.7"/><path d="M560.5,-79.7C543.1,-66.7 512.7,-45.2 484.3,-30.8 480.3,-28.8 476.2,-26.9 471.9,-25.1"/><polygon fill="#8a93a5" points="473.1,-23 465.7,-22.6 471.3,-27.5"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> is_marker(line, c)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line    <span class="d">!! the line</span>
+    <span class="k">character</span>, <span class="k">intent</span>(in) :: c              <span class="d">!! the marker character</span>
+    is_marker = <span class="k">len</span>(line) &gt;= <span class="n">3</span>
+    <span class="k">if</span> (<span class="k">.not.</span> is_marker) <span class="k">return</span>
+    is_marker = line(<span class="n">1</span>:<span class="n">3</span>) == c//c//c
+    <span class="k">if</span> (is_marker <span class="k">.and.</span> <span class="k">len</span>(line) &gt; <span class="n">3</span>) is_marker = line(<span class="n">4</span>:<span class="n">4</span>) == <span class="s">' '</span> <span class="k">.or.</span> line(<span class="n">4</span>:<span class="n">4</span>) == <span class="k">achar</span>(<span class="n">9</span>)
+<span class="k">end</span> <span class="k">function</span> is_marker</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

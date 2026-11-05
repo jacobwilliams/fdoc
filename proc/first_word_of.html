@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>first_word_of &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">function</span>first_word_of<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> character(len=word_length(text)) <span class="k">function</span> first_word_of(<span class="intent attr-in" title="intent(in)">text</span>) <span class="k">result</span>(word)</div>
+<div class="doc">
+<p>The first blank-separated word of <code>text</code>, after any leading blanks.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-word"><td class="name">word</td><td class="type">character(len=word_length(text))</td><td class="attributes"><span class="attr attr-private">private</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/doxygen_meta.html">doxygen_meta</a></li></ul>
+<div class="graph"><svg width="994pt" height="184pt"
+ viewBox="0 0 994 184" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 180.4)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/first_word_of.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="88.8" height="21.6"/><text x="44.4" y="-86.1">first_word_of</text></a><a href="../proc/doxygen_meta.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="124.8" y="-101.6" width="99.7" height="21.6"/><text x="174.7" y="-86.1">doxygen_meta</text></a><path d="M124.4,-90.8C115.8,-90.8 106.7,-90.8 98,-90.8"/><polygon fill="#8a93a5" points="98.2,-88.4 91.2,-90.8 98.2,-93.3"/><a href="../proc/set_doc.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="260.5" y="-101.6" width="59.9" height="21.6"/><text x="290.5" y="-86.1">set_doc</text></a><path d="M260.2,-90.8C251.8,-90.8 242.4,-90.8 233,-90.8"/><polygon fill="#8a93a5" points="233.2,-88.4 226.2,-90.8 233.2,-93.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="650.9" y="-141.6" width="70.8" height="21.6"/><text x="686.3" y="-126.1">parse_file</text></a><path d="M655.6,-142.1C605.3,-159.6 500.1,-189.5 413.1,-169.8"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="523.5" y="-141.6" width="71.5" height="21.6"/><text x="559.3" y="-126.1">open_unit</text></a><path d="M650.5,-130.8C636,-130.8 619,-130.8 603.7,-130.8"/><polygon fill="#8a93a5" points="603.9,-128.4 596.9,-130.8 603.9,-133.3"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="503.7" y="-101.6" width="111.2" height="21.6"/><text x="559.3" y="-86.1">parse_statement</text></a><path d="M650.5,-119.7C635.8,-115 618.7,-109.5 603.2,-104.5"/><polygon fill="#8a93a5" points="604.2,-102.3 596.8,-102.5 602.7,-106.9"/><path d="M529.3,-142C493.7,-155.2 435.1,-174.8 413.1,-169.8"/><path d="M411.1,-169.8C386,-164.1 378.5,-164 356.4,-150.8 337.2,-139.3 318.8,-121.4 306.5,-108.1"/><polygon fill="#8a93a5" points="308.5,-106.7 302,-103.1 304.9,-110"/><a href="../proc/read_declaration.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="356.4" y="-141.6" width="111.2" height="21.6"/><text x="412.1" y="-126.1">read_declaration</text></a><path d="M377.4,-119.6C362.2,-114.5 344.3,-108.5 328.7,-103.2"/><polygon fill="#8a93a5" points="329.6,-101 322.2,-101.1 328.1,-105.6"/><a href="../proc/read_binding.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="367.3" y="-101.6" width="89.6" height="21.6"/><text x="412.1" y="-86.1">read_binding</text></a><path d="M366.9,-90.8C354.4,-90.8 341.1,-90.8 329.1,-90.8"/><polygon fill="#8a93a5" points="329.1,-88.4 322.1,-90.8 329.1,-93.3"/><a href="../proc/read_common.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="363.3" y="-61.6" width="97.5" height="21.6"/><text x="412.1" y="-46.1">read_common</text></a><path d="M377.4,-62C362.2,-67.1 344.3,-73.1 328.7,-78.4"/><polygon fill="#8a93a5" points="328.1,-76 322.2,-80.5 329.6,-80.6"/><a href="../proc/read_namelist.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="364" y="-21.6" width="96.1" height="21.6"/><text x="412.1" y="-6.1">read_namelist</text></a><path d="M374.3,-22C368.1,-24.5 361.9,-27.4 356.4,-30.8 337.3,-42.5 318.8,-60.4 306.5,-73.6"/><polygon fill="#8a93a5" points="304.9,-71.7 302,-78.5 308.5,-75"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="757.7" y="-141.6" width="138" height="21.6"/><text x="826.7" y="-126.1">load_project_sources</text></a><path d="M757.3,-130.8C748.1,-130.8 738.9,-130.8 730.3,-130.8"/><polygon fill="#8a93a5" points="730.5,-128.4 723.5,-130.8 730.5,-133.3"/><path d="M517.5,-102C500.2,-106.8 480,-112.4 462,-117.3"/><polygon fill="#8a93a5" points="461.4,-114.9 455.3,-119.2 462.7,-119.7"/><path d="M503.4,-90.8C491,-90.8 477.9,-90.8 465.6,-90.8"/><polygon fill="#8a93a5" points="465.7,-88.4 458.7,-90.8 465.7,-93.3"/><path d="M517.5,-79.6C500.2,-74.8 480,-69.2 462,-64.3"/><polygon fill="#8a93a5" points="462.7,-61.9 455.3,-62.4 461.4,-66.7"/><path d="M543.9,-79.7C526.5,-66.7 496.1,-45.2 467.7,-30.8 463.7,-28.8 459.5,-26.9 455.3,-25.1"/><polygon fill="#8a93a5" points="456.5,-23 449.1,-22.6 454.7,-27.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="931.7" y="-141.6" width="54" height="21.6"/><text x="958.7" y="-126.1">run</text></a><path d="M931.4,-130.8C923.2,-130.8 913.9,-130.8 904.1,-130.8"/><polygon fill="#8a93a5" points="904.4,-128.4 897.4,-130.8 904.4,-133.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">function</span> first_word_of(text) <span class="k">result</span>(word)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">character</span>(<span class="k">len</span>=word_length(text)) :: word
+    <span class="k">integer</span> :: a
+    a = <span class="k">verify</span>(text//<span class="s">'x'</span>, <span class="s">' '</span>)
+    word = text(a:)
+<span class="k">end</span> <span class="k">function</span> first_word_of</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

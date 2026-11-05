@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>walk_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-from"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>from</a></li><li><a href="#variable-levels"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>levels</a></li><li><a href="#variable-marked"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>marked</a></li><li><a href="#variable-places"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>places</a></li><li><a href="#variable-queue"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>queue</a></li><li><a href="#variable-stamp"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>stamp</a></li><li><a href="#variable-to"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>to</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_graphs.f90.html">fdoc_graphs.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_graphs.html">fdoc_graphs</a></div>
+<h1><span class="kind">type</span>walk_t<span class="attr attr-private">private</span></h1>
+<div class="doc">
+<p>The working space of one thread, sized once, for finding what a graph holds.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-from"><td class="name">from</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>where each edge starts</p></td></tr>
+<tr id="variable-levels"><td class="name">levels</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the hops to each of <code>queue</code></p></td></tr>
+<tr id="variable-marked"><td class="name">marked</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>when each entity was last reached</p></td></tr>
+<tr id="variable-places"><td class="name">places</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the number of each entity in the graph</p></td></tr>
+<tr id="variable-queue"><td class="name">queue</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the entities reached</p></td></tr>
+<tr id="variable-stamp"><td class="name">stamp</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>a number new for each graph</p></td></tr>
+<tr id="variable-to"><td class="name">to</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>where each edge ends</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Argument of (3)</h3>
+<ul class="chips kinds"><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/describe_graph.html">describe_graph</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/draw_graph.html">draw_graph</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/grow_edges.html">grow_edges</a></li></ul>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: walk_t
+    <span class="d">!! The working space of one thread, sized once, for finding what a graph holds.</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: marked(:)           <span class="d">!! when each entity was last reached</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: places(:)           <span class="d">!! the number of each entity in the graph</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: queue(:)            <span class="d">!! the entities reached</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: levels(:)           <span class="d">!! the hops to each of `queue`</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: from(:)             <span class="d">!! where each edge starts</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: to(:)               <span class="d">!! where each edge ends</span>
+    <span class="k">integer</span> :: stamp = <span class="n">0</span>                        <span class="d">!! a number new for each graph</span>
+<span class="k">end</span> <span class="k">type</span> walk_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

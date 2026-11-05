@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>has_mark &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">function</span>has_mark<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> has_mark(<span class="intent attr-in" title="intent(in)">c</span>, <span class="intent attr-in" title="intent(in)">mark</span>)</div>
+<div class="doc">
+<p>True if comment <code>c</code> starts with <code>!</code> and doc marker <code>mark</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the comment</p></td></tr>
+<tr id="variable-mark"><td class="name">mark</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the marker</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-has_mark"><td class="name">has_mark</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/collect_docs.html">collect_docs</a></li></ul>
+<div class="graph"><svg width="572pt" height="30pt"
+ viewBox="0 0 572 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/has_mark.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="71.5" height="21.6"/><text x="35.7" y="-6.1">has_mark</text></a><a href="../proc/collect_docs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="107.5" y="-21.6" width="85.9" height="21.6"/><text x="150.4" y="-6.1">collect_docs</text></a><path d="M107.2,-10.8C98.5,-10.8 89.4,-10.8 80.8,-10.8"/><polygon fill="#8a93a5" points="80.8,-8.4 73.8,-10.8 80.8,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="229.4" y="-21.6" width="70.8" height="21.6"/><text x="264.8" y="-6.1">parse_file</text></a><path d="M229.2,-10.8C220.6,-10.8 211.2,-10.8 202,-10.8"/><polygon fill="#8a93a5" points="202.2,-8.4 195.2,-10.8 202.2,-13.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="336.2" y="-21.6" width="138" height="21.6"/><text x="405.2" y="-6.1">load_project_sources</text></a><path d="M335.8,-10.8C326.6,-10.8 317.4,-10.8 308.8,-10.8"/><polygon fill="#8a93a5" points="309,-8.4 302,-10.8 309,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="510.2" y="-21.6" width="54" height="21.6"/><text x="537.2" y="-6.1">run</text></a><path d="M509.9,-10.8C501.7,-10.8 492.4,-10.8 482.6,-10.8"/><polygon fill="#8a93a5" points="482.9,-8.4 475.9,-10.8 482.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> has_mark(c, mark)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: c       <span class="d">!! the comment</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: mark    <span class="d">!! the marker</span>
+    has_mark = <span class="k">.false.</span>
+    <span class="k">if</span> (<span class="k">len</span>(mark) == <span class="n">0</span> <span class="k">.or.</span> <span class="k">len</span>(c) &lt; <span class="n">1</span> + <span class="k">len</span>(mark)) <span class="k">return</span>
+    has_mark = c(<span class="n">2</span>:<span class="n">1</span> + <span class="k">len</span>(mark)) == mark
+<span class="k">end</span> <span class="k">function</span> has_mark</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>describe_graph &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_graphs.f90.html">fdoc_graphs.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_graphs.html">fdoc_graphs</a></div>
+<h1><span class="kind">subroutine</span>describe_graph<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> describe_graph(<span class="intent attr-in" title="intent(in)">p</span>, <span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-in" title="intent(in)">relation</span>, <span class="intent attr-in" title="intent(in)">job</span>, <span class="intent attr-inout" title="intent(inout)">w</span>, <span class="intent attr-out" title="intent(out)">g</span>, <span class="intent attr-out" title="intent(out)">found</span>)</div>
+<div class="doc">
+<p>Put the graph of <code>job</code> in <code>g</code>. <code>found</code> is false if it would have only one node or no edges. Nodes go
+in as they are reached, and edges after them.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-relation"><td class="name">relation</td><td class="type">type(<a href="../type/adjacency_t.html">adjacency_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the relation</p></td></tr>
+<tr id="variable-job"><td class="name">job</td><td class="type">type(<a href="../type/graph_job_t.html">graph_job_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the graph</p></td></tr>
+<tr id="variable-w"><td class="name">w</td><td class="type">type(<a href="../type/walk_t.html">walk_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the working space</p></td></tr>
+<tr id="variable-g"><td class="name">g</td><td class="type">type(layout_t)</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the description</p></td></tr>
+<tr id="variable-found"><td class="name">found</td><td class="type">logical</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>whether there is a graph</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/grow_edges.html">grow_edges</a></li><li><a href="../proc/add_node.html">add_node</a></li><li><a href="../proc/add_edge.html">add_edge</a></li></ul>
+<div class="graph"><svg width="715pt" height="130pt"
+ viewBox="0 0 715 130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 125.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/describe_graph.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="104" height="21.6"/><text x="52" y="-66.1">describe_graph</text></a><a href="../proc/grow_edges.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140" y="-121.6" width="85.2" height="21.6"/><text x="182.6" y="-106.1">grow_edges</text></a><path d="M90.9,-82.6C105.5,-87.1 122.4,-92.4 137.6,-97.1"/><polygon fill="#8a93a5" points="136.5,-99.3 143.9,-99.1 137.9,-94.6"/><a href="../proc/add_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="146.5" y="-81.6" width="72.2" height="21.6"/><text x="182.6" y="-66.1">add_node</text></a><path d="M105,-70.8C115.8,-70.8 127.2,-70.8 137.8,-70.8"/><polygon fill="#8a93a5" points="137.5,-73.3 144.5,-70.8 137.5,-68.4"/><a href="../proc/add_edge.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="146.5" y="-41.6" width="72.2" height="21.6"/><text x="182.6" y="-26.1">add_edge</text></a><path d="M90.9,-59C105.8,-54.4 123,-49 138.4,-44.3"/><polygon fill="#8a93a5" points="138.8,-46.7 144.8,-42.3 137.3,-42"/><a href="../proc/last_separator.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="261.2" y="-120.6" width="96.8" height="21.6"/><text x="309.6" y="-105.1">last_separator</text></a><path d="M219.1,-81.9C233.2,-86.3 249.7,-91.4 264.5,-96"/><polygon fill="#8a93a5" points="263.8,-98.4 271.2,-98.1 265.2,-93.7"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="394" y="-61.6" width="67.1" height="21.6"/><text x="427.6" y="-46.1">entity_url</text></a><path d="M219.2,-67.9C263.4,-64.2 338.6,-58 385.3,-54.2"/><polygon fill="#8a93a5" points="385.4,-56.7 392.1,-53.6 385,-51.8"/><a href="../proc/node_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="274.6" y="-42.6" width="70.1" height="21.6"/><text x="309.6" y="-27.1">node_link</text></a><path d="M219.1,-59.7C233.9,-55.1 251.1,-49.7 266.5,-44.9"/><polygon fill="#8a93a5" points="267,-47.4 272.9,-42.9 265.5,-42.7"/><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="497.2" y="-101.6" width="84.5" height="21.6"/><text x="539.4" y="-86.1">object_word</text></a><path d="M459.5,-62C472.1,-66.6 486.8,-72 500.1,-76.9"/><polygon fill="#8a93a5" points="498.9,-79 506.3,-79.1 500.6,-74.4"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="497.9" y="-61.6" width="83.1" height="21.6"/><text x="539.4" y="-46.1">page_name</text></a><path d="M461.5,-50.8C470.3,-50.8 479.8,-50.8 489.2,-50.8"/><polygon fill="#8a93a5" points="489.2,-53.3 496.2,-50.8 489.2,-48.4"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="505.1" y="-21.6" width="68.6" height="21.6"/><text x="539.4" y="-6.1">url_quote</text></a><path d="M459.5,-39.6C472.1,-35 486.8,-29.6 500.1,-24.7"/><polygon fill="#8a93a5" points="500.6,-27.2 506.3,-22.5 498.9,-22.6"/><path d="M345.1,-37.4C357.8,-39.5 372.4,-41.9 385.6,-44.1"/><polygon fill="#8a93a5" points="384.8,-46.4 392.2,-45.2 385.6,-41.6"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="617.7" y="-101.6" width="89.6" height="21.6"/><text x="662.4" y="-86.1">is_procedure</text></a><path d="M582.1,-90.8C590.7,-90.8 599.8,-90.8 608.8,-90.8"/><polygon fill="#8a93a5" points="608.7,-93.3 615.7,-90.8 608.7,-88.4"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="623.5" y="-61.6" width="78" height="21.6"/><text x="662.4" y="-46.1">lower_char</text></a><path d="M581.4,-50.8C592.1,-50.8 603.7,-50.8 614.7,-50.8"/><polygon fill="#8a93a5" points="614.5,-53.3 621.5,-50.8 614.5,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/draw_graph.html">draw_graph</a></li></ul>
+<div class="graph"><svg width="794pt" height="30pt"
+ viewBox="0 0 794 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/describe_graph.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="104" height="21.6"/><text x="52" y="-6.1">describe_graph</text></a><a href="../proc/draw_graph.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140" y="-21.6" width="83.1" height="21.6"/><text x="181.5" y="-6.1">draw_graph</text></a><path d="M139.8,-10.8C131.4,-10.8 122.4,-10.8 113.5,-10.8"/><polygon fill="#8a93a5" points="113.5,-8.4 106.5,-10.8 113.5,-13.3"/><a href="../proc/draw_some.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="259.1" y="-21.6" width="81.6" height="21.6"/><text x="299.9" y="-6.1">draw_some</text></a><path d="M258.8,-10.8C250.2,-10.8 240.9,-10.8 231.9,-10.8"/><polygon fill="#8a93a5" points="232,-8.4 225,-10.8 232,-13.3"/><a href="../proc/draw_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="376.7" y="-21.6" width="89.6" height="21.6"/><text x="421.4" y="-6.1">draw_graphs</text></a><path d="M376.3,-10.8C367.5,-10.8 358.2,-10.8 349.3,-10.8"/><polygon fill="#8a93a5" points="349.4,-8.4 342.4,-10.8 349.4,-13.3"/><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="502.2" y="-21.6" width="88.8" height="21.6"/><text x="546.6" y="-6.1">build_graphs</text></a><path d="M501.9,-10.8C493.2,-10.8 483.9,-10.8 475,-10.8"/><polygon fill="#8a93a5" points="475,-8.4 468,-10.8 475,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="627.1" y="-21.6" width="69.3" height="21.6"/><text x="661.7" y="-6.1">write_site</text></a><path d="M626.8,-10.8C618.2,-10.8 608.8,-10.8 599.6,-10.8"/><polygon fill="#8a93a5" points="599.7,-8.4 592.7,-10.8 599.7,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="732.4" y="-21.6" width="54" height="21.6"/><text x="759.4" y="-6.1">run</text></a><path d="M732,-10.8C723.6,-10.8 714.1,-10.8 704.9,-10.8"/><polygon fill="#8a93a5" points="705.1,-8.4 698.1,-10.8 705.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> describe_graph(p, s, relation, job, w, g, found)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(in) :: p        <span class="d">!! the project</span>
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s       <span class="d">!! the settings</span>
+    <span class="k">type</span>(adjacency_t), <span class="k">intent</span>(in) :: relation   <span class="d">!! the relation</span>
+    <span class="k">type</span>(graph_job_t), <span class="k">intent</span>(in) :: job    <span class="d">!! the graph</span>
+    <span class="k">type</span>(walk_t), <span class="k">intent</span>(inout) :: w        <span class="d">!! the working space</span>
+    <span class="k">type</span>(layout_t), <span class="k">intent</span>(out) :: g        <span class="d">!! the description</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(out) :: found           <span class="d">!! whether there is a graph</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: next(:)
+    <span class="k">integer</span> :: head, k, id, other, j, reached, edges
+
+    w%stamp = w%stamp + <span class="n">1</span>
+    reached = <span class="k">size</span>(job%roots)
+    <span class="k">do</span> k = <span class="n">1</span>, reached
+        w%marked(job%roots(k)) = w%stamp
+        w%queue(k) = job%roots(k)
+        w%levels(k) = <span class="n">0</span>
+    <span class="k">end</span> <span class="k">do</span>
+    head = <span class="n">1</span>
+    edges = <span class="n">0</span>
+    <span class="k">do</span> <span class="k">while</span> (head &lt;= reached)
+        id = w%queue(head)
+        <span class="k">if</span> (w%levels(head) &lt; job%max_depth) <span class="k">then</span>
+            <span class="k">if</span> (job%forward) <span class="k">then</span>
+                <span class="k">if</span> (<span class="k">allocated</span>(relation%out(id)%ids)) <span class="k">then</span>
+                    next = relation%out(id)%ids
+                <span class="k">else</span>
+                    <span class="k">allocate</span> (next(<span class="n">0</span>))
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">else</span>
+                <span class="k">if</span> (<span class="k">allocated</span>(relation%in(id)%ids)) <span class="k">then</span>
+                    next = relation%in(id)%ids
+                <span class="k">else</span>
+                    <span class="k">allocate</span> (next(<span class="n">0</span>))
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(next)
+                other = next(j)
+                <span class="k">if</span> (p%list%box(other)%e%<span class="k">kind</span> == E_NONE) <span class="k">cycle</span>
+                <span class="k">if</span> (w%marked(other) /= w%stamp) <span class="k">then</span>
+                    <span class="k">if</span> (reached &gt;= job%max_nodes) <span class="k">cycle</span>
+                    w%marked(other) = w%stamp
+                    reached = reached + <span class="n">1</span>
+                    w%queue(reached) = other
+                    w%levels(reached) = w%levels(head) + <span class="n">1</span>
+                <span class="k">end</span> <span class="k">if</span>
+                edges = edges + <span class="n">1</span>
+                <span class="k">if</span> (edges &gt; <span class="k">size</span>(w%from)) <span class="k">call</span> grow_edges(w)
+                w%from(edges) = <span class="k">merge</span>(id, other, job%forward)
+                w%to(edges) = <span class="k">merge</span>(other, id, job%forward)
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">deallocate</span> (next)
+        <span class="k">end</span> <span class="k">if</span>
+        head = head + <span class="n">1</span>
+    <span class="k">end</span> <span class="k">do</span>
+    found = reached &gt; <span class="n">1</span> <span class="k">.and.</span> edges &gt; <span class="n">0</span>
+    <span class="k">if</span> (<span class="k">.not.</span> found) <span class="k">return</span>
+    <span class="k">call</span> g%initialize(direction=job%direction, concentrate=<span class="k">.true.</span>)
+    <span class="k">do</span> k = <span class="n">1</span>, reached
+        <span class="k">call</span> add_node(p, w%queue(k), k == <span class="n">1</span> <span class="k">.and.</span> <span class="k">size</span>(job%roots) == <span class="n">1</span>, g, w%places(w%queue(k)))
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">do</span> k = <span class="n">1</span>, edges
+        <span class="k">call</span> add_edge(s, relation, w%from(k), w%to(k), w%places, g)
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> describe_graph</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>procedure_header_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-args"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>args</a></li><li><a href="#variable-attribs"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>attribs</a></li><li><a href="#variable-bind_c"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>bind_c</a></li><li><a href="#variable-is_function"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>is_function</a></li><li><a href="#variable-name"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>name</a></li><li><a href="#variable-ok"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>ok</a></li><li><a href="#variable-prefix"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>prefix</a></li><li><a href="#variable-result_name"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>result_name</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_decl.f90.html">fdoc_decl.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_decl.html">fdoc_decl</a></div>
+<h1><span class="kind">type</span>procedure_header_t</h1>
+<div class="doc">
+<p>The parts of a <code>subroutine</code> or <code>function</code> statement.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-args"><td class="name">args</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the dummy arguments</p></td></tr>
+<tr id="variable-attribs"><td class="name">attribs</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the prefix attributes (<code>pure</code>, <code>module</code>, ...)</p></td></tr>
+<tr id="variable-bind_c"><td class="name">bind_c</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the text in <code>bind(...)</code>, if any</p></td></tr>
+<tr id="variable-is_function"><td class="name">is_function</td><td class="type">logical</td><td class="attributes"></td><td class="default">.false.</td><td><p>true for a function</p></td></tr>
+<tr id="variable-name"><td class="name">name</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the name</p></td></tr>
+<tr id="variable-ok"><td class="name">ok</td><td class="type">logical</td><td class="attributes"></td><td class="default">.false.</td><td><p>false if this is no such statement</p></td></tr>
+<tr id="variable-prefix"><td class="name">prefix</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>what comes before the keyword, without attributes</p></td></tr>
+<tr id="variable-result_name"><td class="name">result_name</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the name in <code>result(...)</code>, if any</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Argument of (1)</h3>
+<ul class="chips kinds"><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/parse_procedure_header.html">parse_procedure_header</a></li></ul>
+<h2 id="inherits">Inherits</h2>
+<div class="graph"><svg width="290pt" height="32pt"
+ viewBox="0 0 290 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 28)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/procedure_header_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="150.5" y="-21.6" width="131.5" height="21.6"/><text x="216.2" y="-6.1">procedure_header_t</text></a><a href="https://jacobwilliams.github.io/fformat/type/string_t.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-21.6" width="57" height="21.6"/><text x="28.5" y="-6.1">string_t</text></a><path stroke-dasharray="5,2" d="M149.5,-10.8C121.2,-10.8 89.3,-10.8 65.5,-10.8"/><polygon fill="#8a93a5" points="65.6,-8.4 58.6,-10.8 65.6,-13.3"/><text x="103.8" y="-13.4" font-size="11" fill="#8a93a5">attribs, args</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span>, <span class="k">public</span> :: procedure_header_t
+    <span class="d">!! The parts of a `subroutine` or `function` statement.</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: name           <span class="d">!! the name</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: prefix         <span class="d">!! what comes before the keyword, without attributes</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: attribs(:)       <span class="d">!! the prefix attributes (`pure`, `module`, ...)</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: args(:)          <span class="d">!! the dummy arguments</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: result_name    <span class="d">!! the name in `result(...)`, if any</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: bind_c         <span class="d">!! the text in `bind(...)`, if any</span>
+    <span class="k">logical</span> :: is_function = <span class="k">.false.</span>                <span class="d">!! true for a function</span>
+    <span class="k">logical</span> :: ok = <span class="k">.false.</span>                         <span class="d">!! false if this is no such statement</span>
+<span class="k">end</span> <span class="k">type</span> procedure_header_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

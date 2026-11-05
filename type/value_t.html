@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>value_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-items"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>items</a></li><li><a href="#variable-kind"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>kind</a></li><li><a href="#variable-number"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>number</a></li><li><a href="#variable-text"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>text</a></li></ul>
+<h4>Bindings</h4><ul><li><a href="#boundprocedure-assignment%28%3D%29"><span class="ico ico-b" title="type-bound procedure" aria-hidden="true">B</span>assignment(=)</a></li><li><a href="#boundprocedure-copy_value"><span class="ico ico-b" title="type-bound procedure" aria-hidden="true">B</span>copy_value</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">type</span>value_t<span class="attr attr-private">private</span></h1>
+<div class="doc">
+<p>A Python value.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-items"><td class="name">items</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the items of a list or tuple, or a dict's keys and values in turn</p></td></tr>
+<tr id="variable-kind"><td class="name">kind</td><td class="type">integer</td><td class="attributes"></td><td class="default">V_NONE</td><td><p>what it is</p></td></tr>
+<tr id="variable-number"><td class="name">number</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>the integer, the truth of a bool, or the macro</p></td></tr>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the string</p></td></tr>
+</tbody>
+</table>
+<h2 id="bindings">Type-bound procedures</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Binds to</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="boundprocedure-assignment%28%3D%29"><td class="name">assignment(=)</td><td class="binds"><a href="../type/value_t.html#boundprocedure-copy_value">copy_value</a></td><td class="attributes"><span class="attr attr-generic">generic</span></td><td><p>a deep copy, which gfortran gets wrong for a recursive type</p></td></tr>
+<tr id="boundprocedure-copy_value"><td class="name">copy_value</td><td class="binds"><a href="../proc/copy_value.html">copy_value</a></td><td class="attributes"><span class="attr attr-private">private</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Argument of (31)</h3>
+<details class="specifics"><summary>Show all</summary>
+<ul class="chips kinds"><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/arithmetic.html">arithmetic</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/assign_targets.html">assign_targets</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/bind_one.html">bind_one</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/bind_targets.html">bind_targets</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/call_builtin.html">call_builtin</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/call_macro.html">call_macro</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/call_method.html">call_method</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/compare.html">compare</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/compare_two.html">compare_two</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/copy_items.html">copy_items</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/define.html">define</a></li><li class="ico-f"><span class="ico ico-f" title="function" aria-hidden="true">F</span><a href="../proc/equal.html">equal</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/evaluate.html">evaluate</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/evaluate_args.html">evaluate_args</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/evaluate_call.html">evaluate_call</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/evaluate_fstring.html">evaluate_fstring</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/evaluate_slice.html">evaluate_slice</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/format_string.html">format_string</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/items_of.html">items_of</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/lookup.html">lookup</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/make_bool.html">make_bool</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/make_int.html">make_int</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/make_range.html">make_range</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/make_string.html">make_string</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/make_zip.html">make_zip</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/move_value.html">move_value</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/run_clause.html">run_clause</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/split_string.html">split_string</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/subscript.html">subscript</a></li><li class="ico-f"><span class="ico ico-f" title="function" aria-hidden="true">F</span><a href="../proc/truth_of.html">truth_of</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/write_value.html">write_value</a></li></ul>
+</details>
+<h3>Component of (4)</h3>
+<ul class="chips kinds"><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/expr_t.html">expr_t</a></li><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/frame_t.html">frame_t</a></li><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/fypp_t.html">fypp_t</a></li><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/macro_t.html">macro_t</a></li></ul>
+<h2 id="inherited-by">Inherited by</h2>
+<div class="graph"><svg width="412pt" height="142pt"
+ viewBox="0 0 412 142" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 138.2)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/value_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="56.3" height="21.6"/><text x="28.2" y="-66.1">value_t</text></a><path stroke-dasharray="5,2" d="M42.1,-82.3C47,-90.9 42.3,-99.6 28.2,-99.6 18.6,-99.6 13.4,-95.7 12.5,-90.5"/><polygon fill="#8a93a5" points="14.9,-91.2 13.9,-83.8 10.1,-90.2"/><text x="28.2" y="-102.2" font-size="11" fill="#8a93a5">items</text><a href="../type/expr_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="196.5" y="-101.6" width="54" height="21.6"/><text x="223.5" y="-86.1">expr_t</text></a><path stroke-dasharray="5,2" d="M196,-88.1C162.2,-84.6 103.4,-78.5 65.4,-74.6"/><polygon fill="#8a93a5" points="65.9,-72.1 58.7,-73.9 65.4,-77"/><text x="112.5" y="-85.8" font-size="11" fill="#8a93a5">value</text><a href="../type/macro_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="192.8" y="-61.6" width="61.4" height="21.6"/><text x="223.5" y="-46.1">macro_t</text></a><path stroke-dasharray="5,2" d="M192.5,-50.5C162.4,-50.7 114.9,-52.1 74.3,-58.6 71.3,-59.1 68.3,-59.7 65.2,-60.3"/><polygon fill="#8a93a5" points="64.9,-57.9 58.6,-61.9 66,-62.7"/><text x="112.5" y="-61.2" font-size="11" fill="#8a93a5">defaults, values</text><a href="../type/frame_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="194.3" y="-21.6" width="58.5" height="21.6"/><text x="223.5" y="-6.1">frame_t</text></a><path stroke-dasharray="5,2" d="M194,-11.1C163.2,-12.4 113.4,-17.3 74.3,-34.6 64.1,-39.1 54.3,-46.5 46.4,-53.5"/><polygon fill="#8a93a5" points="44.9,-51.5 41.4,-58.1 48.2,-55.1"/><text x="112.5" y="-37.2" font-size="11" fill="#8a93a5">values</text><a href="../type/fypp_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="350.3" y="-82.6" width="54" height="21.6"/><text x="377.3" y="-67.1">fypp_t</text></a><path stroke-dasharray="5,2" d="M361.1,-82.9C352.9,-88.4 342.4,-94.7 332.3,-98.8 309.5,-108 302.7,-108.1 278.2,-110.8 188,-120.7 159.7,-131.6 74.3,-100.8 65.5,-97.6 56.7,-92.4 49.3,-87.2"/><polygon fill="#8a93a5" points="51.2,-85.5 44.1,-83.3 48.3,-89.5"/><text x="223.5" y="-123.7" font-size="11" fill="#8a93a5">globals, bound_values</text><path stroke-dasharray="5,2" d="M349.8,-75.1C324.7,-78.3 286.6,-83 259.1,-86.5"/><polygon fill="#8a93a5" points="259,-84 252.4,-87.3 259.6,-88.9"/><text x="314.3" y="-83.9" font-size="11" fill="#8a93a5">exprs</text><path stroke-dasharray="5,2" d="M349.9,-64.4C344.1,-62.9 338,-61.6 332.3,-60.6 309.3,-56.7 283.3,-54.2 262.6,-52.8"/><polygon fill="#8a93a5" points="263.1,-50.4 255.9,-52.3 262.7,-55.3"/><text x="314.3" y="-63.2" font-size="11" fill="#8a93a5">macros</text><path stroke-dasharray="5,2" d="M364.4,-60.8C356,-53.5 344.2,-44.3 332.3,-38.6 309.9,-27.8 282.7,-20.8 261.2,-16.6"/><polygon fill="#8a93a5" points="261.8,-14.2 254.5,-15.3 260.9,-19"/><text x="314.3" y="-41.2" font-size="11" fill="#8a93a5">frames</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: value_t
+    <span class="d">!! A Python value.</span>
+    <span class="k">integer</span> :: <span class="k">kind</span> = V_NONE                <span class="d">!! what it is</span>
+    <span class="k">integer</span> :: number = <span class="n">0</span>                   <span class="d">!! the integer, the truth of a bool, or the macro</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text   <span class="d">!! the string</span>
+    <span class="k">type</span>(value_t), <span class="k">allocatable</span> :: items(:)  <span class="d">!! the items of a list or tuple, or a dict's keys and values in turn</span>
+<span class="k">contains</span>
+    <span class="k">procedure</span>, <span class="k">private</span> :: copy_value
+    <span class="k">generic</span> :: assignment(=) =&gt; copy_value  <span class="d">!! a deep copy, which gfortran gets wrong for a recursive type</span>
+<span class="k">end</span> <span class="k">type</span> value_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

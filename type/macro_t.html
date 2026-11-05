@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>macro_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-captured"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>captured</a></li><li><a href="#variable-defaults"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>defaults</a></li><li><a href="#variable-has_default"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>has_default</a></li><li><a href="#variable-node"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>node</a></li><li><a href="#variable-params"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>params</a></li><li><a href="#variable-values"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>values</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">type</span>macro_t<span class="attr attr-private">private</span></h1>
+<div class="doc">
+<p>A macro.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-captured"><td class="name">captured</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the local variables at its definition</p></td></tr>
+<tr id="variable-defaults"><td class="name">defaults</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the defaults</p></td></tr>
+<tr id="variable-has_default"><td class="name">has_default</td><td class="type">logical</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>whether each has a default</p></td></tr>
+<tr id="variable-node"><td class="name">node</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>its definition</p></td></tr>
+<tr id="variable-params"><td class="name">params</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>its arguments</p></td></tr>
+<tr id="variable-values"><td class="name">values</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>their values</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Component of (1)</h3>
+<ul class="chips kinds"><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/fypp_t.html">fypp_t</a></li></ul>
+<h2 id="inherits">Inherits</h2>
+<div class="graph"><svg width="238pt" height="61pt"
+ viewBox="0 0 238 61" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 56.8)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/macro_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="168.8" y="-21.6" width="61.4" height="21.6"/><text x="199.4" y="-6.1">macro_t</text></a><a href="../type/value_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="0" y="-21.6" width="56.3" height="21.6"/><text x="28.2" y="-6.1">value_t</text></a><path stroke-dasharray="5,2" d="M167.8,-10.8C138.9,-10.8 95.5,-10.8 65,-10.8"/><polygon fill="#8a93a5" points="65.3,-8.4 58.3,-10.8 65.3,-13.3"/><text x="112.5" y="-13.4" font-size="11" fill="#8a93a5">defaults, values</text><path stroke-dasharray="5,2" d="M41.9,-22C47.1,-30.7 42.5,-39.6 28.2,-39.6 18.3,-39.6 13.1,-35.4 12.4,-30"/><polygon fill="#8a93a5" points="14.7,-30.9 14,-23.5 9.9,-29.7"/><text x="28.2" y="-42.2" font-size="11" fill="#8a93a5">items</text></g>
+</svg>
+</div>
+<h2 id="inherited-by">Inherited by</h2>
+<div class="graph"><svg width="195pt" height="32pt"
+ viewBox="0 0 195 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 28)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/macro_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="61.4" height="21.6"/><text x="30.7" y="-6.1">macro_t</text></a><a href="../type/fypp_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="133.4" y="-21.6" width="54" height="21.6"/><text x="160.4" y="-6.1">fypp_t</text></a><path stroke-dasharray="5,2" d="M133,-10.8C114.9,-10.8 90.7,-10.8 70.5,-10.8"/><polygon fill="#8a93a5" points="70.7,-8.4 63.7,-10.8 70.7,-13.3"/><text x="97.4" y="-13.4" font-size="11" fill="#8a93a5">macros</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: macro_t
+    <span class="d">!! A macro.</span>
+    <span class="k">integer</span> :: node = <span class="n">0</span>                         <span class="d">!! its definition</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: params(:)           <span class="d">!! its arguments</span>
+    <span class="k">logical</span>, <span class="k">allocatable</span> :: has_default(:)      <span class="d">!! whether each has a default</span>
+    <span class="k">type</span>(value_t), <span class="k">allocatable</span> :: defaults(:)   <span class="d">!! the defaults</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: captured(:)         <span class="d">!! the local variables at its definition</span>
+    <span class="k">type</span>(value_t), <span class="k">allocatable</span> :: values(:)     <span class="d">!! their values</span>
+<span class="k">end</span> <span class="k">type</span> macro_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

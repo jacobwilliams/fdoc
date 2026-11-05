@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>uses_math &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">function</span>uses_math<span class="attr attr-private">private</span></h1>
+<div class="sig">logical <span class="k">function</span> uses_math(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">id</span>)</div>
+<div class="doc">
+<p>True if the documentation shown on the page of <code>id</code> has math.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entity</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-uses_math"><td class="name">uses_math</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/has_math.html">has_math</a></li></ul>
+<div class="graph"><svg width="193pt" height="30pt"
+ viewBox="0 0 193 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/uses_math.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="78" height="21.6"/><text x="39" y="-6.1">uses_math</text></a><a href="../proc/has_math.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="114" y="-21.6" width="71.5" height="21.6"/><text x="149.7" y="-6.1">has_math</text></a><path d="M78.9,-10.8C87.4,-10.8 96.5,-10.8 105.2,-10.8"/><polygon fill="#8a93a5" points="105.2,-13.3 112.2,-10.8 105.2,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/entity_page.html">entity_page</a></li></ul>
+<div class="graph"><svg width="710pt" height="30pt"
+ viewBox="0 0 710 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/uses_math.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="78" height="21.6"/><text x="39" y="-6.1">uses_math</text></a><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="114" y="-21.6" width="81.6" height="21.6"/><text x="154.8" y="-6.1">entity_page</text></a><path d="M113.7,-10.8C105,-10.8 95.8,-10.8 87,-10.8"/><polygon fill="#8a93a5" points="87.1,-8.4 80.1,-10.8 87.1,-13.3"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="231.6" y="-21.6" width="116.3" height="21.6"/><text x="289.8" y="-6.1">write_entity_page</text></a><path d="M231.2,-10.8C222.2,-10.8 212.9,-10.8 204.1,-10.8"/><polygon fill="#8a93a5" points="204.3,-8.4 197.3,-10.8 204.3,-13.3"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="383.9" y="-21.6" width="122.8" height="21.6"/><text x="445.3" y="-6.1">write_entity_pages</text></a><path d="M383.6,-10.8C374.6,-10.8 365.3,-10.8 356.3,-10.8"/><polygon fill="#8a93a5" points="356.5,-8.4 349.5,-10.8 356.5,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="542.7" y="-21.6" width="69.3" height="21.6"/><text x="577.4" y="-6.1">write_site</text></a><path d="M542.5,-10.8C534.2,-10.8 524.9,-10.8 515.5,-10.8"/><polygon fill="#8a93a5" points="515.7,-8.4 508.7,-10.8 515.7,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="648" y="-21.6" width="54" height="21.6"/><text x="675" y="-6.1">run</text></a><path d="M647.6,-10.8C639.2,-10.8 629.8,-10.8 620.5,-10.8"/><polygon fill="#8a93a5" points="620.7,-8.4 613.7,-10.8 620.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">logical</span> <span class="k">function</span> uses_math(site, id)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site    <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id           <span class="d">!! the entity</span>
+    <span class="k">integer</span> :: k
+
+    uses_math = has_math(site%p%list%box(id)%e)
+    <span class="k">if</span> (uses_math) <span class="k">return</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(site%p%list%box(id)%e%children)
+        uses_math = has_math(site%p%list%box(site%p%list%box(id)%e%children(k))%e)
+        <span class="k">if</span> (uses_math) <span class="k">return</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">function</span> uses_math</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

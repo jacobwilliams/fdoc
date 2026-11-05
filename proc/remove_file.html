@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>remove_file &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">subroutine</span>remove_file</h1>
+<div class="sig"><span class="k">subroutine</span> remove_file(<span class="intent attr-in" title="intent(in)">path</span>)</div>
+<div class="doc">
+<p>Delete file <code>path</code>, if it can be. This can be called from parallel code.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the file</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/load_external_project.html">load_external_project</a></li><li><a href="../proc/preprocess.html">preprocess</a></li></ul>
+<div class="graph"><svg width="831pt" height="70pt"
+ viewBox="0 0 831 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/remove_file.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="81.6" height="21.6"/><text x="40.8" y="-26.1">remove_file</text></a><a href="../proc/preprocess.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="147.6" y="-21.6" width="78.7" height="21.6"/><text x="186.9" y="-6.1">preprocess</text></a><path d="M147.3,-16.2C130,-18.6 109.3,-21.4 90.8,-24"/><polygon fill="#8a93a5" points="90.6,-21.5 84.1,-24.9 91.3,-26.4"/><a href="../proc/load_external_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="117.6" y="-61.6" width="138.7" height="21.6"/><text x="186.9" y="-46.1">load_external_project</text></a><path d="M117.3,-41.3C108.3,-40 99.3,-38.8 90.8,-37.6"/><polygon fill="#8a93a5" points="91.3,-35.2 84,-36.7 90.6,-40"/><a href="../proc/load_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="292.3" y="-21.6" width="85.2" height="21.6"/><text x="334.9" y="-6.1">load_source</text></a><path d="M292.1,-10.8C274.3,-10.8 253.4,-10.8 235,-10.8"/><polygon fill="#8a93a5" points="235.3,-8.4 228.3,-10.8 235.3,-13.3"/><a href="../proc/add_external_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="413.5" y="-61.6" width="145.9" height="21.6"/><text x="486.5" y="-46.1">add_external_modules</text></a><path d="M413.1,-50.8C368.2,-50.8 310.7,-50.8 265,-50.8"/><polygon fill="#8a93a5" points="265.1,-48.4 258.1,-50.8 265.1,-53.3"/><a href="../proc/read_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="443.2" y="-21.6" width="86.7" height="21.6"/><text x="486.5" y="-6.1">read_source</text></a><path d="M443,-10.8C425.4,-10.8 404.7,-10.8 386.3,-10.8"/><polygon fill="#8a93a5" points="386.5,-8.4 379.5,-10.8 386.5,-13.3"/><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="632" y="-61.6" width="65" height="21.6"/><text x="664.5" y="-46.1">correlate</text></a><path d="M631.6,-50.8C613.7,-50.8 590.5,-50.8 567.9,-50.8"/><polygon fill="#8a93a5" points="568.1,-48.4 561.1,-50.8 568.1,-53.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="595.5" y="-21.6" width="138" height="21.6"/><text x="664.5" y="-6.1">load_project_sources</text></a><path d="M595.2,-10.8C576.4,-10.8 556.4,-10.8 538.8,-10.8"/><polygon fill="#8a93a5" points="538.8,-8.4 531.8,-10.8 538.8,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="769.4" y="-41.6" width="54" height="21.6"/><text x="796.4" y="-26.1">run</text></a><path d="M769.1,-34.8C750.9,-37.7 726.2,-41.5 705.5,-44.6"/><polygon fill="#8a93a5" points="705.3,-42.2 698.7,-45.7 706,-47"/><path d="M769.1,-26.8C761,-25.5 751.6,-24.1 741.9,-22.6"/><polygon fill="#8a93a5" points="742.5,-20.2 735.2,-21.5 741.7,-25"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> remove_file(path)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the file</span>
+    <span class="k">integer</span> :: unit, status
+
+    <span class="c">!$omp critical (file_io)</span>
+    <span class="k">open</span> (newunit=unit, file=path, status=<span class="s">'old'</span>, iostat=status)
+    <span class="k">if</span> (status == <span class="n">0</span>) <span class="k">close</span> (unit, status=<span class="s">'delete'</span>, iostat=status)
+    <span class="c">!$omp end critical (file_io)</span>
+<span class="k">end</span> <span class="k">subroutine</span> remove_file</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

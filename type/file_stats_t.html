@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>file_stats_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-blank"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>blank</a></li><li><a href="#variable-bytes"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>bytes</a></li><li><a href="#variable-code"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>code</a></li><li><a href="#variable-comments"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>comments</a></li><li><a href="#variable-lines"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>lines</a></li><li><a href="#variable-procedures"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>procedures</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_stats.f90.html">fdoc_stats.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_stats.html">fdoc_stats</a></div>
+<h1><span class="kind">type</span>file_stats_t</h1>
+<div class="doc">
+<p>The size of a source file, or of several.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-blank"><td class="name">blank</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>lines with nothing</p></td></tr>
+<tr id="variable-bytes"><td class="name">bytes</td><td class="type">integer(kind=int64)</td><td class="attributes"></td><td class="default">0</td><td><p>its size</p></td></tr>
+<tr id="variable-code"><td class="name">code</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>lines with code, which may also have a comment</p></td></tr>
+<tr id="variable-comments"><td class="name">comments</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>lines with only a comment</p></td></tr>
+<tr id="variable-lines"><td class="name">lines</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>all lines</p></td></tr>
+<tr id="variable-procedures"><td class="name">procedures</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>procedures defined in it</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Argument of (3)</h3>
+<ul class="chips kinds"><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/add_stats.html">add_stats</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/count_source.html">count_source</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/stats_cells.html">stats_cells</a></li></ul>
+<h3>Component of (1)</h3>
+<ul class="chips kinds"><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/site_t.html">site_t</a></li></ul>
+<h2 id="inherited-by">Inherited by</h2>
+<div class="graph"><svg width="218pt" height="32pt"
+ viewBox="0 0 218 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 28)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/file_stats_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="76.5" height="21.6"/><text x="38.3" y="-6.1">file_stats_t</text></a><a href="../type/site_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="156" y="-21.6" width="54" height="21.6"/><text x="183" y="-6.1">site_t</text></a><path stroke-dasharray="5,2" d="M155.8,-10.8C136.2,-10.8 109,-10.8 85.7,-10.8"/><polygon fill="#8a93a5" points="85.9,-8.4 78.9,-10.8 85.9,-13.3"/><text x="116.2" y="-13.4" font-size="11" fill="#8a93a5">file_stats</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: file_stats_t
+    <span class="d">!! The size of a source file, or of several.</span>
+    <span class="k">integer</span> :: lines = <span class="n">0</span>                <span class="d">!! all lines</span>
+    <span class="k">integer</span> :: code = <span class="n">0</span>                 <span class="d">!! lines with code, which may also have a comment</span>
+    <span class="k">integer</span> :: comments = <span class="n">0</span>             <span class="d">!! lines with only a comment</span>
+    <span class="k">integer</span> :: blank = <span class="n">0</span>                <span class="d">!! lines with nothing</span>
+    <span class="k">integer</span> :: procedures = <span class="n">0</span>           <span class="d">!! procedures defined in it</span>
+    <span class="k">integer</span>(int64) :: bytes = <span class="n">0</span>         <span class="d">!! its size</span>
+<span class="k">end</span> <span class="k">type</span> file_stats_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

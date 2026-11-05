@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>doxygen_meta &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">subroutine</span>doxygen_meta<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> doxygen_meta(<span class="intent attr-inout" title="intent(inout)">line</span>, <span class="intent attr-inout" title="intent(inout)">moved</span>)</div>
+<div class="doc">
+<p>If <code>line</code> is a doxygen command, blank it and add it to <code>moved</code> as a metadata line.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-line"><td class="name">line</td><td class="type">character(len=:)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the doc line</p></td></tr>
+<tr id="variable-moved"><td class="name">moved</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the metadata lines</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/strip.html">strip</a></li><li><a href="../proc/first_word_of.html">first_word_of</a></li><li><a href="../proc/push.html">push</a></li></ul>
+<div class="graph"><svg width="233pt" height="110pt"
+ viewBox="0 0 233 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/doxygen_meta.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="99.7" height="21.6"/><text x="49.8" y="-46.1">doxygen_meta</text></a><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="153.1" y="-101.6" width="54" height="21.6"/><text x="180.1" y="-86.1">strip</text></a><path d="M88.6,-62.6C106.6,-68.2 127.8,-74.8 145.2,-80.2"/><polygon fill="#8a93a5" points="144.1,-82.4 151.5,-82.2 145.5,-77.8"/><a href="../proc/first_word_of.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="135.7" y="-61.6" width="88.8" height="21.6"/><text x="180.1" y="-46.1">first_word_of</text></a><path d="M100.4,-50.8C109.2,-50.8 118.3,-50.8 127.2,-50.8"/><polygon fill="#8a93a5" points="127,-53.3 134,-50.8 127,-48.4"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="153.1" y="-21.6" width="54" height="21.6"/><text x="180.1" y="-6.1">push</text></a><path d="M88.6,-39C106.6,-33.4 127.8,-26.8 145.2,-21.4"/><polygon fill="#8a93a5" points="145.5,-23.8 151.5,-19.4 144.1,-19.2"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/set_doc.html">set_doc</a></li></ul>
+<div class="graph"><svg width="869pt" height="184pt"
+ viewBox="0 0 869 184" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 180.4)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/doxygen_meta.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="99.7" height="21.6"/><text x="49.8" y="-86.1">doxygen_meta</text></a><a href="../proc/set_doc.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="135.7" y="-101.6" width="59.9" height="21.6"/><text x="165.6" y="-86.1">set_doc</text></a><path d="M135.3,-90.8C127.2,-90.8 118,-90.8 108.8,-90.8"/><polygon fill="#8a93a5" points="108.9,-88.4 101.9,-90.8 108.9,-93.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="526.1" y="-141.6" width="70.8" height="21.6"/><text x="561.5" y="-126.1">parse_file</text></a><path d="M530.8,-142.1C480.4,-159.6 375.3,-189.5 288.2,-169.8"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="398.7" y="-141.6" width="71.5" height="21.6"/><text x="434.5" y="-126.1">open_unit</text></a><path d="M525.7,-130.8C511.1,-130.8 494.1,-130.8 478.8,-130.8"/><polygon fill="#8a93a5" points="479.1,-128.4 472.1,-130.8 479.1,-133.3"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="378.9" y="-101.6" width="111.2" height="21.6"/><text x="434.5" y="-86.1">parse_statement</text></a><path d="M525.7,-119.7C511,-115 493.8,-109.5 478.4,-104.5"/><polygon fill="#8a93a5" points="479.4,-102.3 472,-102.5 477.9,-106.9"/><path d="M404.5,-142C368.8,-155.2 310.3,-174.8 288.2,-169.8"/><path d="M286.2,-169.8C261.2,-164.1 253.7,-164 231.6,-150.8 212.4,-139.3 193.9,-121.4 181.7,-108.1"/><polygon fill="#8a93a5" points="183.7,-106.7 177.2,-103.1 180,-110"/><a href="../proc/read_declaration.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="231.6" y="-141.6" width="111.2" height="21.6"/><text x="287.2" y="-126.1">read_declaration</text></a><path d="M252.6,-119.6C237.4,-114.5 219.4,-108.5 203.9,-103.2"/><polygon fill="#8a93a5" points="204.8,-101 197.4,-101.1 203.3,-105.6"/><a href="../proc/read_binding.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="242.4" y="-101.6" width="89.6" height="21.6"/><text x="287.2" y="-86.1">read_binding</text></a><path d="M242,-90.8C229.6,-90.8 216.2,-90.8 204.2,-90.8"/><polygon fill="#8a93a5" points="204.3,-88.4 197.3,-90.8 204.3,-93.3"/><a href="../proc/read_common.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="238.5" y="-61.6" width="97.5" height="21.6"/><text x="287.2" y="-46.1">read_common</text></a><path d="M252.6,-62C237.4,-67.1 219.4,-73.1 203.9,-78.4"/><polygon fill="#8a93a5" points="203.3,-76 197.4,-80.5 204.8,-80.6"/><a href="../proc/read_namelist.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="239.2" y="-21.6" width="96.1" height="21.6"/><text x="287.2" y="-6.1">read_namelist</text></a><path d="M249.5,-22C243.3,-24.5 237.1,-27.4 231.6,-30.8 212.5,-42.5 194,-60.4 181.7,-73.6"/><polygon fill="#8a93a5" points="180.1,-71.7 177.2,-78.5 183.7,-75"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="632.9" y="-141.6" width="138" height="21.6"/><text x="701.8" y="-126.1">load_project_sources</text></a><path d="M632.5,-130.8C623.3,-130.8 614.1,-130.8 605.5,-130.8"/><polygon fill="#8a93a5" points="605.7,-128.4 598.7,-130.8 605.7,-133.3"/><path d="M392.6,-102C375.4,-106.8 355.2,-112.4 337.1,-117.3"/><polygon fill="#8a93a5" points="336.6,-114.9 330.5,-119.2 337.9,-119.7"/><path d="M378.6,-90.8C366.2,-90.8 353,-90.8 340.7,-90.8"/><polygon fill="#8a93a5" points="340.9,-88.4 333.9,-90.8 340.9,-93.3"/><path d="M392.6,-79.6C375.4,-74.8 355.2,-69.2 337.1,-64.3"/><polygon fill="#8a93a5" points="337.9,-61.9 330.5,-62.4 336.6,-66.7"/><path d="M419.1,-79.7C401.7,-66.7 371.3,-45.2 342.9,-30.8 338.9,-28.8 334.7,-26.9 330.5,-25.1"/><polygon fill="#8a93a5" points="331.7,-23 324.3,-22.6 329.8,-27.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="806.8" y="-141.6" width="54" height="21.6"/><text x="833.8" y="-126.1">run</text></a><path d="M806.5,-130.8C798.4,-130.8 789,-130.8 779.3,-130.8"/><polygon fill="#8a93a5" points="779.6,-128.4 772.6,-130.8 779.6,-133.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> doxygen_meta(line, moved)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: line    <span class="d">!! the doc line</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: moved(:)  <span class="d">!! the metadata lines</span>
+    <span class="k">character</span>(<span class="k">len</span>=<span class="k">len</span>(line)) :: text
+    <span class="k">integer</span> :: at, stop_at
+
+    <span class="k">if</span> (<span class="k">len</span>(line) == <span class="n">0</span>) <span class="k">return</span>
+    text = <span class="k">adjustl</span>(line)
+    <span class="k">if</span> (text(<span class="n">1</span>:<span class="n">1</span>) /= <span class="s">'@'</span>) <span class="k">return</span>
+    stop_at = <span class="k">index</span>(<span class="k">trim</span>(text), <span class="s">' '</span>)
+    <span class="k">if</span> (stop_at &lt; <span class="n">3</span>) <span class="k">return</span>
+    at = <span class="k">len_trim</span>(text(:stop_at))
+    <span class="k">select</span> <span class="k">case</span> (text(<span class="n">2</span>:at))
+    <span class="k">case</span> (<span class="s">'see'</span>)
+        line = <span class="s">'[['</span>//strip(first_word_of(text(stop_at:)))//<span class="s">']]'</span>//text(stop_at + <span class="k">len</span>(first_word_of(strip(text(stop_at:)))) + <span class="n">1</span>:)
+        <span class="k">return</span>
+    <span class="k">case</span> (<span class="s">'note'</span>, <span class="s">'warning'</span>, <span class="s">'todo'</span>, <span class="s">'bug'</span>, <span class="s">'history'</span>)
+        <span class="k">return</span>
+    <span class="k">case</span> (<span class="s">'brief'</span>)
+        <span class="k">call</span> push(moved, <span class="s">'summary: '</span>//strip(text(stop_at:)))
+    <span class="k">case</span> default
+        <span class="k">call</span> push(moved, text(<span class="n">2</span>:at)//<span class="s">': '</span>//strip(text(stop_at:)))
+    <span class="k">end</span> <span class="k">select</span>
+    line = <span class="s">''</span>
+<span class="k">end</span> <span class="k">subroutine</span> doxygen_meta</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

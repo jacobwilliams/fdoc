@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>is_elemental &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_generics.f90.html">fdoc_generics.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_generics.html">fdoc_generics</a></div>
+<h1><span class="kind">function</span>is_elemental<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> is_elemental(<span class="intent attr-in" title="intent(in)">e</span>)</div>
+<div class="doc">
+<p>True if procedure <code>e</code> is elemental.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-e"><td class="name">e</td><td class="type">type(<a href="../type/entity_t.html">entity_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the procedure</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-is_elemental"><td class="name">is_elemental</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li></ul>
+<div class="graph"><svg width="204pt" height="30pt"
+ viewBox="0 0 204 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_elemental.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="87.4" height="21.6"/><text x="43.7" y="-6.1">is_elemental</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="123.4" y="-21.6" width="72.9" height="21.6"/><text x="159.8" y="-6.1">lowercase</text></a><path d="M88.2,-10.8C96.8,-10.8 105.8,-10.8 114.4,-10.8"/><polygon fill="#8a93a5" points="114.4,-13.3 121.4,-10.8 114.4,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_form.html">write_form</a></li></ul>
+<div class="graph"><svg width="1110pt" height="30pt"
+ viewBox="0 0 1110 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_elemental.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="87.4" height="21.6"/><text x="43.7" y="-6.1">is_elemental</text></a><a href="../proc/write_form.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="123.4" y="-21.6" width="75.1" height="21.6"/><text x="160.9" y="-6.1">write_form</text></a><path d="M123.1,-10.8C114.8,-10.8 105.7,-10.8 96.8,-10.8"/><polygon fill="#8a93a5" points="96.9,-8.4 89.9,-10.8 96.9,-13.3"/><a href="../proc/write_call_forms.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="234.5" y="-21.6" width="108.3" height="21.6"/><text x="288.6" y="-6.1">write_call_forms</text></a><path d="M234.3,-10.8C225.3,-10.8 216,-10.8 207.2,-10.8"/><polygon fill="#8a93a5" points="207.5,-8.4 200.5,-10.8 207.5,-13.3"/><a href="../proc/interface_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="378.8" y="-21.6" width="99.7" height="21.6"/><text x="428.6" y="-6.1">interface_body</text></a><path d="M378.6,-10.8C369.8,-10.8 360.5,-10.8 351.5,-10.8"/><polygon fill="#8a93a5" points="351.7,-8.4 344.7,-10.8 351.7,-13.3"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="514.5" y="-21.6" width="81.6" height="21.6"/><text x="555.3" y="-6.1">entity_page</text></a><path d="M514.1,-10.8C505.5,-10.8 496.3,-10.8 487.2,-10.8"/><polygon fill="#8a93a5" points="487.3,-8.4 480.3,-10.8 487.3,-13.3"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="632.1" y="-21.6" width="116.3" height="21.6"/><text x="690.2" y="-6.1">write_entity_page</text></a><path d="M631.7,-10.8C622.6,-10.8 613.4,-10.8 604.6,-10.8"/><polygon fill="#8a93a5" points="604.8,-8.4 597.8,-10.8 604.8,-13.3"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="784.4" y="-21.6" width="122.8" height="21.6"/><text x="845.8" y="-6.1">write_entity_pages</text></a><path d="M784.1,-10.8C775.1,-10.8 765.8,-10.8 756.7,-10.8"/><polygon fill="#8a93a5" points="757,-8.4 750,-10.8 757,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="943.2" y="-21.6" width="69.3" height="21.6"/><text x="977.8" y="-6.1">write_site</text></a><path d="M943,-10.8C934.6,-10.8 925.3,-10.8 915.9,-10.8"/><polygon fill="#8a93a5" points="916.2,-8.4 909.2,-10.8 916.2,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1048.5" y="-21.6" width="54" height="21.6"/><text x="1075.5" y="-6.1">run</text></a><path d="M1048.1,-10.8C1039.7,-10.8 1030.2,-10.8 1021,-10.8"/><polygon fill="#8a93a5" points="1021.2,-8.4 1014.2,-10.8 1021.2,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> is_elemental(e)
+    <span class="k">type</span>(entity_t), <span class="k">intent</span>(in) :: e <span class="d">!! the procedure</span>
+    <span class="k">integer</span> :: k
+
+    is_elemental = <span class="k">.false.</span>
+    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(e%attribs)) <span class="k">return</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(e%attribs)
+        <span class="k">if</span> (lowercase(e%attribs(k)%s) == <span class="s">'elemental'</span>) is_elemental = <span class="k">.true.</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">function</span> is_elemental</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fence_language &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>fence_language<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> fence_language(<span class="intent attr-in" title="intent(in)">info</span>, <span class="intent attr-out" title="intent(out)">lang</span>)</div>
+<div class="doc">
+<p>The language named after a code fence.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-info"><td class="name">info</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>what follows the fence</p></td></tr>
+<tr id="variable-lang"><td class="name">lang</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the language, or <code>''</code></p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/starts_with.html">starts_with</a></li></ul>
+<div class="graph"><svg width="227pt" height="30pt"
+ viewBox="0 0 227 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/fence_language.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="106.9" height="21.6"/><text x="53.5" y="-6.1">fence_language</text></a><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="142.9" y="-21.6" width="76.5" height="21.6"/><text x="181.2" y="-6.1">starts_with</text></a><path d="M107.8,-10.8C116.6,-10.8 125.7,-10.8 134.3,-10.8"/><polygon fill="#8a93a5" points="134.3,-13.3 141.3,-10.8 134.3,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/stash_fenced_code.html">stash_fenced_code</a></li></ul>
+<div class="graph"><svg width="1085pt" height="129pt"
+ viewBox="0 0 1085 129" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 124.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/fence_language.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-120.6" width="106.9" height="21.6"/><text x="53.5" y="-105.1">fence_language</text></a><a href="../proc/stash_fenced_code.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="142.9" y="-120.6" width="127.2" height="21.6"/><text x="206.5" y="-105.1">stash_fenced_code</text></a><path d="M142.8,-109.8C133.9,-109.8 124.8,-109.8 116,-109.8"/><polygon fill="#8a93a5" points="116.2,-107.4 109.2,-109.8 116.2,-112.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="306.1" y="-80.6" width="124.2" height="21.6"/><text x="368.2" y="-65.1">markdown_to_html</text></a><path d="M322.3,-81C303.1,-85.9 280.5,-91.5 260.5,-96.5"/><polygon fill="#8a93a5" points="260,-94.1 253.8,-98.2 261.2,-98.9"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="145.8" y="-80.6" width="121.3" height="21.6"/><text x="206.5" y="-65.1">stash_html_blocks</text></a><path d="M297.6,-69.8C290.4,-69.8 283.1,-69.8 275.9,-69.8"/><polygon fill="#8a93a5" points="297.4,-72.3 304.4,-69.8 297.4,-67.4"/><polygon fill="#8a93a5" points="276.1,-67.4 269.1,-69.8 276.1,-72.3"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="150.2" y="-40.6" width="112.7" height="21.6"/><text x="206.5" y="-25.1">render_footnotes</text></a><path d="M314.2,-56.5C296.8,-52.2 277.5,-47.3 260.2,-43"/><polygon fill="#8a93a5" points="313.4,-58.9 320.8,-58.2 314.6,-54.1"/><polygon fill="#8a93a5" points="261.2,-40.7 253.8,-41.4 260,-45.5"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="582.5" y="-100.6" width="97.5" height="21.6"/><text x="631.2" y="-85.1">markdown_list</text></a><path d="M582,-86.1C541.8,-83 484,-78.6 438.7,-75.1"/><polygon fill="#8a93a5" points="439.1,-72.7 432,-74.6 438.7,-77.6"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="466.3" y="-61.6" width="80.2" height="21.6"/><text x="506.4" y="-46.1">render_text</text></a><path d="M466,-56.3C457.4,-57.5 448.1,-58.8 438.8,-60.1"/><polygon fill="#8a93a5" points="438.7,-57.6 432.1,-61 439.3,-62.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1022.7" y="-61.6" width="54" height="21.6"/><text x="1049.7" y="-46.1">run</text></a><path d="M760.1,-89.8C736.7,-88.1 710.9,-87.7 688.6,-88"/><polygon fill="#8a93a5" points="688.7,-85.5 681.8,-88.1 688.8,-90.4"/><path d="M1022.5,-60.7C1011.6,-64.5 998.7,-68.4 986.7,-70.8 888.5,-90.5 862,-97.3 762.1,-89.8"/><path d="M760.1,-89.8C700.7,-86.9 691.5,-55.2 632.2,-50.8"/><a href="../proc/render_documentation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="842.2" y="-61.6" width="144.5" height="21.6"/><text x="914.5" y="-46.1">render_documentation</text></a><path d="M1022.4,-50.8C1014.3,-50.8 1005,-50.8 995.3,-50.8"/><polygon fill="#8a93a5" points="995.6,-48.4 988.6,-50.8 995.6,-53.3"/><a href="../proc/load_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="873.7" y="-21.6" width="81.6" height="21.6"/><text x="914.5" y="-6.1">load_pages</text></a><path d="M1022.2,-42C1011.3,-38.4 998.4,-34.3 986.7,-30.8 979.2,-28.5 971.1,-26.2 963.3,-23.9"/><polygon fill="#8a93a5" points="964.4,-21.7 957,-22.2 963,-26.4"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="716" y="-61.6" width="90.3" height="21.6"/><text x="761.1" y="-46.1">render_entity</text></a><path d="M715.6,-52.4C691,-52.9 659.9,-52.9 632.2,-50.8"/><path d="M630.2,-50.8C605.5,-49 577.9,-48.8 555.2,-49.1"/><polygon fill="#8a93a5" points="555.2,-46.7 548.2,-49.3 555.3,-51.6"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="592.9" y="-22.6" width="76.6" height="21.6"/><text x="631.2" y="-7.1">read_page</text></a><path d="M594.7,-23.1C580.9,-27.4 565.1,-32.5 550.7,-37.1"/><polygon fill="#8a93a5" points="550.2,-34.6 544.3,-39.1 551.7,-39.3"/><path d="M841.8,-50.8C832.6,-50.8 823.4,-50.8 814.6,-50.8"/><polygon fill="#8a93a5" points="814.9,-48.4 807.9,-50.8 814.9,-53.3"/><a href="../proc/read_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="726.1" y="-21.6" width="70" height="21.6"/><text x="761.1" y="-6.1">read_tree</text></a><path d="M725.8,-11.1C711.1,-11.2 693.6,-11.3 677.8,-11.4"/><polygon fill="#8a93a5" points="678.2,-9 671.2,-11.5 678.3,-13.9"/><path d="M873.3,-10.8C852.1,-10.8 826.1,-10.8 804.6,-10.8"/><polygon fill="#8a93a5" points="804.8,-8.4 797.8,-10.8 804.8,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> fence_language(info, lang)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: info                <span class="d">!! what follows the fence</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: lang  <span class="d">!! the language, or `''`</span>
+    <span class="k">integer</span> :: at
+
+    lang = info
+    <span class="k">if</span> (starts_with(lang, <span class="s">'{'</span>)) <span class="k">then</span>
+        at = <span class="k">index</span>(lang, <span class="s">'.'</span>)
+        lang = <span class="s">''</span>
+        <span class="k">if</span> (at &gt; <span class="n">0</span>) lang = info(at + <span class="n">1</span>:<span class="k">scan</span>(info(at:)//<span class="s">' '</span>, <span class="s">' }'</span>) + at - <span class="n">2</span>)
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    at = <span class="k">index</span>(lang, <span class="s">' '</span>)
+    <span class="k">if</span> (at &gt; <span class="n">0</span>) lang = lang(:at - <span class="n">1</span>)
+    <span class="k">if</span> (starts_with(lang, <span class="s">'.'</span>)) lang = lang(<span class="n">2</span>:)
+<span class="k">end</span> <span class="k">subroutine</span> fence_language</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

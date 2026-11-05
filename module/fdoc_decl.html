@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_decl &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a class="here" href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Variables</h4><ul><li><a href="#variable-type_words"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>TYPE_WORDS</a></li></ul>
+<h4>Types</h4><ul><li><a href="../type/parsed_type_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>parsed_type_t</a></li><li><a href="../type/procedure_header_t.html"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span>procedure_header_t</a></li></ul>
+<h4>Functions</h4><ul><li><a href="../proc/is_type_declaration.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>is_type_declaration</a></li><li><a href="../proc/selector_length.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>selector_length</a></li></ul>
+<h4>Subroutines</h4><ul><li><a href="../proc/original_prefix.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>original_prefix</a></li><li><a href="../proc/parse_declarator.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_declarator</a></li><li><a href="../proc/parse_procedure_header.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_procedure_header</a></li><li><a href="../proc/parse_type.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>parse_type</a></li><li><a href="../proc/split_attributes.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>split_attributes</a></li><li><a href="../proc/type_keyword.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>type_keyword</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><ul data-list="modules"></ul>
+<h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_decl.f90.html">fdoc_decl.f90</a></div>
+<h1><span class="kind">module</span>fdoc_decl</h1>
+<div class="doc">
+<p>Reading declarations and procedure headers from the text of a statement.</p>
+<p>Everything here runs inside the parallel parsing loop, so it does not call functions returning
+deferred-length strings (see <code>example/slen_race.f90</code>).</p>
+</div>
+<h2 id="uses">Uses</h2>
+<ul class="chips"><li><a href="../module/fdoc_util.html">fdoc_util</a></li></ul>
+<div class="graph"><svg width="317pt" height="150pt"
+ viewBox="0 0 317 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 145.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_decl.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="238.8" y="-81.6" width="70" height="21.6"/><text x="273.9" y="-66.1">fdoc_decl</text></a><a href="../module/fdoc_util.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="140" y="-81.6" width="62.8" height="21.6"/><text x="171.4" y="-66.1">fdoc_util</text></a><path d="M238,-70.8C229.5,-70.8 220.4,-70.8 211.7,-70.8"/><polygon fill="#8a93a5" points="211.7,-68.4 204.7,-70.8 211.7,-73.3"/><a href="http://fortranwiki.org/fortran/show/iso_fortran_env" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-141.6" width="104" height="21.6"/><text x="52" y="-126.1">iso_fortran_env</text></a><path d="M153.7,-82C140.5,-90.5 121.5,-102.2 104,-110.8 100.1,-112.7 95.9,-114.6 91.7,-116.4"/><polygon fill="#8a93a5" points="91,-114 85.5,-119 92.9,-118.6"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_strings.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="11.2" y="-101.6" width="81.6" height="21.6"/><text x="52" y="-86.1">ffmt_strings</text></a><path d="M139.6,-76.1C127.9,-78 114.2,-80.4 101.3,-82.6"/><polygon fill="#8a93a5" points="100.9,-80.2 94.4,-83.7 101.7,-85"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_fs.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-61.6" width="54" height="21.6"/><text x="52" y="-46.1">ffmt_fs</text></a><path d="M139.6,-65.5C123.6,-62.8 104.1,-59.5 87.6,-56.7"/><polygon fill="#8a93a5" points="88.1,-54.3 80.8,-55.5 87.3,-59.1"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_io.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-21.6" width="54" height="21.6"/><text x="52" y="-6.1">ffmt_io</text></a><path d="M153.7,-59.6C140.5,-51.1 121.5,-39.4 104,-30.8 98.6,-28.1 92.8,-25.6 87,-23.2"/><polygon fill="#8a93a5" points="88.1,-21 80.7,-20.7 86.3,-25.6"/></g>
+</svg>
+</div>
+<h2 id="used-by">Used by</h2>
+<ul class="chips"><li><a href="../module/fdoc_parser.html">fdoc_parser</a></li></ul>
+<div class="graph"><svg width="758pt" height="223pt"
+ viewBox="0 0 758 223" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 219)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_decl.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-138.6" width="70" height="21.6"/><text x="35" y="-123.1">fdoc_decl</text></a><a href="../module/fdoc_parser.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="106" y="-138.6" width="83" height="21.6"/><text x="147.6" y="-123.1">fdoc_parser</text></a><path d="M105.7,-127.8C97.1,-127.8 88.1,-127.8 79.4,-127.8"/><polygon fill="#8a93a5" points="79.4,-125.4 72.4,-127.8 79.4,-130.3"/><a href="../module/fdoc_project.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="225.1" y="-138.6" width="85.2" height="21.6"/><text x="267.7" y="-123.1">fdoc_project</text></a><path d="M224.7,-127.8C216,-127.8 206.7,-127.8 197.7,-127.8"/><polygon fill="#8a93a5" points="197.7,-125.4 190.7,-127.8 197.7,-130.3"/><a href="../module/fdoc.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="696.3" y="-99.6" width="54" height="21.6"/><text x="723.3" y="-84.1">fdoc</text></a><path d="M498,-205.8C430.3,-200.1 409.2,-212.5 346.3,-186.8 322.5,-177.1 299.5,-158 284.9,-144.2"/><polygon fill="#8a93a5" points="286.9,-142.8 280.2,-139.7 283.5,-146.3"/><a href="../module/fdoc_docs.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="346.3" y="-177.6" width="73.7" height="21.6"/><text x="383.2" y="-162.1">fdoc_docs</text></a><path d="M618.1,-205.8C568.6,-223.4 552.3,-210.2 500,-205.8"/><path d="M498,-205.8C468.2,-203.3 436.1,-191.4 413.6,-181.4"/><polygon fill="#8a93a5" points="414.9,-179.3 407.5,-178.6 412.8,-183.7"/><a href="../module/fdoc_links.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="347" y="-80.6" width="72.2" height="21.6"/><text x="383.2" y="-65.1">fdoc_links</text></a><path d="M696.1,-85C661,-80.1 597,-71.8 541.9,-68.8 503.8,-66.7 494.2,-68.5 456,-68.8 446.9,-68.9 437.2,-69 427.9,-69.1"/><polygon fill="#8a93a5" points="428.1,-66.6 421.1,-69.2 428.1,-71.5"/><a href="../module/fdoc_output.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="577.9" y="-21.6" width="82.3" height="21.6"/><text x="619.1" y="-6.1">fdoc_output</text></a><path d="M710.4,-77.7C698.2,-66.5 678.6,-49.2 660.3,-35.8 655.9,-32.6 651.2,-29.4 646.5,-26.4"/><polygon fill="#8a93a5" points="647.8,-24.4 640.6,-22.7 645.2,-28.5"/><a href="../module/fdoc_pages.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="458.1" y="-177.6" width="81.6" height="21.6"/><text x="499" y="-162.1">fdoc_pages</text></a><path d="M717.4,-99.8C705.4,-125.3 671.4,-187.6 620.1,-205.8"/><path d="M618.1,-205.8C601.8,-211.6 559.4,-194.8 530.1,-181.4"/><polygon fill="#8a93a5" points="531.4,-179.3 524,-178.6 529.3,-183.7"/><a href="../module/fdoc_site.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="585.9" y="-119.6" width="66.4" height="21.6"/><text x="619.1" y="-104.1">fdoc_site</text></a><path d="M696,-94C685.2,-96.1 672.5,-98.5 660.6,-100.9"/><polygon fill="#8a93a5" points="660.4,-98.4 654,-102.2 661.4,-103.2"/><path d="M349.3,-155.5C336.9,-151.2 322.5,-146.3 309.4,-141.8"/><polygon fill="#8a93a5" points="310.3,-139.5 302.9,-139.5 308.7,-144.1"/><a href="../module/fdoc_graphs.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="456" y="-99.6" width="86" height="21.6"/><text x="499" y="-84.1">fdoc_graphs</text></a><path d="M478.1,-100.1C455.9,-111.6 418.6,-127.8 384.2,-127.8"/><path d="M382.2,-127.8C361.6,-127.8 338.9,-127.8 319.2,-127.8"/><polygon fill="#8a93a5" points="319.2,-125.4 312.2,-127.8 319.2,-130.3"/><path d="M360.3,-81C342.5,-90 317.4,-102.9 297.9,-112.9"/><polygon fill="#8a93a5" points="297,-110.6 291.9,-116 299.2,-115"/><path d="M577.5,-8.8C522.2,-7.8 421.5,-12.1 346.3,-49.8 318.6,-63.7 294.8,-91.4 281.1,-109.7"/><polygon fill="#8a93a5" points="279.2,-108.2 277.1,-115.3 283.2,-111"/><path d="M478.1,-155.5C455.9,-144 418.6,-127.8 384.2,-127.8"/><path d="M457.8,-166.8C448.3,-166.8 438.1,-166.8 428.5,-166.8"/><polygon fill="#8a93a5" points="428.6,-164.4 421.6,-166.8 428.6,-169.3"/><path d="M585.6,-113.1C540.5,-118.7 456.3,-127.8 384.2,-127.8"/><path d="M585.5,-103.3C574.6,-101.4 562.2,-99.3 550.3,-97.3"/><polygon fill="#8a93a5" points="551,-95 543.7,-96.2 550.2,-99.8"/><path d="M595.3,-120C576.8,-129.1 550.4,-142 530.1,-152"/><polygon fill="#8a93a5" points="529.2,-149.7 524,-155 531.4,-154.1"/></g>
+</svg>
+</div>
+<h2 id="variables">Variables</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-type_words"><td class="name">TYPE_WORDS</td><td class="type">character(len=*)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span><span class="attr attr-dimension">dimension(*)</span></td><td class="default">[character(len=16)::'integer','real','doubleprecision','character','complex','doublecomplex','logical','type','class','procedure','enumerator']</td><td></td></tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<div class="item" id="type-parsed_type_t"><h3><a href="../type/parsed_type_t.html">parsed_type_t</a></h3>
+<p>The type part of a declaration.</p>
+</div>
+<div class="item" id="type-procedure_header_t"><h3><a href="../type/procedure_header_t.html">procedure_header_t</a></h3>
+<p>The parts of a <code>subroutine</code> or <code>function</code> statement.</p>
+</div>
+<h2 id="functions">Functions</h2>
+<div class="item" id="proc-is_type_declaration"><h3><a href="../proc/is_type_declaration.html">is_type_declaration</a></h3>
+<div class="sig">logical <span class="k">function</span> is_type_declaration(<span class="intent attr-in" title="intent(in)">low</span>)</div>
+<p>True if <code>low</code> starts a type declaration rather than, for example, an assignment.</p>
+</div>
+<div class="item" id="proc-selector_length"><h3><a href="../proc/selector_length.html">selector_length</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> selector_length(<span class="intent attr-in" title="intent(in)">text</span>)</div>
+<p>The length of the kind selector at the start of <code>text</code>, which is <code>(...)</code>, <code>*n</code> or <code>*(...)</code>.</p>
+</div>
+<h2 id="subroutines">Subroutines</h2>
+<div class="item" id="proc-original_prefix"><h3><a href="../proc/original_prefix.html">original_prefix</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> original_prefix(<span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-in" title="intent(in)">low</span>, <span class="intent attr-in" title="intent(in)">n</span>, <span class="intent attr-in" title="intent(in)">attribs</span>, <span class="intent attr-out" title="intent(out)">text</span>)</div>
+<p>Set <code>text</code> to <code>line(1:n)</code> with the words of <code>attribs</code> removed, keeping the case of what is left.</p>
+</div>
+<div class="item" id="proc-parse_declarator"><h3><a href="../proc/parse_declarator.html">parse_declarator</a></h3>
+<div class="sig"><span class="k">subroutine</span> parse_declarator(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">name</span>, <span class="intent attr-out" title="intent(out)">dimension</span>, <span class="intent attr-out" title="intent(out)">initial</span>, <span class="intent attr-out" title="intent(out)">points</span>)</div>
+<p>Read one name of a declaration, such as <code>x(3) = 1</code>.</p>
+</div>
+<div class="item" id="proc-parse_procedure_header"><h3><a href="../proc/parse_procedure_header.html">parse_procedure_header</a></h3>
+<div class="sig"><span class="k">subroutine</span> parse_procedure_header(<span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-out" title="intent(out)">h</span>)</div>
+<p>Read a <code>subroutine</code> or <code>function</code> statement.</p>
+</div>
+<div class="item" id="proc-parse_type"><h3><a href="../proc/parse_type.html">parse_type</a></h3>
+<div class="sig"><span class="k">subroutine</span> parse_type(<span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-out" title="intent(out)">t</span>)</div>
+<p>Read the type at the start of <code>line</code>.</p>
+</div>
+<div class="item" id="proc-split_attributes"><h3><a href="../proc/split_attributes.html">split_attributes</a></h3>
+<div class="sig"><span class="k">subroutine</span> split_attributes(<span class="intent attr-in" title="intent(in)">rest</span>, <span class="intent attr-out" title="intent(out)">attributes</span>, <span class="intent attr-out" title="intent(out)">names</span>)</div>
+<p>Split what follows the type of a declaration into its attributes and the names declared.</p>
+</div>
+<div class="item" id="proc-type_keyword"><h3><a href="../proc/type_keyword.html">type_keyword</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> type_keyword(<span class="intent attr-in" title="intent(in)">low</span>, <span class="intent attr-out" title="intent(out)">n</span>, <span class="intent attr-out" title="intent(out)">word</span>)</div>
+<p>The length of the type keyword that <code>low</code> starts with, ignoring blanks in <code>double precision</code>, or
+0. Its normal spelling is returned in <code>word</code>.</p>
+</div>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

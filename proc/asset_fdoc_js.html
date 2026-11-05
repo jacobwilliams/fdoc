@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>asset_fdoc_js &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_assets.f90.html">fdoc_assets.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_assets.html">fdoc_assets</a></div>
+<h1><span class="kind">subroutine</span>asset_fdoc_js</h1>
+<div class="sig"><span class="k">subroutine</span> asset_fdoc_js(<span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>The contents of <code>assets/fdoc.js</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>where they go</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li></ul>
+<div class="graph"><svg width="192pt" height="30pt"
+ viewBox="0 0 192 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/asset_fdoc_js.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="93.9" height="21.6"/><text x="46.9" y="-6.1">asset_fdoc_js</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="129.9" y="-21.6" width="54" height="21.6"/><text x="156.9" y="-6.1">add</text></a><path d="M94.7,-10.8C103.5,-10.8 112.7,-10.8 121.1,-10.8"/><polygon fill="#8a93a5" points="121.1,-13.3 128.1,-10.8 121.1,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="297pt" height="30pt"
+ viewBox="0 0 297 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/asset_fdoc_js.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="93.9" height="21.6"/><text x="46.9" y="-6.1">asset_fdoc_js</text></a><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="129.9" y="-21.6" width="69.3" height="21.6"/><text x="164.5" y="-6.1">write_site</text></a><path d="M129.5,-10.8C121.1,-10.8 112,-10.8 102.9,-10.8"/><polygon fill="#8a93a5" points="103.1,-8.4 96.1,-10.8 103.1,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="235.2" y="-21.6" width="54" height="21.6"/><text x="262.2" y="-6.1">run</text></a><path d="M234.8,-10.8C226.4,-10.8 216.9,-10.8 207.7,-10.8"/><polygon fill="#8a93a5" points="207.9,-8.4 200.9,-10.8 207.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> asset_fdoc_js(b)
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b  <span class="d">!! where they go</span>
+    <span class="k">call</span> add(b, &amp;
+        <span class="s">'(function () {'</span>//NL//<span class="s">'  var root = document.documentElement;'</span>//NL//<span class="s">'  var saved = null;'</span>//NL//<span class="s">'  try { saved '</span> &amp;
+        //<span class="s">'= localStorage.getItem("fdoc-theme"); } catch (e) {}'</span>//NL//<span class="s">'  if (saved) root.setAttribute("data-theme", save'</span> &amp;
+        //<span class="s">'d);'</span>//NL//<span class="s">'  document.addEventListener("DOMContentLoaded", function () {'</span>//NL//<span class="s">'    var button = document.que'</span> &amp;
+        //<span class="s">'rySelector(".theme");'</span>//NL//<span class="s">'    if (button) button.addEventListener("click", function () {'</span>//NL//<span class="s">'      var '</span> &amp;
+        //<span class="s">'dark = root.getAttribute("data-theme") ? root.getAttribute("data-theme") === "dark"'</span>//NL//<span class="s">'        : window.m'</span> &amp;
+        //<span class="s">'atchMedia("(prefers-color-scheme: dark)").matches;'</span>//NL//<span class="s">'      var next = dark ? "light" : "dark";'</span>//NL//<span class="s">'  '</span> &amp;
+        //<span class="s">'    root.setAttribute("data-theme", next);'</span>//NL//<span class="s">'      try { localStorage.setItem("fdoc-theme", next); } cat'</span> &amp;
+        //<span class="s">'ch (e) {}'</span>//NL//<span class="s">'    });'</span>//NL//<span class="s">'    document.querySelectorAll(".codehilite").forEach(function (block) {'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'     if (!navigator.clipboard) return;'</span>//NL//<span class="s">'      var copy = document.createElement("button");'</span>//NL//<span class="s">'     '</span> &amp;
+        //<span class="s">' copy.className = "copy";'</span>//NL//<span class="s">'      copy.textContent = "Copy";'</span>//NL//<span class="s">'      copy.addEventListener("click",'</span> &amp;
+        //<span class="s">' function () {'</span>//NL//<span class="s">'        navigator.clipboard.writeText(block.querySelector("pre").innerText).then(functi'</span> &amp;
+        //<span class="s">'on () {'</span>//NL//<span class="s">'          copy.textContent = "Copied";'</span>//NL//<span class="s">'          setTimeout(function () { copy.textCont'</span> &amp;
+        //<span class="s">'ent = "Copy"; }, 1200);'</span>//NL//<span class="s">'        });'</span>//NL//<span class="s">'      });'</span>//NL//<span class="s">'      block.appendChild(copy);'</span>//NL//<span class="s">'    '</span> &amp;
+        //<span class="s">'});'</span>//NL//<span class="s">'  });'</span>//NL//<span class="s">'})();'</span>//NL//<span class="s">'(function () {'</span>//NL//<span class="s">'  var script = document.currentScript;'</span>//NL//<span class="s">'  va'</span> &amp;
+        //<span class="s">'r root = script ? script.src.replace(/js\/fdoc\.js.*$/, "") : "";'</span>//NL//<span class="s">'  var loaded = false, entries = null'</span> &amp;
+        //<span class="s">', waiting = [];'</span>//NL//NL//<span class="s">'  function load(then) {'</span>//NL//<span class="s">'    if (entries) { then(); return; }'</span>//NL//<span class="s">'    wai'</span> &amp;
+        //<span class="s">'ting.push(then);'</span>//NL//<span class="s">'    if (loaded) return;'</span>//NL//<span class="s">'    loaded = true;'</span>//NL//<span class="s">'    var tag = document.creat'</span> &amp;
+        //<span class="s">'eElement("script");'</span>//NL//<span class="s">'    tag.src = root + "search/index.js";'</span>//NL//<span class="s">'    tag.onload = function () {'</span>//NL &amp;
+        //<span class="s">'      entries = window.FDOC_INDEX || [];'</span>//NL//<span class="s">'      entries.forEach(function (e) { e.low = e.t.toLowerCase('</span> &amp;
+        //<span class="s">'); e.text = (e.s || "").toLowerCase(); });'</span>//NL//<span class="s">'      waiting.forEach(function (f) { f(); });'</span>//NL//<span class="s">'    };'</span> &amp;
+        //NL//<span class="s">'    document.head.appendChild(tag);'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  function score(entry, words) {'</span>//NL//<span class="s">'    var'</span> &amp;
+        //<span class="s">' total = 0;'</span>//NL//<span class="s">'    for (var i = 0; i &lt; words.length; i++) {'</span>//NL//<span class="s">'      var w = words[i], at = entry.low'</span> &amp;
+        //<span class="s">'.indexOf(w);'</span>//NL//<span class="s">'      if (entry.low === w) total += 100;'</span>//NL//<span class="s">'      else if (at === 0) total += 50;'</span>//NL &amp;
+        //<span class="s">'      else if (at &gt; 0) total += 25;'</span>//NL//<span class="s">'      else if (entry.text.indexOf(w) &gt;= 0) total += 5;'</span>//NL//<span class="s">'    '</span> &amp;
+        //<span class="s">'  else return 0;'</span>//NL//<span class="s">'    }'</span>//NL//<span class="s">'    return total - entry.low.length / 100;'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  // ed'</span> &amp;
+        //<span class="s">'it distance with transpositions, giving up once it exceeds `most`'</span>//NL//<span class="s">'  function distance(a, b, most) {'</span>//NL &amp;
+        //<span class="s">'    if (Math.abs(a.length - b.length) &gt; most) return most + 1;'</span>//NL//<span class="s">'    var before = null, last = [], row ='</span> &amp;
+        //<span class="s">' [], i, j;'</span>//NL//<span class="s">'    for (j = 0; j &lt;= b.length; j++) last[j] = j;'</span>//NL//<span class="s">'    for (i = 1; i &lt;= a.length; i++)'</span> &amp;
+        //<span class="s">' {'</span>//NL//<span class="s">'      row = [i];'</span>//NL//<span class="s">'      var best = i;'</span>//NL//<span class="s">'      for (j = 1; j &lt;= b.length; j++) {'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'       var cost = a[i - 1] === b[j - 1] ? 0 : 1;'</span>//NL//<span class="s">'        row[j] = Math.min(last[j] + 1, row[j - 1] + 1'</span> &amp;
+        //<span class="s">', last[j - 1] + cost);'</span>//NL//<span class="s">'        if (before &amp;&amp; i &gt; 1 &amp;&amp; j &gt; 1 &amp;&amp; a[i - 1] === b[j - 2] &amp;&amp; a[i - 2] === b'</span> &amp;
+        //<span class="s">'[j - 1]) {'</span>//NL//<span class="s">'          row[j] = Math.min(row[j], before[j - 2] + 1);'</span>//NL//<span class="s">'        }'</span>//NL//<span class="s">'        bes'</span> &amp;
+        //<span class="s">'t = Math.min(best, row[j]);'</span>//NL//<span class="s">'      }'</span>//NL//<span class="s">'      if (best &gt; most) return most + 1;'</span>//NL//<span class="s">'      before'</span> &amp;
+        //<span class="s">' = last;'</span>//NL//<span class="s">'      last = row;'</span>//NL//<span class="s">'    }'</span>//NL//<span class="s">'    return last[b.length];'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  func'</span> &amp;
+        //<span class="s">'tion parts(text) { return text.split(/[^a-z0-9]+/).filter(Boolean); }'</span>//NL//NL//<span class="s">'  // a typo: the word is clo'</span> &amp;
+        //<span class="s">'se to some run of parts of the name, or to how such a run starts'</span>//NL//<span class="s">'  function typo(tokens, word) {'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'   if (word.length &lt; 3) return 0;'</span>//NL//<span class="s">'    var size = parts(word).length, plain = parts(word).join("_"), mo'</span> &amp;
+        //<span class="s">'st = word.length &lt; 8 ? 1 : 2;'</span>//NL//<span class="s">'    var result = 0;'</span>//NL//<span class="s">'    for (var i = 0; i + size &lt;= tokens.length'</span> &amp;
+        //<span class="s">'; i++) {'</span>//NL//<span class="s">'      var run = tokens.slice(i, i + size).join("_");'</span>//NL//<span class="s">'      var d = distance(plain, run'</span> &amp;
+        //<span class="s">', most);'</span>//NL//<span class="s">'      if (d &gt; most) d = distance(plain, run.slice(0, plain.length), most);'</span>//NL//<span class="s">'      if (d'</span> &amp;
+        //<span class="s">' &lt;= most) result = Math.max(result, 3 - d);'</span>//NL//<span class="s">'    }'</span>//NL//<span class="s">'    return result;'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  //'</span> &amp;
+        //<span class="s">' the word is in the initials of the parts of the name, as `jvcs` for json_value_create_string'</span>//NL//<span class="s">'  functi'</span> &amp;
+        //<span class="s">'on initials(tokens, word) {'</span>//NL//<span class="s">'    if (word.length &lt; 2) return 0;'</span>//NL//<span class="s">'    return subsequence(tokens.ma'</span> &amp;
+        //<span class="s">'p(function (t) { return t[0]; }).join(""), word) ? 2.5 : 0;'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  function subsequence(text'</span> &amp;
+        //<span class="s">', word) {'</span>//NL//<span class="s">'    var at = -1;'</span>//NL//<span class="s">'    for (var i = 0; i &lt; word.length; i++) {'</span>//NL//<span class="s">'      at = text.i'</span> &amp;
+        //<span class="s">'ndexOf(word[i], at + 1);'</span>//NL//<span class="s">'      if (at &lt; 0) return false;'</span>//NL//<span class="s">'    }'</span>//NL//<span class="s">'    return true;'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">' }'</span>//NL//NL//<span class="s">'  // the letters of the word are in order and close together'</span>//NL//<span class="s">'  function letters(low, wor'</span> &amp;
+        //<span class="s">'d) {'</span>//NL//<span class="s">'    if (word.length &lt; 3) return 0;'</span>//NL//<span class="s">'    var best = 0;'</span>//NL//<span class="s">'    for (var start = low.index'</span> &amp;
+        //<span class="s">'Of(word[0]); start &gt;= 0; start = low.indexOf(word[0], start + 1)) {'</span>//NL//<span class="s">'      var at = start;'</span>//NL//<span class="s">'     '</span> &amp;
+        //<span class="s">' for (var i = 1; i &lt; word.length &amp;&amp; at &gt;= 0; i++) at = low.indexOf(word[i], at + 1);'</span>//NL//<span class="s">'      if (at &lt; 0)'</span> &amp;
+        //<span class="s">' break;'</span>//NL//<span class="s">'      var span = at - start + 1;'</span>//NL//<span class="s">'      if (span &lt;= word.length * 2) best = Math.max(bes'</span> &amp;
+        //<span class="s">'t, word.length / span);'</span>//NL//<span class="s">'    }'</span>//NL//<span class="s">'    return best;'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  function fuzzy(entry, wo'</span> &amp;
+        //<span class="s">'rds) {'</span>//NL//<span class="s">'    if (!entry.tokens) entry.tokens = parts(entry.low);'</span>//NL//<span class="s">'    var total = 0;'</span>//NL//<span class="s">'    fo'</span> &amp;
+        //<span class="s">'r (var i = 0; i &lt; words.length; i++) {'</span>//NL//<span class="s">'      var w = words[i];'</span>//NL//<span class="s">'      var s = entry.low.indexOf('</span> &amp;
+        //<span class="s">'w) &gt;= 0 ? 3 : Math.max(typo(entry.tokens, w), initials(entry.tokens, w), letters(entry.low, w));'</span>//NL//<span class="s">'     '</span> &amp;
+        //<span class="s">' if (s &lt;= 0) return 0;'</span>//NL//<span class="s">'      total += s;'</span>//NL//<span class="s">'    }'</span>//NL//<span class="s">'    return total - entry.low.length / 100'</span> &amp;
+        //<span class="s">'0;'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  function search(query, limit) {'</span>//NL//<span class="s">'    var words = query.toLowerCase().split(/'</span> &amp;
+        //<span class="s">'\s+/).filter(Boolean);'</span>//NL//<span class="s">'    if (!words.length) return [];'</span>//NL//<span class="s">'    var found = [], rest = [];'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'   entries.forEach(function (e) {'</span>//NL//<span class="s">'      var s = score(e, words);'</span>//NL//<span class="s">'      if (s &gt; 0) found.push([s'</span> &amp;
+        //<span class="s">', e]); else rest.push(e);'</span>//NL//<span class="s">'    });'</span>//NL//<span class="s">'    found.sort(function (a, b) { return b[0] - a[0]; });'</span>//NL &amp;
+        //<span class="s">'    if (found.length &lt; limit) {'</span>//NL//<span class="s">'      // fuzzy matches only fill in below exact ones'</span>//NL//<span class="s">'      var '</span> &amp;
+        //<span class="s">'near = [];'</span>//NL//<span class="s">'      rest.forEach(function (e) { var s = fuzzy(e, words); if (s &gt; 0) near.push([s, e]); })'</span> &amp;
+        //<span class="s">';'</span>//NL//<span class="s">'      near.sort(function (a, b) { return b[0] - a[0]; });'</span>//NL//<span class="s">'      found = found.concat(near);'</span>//NL &amp;
+        //<span class="s">'    }'</span>//NL//<span class="s">'    return found.slice(0, limit).map(function (f) { return f[1]; });'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  fun'</span> &amp;
+        //<span class="s">'ction row(entry) {'</span>//NL//<span class="s">'    var a = document.createElement("a");'</span>//NL//<span class="s">'    a.href = root + entry.u;'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'   var title = document.createElement("b");'</span>//NL//<span class="s">'    title.textContent = entry.t;'</span>//NL//<span class="s">'    var kind = doc'</span> &amp;
+        //<span class="s">'ument.createElement("span");'</span>//NL//<span class="s">'    kind.className = "badge";'</span>//NL//<span class="s">'    kind.textContent = entry.k;'</span>//NL &amp;
+        //<span class="s">'    a.appendChild(title);'</span>//NL//<span class="s">'    a.appendChild(kind);'</span>//NL//<span class="s">'    if (entry.s) {'</span>//NL//<span class="s">'      var text = d'</span> &amp;
+        //<span class="s">'ocument.createElement("small");'</span>//NL//<span class="s">'      text.textContent = entry.s;'</span>//NL//<span class="s">'      a.appendChild(text);'</span>//NL &amp;
+        //<span class="s">'    }'</span>//NL//<span class="s">'    return a;'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  function fill(box, results) {'</span>//NL//<span class="s">'    box.textContent ='</span> &amp;
+        //<span class="s">' "";'</span>//NL//<span class="s">'    results.forEach(function (e) { box.appendChild(row(e)); });'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  document.'</span> &amp;
+        //<span class="s">'addEventListener("DOMContentLoaded", function () {'</span>//NL//<span class="s">'    var input = document.querySelector(".search inp'</span> &amp;
+        //<span class="s">'ut");'</span>//NL//<span class="s">'    if (!input) return;'</span>//NL//<span class="s">'    var box = document.querySelector(".search .results");'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'   var selected = -1;'</span>//NL//<span class="s">'    function mark() {'</span>//NL//<span class="s">'      var rows = box.children;'</span>//NL//<span class="s">'      for (va'</span> &amp;
+        //<span class="s">'r i = 0; i &lt; rows.length; i++) rows[i].className = i === selected ? "on" : "";'</span>//NL//<span class="s">'    }'</span>//NL//<span class="s">'    input.'</span> &amp;
+        //<span class="s">'addEventListener("input", function () {'</span>//NL//<span class="s">'      load(function () {'</span>//NL//<span class="s">'        fill(box, input.value '</span> &amp;
+        //<span class="s">'? search(input.value, 12) : []);'</span>//NL//<span class="s">'        selected = -1;'</span>//NL//<span class="s">'        box.style.display = box.childre'</span> &amp;
+        //<span class="s">'n.length ? "block" : "none";'</span>//NL//<span class="s">'      });'</span>//NL//<span class="s">'    });'</span>//NL//<span class="s">'    input.addEventListener("keydown", fun'</span> &amp;
+        //<span class="s">'ction (event) {'</span>//NL//<span class="s">'      var n = box.children.length;'</span>//NL//<span class="s">'      if (event.key === "ArrowDown" &amp;&amp; n) { '</span> &amp;
+        //<span class="s">'selected = (selected + 1) % n; mark(); event.preventDefault(); }'</span>//NL//<span class="s">'      else if (event.key === "ArrowUp'</span> &amp;
+        //<span class="s">'" &amp;&amp; n) { selected = (selected + n - 1) % n; mark(); event.preventDefault(); }'</span>//NL//<span class="s">'      else if (event.ke'</span> &amp;
+        //<span class="s">'y === "Escape") { box.style.display = "none"; input.blur(); }'</span>//NL//<span class="s">'      else if (event.key === "Enter") {'</span>//NL &amp;
+        //<span class="s">'        if (selected &gt;= 0) box.children[selected].click();'</span>//NL//<span class="s">'        else location.href = root + "search'</span> &amp;
+        //<span class="s">'.html?q=" + encodeURIComponent(input.value);'</span>//NL//<span class="s">'      }'</span>//NL//<span class="s">'    });'</span>//NL//<span class="s">'    document.addEventListen'</span> &amp;
+        //<span class="s">'er("click", function (event) {'</span>//NL//<span class="s">'      if (!event.target.closest(".search")) box.style.display = "none";'</span> &amp;
+        //NL//<span class="s">'    });'</span>//NL//<span class="s">'    document.addEventListener("keydown", function (event) {'</span>//NL//<span class="s">'      if (event.key ==='</span> &amp;
+        //<span class="s">' "/" &amp;&amp; document.activeElement !== input) { input.focus(); event.preventDefault(); }'</span>//NL//<span class="s">'    });'</span>//NL//<span class="s">'  '</span> &amp;
+        //<span class="s">'  var page = document.querySelector(".search-page");'</span>//NL//<span class="s">'    if (page) {'</span>//NL//<span class="s">'      var query = new URLS'</span> &amp;
+        //<span class="s">'earchParams(location.search).get("q") || "";'</span>//NL//<span class="s">'      input.value = query;'</span>//NL//<span class="s">'      load(function () '</span> &amp;
+        //<span class="s">'{'</span>//NL//<span class="s">'        var results = search(query, 200);'</span>//NL//<span class="s">'        fill(page, results);'</span>//NL//<span class="s">'        documen'</span> &amp;
+        //<span class="s">'t.querySelector(".search-count").textContent = results.length + " results for “" + query + "”";'</span>//NL//<span class="s">'  '</span> &amp;
+        //<span class="s">'    });'</span>//NL//<span class="s">'    }'</span>//NL//<span class="s">'  });'</span>//NL//<span class="s">'})();'</span>//NL//<span class="s">'(function () {'</span>//NL//<span class="s">'  document.addEventListener("DOMC'</span> &amp;
+        //<span class="s">'ontentLoaded", function () {'</span>//NL//<span class="s">'    // what the colours of `add_node` in fdoc_graphs.f90 mean: keep the t'</span> &amp;
+        //<span class="s">'wo the same'</span>//NL//<span class="s">'    var COLOURS = [["#3657c9", "Module"], ["#5a78de", "Submodule"], ["#a61e69", "Program"]'</span> &amp;
+        //<span class="s">', ["#1d7a55", "Subroutine"],'</span>//NL//<span class="s">'      ["#0b7285", "Function"], ["#6a4fb3", "Interface"], ["#a15c00", "Der'</span> &amp;
+        //<span class="s">'ived type"], ["#7a6a2d", "Type-bound procedure"],'</span>//NL//<span class="s">'      ["#5c6f2d", "Source file"], ["#646d7e", "Exter'</span> &amp;
+        //<span class="s">'nal, or other"], ["#8a93a5", "Not documented"]];'</span>//NL//NL//<span class="s">'    // a button that shows what is in this drawin'</span> &amp;
+        //<span class="s">'g, under it, as a short drawing can''t hold a popup'</span>//NL//<span class="s">'    function addKey(box, svg, zoom) {'</span>//NL//<span class="s">'     '</span> &amp;
+        //<span class="s">' var key = document.createElement("div");'</span>//NL//<span class="s">'      key.className = "graph-key";'</span>//NL//<span class="s">'      key.hidden ='</span> &amp;
+        //<span class="s">' true;'</span>//NL//<span class="s">'      function entry(mark, text) {'</span>//NL//<span class="s">'        var item = document.createElement("span");'</span>//NL)
+    <span class="k">call</span> add(b, &amp;
+        <span class="s">'        item.className = "graph-key-item";'</span>//NL//<span class="s">'        item.appendChild(mark);'</span>//NL//<span class="s">'        item.appendC'</span> &amp;
+        //<span class="s">'hild(document.createTextNode(text));'</span>//NL//<span class="s">'        key.appendChild(item);'</span>//NL//<span class="s">'      }'</span>//NL//<span class="s">'      functi'</span> &amp;
+        //<span class="s">'on swatch(style) {'</span>//NL//<span class="s">'        var mark = document.createElement("span");'</span>//NL//<span class="s">'        mark.className = '</span> &amp;
+        //<span class="s">'"graph-key-mark";'</span>//NL//<span class="s">'        Object.keys(style).forEach(function (name) { mark.style[name] = style[name];'</span> &amp;
+        //<span class="s">' });'</span>//NL//<span class="s">'        return mark;'</span>//NL//<span class="s">'      }'</span>//NL//<span class="s">'      COLOURS.forEach(function (c) {'</span>//NL//<span class="s">'        if'</span> &amp;
+        //<span class="s">' (svg.querySelector(''rect[fill="'' + c[0] + ''"], path[fill="'' + c[0] + ''"]'')) entry(swatch({ background:'</span> &amp;
+        //<span class="s">' c[0] }), c[1]);'</span>//NL//<span class="s">'      });'</span>//NL//<span class="s">'      if (svg.querySelector(''rect[stroke="#f0a868"]'')) entry(swatc'</span> &amp;
+        //<span class="s">'h({ border: "2px solid #f0a868" }), "This page");'</span>//NL//<span class="s">'      if (svg.querySelector("path[stroke-dasharray]"'</span> &amp;
+        //<span class="s">')) {'</span>//NL//<span class="s">'        entry(swatch({ height: "0", borderRadius: "0", borderTop: "2px dashed #8a93a5" }), "Compo'</span> &amp;
+        //<span class="s">'nent of a type");'</span>//NL//<span class="s">'      }'</span>//NL//<span class="s">'      var button = document.createElement("button");'</span>//NL//<span class="s">'      but'</span> &amp;
+        //<span class="s">'ton.textContent = "?";'</span>//NL//<span class="s">'      button.title = "Key to the colours";'</span>//NL//<span class="s">'      button.setAttribute("ar'</span> &amp;
+        //<span class="s">'ia-label", "Key to the colours");'</span>//NL//<span class="s">'      button.setAttribute("aria-expanded", "false");'</span>//NL//<span class="s">'      bu'</span> &amp;
+        //<span class="s">'tton.addEventListener("click", function () {'</span>//NL//<span class="s">'        key.hidden = !key.hidden;'</span>//NL//<span class="s">'        button.s'</span> &amp;
+        //<span class="s">'etAttribute("aria-expanded", String(!key.hidden));'</span>//NL//<span class="s">'      });'</span>//NL//<span class="s">'      zoom.appendChild(button);'</span>//NL &amp;
+        //<span class="s">'      box.parentNode.insertBefore(key, box.nextSibling);'</span>//NL//<span class="s">'    }'</span>//NL//NL//<span class="s">'    document.querySelectorAl'</span> &amp;
+        //<span class="s">'l(".graph").forEach(function (box) {'</span>//NL//<span class="s">'      var svg = box.querySelector("svg");'</span>//NL//<span class="s">'      if (!svg) '</span> &amp;
+        //<span class="s">'return;'</span>//NL//<span class="s">'      var width = svg.width.baseVal.value, height = svg.height.baseVal.value, scale = 1;'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'     function set(value) {'</span>//NL//<span class="s">'        scale = Math.max(0.25, Math.min(6, value));'</span>//NL//<span class="s">'        box.clas'</span> &amp;
+        //<span class="s">'sList.add("zoomed");'</span>//NL//<span class="s">'        svg.style.width = width * scale + "px";'</span>//NL//<span class="s">'        svg.style.height ='</span> &amp;
+        //<span class="s">' height * scale + "px";'</span>//NL//<span class="s">'      }'</span>//NL//<span class="s">'      var zoom = document.createElement("div");'</span>//NL//<span class="s">'      zo'</span> &amp;
+        //<span class="s">'om.className = "zoom";'</span>//NL//<span class="s">'      [["+", 1.3], ["\u2212", 1 / 1.3]].forEach(function (b) {'</span>//NL//<span class="s">'        v'</span> &amp;
+        //<span class="s">'ar button = document.createElement("button");'</span>//NL//<span class="s">'        button.textContent = b[0];'</span>//NL//<span class="s">'        button'</span> &amp;
+        //<span class="s">'.setAttribute("aria-label", b[1] &gt; 1 ? "Zoom in" : "Zoom out");'</span>//NL//<span class="s">'        button.addEventListener("click'</span> &amp;
+        //<span class="s">'", function () { set(scale * b[1]); });'</span>//NL//<span class="s">'        zoom.appendChild(button);'</span>//NL//<span class="s">'      });'</span>//NL//<span class="s">'    '</span> &amp;
+        //<span class="s">'  box.insertBefore(zoom, svg);'</span>//NL//<span class="s">'      addKey(box, svg, zoom);'</span>//NL//<span class="s">'      var fit = box.clientWidth / '</span> &amp;
+        //<span class="s">'width;'</span>//NL//<span class="s">'      if (fit &gt; 0 &amp;&amp; fit &lt; 0.75) set(0.75);'</span>//NL//<span class="s">'      var start = null;'</span>//NL//<span class="s">'      box.add'</span> &amp;
+        //<span class="s">'EventListener("mousedown", function (event) {'</span>//NL//<span class="s">'        if (event.target.closest("a, button")) return;'</span>//NL &amp;
+        //<span class="s">'        start = [event.clientX, event.clientY, box.scrollLeft, box.scrollTop];'</span>//NL//<span class="s">'        box.classList.a'</span> &amp;
+        //<span class="s">'dd("dragging");'</span>//NL//<span class="s">'      });'</span>//NL//<span class="s">'      window.addEventListener("mousemove", function (event) {'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'       if (!start) return;'</span>//NL//<span class="s">'        box.scrollLeft = start[2] - (event.clientX - start[0]);'</span>//NL//<span class="s">'    '</span> &amp;
+        //<span class="s">'    box.scrollTop = start[3] - (event.clientY - start[1]);'</span>//NL//<span class="s">'      });'</span>//NL//<span class="s">'      window.addEventListe'</span> &amp;
+        //<span class="s">'ner("mouseup", function () { start = null; box.classList.remove("dragging"); });'</span>//NL//<span class="s">'    });'</span>//NL//<span class="s">'  });'</span>//NL &amp;
+        //<span class="s">'})();'</span>//NL//NL//<span class="s">'// a link to something inside a closed section opens the section'</span>//NL//<span class="s">'function openTarget('</span> &amp;
+        //<span class="s">') {'</span>//NL//<span class="s">'  var id = decodeURIComponent(location.hash.slice(1));'</span>//NL//<span class="s">'  var target = id &amp;&amp; document.getEle'</span> &amp;
+        //<span class="s">'mentById(id);'</span>//NL//<span class="s">'  var section = target &amp;&amp; target.closest(''details'');'</span>//NL//<span class="s">'  if (section) { section.o'</span> &amp;
+        //<span class="s">'pen = true; target.scrollIntoView(); }'</span>//NL//<span class="s">'}'</span>//NL//<span class="s">'window.addEventListener(''hashchange'', openTarget);'</span>//NL &amp;
+        //<span class="s">'window.addEventListener(''DOMContentLoaded'', openTarget);'</span>//NL//NL//<span class="s">'// clicking a heading of a sortable tab'</span> &amp;
+        //<span class="s">'le sorts it by that column'</span>//NL//<span class="s">'window.addEventListener(''DOMContentLoaded'', function () {'</span>//NL//<span class="s">'  docume'</span> &amp;
+        //<span class="s">'nt.querySelectorAll(''table.sortable'').forEach(function (table) {'</span>//NL//<span class="s">'    var headings = table.querySelec'</span> &amp;
+        //<span class="s">'torAll(''thead th'');'</span>//NL//<span class="s">'    headings.forEach(function (th, column) {'</span>//NL//<span class="s">'      th.addEventListener('''</span> &amp;
+        //<span class="s">'click'', function () {'</span>//NL//<span class="s">'        var body = table.tBodies[0];'</span>//NL//<span class="s">'        var numeric = th.classList.'</span> &amp;
+        //<span class="s">'contains(''num'');'</span>//NL//<span class="s">'        var up = th.hasAttribute(''aria-sort'') ? th.getAttribute(''aria-sort'') =='</span> &amp;
+        //<span class="s">'= ''descending'' : !numeric;'</span>//NL//<span class="s">'        var key = function (row) {'</span>//NL//<span class="s">'          var cell = row.cells['</span> &amp;
+        //<span class="s">'column];'</span>//NL//<span class="s">'          return numeric ? Number(cell.dataset.sort) : cell.textContent.toLowerCase();'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'       };'</span>//NL//<span class="s">'        var rows = Array.prototype.slice.call(body.rows);'</span>//NL//<span class="s">'        rows.sort(function '</span> &amp;
+        //<span class="s">'(a, b) {'</span>//NL//<span class="s">'          var x = key(a), y = key(b);'</span>//NL//<span class="s">'          return (x &lt; y ? -1 : x &gt; y ? 1 : 0) * '</span> &amp;
+        //<span class="s">'(up ? 1 : -1);'</span>//NL//<span class="s">'        });'</span>//NL//<span class="s">'        rows.forEach(function (row) { body.appendChild(row); });'</span>//NL &amp;
+        //<span class="s">'        headings.forEach(function (other) { other.removeAttribute(''aria-sort''); });'</span>//NL//<span class="s">'        th.setAt'</span> &amp;
+        //<span class="s">'tribute(''aria-sort'', up ? ''ascending'' : ''descending'');'</span>//NL//<span class="s">'      });'</span>//NL//<span class="s">'    });'</span>//NL//<span class="s">'  });'</span>//NL &amp;
+        //<span class="s">'});'</span>//NL//NL//<span class="s">'// the sidebar holds all of the list of this page, and shows where this page is in it'</span>//NL//<span class="s">'('</span> &amp;
+        //<span class="s">'function () {'</span>//NL//<span class="s">'  var script = document.currentScript;'</span>//NL//<span class="s">'  var root = script ? script.src.replace(/'</span> &amp;
+        //<span class="s">'js\/fdoc\.js.*$/, "") : "";'</span>//NL//NL//<span class="s">'  document.addEventListener("DOMContentLoaded", function () {'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'   var side = document.querySelector("aside.side");'</span>//NL//<span class="s">'    if (!side) return;'</span>//NL//<span class="s">'    var headings = s'</span> &amp;
+        //<span class="s">'ide.querySelectorAll("h4"), height = 0;'</span>//NL//<span class="s">'    headings.forEach(function (h) { h.style.top = height + "px'</span> &amp;
+        //<span class="s">'"; height += h.offsetHeight; });'</span>//NL//<span class="s">'    headings.forEach(function (h) { height -= h.offsetHeight; h.style'</span> &amp;
+        //<span class="s">'.bottom = height + "px"; });'</span>//NL//<span class="s">'    var list = side.querySelector("ul[data-list]");'</span>//NL//<span class="s">'    if (!list '</span> &amp;
+        //<span class="s">'|| !window.FDOC_SIDEBAR) return;'</span>//NL//<span class="s">'    list.innerHTML = (window.FDOC_SIDEBAR[list.dataset.list] || "").r'</span> &amp;
+        //<span class="s">'eplace(/href="@/g, ''href="'' + root);'</span>//NL//<span class="s">'    var here = location.href.split("#")[0];'</span>//NL//<span class="s">'    var link'</span> &amp;
+        //<span class="s">'s = list.querySelectorAll("a");'</span>//NL//<span class="s">'    for (var k = 0; k &lt; links.length; k++) {'</span>//NL//<span class="s">'      if (links[k]'</span> &amp;
+        //<span class="s">'.href !== here) continue;'</span>//NL//<span class="s">'      links[k].classList.add("current");'</span>//NL//<span class="s">'      links[k].setAttribute('</span> &amp;
+        //<span class="s">'"aria-current", "page");'</span>//NL//<span class="s">'      side.scrollTop = links[k].offsetTop - side.clientHeight / 2;'</span>//NL//<span class="s">'   '</span> &amp;
+        //<span class="s">'   return;'</span>//NL//<span class="s">'    }'</span>//NL//<span class="s">'  });'</span>//NL//<span class="s">'})();'</span>//NL//NL//<span class="s">'// Mermaid diagrams are drawn in the browser, an'</span> &amp;
+        //<span class="s">'d Mermaid is only loaded for pages that have one'</span>//NL//<span class="s">'(function () {'</span>//NL//<span class="s">'  var URL = "https://cdn.jsdeli'</span> &amp;
+        //<span class="s">'vr.net/npm/mermaid@11/dist/mermaid.min.js";'</span>//NL//NL//<span class="s">'  function dark() {'</span>//NL//<span class="s">'    var theme = document.do'</span> &amp;
+        //<span class="s">'cumentElement.getAttribute("data-theme");'</span>//NL//<span class="s">'    return theme ? theme === "dark" : window.matchMedia("(pr'</span> &amp;
+        //<span class="s">'efers-color-scheme: dark)").matches;'</span>//NL//<span class="s">'  }'</span>//NL//NL//<span class="s">'  document.addEventListener("DOMContentLoaded", fu'</span> &amp;
+        //<span class="s">'nction () {'</span>//NL//<span class="s">'    var blocks = document.querySelectorAll("pre.mermaid");'</span>//NL//<span class="s">'    if (!blocks.length) '</span> &amp;
+        //<span class="s">'return;'</span>//NL//<span class="s">'    blocks.forEach(function (block) { block.dataset.source = block.textContent; });'</span>//NL//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'   function draw() {'</span>//NL//<span class="s">'      blocks.forEach(function (block) {'</span>//NL//<span class="s">'        block.textContent = block.'</span> &amp;
+        //<span class="s">'dataset.source;'</span>//NL//<span class="s">'        block.removeAttribute("data-processed");'</span>//NL//<span class="s">'      });'</span>//NL//<span class="s">'      window.'</span> &amp;
+        //<span class="s">'mermaid.initialize({ startOnLoad: false, theme: dark() ? "dark" : "default" });'</span>//NL//<span class="s">'      window.mermaid.r'</span> &amp;
+        //<span class="s">'un({ nodes: blocks });'</span>//NL//<span class="s">'    }'</span>//NL//NL//<span class="s">'    var tag = document.createElement("script");'</span>//NL//<span class="s">'    tag'</span> &amp;
+        //<span class="s">'.src = URL;'</span>//NL//<span class="s">'    tag.onload = function () {'</span>//NL//<span class="s">'      draw();'</span>//NL//<span class="s">'      var button = document.que'</span> &amp;
+        //<span class="s">'rySelector(".theme");'</span>//NL//<span class="s">'      if (button) button.addEventListener("click", draw);'</span>//NL//<span class="s">'    };'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'   document.head.appendChild(tag);'</span>//NL//<span class="s">'  });'</span>//NL//<span class="s">'})();'</span>//NL//NL//<span class="s">'// each heading with an id, and each '</span> &amp;
+        //<span class="s">'entry of a list, gets a link to itself'</span>//NL//<span class="s">'document.addEventListener("DOMContentLoaded", function () {'</span>//NL &amp;
+        //<span class="s">'  document.querySelectorAll("main h2[id], main h3[id], main .item[id] &gt; h3").forEach(function (heading) {'</span>//NL &amp;
+        //<span class="s">'    var id = heading.id || heading.parentElement.id;'</span>//NL//<span class="s">'    var link = document.createElement("a");'</span>//NL//<span class="s">' '</span> &amp;
+        //<span class="s">'   link.className = "anchor";'</span>//NL//<span class="s">'    link.href = "#" + id;'</span>//NL//<span class="s">'    link.textContent = "#";'</span>//NL//<span class="s">'    '</span> &amp;
+        //<span class="s">'link.setAttribute("aria-label", "Link to this section");'</span>//NL//<span class="s">'    heading.appendChild(link);'</span>//NL//<span class="s">'  });'</span>//NL &amp;
+        //<span class="s">'});'</span>//NL)
+<span class="k">end</span> <span class="k">subroutine</span> asset_fdoc_js</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compare_two &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>compare_two<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> compare_two(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">op</span>, <span class="intent attr-in" title="intent(in)">a</span>, <span class="intent attr-in" title="intent(in)">b</span>, <span class="intent attr-out" title="intent(out)">holds</span>)</div>
+<div class="doc">
+<p>One comparison.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-op"><td class="name">op</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the comparison</p></td></tr>
+<tr id="variable-a"><td class="name">a</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the first operand</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the second operand</p></td></tr>
+<tr id="variable-holds"><td class="name">holds</td><td class="type">logical</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the result</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/equal.html">equal</a></li><li><a href="../proc/fail.html">fail</a></li></ul>
+<div class="graph"><svg width="190pt" height="70pt"
+ viewBox="0 0 190 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/compare_two.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="92.4" height="21.6"/><text x="46.2" y="-26.1">compare_two</text></a><a href="../proc/equal.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="128.4" y="-61.6" width="54" height="21.6"/><text x="155.4" y="-46.1">equal</text></a><path d="M93.3,-39.4C102.3,-41.1 111.5,-42.8 120,-44.4"/><polygon fill="#8a93a5" points="119.3,-46.7 126.7,-45.6 120.2,-41.9"/><a href="../proc/fail.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="128.4" y="-21.6" width="54" height="21.6"/><text x="155.4" y="-6.1">fail</text></a><path d="M93.3,-22.2C102.3,-20.5 111.5,-18.8 120,-17.2"/><polygon fill="#8a93a5" points="120.2,-19.7 126.7,-16 119.3,-14.9"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/compare.html">compare</a></li></ul>
+<div class="graph"><svg width="1621pt" height="372pt"
+ viewBox="0 0 1621 372" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 368)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/compare_two.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="764.2" y="-245.6" width="92.4" height="21.6"/><text x="810.4" y="-230.1">compare_two</text></a><a href="../proc/compare.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="906" y="-225.6" width="65" height="21.6"/><text x="938.5" y="-210.1">compare</text></a><path d="M905.7,-219.8C893.6,-221.8 879.5,-224 865.9,-226.2"/><polygon fill="#8a93a5" points="865.5,-223.7 859,-227.3 866.3,-228.6"/><a href="../proc/evaluate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="778.6" y="-205.6" width="63.5" height="21.6"/><text x="810.4" y="-190.1">evaluate</text></a><path d="M897.7,-208.5C882.6,-206.1 865.5,-203.4 850.4,-201"/><polygon fill="#8a93a5" points="896.9,-210.8 904.2,-209.5 897.7,-206"/><polygon fill="#8a93a5" points="851.1,-198.6 843.8,-199.9 850.4,-203.5"/><a href="../proc/evaluate_slice.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="626.7" y="-245.6" width="96.8" height="21.6"/><text x="675.1" y="-230.1">evaluate_slice</text></a><path d="M770.2,-206.6C754.9,-211.2 737.2,-216.5 721.4,-221.2"/><polygon fill="#8a93a5" points="770.7,-209 776.7,-204.6 769.3,-204.3"/><polygon fill="#8a93a5" points="720.8,-218.8 714.8,-223.2 722.2,-223.5"/><a href="../proc/run_clause.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="636.1" y="-205.6" width="78" height="21.6"/><text x="675.1" y="-190.1">run_clause</text></a><path d="M769.8,-194.8C755,-194.8 738,-194.8 722.7,-194.8"/><polygon fill="#8a93a5" points="769.6,-197.3 776.6,-194.8 769.6,-192.4"/><polygon fill="#8a93a5" points="722.8,-192.4 715.8,-194.8 722.8,-197.3"/><a href="../proc/evaluate_fstring.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="622" y="-165.6" width="106.2" height="21.6"/><text x="675.1" y="-150.1">evaluate_fstring</text></a><path d="M770.2,-183C754.9,-178.4 737.2,-173.1 721.4,-168.4"/><polygon fill="#8a93a5" points="769.3,-185.3 776.7,-185 770.7,-180.6"/><polygon fill="#8a93a5" points="722.2,-166.1 714.8,-166.4 720.8,-170.8"/><a href="../proc/call_method.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="632.9" y="-325.6" width="84.5" height="21.6"/><text x="675.1" y="-310.1">call_method</text></a><path d="M771.3,-209C768.7,-210.8 766.3,-212.7 764.2,-214.8 736.5,-242.3 756.5,-268 728.2,-294.8 726.5,-296.4 724.6,-297.9 722.7,-299.3"/><polygon fill="#8a93a5" points="772.2,-211.3 777,-205.7 769.7,-207.1"/><polygon fill="#8a93a5" points="721.7,-297 716.9,-302.7 724.2,-301.2"/><a href="../proc/evaluate_call.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="630" y="-285.6" width="90.3" height="21.6"/><text x="675.1" y="-270.1">evaluate_call</text></a><path d="M779.2,-206C774,-208.5 768.8,-211.5 764.2,-214.8 744.8,-228.8 747.9,-241.3 728.2,-254.8 725.5,-256.7 722.6,-258.4 719.6,-260"/><polygon fill="#8a93a5" points="718.6,-257.7 713.3,-263 720.7,-262.1"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="892.6" y="-137.6" width="91.7" height="21.6"/><text x="938.5" y="-122.1">fypp_process</text></a><path d="M916.7,-138C895.6,-149.4 862.9,-167.1 839.5,-179.7"/><polygon fill="#8a93a5" points="838.6,-177.4 833.6,-182.8 840.9,-181.7"/><a href="../proc/render_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="385.4" y="-88.6" width="87.4" height="21.6"/><text x="429.1" y="-73.1">render_body</text></a><path d="M892.2,-120.9C849.9,-115.5 784.8,-107.5 728.2,-101.8 641.8,-93.2 541,-85.6 481.5,-81.3"/><polygon fill="#8a93a5" points="481.7,-78.9 474.6,-80.8 481.4,-83.8"/><a href="../proc/evaluate_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="0" y="-325.6" width="96.1" height="21.6"/><text x="48" y="-310.1">evaluate_args</text></a><path d="M94.8,-326.1C145.7,-337.6 230.3,-353.8 304.3,-353.8 548.4,-353.8 548.4,-353.8 548.4,-353.8 628.7,-353.8 666.3,-386.1 728.2,-334.8 771.1,-299.3 727.4,-256.6 764.2,-214.8 766.2,-212.5 768.6,-210.4 771.2,-208.6"/><polygon fill="#8a93a5" points="772.3,-210.7 777,-205 769.8,-206.6"/><path d="M632.4,-313.2C607.9,-312.6 576.4,-312.6 548.4,-314.8"/><a href="../proc/render_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="261.2" y="-50.6" width="88.1" height="21.6"/><text x="305.3" y="-35.1">render_node</text></a><path d="M349.7,-37.9C384.2,-38 433.3,-41.5 472.8,-57.8 508.8,-72.7 505.9,-103.7 538.4,-114.7"/><polygon fill="#8a93a5" points="537.5,-117 544.9,-116.4 538.8,-112.2"/><path d="M548.4,-116.8C627.7,-129.2 653.3,-105.9 728.2,-134.8 756.7,-145.8 784,-169.5 798.5,-183.7"/><a href="../proc/render_loop.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="136.8" y="-70.6" width="83.8" height="21.6"/><text x="178.7" y="-55.1">render_loop</text></a><path d="M261.1,-46.7C250.7,-48.4 239.6,-50.2 229.1,-51.9"/><polygon fill="#8a93a5" points="228.7,-49.4 222.2,-53 229.5,-54.3"/><a href="../proc/define_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="132.1" y="-21.6" width="93.2" height="21.6"/><text x="178.7" y="-6.1">define_macro</text></a><path d="M261.1,-29.7C252.1,-27.7 242.6,-25.5 233.4,-23.3"/><polygon fill="#8a93a5" points="234.2,-21 226.8,-21.8 233.1,-25.8"/><a href="../proc/render_call.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="139.3" y="-110.6" width="78.7" height="21.6"/><text x="178.7" y="-95.1">render_call</text></a><path d="M283,-51C267.2,-59.2 245,-70.5 225.2,-79.8 221.4,-81.6 217.4,-83.4 213.4,-85.2"/><polygon fill="#8a93a5" points="212.6,-82.9 207.2,-88 214.6,-87.4"/><path d="M205.1,-71.1C224.7,-79.6 250.2,-90.2 261.2,-92.8 382.2,-121.6 419.6,-95.2 538.1,-115.3"/><polygon fill="#8a93a5" points="537.6,-117.7 544.9,-116.5 538.4,-112.9"/><path d="M221,-69.5C242.8,-73.8 270.3,-78.1 296,-78.7"/><polygon fill="#8a93a5" points="295.8,-81.2 302.8,-78.8 295.8,-76.3"/><path d="M306.3,-78.8C332.4,-78.6 361.7,-78.4 385,-78.2"/><path d="M225.4,-7.9C275.2,-4.9 357.3,-0.8 428.1,-0.8 548.4,-0.8 548.4,-0.8 548.4,-0.8 665.5,-0.8 764.2,-128.1 797.4,-176.5"/><polygon fill="#8a93a5" points="795.4,-177.9 801.3,-182.3 799.5,-175.1"/><a href="../proc/fypp_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1020.4" y="-137.6" width="85.2" height="21.6"/><text x="1063" y="-122.1">fypp_source</text></a><path d="M1020.2,-126.8C1011.4,-126.8 1002,-126.8 992.8,-126.8"/><polygon fill="#8a93a5" points="993,-124.4 986,-126.8 993,-129.3"/><path d="M644.3,-286C613.4,-297.3 567.1,-313.3 548.4,-314.8"/><path d="M546.4,-314.8C386.5,-327.2 196.9,-321.6 104.8,-317.6"/><polygon fill="#8a93a5" points="105.1,-315.2 98,-317.3 104.8,-320.1"/><a href="../proc/call_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="508.8" y="-166.6" width="77.3" height="21.6"/><text x="547.4" y="-151.1">call_macro</text></a><path d="M636.9,-263.5C631.6,-261.1 626.5,-258.2 622,-254.8 593,-232.8 570,-196.3 557.9,-174.3"/><polygon fill="#8a93a5" points="560.1,-173.3 554.6,-168.3 555.8,-175.6"/><path d="M170.9,-111.1C150,-146.1 85.7,-253.5 59.9,-296.6"/><polygon fill="#8a93a5" points="58,-295.1 56.5,-302.4 62.2,-297.6"/><path d="M218.4,-90C240.6,-85.2 269.2,-80.1 296,-79"/><polygon fill="#8a93a5" points="295.9,-81.5 302.8,-78.8 295.7,-76.6"/><path d="M203.7,-111C219.7,-117.9 241.3,-126.2 261.2,-130.8 343.9,-149.8 443.2,-154.5 500.1,-155.6"/><polygon fill="#8a93a5" points="500,-158.1 507,-155.8 500,-153.2"/><path d="M383.9,-64C372.9,-60.6 361,-56.9 350,-53.4"/><polygon fill="#8a93a5" points="383,-66.3 390.4,-66.1 384.5,-61.6"/><polygon fill="#8a93a5" points="351,-51.2 343.6,-51.4 349.6,-55.9"/><a href="../proc/load_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1141.6" y="-137.6" width="85.2" height="21.6"/><text x="1184.2" y="-122.1">load_source</text></a><path d="M1141.2,-126.8C1132.5,-126.8 1123.3,-126.8 1114.4,-126.8"/><polygon fill="#8a93a5" points="1114.5,-124.4 1107.5,-126.8 1114.5,-129.3"/><path d="M529.5,-144.6C523,-140.3 515.5,-135.3 508.8,-130.8 490.1,-118.3 469,-104.1 453.4,-93.6"/><polygon fill="#8a93a5" points="455.1,-91.7 447.9,-89.8 452.3,-95.8"/><a href="../proc/read_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1262.8" y="-137.6" width="86.7" height="21.6"/><text x="1306.1" y="-122.1">read_source</text></a><path d="M1262.5,-126.8C1253.8,-126.8 1244.6,-126.8 1235.7,-126.8"/><polygon fill="#8a93a5" points="1235.8,-124.4 1228.8,-126.8 1235.8,-129.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1385.5" y="-137.6" width="138" height="21.6"/><text x="1454.5" y="-122.1">load_project_sources</text></a><path d="M1385,-126.8C1376,-126.8 1366.8,-126.8 1358.2,-126.8"/><polygon fill="#8a93a5" points="1358.2,-124.4 1351.2,-126.8 1358.2,-129.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1559.4" y="-137.6" width="54" height="21.6"/><text x="1586.4" y="-122.1">run</text></a><path d="M1559.1,-126.8C1551,-126.8 1541.7,-126.8 1531.9,-126.8"/><polygon fill="#8a93a5" points="1532.2,-124.4 1525.2,-126.8 1532.2,-129.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> compare_two(c, op, a, b, holds)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c    <span class="d">!! the state</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: op           <span class="d">!! the comparison</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: a      <span class="d">!! the first operand</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: b      <span class="d">!! the second operand</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(out) :: holds       <span class="d">!! the result</span>
+    <span class="k">integer</span> :: k, step
+
+    holds = <span class="k">.false.</span>
+    <span class="k">select</span> <span class="k">case</span> (op)
+    <span class="k">case</span> (C_EQ)
+        holds = equal(a, b)
+    <span class="k">case</span> (C_NE)
+        holds = <span class="k">.not.</span> equal(a, b)
+    <span class="k">case</span> (C_IN, C_NOT_IN)
+        <span class="k">if</span> (b%<span class="k">kind</span> == V_STR <span class="k">.and.</span> a%<span class="k">kind</span> == V_STR) <span class="k">then</span>
+            holds = <span class="k">index</span>(b%text, a%text) &gt; <span class="n">0</span>
+        <span class="k">else</span> <span class="k">if</span> (b%<span class="k">kind</span> == V_LIST <span class="k">.or.</span> b%<span class="k">kind</span> == V_TUPLE <span class="k">.or.</span> b%<span class="k">kind</span> == V_DICT) <span class="k">then</span>
+            step = <span class="k">merge</span>(<span class="n">2</span>, <span class="n">1</span>, b%<span class="k">kind</span> == V_DICT)
+            <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(b%items), step
+                <span class="k">if</span> (equal(a, b%items(k))) holds = <span class="k">.true.</span>
+            <span class="k">end</span> <span class="k">do</span>
+        <span class="k">else</span>
+            <span class="k">call</span> fail(c, <span class="s">"the right operand of 'in' cannot be searched"</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (op == C_NOT_IN) holds = <span class="k">.not.</span> holds
+    <span class="k">case</span> default
+        <span class="k">if</span> (a%<span class="k">kind</span> == V_STR <span class="k">.and.</span> b%<span class="k">kind</span> == V_STR) <span class="k">then</span>
+            <span class="k">select</span> <span class="k">case</span> (op)
+            <span class="k">case</span> (C_LT); holds = <span class="k">llt</span>(a%text, b%text)
+            <span class="k">case</span> (C_GT); holds = <span class="k">lgt</span>(a%text, b%text)
+            <span class="k">case</span> (C_LE); holds = <span class="k">lle</span>(a%text, b%text)
+            <span class="k">case</span> default; holds = <span class="k">lge</span>(a%text, b%text)
+            <span class="k">end</span> <span class="k">select</span>
+        <span class="k">else</span> <span class="k">if</span> (a%<span class="k">kind</span> == V_STR <span class="k">.or.</span> b%<span class="k">kind</span> == V_STR <span class="k">.or.</span> a%<span class="k">kind</span> &gt; V_INT <span class="k">.or.</span> b%<span class="k">kind</span> &gt; V_INT) <span class="k">then</span>
+            <span class="k">call</span> fail(c, <span class="s">'values cannot be ordered'</span>)
+        <span class="k">else</span>
+            <span class="k">select</span> <span class="k">case</span> (op)
+            <span class="k">case</span> (C_LT); holds = a%number &lt; b%number
+            <span class="k">case</span> (C_GT); holds = a%number &gt; b%number
+            <span class="k">case</span> (C_LE); holds = a%number &lt;= b%number
+            <span class="k">case</span> default; holds = a%number &gt;= b%number
+            <span class="k">end</span> <span class="k">select</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">select</span>
+<span class="k">end</span> <span class="k">subroutine</span> compare_two</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

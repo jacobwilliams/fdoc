@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_settings.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_settings.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_settings"><h3><a href="../module/fdoc_settings.html">fdoc_settings</a><span class="attr attr-private">private</span></h3>
+<p>The project settings: FORD's options, their defaults and their conversion from text.</p>
+</div>
+<h2 id="files-this-one-depends-on">Files this one depends on</h2>
+<div class="graph"><svg width="241pt" height="30pt"
+ viewBox="0 0 241 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_settings.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="120.5" y="-21.6" width="112.7" height="21.6"/><text x="176.8" y="-6.1">fdoc_settings.f90</text></a><a href="../sourcefile/fdoc_util.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="0" y="-21.6" width="84.5" height="21.6"/><text x="42.3" y="-6.1">fdoc_util.f90</text></a><path d="M119.6,-10.8C110.8,-10.8 101.8,-10.8 93.2,-10.8"/><polygon fill="#8a93a5" points="93.2,-8.4 86.2,-10.8 93.2,-13.3"/></g>
+</svg>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="1102pt" height="398pt"
+ viewBox="0 0 1102 398" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 394.3)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_settings.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-204.4" width="112.7" height="21.6"/><text x="56.3" y="-189">fdoc_settings.f90</text></a><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="1032.9" y="-88.4" width="60.7" height="21.6"/><text x="1063.2" y="-73">fdoc.f90</text></a><path d="M948.9,-309.6C911,-333.7 908.9,-352.8 867,-368.6 786.7,-399 760.6,-384 674.8,-387.6"/><a href="../sourcefile/fdoc_cli.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="775.2" y="-359.4" width="80.2" height="21.6"/><text x="815.3" y="-344">fdoc_cli.f90</text></a><path d="M948.9,-309.6C923.1,-325.8 890.3,-335.5 863.8,-341.2"/><polygon fill="#8a93a5" points="863.6,-338.7 857.2,-342.5 864.6,-343.5"/><a href="../sourcefile/fdoc_docs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="626.2" y="-319.4" width="95.3" height="21.6"/><text x="673.8" y="-304">fdoc_docs.f90</text></a><path d="M948.9,-309.6C898.9,-340.9 875.1,-305.8 816.3,-309.6"/><path d="M814.3,-309.6C786.6,-311.4 755.8,-311.4 730.2,-310.9"/><polygon fill="#8a93a5" points="730.3,-308.4 723.2,-310.7 730.1,-313.3"/><a href="../sourcefile/fdoc_markdown.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="456.2" y="-357.4" width="127.9" height="21.6"/><text x="520.1" y="-342">fdoc_markdown.f90</text></a><path d="M814.3,-309.6C750.2,-313.8 737.9,-335.5 674.8,-347.6"/><a href="../sourcefile/fdoc_output.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="621.8" y="-49.4" width="104" height="21.6"/><text x="673.8" y="-34">fdoc_output.f90</text></a><path d="M1054.4,-66.8C1043.4,-52.6 1022,-28.3 996.9,-18.6 902.3,17.7 780.6,-7.3 717.3,-25.1"/><polygon fill="#8a93a5" points="716.7,-22.7 710.6,-27 718,-27.4"/><a href="../sourcefile/fdoc_pages.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="763.7" y="-281.4" width="103.3" height="21.6"/><text x="815.3" y="-266">fdoc_pages.f90</text></a><path d="M948.9,-309.6C932,-320.2 880.9,-300.5 847.3,-285.5"/><polygon fill="#8a93a5" points="848.4,-283.2 841,-282.6 846.3,-287.7"/><a href="../sourcefile/fdoc_project.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="466.6" y="-127.4" width="106.9" height="21.6"/><text x="520.1" y="-112">fdoc_project.f90</text></a><path d="M1032.6,-76.3C986.4,-74.4 894.2,-72 816.3,-77.6"/><a href="../sourcefile/fdoc_project_file.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="148.7" y="-243.4" width="130.8" height="21.6"/><text x="214.1" y="-228">fdoc_project_file.f90</text></a><path d="M1060.9,-88.9C1055.8,-127.9 1032.9,-258.4 950.9,-309.6"/><path d="M948.9,-309.6C910.8,-333.4 908.9,-266.5 867,-250.6 786.7,-220.3 760.6,-231.6 674.8,-231.6 674.8,-231.6 674.8,-231.6 519.1,-231.6 440.2,-231.6 349.8,-232 288.2,-232.3"/><polygon fill="#8a93a5" points="288.2,-229.8 281.2,-232.3 288.2,-234.7"/><a href="../sourcefile/fdoc_site.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="905.9" y="-127.4" width="88.1" height="21.6"/><text x="949.9" y="-112">fdoc_site.f90</text></a><path d="M1032.4,-88.1C1019.6,-92.6 1004.4,-97.9 990.7,-102.7"/><polygon fill="#8a93a5" points="990,-100.4 984.2,-105 991.6,-105"/><a href="../sourcefile/fdoc_links.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="903" y="-49.4" width="93.9" height="21.6"/><text x="949.9" y="-34">fdoc_links.f90</text></a><path d="M1032.4,-67.2C1019.6,-62.7 1004.4,-57.4 990.7,-52.6"/><polygon fill="#8a93a5" points="991.6,-50.3 984.2,-50.3 990,-54.9"/><path d="M787.1,-359.9C759.4,-370.5 715,-385.2 674.8,-387.6"/><path d="M672.8,-387.6C536.8,-396.1 501.2,-379.1 368.8,-346.6"/><path d="M625.7,-310.6C581.7,-312.9 514.2,-317.6 456.2,-326.6 416.8,-332.8 407.6,-355.6 368.8,-346.6"/><path d="M366.8,-346.6C293.7,-328.7 285.8,-297.4 215.1,-271.6"/><path d="M627.7,-319.9C610.8,-324.2 591.5,-329 574,-333.4"/><polygon fill="#8a93a5" points="573.7,-330.9 567.5,-335 574.9,-335.7"/><path d="M666.1,-297.5C652.1,-274.5 618.1,-220.6 584,-179.6 570.1,-162.9 552.4,-145.5 539.4,-133.2"/><polygon fill="#8a93a5" points="541.3,-131.7 534.5,-128.7 537.9,-135.2"/><a href="../sourcefile/fdoc_graphs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="620" y="-127.4" width="107.6" height="21.6"/><text x="673.8" y="-112">fdoc_graphs.f90</text></a><path d="M659.3,-127.7C634,-147.3 577.1,-186.7 521.1,-193.6"/><path d="M519.1,-193.6C385,-210.2 349.9,-185.1 215.1,-193.6"/><path d="M619.8,-116.6C607.7,-116.6 594.8,-116.6 582.4,-116.6"/><polygon fill="#8a93a5" points="582.4,-114.2 575.4,-116.6 582.4,-119.1"/><a href="../sourcefile/fdoc_input.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="166" y="-165.4" width="96.1" height="21.6"/><text x="214.1" y="-150">fdoc_input.f90</text></a><path d="M168,-165.9C150.7,-170.3 130.8,-175.3 112.6,-179.8"/><polygon fill="#8a93a5" points="112.1,-177.4 105.9,-181.5 113.3,-182.2"/><path d="M455.9,-352.9C428.7,-354 396.9,-353.1 368.8,-346.6"/><path d="M621.4,-43.1C535.7,-51.4 358.9,-72.6 215.1,-115.6"/><path d="M213.1,-115.6C184.5,-124.1 175.8,-122.2 148.7,-134.6 123.4,-146.3 96.9,-164.1 79,-177.1"/><polygon fill="#8a93a5" points="77.8,-175 73.6,-181.1 80.7,-178.9"/><path d="M646.2,-49.9C637.6,-53.9 628.2,-58.6 620,-63.6 602.8,-74.3 601.6,-81.6 584,-91.6 577.1,-95.6 569.5,-99.2 562,-102.4"/><polygon fill="#8a93a5" points="561.5,-99.9 556,-104.8 563.4,-104.4"/><path d="M366.8,-271.6C299.6,-266.5 278.4,-294.7 215.1,-271.6"/><path d="M213.1,-271.6C185,-261.4 175.8,-265.1 148.7,-252.6 123.4,-241 96.9,-223.2 79,-210.2"/><polygon fill="#8a93a5" points="80.7,-208.4 73.6,-206.2 77.8,-212.3"/><path d="M772.8,-281.9C757.5,-286.1 740,-290.9 724.1,-295.2"/><polygon fill="#8a93a5" points="723.5,-292.9 717.4,-297.1 724.8,-297.6"/><path d="M788,-281.9C779.9,-285.8 771.2,-290.5 763.7,-295.6 745.7,-307.9 746.2,-317.4 727.7,-328.6 706.3,-341.6 699.3,-342.9 674.8,-347.6"/><path d="M672.8,-347.6C647,-352.6 618.3,-353.5 592.9,-352.8"/><polygon fill="#8a93a5" points="593,-350.4 585.9,-352.6 592.8,-355.3"/><path d="M793.2,-259.6C741.6,-232.4 608.7,-162.6 549.9,-131.7"/><polygon fill="#8a93a5" points="551.1,-129.6 543.7,-128.5 548.8,-134"/><path d="M763.5,-272.7C680.7,-275.6 511.7,-279.7 368.8,-271.6"/><path d="M366.8,-271.6C327.3,-268.6 283.7,-256.4 253.4,-246.5"/><polygon fill="#8a93a5" points="254.5,-244.2 247.1,-244.3 252.9,-248.9"/><a href="../sourcefile/fdoc_parser.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="315.4" y="-165.4" width="104.7" height="21.6"/><text x="367.8" y="-150">fdoc_parser.f90</text></a><path d="M336.8,-165.9C306.6,-176.4 258.4,-190.9 215.1,-193.6"/><path d="M213.1,-193.6C183.1,-195.5 149.8,-195.8 121.8,-195.5"/><polygon fill="#8a93a5" points="122.2,-193 115.1,-195.4 122.1,-197.9"/><path d="M350.2,-165.9C333,-177.3 305.1,-195 279.4,-207.6 271.7,-211.5 263.2,-215.1 255,-218.4"/><polygon fill="#8a93a5" points="254.3,-216 248.7,-220.8 256.1,-220.6"/><path d="M466.2,-114.6C437.4,-113.9 401.1,-113.7 368.8,-115.6"/><path d="M366.8,-115.6C299.5,-119.7 279.7,-96.3 215.1,-115.6"/><path d="M366.8,-115.6C326.9,-118 282.9,-130.5 252.5,-140.7"/><polygon fill="#8a93a5" points="252,-138.3 246.2,-142.9 253.6,-143"/><path d="M474.4,-127.9C457.7,-132.2 438.5,-137 421.2,-141.4"/><polygon fill="#8a93a5" points="421,-138.9 414.8,-143 422.2,-143.7"/><path d="M168,-221.4C150.7,-217 130.8,-212 112.6,-207.5"/><polygon fill="#8a93a5" points="113.3,-205.1 105.9,-205.8 112.1,-209.9"/><path d="M814.3,-116.6C780.7,-118.1 554.5,-189.2 521.1,-193.6"/><path d="M814.3,-116.6C788.8,-117.8 760.6,-118 736.3,-117.8"/><polygon fill="#8a93a5" points="736.4,-115.4 729.4,-117.8 736.3,-120.3"/><path d="M939.4,-127.7C916.5,-154.2 858.6,-221.6 831.1,-253.4"/><polygon fill="#8a93a5" points="829.5,-251.6 826.7,-258.5 833.2,-254.8"/><path d="M905.6,-115.7C879.7,-115.3 846.1,-115.3 816.3,-116.6"/><path d="M814.3,-116.6C750,-119.5 739.1,-74.1 674.8,-77.6"/><path d="M923.1,-49.8C896.8,-60.3 854.6,-74.9 816.3,-77.6"/><path d="M814.3,-77.6C752.5,-82.1 736.7,-74.2 674.8,-77.6"/><path d="M672.8,-77.6C632.8,-79.9 588.6,-92.5 558.3,-102.7"/><polygon fill="#8a93a5" points="557.7,-100.3 551.9,-104.9 559.3,-105"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_settings
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! The project settings: FORD's options, their defaults and their conversion from text.</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="d">!!</span>
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="d">!! Every source of settings (project file, `fpm.toml`, `--config`, command line) goes through</span>
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="d">!! [[set_option]], which takes the option's values as a list of strings, the form the project file</span>
+<a class="ln" id="ln-6" href="#ln-6"></a><span class="d">!! gives them.</span>
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="k">use</span> omp_lib, <span class="k">only</span>: omp_get_num_procs
+<a class="ln" id="ln-8" href="#ln-8"></a><span class="k">use</span> json_module, <span class="k">only</span>: json_core, json_value
+<a class="ln" id="ln-9" href="#ln-9"></a><span class="k">use</span> ffmt_strings, <span class="k">only</span>: to_s
+<a class="ln" id="ln-10" href="#ln-10"></a><span class="k">use</span> fdoc_util
+<a class="ln" id="ln-11" href="#ln-11"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-12" href="#ln-12"></a><span class="k">private</span>
+<a class="ln" id="ln-13" href="#ln-13"></a>
+<a class="ln" id="ln-14" href="#ln-14"></a><span class="k">public</span> :: new_settings, set_option, check_settings, finish_settings, dump_settings, is_option
+<a class="ln" id="ln-15" href="#ln-15"></a>
+<a class="ln" id="ln-16" href="#ln-16"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: STRING_OPTIONS = &amp;
+<a class="ln" id="ln-17" href="#ln-17"></a>    <span class="s">' author author_description author_pic bitbucket creation_date doc_license docmark docmark_alt email encoding'</span>// &amp;
+<a class="ln" id="ln-18" href="#ln-18"></a>    <span class="s">' facebook github gitlab gitter_sidecar google_plus license linkedin predocmark predocmark_alt preprocessor'</span>// &amp;
+<a class="ln" id="ln-19" href="#ln-19"></a>    <span class="s">' privacy_policy_url project project_bitbucket project_download project_github project_gitlab'</span>// &amp;
+<a class="ln" id="ln-20" href="#ln-20"></a>    <span class="s">' project_sourceforge project_url project_website revision sort summary terms_of_service_url twitter version'</span>// &amp;
+<a class="ln" id="ln-21" href="#ln-21"></a>    <span class="s">' website year '</span>
+<a class="ln" id="ln-22" href="#ln-22"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: PATH_OPTIONS = &amp;
+<a class="ln" id="ln-23" href="#ln-23"></a>    <span class="s">' css favicon graph_dir logo mathjax_config md_base_dir media_dir output_dir page_dir '</span>
+<a class="ln" id="ln-24" href="#ln-24"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: LOGICAL_OPTIONS = &amp;
+<a class="ln" id="ln-25" href="#ln-25"></a>    <span class="s">' coloured_edges dbg doxygen externalize fixed_length_limit force graph hide_undoc incl_src lower preprocess'</span>// &amp;
+<a class="ln" id="ln-26" href="#ln-26"></a>    <span class="s">' print_creation_date proc_internals quiet search show_proc_parent source warn '</span>
+<a class="ln" id="ln-27" href="#ln-27"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: INTEGER_OPTIONS = &amp;
+<a class="ln" id="ln-28" href="#ln-28"></a>    <span class="s">' graph_maxdepth graph_maxnodes graph_project_maxnodes max_frontpage_items parallel '</span>
+<a class="ln" id="ln-29" href="#ln-29"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: LIST_OPTIONS = &amp;
+<a class="ln" id="ln-30" href="#ln-30"></a>    <span class="s">' copy_subdir display exclude exclude_dir extensions extra_vartypes fixed_extensions fpp_extensions'</span>// &amp;
+<a class="ln" id="ln-31" href="#ln-31"></a>    <span class="s">' html_template_dir include macro md_extensions src_dir '</span>
+<a class="ln" id="ln-32" href="#ln-32"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: PATH_LIST_OPTIONS = <span class="s">' copy_subdir exclude_dir html_template_dir include src_dir '</span>
+<a class="ln" id="ln-33" href="#ln-33"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: MAP_OPTIONS = <span class="s">' alias external extra_mods extra_filetypes '</span>
+<a class="ln" id="ln-34" href="#ln-34"></a>
+<a class="ln" id="ln-35" href="#ln-35"></a><span class="k">type</span>, <span class="k">public</span> :: map_entry_t
+<a class="ln" id="ln-36" href="#ln-36"></a>    <span class="d">!! A key and its value.</span>
+<a class="ln" id="ln-37" href="#ln-37"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: key
+<a class="ln" id="ln-38" href="#ln-38"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: <span class="k">value</span>
+<a class="ln" id="ln-39" href="#ln-39"></a><span class="k">end</span> <span class="k">type</span> map_entry_t
+<a class="ln" id="ln-40" href="#ln-40"></a>
+<a class="ln" id="ln-41" href="#ln-41"></a><span class="k">type</span>, <span class="k">public</span> :: file_type_t
+<a class="ln" id="ln-42" href="#ln-42"></a>    <span class="d">!! An `extra_filetypes` entry.</span>
+<a class="ln" id="ln-43" href="#ln-43"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: extension
+<a class="ln" id="ln-44" href="#ln-44"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: comment
+<a class="ln" id="ln-45" href="#ln-45"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: lexer      <span class="d">!! not allocated if not given</span>
+<a class="ln" id="ln-46" href="#ln-46"></a><span class="k">end</span> <span class="k">type</span> file_type_t
+<a class="ln" id="ln-47" href="#ln-47"></a>
+<a class="ln" id="ln-48" href="#ln-48"></a><span class="k">type</span>, <span class="k">public</span> :: settings_t
+<a class="ln" id="ln-49" href="#ln-49"></a>    <span class="d">!! The project settings. Optional text options are not allocated unless set.</span>
+<a class="ln" id="ln-50" href="#ln-50"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: author, author_description, author_pic, bitbucket, doc_license, email, facebook
+<a class="ln" id="ln-51" href="#ln-51"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: github, gitlab, gitter_sidecar, google_plus, license, linkedin, privacy_policy_url
+<a class="ln" id="ln-52" href="#ln-52"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: project_bitbucket, project_download, project_github, project_gitlab
+<a class="ln" id="ln-53" href="#ln-53"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: project_sourceforge, project_website, revision, summary, terms_of_service_url
+<a class="ln" id="ln-54" href="#ln-54"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: twitter, version, website
+<a class="ln" id="ln-55" href="#ln-55"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: creation_date, docmark, docmark_alt, encoding, predocmark, predocmark_alt
+<a class="ln" id="ln-56" href="#ln-56"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: preprocessor, project, project_url, sort, year
+<a class="ln" id="ln-57" href="#ln-57"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: css, favicon, graph_dir, logo, mathjax_config, md_base_dir, media_dir, output_dir, page_dir
+<a class="ln" id="ln-58" href="#ln-58"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: directory          <span class="d">!! the project's directory</span>
+<a class="ln" id="ln-59" href="#ln-59"></a>    <span class="k">logical</span> :: coloured_edges = <span class="k">.false.</span>, dbg = <span class="k">.true.</span>, doxygen = <span class="k">.true.</span>, externalize = <span class="k">.true.</span>
+<a class="ln" id="ln-60" href="#ln-60"></a>    <span class="k">logical</span> :: fixed_length_limit = <span class="k">.true.</span>, force = <span class="k">.false.</span>, graph = <span class="k">.false.</span>, hide_undoc = <span class="k">.false.</span>, incl_src = <span class="k">.true.</span>
+<a class="ln" id="ln-61" href="#ln-61"></a>    <span class="k">logical</span> :: lower = <span class="k">.false.</span>, preprocess = <span class="k">.true.</span>, print_creation_date = <span class="k">.false.</span>, proc_internals = <span class="k">.false.</span>
+<a class="ln" id="ln-62" href="#ln-62"></a>    <span class="k">logical</span> :: quiet = <span class="k">.false.</span>, search = <span class="k">.true.</span>, show_proc_parent = <span class="k">.false.</span>, source = <span class="k">.false.</span>, warn = <span class="k">.false.</span>
+<a class="ln" id="ln-63" href="#ln-63"></a>    <span class="k">logical</span> :: relative = <span class="k">.true.</span>                        <span class="d">!! true if `project_url` was not given</span>
+<a class="ln" id="ln-64" href="#ln-64"></a>    <span class="k">integer</span> :: graph_maxdepth = <span class="n">10000</span>, graph_maxnodes = <span class="n">1000000000</span>, graph_project_maxnodes = <span class="k">huge</span>(<span class="n">1</span>)
+<a class="ln" id="ln-65" href="#ln-65"></a>    <span class="k">integer</span> :: max_frontpage_items = <span class="n">10</span>
+<a class="ln" id="ln-66" href="#ln-66"></a>    <span class="k">integer</span> :: parallel = <span class="n">1</span>                             <span class="d">!! threads to use: `new_settings` gives every core</span>
+<a class="ln" id="ln-67" href="#ln-67"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: copy_subdir(:), display(:), exclude(:), exclude_dir(:), extensions(:)
+<a class="ln" id="ln-68" href="#ln-68"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: extra_vartypes(:), fixed_extensions(:), fpp_extensions(:), html_template_dir(:)
+<a class="ln" id="ln-69" href="#ln-69"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: <span class="k">include</span>(:), macro(:), md_extensions(:), src_dir(:)
+<a class="ln" id="ln-70" href="#ln-70"></a>    <span class="k">type</span>(map_entry_t), <span class="k">allocatable</span> :: alias(:), <span class="k">external</span>(:), extra_mods(:)
+<a class="ln" id="ln-71" href="#ln-71"></a>    <span class="k">type</span>(file_type_t), <span class="k">allocatable</span> :: extra_filetypes(:)
+<a class="ln" id="ln-72" href="#ln-72"></a><span class="k">end</span> <span class="k">type</span> settings_t
+<a class="ln" id="ln-73" href="#ln-73"></a>
+<a class="ln" id="ln-74" href="#ln-74"></a><span class="k">contains</span>
+<a class="ln" id="ln-75" href="#ln-75"></a>
+<a class="ln" id="ln-76" href="#ln-76"></a><span class="d">!&gt; The defaults.</span>
+<a class="ln" id="ln-77" href="#ln-77"></a><span class="k">function</span> new_settings() <span class="k">result</span>(s)
+<a class="ln" id="ln-78" href="#ln-78"></a>    <span class="k">type</span>(settings_t) :: s
+<a class="ln" id="ln-79" href="#ln-79"></a>    <span class="k">integer</span> :: values(<span class="n">8</span>)
+<a class="ln" id="ln-80" href="#ln-80"></a>
+<a class="ln" id="ln-81" href="#ln-81"></a>    <span class="k">call</span> <span class="k">date_and_time</span>(values=values)
+<a class="ln" id="ln-82" href="#ln-82"></a>    s%creation_date = <span class="s">'%Y-%m-%dT%H:%M:%S.%f%z'</span>
+<a class="ln" id="ln-83" href="#ln-83"></a>    s%parallel = omp_get_num_procs()
+<a class="ln" id="ln-84" href="#ln-84"></a>    s%docmark = <span class="s">'!'</span>
+<a class="ln" id="ln-85" href="#ln-85"></a>    s%docmark_alt = <span class="s">'*'</span>
+<a class="ln" id="ln-86" href="#ln-86"></a>    s%predocmark = <span class="s">'&gt;'</span>
+<a class="ln" id="ln-87" href="#ln-87"></a>    s%predocmark_alt = <span class="s">'|'</span>
+<a class="ln" id="ln-88" href="#ln-88"></a>    s%encoding = <span class="s">'utf-8'</span>
+<a class="ln" id="ln-89" href="#ln-89"></a>    s%preprocessor = <span class="s">'pcpp -D__GFORTRAN__ --passthru-comments'</span>
+<a class="ln" id="ln-90" href="#ln-90"></a>    s%project = <span class="s">'Fortran Program'</span>
+<a class="ln" id="ln-91" href="#ln-91"></a>    s%project_url = <span class="s">''</span>
+<a class="ln" id="ln-92" href="#ln-92"></a>    s%sort = <span class="s">'src'</span>
+<a class="ln" id="ln-93" href="#ln-93"></a>    s%year = to_s(values(<span class="n">1</span>))
+<a class="ln" id="ln-94" href="#ln-94"></a>    s%doc_license = <span class="s">''</span>
+<a class="ln" id="ln-95" href="#ln-95"></a>    s%license = <span class="s">''</span>
+<a class="ln" id="ln-96" href="#ln-96"></a>    s%md_base_dir = <span class="s">'.'</span>
+<a class="ln" id="ln-97" href="#ln-97"></a>    s%output_dir = <span class="s">'./doc'</span>
+<a class="ln" id="ln-98" href="#ln-98"></a>    s%display = [string_t(<span class="s">'public'</span>), string_t(<span class="s">'protected'</span>)]
+<a class="ln" id="ln-99" href="#ln-99"></a>    s%src_dir = [string_t(<span class="s">'./src'</span>)]
+<a class="ln" id="ln-100" href="#ln-100"></a>    s%extensions = [string_t(<span class="s">'f90'</span>), string_t(<span class="s">'f95'</span>), string_t(<span class="s">'f03'</span>), string_t(<span class="s">'f08'</span>), string_t(<span class="s">'f15'</span>)]
+<a class="ln" id="ln-101" href="#ln-101"></a>    s%fixed_extensions = [string_t(<span class="s">'f'</span>), string_t(<span class="s">'for'</span>), string_t(<span class="s">'F'</span>), string_t(<span class="s">'FOR'</span>)]
+<a class="ln" id="ln-102" href="#ln-102"></a>    s%fpp_extensions = [string_t(<span class="s">'F90'</span>), string_t(<span class="s">'F95'</span>), string_t(<span class="s">'F03'</span>), string_t(<span class="s">'F08'</span>), string_t(<span class="s">'F15'</span>), &amp;
+<a class="ln" id="ln-103" href="#ln-103"></a>                        string_t(<span class="s">'F'</span>), string_t(<span class="s">'FOR'</span>)]
+<a class="ln" id="ln-104" href="#ln-104"></a>    <span class="k">allocate</span> (s%copy_subdir(<span class="n">0</span>), s%exclude(<span class="n">0</span>), s%exclude_dir(<span class="n">0</span>), s%extra_vartypes(<span class="n">0</span>), s%html_template_dir(<span class="n">0</span>))
+<a class="ln" id="ln-105" href="#ln-105"></a>    <span class="k">allocate</span> (s%<span class="k">include</span>(<span class="n">0</span>), s%macro(<span class="n">0</span>), s%md_extensions(<span class="n">0</span>))
+<a class="ln" id="ln-106" href="#ln-106"></a>    <span class="k">allocate</span> (s%alias(<span class="n">0</span>), s%<span class="k">external</span>(<span class="n">0</span>), s%extra_mods(<span class="n">0</span>), s%extra_filetypes(<span class="n">0</span>))
+<a class="ln" id="ln-107" href="#ln-107"></a><span class="k">end</span> <span class="k">function</span> new_settings
+<a class="ln" id="ln-108" href="#ln-108"></a>
+<a class="ln" id="ln-109" href="#ln-109"></a><span class="d">!&gt; True if `key` is one of the blank-separated words of `set`, which starts and ends with a blank.</span>
+<a class="ln" id="ln-110" href="#ln-110"></a><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> in_set(set, key)
+<a class="ln" id="ln-111" href="#ln-111"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: set     <span class="d">!! the words</span>
+<a class="ln" id="ln-112" href="#ln-112"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the word to find</span>
+<a class="ln" id="ln-113" href="#ln-113"></a>    in_set = <span class="k">index</span>(set, <span class="s">' '</span>//key//<span class="s">' '</span>) &gt; <span class="n">0</span>
+<a class="ln" id="ln-114" href="#ln-114"></a><span class="k">end</span> <span class="k">function</span> in_set
+<a class="ln" id="ln-115" href="#ln-115"></a>
+<a class="ln" id="ln-116" href="#ln-116"></a><span class="d">!&gt; True if `key` is the name of an option.</span>
+<a class="ln" id="ln-117" href="#ln-117"></a><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> is_option(key)
+<a class="ln" id="ln-118" href="#ln-118"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the name</span>
+<a class="ln" id="ln-119" href="#ln-119"></a>    is_option = <span class="k">len</span>(key) &gt; <span class="n">0</span> <span class="k">.and.</span> <span class="k">index</span>(key, <span class="s">' '</span>) == <span class="n">0</span> <span class="k">.and.</span> (in_set(STRING_OPTIONS, key) <span class="k">.or.</span> in_set(PATH_OPTIONS, key) &amp;
+<a class="ln" id="ln-120" href="#ln-120"></a>                                                               <span class="k">.or.</span> in_set(LOGICAL_OPTIONS, key) <span class="k">.or.</span> &amp;
+<a class="ln" id="ln-121" href="#ln-121"></a>                                                               in_set(INTEGER_OPTIONS, key) <span class="k">.or.</span> in_set(LIST_OPTIONS, key) &amp;
+<a class="ln" id="ln-122" href="#ln-122"></a>                                                               <span class="k">.or.</span> in_set(MAP_OPTIONS, key))
+<a class="ln" id="ln-123" href="#ln-123"></a><span class="k">end</span> <span class="k">function</span> is_option
+<a class="ln" id="ln-124" href="#ln-124"></a>
+<a class="ln" id="ln-125" href="#ln-125"></a><span class="d">!&gt; Set option `key`, which must be one (see [[is_option]]), from its values as text.</span>
+<a class="ln" id="ln-126" href="#ln-126"></a><span class="k">subroutine</span> set_option(s, key, values, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-127" href="#ln-127"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+<a class="ln" id="ln-128" href="#ln-128"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key                 <span class="d">!! the option</span>
+<a class="ln" id="ln-129" href="#ln-129"></a>    <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: values(:)             <span class="d">!! its values</span>
+<a class="ln" id="ln-130" href="#ln-130"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-131" href="#ln-131"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-132" href="#ln-132"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+<a class="ln" id="ln-133" href="#ln-133"></a>    <span class="k">logical</span> :: flag, ok
+<a class="ln" id="ln-134" href="#ln-134"></a>    <span class="k">integer</span> :: number
+<a class="ln" id="ln-135" href="#ln-135"></a>
+<a class="ln" id="ln-136" href="#ln-136"></a>    <span class="k">stat</span> = <span class="n">0</span>
+<a class="ln" id="ln-137" href="#ln-137"></a>    <span class="k">if</span> (in_set(LOGICAL_OPTIONS, key)) <span class="k">then</span>
+<a class="ln" id="ln-138" href="#ln-138"></a>        <span class="k">if</span> (<span class="k">size</span>(values) /= <span class="n">1</span>) <span class="k">then</span>
+<a class="ln" id="ln-139" href="#ln-139"></a>            <span class="k">call</span> fail(<span class="s">"Could not convert option '"</span>//key//<span class="s">"' to bool: expected a single value"</span>)
+<a class="ln" id="ln-140" href="#ln-140"></a>            <span class="k">return</span>
+<a class="ln" id="ln-141" href="#ln-141"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-142" href="#ln-142"></a>        <span class="k">call</span> parse_bool(values(<span class="n">1</span>)%s, flag, ok)
+<a class="ln" id="ln-143" href="#ln-143"></a>        <span class="k">if</span> (<span class="k">.not.</span> ok) <span class="k">then</span>
+<a class="ln" id="ln-144" href="#ln-144"></a>            <span class="k">call</span> fail(<span class="s">"Could not convert option '"</span>//key//<span class="s">"' to bool: expected 'true'/'false', got: "</span>//values(<span class="n">1</span>)%s)
+<a class="ln" id="ln-145" href="#ln-145"></a>            <span class="k">return</span>
+<a class="ln" id="ln-146" href="#ln-146"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-147" href="#ln-147"></a>        <span class="k">call</span> set_logical(s, key, flag)
+<a class="ln" id="ln-148" href="#ln-148"></a>    <span class="k">else</span> <span class="k">if</span> (in_set(INTEGER_OPTIONS, key)) <span class="k">then</span>
+<a class="ln" id="ln-149" href="#ln-149"></a>        <span class="k">call</span> parse_int(values(<span class="n">1</span>)%s, number, ok)
+<a class="ln" id="ln-150" href="#ln-150"></a>        <span class="k">if</span> (<span class="k">.not.</span> ok) <span class="k">then</span>
+<a class="ln" id="ln-151" href="#ln-151"></a>            <span class="k">call</span> fail(<span class="s">"Could not convert option '"</span>//key//<span class="s">"' to an integer: "</span>//values(<span class="n">1</span>)%s)
+<a class="ln" id="ln-152" href="#ln-152"></a>            <span class="k">return</span>
+<a class="ln" id="ln-153" href="#ln-153"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-154" href="#ln-154"></a>        <span class="k">select</span> <span class="k">case</span> (key)
+<a class="ln" id="ln-155" href="#ln-155"></a>        <span class="k">case</span> (<span class="s">'graph_maxdepth'</span>); s%graph_maxdepth = number
+<a class="ln" id="ln-156" href="#ln-156"></a>        <span class="k">case</span> (<span class="s">'graph_maxnodes'</span>); s%graph_maxnodes = number
+<a class="ln" id="ln-157" href="#ln-157"></a>        <span class="k">case</span> (<span class="s">'graph_project_maxnodes'</span>); s%graph_project_maxnodes = number
+<a class="ln" id="ln-158" href="#ln-158"></a>        <span class="k">case</span> (<span class="s">'max_frontpage_items'</span>); s%max_frontpage_items = number
+<a class="ln" id="ln-159" href="#ln-159"></a>        <span class="k">case</span> (<span class="s">'parallel'</span>); s%parallel = number
+<a class="ln" id="ln-160" href="#ln-160"></a>        <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-161" href="#ln-161"></a>    <span class="k">else</span> <span class="k">if</span> (in_set(LIST_OPTIONS, key)) <span class="k">then</span>
+<a class="ln" id="ln-162" href="#ln-162"></a>        <span class="k">call</span> set_list(s, key, values)
+<a class="ln" id="ln-163" href="#ln-163"></a>    <span class="k">else</span> <span class="k">if</span> (in_set(MAP_OPTIONS, key)) <span class="k">then</span>
+<a class="ln" id="ln-164" href="#ln-164"></a>        <span class="k">call</span> set_map(s, key, values, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-165" href="#ln-165"></a>    <span class="k">else</span>
+<a class="ln" id="ln-166" href="#ln-166"></a>        text = join(values, <span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-167" href="#ln-167"></a>        <span class="k">call</span> set_text(s, key, text)
+<a class="ln" id="ln-168" href="#ln-168"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-169" href="#ln-169"></a>
+<a class="ln" id="ln-170" href="#ln-170"></a><span class="k">contains</span>
+<a class="ln" id="ln-171" href="#ln-171"></a>
+<a class="ln" id="ln-172" href="#ln-172"></a>    <span class="d">!&gt; Record a failure.</span>
+<a class="ln" id="ln-173" href="#ln-173"></a>    <span class="k">subroutine</span> fail(msg)
+<a class="ln" id="ln-174" href="#ln-174"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: msg     <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-175" href="#ln-175"></a>        <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-176" href="#ln-176"></a>        errmsg = msg
+<a class="ln" id="ln-177" href="#ln-177"></a>    <span class="k">end</span> <span class="k">subroutine</span> fail
+<a class="ln" id="ln-178" href="#ln-178"></a>
+<a class="ln" id="ln-179" href="#ln-179"></a><span class="k">end</span> <span class="k">subroutine</span> set_option
+<a class="ln" id="ln-180" href="#ln-180"></a>
+<a class="ln" id="ln-181" href="#ln-181"></a><span class="d">!&gt; Set a logical option.</span>
+<a class="ln" id="ln-182" href="#ln-182"></a><span class="k">subroutine</span> set_logical(s, key, <span class="k">value</span>)
+<a class="ln" id="ln-183" href="#ln-183"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s    <span class="d">!! the settings</span>
+<a class="ln" id="ln-184" href="#ln-184"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the option</span>
+<a class="ln" id="ln-185" href="#ln-185"></a>    <span class="k">logical</span>, <span class="k">intent</span>(in) :: <span class="k">value</span>            <span class="d">!! its value</span>
+<a class="ln" id="ln-186" href="#ln-186"></a>
+<a class="ln" id="ln-187" href="#ln-187"></a>    <span class="k">select</span> <span class="k">case</span> (key)
+<a class="ln" id="ln-188" href="#ln-188"></a>    <span class="k">case</span> (<span class="s">'coloured_edges'</span>); s%coloured_edges = <span class="k">value</span>
+<a class="ln" id="ln-189" href="#ln-189"></a>    <span class="k">case</span> (<span class="s">'dbg'</span>); s%dbg = <span class="k">value</span>
+<a class="ln" id="ln-190" href="#ln-190"></a>    <span class="k">case</span> (<span class="s">'doxygen'</span>); s%doxygen = <span class="k">value</span>
+<a class="ln" id="ln-191" href="#ln-191"></a>    <span class="k">case</span> (<span class="s">'externalize'</span>); s%externalize = <span class="k">value</span>
+<a class="ln" id="ln-192" href="#ln-192"></a>    <span class="k">case</span> (<span class="s">'fixed_length_limit'</span>); s%fixed_length_limit = <span class="k">value</span>
+<a class="ln" id="ln-193" href="#ln-193"></a>    <span class="k">case</span> (<span class="s">'force'</span>); s%force = <span class="k">value</span>
+<a class="ln" id="ln-194" href="#ln-194"></a>    <span class="k">case</span> (<span class="s">'graph'</span>); s%graph = <span class="k">value</span>
+<a class="ln" id="ln-195" href="#ln-195"></a>    <span class="k">case</span> (<span class="s">'hide_undoc'</span>); s%hide_undoc = <span class="k">value</span>
+<a class="ln" id="ln-196" href="#ln-196"></a>    <span class="k">case</span> (<span class="s">'incl_src'</span>); s%incl_src = <span class="k">value</span>
+<a class="ln" id="ln-197" href="#ln-197"></a>    <span class="k">case</span> (<span class="s">'lower'</span>); s%lower = <span class="k">value</span>
+<a class="ln" id="ln-198" href="#ln-198"></a>    <span class="k">case</span> (<span class="s">'preprocess'</span>); s%preprocess = <span class="k">value</span>
+<a class="ln" id="ln-199" href="#ln-199"></a>    <span class="k">case</span> (<span class="s">'print_creation_date'</span>); s%print_creation_date = <span class="k">value</span>
+<a class="ln" id="ln-200" href="#ln-200"></a>    <span class="k">case</span> (<span class="s">'proc_internals'</span>); s%proc_internals = <span class="k">value</span>
+<a class="ln" id="ln-201" href="#ln-201"></a>    <span class="k">case</span> (<span class="s">'quiet'</span>); s%quiet = <span class="k">value</span>
+<a class="ln" id="ln-202" href="#ln-202"></a>    <span class="k">case</span> (<span class="s">'search'</span>); s%search = <span class="k">value</span>
+<a class="ln" id="ln-203" href="#ln-203"></a>    <span class="k">case</span> (<span class="s">'show_proc_parent'</span>); s%show_proc_parent = <span class="k">value</span>
+<a class="ln" id="ln-204" href="#ln-204"></a>    <span class="k">case</span> (<span class="s">'source'</span>); s%source = <span class="k">value</span>
+<a class="ln" id="ln-205" href="#ln-205"></a>    <span class="k">case</span> (<span class="s">'warn'</span>); s%warn = <span class="k">value</span>
+<a class="ln" id="ln-206" href="#ln-206"></a>    <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-207" href="#ln-207"></a><span class="k">end</span> <span class="k">subroutine</span> set_logical
+<a class="ln" id="ln-208" href="#ln-208"></a>
+<a class="ln" id="ln-209" href="#ln-209"></a><span class="d">!&gt; Set a text or path option.</span>
+<a class="ln" id="ln-210" href="#ln-210"></a><span class="k">subroutine</span> set_text(s, key, <span class="k">value</span>)
+<a class="ln" id="ln-211" href="#ln-211"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s    <span class="d">!! the settings</span>
+<a class="ln" id="ln-212" href="#ln-212"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the option</span>
+<a class="ln" id="ln-213" href="#ln-213"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">value</span>   <span class="d">!! its value</span>
+<a class="ln" id="ln-214" href="#ln-214"></a>
+<a class="ln" id="ln-215" href="#ln-215"></a>    <span class="k">select</span> <span class="k">case</span> (key)
+<a class="ln" id="ln-216" href="#ln-216"></a>    <span class="k">case</span> (<span class="s">'author'</span>); s%author = <span class="k">value</span>
+<a class="ln" id="ln-217" href="#ln-217"></a>    <span class="k">case</span> (<span class="s">'author_description'</span>); s%author_description = <span class="k">value</span>
+<a class="ln" id="ln-218" href="#ln-218"></a>    <span class="k">case</span> (<span class="s">'author_pic'</span>); s%author_pic = <span class="k">value</span>
+<a class="ln" id="ln-219" href="#ln-219"></a>    <span class="k">case</span> (<span class="s">'bitbucket'</span>); s%bitbucket = <span class="k">value</span>
+<a class="ln" id="ln-220" href="#ln-220"></a>    <span class="k">case</span> (<span class="s">'creation_date'</span>); s%creation_date = <span class="k">value</span>
+<a class="ln" id="ln-221" href="#ln-221"></a>    <span class="k">case</span> (<span class="s">'doc_license'</span>); s%doc_license = <span class="k">value</span>
+<a class="ln" id="ln-222" href="#ln-222"></a>    <span class="k">case</span> (<span class="s">'docmark'</span>); s%docmark = <span class="k">value</span>
+<a class="ln" id="ln-223" href="#ln-223"></a>    <span class="k">case</span> (<span class="s">'docmark_alt'</span>); s%docmark_alt = <span class="k">value</span>
+<a class="ln" id="ln-224" href="#ln-224"></a>    <span class="k">case</span> (<span class="s">'email'</span>); s%email = <span class="k">value</span>
+<a class="ln" id="ln-225" href="#ln-225"></a>    <span class="k">case</span> (<span class="s">'encoding'</span>); s%encoding = <span class="k">value</span>
+<a class="ln" id="ln-226" href="#ln-226"></a>    <span class="k">case</span> (<span class="s">'facebook'</span>); s%facebook = <span class="k">value</span>
+<a class="ln" id="ln-227" href="#ln-227"></a>    <span class="k">case</span> (<span class="s">'github'</span>); s%github = <span class="k">value</span>
+<a class="ln" id="ln-228" href="#ln-228"></a>    <span class="k">case</span> (<span class="s">'gitlab'</span>); s%gitlab = <span class="k">value</span>
+<a class="ln" id="ln-229" href="#ln-229"></a>    <span class="k">case</span> (<span class="s">'gitter_sidecar'</span>); s%gitter_sidecar = <span class="k">value</span>
+<a class="ln" id="ln-230" href="#ln-230"></a>    <span class="k">case</span> (<span class="s">'google_plus'</span>); s%google_plus = <span class="k">value</span>
+<a class="ln" id="ln-231" href="#ln-231"></a>    <span class="k">case</span> (<span class="s">'license'</span>); s%license = <span class="k">value</span>
+<a class="ln" id="ln-232" href="#ln-232"></a>    <span class="k">case</span> (<span class="s">'linkedin'</span>); s%linkedin = <span class="k">value</span>
+<a class="ln" id="ln-233" href="#ln-233"></a>    <span class="k">case</span> (<span class="s">'predocmark'</span>); s%predocmark = <span class="k">value</span>
+<a class="ln" id="ln-234" href="#ln-234"></a>    <span class="k">case</span> (<span class="s">'predocmark_alt'</span>); s%predocmark_alt = <span class="k">value</span>
+<a class="ln" id="ln-235" href="#ln-235"></a>    <span class="k">case</span> (<span class="s">'preprocessor'</span>); s%preprocessor = <span class="k">value</span>
+<a class="ln" id="ln-236" href="#ln-236"></a>    <span class="k">case</span> (<span class="s">'privacy_policy_url'</span>); s%privacy_policy_url = <span class="k">value</span>
+<a class="ln" id="ln-237" href="#ln-237"></a>    <span class="k">case</span> (<span class="s">'project'</span>); s%project = <span class="k">value</span>
+<a class="ln" id="ln-238" href="#ln-238"></a>    <span class="k">case</span> (<span class="s">'project_bitbucket'</span>); s%project_bitbucket = <span class="k">value</span>
+<a class="ln" id="ln-239" href="#ln-239"></a>    <span class="k">case</span> (<span class="s">'project_download'</span>); s%project_download = <span class="k">value</span>
+<a class="ln" id="ln-240" href="#ln-240"></a>    <span class="k">case</span> (<span class="s">'project_github'</span>); s%project_github = <span class="k">value</span>
+<a class="ln" id="ln-241" href="#ln-241"></a>    <span class="k">case</span> (<span class="s">'project_gitlab'</span>); s%project_gitlab = <span class="k">value</span>
+<a class="ln" id="ln-242" href="#ln-242"></a>    <span class="k">case</span> (<span class="s">'project_sourceforge'</span>); s%project_sourceforge = <span class="k">value</span>
+<a class="ln" id="ln-243" href="#ln-243"></a>    <span class="k">case</span> (<span class="s">'project_url'</span>); s%project_url = <span class="k">value</span>
+<a class="ln" id="ln-244" href="#ln-244"></a>    <span class="k">case</span> (<span class="s">'project_website'</span>); s%project_website = <span class="k">value</span>
+<a class="ln" id="ln-245" href="#ln-245"></a>    <span class="k">case</span> (<span class="s">'revision'</span>); s%revision = <span class="k">value</span>
+<a class="ln" id="ln-246" href="#ln-246"></a>    <span class="k">case</span> (<span class="s">'sort'</span>); s%sort = <span class="k">value</span>
+<a class="ln" id="ln-247" href="#ln-247"></a>    <span class="k">case</span> (<span class="s">'summary'</span>); s%summary = <span class="k">value</span>
+<a class="ln" id="ln-248" href="#ln-248"></a>    <span class="k">case</span> (<span class="s">'terms_of_service_url'</span>); s%terms_of_service_url = <span class="k">value</span>
+<a class="ln" id="ln-249" href="#ln-249"></a>    <span class="k">case</span> (<span class="s">'twitter'</span>); s%twitter = <span class="k">value</span>
+<a class="ln" id="ln-250" href="#ln-250"></a>    <span class="k">case</span> (<span class="s">'version'</span>); s%version = <span class="k">value</span>
+<a class="ln" id="ln-251" href="#ln-251"></a>    <span class="k">case</span> (<span class="s">'website'</span>); s%website = <span class="k">value</span>
+<a class="ln" id="ln-252" href="#ln-252"></a>    <span class="k">case</span> (<span class="s">'year'</span>); s%year = <span class="k">value</span>
+<a class="ln" id="ln-253" href="#ln-253"></a>    <span class="k">case</span> (<span class="s">'css'</span>); s%css = <span class="k">value</span>
+<a class="ln" id="ln-254" href="#ln-254"></a>    <span class="k">case</span> (<span class="s">'favicon'</span>); s%favicon = <span class="k">value</span>
+<a class="ln" id="ln-255" href="#ln-255"></a>    <span class="k">case</span> (<span class="s">'logo'</span>); s%logo = <span class="k">value</span>
+<a class="ln" id="ln-256" href="#ln-256"></a>    <span class="k">case</span> (<span class="s">'graph_dir'</span>); s%graph_dir = <span class="k">value</span>
+<a class="ln" id="ln-257" href="#ln-257"></a>    <span class="k">case</span> (<span class="s">'mathjax_config'</span>); s%mathjax_config = <span class="k">value</span>
+<a class="ln" id="ln-258" href="#ln-258"></a>    <span class="k">case</span> (<span class="s">'md_base_dir'</span>); s%md_base_dir = <span class="k">value</span>
+<a class="ln" id="ln-259" href="#ln-259"></a>    <span class="k">case</span> (<span class="s">'media_dir'</span>); s%media_dir = <span class="k">value</span>
+<a class="ln" id="ln-260" href="#ln-260"></a>    <span class="k">case</span> (<span class="s">'output_dir'</span>); s%output_dir = <span class="k">value</span>
+<a class="ln" id="ln-261" href="#ln-261"></a>    <span class="k">case</span> (<span class="s">'page_dir'</span>); s%page_dir = <span class="k">value</span>
+<a class="ln" id="ln-262" href="#ln-262"></a>    <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-263" href="#ln-263"></a><span class="k">end</span> <span class="k">subroutine</span> set_text
+<a class="ln" id="ln-264" href="#ln-264"></a>
+<a class="ln" id="ln-265" href="#ln-265"></a><span class="d">!&gt; Set a list option.</span>
+<a class="ln" id="ln-266" href="#ln-266"></a><span class="k">subroutine</span> set_list(s, key, values)
+<a class="ln" id="ln-267" href="#ln-267"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s    <span class="d">!! the settings</span>
+<a class="ln" id="ln-268" href="#ln-268"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the option</span>
+<a class="ln" id="ln-269" href="#ln-269"></a>    <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: values(:) <span class="d">!! its values</span>
+<a class="ln" id="ln-270" href="#ln-270"></a>
+<a class="ln" id="ln-271" href="#ln-271"></a>    <span class="k">select</span> <span class="k">case</span> (key)
+<a class="ln" id="ln-272" href="#ln-272"></a>    <span class="k">case</span> (<span class="s">'copy_subdir'</span>); s%copy_subdir = values
+<a class="ln" id="ln-273" href="#ln-273"></a>    <span class="k">case</span> (<span class="s">'display'</span>); s%display = values
+<a class="ln" id="ln-274" href="#ln-274"></a>    <span class="k">case</span> (<span class="s">'exclude'</span>); s%exclude = values
+<a class="ln" id="ln-275" href="#ln-275"></a>    <span class="k">case</span> (<span class="s">'exclude_dir'</span>); s%exclude_dir = values
+<a class="ln" id="ln-276" href="#ln-276"></a>    <span class="k">case</span> (<span class="s">'extensions'</span>); s%extensions = values
+<a class="ln" id="ln-277" href="#ln-277"></a>    <span class="k">case</span> (<span class="s">'extra_vartypes'</span>); s%extra_vartypes = values
+<a class="ln" id="ln-278" href="#ln-278"></a>    <span class="k">case</span> (<span class="s">'fixed_extensions'</span>); s%fixed_extensions = values
+<a class="ln" id="ln-279" href="#ln-279"></a>    <span class="k">case</span> (<span class="s">'fpp_extensions'</span>); s%fpp_extensions = values
+<a class="ln" id="ln-280" href="#ln-280"></a>    <span class="k">case</span> (<span class="s">'html_template_dir'</span>); s%html_template_dir = values
+<a class="ln" id="ln-281" href="#ln-281"></a>    <span class="k">case</span> (<span class="s">'include'</span>); s%<span class="k">include</span> = values
+<a class="ln" id="ln-282" href="#ln-282"></a>    <span class="k">case</span> (<span class="s">'macro'</span>); s%macro = values
+<a class="ln" id="ln-283" href="#ln-283"></a>    <span class="k">case</span> (<span class="s">'md_extensions'</span>); s%md_extensions = values
+<a class="ln" id="ln-284" href="#ln-284"></a>    <span class="k">case</span> (<span class="s">'src_dir'</span>); s%src_dir = values
+<a class="ln" id="ln-285" href="#ln-285"></a>    <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-286" href="#ln-286"></a><span class="k">end</span> <span class="k">subroutine</span> set_list
+<a class="ln" id="ln-287" href="#ln-287"></a>
+<a class="ln" id="ln-288" href="#ln-288"></a><span class="d">!&gt; Set a map option from strings of the form `key&lt;sep&gt;value`. Empty strings are ignored.</span>
+<a class="ln" id="ln-289" href="#ln-289"></a><span class="k">subroutine</span> set_map(s, key, values, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-290" href="#ln-290"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+<a class="ln" id="ln-291" href="#ln-291"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key                 <span class="d">!! the option</span>
+<a class="ln" id="ln-292" href="#ln-292"></a>    <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: values(:)             <span class="d">!! its values</span>
+<a class="ln" id="ln-293" href="#ln-293"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-294" href="#ln-294"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-295" href="#ln-295"></a>    <span class="k">type</span>(map_entry_t), <span class="k">allocatable</span> :: entries(:)
+<a class="ln" id="ln-296" href="#ln-296"></a>    <span class="k">type</span>(file_type_t), <span class="k">allocatable</span> :: files(:)
+<a class="ln" id="ln-297" href="#ln-297"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: words(:)
+<a class="ln" id="ln-298" href="#ln-298"></a>    <span class="k">character</span> :: sep
+<a class="ln" id="ln-299" href="#ln-299"></a>    <span class="k">integer</span> :: k, at
+<a class="ln" id="ln-300" href="#ln-300"></a>
+<a class="ln" id="ln-301" href="#ln-301"></a>    <span class="k">stat</span> = <span class="n">0</span>
+<a class="ln" id="ln-302" href="#ln-302"></a>    <span class="k">if</span> (key == <span class="s">'extra_filetypes'</span>) <span class="k">then</span>
+<a class="ln" id="ln-303" href="#ln-303"></a>        <span class="k">allocate</span> (files(<span class="n">0</span>))
+<a class="ln" id="ln-304" href="#ln-304"></a>        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(values)
+<a class="ln" id="ln-305" href="#ln-305"></a>            <span class="k">if</span> (<span class="k">len</span>(values(k)%s) == <span class="n">0</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-306" href="#ln-306"></a>            words = split_words(values(k)%s)
+<a class="ln" id="ln-307" href="#ln-307"></a>            <span class="k">if</span> (<span class="k">size</span>(words) &lt; <span class="n">2</span> <span class="k">.or.</span> <span class="k">size</span>(words) &gt; <span class="n">3</span>) <span class="k">then</span>
+<a class="ln" id="ln-308" href="#ln-308"></a>                <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-309" href="#ln-309"></a>                errmsg = <span class="s">"Unexpected format for 'extra_filetype': expected 'extension comment [lexer]', got "</span>//values(k)%s
+<a class="ln" id="ln-310" href="#ln-310"></a>                <span class="k">return</span>
+<a class="ln" id="ln-311" href="#ln-311"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-312" href="#ln-312"></a>            files = [files, file_type_t(words(<span class="n">1</span>)%s, words(<span class="n">2</span>)%s)]
+<a class="ln" id="ln-313" href="#ln-313"></a>            <span class="k">if</span> (<span class="k">size</span>(words) == <span class="n">3</span>) files(<span class="k">size</span>(files))%lexer = words(<span class="n">3</span>)%s
+<a class="ln" id="ln-314" href="#ln-314"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-315" href="#ln-315"></a>        <span class="k">call</span> <span class="k">move_alloc</span>(files, s%extra_filetypes)
+<a class="ln" id="ln-316" href="#ln-316"></a>        <span class="k">return</span>
+<a class="ln" id="ln-317" href="#ln-317"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-318" href="#ln-318"></a>
+<a class="ln" id="ln-319" href="#ln-319"></a>    sep = <span class="k">merge</span>(<span class="s">':'</span>, <span class="s">'='</span>, key == <span class="s">'extra_mods'</span>)
+<a class="ln" id="ln-320" href="#ln-320"></a>    <span class="k">allocate</span> (entries(<span class="n">0</span>))
+<a class="ln" id="ln-321" href="#ln-321"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(values)
+<a class="ln" id="ln-322" href="#ln-322"></a>        <span class="k">if</span> (<span class="k">len</span>(values(k)%s) == <span class="n">0</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-323" href="#ln-323"></a>        at = <span class="k">index</span>(values(k)%s, sep)
+<a class="ln" id="ln-324" href="#ln-324"></a>        <span class="k">if</span> (at == <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-325" href="#ln-325"></a>            <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-326" href="#ln-326"></a>            errmsg = <span class="s">"Error setting option '"</span>//key//<span class="s">"': expected '"</span>//sep//<span class="s">"' in '"</span>//values(k)%s//<span class="s">"'"</span>
+<a class="ln" id="ln-327" href="#ln-327"></a>            <span class="k">return</span>
+<a class="ln" id="ln-328" href="#ln-328"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-329" href="#ln-329"></a>        <span class="k">call</span> add_entry(entries, strip(values(k)%s(:at - <span class="n">1</span>)), strip(values(k)%s(at + <span class="n">1</span>:)))
+<a class="ln" id="ln-330" href="#ln-330"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-331" href="#ln-331"></a>    <span class="k">select</span> <span class="k">case</span> (key)
+<a class="ln" id="ln-332" href="#ln-332"></a>    <span class="k">case</span> (<span class="s">'alias'</span>); <span class="k">call</span> <span class="k">move_alloc</span>(entries, s%alias)
+<a class="ln" id="ln-333" href="#ln-333"></a>    <span class="k">case</span> (<span class="s">'external'</span>); <span class="k">call</span> <span class="k">move_alloc</span>(entries, s%<span class="k">external</span>)
+<a class="ln" id="ln-334" href="#ln-334"></a>    <span class="k">case</span> (<span class="s">'extra_mods'</span>); <span class="k">call</span> <span class="k">move_alloc</span>(entries, s%extra_mods)
+<a class="ln" id="ln-335" href="#ln-335"></a>    <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-336" href="#ln-336"></a><span class="k">end</span> <span class="k">subroutine</span> set_map
+<a class="ln" id="ln-337" href="#ln-337"></a>
+<a class="ln" id="ln-338" href="#ln-338"></a><span class="d">!&gt; Set `key` in `entries`, replacing any entry it has.</span>
+<a class="ln" id="ln-339" href="#ln-339"></a><span class="k">subroutine</span> add_entry(entries, key, <span class="k">value</span>)
+<a class="ln" id="ln-340" href="#ln-340"></a>    <span class="k">type</span>(map_entry_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: entries(:) <span class="d">!! the map</span>
+<a class="ln" id="ln-341" href="#ln-341"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key                         <span class="d">!! the key</span>
+<a class="ln" id="ln-342" href="#ln-342"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">value</span>                       <span class="d">!! its value</span>
+<a class="ln" id="ln-343" href="#ln-343"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-344" href="#ln-344"></a>
+<a class="ln" id="ln-345" href="#ln-345"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(entries)
+<a class="ln" id="ln-346" href="#ln-346"></a>        <span class="k">if</span> (entries(k)%key == key) <span class="k">then</span>
+<a class="ln" id="ln-347" href="#ln-347"></a>            entries(k)%<span class="k">value</span> = <span class="k">value</span>
+<a class="ln" id="ln-348" href="#ln-348"></a>            <span class="k">return</span>
+<a class="ln" id="ln-349" href="#ln-349"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-350" href="#ln-350"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-351" href="#ln-351"></a>    entries = [entries, map_entry_t(key, <span class="k">value</span>)]
+<a class="ln" id="ln-352" href="#ln-352"></a><span class="k">end</span> <span class="k">subroutine</span> add_entry
+<a class="ln" id="ln-353" href="#ln-353"></a>
+<a class="ln" id="ln-354" href="#ln-354"></a><span class="d">!&gt; Validate the project file's settings and derive what depends on them, before the command line</span>
+<a class="ln" id="ln-355" href="#ln-355"></a><span class="d">!&gt; is applied.</span>
+<a class="ln" id="ln-356" href="#ln-356"></a><span class="k">subroutine</span> check_settings(s, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-357" href="#ln-357"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+<a class="ln" id="ln-358" href="#ln-358"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-359" href="#ln-359"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-360" href="#ln-360"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: marks(:)
+<a class="ln" id="ln-361" href="#ln-361"></a>    <span class="k">integer</span> :: k, j
+<a class="ln" id="ln-362" href="#ln-362"></a>
+<a class="ln" id="ln-363" href="#ln-363"></a>    <span class="k">stat</span> = <span class="n">0</span>
+<a class="ln" id="ln-364" href="#ln-364"></a>    s%relative = s%project_url == <span class="s">''</span>
+<a class="ln" id="ln-365" href="#ln-365"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(s%fixed_extensions)
+<a class="ln" id="ln-366" href="#ln-366"></a>        <span class="k">if</span> (contains_string(s%extensions, s%fixed_extensions(k)%s)) <span class="k">then</span>
+<a class="ln" id="ln-367" href="#ln-367"></a>            <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-368" href="#ln-368"></a>            errmsg = <span class="s">"Fixed-form extension '"</span>//s%fixed_extensions(k)%s//<span class="s">"' also appears in the free-form extension list"</span>
+<a class="ln" id="ln-369" href="#ln-369"></a>            <span class="k">return</span>
+<a class="ln" id="ln-370" href="#ln-370"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-371" href="#ln-371"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-372" href="#ln-372"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(s%extra_mods)
+<a class="ln" id="ln-373" href="#ln-373"></a>        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(s%<span class="k">external</span>)
+<a class="ln" id="ln-374" href="#ln-374"></a>            <span class="k">if</span> (s%extra_mods(k)%key == s%<span class="k">external</span>(j)%key) <span class="k">then</span>
+<a class="ln" id="ln-375" href="#ln-375"></a>                <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-376" href="#ln-376"></a>                errmsg = <span class="s">"extra-mod '"</span>//s%extra_mods(k)%key//<span class="s">"' also appears in external mods"</span>
+<a class="ln" id="ln-377" href="#ln-377"></a>                <span class="k">return</span>
+<a class="ln" id="ln-378" href="#ln-378"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-379" href="#ln-379"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-380" href="#ln-380"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-381" href="#ln-381"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(s%display)
+<a class="ln" id="ln-382" href="#ln-382"></a>        s%display(k)%s = lowercase(s%display(k)%s)
+<a class="ln" id="ln-383" href="#ln-383"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-384" href="#ln-384"></a>    s%extensions = [s%extensions, s%fpp_extensions]
+<a class="ln" id="ln-385" href="#ln-385"></a>    <span class="k">call</span> sort_strings(s%extensions)
+<a class="ln" id="ln-386" href="#ln-386"></a>    <span class="k">call</span> push(s%exclude_dir, s%output_dir)
+<a class="ln" id="ln-387" href="#ln-387"></a>    <span class="k">call</span> add_intrinsic_modules(s)
+<a class="ln" id="ln-388" href="#ln-388"></a>
+<a class="ln" id="ln-389" href="#ln-389"></a>    marks = [string_t(s%docmark), string_t(s%predocmark), string_t(s%docmark_alt), string_t(s%predocmark_alt)]
+<a class="ln" id="ln-390" href="#ln-390"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(marks)
+<a class="ln" id="ln-391" href="#ln-391"></a>        <span class="k">do</span> j = k + <span class="n">1</span>, <span class="k">size</span>(marks)
+<a class="ln" id="ln-392" href="#ln-392"></a>            <span class="k">if</span> (marks(k)%s == marks(j)%s <span class="k">.and.</span> <span class="k">len</span>(marks(k)%s) &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-393" href="#ln-393"></a>                <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-394" href="#ln-394"></a>                errmsg = <span class="s">"Doc comment markers are the same: '"</span>//marks(k)%s//<span class="s">"'"</span>
+<a class="ln" id="ln-395" href="#ln-395"></a>                <span class="k">return</span>
+<a class="ln" id="ln-396" href="#ln-396"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-397" href="#ln-397"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-398" href="#ln-398"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-399" href="#ln-399"></a><span class="k">end</span> <span class="k">subroutine</span> check_settings
+<a class="ln" id="ln-400" href="#ln-400"></a>
+<a class="ln" id="ln-401" href="#ln-401"></a><span class="d">!&gt; Add the modules that come with compilers and common libraries to `extra_mods`.</span>
+<a class="ln" id="ln-402" href="#ln-402"></a><span class="k">subroutine</span> add_intrinsic_modules(s)
+<a class="ln" id="ln-403" href="#ln-403"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s    <span class="d">!! the settings</span>
+<a class="ln" id="ln-404" href="#ln-404"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: WIKI = <span class="s">'http://fortranwiki.org/fortran/show/'</span>
+<a class="ln" id="ln-405" href="#ln-405"></a>
+<a class="ln" id="ln-406" href="#ln-406"></a>    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'iso_fortran_env'</span>, WIKI//<span class="s">'iso_fortran_env'</span>)
+<a class="ln" id="ln-407" href="#ln-407"></a>    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'iso_c_binding'</span>, WIKI//<span class="s">'iso_c_binding'</span>)
+<a class="ln" id="ln-408" href="#ln-408"></a>    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'ieee_arithmetic'</span>, WIKI//<span class="s">'ieee_arithmetic'</span>)
+<a class="ln" id="ln-409" href="#ln-409"></a>    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'ieee_exceptions'</span>, WIKI//<span class="s">'IEEE+arithmetic'</span>)
+<a class="ln" id="ln-410" href="#ln-410"></a>    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'ieee_features'</span>, WIKI//<span class="s">'IEEE+arithmetic'</span>)
+<a class="ln" id="ln-411" href="#ln-411"></a>    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'openacc'</span>, &amp;
+<a class="ln" id="ln-412" href="#ln-412"></a>                   <span class="s">'https://www.openacc.org/sites/default/files/inline-images/Specification/OpenACC.3.0.pdf#page=85'</span>)
+<a class="ln" id="ln-413" href="#ln-413"></a>    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'omp_lib'</span>, <span class="s">'https://www.openmp.org/spec-html/5.1/openmpch3.html#x156-1890003'</span>)
+<a class="ln" id="ln-414" href="#ln-414"></a>    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'mpi'</span>, <span class="s">'http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'</span>)
+<a class="ln" id="ln-415" href="#ln-415"></a>    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'mpi_f08'</span>, <span class="s">'http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node409.htm'</span>)
+<a class="ln" id="ln-416" href="#ln-416"></a><span class="k">end</span> <span class="k">subroutine</span> add_intrinsic_modules
+<a class="ln" id="ln-417" href="#ln-417"></a>
+<a class="ln" id="ln-418" href="#ln-418"></a><span class="d">!&gt; Make paths absolute and format dates, after all settings are applied.</span>
+<a class="ln" id="ln-419" href="#ln-419"></a><span class="k">subroutine</span> finish_settings(s, directory, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-420" href="#ln-420"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+<a class="ln" id="ln-421" href="#ln-421"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: directory           <span class="d">!! the project's directory</span>
+<a class="ln" id="ln-422" href="#ln-422"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-423" href="#ln-423"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-424" href="#ln-424"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-425" href="#ln-425"></a>
+<a class="ln" id="ln-426" href="#ln-426"></a>    <span class="k">stat</span> = <span class="n">0</span>
+<a class="ln" id="ln-427" href="#ln-427"></a>    s%directory = resolve_path(directory, <span class="s">'.'</span>)
+<a class="ln" id="ln-428" href="#ln-428"></a>    <span class="k">if</span> (s%md_base_dir == <span class="s">'.'</span>) s%md_base_dir = s%directory
+<a class="ln" id="ln-429" href="#ln-429"></a>    <span class="k">call</span> normalise(s%css)
+<a class="ln" id="ln-430" href="#ln-430"></a>    <span class="k">call</span> normalise(s%favicon)
+<a class="ln" id="ln-431" href="#ln-431"></a>    <span class="k">call</span> normalise(s%graph_dir)
+<a class="ln" id="ln-432" href="#ln-432"></a>    <span class="k">call</span> normalise(s%logo)
+<a class="ln" id="ln-433" href="#ln-433"></a>    <span class="k">call</span> normalise(s%mathjax_config)
+<a class="ln" id="ln-434" href="#ln-434"></a>    <span class="k">call</span> normalise(s%md_base_dir)
+<a class="ln" id="ln-435" href="#ln-435"></a>    <span class="k">call</span> normalise(s%media_dir)
+<a class="ln" id="ln-436" href="#ln-436"></a>    <span class="k">call</span> normalise(s%output_dir)
+<a class="ln" id="ln-437" href="#ln-437"></a>    <span class="k">call</span> normalise(s%page_dir)
+<a class="ln" id="ln-438" href="#ln-438"></a>    <span class="k">call</span> normalise_list(s%copy_subdir)
+<a class="ln" id="ln-439" href="#ln-439"></a>    <span class="k">call</span> normalise_list(s%exclude_dir)
+<a class="ln" id="ln-440" href="#ln-440"></a>    <span class="k">call</span> normalise_list(s%html_template_dir)
+<a class="ln" id="ln-441" href="#ln-441"></a>    <span class="k">call</span> normalise_list(s%<span class="k">include</span>)
+<a class="ln" id="ln-442" href="#ln-442"></a>    <span class="k">call</span> normalise_list(s%src_dir)
+<a class="ln" id="ln-443" href="#ln-443"></a>    <span class="k">if</span> (s%relative) s%project_url = s%output_dir
+<a class="ln" id="ln-444" href="#ln-444"></a>    s%creation_date = strftime(s%creation_date)
+<a class="ln" id="ln-445" href="#ln-445"></a>
+<a class="ln" id="ln-446" href="#ln-446"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(s%src_dir)
+<a class="ln" id="ln-447" href="#ln-447"></a>        <span class="k">if</span> (s%src_dir(k)%s == s%output_dir <span class="k">.or.</span> starts_with(s%src_dir(k)%s, s%output_dir//<span class="s">'/'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-448" href="#ln-448"></a>            <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-449" href="#ln-449"></a>            errmsg = <span class="s">'Source directory '</span>//s%src_dir(k)%s//<span class="s">' is a subdirectory of output directory '</span>//s%output_dir
+<a class="ln" id="ln-450" href="#ln-450"></a>            <span class="k">return</span>
+<a class="ln" id="ln-451" href="#ln-451"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-452" href="#ln-452"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-453" href="#ln-453"></a>    <span class="k">if</span> (<span class="k">.not.</span> s%preprocess) s%fpp_extensions = [string_t ::]
+<a class="ln" id="ln-454" href="#ln-454"></a>
+<a class="ln" id="ln-455" href="#ln-455"></a><span class="k">contains</span>
+<a class="ln" id="ln-456" href="#ln-456"></a>
+<a class="ln" id="ln-457" href="#ln-457"></a>    <span class="d">!&gt; Make `path` absolute, if it is set.</span>
+<a class="ln" id="ln-458" href="#ln-458"></a>    <span class="k">subroutine</span> normalise(path)
+<a class="ln" id="ln-459" href="#ln-459"></a>        <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: path    <span class="d">!! the path</span>
+<a class="ln" id="ln-460" href="#ln-460"></a>        <span class="k">if</span> (<span class="k">allocated</span>(path)) path = resolve_path(s%directory, path)
+<a class="ln" id="ln-461" href="#ln-461"></a>    <span class="k">end</span> <span class="k">subroutine</span> normalise
+<a class="ln" id="ln-462" href="#ln-462"></a>
+<a class="ln" id="ln-463" href="#ln-463"></a>    <span class="d">!&gt; Make every path in `list` absolute.</span>
+<a class="ln" id="ln-464" href="#ln-464"></a>    <span class="k">subroutine</span> normalise_list(list)
+<a class="ln" id="ln-465" href="#ln-465"></a>        <span class="k">type</span>(string_t), <span class="k">intent</span>(inout) :: list(:)    <span class="d">!! the paths</span>
+<a class="ln" id="ln-466" href="#ln-466"></a>        <span class="k">integer</span> :: j
+<a class="ln" id="ln-467" href="#ln-467"></a>        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(list)
+<a class="ln" id="ln-468" href="#ln-468"></a>            list(j)%s = resolve_path(s%directory, list(j)%s)
+<a class="ln" id="ln-469" href="#ln-469"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-470" href="#ln-470"></a>    <span class="k">end</span> <span class="k">subroutine</span> normalise_list
+<a class="ln" id="ln-471" href="#ln-471"></a>
+<a class="ln" id="ln-472" href="#ln-472"></a><span class="k">end</span> <span class="k">subroutine</span> finish_settings
+<a class="ln" id="ln-473" href="#ln-473"></a>
+<a class="ln" id="ln-474" href="#ln-474"></a><span class="d">!&gt; The settings as a JSON object, for comparison with FORD's. Unset options are `null`.</span>
+<a class="ln" id="ln-475" href="#ln-475"></a><span class="k">function</span> dump_settings(s) <span class="k">result</span>(text)
+<a class="ln" id="ln-476" href="#ln-476"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s       <span class="d">!! the settings</span>
+<a class="ln" id="ln-477" href="#ln-477"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+<a class="ln" id="ln-478" href="#ln-478"></a>    <span class="k">type</span>(json_core) :: json
+<a class="ln" id="ln-479" href="#ln-479"></a>    <span class="k">type</span>(json_value), <span class="k">pointer</span> :: root, group
+<a class="ln" id="ln-480" href="#ln-480"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-481" href="#ln-481"></a>
+<a class="ln" id="ln-482" href="#ln-482"></a>    <span class="k">call</span> json%initialize()
+<a class="ln" id="ln-483" href="#ln-483"></a>    <span class="k">call</span> json%create_object(root, <span class="s">''</span>)
+<a class="ln" id="ln-484" href="#ln-484"></a>    <span class="k">call</span> put_text(<span class="s">'author'</span>, s%author)
+<a class="ln" id="ln-485" href="#ln-485"></a>    <span class="k">call</span> put_text(<span class="s">'author_description'</span>, s%author_description)
+<a class="ln" id="ln-486" href="#ln-486"></a>    <span class="k">call</span> put_text(<span class="s">'author_pic'</span>, s%author_pic)
+<a class="ln" id="ln-487" href="#ln-487"></a>    <span class="k">call</span> put_text(<span class="s">'bitbucket'</span>, s%bitbucket)
+<a class="ln" id="ln-488" href="#ln-488"></a>    <span class="k">call</span> put_text(<span class="s">'css'</span>, s%css)
+<a class="ln" id="ln-489" href="#ln-489"></a>    <span class="k">call</span> put_text(<span class="s">'directory'</span>, s%directory)
+<a class="ln" id="ln-490" href="#ln-490"></a>    <span class="k">call</span> put_text(<span class="s">'doc_license'</span>, s%doc_license)
+<a class="ln" id="ln-491" href="#ln-491"></a>    <span class="k">call</span> put_text(<span class="s">'docmark'</span>, s%docmark)
+<a class="ln" id="ln-492" href="#ln-492"></a>    <span class="k">call</span> put_text(<span class="s">'docmark_alt'</span>, s%docmark_alt)
+<a class="ln" id="ln-493" href="#ln-493"></a>    <span class="k">call</span> put_text(<span class="s">'email'</span>, s%email)
+<a class="ln" id="ln-494" href="#ln-494"></a>    <span class="k">call</span> put_text(<span class="s">'encoding'</span>, s%encoding)
+<a class="ln" id="ln-495" href="#ln-495"></a>    <span class="k">call</span> put_text(<span class="s">'facebook'</span>, s%facebook)
+<a class="ln" id="ln-496" href="#ln-496"></a>    <span class="k">call</span> put_text(<span class="s">'github'</span>, s%github)
+<a class="ln" id="ln-497" href="#ln-497"></a>    <span class="k">call</span> put_text(<span class="s">'gitlab'</span>, s%gitlab)
+<a class="ln" id="ln-498" href="#ln-498"></a>    <span class="k">call</span> put_text(<span class="s">'gitter_sidecar'</span>, s%gitter_sidecar)
+<a class="ln" id="ln-499" href="#ln-499"></a>    <span class="k">call</span> put_text(<span class="s">'google_plus'</span>, s%google_plus)
+<a class="ln" id="ln-500" href="#ln-500"></a>    <span class="k">call</span> put_text(<span class="s">'graph_dir'</span>, s%graph_dir)
+<a class="ln" id="ln-501" href="#ln-501"></a>    <span class="k">call</span> put_text(<span class="s">'license'</span>, s%license)
+<a class="ln" id="ln-502" href="#ln-502"></a>    <span class="k">call</span> put_text(<span class="s">'logo'</span>, s%logo)
+<a class="ln" id="ln-503" href="#ln-503"></a>    <span class="k">call</span> put_text(<span class="s">'linkedin'</span>, s%linkedin)
+<a class="ln" id="ln-504" href="#ln-504"></a>    <span class="k">call</span> put_text(<span class="s">'mathjax_config'</span>, s%mathjax_config)
+<a class="ln" id="ln-505" href="#ln-505"></a>    <span class="k">call</span> put_text(<span class="s">'md_base_dir'</span>, s%md_base_dir)
+<a class="ln" id="ln-506" href="#ln-506"></a>    <span class="k">call</span> put_text(<span class="s">'media_dir'</span>, s%media_dir)
+<a class="ln" id="ln-507" href="#ln-507"></a>    <span class="k">call</span> put_text(<span class="s">'output_dir'</span>, s%output_dir)
+<a class="ln" id="ln-508" href="#ln-508"></a>    <span class="k">call</span> put_text(<span class="s">'page_dir'</span>, s%page_dir)
+<a class="ln" id="ln-509" href="#ln-509"></a>    <span class="k">call</span> put_text(<span class="s">'predocmark'</span>, s%predocmark)
+<a class="ln" id="ln-510" href="#ln-510"></a>    <span class="k">call</span> put_text(<span class="s">'predocmark_alt'</span>, s%predocmark_alt)
+<a class="ln" id="ln-511" href="#ln-511"></a>    <span class="k">call</span> put_text(<span class="s">'preprocessor'</span>, s%preprocessor)
+<a class="ln" id="ln-512" href="#ln-512"></a>    <span class="k">call</span> put_text(<span class="s">'privacy_policy_url'</span>, s%privacy_policy_url)
+<a class="ln" id="ln-513" href="#ln-513"></a>    <span class="k">call</span> put_text(<span class="s">'project'</span>, s%project)
+<a class="ln" id="ln-514" href="#ln-514"></a>    <span class="k">call</span> put_text(<span class="s">'project_bitbucket'</span>, s%project_bitbucket)
+<a class="ln" id="ln-515" href="#ln-515"></a>    <span class="k">call</span> put_text(<span class="s">'project_download'</span>, s%project_download)
+<a class="ln" id="ln-516" href="#ln-516"></a>    <span class="k">call</span> put_text(<span class="s">'project_github'</span>, s%project_github)
+<a class="ln" id="ln-517" href="#ln-517"></a>    <span class="k">call</span> put_text(<span class="s">'project_gitlab'</span>, s%project_gitlab)
+<a class="ln" id="ln-518" href="#ln-518"></a>    <span class="k">call</span> put_text(<span class="s">'project_sourceforge'</span>, s%project_sourceforge)
+<a class="ln" id="ln-519" href="#ln-519"></a>    <span class="k">call</span> put_text(<span class="s">'project_url'</span>, s%project_url)
+<a class="ln" id="ln-520" href="#ln-520"></a>    <span class="k">call</span> put_text(<span class="s">'project_website'</span>, s%project_website)
+<a class="ln" id="ln-521" href="#ln-521"></a>    <span class="k">call</span> put_text(<span class="s">'revision'</span>, s%revision)
+<a class="ln" id="ln-522" href="#ln-522"></a>    <span class="k">call</span> put_text(<span class="s">'sort'</span>, s%sort)
+<a class="ln" id="ln-523" href="#ln-523"></a>    <span class="k">call</span> put_text(<span class="s">'summary'</span>, s%summary)
+<a class="ln" id="ln-524" href="#ln-524"></a>    <span class="k">call</span> put_text(<span class="s">'terms_of_service_url'</span>, s%terms_of_service_url)
+<a class="ln" id="ln-525" href="#ln-525"></a>    <span class="k">call</span> put_text(<span class="s">'twitter'</span>, s%twitter)
+<a class="ln" id="ln-526" href="#ln-526"></a>    <span class="k">call</span> put_text(<span class="s">'version'</span>, s%version)
+<a class="ln" id="ln-527" href="#ln-527"></a>    <span class="k">call</span> put_text(<span class="s">'website'</span>, s%website)
+<a class="ln" id="ln-528" href="#ln-528"></a>    <span class="k">call</span> put_text(<span class="s">'year'</span>, s%year)
+<a class="ln" id="ln-529" href="#ln-529"></a>    <span class="k">call</span> put_logical(<span class="s">'coloured_edges'</span>, s%coloured_edges)
+<a class="ln" id="ln-530" href="#ln-530"></a>    <span class="k">call</span> put_logical(<span class="s">'dbg'</span>, s%dbg)
+<a class="ln" id="ln-531" href="#ln-531"></a>    <span class="k">call</span> put_logical(<span class="s">'doxygen'</span>, s%doxygen)
+<a class="ln" id="ln-532" href="#ln-532"></a>    <span class="k">call</span> put_logical(<span class="s">'externalize'</span>, s%externalize)
+<a class="ln" id="ln-533" href="#ln-533"></a>    <span class="k">call</span> put_logical(<span class="s">'fixed_length_limit'</span>, s%fixed_length_limit)
+<a class="ln" id="ln-534" href="#ln-534"></a>    <span class="k">call</span> put_logical(<span class="s">'force'</span>, s%force)
+<a class="ln" id="ln-535" href="#ln-535"></a>    <span class="k">call</span> put_logical(<span class="s">'graph'</span>, s%graph)
+<a class="ln" id="ln-536" href="#ln-536"></a>    <span class="k">call</span> put_logical(<span class="s">'hide_undoc'</span>, s%hide_undoc)
+<a class="ln" id="ln-537" href="#ln-537"></a>    <span class="k">call</span> put_logical(<span class="s">'incl_src'</span>, s%incl_src)
+<a class="ln" id="ln-538" href="#ln-538"></a>    <span class="k">call</span> put_logical(<span class="s">'lower'</span>, s%lower)
+<a class="ln" id="ln-539" href="#ln-539"></a>    <span class="k">call</span> put_logical(<span class="s">'preprocess'</span>, s%preprocess)
+<a class="ln" id="ln-540" href="#ln-540"></a>    <span class="k">call</span> put_logical(<span class="s">'print_creation_date'</span>, s%print_creation_date)
+<a class="ln" id="ln-541" href="#ln-541"></a>    <span class="k">call</span> put_logical(<span class="s">'proc_internals'</span>, s%proc_internals)
+<a class="ln" id="ln-542" href="#ln-542"></a>    <span class="k">call</span> put_logical(<span class="s">'quiet'</span>, s%quiet)
+<a class="ln" id="ln-543" href="#ln-543"></a>    <span class="k">call</span> put_logical(<span class="s">'relative'</span>, s%relative)
+<a class="ln" id="ln-544" href="#ln-544"></a>    <span class="k">call</span> put_logical(<span class="s">'search'</span>, s%search)
+<a class="ln" id="ln-545" href="#ln-545"></a>    <span class="k">call</span> put_logical(<span class="s">'show_proc_parent'</span>, s%show_proc_parent)
+<a class="ln" id="ln-546" href="#ln-546"></a>    <span class="k">call</span> put_logical(<span class="s">'source'</span>, s%source)
+<a class="ln" id="ln-547" href="#ln-547"></a>    <span class="k">call</span> put_logical(<span class="s">'warn'</span>, s%warn)
+<a class="ln" id="ln-548" href="#ln-548"></a>    <span class="k">call</span> json%add(root, <span class="s">'graph_maxdepth'</span>, s%graph_maxdepth)
+<a class="ln" id="ln-549" href="#ln-549"></a>    <span class="k">call</span> json%add(root, <span class="s">'graph_maxnodes'</span>, s%graph_maxnodes)
+<a class="ln" id="ln-550" href="#ln-550"></a>    <span class="k">call</span> json%add(root, <span class="s">'max_frontpage_items'</span>, s%max_frontpage_items)
+<a class="ln" id="ln-551" href="#ln-551"></a>    <span class="k">call</span> put_list(<span class="s">'copy_subdir'</span>, s%copy_subdir)
+<a class="ln" id="ln-552" href="#ln-552"></a>    <span class="k">call</span> put_list(<span class="s">'display'</span>, s%display)
+<a class="ln" id="ln-553" href="#ln-553"></a>    <span class="k">call</span> put_list(<span class="s">'exclude'</span>, s%exclude)
+<a class="ln" id="ln-554" href="#ln-554"></a>    <span class="k">call</span> put_list(<span class="s">'exclude_dir'</span>, s%exclude_dir)
+<a class="ln" id="ln-555" href="#ln-555"></a>    <span class="k">call</span> put_list(<span class="s">'extensions'</span>, s%extensions)
+<a class="ln" id="ln-556" href="#ln-556"></a>    <span class="k">call</span> put_list(<span class="s">'extra_vartypes'</span>, s%extra_vartypes)
+<a class="ln" id="ln-557" href="#ln-557"></a>    <span class="k">call</span> put_list(<span class="s">'fixed_extensions'</span>, s%fixed_extensions)
+<a class="ln" id="ln-558" href="#ln-558"></a>    <span class="k">call</span> put_list(<span class="s">'fpp_extensions'</span>, s%fpp_extensions)
+<a class="ln" id="ln-559" href="#ln-559"></a>    <span class="k">call</span> put_list(<span class="s">'html_template_dir'</span>, s%html_template_dir)
+<a class="ln" id="ln-560" href="#ln-560"></a>    <span class="k">call</span> put_list(<span class="s">'include'</span>, s%<span class="k">include</span>)
+<a class="ln" id="ln-561" href="#ln-561"></a>    <span class="k">call</span> put_list(<span class="s">'macro'</span>, s%macro)
+<a class="ln" id="ln-562" href="#ln-562"></a>    <span class="k">call</span> put_list(<span class="s">'md_extensions'</span>, s%md_extensions)
+<a class="ln" id="ln-563" href="#ln-563"></a>    <span class="k">call</span> put_list(<span class="s">'src_dir'</span>, s%src_dir)
+<a class="ln" id="ln-564" href="#ln-564"></a>    <span class="k">call</span> put_map(<span class="s">'alias'</span>, s%alias)
+<a class="ln" id="ln-565" href="#ln-565"></a>    <span class="k">call</span> put_map(<span class="s">'external'</span>, s%<span class="k">external</span>)
+<a class="ln" id="ln-566" href="#ln-566"></a>    <span class="k">call</span> put_map(<span class="s">'extra_mods'</span>, s%extra_mods)
+<a class="ln" id="ln-567" href="#ln-567"></a>    <span class="k">call</span> json%create_object(group, <span class="s">'extra_filetypes'</span>)
+<a class="ln" id="ln-568" href="#ln-568"></a>    <span class="k">call</span> json%add(root, group)
+<a class="ln" id="ln-569" href="#ln-569"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(s%extra_filetypes)
+<a class="ln" id="ln-570" href="#ln-570"></a>        <span class="k">call</span> json%add(group, s%extra_filetypes(k)%extension, s%extra_filetypes(k)%comment)
+<a class="ln" id="ln-571" href="#ln-571"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-572" href="#ln-572"></a>    <span class="k">call</span> json%serialize(root, text)
+<a class="ln" id="ln-573" href="#ln-573"></a>    <span class="k">call</span> json%destroy(root)
+<a class="ln" id="ln-574" href="#ln-574"></a>
+<a class="ln" id="ln-575" href="#ln-575"></a><span class="k">contains</span>
+<a class="ln" id="ln-576" href="#ln-576"></a>
+<a class="ln" id="ln-577" href="#ln-577"></a>    <span class="d">!&gt; Add a text option, `null` if it is not set.</span>
+<a class="ln" id="ln-578" href="#ln-578"></a>    <span class="k">subroutine</span> put_text(key, <span class="k">value</span>)
+<a class="ln" id="ln-579" href="#ln-579"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key                 <span class="d">!! the option</span>
+<a class="ln" id="ln-580" href="#ln-580"></a>        <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(in) :: <span class="k">value</span>  <span class="d">!! its value</span>
+<a class="ln" id="ln-581" href="#ln-581"></a>        <span class="k">if</span> (<span class="k">allocated</span>(<span class="k">value</span>)) <span class="k">then</span>
+<a class="ln" id="ln-582" href="#ln-582"></a>            <span class="k">call</span> json%add(root, key, <span class="k">value</span>)
+<a class="ln" id="ln-583" href="#ln-583"></a>        <span class="k">else</span>
+<a class="ln" id="ln-584" href="#ln-584"></a>            <span class="k">call</span> json%add(root, key)
+<a class="ln" id="ln-585" href="#ln-585"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-586" href="#ln-586"></a>    <span class="k">end</span> <span class="k">subroutine</span> put_text
+<a class="ln" id="ln-587" href="#ln-587"></a>
+<a class="ln" id="ln-588" href="#ln-588"></a>    <span class="d">!&gt; Add a logical option.</span>
+<a class="ln" id="ln-589" href="#ln-589"></a>    <span class="k">subroutine</span> put_logical(key, <span class="k">value</span>)
+<a class="ln" id="ln-590" href="#ln-590"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the option</span>
+<a class="ln" id="ln-591" href="#ln-591"></a>        <span class="k">logical</span>, <span class="k">intent</span>(in) :: <span class="k">value</span>            <span class="d">!! its value</span>
+<a class="ln" id="ln-592" href="#ln-592"></a>        <span class="k">call</span> json%add(root, key, <span class="k">value</span>)
+<a class="ln" id="ln-593" href="#ln-593"></a>    <span class="k">end</span> <span class="k">subroutine</span> put_logical
+<a class="ln" id="ln-594" href="#ln-594"></a>
+<a class="ln" id="ln-595" href="#ln-595"></a>    <span class="d">!&gt; Add a list option.</span>
+<a class="ln" id="ln-596" href="#ln-596"></a>    <span class="k">subroutine</span> put_list(key, list)
+<a class="ln" id="ln-597" href="#ln-597"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the option</span>
+<a class="ln" id="ln-598" href="#ln-598"></a>        <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: list(:)   <span class="d">!! its values</span>
+<a class="ln" id="ln-599" href="#ln-599"></a>        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: array
+<a class="ln" id="ln-600" href="#ln-600"></a>        <span class="k">integer</span> :: j
+<a class="ln" id="ln-601" href="#ln-601"></a>        <span class="k">call</span> json%create_array(array, key)
+<a class="ln" id="ln-602" href="#ln-602"></a>        <span class="k">call</span> json%add(root, array)
+<a class="ln" id="ln-603" href="#ln-603"></a>        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(list)
+<a class="ln" id="ln-604" href="#ln-604"></a>            <span class="k">call</span> json%add(array, <span class="s">''</span>, list(j)%s)
+<a class="ln" id="ln-605" href="#ln-605"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-606" href="#ln-606"></a>    <span class="k">end</span> <span class="k">subroutine</span> put_list
+<a class="ln" id="ln-607" href="#ln-607"></a>
+<a class="ln" id="ln-608" href="#ln-608"></a>    <span class="d">!&gt; Add a map option.</span>
+<a class="ln" id="ln-609" href="#ln-609"></a>    <span class="k">subroutine</span> put_map(key, map)
+<a class="ln" id="ln-610" href="#ln-610"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key         <span class="d">!! the option</span>
+<a class="ln" id="ln-611" href="#ln-611"></a>        <span class="k">type</span>(map_entry_t), <span class="k">intent</span>(in) :: map(:)     <span class="d">!! its entries</span>
+<a class="ln" id="ln-612" href="#ln-612"></a>        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: object
+<a class="ln" id="ln-613" href="#ln-613"></a>        <span class="k">integer</span> :: j
+<a class="ln" id="ln-614" href="#ln-614"></a>        <span class="k">call</span> json%create_object(object, key)
+<a class="ln" id="ln-615" href="#ln-615"></a>        <span class="k">call</span> json%add(root, object)
+<a class="ln" id="ln-616" href="#ln-616"></a>        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(map)
+<a class="ln" id="ln-617" href="#ln-617"></a>            <span class="k">call</span> json%add(object, map(j)%key, map(j)%<span class="k">value</span>)
+<a class="ln" id="ln-618" href="#ln-618"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-619" href="#ln-619"></a>    <span class="k">end</span> <span class="k">subroutine</span> put_map
+<a class="ln" id="ln-620" href="#ln-620"></a>
+<a class="ln" id="ln-621" href="#ln-621"></a><span class="k">end</span> <span class="k">function</span> dump_settings
+<a class="ln" id="ln-622" href="#ln-622"></a>
+<a class="ln" id="ln-623" href="#ln-623"></a><span class="k">end</span> <span class="k">module</span> fdoc_settings
+<a class="ln" id="ln-624" href="#ln-624"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

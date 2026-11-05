@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>progress_tick &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_progress.f90.html">fdoc_progress.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_progress.html">fdoc_progress</a></div>
+<h1><span class="kind">subroutine</span>progress_tick</h1>
+<div class="sig"><span class="k">subroutine</span> progress_tick(<span class="intent attr-in" title="intent(in)">steps</span>)</div>
+<div class="doc">
+<p>Count a step, or <code>steps</code> of them. This can be called from any thread.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-steps"><td class="name">steps</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-optional">optional</span></td><td><p>how many steps</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/write_line.html">write_line</a></li><li><a href="../proc/draw.html">draw</a></li></ul>
+<div class="graph"><svg width="333pt" height="70pt"
+ viewBox="0 0 333 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/progress_tick.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="91.7" height="21.6"/><text x="45.9" y="-26.1">progress_tick</text></a><a href="../proc/write_line.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127.7" y="-21.6" width="69.3" height="21.6"/><text x="162.4" y="-6.1">write_line</text></a><path d="M92.4,-22.8C101.2,-21.3 110.4,-19.7 119.1,-18.2"/><polygon fill="#8a93a5" points="119.3,-20.6 125.7,-17 118.4,-15.8"/><a href="../proc/draw.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="135.4" y="-61.6" width="54" height="21.6"/><text x="162.4" y="-46.1">draw</text></a><path d="M92.4,-38.8C103.9,-40.8 115.9,-42.9 126.7,-44.7"/><polygon fill="#8a93a5" points="126.2,-47.2 133.6,-45.9 127.1,-42.3"/><a href="../proc/bar_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="248.6" y="-61.6" width="61.4" height="21.6"/><text x="279.2" y="-46.1">bar_text</text></a><path d="M195.7,-22C209.6,-26.9 225.9,-32.6 240.3,-37.6"/><polygon fill="#8a93a5" points="239.3,-39.8 246.7,-39.8 240.9,-35.2"/><a href="../proc/progress_line.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="233" y="-21.6" width="92.4" height="21.6"/><text x="279.2" y="-6.1">progress_line</text></a><path d="M197.5,-10.8C206,-10.8 215.4,-10.8 224.6,-10.8"/><polygon fill="#8a93a5" points="224.4,-13.3 231.4,-10.8 224.4,-8.4"/><path d="M189.7,-50.8C204.6,-50.8 223.5,-50.8 240,-50.8"/><polygon fill="#8a93a5" points="239.9,-53.3 246.9,-50.8 239.9,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/build_graphs.html">build_graphs</a></li><li><a href="../proc/draw_some.html">draw_some</a></li><li><a href="../proc/link_project.html">link_project</a></li><li><a href="../proc/load_project_sources.html">load_project_sources</a></li><li><a href="../proc/render_documentation.html">render_documentation</a></li><li><a href="../proc/write_entity_pages.html">write_entity_pages</a></li><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="821pt" height="187pt"
+ viewBox="0 0 821 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 182.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/progress_tick.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-100.6" width="91.7" height="21.6"/><text x="45.9" y="-85.1">progress_tick</text></a><a href="../proc/render_documentation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="245.3" y="-178.6" width="144.5" height="21.6"/><text x="317.5" y="-163.1">render_documentation</text></a><path d="M245,-169.4C208.8,-168 164.8,-163 127.7,-148.8 103.4,-139.5 79.9,-120.9 64.6,-107.1"/><polygon fill="#8a93a5" points="66.4,-105.5 59.6,-102.5 63.1,-109.1"/><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="442.8" y="-61.6" width="88.8" height="21.6"/><text x="487.2" y="-46.1">build_graphs</text></a><path d="M453,-62.1C419.5,-72.6 366.1,-87.1 318.5,-89.8"/><path d="M316.5,-89.8C241.8,-94.1 155.2,-93 100.7,-91.6"/><polygon fill="#8a93a5" points="100.8,-89.2 93.7,-91.4 100.7,-94.1"/><a href="../proc/draw_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="272.8" y="-61.6" width="89.6" height="21.6"/><text x="317.5" y="-46.1">draw_graphs</text></a><path d="M442.6,-50.8C420.7,-50.8 394.1,-50.8 371.1,-50.8"/><polygon fill="#8a93a5" points="371.3,-48.4 364.3,-50.8 371.3,-53.3"/><a href="../proc/draw_some.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127.7" y="-61.6" width="81.6" height="21.6"/><text x="168.5" y="-46.1">draw_some</text></a><path d="M132.6,-62.1C119.7,-66.3 104.9,-71 91.2,-75.5"/><polygon fill="#8a93a5" points="90.7,-73.1 84.8,-77.5 92.2,-77.7"/><a href="../proc/link_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="128.4" y="-139.6" width="80.2" height="21.6"/><text x="168.5" y="-124.1">link_project</text></a><path d="M132.6,-117.5C119.7,-113.3 104.9,-108.6 91.2,-104.1"/><polygon fill="#8a93a5" points="92.2,-101.9 84.8,-102.1 90.7,-106.5"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="584.6" y="-100.6" width="138" height="21.6"/><text x="653.6" y="-85.1">load_project_sources</text></a><path d="M584.1,-88C554.6,-87.7 519.7,-87.9 488.2,-89.8"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="425.8" y="-21.6" width="122.8" height="21.6"/><text x="487.2" y="-6.1">write_entity_pages</text></a><path d="M425.5,-4C352.5,2 227.4,4.8 127.7,-30.8 103.1,-39.6 79.5,-58.4 64.2,-72.5"/><polygon fill="#8a93a5" points="62.7,-70.5 59.3,-77.1 66,-74.1"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="618.9" y="-60.6" width="69.3" height="21.6"/><text x="653.6" y="-45.1">write_site</text></a><path d="M618.5,-59.6C578.2,-71 513.3,-88.3 488.2,-89.8"/><path d="M486.2,-89.8C411.8,-94.3 392.9,-84.9 318.5,-89.8"/><path d="M618.5,-50C596,-50.1 565.9,-50.3 540.4,-50.5"/><polygon fill="#8a93a5" points="540.4,-48 533.4,-50.5 540.4,-52.9"/><path d="M618.5,-41.7C597,-36.6 568.6,-29.9 543.9,-24"/><polygon fill="#8a93a5" points="544.5,-21.6 537.1,-22.4 543.3,-26.4"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="758.6" y="-100.6" width="54" height="21.6"/><text x="785.6" y="-85.1">run</text></a><path d="M486.2,-167.8C457.6,-166.2 426.3,-165.8 398.5,-165.9"/><polygon fill="#8a93a5" points="398.5,-163.5 391.5,-166 398.5,-168.4"/><path d="M761.6,-101.1C712.5,-124.1 593.1,-173.8 488.2,-167.8"/><path d="M486.2,-167.8C442.5,-169 433.1,-154.1 389.8,-147.8 330.7,-139.2 262.2,-134 217.4,-131.3"/><polygon fill="#8a93a5" points="217.7,-128.9 210.6,-130.9 217.4,-133.7"/><path d="M758.3,-89.8C750.1,-89.8 740.8,-89.8 731,-89.8"/><polygon fill="#8a93a5" points="731.3,-87.4 724.3,-89.8 731.3,-92.3"/><path d="M758.4,-81.2C747.3,-77.6 734.3,-73.4 722.6,-69.8 714.2,-67.2 705.2,-64.5 696.6,-62"/><polygon fill="#8a93a5" points="697.4,-59.7 690,-60 696,-64.4"/><path d="M272.4,-50.8C255.3,-50.8 235.6,-50.8 218,-50.8"/><polygon fill="#8a93a5" points="218.1,-48.4 211.1,-50.8 218.1,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> progress_tick(steps)
+    <span class="k">integer</span>, <span class="k">intent</span>(in), <span class="k">optional</span> :: steps  <span class="d">!! how many steps</span>
+    <span class="k">integer</span>(int64) :: now
+    <span class="k">integer</span> :: amount, <span class="k">count</span>
+
+    <span class="k">if</span> (<span class="k">.not.</span> enabled) <span class="k">return</span>
+    amount = <span class="n">1</span>
+    <span class="k">if</span> (<span class="k">present</span>(steps)) amount = steps
+    <span class="c">!$omp atomic capture</span>
+    done = done + amount
+    <span class="k">count</span> = done
+    <span class="c">!$omp end atomic</span>
+    <span class="k">if</span> (lines) <span class="k">then</span>
+        <span class="k">call</span> write_line(<span class="k">count</span>)
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">if</span> (<span class="k">.not.</span> live <span class="k">.or.</span> omp_get_thread_num() /= <span class="n">0</span>) <span class="k">return</span>
+    <span class="k">call</span> <span class="k">system_clock</span>(now)
+    <span class="k">if</span> ((now - last_draw)*<span class="n">1000</span> &lt; REDRAW_MILLISECONDS*rate) <span class="k">return</span>
+    last_draw = now
+    <span class="c">!$omp critical (file_io)</span>
+    <span class="k">call</span> draw()
+    <span class="c">!$omp end critical (file_io)</span>
+<span class="k">end</span> <span class="k">subroutine</span> progress_tick</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

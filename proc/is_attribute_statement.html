@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>is_attribute_statement &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">function</span>is_attribute_statement<span class="attr attr-private">private</span></h1>
+<div class="sig">logical <span class="k">function</span> is_attribute_statement(<span class="intent attr-in" title="intent(in)">low</span>)</div>
+<div class="doc">
+<p>True if <code>low</code> starts with a word that gives attributes to names listed after it.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-low"><td class="name">low</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the statement, in lowercase</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-is_attribute_statement"><td class="name">is_attribute_statement</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/starts_word.html">starts_word</a></li><li><a href="../proc/strip.html">strip</a></li></ul>
+<div class="graph"><svg width="365pt" height="70pt"
+ viewBox="0 0 365 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_attribute_statement.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="142.3" height="21.6"/><text x="71.2" y="-26.1">is_attribute_statement</text></a><a href="../proc/starts_word.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="178.3" y="-61.6" width="81.6" height="21.6"/><text x="219.1" y="-46.1">starts_word</text></a><path d="M143,-40.5C152,-41.7 161.1,-43 169.7,-44.2"/><polygon fill="#8a93a5" points="169.3,-46.6 176.6,-45.1 170,-41.7"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="192.1" y="-21.6" width="54" height="21.6"/><text x="219.1" y="-6.1">strip</text></a><path d="M143,-21.1C157.2,-19.2 171.4,-17.2 183.7,-15.5"/><polygon fill="#8a93a5" points="183.7,-18 190.3,-14.6 183,-13.1"/><a href="../proc/word_at.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="295.9" y="-61.6" width="60.6" height="21.6"/><text x="326.2" y="-46.1">word_at</text></a><path d="M260.1,-50.8C268.9,-50.8 278.2,-50.8 286.9,-50.8"/><polygon fill="#8a93a5" points="286.9,-53.3 293.9,-50.8 286.9,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/is_executable.html">is_executable</a></li><li><a href="../proc/parse_statement.html">parse_statement</a></li></ul>
+<div class="graph"><svg width="809pt" height="70pt"
+ viewBox="0 0 809 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_attribute_statement.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="142.3" height="21.6"/><text x="71.2" y="-26.1">is_attribute_statement</text></a><a href="../proc/is_executable.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="187" y="-21.6" width="93.9" height="21.6"/><text x="233.9" y="-6.1">is_executable</text></a><path d="M186.9,-16.5C175.8,-17.9 163.6,-19.4 151.5,-20.9"/><polygon fill="#8a93a5" points="151.3,-18.5 144.6,-21.8 151.9,-23.4"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="178.3" y="-61.6" width="111.2" height="21.6"/><text x="233.9" y="-46.1">parse_statement</text></a><path d="M178,-44C169.5,-42.9 160.5,-41.8 151.5,-40.7"/><polygon fill="#8a93a5" points="152,-38.3 144.8,-39.8 151.4,-43.1"/><a href="../proc/statement_calls.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="325.5" y="-21.6" width="104.7" height="21.6"/><text x="377.9" y="-6.1">statement_calls</text></a><path d="M325.2,-10.8C313.6,-10.8 301.3,-10.8 289.5,-10.8"/><polygon fill="#8a93a5" points="289.6,-8.4 282.6,-10.8 289.6,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="466.3" y="-40.6" width="70.8" height="21.6"/><text x="501.6" y="-25.1">parse_file</text></a><path d="M465.9,-32.5C423.4,-35.9 350.8,-41.6 298.3,-45.8"/><polygon fill="#8a93a5" points="298.3,-43.3 291.5,-46.3 298.7,-48.2"/><path d="M466.1,-24.4C457.5,-23.1 448,-21.6 438.6,-20.1"/><polygon fill="#8a93a5" points="439.2,-17.7 431.9,-19.1 438.4,-22.6"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="573" y="-40.6" width="138" height="21.6"/><text x="642" y="-25.1">load_project_sources</text></a><path d="M572.6,-29.8C563.4,-29.8 554.2,-29.8 545.7,-29.8"/><polygon fill="#8a93a5" points="545.8,-27.4 538.8,-29.8 545.8,-32.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="747" y="-40.6" width="54" height="21.6"/><text x="774" y="-25.1">run</text></a><path d="M746.7,-29.8C738.6,-29.8 729.2,-29.8 719.5,-29.8"/><polygon fill="#8a93a5" points="719.7,-27.4 712.7,-29.8 719.7,-32.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">logical</span> <span class="k">function</span> is_attribute_statement(low)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: low     <span class="d">!! the statement, in lowercase</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: compact
+    <span class="k">integer</span> :: k, n
+
+    is_attribute_statement = <span class="k">.false.</span>
+    <span class="k">if</span> (starts_word(low, <span class="s">'bind'</span>)) <span class="k">then</span>
+        is_attribute_statement = <span class="k">index</span>(low, <span class="s">')'</span>) &gt; <span class="n">0</span>
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">if</span> (starts_word(low, <span class="s">'intent'</span>)) <span class="k">then</span>
+        is_attribute_statement = <span class="k">.true.</span>
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(ATTRIBUTE_WORDS)
+        <span class="k">if</span> (<span class="k">.not.</span> starts_word(low, <span class="k">trim</span>(ATTRIBUTE_WORDS(k)))) <span class="k">cycle</span>
+        n = <span class="k">len_trim</span>(ATTRIBUTE_WORDS(k))
+        compact = strip(low(n + <span class="n">1</span>:))
+        <span class="k">if</span> (<span class="k">len</span>(compact) == <span class="n">0</span>) <span class="k">then</span>
+            is_attribute_statement = <span class="k">trim</span>(ATTRIBUTE_WORDS(k)) == <span class="s">'save'</span>
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="c">! not an assignment to a variable named like the attribute</span>
+        is_attribute_statement = compact(<span class="n">1</span>:<span class="n">1</span>) /= <span class="s">'='</span> <span class="k">.and.</span> compact(<span class="n">1</span>:<span class="n">1</span>) /= <span class="s">'%'</span>
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">function</span> is_attribute_statement</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

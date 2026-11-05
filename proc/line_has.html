@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>line_has &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">function</span>line_has<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> line_has(<span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-in" title="intent(in)">keyword</span>, <span class="intent attr-in" title="intent(in)">name</span>)</div>
+<div class="doc">
+<p>The position of <code>keyword</code> followed by <code>name</code> in <code>line</code>, or 0.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-line"><td class="name">line</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the line</p></td></tr>
+<tr id="variable-keyword"><td class="name">keyword</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the keyword</p></td></tr>
+<tr id="variable-name"><td class="name">name</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the name</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-line_has"><td class="name">line_has</td><td class="type">integer</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/word_at.html">word_at</a></li><li><a href="../proc/starts_word.html">starts_word</a></li></ul>
+<div class="graph"><svg width="285pt" height="49pt"
+ viewBox="0 0 285 49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 44.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/line_has.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="62.8" height="21.6"/><text x="31.4" y="-25.1">line_has</text></a><a href="../proc/word_at.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="216.4" y="-40.6" width="60.6" height="21.6"/><text x="246.7" y="-25.1">word_at</text></a><path d="M63.5,-30.4C74.6,-30.5 87.3,-30.7 98.8,-30.8 135.1,-31.1 144.2,-31.1 180.4,-30.8 189.3,-30.7 198.8,-30.6 207.8,-30.5"/><polygon fill="#8a93a5" points="207.7,-32.9 214.6,-30.4 207.6,-28"/><a href="../proc/starts_word.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="98.8" y="-21.6" width="81.6" height="21.6"/><text x="139.6" y="-6.1">starts_word</text></a><path d="M63.7,-24.2C72,-22.7 81.3,-21.1 90.3,-19.4"/><polygon fill="#8a93a5" points="90.5,-21.9 97,-18.2 89.7,-17.1"/><path d="M180.7,-18C189.5,-19.6 198.9,-21.3 207.7,-22.9"/><polygon fill="#8a93a5" points="207.1,-25.3 214.5,-24.1 208,-20.5"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/find_source.html">find_source</a></li></ul>
+<div class="graph"><svg width="648pt" height="30pt"
+ viewBox="0 0 648 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/line_has.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="62.8" height="21.6"/><text x="31.4" y="-6.1">line_has</text></a><a href="../proc/find_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="98.8" y="-21.6" width="81.6" height="21.6"/><text x="139.6" y="-6.1">find_source</text></a><path d="M98.5,-10.8C89.8,-10.8 80.7,-10.8 72.1,-10.8"/><polygon fill="#8a93a5" points="72.2,-8.4 65.2,-10.8 72.2,-13.3"/><a href="../proc/locate_in_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="216.4" y="-21.6" width="90.3" height="21.6"/><text x="261.6" y="-6.1">locate_in_file</text></a><path d="M216.3,-10.8C207.5,-10.8 198.2,-10.8 189.2,-10.8"/><polygon fill="#8a93a5" points="189.3,-8.4 182.3,-10.8 189.3,-13.3"/><a href="../proc/locate_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="342.7" y="-21.6" width="101.8" height="21.6"/><text x="393.6" y="-6.1">locate_sources</text></a><path d="M342.4,-10.8C333.6,-10.8 324.4,-10.8 315.6,-10.8"/><polygon fill="#8a93a5" points="315.7,-8.4 308.7,-10.8 315.7,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="480.6" y="-21.6" width="69.3" height="21.6"/><text x="515.2" y="-6.1">write_site</text></a><path d="M480.3,-10.8C471.8,-10.8 462.5,-10.8 453.2,-10.8"/><polygon fill="#8a93a5" points="453.3,-8.4 446.3,-10.8 453.3,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="585.9" y="-21.6" width="54" height="21.6"/><text x="612.9" y="-6.1">run</text></a><path d="M585.5,-10.8C577.1,-10.8 567.6,-10.8 558.4,-10.8"/><polygon fill="#8a93a5" points="558.6,-8.4 551.6,-10.8 558.6,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> line_has(line, keyword, name)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line    <span class="d">!! the line</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: keyword <span class="d">!! the keyword</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the name</span>
+    <span class="k">integer</span> :: k, n
+
+    line_has = <span class="n">0</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(line) - <span class="k">len</span>(keyword) + <span class="n">1</span>
+        <span class="k">if</span> (<span class="k">.not.</span> word_at(line, k, keyword)) <span class="k">cycle</span>
+        n = k + <span class="k">len</span>(keyword)
+        <span class="k">do</span> <span class="k">while</span> (n &lt;= <span class="k">len</span>(line))
+            <span class="k">if</span> (<span class="k">index</span>(<span class="s">' :,'</span>, line(n:n)) == <span class="n">0</span>) <span class="k">exit</span>
+            <span class="k">if</span> (line(n:n) == <span class="s">','</span>) <span class="k">exit</span>
+            n = n + <span class="n">1</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (n &lt;= <span class="k">len</span>(line)) <span class="k">then</span>
+            <span class="k">if</span> (word_at(line, n, name)) <span class="k">then</span>
+                line_has = k
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (keyword == <span class="s">'type'</span> <span class="k">.and.</span> <span class="k">index</span>(line, <span class="s">'::'</span>) &gt; <span class="n">0</span>) <span class="k">then</span>
+        n = <span class="k">index</span>(line, <span class="s">'::'</span>) + <span class="n">2</span>
+        n = n + <span class="k">verify</span>(line(n:)//<span class="s">'x'</span>, <span class="s">' '</span>) - <span class="n">1</span>
+        <span class="k">if</span> (word_at(line, n, name) <span class="k">.and.</span> starts_word(<span class="k">adjustl</span>(line), <span class="s">'type'</span>)) line_has = <span class="n">1</span>
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">function</span> line_has</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

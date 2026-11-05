@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>remove_markdown_attribute &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>remove_markdown_attribute<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> remove_markdown_attribute(<span class="intent attr-inout" title="intent(inout)">open_tag</span>)</div>
+<div class="doc">
+<p>Remove <code>markdown="..."</code> from an opening tag.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-open_tag"><td class="name">open_tag</td><td class="type">character(len=:)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the tag</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/strip.html">strip</a></li></ul>
+<div class="graph"><svg width="296pt" height="70pt"
+ viewBox="0 0 296 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/remove_markdown_attribute.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="179.1" height="21.6"/><text x="89.6" y="-26.1">remove_markdown_attribute</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="215.1" y="-61.6" width="72.9" height="21.6"/><text x="251.6" y="-46.1">lowercase</text></a><path d="M179.9,-42C189.1,-43.1 198.1,-44.2 206.4,-45.3"/><polygon fill="#8a93a5" points="206.1,-47.7 213.3,-46.1 206.7,-42.8"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="224.6" y="-21.6" width="54" height="21.6"/><text x="251.6" y="-6.1">strip</text></a><path d="M179.9,-19.6C192.7,-18 205.2,-16.5 216,-15.1"/><polygon fill="#8a93a5" points="216.1,-17.6 222.7,-14.3 215.5,-12.7"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/stash_html_blocks.html">stash_html_blocks</a></li></ul>
+<div class="graph"><svg width="1023pt" height="148pt"
+ viewBox="0 0 1023 148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 143.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/remove_markdown_attribute.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="148.7" y="-139.6" width="179.1" height="21.6"/><text x="238.3" y="-124.1">remove_markdown_attribute</text></a><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="363.8" y="-139.6" width="121.3" height="21.6"/><text x="424.5" y="-124.1">stash_html_blocks</text></a><path d="M363.4,-128.8C354.9,-128.8 346,-128.8 337,-128.8"/><polygon fill="#8a93a5" points="337.2,-126.4 330.2,-128.8 337.2,-131.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="176.2" y="-99.6" width="124.2" height="21.6"/><text x="238.3" y="-84.1">markdown_to_html</text></a><path d="M363.6,-115.8C342.9,-111.3 319.8,-106.3 299.1,-101.8"/><polygon fill="#8a93a5" points="362.9,-118.1 370.2,-117.2 363.9,-113.4"/><polygon fill="#8a93a5" points="299.8,-99.4 292.5,-100.4 298.8,-104.2"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="0" y="-99.6" width="112.7" height="21.6"/><text x="56.3" y="-84.1">render_footnotes</text></a><path d="M167.6,-88.8C152.4,-88.8 136.3,-88.8 121.3,-88.8"/><polygon fill="#8a93a5" points="167.3,-91.3 174.3,-88.8 167.3,-86.4"/><polygon fill="#8a93a5" points="121.6,-86.4 114.6,-88.8 121.6,-91.3"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="521.2" y="-100.6" width="97.5" height="21.6"/><text x="569.9" y="-85.1">markdown_list</text></a><path d="M521,-89.7C465.3,-89.5 372.9,-89.2 309.1,-89"/><polygon fill="#8a93a5" points="309.3,-86.6 302.3,-89 309.3,-91.5"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="384.4" y="-61.6" width="80.2" height="21.6"/><text x="424.5" y="-46.1">render_text</text></a><path d="M384,-59C360.1,-63.9 329.2,-70.3 302,-75.9"/><polygon fill="#8a93a5" points="301.6,-73.4 295.2,-77.3 302.6,-78.2"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="961.4" y="-61.6" width="54" height="21.6"/><text x="988.4" y="-46.1">run</text></a><path d="M698.8,-89.8C675.4,-88.1 649.6,-87.7 627.3,-88"/><polygon fill="#8a93a5" points="627.4,-85.5 620.5,-88.1 627.5,-90.4"/><path d="M961.2,-60.7C950.3,-64.5 937.4,-68.4 925.4,-70.8 827.2,-90.5 800.7,-97.3 700.8,-89.8"/><path d="M698.8,-89.8C639.5,-86.9 630.2,-55.2 570.9,-50.8"/><a href="../proc/render_documentation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="780.9" y="-61.6" width="144.5" height="21.6"/><text x="853.2" y="-46.1">render_documentation</text></a><path d="M961.1,-50.8C953,-50.8 943.7,-50.8 934,-50.8"/><polygon fill="#8a93a5" points="934.3,-48.4 927.3,-50.8 934.3,-53.3"/><a href="../proc/load_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="812.4" y="-21.6" width="81.6" height="21.6"/><text x="853.2" y="-6.1">load_pages</text></a><path d="M961,-42C950,-38.4 937.1,-34.3 925.4,-30.8 917.9,-28.5 909.8,-26.2 902,-23.9"/><polygon fill="#8a93a5" points="903.1,-21.7 895.7,-22.2 901.7,-26.4"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="654.7" y="-61.6" width="90.3" height="21.6"/><text x="699.8" y="-46.1">render_entity</text></a><path d="M654.4,-52.4C629.7,-52.9 598.6,-52.9 570.9,-50.8"/><path d="M568.9,-50.8C537.1,-48.4 501.2,-48.4 473.2,-49"/><polygon fill="#8a93a5" points="473.3,-46.6 466.3,-49.2 473.4,-51.5"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="531.6" y="-22.6" width="76.6" height="21.6"/><text x="569.9" y="-7.1">read_page</text></a><path d="M531.2,-22C513.5,-26.9 492,-32.7 473.1,-37.8"/><polygon fill="#8a93a5" points="472.5,-35.5 466.4,-39.7 473.8,-40.2"/><path d="M780.5,-50.8C771.3,-50.8 762.1,-50.8 753.3,-50.8"/><polygon fill="#8a93a5" points="753.6,-48.4 746.6,-50.8 753.6,-53.3"/><a href="../proc/read_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="664.8" y="-21.6" width="70" height="21.6"/><text x="699.8" y="-6.1">read_tree</text></a><path d="M664.5,-11.1C649.8,-11.2 632.3,-11.3 616.5,-11.4"/><polygon fill="#8a93a5" points="616.9,-9 609.9,-11.5 617,-13.9"/><path d="M812,-10.8C790.8,-10.8 764.8,-10.8 743.3,-10.8"/><polygon fill="#8a93a5" points="743.5,-8.4 736.5,-10.8 743.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> remove_markdown_attribute(open_tag)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: open_tag    <span class="d">!! the tag</span>
+    <span class="k">integer</span> :: a, b
+
+    a = <span class="k">index</span>(lowercase(open_tag), <span class="s">'markdown='</span>)
+    b = a + <span class="n">9</span>
+    <span class="k">if</span> (open_tag(b:b) == <span class="s">'"'</span> <span class="k">.or.</span> open_tag(b:b) == <span class="s">"'"</span>) b = b + <span class="k">index</span>(open_tag(b + <span class="n">1</span>:), open_tag(b:b))
+    open_tag = strip(open_tag(:a - <span class="n">1</span>))//open_tag(b + <span class="n">1</span>:)
+    a = <span class="k">index</span>(open_tag, <span class="s">' &gt;'</span>)
+    <span class="k">if</span> (a &gt; <span class="n">0</span>) open_tag = open_tag(:a - <span class="n">1</span>)//open_tag(a + <span class="n">1</span>:)
+<span class="k">end</span> <span class="k">subroutine</span> remove_markdown_attribute</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

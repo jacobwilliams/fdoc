@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_progress.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_progress.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_progress"><h3><a href="../module/fdoc_progress.html">fdoc_progress</a><span class="attr attr-private">private</span></h3>
+<p>Progress in the terminal: a live bar for each stage of the run, leaving a line with its time, and
+warnings that do not get mixed up with the bar. When standard output is not a terminal there are
+no bars or colours, just a line for each stage.</p>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="1102pt" height="299pt"
+ viewBox="0 0 1102 299" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 294.8)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_progress.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-138.6" width="118.5" height="21.6"/><text x="59.2" y="-123.1">fdoc_progress.f90</text></a><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="1033.6" y="-109.6" width="60.7" height="21.6"/><text x="1063.9" y="-94.1">fdoc.f90</text></a><path d="M678.6,-282.8C611.3,-278.5 594.2,-278.5 526.9,-282.8"/><a href="../sourcefile/fdoc_docs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="631.9" y="-254.6" width="95.3" height="21.6"/><text x="679.6" y="-239.1">fdoc_docs.f90</text></a><path d="M952.5,-185.8C885.3,-212 892.4,-265.1 822.5,-282.8"/><path d="M820.5,-282.8C800.7,-287.8 750.4,-271 715.8,-257.9"/><polygon fill="#8a93a5" points="717,-255.8 709.6,-255.6 715.3,-260.4"/><a href="../sourcefile/fdoc_links.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="632.7" y="-21.6" width="93.9" height="21.6"/><text x="679.6" y="-6.1">fdoc_links.f90</text></a><path d="M1033.1,-89.1C1022,-85.6 1009.3,-81.8 997.6,-78.8 906.2,-55.1 798.5,-33.2 735.1,-21"/><polygon fill="#8a93a5" points="735.7,-18.6 728.3,-19.7 734.7,-23.4"/><a href="../sourcefile/fdoc_markdown.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="461.9" y="-254.6" width="127.9" height="21.6"/><text x="525.9" y="-239.1">fdoc_markdown.f90</text></a><path d="M820.5,-282.8C760.2,-298.1 742.6,-286.7 680.6,-282.8"/><path d="M678.6,-282.8C638.9,-280.3 595,-267.9 564.6,-257.7"/><polygon fill="#8a93a5" points="565.7,-255.5 558.3,-255.6 564.1,-260.2"/><a href="../sourcefile/fdoc_pages.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="769.8" y="-216.6" width="103.3" height="21.6"/><text x="821.5" y="-201.1">fdoc_pages.f90</text></a><path d="M952.5,-185.8C930.2,-194.5 904.4,-199.4 881.7,-202.2"/><polygon fill="#8a93a5" points="881.7,-199.7 875,-203 882.2,-204.6"/><a href="../sourcefile/fdoc_project.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="472.4" y="-138.6" width="106.9" height="21.6"/><text x="525.9" y="-123.1">fdoc_project.f90</text></a><path d="M952.5,-185.8C938.4,-191.3 695.7,-167.8 680.6,-166.8"/><path d="M678.6,-166.8C640,-162.7 597.3,-151.1 567,-141.5"/><polygon fill="#8a93a5" points="568.1,-139.3 560.7,-139.5 566.6,-144"/><a href="../sourcefile/fdoc_project_file.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="154.5" y="-177.6" width="130.8" height="21.6"/><text x="219.8" y="-162.1">fdoc_project_file.f90</text></a><path d="M678.6,-166.8C543.3,-152.5 384.3,-157.3 293.8,-162.1"/><polygon fill="#8a93a5" points="293.9,-159.6 287,-162.4 294.1,-164.5"/><a href="../sourcefile/fdoc_site.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="909.5" y="-109.6" width="88.1" height="21.6"/><text x="953.5" y="-94.1">fdoc_site.f90</text></a><path d="M1033.3,-98.8C1024.9,-98.8 1015.6,-98.8 1006.4,-98.8"/><polygon fill="#8a93a5" points="1006.4,-96.4 999.4,-98.8 1006.4,-101.3"/><a href="../sourcefile/fdoc_output.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="769.4" y="-138.6" width="104" height="21.6"/><text x="821.5" y="-123.1">fdoc_output.f90</text></a><path d="M1053.5,-109.8C1036.3,-129.3 997.2,-169.2 954.5,-185.8"/><path d="M952.5,-185.8C947.5,-187.7 889.8,-160.5 852.9,-142.7"/><polygon fill="#8a93a5" points="854.1,-140.6 846.8,-139.7 852,-145"/><path d="M648.6,-255.1C618.4,-265.6 570.2,-280.1 526.9,-282.8"/><path d="M524.9,-282.8C458.2,-287 440.4,-294 374.6,-282.8"/><path d="M631.9,-243.8C621.3,-243.8 609.8,-243.8 598.5,-243.8"/><polygon fill="#8a93a5" points="598.7,-241.4 591.7,-243.8 598.7,-246.3"/><path d="M650.9,-232.6C642.5,-228.7 633.5,-224 625.8,-218.8 593.5,-197 561.2,-164.9 542.7,-145.2"/><polygon fill="#8a93a5" points="544.5,-143.6 538,-140.2 540.9,-147"/><a href="../sourcefile/fdoc_graphs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="625.8" y="-99.6" width="107.6" height="21.6"/><text x="679.6" y="-84.1">fdoc_graphs.f90</text></a><path d="M651.7,-77.5C621.8,-66 571.8,-49.8 526.9,-49.8"/><path d="M634.7,-100.1C617.3,-104.6 597,-109.8 578.9,-114.4"/><polygon fill="#8a93a5" points="578.3,-112.1 572.1,-116.2 579.5,-116.8"/><a href="../sourcefile/fdoc_input.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="171.8" y="-99.6" width="96.1" height="21.6"/><text x="219.8" y="-84.1">fdoc_input.f90</text></a><path d="M173,-100.1C155.2,-104.5 134.7,-109.5 116.1,-114.1"/><polygon fill="#8a93a5" points="115.9,-111.6 109.7,-115.6 117.1,-116.3"/><path d="M651.7,-22.1C621.8,-33.6 571.8,-49.8 526.9,-49.8"/><path d="M524.9,-49.8C360,-49.8 311.7,-19.2 154.5,-68.8 126.3,-77.7 98.1,-97.1 80,-111.2"/><polygon fill="#8a93a5" points="78.9,-108.9 75,-115.2 82,-112.7"/><path d="M664.1,-22C637,-42.9 579,-87.6 547.8,-111.7"/><polygon fill="#8a93a5" points="546.4,-109.6 542.4,-115.9 549.4,-113.5"/><path d="M494,-255C457.1,-267.9 397.4,-286.7 374.6,-282.8"/><path d="M372.6,-282.8C298,-270.1 291.9,-231.6 220.8,-205.8"/><path d="M372.6,-205.8C305.3,-201.5 284.2,-228.8 220.8,-205.8"/><path d="M218.8,-205.8C190.8,-195.6 181.7,-199.1 154.5,-186.8 128.5,-175.1 101.2,-157.3 82.7,-144.3"/><polygon fill="#8a93a5" points="84.2,-142.4 77.1,-140.3 81.3,-146.4"/><path d="M778.9,-217.1C763.5,-221.3 746,-226 730,-230.4"/><polygon fill="#8a93a5" points="729.4,-228 723.3,-232.2 730.7,-232.7"/><path d="M678.6,-204.8C636.6,-202.9 590,-217.6 559.6,-229.4"/><polygon fill="#8a93a5" points="558.9,-227.1 553.3,-232 560.7,-231.6"/><path d="M769.6,-206.4C743.1,-206.4 710.1,-206.1 680.6,-204.8"/><path d="M678.6,-204.8C626.1,-202.5 573.3,-166.2 546,-144.3"/><polygon fill="#8a93a5" points="547.7,-142.5 540.7,-140 544.6,-146.3"/><path d="M678.6,-204.8C543.6,-198.8 509.5,-213.9 374.6,-205.8"/><path d="M372.6,-205.8C332.8,-203.3 288.9,-190.9 258.6,-180.7"/><polygon fill="#8a93a5" points="259.7,-178.5 252.2,-178.6 258.1,-183.1"/><path d="M372.6,-88.8C332.8,-86.3 324.6,-102.7 285.2,-108.8 232.6,-117 172.6,-121.8 127.7,-124.6"/><polygon fill="#8a93a5" points="127.6,-122.1 120.8,-125 127.9,-127"/><path d="M495.5,-116.6C465.6,-106 417.6,-91.5 374.6,-88.8"/><path d="M372.6,-88.8C340.8,-86.8 305.1,-86.7 276.4,-87.1"/><polygon fill="#8a93a5" points="276.5,-84.7 269.6,-87.3 276.6,-89.6"/><a href="../sourcefile/fdoc_parser.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="321.2" y="-138.6" width="104.7" height="21.6"/><text x="373.6" y="-123.1">fdoc_parser.f90</text></a><path d="M472.3,-127.8C460.2,-127.8 447.2,-127.8 434.8,-127.8"/><polygon fill="#8a93a5" points="434.9,-125.4 427.9,-127.8 434.9,-130.3"/><path d="M173,-155.5C155.2,-151.1 134.7,-146.1 116.1,-141.5"/><polygon fill="#8a93a5" points="117.1,-139.3 109.7,-140 115.9,-144"/><path d="M909.2,-94.6C883.9,-92.4 851.4,-89.9 822.5,-88.8"/><path d="M820.5,-88.8C780.8,-87.3 772.6,-75.1 733.4,-68.8 642.4,-54.2 619,-51.8 526.9,-49.8"/><path d="M820.5,-88.8C794.8,-87.8 766.6,-87.7 742.2,-87.8"/><polygon fill="#8a93a5" points="742.3,-85.3 735.3,-87.8 742.3,-90.2"/><path d="M939.1,-109.8C916.1,-128.7 869.2,-167.4 842.4,-189.4"/><polygon fill="#8a93a5" points="841,-187.4 837.2,-193.7 844.1,-191.1"/><path d="M820.5,-88.8C756,-86.4 745,-123.4 680.6,-127.8"/><path d="M678.6,-127.8C648.8,-129.8 615.7,-130.1 588,-129.7"/><polygon fill="#8a93a5" points="588.2,-127.3 581.1,-129.6 588.1,-132.2"/><path d="M769.3,-126.1C742.8,-125.7 709.9,-125.8 680.6,-127.8"/><path d="M328.7,-139.1C311.2,-143.6 291,-148.8 272.8,-153.4"/><polygon fill="#8a93a5" points="272.3,-151.1 266.1,-155.2 273.5,-155.8"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_progress
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! Progress in the terminal: a live bar for each stage of the run, leaving a line with its time, and</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="d">!! warnings that do not get mixed up with the bar. When standard output is not a terminal there are</span>
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="d">!! no bars or colours, just a line for each stage.</span>
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="d">!!</span>
+<a class="ln" id="ln-6" href="#ln-6"></a><span class="d">!! With `--progress-lines` there are lines for another program to read from standard output instead,</span>
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="d">!! each written at once. Warnings stay on standard error, and a run that fails has no `[end]` line.</span>
+<a class="ln" id="ln-8" href="#ln-8"></a><span class="d">!!</span>
+<a class="ln" id="ln-9" href="#ln-9"></a><span class="d">!! ```text</span>
+<a class="ln" id="ln-10" href="#ln-10"></a><span class="d">!! [ 42%] Parsing files 83/198</span>
+<a class="ln" id="ln-11" href="#ln-11"></a><span class="d">!! [done] Parsing files in 0.22 s</span>
+<a class="ln" id="ln-12" href="#ln-12"></a><span class="d">!! [end] 3456 pages written to ./doc in 2.31 s</span>
+<a class="ln" id="ln-13" href="#ln-13"></a><span class="d">!! ```</span>
+<a class="ln" id="ln-14" href="#ln-14"></a><span class="d">!!</span>
+<a class="ln" id="ln-15" href="#ln-15"></a><span class="d">!! Stages run in parallel loops. Any thread can count, and only the first draws. Nothing here calls a</span>
+<a class="ln" id="ln-16" href="#ln-16"></a><span class="d">!! function returning a deferred-length string (see `example/slen_race.f90`).</span>
+<a class="ln" id="ln-17" href="#ln-17"></a><span class="k">use</span> iso_fortran_env, <span class="k">only</span>: output_unit, error_unit, int64
+<a class="ln" id="ln-18" href="#ln-18"></a><span class="k">use</span> iso_c_binding, <span class="k">only</span>: c_int
+<a class="ln" id="ln-19" href="#ln-19"></a><span class="k">use</span> omp_lib, <span class="k">only</span>: omp_get_thread_num
+<a class="ln" id="ln-20" href="#ln-20"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-21" href="#ln-21"></a><span class="k">private</span>
+<a class="ln" id="ln-22" href="#ln-22"></a>
+<a class="ln" id="ln-23" href="#ln-23"></a><span class="k">public</span> :: progress_enable, progress_start, progress_tick, progress_finish, progress_summary, warn, bar_text
+<a class="ln" id="ln-24" href="#ln-24"></a><span class="k">public</span> :: progress_line
+<a class="ln" id="ln-25" href="#ln-25"></a>
+<a class="ln" id="ln-26" href="#ln-26"></a><span class="k">interface</span>
+<a class="ln" id="ln-27" href="#ln-27"></a>    <span class="d">!&gt; C `isatty`.</span>
+<a class="ln" id="ln-28" href="#ln-28"></a>    <span class="k">function</span> c_isatty(fd) <span class="k">bind</span>(c, name=<span class="s">'isatty'</span>) <span class="k">result</span>(tty)
+<a class="ln" id="ln-29" href="#ln-29"></a>        <span class="k">import</span> :: c_int
+<a class="ln" id="ln-30" href="#ln-30"></a>        <span class="k">integer</span>(c_int), <span class="k">value</span> :: fd     <span class="d">!! the file descriptor</span>
+<a class="ln" id="ln-31" href="#ln-31"></a>        <span class="k">integer</span>(c_int) :: tty
+<a class="ln" id="ln-32" href="#ln-32"></a>    <span class="k">end</span> <span class="k">function</span> c_isatty
+<a class="ln" id="ln-33" href="#ln-33"></a><span class="k">end</span> <span class="k">interface</span>
+<a class="ln" id="ln-34" href="#ln-34"></a>
+<a class="ln" id="ln-35" href="#ln-35"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: ESC = <span class="k">achar</span>(<span class="n">27</span>)
+<a class="ln" id="ln-36" href="#ln-36"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: FULL = <span class="k">achar</span>(<span class="n">226</span>)//<span class="k">achar</span>(<span class="n">148</span>)//<span class="k">achar</span>(<span class="n">129</span>)    <span class="d">!! `━`, in UTF-8</span>
+<a class="ln" id="ln-37" href="#ln-37"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: EMPTY = <span class="k">achar</span>(<span class="n">226</span>)//<span class="k">achar</span>(<span class="n">148</span>)//<span class="k">achar</span>(<span class="n">128</span>)   <span class="d">!! `─`, in UTF-8</span>
+<a class="ln" id="ln-38" href="#ln-38"></a><span class="k">integer</span>, <span class="k">parameter</span> :: LABEL_WIDTH = <span class="n">24</span>
+<a class="ln" id="ln-39" href="#ln-39"></a><span class="k">integer</span>, <span class="k">parameter</span> :: BAR_WIDTH = <span class="n">30</span>
+<a class="ln" id="ln-40" href="#ln-40"></a><span class="k">integer</span>(int64), <span class="k">parameter</span> :: REDRAW_MILLISECONDS = <span class="n">40</span>
+<a class="ln" id="ln-41" href="#ln-41"></a>
+<a class="ln" id="ln-42" href="#ln-42"></a><span class="k">logical</span> :: enabled = <span class="k">.false.</span>            <span class="d">!! true to report progress</span>
+<a class="ln" id="ln-43" href="#ln-43"></a><span class="k">logical</span> :: live = <span class="k">.false.</span>               <span class="d">!! true if standard output is a terminal</span>
+<a class="ln" id="ln-44" href="#ln-44"></a><span class="k">logical</span> :: lines = <span class="k">.false.</span>              <span class="d">!! true to write lines for another program</span>
+<a class="ln" id="ln-45" href="#ln-45"></a><span class="k">integer</span> :: last_percent = -<span class="n">1</span>            <span class="d">!! the last percentage written, with `lines`</span>
+<a class="ln" id="ln-46" href="#ln-46"></a><span class="k">logical</span> :: colour = <span class="k">.false.</span>             <span class="d">!! true to use colours</span>
+<a class="ln" id="ln-47" href="#ln-47"></a><span class="k">logical</span> :: drawn = <span class="k">.false.</span>              <span class="d">!! true if a bar is on the screen</span>
+<a class="ln" id="ln-48" href="#ln-48"></a><span class="k">character</span>(<span class="k">len</span>=LABEL_WIDTH) :: label = <span class="s">' '</span>   <span class="d">!! the current stage</span>
+<a class="ln" id="ln-49" href="#ln-49"></a><span class="k">integer</span> :: total = <span class="n">0</span>                    <span class="d">!! how many steps the stage has</span>
+<a class="ln" id="ln-50" href="#ln-50"></a><span class="k">integer</span> :: done = <span class="n">0</span>                     <span class="d">!! how many are finished</span>
+<a class="ln" id="ln-51" href="#ln-51"></a><span class="k">integer</span>(int64) :: stage_start = <span class="n">0</span>       <span class="d">!! when the stage started</span>
+<a class="ln" id="ln-52" href="#ln-52"></a><span class="k">integer</span>(int64) :: run_start = <span class="n">0</span>         <span class="d">!! when the run started</span>
+<a class="ln" id="ln-53" href="#ln-53"></a><span class="k">integer</span>(int64) :: last_draw = <span class="n">0</span>         <span class="d">!! when the bar was last drawn</span>
+<a class="ln" id="ln-54" href="#ln-54"></a><span class="k">integer</span>(int64) :: rate = <span class="n">1000</span>           <span class="d">!! clock ticks in a second</span>
+<a class="ln" id="ln-55" href="#ln-55"></a>
+<a class="ln" id="ln-56" href="#ln-56"></a><span class="k">contains</span>
+<a class="ln" id="ln-57" href="#ln-57"></a>
+<a class="ln" id="ln-58" href="#ln-58"></a><span class="d">!&gt; Turn progress reports on, with lines for another program if `for_programs`.</span>
+<a class="ln" id="ln-59" href="#ln-59"></a><span class="k">subroutine</span> progress_enable(for_programs)
+<a class="ln" id="ln-60" href="#ln-60"></a>    <span class="k">logical</span>, <span class="k">intent</span>(in) :: for_programs     <span class="d">!! true to write lines for another program</span>
+<a class="ln" id="ln-61" href="#ln-61"></a>    <span class="k">integer</span> :: n, <span class="k">stat</span>
+<a class="ln" id="ln-62" href="#ln-62"></a>
+<a class="ln" id="ln-63" href="#ln-63"></a>    enabled = <span class="k">.true.</span>
+<a class="ln" id="ln-64" href="#ln-64"></a>    lines = for_programs
+<a class="ln" id="ln-65" href="#ln-65"></a>    live = c_isatty(<span class="n">1_c_int</span>) == <span class="n">1</span> <span class="k">.and.</span> <span class="k">.not.</span> lines
+<a class="ln" id="ln-66" href="#ln-66"></a>    <span class="k">call</span> <span class="k">get_environment_variable</span>(<span class="s">'NO_COLOR'</span>, length=n, status=<span class="k">stat</span>)
+<a class="ln" id="ln-67" href="#ln-67"></a>    colour = live <span class="k">.and.</span> <span class="k">stat</span> /= <span class="n">0</span>
+<a class="ln" id="ln-68" href="#ln-68"></a>    <span class="k">call</span> <span class="k">system_clock</span>(run_start, rate)
+<a class="ln" id="ln-69" href="#ln-69"></a><span class="k">end</span> <span class="k">subroutine</span> progress_enable
+<a class="ln" id="ln-70" href="#ln-70"></a>
+<a class="ln" id="ln-71" href="#ln-71"></a><span class="d">!&gt; Start stage `name`, of `steps` steps, or of unknown length if that is 0.</span>
+<a class="ln" id="ln-72" href="#ln-72"></a><span class="k">subroutine</span> progress_start(name, steps)
+<a class="ln" id="ln-73" href="#ln-73"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the stage</span>
+<a class="ln" id="ln-74" href="#ln-74"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: steps            <span class="d">!! how many steps it has</span>
+<a class="ln" id="ln-75" href="#ln-75"></a>
+<a class="ln" id="ln-76" href="#ln-76"></a>    <span class="k">if</span> (<span class="k">.not.</span> enabled) <span class="k">return</span>
+<a class="ln" id="ln-77" href="#ln-77"></a>    label = name
+<a class="ln" id="ln-78" href="#ln-78"></a>    total = steps
+<a class="ln" id="ln-79" href="#ln-79"></a>    done = <span class="n">0</span>
+<a class="ln" id="ln-80" href="#ln-80"></a>    <span class="k">call</span> <span class="k">system_clock</span>(stage_start)
+<a class="ln" id="ln-81" href="#ln-81"></a>    last_draw = stage_start
+<a class="ln" id="ln-82" href="#ln-82"></a>    last_percent = -<span class="n">1</span>
+<a class="ln" id="ln-83" href="#ln-83"></a>    <span class="k">if</span> (live) <span class="k">call</span> draw()
+<a class="ln" id="ln-84" href="#ln-84"></a>    <span class="k">if</span> (lines) <span class="k">call</span> write_line(<span class="n">0</span>)
+<a class="ln" id="ln-85" href="#ln-85"></a><span class="k">end</span> <span class="k">subroutine</span> progress_start
+<a class="ln" id="ln-86" href="#ln-86"></a>
+<a class="ln" id="ln-87" href="#ln-87"></a><span class="d">!&gt; Count a step, or `steps` of them. This can be called from any thread.</span>
+<a class="ln" id="ln-88" href="#ln-88"></a><span class="k">subroutine</span> progress_tick(steps)
+<a class="ln" id="ln-89" href="#ln-89"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in), <span class="k">optional</span> :: steps  <span class="d">!! how many steps</span>
+<a class="ln" id="ln-90" href="#ln-90"></a>    <span class="k">integer</span>(int64) :: now
+<a class="ln" id="ln-91" href="#ln-91"></a>    <span class="k">integer</span> :: amount, <span class="k">count</span>
+<a class="ln" id="ln-92" href="#ln-92"></a>
+<a class="ln" id="ln-93" href="#ln-93"></a>    <span class="k">if</span> (<span class="k">.not.</span> enabled) <span class="k">return</span>
+<a class="ln" id="ln-94" href="#ln-94"></a>    amount = <span class="n">1</span>
+<a class="ln" id="ln-95" href="#ln-95"></a>    <span class="k">if</span> (<span class="k">present</span>(steps)) amount = steps
+<a class="ln" id="ln-96" href="#ln-96"></a>    <span class="c">!$omp atomic capture</span>
+<a class="ln" id="ln-97" href="#ln-97"></a>    done = done + amount
+<a class="ln" id="ln-98" href="#ln-98"></a>    <span class="k">count</span> = done
+<a class="ln" id="ln-99" href="#ln-99"></a>    <span class="c">!$omp end atomic</span>
+<a class="ln" id="ln-100" href="#ln-100"></a>    <span class="k">if</span> (lines) <span class="k">then</span>
+<a class="ln" id="ln-101" href="#ln-101"></a>        <span class="k">call</span> write_line(<span class="k">count</span>)
+<a class="ln" id="ln-102" href="#ln-102"></a>        <span class="k">return</span>
+<a class="ln" id="ln-103" href="#ln-103"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-104" href="#ln-104"></a>    <span class="k">if</span> (<span class="k">.not.</span> live <span class="k">.or.</span> omp_get_thread_num() /= <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-105" href="#ln-105"></a>    <span class="k">call</span> <span class="k">system_clock</span>(now)
+<a class="ln" id="ln-106" href="#ln-106"></a>    <span class="k">if</span> ((now - last_draw)*<span class="n">1000</span> &lt; REDRAW_MILLISECONDS*rate) <span class="k">return</span>
+<a class="ln" id="ln-107" href="#ln-107"></a>    last_draw = now
+<a class="ln" id="ln-108" href="#ln-108"></a>    <span class="c">!$omp critical (file_io)</span>
+<a class="ln" id="ln-109" href="#ln-109"></a>    <span class="k">call</span> draw()
+<a class="ln" id="ln-110" href="#ln-110"></a>    <span class="c">!$omp end critical (file_io)</span>
+<a class="ln" id="ln-111" href="#ln-111"></a><span class="k">end</span> <span class="k">subroutine</span> progress_tick
+<a class="ln" id="ln-112" href="#ln-112"></a>
+<a class="ln" id="ln-113" href="#ln-113"></a><span class="d">!&gt; Finish the stage, leaving its line.</span>
+<a class="ln" id="ln-114" href="#ln-114"></a><span class="k">subroutine</span> progress_finish()
+<a class="ln" id="ln-115" href="#ln-115"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="n">24</span>) :: <span class="k">time</span>
+<a class="ln" id="ln-116" href="#ln-116"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="n">16</span>) :: count_text
+<a class="ln" id="ln-117" href="#ln-117"></a>    <span class="k">integer</span>(int64) :: now
+<a class="ln" id="ln-118" href="#ln-118"></a>
+<a class="ln" id="ln-119" href="#ln-119"></a>    <span class="k">if</span> (<span class="k">.not.</span> enabled) <span class="k">return</span>
+<a class="ln" id="ln-120" href="#ln-120"></a>    <span class="k">call</span> <span class="k">system_clock</span>(now)
+<a class="ln" id="ln-121" href="#ln-121"></a>    <span class="k">call</span> seconds_text(now - stage_start, <span class="k">time</span>)
+<a class="ln" id="ln-122" href="#ln-122"></a>    <span class="k">write</span> (count_text, <span class="s">'(i0)'</span>) total
+<a class="ln" id="ln-123" href="#ln-123"></a>    <span class="k">if</span> (lines) <span class="k">then</span>
+<a class="ln" id="ln-124" href="#ln-124"></a>        <span class="k">call</span> write_line(total)
+<a class="ln" id="ln-125" href="#ln-125"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>) <span class="s">'[done] '</span>//<span class="k">trim</span>(label)//<span class="s">' in '</span>//<span class="k">trim</span>(<span class="k">time</span>)
+<a class="ln" id="ln-126" href="#ln-126"></a>    <span class="k">else</span> <span class="k">if</span> (live) <span class="k">then</span>
+<a class="ln" id="ln-127" href="#ln-127"></a>        done = total
+<a class="ln" id="ln-128" href="#ln-128"></a>        <span class="k">call</span> draw()
+<a class="ln" id="ln-129" href="#ln-129"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>, advance=<span class="s">'no'</span>) <span class="s">' '</span>//<span class="k">trim</span>(<span class="k">time</span>)
+<a class="ln" id="ln-130" href="#ln-130"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>) <span class="s">''</span>
+<a class="ln" id="ln-131" href="#ln-131"></a>    <span class="k">else</span> <span class="k">if</span> (total &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-132" href="#ln-132"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>) <span class="s">'  '</span>//label//<span class="s">' '</span>//<span class="k">trim</span>(count_text)//<span class="s">' in '</span>//<span class="k">trim</span>(<span class="k">time</span>)
+<a class="ln" id="ln-133" href="#ln-133"></a>    <span class="k">else</span>
+<a class="ln" id="ln-134" href="#ln-134"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>) <span class="s">'  '</span>//label//<span class="s">' '</span>//<span class="k">trim</span>(<span class="k">time</span>)
+<a class="ln" id="ln-135" href="#ln-135"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-136" href="#ln-136"></a>    drawn = <span class="k">.false.</span>
+<a class="ln" id="ln-137" href="#ln-137"></a>    <span class="k">flush</span> (output_unit)
+<a class="ln" id="ln-138" href="#ln-138"></a><span class="k">end</span> <span class="k">subroutine</span> progress_finish
+<a class="ln" id="ln-139" href="#ln-139"></a>
+<a class="ln" id="ln-140" href="#ln-140"></a><span class="d">!&gt; Report the end of the run.</span>
+<a class="ln" id="ln-141" href="#ln-141"></a><span class="k">subroutine</span> progress_summary(message)
+<a class="ln" id="ln-142" href="#ln-142"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: message <span class="d">!! what was done</span>
+<a class="ln" id="ln-143" href="#ln-143"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="n">24</span>) :: <span class="k">time</span>
+<a class="ln" id="ln-144" href="#ln-144"></a>    <span class="k">integer</span>(int64) :: now
+<a class="ln" id="ln-145" href="#ln-145"></a>
+<a class="ln" id="ln-146" href="#ln-146"></a>    <span class="k">if</span> (<span class="k">.not.</span> enabled) <span class="k">return</span>
+<a class="ln" id="ln-147" href="#ln-147"></a>    <span class="k">call</span> <span class="k">system_clock</span>(now)
+<a class="ln" id="ln-148" href="#ln-148"></a>    <span class="k">call</span> seconds_text(now - run_start, <span class="k">time</span>)
+<a class="ln" id="ln-149" href="#ln-149"></a>    <span class="k">if</span> (lines) <span class="k">then</span>
+<a class="ln" id="ln-150" href="#ln-150"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>) <span class="s">'[end] '</span>//message//<span class="s">' in '</span>//<span class="k">trim</span>(<span class="k">time</span>)
+<a class="ln" id="ln-151" href="#ln-151"></a>        <span class="k">flush</span> (output_unit)
+<a class="ln" id="ln-152" href="#ln-152"></a>    <span class="k">else</span> <span class="k">if</span> (colour) <span class="k">then</span>
+<a class="ln" id="ln-153" href="#ln-153"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>) ESC//<span class="s">'[1;32m'</span>//message//<span class="s">' in '</span>//<span class="k">trim</span>(<span class="k">time</span>)//ESC//<span class="s">'[0m'</span>
+<a class="ln" id="ln-154" href="#ln-154"></a>    <span class="k">else</span>
+<a class="ln" id="ln-155" href="#ln-155"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>) message//<span class="s">' in '</span>//<span class="k">trim</span>(<span class="k">time</span>)
+<a class="ln" id="ln-156" href="#ln-156"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-157" href="#ln-157"></a><span class="k">end</span> <span class="k">subroutine</span> progress_summary
+<a class="ln" id="ln-158" href="#ln-158"></a>
+<a class="ln" id="ln-159" href="#ln-159"></a><span class="d">!&gt; Write warning `message` to standard error, keeping the bar intact. This can be called from any</span>
+<a class="ln" id="ln-160" href="#ln-160"></a><span class="d">!&gt; thread.</span>
+<a class="ln" id="ln-161" href="#ln-161"></a><span class="k">subroutine</span> warn(message)
+<a class="ln" id="ln-162" href="#ln-162"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: message <span class="d">!! the warning</span>
+<a class="ln" id="ln-163" href="#ln-163"></a>
+<a class="ln" id="ln-164" href="#ln-164"></a>    <span class="c">!$omp critical (file_io)</span>
+<a class="ln" id="ln-165" href="#ln-165"></a>    <span class="k">if</span> (drawn) <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>, advance=<span class="s">'no'</span>) <span class="k">achar</span>(<span class="n">13</span>)//ESC//<span class="s">'[2K'</span>
+<a class="ln" id="ln-166" href="#ln-166"></a>    <span class="k">if</span> (drawn) <span class="k">flush</span> (output_unit)
+<a class="ln" id="ln-167" href="#ln-167"></a>    <span class="k">write</span> (error_unit, <span class="s">'(a)'</span>) <span class="s">'Warning: '</span>//message
+<a class="ln" id="ln-168" href="#ln-168"></a>    <span class="k">flush</span> (error_unit)
+<a class="ln" id="ln-169" href="#ln-169"></a>    <span class="k">if</span> (drawn) <span class="k">call</span> draw()
+<a class="ln" id="ln-170" href="#ln-170"></a>    <span class="c">!$omp end critical (file_io)</span>
+<a class="ln" id="ln-171" href="#ln-171"></a><span class="k">end</span> <span class="k">subroutine</span> warn
+<a class="ln" id="ln-172" href="#ln-172"></a>
+<a class="ln" id="ln-173" href="#ln-173"></a><span class="d">!&gt; Write the line of `count` steps done, if its percentage is new. This can be called from any thread.</span>
+<a class="ln" id="ln-174" href="#ln-174"></a><span class="k">subroutine</span> write_line(<span class="k">count</span>)
+<a class="ln" id="ln-175" href="#ln-175"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: <span class="k">count</span>    <span class="d">!! how many steps are done</span>
+<a class="ln" id="ln-176" href="#ln-176"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="n">128</span>) :: line
+<a class="ln" id="ln-177" href="#ln-177"></a>    <span class="k">integer</span> :: filled, unfilled, percent
+<a class="ln" id="ln-178" href="#ln-178"></a>
+<a class="ln" id="ln-179" href="#ln-179"></a>    <span class="k">call</span> bar_text(<span class="k">count</span>, total, <span class="n">1</span>, filled, unfilled, percent)
+<a class="ln" id="ln-180" href="#ln-180"></a>    <span class="k">if</span> (total == <span class="n">0</span>) percent = <span class="n">0</span>
+<a class="ln" id="ln-181" href="#ln-181"></a>    <span class="k">if</span> (percent &lt;= last_percent) <span class="k">return</span>
+<a class="ln" id="ln-182" href="#ln-182"></a>    <span class="c">!$omp critical (file_io)</span>
+<a class="ln" id="ln-183" href="#ln-183"></a>    <span class="k">if</span> (percent &gt; last_percent) <span class="k">then</span>
+<a class="ln" id="ln-184" href="#ln-184"></a>        last_percent = percent
+<a class="ln" id="ln-185" href="#ln-185"></a>        <span class="k">call</span> progress_line(percent, label, <span class="k">min</span>(<span class="k">count</span>, total), total, line)
+<a class="ln" id="ln-186" href="#ln-186"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>) <span class="k">trim</span>(line)
+<a class="ln" id="ln-187" href="#ln-187"></a>        <span class="k">flush</span> (output_unit)
+<a class="ln" id="ln-188" href="#ln-188"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-189" href="#ln-189"></a>    <span class="c">!$omp end critical (file_io)</span>
+<a class="ln" id="ln-190" href="#ln-190"></a><span class="k">end</span> <span class="k">subroutine</span> write_line
+<a class="ln" id="ln-191" href="#ln-191"></a>
+<a class="ln" id="ln-192" href="#ln-192"></a><span class="d">!&gt; The line for another program of `count` of `size` steps done in stage `name`.</span>
+<a class="ln" id="ln-193" href="#ln-193"></a><span class="k">pure</span> <span class="k">subroutine</span> progress_line(percent, name, <span class="k">count</span>, <span class="k">size</span>, line)
+<a class="ln" id="ln-194" href="#ln-194"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: percent          <span class="d">!! the percentage done</span>
+<a class="ln" id="ln-195" href="#ln-195"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the stage</span>
+<a class="ln" id="ln-196" href="#ln-196"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: <span class="k">count</span>            <span class="d">!! how many steps are done</span>
+<a class="ln" id="ln-197" href="#ln-197"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: <span class="k">size</span>             <span class="d">!! how many there are</span>
+<a class="ln" id="ln-198" href="#ln-198"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(out) :: line   <span class="d">!! the line</span>
+<a class="ln" id="ln-199" href="#ln-199"></a>
+<a class="ln" id="ln-200" href="#ln-200"></a>    <span class="k">write</span> (line, <span class="s">'(a,i3,a,a,1x,i0,a,i0)'</span>) <span class="s">'['</span>, percent, <span class="s">'%] '</span>, <span class="k">trim</span>(name), <span class="k">count</span>, <span class="s">'/'</span>, <span class="k">size</span>
+<a class="ln" id="ln-201" href="#ln-201"></a><span class="k">end</span> <span class="k">subroutine</span> progress_line
+<a class="ln" id="ln-202" href="#ln-202"></a>
+<a class="ln" id="ln-203" href="#ln-203"></a><span class="d">!&gt; `ticks` of the clock as text.</span>
+<a class="ln" id="ln-204" href="#ln-204"></a><span class="k">subroutine</span> seconds_text(ticks, text)
+<a class="ln" id="ln-205" href="#ln-205"></a>    <span class="k">integer</span>(int64), <span class="k">intent</span>(in) :: ticks     <span class="d">!! the time</span>
+<a class="ln" id="ln-206" href="#ln-206"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(out) :: text   <span class="d">!! the text</span>
+<a class="ln" id="ln-207" href="#ln-207"></a>
+<a class="ln" id="ln-208" href="#ln-208"></a>    <span class="k">write</span> (text, <span class="s">'(f0.2,a)'</span>) <span class="k">real</span>(ticks)/<span class="k">real</span>(rate), <span class="s">' s'</span>
+<a class="ln" id="ln-209" href="#ln-209"></a>    <span class="k">if</span> (text(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'.'</span>) text = <span class="s">'0'</span>//text
+<a class="ln" id="ln-210" href="#ln-210"></a><span class="k">end</span> <span class="k">subroutine</span> seconds_text
+<a class="ln" id="ln-211" href="#ln-211"></a>
+<a class="ln" id="ln-212" href="#ln-212"></a><span class="d">!&gt; The bar for `steps` of `size` steps, `width` characters wide, with its filled and empty parts.</span>
+<a class="ln" id="ln-213" href="#ln-213"></a><span class="k">pure</span> <span class="k">subroutine</span> bar_text(steps, <span class="k">size</span>, width, filled, unfilled, percent)
+<a class="ln" id="ln-214" href="#ln-214"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: steps        <span class="d">!! how many steps are done</span>
+<a class="ln" id="ln-215" href="#ln-215"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: <span class="k">size</span>         <span class="d">!! how many there are</span>
+<a class="ln" id="ln-216" href="#ln-216"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: width        <span class="d">!! the width of the bar</span>
+<a class="ln" id="ln-217" href="#ln-217"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: filled      <span class="d">!! how much of the bar is filled</span>
+<a class="ln" id="ln-218" href="#ln-218"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: unfilled    <span class="d">!! how much of it is not</span>
+<a class="ln" id="ln-219" href="#ln-219"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: percent     <span class="d">!! the percentage done</span>
+<a class="ln" id="ln-220" href="#ln-220"></a>
+<a class="ln" id="ln-221" href="#ln-221"></a>    filled = width
+<a class="ln" id="ln-222" href="#ln-222"></a>    percent = <span class="n">100</span>
+<a class="ln" id="ln-223" href="#ln-223"></a>    <span class="k">if</span> (<span class="k">size</span> &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-224" href="#ln-224"></a>        filled = <span class="k">int</span>(<span class="k">min</span>(<span class="n">1.0</span>, <span class="k">real</span>(steps)/<span class="k">real</span>(<span class="k">size</span>))*width)
+<a class="ln" id="ln-225" href="#ln-225"></a>        percent = <span class="k">int</span>(<span class="k">min</span>(<span class="n">1.0</span>, <span class="k">real</span>(steps)/<span class="k">real</span>(<span class="k">size</span>))*<span class="n">100</span>)
+<a class="ln" id="ln-226" href="#ln-226"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-227" href="#ln-227"></a>    unfilled = width - filled
+<a class="ln" id="ln-228" href="#ln-228"></a><span class="k">end</span> <span class="k">subroutine</span> bar_text
+<a class="ln" id="ln-229" href="#ln-229"></a>
+<a class="ln" id="ln-230" href="#ln-230"></a><span class="d">!&gt; Draw the bar of the current stage.</span>
+<a class="ln" id="ln-231" href="#ln-231"></a><span class="k">subroutine</span> draw()
+<a class="ln" id="ln-232" href="#ln-232"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="n">64</span>) :: numbers
+<a class="ln" id="ln-233" href="#ln-233"></a>    <span class="k">integer</span> :: filled, unfilled, percent, k
+<a class="ln" id="ln-234" href="#ln-234"></a>
+<a class="ln" id="ln-235" href="#ln-235"></a>    <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>, advance=<span class="s">'no'</span>) <span class="k">achar</span>(<span class="n">13</span>)//ESC//<span class="s">'[2K  '</span>//label
+<a class="ln" id="ln-236" href="#ln-236"></a>    <span class="k">if</span> (total &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-237" href="#ln-237"></a>        <span class="k">call</span> bar_text(done, total, BAR_WIDTH, filled, unfilled, percent)
+<a class="ln" id="ln-238" href="#ln-238"></a>        <span class="k">if</span> (colour) <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>, advance=<span class="s">'no'</span>) ESC//<span class="s">'[36m'</span>
+<a class="ln" id="ln-239" href="#ln-239"></a>        <span class="k">do</span> k = <span class="n">1</span>, filled
+<a class="ln" id="ln-240" href="#ln-240"></a>            <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>, advance=<span class="s">'no'</span>) FULL
+<a class="ln" id="ln-241" href="#ln-241"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-242" href="#ln-242"></a>        <span class="k">if</span> (colour) <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>, advance=<span class="s">'no'</span>) ESC//<span class="s">'[2m'</span>
+<a class="ln" id="ln-243" href="#ln-243"></a>        <span class="k">do</span> k = <span class="n">1</span>, unfilled
+<a class="ln" id="ln-244" href="#ln-244"></a>            <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>, advance=<span class="s">'no'</span>) EMPTY
+<a class="ln" id="ln-245" href="#ln-245"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-246" href="#ln-246"></a>        <span class="k">if</span> (colour) <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>, advance=<span class="s">'no'</span>) ESC//<span class="s">'[0m'</span>
+<a class="ln" id="ln-247" href="#ln-247"></a>        <span class="k">write</span> (numbers, <span class="s">'(1x,i3,a,2x,i0,a,i0)'</span>) percent, <span class="s">'%'</span>, <span class="k">min</span>(done, total), <span class="s">'/'</span>, total
+<a class="ln" id="ln-248" href="#ln-248"></a>        <span class="k">write</span> (output_unit, <span class="s">'(a)'</span>, advance=<span class="s">'no'</span>) <span class="k">trim</span>(numbers)
+<a class="ln" id="ln-249" href="#ln-249"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-250" href="#ln-250"></a>    <span class="k">flush</span> (output_unit)
+<a class="ln" id="ln-251" href="#ln-251"></a>    drawn = <span class="k">.true.</span>
+<a class="ln" id="ln-252" href="#ln-252"></a><span class="k">end</span> <span class="k">subroutine</span> draw
+<a class="ln" id="ln-253" href="#ln-253"></a>
+<a class="ln" id="ln-254" href="#ln-254"></a><span class="k">end</span> <span class="k">module</span> fdoc_progress
+<a class="ln" id="ln-255" href="#ln-255"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

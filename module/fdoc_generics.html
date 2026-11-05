@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_generics &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a class="here" href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Variables</h4><ul><li><a href="#variable-any_rank"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>ANY_RANK</a></li></ul>
+<h4>Functions</h4><ul><li><a href="../proc/is_elemental.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>is_elemental</a></li><li><a href="../proc/rank_of.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>rank_of</a></li></ul>
+<h4>Subroutines</h4><ul><li><a href="../proc/argument_name.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>argument_name</a></li><li><a href="../proc/call_text.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>call_text</a></li><li><a href="../proc/describe.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>describe</a></li><li><a href="../proc/form_key.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>form_key</a></li><li><a href="../proc/label_results.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>label_results</a></li><li><a href="../proc/rank_label.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>rank_label</a></li><li><a href="../proc/shared_summary.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>shared_summary</a></li><li><a href="../proc/sort_ints.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>sort_ints</a></li><li><a href="../proc/specific_link.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>specific_link</a></li><li><a href="../proc/write_call_forms.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>write_call_forms</a></li><li><a href="../proc/write_form.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>write_form</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><ul data-list="modules"></ul>
+<h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_generics.f90.html">fdoc_generics.f90</a></div>
+<h1><span class="kind">module</span>fdoc_generics</h1>
+<div class="doc">
+<p>The overview of a generic interface: which ways there are to call it, and which types and ranks each
+one takes. Specific procedures with the same arguments make a call form, and each form gets a table
+with a row for each combination of types and a column for each rank. Types are compared as written,
+so two names of one kind count as different types. Pages are rendered in parallel, so nothing here
+calls a function returning a deferred-length string (see <code>example/slen_race.f90</code>).</p>
+</div>
+<h2 id="uses">Uses</h2>
+<ul class="chips"><li><a href="../module/fdoc_util.html">fdoc_util</a></li><li><a href="../module/fdoc_buffer.html">fdoc_buffer</a></li><li><a href="../module/fdoc_model.html">fdoc_model</a></li><li><a href="../module/fdoc_urls.html">fdoc_urls</a></li></ul>
+<div class="graph"><svg width="563pt" height="168pt"
+ viewBox="0 0 563 168" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 163.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_generics.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="459.6" y="-120.6" width="95.3" height="21.6"/><text x="507.3" y="-105.1">fdoc_generics</text></a><a href="../module/fdoc_util.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="140" y="-81.6" width="62.8" height="21.6"/><text x="171.4" y="-66.1">fdoc_util</text></a><path d="M495.6,-98.2C476.8,-78.8 435.5,-41.1 391,-31.8"/><path d="M389,-31.8C324.7,-18.4 249.1,-40.6 206.4,-56.6"/><polygon fill="#8a93a5" points="205.6,-54.3 199.9,-59.1 207.3,-58.8"/><a href="../module/fdoc_buffer.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="239.9" y="-159.6" width="79.4" height="21.6"/><text x="279.6" y="-144.1">fdoc_buffer</text></a><path d="M461.4,-121.6C449.2,-124.5 435.9,-127.5 423.6,-129.8 391.9,-135.7 356,-140.5 328,-143.8"/><polygon fill="#8a93a5" points="327.8,-141.3 321.1,-144.6 328.4,-146.2"/><a href="../module/fdoc_model.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="238.8" y="-81.6" width="81.6" height="21.6"/><text x="279.6" y="-66.1">fdoc_model</text></a><path d="M389,-31.8C373.8,-28.6 337,-43.7 310.5,-56"/><polygon fill="#8a93a5" points="309.7,-53.7 304.4,-59 311.8,-58.2"/><a href="../module/fdoc_urls.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="356.4" y="-120.6" width="67.1" height="21.6"/><text x="390" y="-105.1">fdoc_urls</text></a><path d="M458.7,-109.8C450,-109.8 440.9,-109.8 432.4,-109.8"/><polygon fill="#8a93a5" points="432.5,-107.4 425.5,-109.8 432.5,-112.3"/><a href="http://fortranwiki.org/fortran/show/iso_fortran_env" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-141.6" width="104" height="21.6"/><text x="52" y="-126.1">iso_fortran_env</text></a><path d="M153.7,-82C140.5,-90.5 121.5,-102.2 104,-110.8 100.1,-112.7 95.9,-114.6 91.7,-116.4"/><polygon fill="#8a93a5" points="91,-114 85.5,-119 92.9,-118.6"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_strings.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="11.2" y="-101.6" width="81.6" height="21.6"/><text x="52" y="-86.1">ffmt_strings</text></a><path d="M139.6,-76.1C127.9,-78 114.2,-80.4 101.3,-82.6"/><polygon fill="#8a93a5" points="100.9,-80.2 94.4,-83.7 101.7,-85"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_fs.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-61.6" width="54" height="21.6"/><text x="52" y="-46.1">ffmt_fs</text></a><path d="M139.6,-65.5C123.6,-62.8 104.1,-59.5 87.6,-56.7"/><polygon fill="#8a93a5" points="88.1,-54.3 80.8,-55.5 87.3,-59.1"/><a href="https://jacobwilliams.github.io/fformat/module/ffmt_io.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="25" y="-21.6" width="54" height="21.6"/><text x="52" y="-6.1">ffmt_io</text></a><path d="M153.7,-59.6C140.5,-51.1 121.5,-39.4 104,-30.8 98.6,-28.1 92.8,-25.6 87,-23.2"/><polygon fill="#8a93a5" points="88.1,-21 80.7,-20.7 86.3,-25.6"/><path d="M238.5,-70.8C229.6,-70.8 220.2,-70.8 211.3,-70.8"/><polygon fill="#8a93a5" points="211.5,-68.4 204.5,-70.8 211.5,-73.3"/><path d="M356.2,-107.2C325.6,-104.5 278.8,-99.3 238.8,-90.8 229.8,-88.9 220.2,-86.3 211.3,-83.7"/><polygon fill="#8a93a5" points="212.1,-81.4 204.7,-81.7 210.7,-86.1"/><path d="M357.7,-121.1C345.9,-125.3 332.3,-130.2 319.9,-134.7"/><polygon fill="#8a93a5" points="319.1,-132.4 313.3,-137 320.8,-137"/><path d="M357.7,-98.5C345.9,-94.3 332.3,-89.4 319.9,-84.9"/><polygon fill="#8a93a5" points="320.8,-82.6 313.3,-82.6 319.1,-87.2"/></g>
+</svg>
+</div>
+<h2 id="used-by">Used by</h2>
+<ul class="chips"><li><a href="../module/fdoc_site.html">fdoc_site</a></li></ul>
+<div class="graph"><svg width="296pt" height="30pt"
+ viewBox="0 0 296 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_generics.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="95.3" height="21.6"/><text x="47.7" y="-6.1">fdoc_generics</text></a><a href="../module/fdoc_site.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="131.3" y="-21.6" width="66.4" height="21.6"/><text x="164.6" y="-6.1">fdoc_site</text></a><path d="M130.9,-10.8C122.6,-10.8 113.4,-10.8 104.3,-10.8"/><polygon fill="#8a93a5" points="104.5,-8.4 97.5,-10.8 104.5,-13.3"/><a href="../module/fdoc.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="233.8" y="-21.6" width="54" height="21.6"/><text x="260.8" y="-6.1">fdoc</text></a><path d="M233.3,-10.8C225,-10.8 215.7,-10.8 206.7,-10.8"/><polygon fill="#8a93a5" points="206.7,-8.4 199.7,-10.8 206.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="variables">Variables</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-any_rank"><td class="name">ANY_RANK</td><td class="type">integer</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-parameter">parameter</span></td><td class="default">-1</td><td><p>the rank of an assumed-rank argument</p></td></tr>
+</tbody>
+</table>
+<h2 id="functions">Functions</h2>
+<div class="item" id="proc-is_elemental"><h3><a href="../proc/is_elemental.html">is_elemental</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> is_elemental(<span class="intent attr-in" title="intent(in)">e</span>)</div>
+<p>True if procedure <code>e</code> is elemental.</p>
+</div>
+<div class="item" id="proc-rank_of"><h3><a href="../proc/rank_of.html">rank_of</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> rank_of(<span class="intent attr-in" title="intent(in)">dimension</span>)</div>
+<p>The rank given by <code>dimension</code>, such as <code>(:,:)</code>: one more than the commas outside inner parentheses.</p>
+</div>
+<h2 id="subroutines">Subroutines</h2>
+<div class="item" id="proc-argument_name"><h3><a href="../proc/argument_name.html">argument_name</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> argument_name(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">name</span>)</div>
+<p>The name of argument <code>id</code>.</p>
+</div>
+<div class="item" id="proc-call_text"><h3><a href="../proc/call_text.html">call_text</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> call_text(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">has_result</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<p>Write how a call of a form looks. Square brackets mark what is optional.</p>
+</div>
+<div class="item" id="proc-describe"><h3><a href="../proc/describe.html">describe</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> describe(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">text</span>, <span class="intent attr-out" title="intent(out)">rank</span>)</div>
+<p>The text and rank of the type of variable <code>id</code>. Anything else, such as a dummy procedure, is <code>procedure</code>.</p>
+</div>
+<div class="item" id="proc-form_key"><h3><a href="../proc/form_key.html">form_key</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> form_key(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">key</span>)</div>
+<p>What specific procedure <code>id</code> has in common with those of its call form.</p>
+</div>
+<div class="item" id="proc-label_results"><h3><a href="../proc/label_results.html">label_results</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> label_results(<span class="intent attr-in" title="intent(in)">ranks</span>, <span class="intent attr-in" title="intent(in)">primary</span>, <span class="intent attr-in" title="intent(in)">relative</span>, <span class="intent attr-in" title="intent(in)">types</span>, <span class="intent attr-in" title="intent(in)">result_ranks</span>, <span class="intent attr-inout" title="intent(inout)">labels</span>)</div>
+<p>The text of each result.</p>
+</div>
+<div class="item" id="proc-rank_label"><h3><a href="../proc/rank_label.html">rank_label</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> rank_label(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">rank</span>, <span class="intent attr-in" title="intent(in)">in_columns</span>, <span class="intent attr-in" title="intent(in)">tied</span>, <span class="intent attr-in" title="intent(in)">relative</span>, <span class="intent attr-in" title="intent(in)">offset</span>, <span class="intent attr-out" title="intent(out)">label</span>)</div>
+<p>The text of type <code>text</code> with its rank. A rank in <code>columns</code> is left out, and a tied one is relative.</p>
+</div>
+<div class="item" id="proc-shared_summary"><h3><a href="../proc/shared_summary.html">shared_summary</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> shared_summary(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">ids</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<p>Write the summary of the procedures <code>ids</code>, if they all have the same one.</p>
+</div>
+<div class="item" id="proc-sort_ints"><h3><a href="../proc/sort_ints.html">sort_ints</a><span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> sort_ints(<span class="intent attr-inout" title="intent(inout)">list</span>)</div>
+<p>Put <code>list</code> in order.</p>
+</div>
+<div class="item" id="proc-specific_link"><h3><a href="../proc/specific_link.html">specific_link</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> specific_link(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<p>Write a link to specific procedure <code>id</code>, further down the page.</p>
+</div>
+<div class="item" id="proc-write_call_forms"><h3><a href="../proc/write_call_forms.html">write_call_forms</a></h3>
+<div class="sig"><span class="k">subroutine</span> write_call_forms(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">specifics</span>, <span class="intent attr-inout" title="intent(inout)">b</span>, <span class="intent attr-out" title="intent(out)">shown</span>)</div>
+<p>Write the call forms of generic <code>name</code>, if it has more than one specific procedure. <code>shown</code> says
+whether anything was written.</p>
+</div>
+<div class="item" id="proc-write_form"><h3><a href="../proc/write_form.html">write_form</a><span class="attr attr-private">private</span></h3>
+<div class="sig"><span class="k">subroutine</span> write_form(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">ids</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<p>Write one call form, whose specific procedures are <code>ids</code>.</p>
+</div>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

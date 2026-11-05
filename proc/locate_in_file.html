@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>locate_in_file &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>locate_in_file<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> locate_in_file(<span class="intent attr-inout" title="intent(inout)">site</span>, <span class="intent attr-in" title="intent(in)">ids</span>)</div>
+<div class="doc">
+<p>Find the code of entities <code>ids</code>, all from one file. They are in source order, so each search starts
+where the last one found something. Only the lines that name a construct are searched, as a name
+that is not in the file, like those Fypp makes, would otherwise cost two readings of the file.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-ids"><td class="name">ids</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the entities</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/lower_in_place.html">lower_in_place</a></li><li><a href="../proc/construct_lines.html">construct_lines</a></li><li><a href="../proc/find_source.html">find_source</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li></ul>
+<div class="graph"><svg width="564pt" height="150pt"
+ viewBox="0 0 564 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 145.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/locate_in_file.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="90.3" height="21.6"/><text x="45.1" y="-66.1">locate_in_file</text></a><a href="../proc/lower_in_place.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="126.3" y="-141.6" width="101.1" height="21.6"/><text x="176.8" y="-126.1">lower_in_place</text></a><path d="M68.4,-82.5C84.3,-90.7 106.4,-101.9 126.3,-110.8 130.4,-112.7 134.8,-114.5 139.1,-116.4"/><polygon fill="#8a93a5" points="138.1,-118.6 145.5,-119 139.9,-114"/><a href="../proc/construct_lines.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="126.3" y="-101.6" width="101.1" height="21.6"/><text x="176.8" y="-86.1">construct_lines</text></a><path d="M91.1,-77.7C99.8,-79.1 108.9,-80.5 117.9,-81.9"/><polygon fill="#8a93a5" points="117.3,-84.2 124.6,-82.9 118,-79.4"/><a href="../proc/find_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="136" y="-61.6" width="81.6" height="21.6"/><text x="176.8" y="-46.1">find_source</text></a><path d="M91.1,-63.9C102.9,-62 115.7,-60.1 127.6,-58.2"/><polygon fill="#8a93a5" points="127.7,-60.7 134.2,-57.2 126.9,-55.9"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="140.4" y="-21.6" width="72.9" height="21.6"/><text x="176.8" y="-6.1">lowercase</text></a><path d="M68.4,-59.1C84.3,-50.9 106.4,-39.7 126.3,-30.8 130.4,-28.9 134.8,-27.1 139.1,-25.2"/><polygon fill="#8a93a5" points="139.9,-27.6 145.5,-22.6 138.1,-23"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="263.4" y="-141.6" width="78" height="21.6"/><text x="302.4" y="-126.1">lower_char</text></a><path d="M227.7,-130.8C236.7,-130.8 246,-130.8 254.8,-130.8"/><polygon fill="#8a93a5" points="254.6,-133.3 261.6,-130.8 254.6,-128.4"/><a href="../proc/line_has.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="271" y="-41.6" width="62.8" height="21.6"/><text x="302.4" y="-26.1">line_has</text></a><path d="M218,-44.3C232.2,-42 248.2,-39.4 262.4,-37.1"/><polygon fill="#8a93a5" points="262.5,-39.6 269,-36 261.7,-34.7"/><a href="../proc/starts_word.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="377.4" y="-80.6" width="81.6" height="21.6"/><text x="418.2" y="-65.1">starts_word</text></a><path d="M217.9,-54C259.4,-57.3 324.3,-62.4 368.7,-65.9"/><polygon fill="#8a93a5" points="368.3,-68.4 375.5,-66.5 368.7,-63.5"/><path d="M334.2,-41.4C347.2,-45.8 362.5,-51 376.4,-55.8"/><polygon fill="#8a93a5" points="375.5,-58.1 382.9,-58.1 377.1,-53.5"/><a href="../proc/word_at.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="495" y="-60.6" width="60.6" height="21.6"/><text x="525.3" y="-45.1">word_at</text></a><path d="M334.1,-33.4C373.9,-36.9 443.3,-42.8 486.3,-46.5"/><polygon fill="#8a93a5" points="485.9,-49 493,-47.1 486.3,-44.1"/><path d="M459.2,-62.2C468.1,-60.5 477.5,-58.7 486.3,-57"/><polygon fill="#8a93a5" points="486.6,-59.5 493,-55.8 485.7,-54.7"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/locate_sources.html">locate_sources</a></li></ul>
+<div class="graph"><svg width="431pt" height="30pt"
+ viewBox="0 0 431 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/locate_in_file.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="90.3" height="21.6"/><text x="45.1" y="-6.1">locate_in_file</text></a><a href="../proc/locate_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="126.3" y="-21.6" width="101.8" height="21.6"/><text x="177.2" y="-6.1">locate_sources</text></a><path d="M125.9,-10.8C117.3,-10.8 108.2,-10.8 99.5,-10.8"/><polygon fill="#8a93a5" points="99.7,-8.4 92.7,-10.8 99.7,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="264.1" y="-21.6" width="69.3" height="21.6"/><text x="298.8" y="-6.1">write_site</text></a><path d="M263.8,-10.8C255.4,-10.8 246.1,-10.8 236.8,-10.8"/><polygon fill="#8a93a5" points="236.8,-8.4 229.8,-10.8 236.8,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="369.4" y="-21.6" width="54" height="21.6"/><text x="396.4" y="-6.1">run</text></a><path d="M369,-10.8C360.7,-10.8 351.2,-10.8 342,-10.8"/><polygon fill="#8a93a5" points="342.1,-8.4 335.1,-10.8 342.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> locate_in_file(site, ids)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(inout) :: site     <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: ids(:)           <span class="d">!! the entities</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: low
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: starts(:), stops(:)
+    <span class="k">integer</span> :: k, cursor, found, first, last
+
+    <span class="c">! on the heap and lowered in place, as a whole file would not fit on the stack of a thread</span>
+    low = site%p%list%box(site%p%list%box(ids(<span class="n">1</span>))%e%file)%e%source_text
+    <span class="k">call</span> lower_in_place(low)
+    <span class="k">call</span> construct_lines(low, starts, stops)
+    cursor = <span class="n">1</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(ids)
+        <span class="k">associate</span> (e =&gt; site%p%list%box(ids(k))%e)
+            <span class="k">select</span> <span class="k">case</span> (e%<span class="k">kind</span>)
+            <span class="k">case</span> (E_SUBROUTINE)
+                <span class="k">call</span> find_source(low, starts, stops, cursor, <span class="s">'subroutine'</span>, lowercase(e%name), found, first, last)
+                <span class="k">if</span> (first == <span class="n">0</span> <span class="k">.and.</span> cursor &gt; <span class="n">1</span>) &amp;
+                    <span class="k">call</span> find_source(low, starts, stops, <span class="n">1</span>, <span class="s">'subroutine'</span>, lowercase(e%name), found, first, last)
+            <span class="k">case</span> (E_FUNCTION)
+                <span class="k">call</span> find_source(low, starts, stops, cursor, <span class="s">'function'</span>, lowercase(e%name), found, first, last)
+                <span class="k">if</span> (first == <span class="n">0</span> <span class="k">.and.</span> cursor &gt; <span class="n">1</span>) &amp;
+                    <span class="k">call</span> find_source(low, starts, stops, <span class="n">1</span>, <span class="s">'function'</span>, lowercase(e%name), found, first, last)
+            <span class="k">case</span> default
+                <span class="k">call</span> find_source(low, starts, stops, cursor, <span class="s">'type'</span>, lowercase(e%name), found, first, last)
+                <span class="k">if</span> (first == <span class="n">0</span> <span class="k">.and.</span> cursor &gt; <span class="n">1</span>) &amp;
+                    <span class="k">call</span> find_source(low, starts, stops, <span class="n">1</span>, <span class="s">'type'</span>, lowercase(e%name), found, first, last)
+            <span class="k">end</span> <span class="k">select</span>
+            <span class="k">if</span> (first == <span class="n">0</span>) <span class="k">cycle</span>
+            e%source_first = first
+            e%source_last = last
+            cursor = found
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> locate_in_file</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make_zip &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>make_zip<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> make_zip(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">args</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<div class="doc">
+<p><code>zip(...)</code>, as a list of tuples.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-args"><td class="name">args</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the arguments</p></td></tr>
+<tr id="variable-v"><td class="name">v</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the result</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/fail.html">fail</a></li></ul>
+<div class="graph"><svg width="168pt" height="30pt"
+ viewBox="0 0 168 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/make_zip.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="70" height="21.6"/><text x="35" y="-6.1">make_zip</text></a><a href="../proc/fail.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="106" y="-21.6" width="54" height="21.6"/><text x="133" y="-6.1">fail</text></a><path d="M71,-10.8C79.6,-10.8 88.8,-10.8 97.4,-10.8"/><polygon fill="#8a93a5" points="97.2,-13.3 104.2,-10.8 97.2,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/call_builtin.html">call_builtin</a></li></ul>
+<div class="graph"><svg width="1475pt" height="269pt"
+ viewBox="0 0 1475 269" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 264.8)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/make_zip.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="626.4" y="-260.8" width="70" height="21.6"/><text x="661.4" y="-245.3">make_zip</text></a><a href="../proc/call_builtin.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="749.4" y="-260.8" width="75.1" height="21.6"/><text x="787" y="-245.3">call_builtin</text></a><path d="M749.2,-250C735.4,-250 719.6,-250 705.3,-250"/><polygon fill="#8a93a5" points="705.6,-247.6 698.6,-250 705.6,-252.5"/><a href="../proc/evaluate_call.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="868.8" y="-202.8" width="90.3" height="21.6"/><text x="914" y="-187.3">evaluate_call</text></a><path d="M888.9,-203.2C869.2,-212.3 841.1,-225.3 819.6,-235.3"/><polygon fill="#8a93a5" points="818.7,-233.1 813.4,-238.2 820.8,-237.5"/><a href="../proc/evaluate_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="241.7" y="-221.8" width="96.1" height="21.6"/><text x="289.8" y="-206.3">evaluate_args</text></a><path d="M868.7,-197.4C818.7,-203 734.8,-211 662.4,-211 662.4,-211 662.4,-211 536.6,-211 471.3,-211 396.1,-211 346.3,-211"/><polygon fill="#8a93a5" points="346.4,-208.6 339.4,-211 346.4,-213.5"/><a href="../proc/call_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="748.3" y="-144.8" width="77.3" height="21.6"/><text x="787" y="-129.3">call_macro</text></a><path d="M888.9,-180.8C869.2,-171.7 841.1,-158.7 819.6,-148.7"/><polygon fill="#8a93a5" points="820.8,-146.5 813.4,-145.8 818.7,-151"/><a href="../proc/evaluate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="142.2" y="-114.8" width="63.5" height="21.6"/><text x="174" y="-99.3">evaluate</text></a><path d="M206,-114C268.1,-133.2 412.3,-173 536.6,-173 662.4,-173 662.4,-173 662.4,-173 731,-173 809.9,-180.2 860.5,-185.7"/><polygon fill="#8a93a5" points="860,-188.1 867.2,-186.4 860.5,-183.2"/><a href="../proc/compare.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="20.6" y="-117.8" width="65" height="21.6"/><text x="53.1" y="-102.3">compare</text></a><path d="M133.4,-105C120.9,-105.3 107,-105.7 94.4,-106"/><polygon fill="#8a93a5" points="133.3,-107.5 140.2,-104.8 133.2,-102.6"/><polygon fill="#8a93a5" points="94.4,-103.5 87.5,-106.2 94.5,-108.4"/><a href="../proc/evaluate_slice.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="4.7" y="-77.8" width="96.8" height="21.6"/><text x="53.1" y="-62.3">evaluate_slice</text></a><path d="M133.7,-91.8C122.3,-88.2 109.8,-84.3 98.1,-80.7"/><polygon fill="#8a93a5" points="132.9,-94.1 140.3,-93.8 134.3,-89.4"/><polygon fill="#8a93a5" points="99,-78.4 91.6,-78.7 97.6,-83.1"/><a href="../proc/run_clause.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="14.1" y="-37.8" width="78" height="21.6"/><text x="53.1" y="-22.3">run_clause</text></a><path d="M156.7,-87.4C143.9,-74.9 125.1,-58.3 106.2,-47 103,-45.1 99.6,-43.3 96.2,-41.7"/><polygon fill="#8a93a5" points="154.7,-88.8 161.4,-92 158.2,-85.3"/><polygon fill="#8a93a5" points="97.3,-39.5 89.9,-38.9 95.3,-44"/><a href="../proc/evaluate_fstring.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="0" y="-157.8" width="106.2" height="21.6"/><text x="53.1" y="-142.3">evaluate_fstring</text></a><path d="M134.1,-118.1C121,-122.8 106.3,-128.1 93.1,-132.9"/><polygon fill="#8a93a5" points="134.6,-120.5 140.3,-115.8 132.9,-115.9"/><polygon fill="#8a93a5" points="92.3,-130.6 86.5,-135.3 94,-135.2"/><a href="../proc/call_method.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="10.8" y="-215.8" width="84.5" height="21.6"/><text x="53.1" y="-200.3">call_method</text></a><path d="M156,-121.1C142.9,-134.1 123.9,-152.3 106.2,-167 97,-174.6 86.4,-182.5 77.2,-189.1"/><polygon fill="#8a93a5" points="157.7,-122.9 160.9,-116.2 154.2,-119.4"/><polygon fill="#8a93a5" points="76,-187 71.7,-193 78.8,-191"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="741.1" y="-66.8" width="91.7" height="21.6"/><text x="787" y="-51.3">fypp_process</text></a><path d="M747.7,-44.8C663.6,-21.9 457,24.6 290.8,-17"/><path d="M288.8,-17C267.1,-23.1 260.5,-23.5 241.7,-36 220.9,-50 201.3,-71.3 188.8,-86.3"/><polygon fill="#8a93a5" points="187,-84.6 184.5,-91.6 190.8,-87.7"/><a href="../proc/render_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="617.7" y="-105.8" width="87.4" height="21.6"/><text x="661.4" y="-90.3">render_body</text></a><path d="M750.2,-67.3C736.4,-71.7 720.4,-76.7 705.9,-81.3"/><polygon fill="#8a93a5" points="705.5,-78.9 699.5,-83.3 706.9,-83.5"/><path d="M263.2,-199.8C255.9,-196 248.2,-191.3 241.7,-186 219.1,-167.4 198.8,-140.2 186.7,-122.3"/><polygon fill="#8a93a5" points="188.7,-121 182.8,-116.5 184.7,-123.7"/><path d="M95.6,-206.1C133.8,-207 190.6,-208.5 232.8,-209.6"/><polygon fill="#8a93a5" points="232.7,-212 239.8,-209.8 232.8,-207.1"/><a href="../proc/render_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="493.6" y="-105.8" width="88.1" height="21.6"/><text x="537.6" y="-90.3">render_node</text></a><path d="M414.7,-95C344.3,-89.6 262.1,-95.3 214.5,-99.8"/><polygon fill="#8a93a5" points="214.3,-97.3 207.5,-100.4 214.7,-102.2"/><a href="../proc/render_loop.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="373.8" y="-66.8" width="83.8" height="21.6"/><text x="415.7" y="-51.3">render_loop</text></a><path d="M502,-83.7C488.6,-79.4 473.3,-74.4 459.3,-69.9"/><polygon fill="#8a93a5" points="460.2,-67.6 452.8,-67.7 458.7,-72.2"/><a href="../proc/define_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="243.2" y="-66.8" width="93.2" height="21.6"/><text x="289.8" y="-51.3">define_macro</text></a><path d="M493.3,-96.6C470.5,-97 442,-97 416.7,-95"/><path d="M414.7,-95C382.2,-92.5 347,-80.4 322.4,-70.4"/><polygon fill="#8a93a5" points="323.6,-68.2 316.2,-67.8 321.7,-72.7"/><a href="../proc/render_call.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="376.3" y="-144.8" width="78.7" height="21.6"/><text x="415.7" y="-129.3">render_call</text></a><path d="M502,-106.3C488.6,-110.6 473.3,-115.6 459.3,-120.1"/><polygon fill="#8a93a5" points="458.7,-117.8 452.8,-122.3 460.2,-122.5"/><path d="M398.4,-44.9C374.9,-30.2 329.9,-7.2 290.8,-17"/><path d="M457.9,-59.2C491.5,-62.2 539.9,-67.3 581.7,-75 591.8,-76.9 602.5,-79.3 612.6,-81.8"/><polygon fill="#8a93a5" points="611.8,-84.1 619.1,-83.4 613,-79.3"/><path d="M262.1,-67.3C246.2,-73.9 226,-82.5 209,-89.6"/><polygon fill="#8a93a5" points="208.4,-87.3 202.9,-92.2 210.3,-91.8"/><a href="../proc/fypp_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="871.4" y="-66.8" width="85.2" height="21.6"/><text x="914" y="-51.3">fypp_source</text></a><path d="M871,-56C861.5,-56 851.2,-56 841.3,-56"/><polygon fill="#8a93a5" points="841.6,-53.6 834.6,-56 841.6,-58.5"/><path d="M396.7,-145.2C375.4,-158.4 339.8,-180.5 315.8,-195.4"/><polygon fill="#8a93a5" points="314.7,-193.2 310.1,-199 317.3,-197.4"/><path d="M455.4,-135.5C476.5,-136 503.4,-136.1 528.3,-134.6"/><polygon fill="#8a93a5" points="528.3,-137 535.1,-134.1 528,-132.2"/><path d="M538.6,-134C574.1,-131.2 612.8,-116.7 636.8,-106.2"/><path d="M538.6,-134C612.7,-128.2 699.6,-130.2 748.2,-132.2"/><path d="M609,-95C602.8,-95 596.5,-95 590.3,-95"/><polygon fill="#8a93a5" points="609,-97.5 616,-95 609,-92.6"/><polygon fill="#8a93a5" points="590.5,-92.6 583.5,-95 590.5,-97.5"/><a href="../proc/load_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="995.1" y="-66.8" width="85.2" height="21.6"/><text x="1037.7" y="-51.3">load_source</text></a><path d="M994.8,-56C985.4,-56 975.2,-56 965.4,-56"/><polygon fill="#8a93a5" points="965.5,-53.6 958.5,-56 965.5,-58.5"/><path d="M750.2,-122.7C736.4,-118.4 720.4,-113.3 705.9,-108.8"/><polygon fill="#8a93a5" points="706.9,-106.5 699.5,-106.7 705.5,-111.2"/><a href="../proc/read_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1116.3" y="-66.8" width="86.7" height="21.6"/><text x="1159.7" y="-51.3">read_source</text></a><path d="M1116.1,-56C1107.4,-56 1098.2,-56 1089.3,-56"/><polygon fill="#8a93a5" points="1089.3,-53.6 1082.3,-56 1089.3,-58.5"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="1239" y="-66.8" width="138" height="21.6"/><text x="1308" y="-51.3">load_project_sources</text></a><path d="M1238.6,-56C1229.5,-56 1220.4,-56 1211.7,-56"/><polygon fill="#8a93a5" points="1211.7,-53.6 1204.7,-56 1211.7,-58.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="1413" y="-66.8" width="54" height="21.6"/><text x="1440" y="-51.3">run</text></a><path d="M1412.7,-56C1404.6,-56 1395.2,-56 1385.5,-56"/><polygon fill="#8a93a5" points="1385.7,-53.6 1378.7,-56 1385.7,-58.5"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> make_zip(c, args, v)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c            <span class="d">!! the state</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: args(:)        <span class="d">!! the arguments</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(out) :: v             <span class="d">!! the result</span>
+    <span class="k">integer</span> :: n, k, j
+
+    v%<span class="k">kind</span> = V_LIST
+    n = <span class="k">huge</span>(n)
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(args)
+        <span class="k">if</span> (args(k)%<span class="k">kind</span> /= V_LIST <span class="k">.and.</span> args(k)%<span class="k">kind</span> /= V_TUPLE) <span class="k">then</span>
+            <span class="k">call</span> fail(c, <span class="s">'zip takes lists and tuples'</span>)
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        n = <span class="k">min</span>(n, <span class="k">size</span>(args(k)%items))
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (<span class="k">size</span>(args) == <span class="n">0</span>) n = <span class="n">0</span>
+    <span class="k">allocate</span> (v%items(n))
+    <span class="k">do</span> k = <span class="n">1</span>, n
+        v%items(k)%<span class="k">kind</span> = V_TUPLE
+        <span class="k">allocate</span> (v%items(k)%items(<span class="k">size</span>(args)))
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(args)
+            v%items(k)%items(j) = args(j)%items(k)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> make_zip</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>
