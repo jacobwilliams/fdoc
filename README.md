@@ -121,7 +121,8 @@ end function add
 
 * **Fixed-form source is not supported yet.** Those files are skipped with a warning.
 * **`logo` is fdoc's own setting.** FORD doesn't have it.
-* **`graph_project_maxnodes` is fdoc's own setting too.** Whole-project graphs have no size limit unless you set one, which leaves out any graph over that many nodes.
+* **`graph_project_maxnodes` is fdoc's own setting too.** A whole-project graph with more nodes than it, 1000 by default, is left out with a warning.
+* **Graphs are smaller by default.** `graph_maxdepth` is 3 and `graph_maxnodes` 100, where FORD has no real limit. A node that leads to more than a graph shows has a dashed edge to a node `...`.
 * **`html_template_dir` has no effect**, because there are no templates. The HTML is different too, so CSS written for FORD's pages needs rewriting. `css:` still adds your own style sheet.
 * **Of the Python-Markdown extensions in `md_extensions`,** only `toc` and `smarty` are available. Others are skipped with a warning.
 * **fdoc doesn't run Python programs.** `pcpp` is replaced by `gfortran -E -cpp` when it's the preprocessor.
@@ -130,7 +131,9 @@ end function add
 * **Text after a `<`, as in `x<y`, is kept.** FORD's Markdown drops it.
 * **`externalize: false` is honored.** FORD's command line default overrides it.
 * **A few page URLs differ.** A generic interface named after its only procedure gets its own page in `interface/`, where FORD uses `proc/`, and that can shift the `~2` numbers of other pages with the same name.
-* **Private procedures that a shown type binds to are shown.** Whoever can see the type can call them through it, so each gets a page, which the binding links to. FORD lists the interface under the binding but gives it no page. The documentation of the body of a separate module procedure in a submodule that isn't shown goes on the page of its interface.
+* **Private procedures that a shown type binds to are shown.** Whoever can see the type can call them through it, so each gets a page, which the binding links to. FORD lists the interface under the binding but gives it no page.
+* **A separate module procedure has one page.** Its interface and its body in a submodule are shown together in `proc/`, with the documentation, calls and code of both and where each is. FORD puts the interface in `interface/` and the body, if it is shown, in `proc/`. A specific procedure of a generic interface stays on the page of the generic.
+* **Arguments come before the description.** A procedure's page has its first paragraph, then its arguments and result, then the rest of its documentation.
 * **Calls are found from tokens,** so fdoc finds a few that FORD's regular expressions miss.
 
 ## Benchmarks

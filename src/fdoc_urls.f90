@@ -9,7 +9,8 @@ use fdoc_buffer, only: buffer_t, add, html_escape
 implicit none
 private
 
-public :: page_name, object_word, entity_url, entity_anchor, link_context_t, resolve_link, url_quote, index_entity_names, is_shown
+public :: page_name, object_word, entity_url, entity_anchor, link_context_t, resolve_link, url_quote, index_entity_names
+public :: is_shown, page_entity
 
 type :: link_context_t
     !! Where a `[[name]]` link is being read.
@@ -81,7 +82,8 @@ subroutine object_word(e, word)
     case (E_COMMON); word = 'common'
     case default; word = ''
     end select
-    if (is_procedure(e%kind) .and. e%iface /= IFACE_NONE) word = 'interface'
+    ! a separate module procedure, whose body has been found, is a procedure like any other
+    if (is_procedure(e%kind) .and. e%iface /= IFACE_NONE .and. e%implements == 0) word = 'interface'
 end subroutine object_word
 
 !> Write the anchor of an entity in a page.
@@ -312,6 +314,17 @@ pure logical function is_shown(list, item)
     end do
 end function is_shown
 
+!> The entity shown in place of `id`: the interface of the body of a separate module procedure, whose
+!> page is that of both, or else `id`.
+pure integer function page_entity(list, id) result(item)
+    type(entity_list_t), intent(in) :: list !! the entities
+    integer, intent(in) :: id               !! the entity
+
+    item = id
+    if (list%box(id)%e%visible .or. .not. is_separate_body(list, id)) return
+    if (is_shown(list, list%box(id)%e%implements)) item = list%box(id)%e%implements
+end function page_entity
+
 !> Replace `item` by what holds it, if it is inside something not shown, which has no page.
 pure subroutine shown_entity(list, item)
     type(entity_list_t), intent(in) :: list !! the entities
@@ -319,6 +332,7 @@ pure subroutine shown_entity(list, item)
     integer :: k, parent
 
     if (allocated(list%box(item)%e%external_url)) return
+    item = page_entity(list, item)
     k = item
     do while (k > 0)
         parent = list%box(k)%e%parent

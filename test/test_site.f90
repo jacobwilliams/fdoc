@@ -313,10 +313,10 @@ subroutine test_late_options(error)
     call remove_directory(ROOT)
 end subroutine test_late_options
 
-!> Checks: a private procedure that a public type binds to has a page, which the binding links to, and
-!> the documentation of the body of a separate module procedure, in a submodule, is on the page of its
-!> interface; a private procedure reached only through a generic binding has a page too; one that is
-!> not bound stays hidden.
+!> Checks: a private procedure that a public type binds to has a page, which the binding links to; a
+!> separate module procedure has one page, in `proc`, with the summary and arguments of its interface,
+!> then the documentation of its body, where each is, and the code of both; the submodule lists it; a
+!> private procedure reached only through a generic binding has a page; one that is not bound stays hidden.
 subroutine test_bound_private(error)
     type(error_type), allocatable, intent(out) :: error     !! the failure, if any
     character(len=*), parameter :: ROOT = 'build/test site bound'
@@ -328,13 +328,14 @@ subroutine test_bound_private(error)
     call remove_directory(ROOT)
     call make_directory(ROOT//'/src', stat)
     call write_whole_file(ROOT//'/ford.md', 'project: bound'//NL//'src_dir: ./src'//NL//'output_dir: ./doc'//NL// &
-                          NL//'The project.'//NL, stat, errmsg)
+                          'source: true'//NL//NL//'The project.'//NL, stat, errmsg)
     call write_whole_file(ROOT//'/src/m.f90', &
                           'module m'//NL//'private'//NL//'public :: ctx'//NL// &
                           'type :: ctx'//NL//'contains'//NL//'procedure :: geo'//NL// &
                           'procedure, private :: one'//NL//'generic :: both => one'//NL//'end type ctx'//NL// &
                           'interface'//NL//'!> Summary of the interface.'//NL// &
-                          'module subroutine geo(self)'//NL//'class(ctx) :: self'//NL//'end subroutine geo'//NL// &
+                          'module subroutine geo(self)'//NL//'class(ctx) :: self !! the context'//NL// &
+                          'end subroutine geo'//NL// &
                           'end interface'//NL//'contains'//NL// &
                           '!> Only through the generic.'//NL//'subroutine one(self)'//NL//'class(ctx) :: self'//NL// &
                           'end subroutine one'//NL// &
@@ -351,20 +352,39 @@ subroutine test_bound_private(error)
     args(2)%s = ROOT//'/ford.md'
     call check(error, run(args), 0, 'the run')
     if (allocated(error)) return
-    call read_whole_file(ROOT//'/doc/interface/geo.html', text, stat, errmsg)
-    call check(error, stat, 0, 'the page of the private interface')
+    inquire (file=ROOT//'/doc/interface/geo.html', exist=found)
+    call check(error, .not. found, 'no page of the interface alone')
     if (allocated(error)) return
-    call check(error, index(text, 'Summary of the interface.') > 0, 'the documentation of the interface')
+    call read_whole_file(ROOT//'/doc/proc/geo.html', text, stat, errmsg)
+    call check(error, stat, 0, 'the page of the procedure')
     if (allocated(error)) return
-    call check(error, index(text, '<h2>Details</h2>') > 0 .and. index(text, 'Text of the body.') > 0, &
-               'the documentation of the body')
+    call check(error, index(text, '<span class="kind">subroutine</span>') > 0, 'called a subroutine')
     if (allocated(error)) return
-    call check(error, index(text, 'implemented in <a href="../module/s.html">s</a>') > 0, 'where the body is')
+    call check(error, index(text, 'interface in <a href="../module/m.html">m</a> '// &
+                            '(<a href="../sourcefile/m.f90.html">m.f90</a>)') > 0 .and. &
+               index(text, 'implementation in submodule <a href="../module/s.html">s</a> '// &
+                     '(<a href="../sourcefile/s.f90.html">s.f90</a>)') > 0, 'where the interface and the body are')
+    if (allocated(error)) return
+    call check(error, index(text, 'Summary of the interface.') > 0 .and. index(text, 'the context') > 0, &
+               'the summary and the arguments of the interface')
+    if (allocated(error)) return
+    call check(error, index(text, 'Summary of the interface.') < index(text, 'id="arguments"') .and. &
+               index(text, 'id="arguments"') < index(text, '<h2>Details</h2>') .and. &
+               index(text, '<h2>Details</h2>') < index(text, 'Text of the body.'), &
+               'the summary, then the arguments, then the documentation of the body')
+    if (allocated(error)) return
+    call check(error, index(text, 'Show the interface') > 0 .and. index(text, 'Show the implementation') > 0, &
+               'the code of both')
+    if (allocated(error)) return
+    call read_whole_file(ROOT//'/doc/module/s.html', text, stat, errmsg)
+    call check(error, stat, 0, 'the page of the submodule')
+    if (allocated(error)) return
+    call check(error, index(text, 'href="../proc/geo.html"') > 0, 'the submodule lists the procedure')
     if (allocated(error)) return
     call read_whole_file(ROOT//'/doc/type/ctx.html', text, stat, errmsg)
     call check(error, stat, 0, 'the page of the type')
     if (allocated(error)) return
-    call check(error, index(text, '<a href="../interface/geo.html">geo</a>') > 0, 'the binding links to the interface')
+    call check(error, index(text, '<a href="../proc/geo.html">geo</a>') > 0, 'the binding links to the procedure')
     if (allocated(error)) return
     call check(error, index(text, 'Summary of the interface.') > 0, 'the binding has the summary of the interface')
     if (allocated(error)) return

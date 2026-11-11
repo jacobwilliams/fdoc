@@ -19,7 +19,7 @@ contains
 subroutine collect_graphs(testsuite)
     type(unittest_type), allocatable, intent(out) :: testsuite(:)   !! the tests
 
-    testsuite = [new_unittest("drawn in pages", test_drawn)]
+    testsuite = [new_unittest("drawn in pages", test_drawn), new_unittest("cut at the depth limit", test_cut)]
 end subroutine collect_graphs
 
 !> Checks: pages show drawings with links and labels, a cycle is drawn, and `graph_dir` keeps the graphs.
@@ -71,5 +71,44 @@ subroutine test_drawn(error)
     call check(error, index(text, '>pong</text>') > 0, 'a cycle is drawn')
     call remove_directory(ROOT)
 end subroutine test_drawn
+
+!> Checks: a graph stops at `graph_maxdepth`, and a node that leads further has an edge to a node `...`.
+subroutine test_cut(error)
+    type(error_type), allocatable, intent(out) :: error     !! the failure, if any
+    character(len=*), parameter :: HERE = 'build/test graphs cut'
+    type(string_t) :: args(2)
+    character(len=:), allocatable :: text, errmsg
+    integer :: stat
+
+    call remove_directory(HERE)
+    call make_directory(HERE//'/src', stat)
+    call write_whole_file(HERE//'/ford.md', 'project: cut'//NL//'src_dir: ./src'//NL//'output_dir: ./doc'//NL// &
+                          'graph: true'//NL//'graph_maxdepth: 2'//NL//NL//'The project.'//NL, stat, errmsg)
+    call check(error, stat, 0, 'the project file')
+    if (allocated(error)) return
+    call write_whole_file(HERE//'/src/a.f90', &
+                          'module chain'//NL//'contains'//NL// &
+                          'subroutine a()'//NL//'call b()'//NL//'end subroutine a'//NL// &
+                          'subroutine b()'//NL//'call c()'//NL//'end subroutine b'//NL// &
+                          'subroutine c()'//NL//'call d()'//NL//'end subroutine c'//NL// &
+                          'subroutine d()'//NL//'call e()'//NL//'end subroutine d'//NL// &
+                          'subroutine e()'//NL//'end subroutine e'//NL//'end module chain'//NL, stat, errmsg)
+    call check(error, stat, 0, 'the source')
+    if (allocated(error)) return
+    args(1)%s = '-q'
+    args(2)%s = HERE//'/ford.md'
+    call check(error, run(args), 0, 'the run')
+    if (allocated(error)) return
+    call read_whole_file(HERE//'/doc/proc/a.html', text, stat, errmsg)
+    call check(error, stat, 0, 'the page of the first procedure')
+    if (allocated(error)) return
+    text = text(index(text, '<svg'):index(text, '</svg>'))
+    call check(error, index(text, '>c</text>') > 0, 'two levels are drawn')
+    if (allocated(error)) return
+    call check(error, index(text, '>d</text>') == 0, 'not three')
+    if (allocated(error)) return
+    call check(error, index(text, '>...</text>') > 0, 'what is left out is marked')
+    call remove_directory(HERE)
+end subroutine test_cut
 
 end module test_graphs

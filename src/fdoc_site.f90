@@ -10,7 +10,7 @@ use fdoc_project, only: project_t
 use fdoc_pages, only: page_t
 use fdoc_graphs, only: graph_set_t, build_graphs
 use json_module, only: json_core, json_value
-use fdoc_urls, only: entity_url, entity_anchor, object_word, page_name, url_quote, is_shown
+use fdoc_urls, only: entity_url, entity_anchor, object_word, page_name, url_quote, is_shown, page_entity
 use fdoc_highlight, only: highlight_fortran
 use fdoc_generics, only: write_call_forms
 use fdoc_stats, only: file_stats_t, count_source, add_stats
@@ -276,14 +276,17 @@ end subroutine children_of
 pure logical function accepts(c, want)
     type(entity_t), intent(in) :: c     !! the entity
     integer, intent(in) :: want         !! the category
+    logical :: separate
 
     accepts = .false.
     if (.not. c%visible .or. c%kind == E_NONE) return
+    ! the interface of a separate module procedure, whose body has been found, is shown as a procedure
+    separate = c%iface == IFACE_EXPLICIT .and. c%implements > 0
     select case (want)
     case (1); accepts = c%kind == E_VARIABLE .and. c%var_role == VAR_PLAIN
-    case (2); accepts = c%kind == E_FUNCTION .and. c%iface == IFACE_NONE
-    case (3); accepts = c%kind == E_SUBROUTINE .and. c%iface == IFACE_NONE
-    case (4); accepts = c%kind == E_INTERFACE .or. c%iface == IFACE_EXPLICIT
+    case (2); accepts = c%kind == E_FUNCTION .and. (c%iface == IFACE_NONE .or. separate)
+    case (3); accepts = c%kind == E_SUBROUTINE .and. (c%iface == IFACE_NONE .or. separate)
+    case (4); accepts = c%kind == E_INTERFACE .or. (c%iface == IFACE_EXPLICIT .and. .not. separate)
     case (5); accepts = c%iface == IFACE_ABSTRACT
     case (6); accepts = c%kind == E_TYPE
     case (7); accepts = c%kind == E_BOUNDPROC
@@ -302,11 +305,14 @@ subroutine link_to(site, id, name, b)
     character(len=*), intent(in) :: name    !! the text
     type(buffer_t), intent(inout) :: b      !! the HTML
     character(len=:), allocatable :: url
+    integer :: shown
 
     url = ''
+    shown = 0
     if (id > 0) then
-        associate (e => site%p%list%box(id)%e)
-            if (is_shown(site%p%list, id) .or. allocated(e%external_url)) call entity_url(site%p%list, id, url)
+        shown = page_entity(site%p%list, id)
+        associate (e => site%p%list%box(shown)%e)
+            if (is_shown(site%p%list, shown) .or. allocated(e%external_url)) call entity_url(site%p%list, shown, url)
         end associate
     end if
     if (len(url) == 0) then
@@ -314,7 +320,7 @@ subroutine link_to(site, id, name, b)
         return
     end if
     call add(b, '<a href="')
-    if (.not. allocated(site%p%list%box(id)%e%external_url)) call add(b, '../')
+    if (.not. allocated(site%p%list%box(shown)%e%external_url)) call add(b, '../')
     call html_escape(url, b, .true.)
     call add(b, '">')
     call html_escape(name, b, .false.)
@@ -695,7 +701,7 @@ subroutine entity_title(site, id, word, b)
     integer, intent(in) :: id               !! the entity
     character(len=*), intent(in) :: word    !! what it is
     type(buffer_t), intent(inout) :: b      !! the HTML
-    integer :: k, body
+    integer :: k
     logical :: open
 
     associate (e => site%p%list%box(id)%e)
@@ -727,40 +733,77 @@ subroutine entity_title(site, id, word, b)
         select case (e%kind)
         case (E_SUBROUTINE, E_FUNCTION, E_MODPROC)
             call signature(site, id, b)
+            call procedure_doc(site, id, b)
+        case default
+            if (allocated(e%html)) call doc_block(e%html, b)
         end select
-        if (allocated(e%html)) then
-            if (len(e%html) > 0) then
-                call add(b, '<div class="doc">'//achar(10))
-                call add(b, e%html)
-                call add(b, achar(10)//'</div>'//achar(10))
-            end if
-        end if
-        body = hidden_body(site, id)
-        if (body > 0) then
-            if (allocated(site%p%list%box(body)%e%html)) then
-                if (len(site%p%list%box(body)%e%html) > 0) then
-                    call add(b, '<div class="doc">'//achar(10))
-                    call add(b, site%p%list%box(body)%e%html)
-                    call add(b, achar(10)//'</div>'//achar(10))
-                end if
-            end if
-        end if
     end associate
 end subroutine entity_title
 
-!> The body of the separate module procedure whose interface is `id`, if it has no page of its own, so
-!> that its documentation goes on the page of the interface; 0 otherwise.
-integer function hidden_body(site, id) result(body)
+!> Write the documentation of procedure `id` with its arguments and result after the first paragraph,
+!> so that they come before a long description. The body of a separate module procedure without a first
+!> paragraph of its own takes the summary of its interface.
+subroutine procedure_doc(site, id, b)
+    type(site_t), intent(in) :: site        !! the site
+    integer, intent(in) :: id               !! the procedure
+    type(buffer_t), intent(inout) :: b      !! the HTML
+    character(len=:), allocatable :: html, lead
+    integer :: start, body
+
+    associate (e => site%p%list%box(id)%e)
+        html = ''
+        if (allocated(e%html)) html = e%html
+        lead = ''
+        start = verify(html, ' '//achar(9)//achar(10)//achar(13))
+        if (start > 0) then
+            if (html(start:min(len(html), start + 2)) == '<p>') then
+                lead = html(:start - 1 + index(html(start:), '</p>') + 3)
+                html = html(len(lead) + 1:)
+            end if
+        end if
+        if (len(lead) == 0 .and. is_separate_body(site%p%list, id)) then
+            if (allocated(site%p%list%box(e%implements)%e%summary)) lead = site%p%list%box(e%implements)%e%summary
+        end if
+        call implementation_line(site, id, b)
+        call doc_block(lead, b)
+        if (allocated(e%more%arg_ids)) then
+            if (size(e%more%arg_ids) > 0) then
+                call add(b, '<h2 id="arguments">Arguments</h2>'//achar(10))
+                call argument_table(site, e%more%arg_ids, .false., b)
+            end if
+        end if
+        if (e%result > 0) then
+            call add(b, '<h2 id="result">Result</h2>'//achar(10))
+            call argument_table(site, [e%result], .true., b)
+        end if
+        call doc_block(html, b)
+        body = merged_body(site, id)
+        if (body > 0) then
+            if (allocated(site%p%list%box(body)%e%html)) call doc_block(site%p%list%box(body)%e%html, b)
+        end if
+    end associate
+end subroutine procedure_doc
+
+!> The body of separate module procedure `id`, if its page is that of both, or 0.
+integer function merged_body(site, id) result(body)
     type(site_t), intent(in) :: site    !! the site
     integer, intent(in) :: id           !! the entity
 
     body = 0
-    associate (e => site%p%list%box(id)%e)
-        if (e%iface /= IFACE_EXPLICIT .or. e%implements <= 0) return
-        if (is_shown(site%p%list, e%implements)) return
-        body = e%implements
-    end associate
-end function hidden_body
+    if (.not. is_separate_interface(site%p%list, id)) return
+    if (page_entity(site%p%list, site%p%list%box(id)%e%implements) == id) body = site%p%list%box(id)%e%implements
+end function merged_body
+
+!> Write `html` as documentation, unless it is blank.
+subroutine doc_block(html, b)
+    character(len=*), intent(in) :: html    !! the documentation
+    type(buffer_t), intent(inout) :: b      !! the HTML
+
+    if (len_trim(html) == 0) return
+    call add(b, '<div class="doc">'//achar(10))
+    call add(b, html)
+    call add(b, achar(10)//'</div>'//achar(10))
+end subroutine doc_block
 
 !> The name in the site of the file of the `logo` setting: `logo`, with its extension, or `''` if there
 !> is no such file.
@@ -1406,15 +1449,22 @@ subroutine calls_section(site, id, heading, b)
 end subroutine calls_section
 
 !> Write the source of entity `id`, if `source` is set, from the text of its file.
-subroutine source_section(site, id, b)
+subroutine source_section(site, id, b, label, heading)
     type(site_t), intent(in) :: site        !! the site
     integer, intent(in) :: id               !! the procedure or type
     type(buffer_t), intent(inout) :: b      !! the HTML
+    character(len=*), intent(in) :: label   !! what opens it
+    logical, intent(in), optional :: heading    !! whether to start the section, by default true
 
     if (.not. wants_source(site, id)) return
     associate (e => site%p%list%box(id)%e)
         if (e%source_first == 0) return
-        call add(b, '<h2 id="source">Source</h2>'//achar(10)//'<details class="source"><summary>Show the code</summary>')
+        if (.not. present(heading)) then
+            call add(b, '<h2 id="source">Source</h2>'//achar(10))
+        else if (heading) then
+            call add(b, '<h2 id="source">Source</h2>'//achar(10))
+        end if
+        call add(b, '<details class="source"><summary>'//label//'</summary>')
         call add(b, '<pre><code>')
         call highlight_fortran(site%p%list%box(e%file)%e%source_text(e%source_first:e%source_last), b, .false.)
         call add(b, '</code></pre></details>'//achar(10))
@@ -1450,8 +1500,10 @@ subroutine locate_sources(site)
     file = 0
     do k = 1, site%p%list%n
         associate (e => site%p%list%box(k)%e)
-            if (.not. is_procedure(e%kind) .and. e%kind /= E_TYPE) cycle
-            if (allocated(e%external_url) .or. .not. e%visible) cycle
+            if (.not. is_procedure(e%kind) .and. e%kind /= E_TYPE .and. e%kind /= E_MODPROC) cycle
+            if (allocated(e%external_url)) cycle
+            ! a hidden body is shown on the page of its interface
+            if (.not. e%visible .and. page_entity(site%p%list, k) == k) cycle
             if (.not. wants_source(site, k)) cycle
             n = n + 1
             ids(n) = k
@@ -1496,6 +1548,10 @@ subroutine locate_in_file(site, ids)
                 call find_source(low, starts, stops, cursor, 'function', lowercase(e%name), found, first, last)
                 if (first == 0 .and. cursor > 1) &
                     call find_source(low, starts, stops, 1, 'function', lowercase(e%name), found, first, last)
+            case (E_MODPROC)
+                call find_source(low, starts, stops, cursor, 'procedure', lowercase(e%name), found, first, last)
+                if (first == 0 .and. cursor > 1) &
+                    call find_source(low, starts, stops, 1, 'procedure', lowercase(e%name), found, first, last)
             case default
                 call find_source(low, starts, stops, cursor, 'type', lowercase(e%name), found, first, last)
                 if (first == 0 .and. cursor > 1) &
@@ -1523,7 +1579,7 @@ pure subroutine construct_lines(low, starts, stops)
             j = index(low(i:), achar(10))
             stop_at = merge(len(low), i + j - 2, j == 0)
             if (index(low(i:stop_at), 'subroutine') > 0 .or. index(low(i:stop_at), 'function') > 0 .or. &
-                index(low(i:stop_at), 'type') > 0) then
+                index(low(i:stop_at), 'type') > 0 .or. index(low(i:stop_at), 'procedure') > 0) then
                 n = n + 1
                 if (pass == 2) then
                     starts(n) = i
@@ -1543,7 +1599,7 @@ subroutine find_source(low, starts, stops, from, keyword, name, found, first, la
     integer, intent(in) :: starts(:)        !! where the lines to search start
     integer, intent(in) :: stops(:)         !! where they end
     integer, intent(in) :: from             !! the line to start from
-    character(len=*), intent(in) :: keyword !! `subroutine`, `function` or `type`
+    character(len=*), intent(in) :: keyword !! `subroutine`, `function`, `procedure` or `type`
     character(len=*), intent(in) :: name    !! the name, in lowercase
     integer, intent(out) :: found           !! the line where it starts
     integer, intent(out) :: first           !! where it starts, or 0
@@ -1559,6 +1615,8 @@ subroutine find_source(low, starts, stops, from, keyword, name, found, first, la
             comment = index(line, '!')
             if (comment == 0) comment = len(line) + 1
             at = line_has(line(:comment - 1), keyword, name)
+            ! a `module procedure` statement, not a binding
+            if (keyword == 'procedure' .and. first == 0 .and. .not. starts_word(adjustl(line), 'module')) at = 0
             if (at > 0 .and. first == 0 .and. .not. starts_word(adjustl(line), 'end')) then
                 first = starts(k)
                 found = k
@@ -1624,6 +1682,7 @@ subroutine entity_page(site, id, html)
     call children_of(site, id, 10, blocks)
     call children_of(site, id, 11, enums)
     call children_of(site, id, 12, implementations)
+    call implemented_here(site, id, implementations)
 
     associate (e => site%p%list%box(id)%e)
         here = list_of(site, id)
@@ -1640,7 +1699,7 @@ subroutine entity_page(site, id, html)
         case (E_NAMELIST); word = 'namelist'
         case default; word = 'file'
         end select
-        if (e%iface == IFACE_EXPLICIT) word = 'interface'
+        if (e%iface == IFACE_EXPLICIT .and. e%implements == 0) word = 'interface'
         if (e%iface == IFACE_ABSTRACT) word = 'abstract interface'
 
         if (e%kind == E_TYPE) then
@@ -1706,6 +1765,23 @@ subroutine entity_page(site, id, html)
     call take(b, html)
 end subroutine entity_page
 
+!> Add to `ids` the procedures whose bodies are in unit `id` but are shown on the pages of their interfaces.
+subroutine implemented_here(site, id, ids)
+    type(site_t), intent(in) :: site                !! the site
+    integer, intent(in) :: id                       !! the unit
+    integer, allocatable, intent(inout) :: ids(:)   !! the procedures
+    integer :: k, shown
+
+    associate (e => site%p%list%box(id)%e)
+        if (e%kind /= E_MODULE .and. e%kind /= E_SUBMODULE) return
+        do k = 1, size(e%children)
+            shown = page_entity(site%p%list, e%children(k))
+            if (shown /= e%children(k)) call push_int(ids, shown)
+        end do
+    end associate
+    call sort_ids(site, ids)
+end subroutine implemented_here
+
 !> Write enumerations.
 subroutine enum_sections(site, ids, b)
     type(site_t), intent(in) :: site        !! the site
@@ -1769,7 +1845,7 @@ logical function uses_math(site, id)
 
     uses_math = has_math(site%p%list%box(id)%e)
     if (uses_math) return
-    if (hidden_body(site, id) > 0) uses_math = has_math(site%p%list%box(hidden_body(site, id))%e)
+    if (merged_body(site, id) > 0) uses_math = has_math(site%p%list%box(merged_body(site, id))%e)
     if (uses_math) return
     do k = 1, size(site%p%list%box(id)%e%children)
         uses_math = has_math(site%p%list%box(site%p%list%box(id)%e%children(k))%e)
@@ -1818,34 +1894,53 @@ subroutine procedure_body(site, id, b)
     integer, intent(in) :: id               !! the procedure
     type(buffer_t), intent(inout) :: b      !! the HTML
 
+    if (.not. has_graph(site, id, 'Uses')) call uses_section(site, id, .true., b)
+    if (.not. has_graph(site, id, 'Calls')) call calls_section(site, id, .true., b)
+end subroutine procedure_body
+
+!> Write where the interface and the body of a separate module procedure are.
+subroutine implementation_line(site, id, b)
+    type(site_t), intent(in) :: site        !! the site
+    integer, intent(in) :: id               !! the procedure
+    type(buffer_t), intent(inout) :: b      !! the HTML
+
     associate (e => site%p%list%box(id)%e)
-        if (allocated(e%more%arg_ids)) then
-            if (size(e%more%arg_ids) > 0) then
-                call add(b, '<h2 id="arguments">Arguments</h2>'//achar(10))
-                call argument_table(site, e%more%arg_ids, .false., b)
-            end if
-        end if
-        if (e%result > 0) then
-            call add(b, '<h2 id="result">Result</h2>'//achar(10))
-            call argument_table(site, [e%result], .true., b)
-        end if
-        if (hidden_body(site, id) > 0) then
-            ! the documentation of the body is on this page; say where the body is
-            call add(b, '<div class="meta"><span>implemented in ')
-            associate (unit => site%p%list%box(e%implements)%e%parent)
-                call link_to(site, unit, site%p%list%box(unit)%e%name, b)
-            end associate
+        if (merged_body(site, id) > 0) then
+            call add(b, '<div class="meta"><span>interface in ')
+            call unit_and_file(site, id, b)
+            call add(b, '</span><span>implementation in ')
+            call unit_and_file(site, e%implements, b)
             call add(b, '</span></div>'//achar(10))
         else if (e%implements > 0) then
             call add(b, '<div class="meta"><span>')
-            call add(b, merge('implements  ', 'implemented ', e%kind == E_MODPROC))
+            call add(b, trim(merge('implements    ', 'implemented by', is_separate_body(site%p%list, id)))//' ')
             call link_to(site, e%implements, site%p%list%box(e%implements)%e%name, b)
+            call add(b, ' in ')
+            call unit_and_file(site, e%implements, b)
             call add(b, '</span></div>'//achar(10))
         end if
-        if (.not. has_graph(site, id, 'Uses')) call uses_section(site, id, .true., b)
-        if (.not. has_graph(site, id, 'Calls')) call calls_section(site, id, .true., b)
     end associate
-end subroutine procedure_body
+end subroutine implementation_line
+
+!> Write the unit that holds entity `id`, and its file, as links.
+subroutine unit_and_file(site, id, b)
+    type(site_t), intent(in) :: site        !! the site
+    integer, intent(in) :: id               !! the entity
+    type(buffer_t), intent(inout) :: b      !! the HTML
+    integer :: unit
+
+    unit = site%p%list%box(id)%e%parent
+    if (unit <= 0) return
+    if (site%p%list%box(unit)%e%kind == E_SUBMODULE) call add(b, 'submodule ')
+    call link_to(site, unit, site%p%list%box(unit)%e%name, b)
+    associate (file => site%p%list%box(id)%e%file)
+        if (file > 0) then
+            call add(b, ' (')
+            call link_to(site, file, display_name(site%p%list%box(file)%e), b)
+            call add(b, ')')
+        end if
+    end associate
+end subroutine unit_and_file
 
 !> Write what is specific to a generic interface: the procedures in it.
 subroutine interface_body(site, id, b)
@@ -2109,7 +2204,12 @@ subroutine page_source(site, id, b)
                 call add(b, '</code></pre>'//achar(10))
             end if
         case (E_SUBROUTINE, E_FUNCTION, E_MODPROC, E_TYPE)
-            call source_section(site, id, b)
+            if (merged_body(site, id) > 0) then
+                call source_section(site, id, b, 'Show the interface')
+                call source_section(site, merged_body(site, id), b, 'Show the implementation', .false.)
+            else
+                call source_section(site, id, b, 'Show the code')
+            end if
         end select
     end associate
 end subroutine page_source

@@ -5,7 +5,7 @@ use fdoc_model
 use fdoc_settings, only: settings_t, map_entry_t
 use fdoc_project, only: project_t
 use fdoc_markdown, only: markdown_to_html, markdown_options_t, dedent
-use fdoc_urls, only: link_context_t, resolve_link, is_shown
+use fdoc_urls, only: link_context_t, resolve_link
 use fdoc_progress, only: progress_start, progress_tick, progress_finish
 implicit none
 private
@@ -110,24 +110,26 @@ subroutine render_documentation(p, s, options)
     call progress_finish()
 end subroutine render_documentation
 
-!> Give the interface of a separate module procedure without a summary that of its body, when the
-!> body has no page of its own and so its documentation is shown with the interface.
+!> Give the interface or the body of a separate module procedure without a summary that of the other.
 subroutine borrow_summaries(p)
     type(project_t), intent(inout) :: p     !! the project
-    integer :: k, body
+    integer :: k, other
 
     do k = 1, p%list%n
-        associate (e => p%list%box(k)%e)
-            if (e%iface /= IFACE_EXPLICIT .or. e%implements <= 0) cycle
-            body = e%implements
-            if (is_shown(p%list, body) .or. .not. allocated(p%list%box(body)%e%summary)) cycle
-            if (allocated(e%summary)) then
-                if (len_trim(e%summary) > 0) cycle
-            end if
-            e%summary = p%list%box(body)%e%summary
-        end associate
+        other = p%list%box(k)%e%implements
+        if (other <= 0) cycle
+        if (has_summary(p%list%box(k)%e) .or. .not. has_summary(p%list%box(other)%e)) cycle
+        p%list%box(k)%e%summary = p%list%box(other)%e%summary
     end do
 end subroutine borrow_summaries
+
+!> True if `e` has a summary that is not blank.
+pure logical function has_summary(e)
+    type(entity_t), intent(in) :: e     !! the entity
+
+    has_summary = .false.
+    if (allocated(e%summary)) has_summary = len_trim(e%summary) > 0
+end function has_summary
 
 !> Render the documentation and summary of entity `id`.
 subroutine render_entity(p, options, id)

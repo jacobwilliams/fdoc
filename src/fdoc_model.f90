@@ -7,7 +7,7 @@ use fdoc_util, only: string_t, push, push_int, name_index_t
 implicit none
 private
 
-public :: is_procedure
+public :: is_procedure, is_separate_body, is_separate_interface
 
 ! entity kinds
 integer, parameter, public :: E_NONE = 0
@@ -191,6 +191,33 @@ elemental logical function is_procedure(kind)
 
     is_procedure = kind == E_SUBROUTINE .or. kind == E_FUNCTION
 end function is_procedure
+
+!> True if entity `id` is the body of a separate module procedure, whose interface has been found: a
+!> `module procedure`, or a procedure with the `module` prefix that is not in an interface block.
+pure logical function is_separate_body(list, id)
+    type(entity_list_t), intent(in) :: list !! the entities
+    integer, intent(in) :: id               !! the entity
+
+    is_separate_body = .false.
+    associate (e => list%box(id)%e)
+        if (e%implements <= 0) return
+        if (e%kind /= E_MODPROC) then
+            if (e%iface /= IFACE_NONE) return
+            if (e%parent > 0) then
+                if (list%box(e%parent)%e%kind == E_INTERFACE) return
+            end if
+        end if
+    end associate
+    is_separate_body = .true.
+end function is_separate_body
+
+!> True if entity `id` is the interface of a separate module procedure whose body has been found.
+pure logical function is_separate_interface(list, id)
+    type(entity_list_t), intent(in) :: list !! the entities
+    integer, intent(in) :: id               !! the entity
+
+    is_separate_interface = list%box(id)%e%implements > 0 .and. .not. is_separate_body(list, id)
+end function is_separate_interface
 
 !> Add an entity of kind `kind` inside `parent`, returning its index.
 integer function list_add(self, kind, parent) result(id)

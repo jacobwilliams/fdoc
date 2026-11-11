@@ -7,7 +7,7 @@ module fdoc_project
 !!   A["load_project_sources: one list of entities"] --> B
 !!   B["correlate: modules from elsewhere, use statements, public names, inheritance"] --> C
 !!   C["link_project: implementations, calls, bindings, submodules"] --> D
-!!   D["prune: hide what is not displayed, but keep what a shown binding binds to"]
+!!   D["prune: hide what is not displayed, but keep what a shown binding binds to, and bodies of shown interfaces"]
 !! ```
 !!
 !! Hiding comes last, so that names can still be found in what will not be shown.
@@ -818,6 +818,7 @@ subroutine reveal_bound_procedures(p, s)
             call reveal(target)
         end do
     end do
+    call merge_separate_procedures(p)
 contains
     !> Show procedure `id`, unless it is hidden for having no documentation, or its parent is not shown.
     subroutine reveal(id)
@@ -833,6 +834,54 @@ contains
         end associate
     end subroutine reveal
 end subroutine reveal_bound_procedures
+
+!> Make one entity of each separate module procedure whose interface is shown on a page of its own: its
+!> body is hidden, and what the body has that the interface doesn't, its calls, `use` statements and
+!> state, goes to the interface. Calls to any hidden body go to its interface.
+subroutine merge_separate_procedures(p)
+    type(project_t), intent(inout) :: p     !! the project
+    integer :: k, j, m, body
+
+    do k = 1, p%list%n
+        if (.not. is_separate_interface(p%list, k)) cycle
+        ! only an interface with a page of its own, not a specific procedure of a generic one
+        if (p%list%box(k)%e%iface == IFACE_NONE) cycle
+        if (.not. is_shown(p%list, k)) cycle
+        body = p%list%box(k)%e%implements
+        if (.not. is_separate_body(p%list, body)) cycle
+        p%list%box(body)%e%visible = .false.
+        associate (e => p%list%box(k)%e, from => p%list%box(body)%e)
+            if (allocated(from%call_ids)) then
+                if (.not. allocated(e%call_ids)) allocate (e%call_ids(0))
+                do j = 1, size(from%call_ids)
+                    if (from%call_ids(j) /= k .and. all(e%call_ids /= from%call_ids(j))) &
+                        call push_int(e%call_ids, from%call_ids(j))
+                end do
+            end if
+            if (.not. associated(e%more, no_more) .and. .not. associated(from%more, no_more)) then
+                if (allocated(from%more%uses)) then
+                    if (.not. allocated(e%more%uses)) allocate (e%more%uses(0))
+                    do j = 1, size(from%more%uses)
+                        if (.not. any([(e%more%uses(m)%module == from%more%uses(j)%module, m=1, size(e%more%uses))])) &
+                            e%more%uses = [e%more%uses, from%more%uses(j)]
+                    end do
+                end if
+                e%more%saved_state = e%more%saved_state .or. from%more%saved_state
+                e%more%common_block = e%more%common_block .or. from%more%common_block
+            end if
+        end associate
+    end do
+    ! calls to a hidden body are calls to its interface
+    do k = 1, p%list%n
+        if (.not. allocated(p%list%box(k)%e%call_ids)) cycle
+        do j = 1, size(p%list%box(k)%e%call_ids)
+            body = p%list%box(k)%e%call_ids(j)
+            if (body <= 0) cycle
+            if (p%list%box(body)%e%visible .or. .not. is_separate_body(p%list, body)) cycle
+            if (is_shown(p%list, p%list%box(body)%e%implements)) p%list%box(k)%e%call_ids(j) = p%list%box(body)%e%implements
+        end do
+    end do
+end subroutine merge_separate_procedures
 
 !> True if entities of `kind` are program units. The permission of a module is what its members get
 !> by default, so `display` says nothing about whether the module itself is shown.

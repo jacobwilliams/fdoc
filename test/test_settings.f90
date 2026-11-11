@@ -115,12 +115,12 @@ subroutine test_project_nodes(error)
     integer :: stat
 
     s = new_settings()
-    call check(error, s%graph_project_maxnodes, huge(1))
+    call check(error, s%graph_project_maxnodes, 1000)
     if (allocated(error)) return
-    call set_option(s, 'graph_project_maxnodes', [string_t('1000')], stat, msg)
+    call set_option(s, 'graph_project_maxnodes', [string_t('5000')], stat, msg)
     call check(error, stat, 0)
     if (allocated(error)) return
-    call check(error, s%graph_project_maxnodes, 1000)
+    call check(error, s%graph_project_maxnodes, 5000)
 end subroutine test_project_nodes
 
 !> Checks: logical options.

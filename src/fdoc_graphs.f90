@@ -21,7 +21,7 @@ use fdoc_buffer
 use fdoc_model
 use fdoc_settings, only: settings_t
 use fdoc_project, only: project_t
-use fdoc_urls, only: entity_url
+use fdoc_urls, only: entity_url, is_shown
 use fdoc_progress, only: progress_start, progress_tick, progress_finish, warn
 use fdoc_shell, only: make_directory
 use fdot, only: layout_t => graph_t, RANK_LR, RANK_RL, FDOT_OK
@@ -89,6 +89,7 @@ type :: walk_t
     integer, allocatable :: places(:)           !! the number of each entity in the graph
     integer, allocatable :: queue(:)            !! the entities reached
     integer, allocatable :: levels(:)           !! the hops to each of `queue`
+    logical, allocatable :: more(:)             !! whether each of `queue` leads to more than is drawn
     integer, allocatable :: from(:)             !! where each edge starts
     integer, allocatable :: to(:)               !! where each edge ends
     integer :: stamp = 0                        !! a number new for each graph
@@ -299,7 +300,8 @@ logical function graphs_wanted(p, s, id, depth, nodes)
 end function graphs_wanted
 
 !> Put the graph of `job` in `g`. `found` is false if it would have only one node or no edges. Nodes go
-!> in as they are reached, and edges after them.
+!> in as they are reached, and edges after them. A node that leads to more than `graph_maxdepth` and
+!> `graph_maxnodes` let in has an edge to a node `...`.
 subroutine describe_graph(p, s, relation, job, w, g, found)
     type(project_t), intent(in) :: p        !! the project
     type(settings_t), intent(in) :: s       !! the settings
@@ -309,7 +311,7 @@ subroutine describe_graph(p, s, relation, job, w, g, found)
     type(layout_t), intent(out) :: g        !! the description
     logical, intent(out) :: found           !! whether there is a graph
     integer, allocatable :: next(:)
-    integer :: head, k, id, other, j, reached, edges
+    integer :: head, k, id, other, j, reached, edges, dots
 
     w%stamp = w%stamp + 1
     reached = size(job%roots)
@@ -318,11 +320,14 @@ subroutine describe_graph(p, s, relation, job, w, g, found)
         w%queue(k) = job%roots(k)
         w%levels(k) = 0
     end do
+    w%more(:reached) = .false.
     head = 1
     edges = 0
     do while (head <= reached)
         id = w%queue(head)
-        if (w%levels(head) < job%max_depth) then
+        if (w%levels(head) >= job%max_depth) then
+            w%more(head) = leads_on(id)
+        else
             if (job%forward) then
                 if (allocated(relation%out(id)%ids)) then
                     next = relation%out(id)%ids
@@ -340,11 +345,15 @@ subroutine describe_graph(p, s, relation, job, w, g, found)
                 other = next(j)
                 if (p%list%box(other)%e%kind == E_NONE) cycle
                 if (w%marked(other) /= w%stamp) then
-                    if (reached >= job%max_nodes) cycle
+                    if (reached >= job%max_nodes) then
+                        w%more(head) = .true.
+                        cycle
+                    end if
                     w%marked(other) = w%stamp
                     reached = reached + 1
                     w%queue(reached) = other
                     w%levels(reached) = w%levels(head) + 1
+                    w%more(reached) = .false.
                 end if
                 edges = edges + 1
                 if (edges > size(w%from)) call grow_edges(w)
@@ -364,6 +373,36 @@ subroutine describe_graph(p, s, relation, job, w, g, found)
     do k = 1, edges
         call add_edge(s, relation, w%from(k), w%to(k), w%places, g)
     end do
+    do k = 1, reached
+        if (.not. w%more(k)) cycle
+        call g%add_node('...', dots, fill='#8a93a5')
+        if (job%forward) then
+            call g%add_edge(w%places(w%queue(k)), dots, dashed=.true.)
+        else
+            call g%add_edge(dots, w%places(w%queue(k)), dashed=.true.)
+        end if
+    end do
+contains
+    !> True if entity `id` has neighbours in the direction of the graph that are not in it.
+    logical function leads_on(id)
+        integer, intent(in) :: id   !! the entity
+        integer :: m
+
+        leads_on = .false.
+        if (job%forward) then
+            if (.not. allocated(relation%out(id)%ids)) return
+            do m = 1, size(relation%out(id)%ids)
+                if (p%list%box(relation%out(id)%ids(m))%e%kind == E_NONE) cycle
+                if (w%marked(relation%out(id)%ids(m)) /= w%stamp) leads_on = .true.
+            end do
+        else
+            if (.not. allocated(relation%in(id)%ids)) return
+            do m = 1, size(relation%in(id)%ids)
+                if (p%list%box(relation%in(id)%ids(m))%e%kind == E_NONE) cycle
+                if (w%marked(relation%in(id)%ids(m)) /= w%stamp) leads_on = .true.
+            end do
+        end if
+    end function leads_on
 end subroutine describe_graph
 
 !> Make room for more edges.
@@ -414,8 +453,9 @@ subroutine add_node(p, id, root, g, place)
         if (e%kind == E_BOUNDPROC) owner = e%parent
         if (e%bound_to > 0) owner = e%bound_to
         url = ''
-        if (e%visible .or. allocated(e%external_url)) call entity_url(p%list, id, url)
-        if (.not. e%visible .and. .not. allocated(e%external_url)) colour = '#8a93a5'
+        ! something shown inside something hidden, such as a binding of a private type, has no page either
+        if (is_shown(p%list, id) .or. allocated(e%external_url)) call entity_url(p%list, id, url)
+        if (.not. is_shown(p%list, id) .and. .not. allocated(e%external_url)) colour = '#8a93a5'
         if (allocated(e%external_url)) colour = '#646d7e'
         if (len(url) > 0 .and. .not. allocated(e%external_url)) url = '../'//url
         outline = ''
@@ -439,7 +479,7 @@ subroutine node_link(p, id, url)
 
     url = ''
     associate (e => p%list%box(id)%e)
-        if (e%visible .or. allocated(e%external_url)) call entity_url(p%list, id, url)
+        if (is_shown(p%list, id) .or. allocated(e%external_url)) call entity_url(p%list, id, url)
         if (len(url) > 0 .and. .not. allocated(e%external_url)) url = '../'//url
     end associate
 end subroutine node_link
@@ -719,6 +759,7 @@ subroutine draw_some(p, s, relations, jobs, keep, drawings, descriptions, failed
 
     allocate (w%marked(p%list%n), source=0)
     allocate (w%places(p%list%n), w%queue(p%list%n), w%levels(p%list%n), w%from(1024), w%to(1024))
+    allocate (w%more(p%list%n))
     !$omp do schedule(dynamic)
     do k = 1, size(jobs)
         call draw_graph(p, s, relations(jobs(k)%relation), jobs(k), keep, w, drawings(k), descriptions(k), failed(k))

@@ -61,7 +61,7 @@ type, public :: settings_t
     logical :: lower = .false., preprocess = .true., print_creation_date = .false., proc_internals = .false.
     logical :: quiet = .false., search = .true., show_proc_parent = .false., source = .false., warn = .false.
     logical :: relative = .true.                        !! true if `project_url` was not given
-    integer :: graph_maxdepth = 10000, graph_maxnodes = 1000000000, graph_project_maxnodes = huge(1)
+    integer :: graph_maxdepth = 3, graph_maxnodes = 100, graph_project_maxnodes = 1000
     integer :: max_frontpage_items = 10
     integer :: parallel = 1                             !! threads to use: `new_settings` gives every core
     type(string_t), allocatable :: copy_subdir(:), display(:), exclude(:), exclude_dir(:), extensions(:)
