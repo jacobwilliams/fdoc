@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>of_class &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_urls.f90.html">fdoc_urls.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_urls.html">fdoc_urls</a></div>
+<h1><span class="kind">function</span>of_class<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> of_class(<span class="intent attr-in" title="intent(in)">e</span>, <span class="intent attr-in" title="intent(in)">entity</span>)</div>
+<div class="doc">
+<p>True if entity <code>e</code> is of class <code>entity</code>, as written in a link. Any entity matches <code>''</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-e"><td class="name">e</td><td class="type">type(<a href="../type/entity_t.html">entity_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entity</p></td></tr>
+<tr id="variable-entity"><td class="name">entity</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the class, in lowercase</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-of_class"><td class="name">of_class</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/is_procedure.html">is_procedure</a></li></ul>
+<div class="graph"><svg width="196pt" height="30pt"
+ viewBox="0 0 196 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/of_class.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="62.1" height="21.6"/><text x="31" y="-6.1">of_class</text></a><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="98.1" y="-21.6" width="89.6" height="21.6"/><text x="142.9" y="-6.1">is_procedure</text></a><path d="M62.9,-10.8C71.2,-10.8 80.3,-10.8 89.4,-10.8"/><polygon fill="#8a93a5" points="89.2,-13.3 96.2,-10.8 89.2,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/matches.html">matches</a></li></ul>
+<div class="graph"><svg width="424pt" height="70pt"
+ viewBox="0 0 424 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/of_class.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="62.1" height="21.6"/><text x="31" y="-26.1">of_class</text></a><a href="../proc/matches.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="98.1" y="-41.6" width="63.5" height="21.6"/><text x="129.9" y="-26.1">matches</text></a><path d="M97.7,-30.8C89.2,-30.8 80,-30.8 71.1,-30.8"/><polygon fill="#8a93a5" points="71.3,-28.4 64.3,-30.8 71.3,-33.3"/><a href="../proc/find_child.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="212.4" y="-61.6" width="69.3" height="21.6"/><text x="247.1" y="-46.1">find_child</text></a><path d="M212.1,-44.9C198.9,-42.6 183.7,-40 170.1,-37.6"/><polygon fill="#8a93a5" points="170.6,-35.2 163.3,-36.4 169.8,-40"/><a href="../proc/find_anywhere.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="197.6" y="-21.6" width="99" height="21.6"/><text x="247.1" y="-6.1">find_anywhere</text></a><path d="M197.2,-19.3C188.3,-20.8 179.1,-22.4 170.5,-23.9"/><polygon fill="#8a93a5" points="170.1,-21.5 163.6,-25.1 170.9,-26.3"/><a href="../proc/resolve_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="332.6" y="-41.6" width="83" height="21.6"/><text x="374.1" y="-26.1">resolve_link</text></a><path d="M332.2,-37.3C318.7,-39.5 303.8,-41.9 290.2,-44.1"/><polygon fill="#8a93a5" points="290,-41.6 283.5,-45.1 290.8,-46.4"/><path d="M332.2,-24.3C323.6,-22.9 314.3,-21.4 305.2,-19.9"/><polygon fill="#8a93a5" points="305.8,-17.5 298.5,-18.9 305,-22.4"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> of_class(e, entity)
+    <span class="k">type</span>(entity_t), <span class="k">intent</span>(in) :: e         <span class="d">!! the entity</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: entity  <span class="d">!! the class, in lowercase</span>
+
+    <span class="k">select</span> <span class="k">case</span> (entity)
+    <span class="k">case</span> (<span class="s">''</span>)
+        of_class = <span class="k">.true.</span>
+    <span class="k">case</span> (<span class="s">'module'</span>)
+        of_class = e%<span class="k">kind</span> == E_MODULE
+    <span class="k">case</span> (<span class="s">'submodule'</span>)
+        of_class = e%<span class="k">kind</span> == E_SUBMODULE
+    <span class="k">case</span> (<span class="s">'type'</span>)
+        of_class = e%<span class="k">kind</span> == E_TYPE
+    <span class="k">case</span> (<span class="s">'procedure'</span>, <span class="s">'proc'</span>)
+        of_class = is_procedure(e%<span class="k">kind</span>)
+    <span class="k">case</span> (<span class="s">'subroutine'</span>)
+        of_class = e%<span class="k">kind</span> == E_SUBROUTINE
+    <span class="k">case</span> (<span class="s">'function'</span>)
+        of_class = e%<span class="k">kind</span> == E_FUNCTION
+    <span class="k">case</span> (<span class="s">'file'</span>, <span class="s">'sourcefile'</span>)
+        of_class = e%<span class="k">kind</span> == E_FILE
+    <span class="k">case</span> (<span class="s">'interface'</span>)
+        of_class = e%<span class="k">kind</span> == E_INTERFACE <span class="k">.or.</span> e%iface == IFACE_EXPLICIT
+    <span class="k">case</span> (<span class="s">'absinterface'</span>)
+        of_class = e%iface == IFACE_ABSTRACT
+    <span class="k">case</span> (<span class="s">'program'</span>)
+        of_class = e%<span class="k">kind</span> == E_PROGRAM
+    <span class="k">case</span> (<span class="s">'block'</span>)
+        of_class = e%<span class="k">kind</span> == E_BLOCKDATA
+    <span class="k">case</span> (<span class="s">'namelist'</span>)
+        of_class = e%<span class="k">kind</span> == E_NAMELIST
+    <span class="k">case</span> (<span class="s">'variable'</span>)
+        of_class = e%<span class="k">kind</span> == E_VARIABLE
+    <span class="k">case</span> (<span class="s">'bound'</span>)
+        of_class = e%<span class="k">kind</span> == E_BOUNDPROC
+    <span class="k">case</span> (<span class="s">'final'</span>)
+        of_class = e%<span class="k">kind</span> == E_FINAL
+    <span class="k">case</span> (<span class="s">'common'</span>)
+        of_class = e%<span class="k">kind</span> == E_COMMON
+    <span class="k">case</span> default
+        of_class = <span class="k">.false.</span>
+    <span class="k">end</span> <span class="k">select</span>
+<span class="k">end</span> <span class="k">function</span> of_class</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

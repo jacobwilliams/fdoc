@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>read_line_directive &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>read_line_directive<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> read_line_directive(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">from</span>, <span class="intent attr-out" title="intent(out)">content</span>, <span class="intent attr-out" title="intent(out)">next</span>)</div>
+<div class="doc">
+<p>Read a line directive whose text starts at <code>from</code>, joining continuation lines.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-from"><td class="name">from</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>where the directive's text starts</p></td></tr>
+<tr id="variable-content"><td class="name">content</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the directive's text</p></td></tr>
+<tr id="variable-next"><td class="name">next</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the position after the directive</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/skip_blanks.html">skip_blanks</a></li><li><a href="../proc/end_of_line.html">end_of_line</a></li><li><a href="../proc/trim_length.html">trim_length</a></li><li><a href="../proc/add.html">add</a></li><li><a href="../proc/take.html">take</a></li></ul>
+<div class="graph"><svg width="348pt" height="190pt"
+ viewBox="0 0 348 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 185.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/read_line_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="123.5" height="21.6"/><text x="61.8" y="-86.1">read_line_directive</text></a><a href="../proc/skip_blanks.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="159.5" y="-181.6" width="82.3" height="21.6"/><text x="200.7" y="-166.1">skip_blanks</text></a><path d="M80.7,-102.6C99.8,-115.1 131.4,-135.1 159.5,-150.8 162.5,-152.5 165.6,-154.1 168.8,-155.8"/><polygon fill="#8a93a5" points="167.4,-157.8 174.8,-158.8 169.7,-153.5"/><a href="../proc/end_of_line.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="159.9" y="-141.6" width="81.6" height="21.6"/><text x="200.7" y="-126.1">end_of_line</text></a><path d="M103.1,-102.6C118.8,-107.2 137,-112.5 153.2,-117.2"/><polygon fill="#8a93a5" points="152.2,-119.5 159.6,-119.1 153.6,-114.8"/><a href="../proc/trim_length.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="161.3" y="-101.6" width="78.7" height="21.6"/><text x="200.7" y="-86.1">trim_length</text></a><path d="M124.4,-90.8C134,-90.8 143.7,-90.8 152.9,-90.8"/><polygon fill="#8a93a5" points="152.6,-93.3 159.6,-90.8 152.6,-88.4"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="173.7" y="-61.6" width="54" height="21.6"/><text x="200.7" y="-46.1">add</text></a><path d="M103.1,-79C122.9,-73.2 146.5,-66.3 165.4,-60.8"/><polygon fill="#8a93a5" points="166,-63.2 172,-58.9 164.6,-58.5"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="173.7" y="-21.6" width="54" height="21.6"/><text x="200.7" y="-6.1">take</text></a><path d="M80.7,-79C99.8,-66.5 131.4,-46.5 159.5,-30.8 162.5,-29.1 165.6,-27.5 168.8,-25.8"/><polygon fill="#8a93a5" points="169.7,-28.1 174.8,-22.8 167.4,-23.8"/><a href="../proc/is_blank.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="277.8" y="-141.6" width="62.1" height="21.6"/><text x="308.9" y="-126.1">is_blank</text></a><path d="M231.6,-159.6C243.6,-155 257.7,-149.7 270.5,-144.9"/><polygon fill="#8a93a5" points="271.1,-147.3 276.8,-142.5 269.4,-142.7"/><path d="M231.6,-102C243.6,-106.6 257.7,-111.9 270.5,-116.7"/><polygon fill="#8a93a5" points="269.4,-118.9 276.8,-119.1 271.1,-114.3"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/parse_text.html">parse_text</a></li></ul>
+<div class="graph"><svg width="587pt" height="70pt"
+ viewBox="0 0 587 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/read_line_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="123.5" height="21.6"/><text x="61.8" y="-26.1">read_line_directive</text></a><a href="../proc/parse_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="159.5" y="-41.6" width="75.1" height="21.6"/><text x="197.1" y="-26.1">parse_text</text></a><path d="M159.3,-30.8C151,-30.8 142,-30.8 132.9,-30.8"/><polygon fill="#8a93a5" points="133,-28.4 126,-30.8 133,-33.3"/><a href="../proc/parse_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="270.6" y="-41.6" width="70.8" height="21.6"/><text x="306" y="-26.1">parse_file</text></a><path d="M270.3,-30.8C261.7,-30.8 252.4,-30.8 243.3,-30.8"/><polygon fill="#8a93a5" points="243.3,-28.4 236.3,-30.8 243.3,-33.3"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="387.1" y="-61.6" width="91.7" height="21.6"/><text x="433" y="-46.1">fypp_process</text></a><path d="M386.9,-43.6C375,-41.7 362.1,-39.6 350.3,-37.7"/><polygon fill="#8a93a5" points="350.7,-35.3 343.4,-36.6 349.9,-40.1"/><a href="../proc/include_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="377.4" y="-21.6" width="111.2" height="21.6"/><text x="433" y="-6.1">include_directive</text></a><path d="M377.2,-19.6C368,-21 358.7,-22.5 349.9,-23.9"/><polygon fill="#8a93a5" points="349.7,-21.5 343.1,-25 350.4,-26.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="524.6" y="-61.6" width="54" height="21.6"/><text x="551.6" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M524.2,-50.8C513.2,-50.8 500.2,-50.8 487.4,-50.8"/><polygon fill="#8a93a5" points="487.6,-48.4 480.6,-50.8 487.6,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="524.6" y="-21.6" width="54" height="21.6"/><text x="551.6" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M524.2,-10.8C516.1,-10.8 506.8,-10.8 497.3,-10.8"/><polygon fill="#8a93a5" points="497.5,-8.4 490.5,-10.8 497.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">subroutine</span> read_line_directive(text, from, content, next)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text                    <span class="d">!! the text</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: from                             <span class="d">!! where the directive's text starts</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: content   <span class="d">!! the directive's text</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: next                            <span class="d">!! the position after the directive</span>
+    <span class="k">type</span>(buffer_t) :: b
+    <span class="k">integer</span> :: start, e, last, q
+
+    start = skip_blanks(text, from)
+    <span class="k">do</span>
+        e = end_of_line(text, start)
+        last = start + trim_length(text(start:e - <span class="n">1</span>)) - <span class="n">1</span>
+        <span class="k">if</span> (last &lt; start <span class="k">.or.</span> e &gt; <span class="k">len</span>(text)) <span class="k">exit</span>
+        <span class="k">if</span> (text(last:last) /= <span class="s">'&amp;'</span>) <span class="k">exit</span>
+        <span class="k">call</span> add(b, text(start:last - <span class="n">1</span>))
+        start = e + <span class="n">1</span>
+        q = skip_blanks(text, start)
+        <span class="k">if</span> (q &lt;= <span class="k">len</span>(text)) <span class="k">then</span>
+            <span class="k">if</span> (text(q:q) == <span class="s">'&amp;'</span>) start = q + <span class="n">1</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">if</span> (last &gt;= start) <span class="k">call</span> add(b, text(start:last))
+    <span class="k">call</span> take(b, content)
+    next = <span class="k">min</span>(e + <span class="n">1</span>, <span class="k">len</span>(text) + <span class="n">1</span>)
+<span class="k">end</span> <span class="k">subroutine</span> read_line_directive</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

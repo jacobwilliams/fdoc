@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>equal &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">function</span>equal<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> <span class="k">recursive</span> logical <span class="k">function</span> equal(<span class="intent attr-in" title="intent(in)">a</span>, <span class="intent attr-in" title="intent(in)">b</span>) <span class="k">result</span>(same)</div>
+<div class="doc">
+<p>True if <code>a</code> equals <code>b</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-a"><td class="name">a</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>a value</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>another</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-same"><td class="name">same</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/equal.html">equal</a></li></ul>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/call_method.html">call_method</a></li><li><a href="../proc/compare_two.html">compare_two</a></li></ul>
+<div class="graph"><svg width="522pt" height="350pt"
+ viewBox="0 0 522 350" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 345.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/equal.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-276.6" width="54" height="21.6"/><text x="27" y="-261.1">equal</text></a><a href="../proc/compare_two.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="90" y="-326.6" width="92.4" height="21.6"/><text x="136.2" y="-311.1">compare_two</text></a><path d="M111.2,-304.6C96.3,-297.7 77,-288.7 60.8,-281.1"/><polygon fill="#8a93a5" points="61.9,-278.9 54.5,-278.1 59.8,-283.3"/><a href="../proc/call_method.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="94" y="-256.6" width="84.5" height="21.6"/><text x="136.2" y="-241.1">call_method</text></a><path d="M93.8,-253.5C83.6,-255.4 72.9,-257.4 63.1,-259.2"/><polygon fill="#8a93a5" points="62.7,-256.8 56.3,-260.5 63.6,-261.6"/><a href="../proc/evaluate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="218.4" y="-196.6" width="63.5" height="21.6"/><text x="250.2" y="-181.1">evaluate</text></a><a href="../proc/compare.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="338.6" y="-341.6" width="65" height="21.6"/><text x="371.1" y="-326.1">compare</text></a><path d="M338.2,-328.7C300.3,-326.3 236.5,-322.2 191,-319.3"/><polygon fill="#8a93a5" points="191.4,-316.8 184.2,-318.8 191,-321.7"/><path d="M330.6,-319.2C326,-316.9 321.7,-314.1 318,-310.8 284.9,-281.6 265.4,-231.8 256.7,-204.8"/><polygon fill="#8a93a5" points="329.5,-321.4 336.9,-322.1 331.6,-317"/><polygon fill="#8a93a5" points="259.1,-204.2 254.7,-198.3 254.4,-205.7"/><path d="M220.7,-201.1C203.8,-210.1 182.5,-221.6 165.6,-230.6"/><polygon fill="#8a93a5" points="221.8,-203.3 226.8,-197.8 219.5,-198.9"/><polygon fill="#8a93a5" points="164.5,-228.4 159.5,-233.9 166.9,-232.7"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="325.2" y="-301.6" width="91.7" height="21.6"/><text x="371.1" y="-286.1">fypp_process</text></a><path d="M333.2,-279.5C327.8,-277.1 322.6,-274.2 318,-270.8 293.4,-252.7 273.1,-223.3 261.6,-204.3"/><polygon fill="#8a93a5" points="263.8,-203.1 258.1,-198.3 259.5,-205.6"/><a href="../proc/evaluate_slice.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="322.7" y="-261.6" width="96.8" height="21.6"/><text x="371.1" y="-246.1">evaluate_slice</text></a><path d="M337.3,-239.5C330.8,-236.9 324.1,-234 318,-230.8 302,-222.5 285.1,-211.1 272.4,-201.9"/><polygon fill="#8a93a5" points="274,-200.1 266.9,-197.9 271.1,-204"/><a href="../proc/run_clause.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="332.1" y="-221.6" width="78" height="21.6"/><text x="371.1" y="-206.1">run_clause</text></a><path d="M331.8,-202.8C318.6,-200 303.7,-196.8 290.3,-194"/><polygon fill="#8a93a5" points="291.1,-191.7 283.7,-192.6 290.1,-196.5"/><a href="../proc/evaluate_fstring.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="318" y="-181.6" width="106.2" height="21.6"/><text x="371.1" y="-166.1">evaluate_fstring</text></a><path d="M317.6,-177.4C308.5,-178.6 299.3,-179.7 290.7,-180.8"/><polygon fill="#8a93a5" points="290.4,-178.4 283.8,-181.7 291,-183.2"/><a href="../proc/evaluate_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="323" y="-141.6" width="96.1" height="21.6"/><text x="371.1" y="-126.1">evaluate_args</text></a><path d="M339,-142.1C332,-144.8 324.7,-147.8 318,-150.8 304.8,-156.8 290.5,-164.1 278.6,-170.6"/><polygon fill="#8a93a5" points="277.4,-168.4 272.4,-173.9 279.7,-172.7"/><a href="../proc/render_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="327" y="-101.6" width="88.1" height="21.6"/><text x="371.1" y="-86.1">render_node</text></a><path d="M333.9,-102.1C328.4,-104.5 322.8,-107.4 318,-110.8 295.4,-126.4 275.3,-151.2 263.2,-168"/><polygon fill="#8a93a5" points="261.5,-166.2 259.4,-173.4 265.5,-169.1"/><a href="../proc/render_loop.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="329.2" y="-61.6" width="83.8" height="21.6"/><text x="371.1" y="-46.1">render_loop</text></a><path d="M331.7,-62C326.8,-64.5 322,-67.3 318,-70.8 287,-97.2 267.1,-141.7 257.6,-166.9"/><polygon fill="#8a93a5" points="255.4,-165.8 255.3,-173.2 260,-167.5"/><a href="../proc/define_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="324.5" y="-21.6" width="93.2" height="21.6"/><text x="371.1" y="-6.1">define_macro</text></a><path d="M330.5,-22C325.9,-24.4 321.6,-27.3 318,-30.8 278.4,-68.8 261,-134.2 254.5,-166.6"/><polygon fill="#8a93a5" points="252.1,-165.9 253.2,-173.3 256.9,-166.8"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="460.2" y="-301.6" width="54" height="21.6"/><text x="487.2" y="-286.1" fill="white">...</text><path stroke-dasharray="5,2" d="M459.7,-290.8C449.4,-290.8 437.3,-290.8 425.4,-290.8"/><polygon fill="#8a93a5" points="425.7,-288.4 418.7,-290.8 425.7,-293.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="460.2" y="-141.6" width="54" height="21.6"/><text x="487.2" y="-126.1" fill="white">...</text><path stroke-dasharray="5,2" d="M459.7,-130.8C450.2,-130.8 439,-130.8 427.9,-130.8"/><polygon fill="#8a93a5" points="427.9,-128.4 420.9,-130.8 427.9,-133.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="460.2" y="-101.6" width="54" height="21.6"/><text x="487.2" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M459.7,-90.8C449,-90.8 436.3,-90.8 423.9,-90.8"/><polygon fill="#8a93a5" points="423.9,-88.4 416.9,-90.8 423.9,-93.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">recursive</span> <span class="k">logical</span> <span class="k">function</span> equal(a, b) <span class="k">result</span>(same)
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: a      <span class="d">!! a value</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: b      <span class="d">!! another</span>
+    <span class="k">integer</span> :: k
+    <span class="k">logical</span> :: a_number, b_number
+
+    a_number = a%<span class="k">kind</span> == V_BOOL <span class="k">.or.</span> a%<span class="k">kind</span> == V_INT
+    b_number = b%<span class="k">kind</span> == V_BOOL <span class="k">.or.</span> b%<span class="k">kind</span> == V_INT
+    same = <span class="k">.false.</span>
+    <span class="k">if</span> (a_number <span class="k">.and.</span> b_number) <span class="k">then</span>
+        same = a%number == b%number
+    <span class="k">else</span> <span class="k">if</span> (a%<span class="k">kind</span> /= b%<span class="k">kind</span>) <span class="k">then</span>
+        <span class="k">return</span>
+    <span class="k">else</span> <span class="k">if</span> (a%<span class="k">kind</span> == V_NONE) <span class="k">then</span>
+        same = <span class="k">.true.</span>
+    <span class="k">else</span> <span class="k">if</span> (a%<span class="k">kind</span> == V_STR) <span class="k">then</span>
+        same = <span class="k">len</span>(a%text) == <span class="k">len</span>(b%text)
+        <span class="k">if</span> (same) same = a%text == b%text
+    <span class="k">else</span> <span class="k">if</span> (a%<span class="k">kind</span> == V_MACRO) <span class="k">then</span>
+        same = a%number == b%number
+    <span class="k">else</span>
+        <span class="k">if</span> (<span class="k">size</span>(a%items) /= <span class="k">size</span>(b%items)) <span class="k">return</span>
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(a%items)
+            <span class="k">if</span> (<span class="k">.not.</span> equal(a%items(k), b%items(k))) <span class="k">return</span>
+        <span class="k">end</span> <span class="k">do</span>
+        same = <span class="k">.true.</span>
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">function</span> equal</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

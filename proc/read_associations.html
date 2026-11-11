@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>read_associations &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">subroutine</span>read_associations<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> read_associations(<span class="intent attr-in" title="intent(in)">v</span>, <span class="intent attr-inout" title="intent(inout)">associations</span>, <span class="intent attr-inout" title="intent(inout)">level</span>)</div>
+<div class="doc">
+<p>Add the names of an <code>associate</code> statement to <code>associations</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-v"><td class="name">v</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/statement_view_t.html">statement_view_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the statement</p></td></tr>
+<tr id="variable-associations"><td class="name">associations</td><td class="type">type(<a href="../type/association_t.html">association_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the names in scope</p></td></tr>
+<tr id="variable-level"><td class="name">level</td><td class="type">integer</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>how many <code>associate</code> constructs are open</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/type/statement_view_t.html#boundprocedure-kind_of">kind_of</a></li></ul>
+<div class="graph"><svg width="335pt" height="30pt"
+ viewBox="0 0 335 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/read_associations.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="119.2" height="21.6"/><text x="59.6" y="-6.1">read_associations</text></a><a href="https://jacobwilliams.github.io/fformat/type/statement_view_t.html#boundprocedure-kind_of" fill="white" stroke="none"><rect fill="#646d7e" stroke="none" rx="7.2" x="155.2" y="-21.6" width="171.9" height="21.6"/><text x="298.9" y="-6.1" fill="white">kind_of</text></a><a href="https://jacobwilliams.github.io/fformat/type/statement_view_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M162.4,-21.6H270.7V0H162.4A7.2,7.2 0 0 1 155.2,-7.2V-14.4A7.2,7.2 0 0 1 162.4,-21.6Z"/><text x="213" y="-6.1" fill="white">statement_view_t</text></a><path d="M119.9,-10.8C128.5,-10.8 137.5,-10.8 146.6,-10.8"/><polygon fill="#8a93a5" points="146.4,-13.3 153.4,-10.8 146.4,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/statement_calls.html">statement_calls</a></li></ul>
+<div class="graph"><svg width="639pt" height="30pt"
+ viewBox="0 0 639 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/read_associations.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="119.2" height="21.6"/><text x="59.6" y="-6.1">read_associations</text></a><a href="../proc/statement_calls.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="155.2" y="-21.6" width="104.7" height="21.6"/><text x="207.5" y="-6.1">statement_calls</text></a><path d="M155.1,-10.8C146.5,-10.8 137.5,-10.8 128.6,-10.8"/><polygon fill="#8a93a5" points="128.6,-8.4 121.6,-10.8 128.6,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="295.9" y="-21.6" width="70.8" height="21.6"/><text x="331.3" y="-6.1">parse_file</text></a><path d="M295.7,-10.8C287.1,-10.8 277.7,-10.8 268.3,-10.8"/><polygon fill="#8a93a5" points="268.5,-8.4 261.5,-10.8 268.5,-13.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="402.7" y="-21.6" width="138" height="21.6"/><text x="471.7" y="-6.1">load_project_sources</text></a><path d="M402.3,-10.8C393.1,-10.8 383.9,-10.8 375.3,-10.8"/><polygon fill="#8a93a5" points="375.5,-8.4 368.5,-10.8 375.5,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="576.7" y="-21.6" width="54" height="21.6"/><text x="603.7" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M576.3,-10.8C568.2,-10.8 558.9,-10.8 549.1,-10.8"/><polygon fill="#8a93a5" points="549.4,-8.4 542.4,-10.8 549.4,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> read_associations(v, associations, level)
+    <span class="k">type</span>(statement_view_t), <span class="k">intent</span>(in) :: v     <span class="d">!! the statement</span>
+    <span class="k">type</span>(association_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: associations(:)  <span class="d">!! the names in scope</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(inout) :: level             <span class="d">!! how many `associate` constructs are open</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: chain
+    <span class="k">integer</span> :: j, k, depth, stop_at, head
+
+    level = level + <span class="n">1</span>
+    <span class="k">do</span> j = v%first, v%n - <span class="n">1</span>
+        <span class="k">if</span> (<span class="k">.not.</span> v%<span class="k">is</span>(j + <span class="n">1</span>, <span class="s">'=&gt;'</span>)) <span class="k">cycle</span>
+        <span class="k">if</span> (v%kind_of(j) /= TK_NAME) <span class="k">cycle</span>
+        depth = v%depth(j)
+        stop_at = j + <span class="n">2</span>
+        <span class="k">do</span> <span class="k">while</span> (stop_at &lt; v%n)
+            <span class="k">if</span> (v%depth(stop_at + <span class="n">1</span>) &lt; depth <span class="k">.or.</span> (v%depth(stop_at + <span class="n">1</span>) == depth <span class="k">.and.</span> v%<span class="k">is</span>(stop_at + <span class="n">1</span>, <span class="s">','</span>))) <span class="k">exit</span>
+            stop_at = stop_at + <span class="n">1</span>
+        <span class="k">end</span> <span class="k">do</span>
+        chain = <span class="s">''</span>
+        <span class="k">do</span> k = j + <span class="n">2</span>, stop_at
+            <span class="k">if</span> (v%depth(k) /= depth) <span class="k">cycle</span>
+            <span class="k">if</span> (v%kind_of(k) == TK_NAME) <span class="k">then</span>
+                <span class="k">if</span> (<span class="k">len</span>(chain) &gt; <span class="n">0</span>) chain = chain//<span class="s">'%'</span>
+                chain = chain//v%low(v%lo(k):v%hi(k))
+            <span class="k">else</span> <span class="k">if</span> (<span class="k">.not.</span> v%<span class="k">is</span>(k, <span class="s">'%'</span>) <span class="k">.and.</span> <span class="k">.not.</span> v%<span class="k">is</span>(k, <span class="s">'('</span>) <span class="k">.and.</span> <span class="k">.not.</span> v%<span class="k">is</span>(k, <span class="s">')'</span>)) <span class="k">then</span>
+                chain = <span class="s">''</span>
+                <span class="k">exit</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (<span class="k">len</span>(chain) == <span class="n">0</span>) <span class="k">cycle</span>
+        <span class="c">! what it stands for may itself be an associated name</span>
+        head = <span class="k">index</span>(chain//<span class="s">'%'</span>, <span class="s">'%'</span>) - <span class="n">1</span>
+        <span class="k">do</span> k = <span class="k">size</span>(associations), <span class="n">1</span>, -<span class="n">1</span>
+            <span class="k">if</span> (associations(k)%name == chain(:head)) <span class="k">then</span>
+                chain = associations(k)%chain//chain(head + <span class="n">1</span>:)
+                <span class="k">exit</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">do</span>
+        associations = [associations, association_t(v%low(v%lo(j):v%hi(j)), chain, level)]
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> read_associations</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

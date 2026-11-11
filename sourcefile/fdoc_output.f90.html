@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_output.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_output.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_output"><h3><a href="../module/fdoc_output.html">fdoc_output</a><span class="attr attr-private">private</span></h3>
+<p>Writing the documentation.</p>
+</div>
+<h2 id="files-this-one-depends-on">Files this one depends on</h2>
+<div class="graph"><svg width="683pt" height="514pt"
+ viewBox="0 0 683 514" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 510.2)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_output.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="570.9" y="-361.1" width="104" height="21.6"/><text x="622.9" y="-345.6">fdoc_output.f90</text></a><a href="../sourcefile/fdoc_util.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="0" y="-301.1" width="84.5" height="21.6"/><text x="42.3" y="-285.6">fdoc_util.f90</text></a><path d="M480.4,-409.3C434.5,-420.1 436.5,-452.4 392,-468.3 305.7,-499 271.1,-524.4 186.9,-488.3"/><a href="../sourcefile/fdoc_model.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="134.2" y="-420.1" width="103.3" height="21.6"/><text x="185.9" y="-404.6">fdoc_model.f90</text></a><path d="M480.4,-409.3C420,-423.5 402.4,-402.9 340.6,-409.3"/><a href="../sourcefile/fdoc_settings.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="129.5" y="-222.1" width="112.7" height="21.6"/><text x="185.9" y="-206.6">fdoc_settings.f90</text></a><path d="M600.5,-362C573.7,-376.1 526.2,-398.9 482.4,-409.3"/><path d="M480.4,-409.3C434.5,-420.1 434.1,-371.7 392,-350.3 370.3,-339.2 362,-342.8 340.6,-331.3"/><a href="../sourcefile/fdoc_project.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="428" y="-361.1" width="106.9" height="21.6"/><text x="481.4" y="-345.6">fdoc_project.f90</text></a><path d="M570,-350.3C561.4,-350.3 552.5,-350.3 543.7,-350.3"/><polygon fill="#8a93a5" points="543.9,-347.8 536.9,-350.3 543.9,-352.7"/><a href="../sourcefile/fdoc_urls.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="295.2" y="-459.1" width="88.8" height="21.6"/><text x="339.6" y="-443.6">fdoc_urls.f90</text></a><path d="M480.4,-409.3C448.5,-416.8 412.9,-426.7 385.6,-434.7"/><polygon fill="#8a93a5" points="385.3,-432.3 379.3,-436.6 386.7,-437"/><a href="../sourcefile/fdoc_shell.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="138.6" y="-64.1" width="94.6" height="21.6"/><text x="185.9" y="-48.6">fdoc_shell.f90</text></a><path d="M617.7,-338.5C599.9,-290.1 524.8,-106.2 392,-39.3 338.8,-12.5 267.9,-26.5 224.9,-39.6"/><polygon fill="#8a93a5" points="224.3,-37.2 218.4,-41.6 225.8,-41.8"/><path d="M146.5,-398C137.5,-394.4 128.3,-389.9 120.5,-384.3 91.7,-363.4 67.4,-329.3 54.1,-308.4"/><polygon fill="#8a93a5" points="56.3,-307.3 50.5,-302.7 52.1,-309.9"/><path d="M141.5,-222.4C134.3,-224.9 127.1,-227.9 120.5,-231.3 98.5,-242.6 76.4,-260.3 61.5,-273.3"/><polygon fill="#8a93a5" points="59.9,-271.5 56.3,-278 63.2,-275.1"/><path d="M479.3,-339.2C474.1,-293.7 447.5,-120.5 340.6,-53.3"/><path d="M338.6,-53.3C256.2,-1.4 198.6,24.8 120.5,-33.3 81.3,-62.4 54.5,-216.4 46.1,-271"/><polygon fill="#8a93a5" points="43.7,-270.4 45.1,-277.7 48.5,-271.1"/><path d="M463.3,-361.5C437.8,-377.2 387.8,-404.4 340.6,-409.3"/><path d="M338.6,-409.3C308.3,-412.4 274.5,-412.7 246.4,-412.1"/><polygon fill="#8a93a5" points="246.5,-409.6 239.5,-411.9 246.4,-414.5"/><path d="M427.6,-351.8C400.2,-350.5 367,-345.5 340.6,-331.3"/><path d="M338.6,-331.3C286.7,-303.2 300.7,-263.4 251.3,-231.3 248.2,-229.3 244.9,-227.5 241.5,-225.8"/><polygon fill="#8a93a5" points="242.8,-223.7 235.4,-223.1 240.8,-228.2"/><path d="M467.7,-361.4C447.2,-379.2 407.6,-413.2 392,-423.3 386.4,-426.8 380.3,-430.3 374.2,-433.3"/><polygon fill="#8a93a5" points="373.2,-431.1 368,-436.4 375.3,-435.5"/><path d="M338.6,-53.3C308.6,-34.4 268.3,-35.3 236.7,-40.5"/><polygon fill="#8a93a5" points="236.4,-38.1 230,-41.7 237.3,-42.9"/><a href="../sourcefile/fdoc_input.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="291.6" y="-163.1" width="96.1" height="21.6"/><text x="339.6" y="-147.6">fdoc_input.f90</text></a><path d="M472.5,-339C449.4,-306.2 381.6,-210.2 353.3,-170.1"/><polygon fill="#8a93a5" points="355.4,-168.9 349.3,-164.6 351.4,-171.7"/><a href="../sourcefile/fdoc_progress.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="126.6" y="-104.1" width="118.5" height="21.6"/><text x="185.9" y="-88.6">fdoc_progress.f90</text></a><path d="M338.6,-53.3C334,-50.3 275.1,-66.9 232.1,-79.6"/><polygon fill="#8a93a5" points="231.4,-77.3 225.4,-81.6 232.8,-82"/><a href="../sourcefile/fdoc_parser.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="287.3" y="-381.1" width="104.7" height="21.6"/><text x="339.6" y="-365.6">fdoc_parser.f90</text></a><path d="M427.6,-357.8C418.7,-359.1 409.4,-360.4 400.4,-361.7"/><polygon fill="#8a93a5" points="400.2,-359.3 393.7,-362.7 400.9,-364.1"/><path d="M311.8,-459.5C274.5,-474.5 209.3,-497.9 186.9,-488.3"/><path d="M184.9,-488.3C157.5,-476.5 142.8,-489 120.5,-469.3 71.7,-426 52.6,-346.5 46.1,-309.8"/><polygon fill="#8a93a5" points="48.6,-309.4 45,-302.9 43.7,-310.2"/><path d="M294.7,-437C277.3,-432.5 257.1,-427.3 238.9,-422.6"/><polygon fill="#8a93a5" points="239.5,-420.3 232.1,-420.9 238.3,-425"/><a href="../sourcefile/fdoc_buffer.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="135.3" y="-460.1" width="101.1" height="21.6"/><text x="185.9" y="-444.6">fdoc_buffer.f90</text></a><path d="M294.7,-448.5C279.3,-448.6 261.7,-448.8 245.3,-448.9"/><polygon fill="#8a93a5" points="245.3,-446.4 238.3,-448.9 245.3,-451.3"/><path d="M291.4,-151.2C244.8,-152.2 173,-159.6 120.5,-191.3 88.3,-210.7 64.4,-248.9 52.2,-271.8"/><polygon fill="#8a93a5" points="50.2,-270.5 49.1,-277.8 54.5,-272.7"/><path d="M309.9,-163.4C292.9,-170.1 270.8,-178.6 251.3,-186.3 242.3,-189.7 232.6,-193.5 223.5,-197"/><polygon fill="#8a93a5" points="222.8,-194.7 217.1,-199.5 224.5,-199.3"/><path d="M329.3,-141.2C314.4,-124.2 283.8,-91.8 251.3,-73.3 247.6,-71.2 243.7,-69.3 239.7,-67.6"/><polygon fill="#8a93a5" points="240.7,-65.3 233.3,-65 238.9,-69.9"/><path d="M315.6,-141.1C298.1,-132.8 273.5,-121.6 251.3,-113.3 245.6,-111.1 239.6,-109 233.7,-107.1"/><polygon fill="#8a93a5" points="234.5,-104.8 227,-104.9 232.9,-109.4"/><a href="../sourcefile/fdoc_fypp.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="139.7" y="-144.1" width="92.5" height="21.6"/><text x="185.9" y="-128.6">fdoc_fypp.f90</text></a><path d="M291.4,-146.3C275.3,-144.3 257.1,-142 240.5,-140"/><polygon fill="#8a93a5" points="241.2,-137.6 234,-139.2 240.6,-142.5"/><path d="M286.9,-373.9C241.5,-375.3 174.4,-372.6 120.5,-351.3 96.2,-341.6 73.3,-321.7 58.9,-307.2"/><polygon fill="#8a93a5" points="60.9,-305.8 54.3,-302.5 57.4,-309.2"/><path d="M294.7,-381.5C277.3,-386 257.1,-391.2 238.9,-395.9"/><polygon fill="#8a93a5" points="238.3,-393.5 232.1,-397.6 239.5,-398.3"/><path d="M305.5,-359C298.7,-355.5 292.2,-351 287.3,-345.3 252.5,-305 288.9,-268.7 251.3,-231.3 249.7,-229.7 248.1,-228.3 246.4,-227"/><polygon fill="#8a93a5" points="247.8,-225.1 240.6,-223.4 245.2,-229.2"/><a href="../sourcefile/fdoc_project_file.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="120.5" y="-342.1" width="130.8" height="21.6"/><text x="185.9" y="-326.6">fdoc_project_file.f90</text></a><path d="M294.7,-359C277.3,-354.5 257.1,-349.3 238.9,-344.6"/><polygon fill="#8a93a5" points="239.5,-342.3 232.1,-342.9 238.3,-347"/><a href="../sourcefile/fdoc_decl.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="140" y="-302.1" width="91.7" height="21.6"/><text x="185.9" y="-286.6">fdoc_decl.f90</text></a><path d="M311.6,-359C303.5,-355.1 294.8,-350.4 287.3,-345.3 269.2,-332.7 270.3,-322.4 251.3,-311.3 247.6,-309.1 243.7,-307.2 239.8,-305.5"/><polygon fill="#8a93a5" points="240.8,-303.3 233.4,-302.9 239,-307.8"/><a href="../sourcefile/fdoc_intrinsics.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="126.7" y="-262.1" width="118.5" height="21.6"/><text x="185.9" y="-246.6">fdoc_intrinsics.f90</text></a><path d="M307.1,-359C300,-355.4 292.9,-350.9 287.3,-345.3 261.4,-319.4 279,-295.1 251.3,-271.3 249.2,-269.5 247,-267.9 244.7,-266.4"/><polygon fill="#8a93a5" points="246.2,-264.4 238.8,-263.2 243.8,-268.7"/></g>
+</svg>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="209pt" height="30pt"
+ viewBox="0 0 209 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_output.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="104" height="21.6"/><text x="52" y="-6.1">fdoc_output.f90</text></a><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="140" y="-21.6" width="60.7" height="21.6"/><text x="170.4" y="-6.1">fdoc.f90</text></a><path d="M139.7,-10.8C131.6,-10.8 122.4,-10.8 113.2,-10.8"/><polygon fill="#8a93a5" points="113.3,-8.4 106.3,-10.8 113.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_output
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! Writing the documentation.</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="k">use</span> json_module, <span class="k">only</span>: json_core, json_value
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="k">use</span> ffmt_fs, <span class="k">only</span>: join_path
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="k">use</span> fdoc_util
+<a class="ln" id="ln-6" href="#ln-6"></a><span class="k">use</span> fdoc_model
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="k">use</span> fdoc_settings, <span class="k">only</span>: settings_t
+<a class="ln" id="ln-8" href="#ln-8"></a><span class="k">use</span> fdoc_project, <span class="k">only</span>: project_t, public_symbols, symbol_t
+<a class="ln" id="ln-9" href="#ln-9"></a><span class="k">use</span> fdoc_urls, <span class="k">only</span>: entity_url, object_word
+<a class="ln" id="ln-10" href="#ln-10"></a><span class="k">use</span> fdoc_shell, <span class="k">only</span>: make_directory
+<a class="ln" id="ln-11" href="#ln-11"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-12" href="#ln-12"></a><span class="k">private</span>
+<a class="ln" id="ln-13" href="#ln-13"></a>
+<a class="ln" id="ln-14" href="#ln-14"></a><span class="k">public</span> :: write_modules
+<a class="ln" id="ln-15" href="#ln-15"></a>
+<a class="ln" id="ln-16" href="#ln-16"></a><span class="k">contains</span>
+<a class="ln" id="ln-17" href="#ln-17"></a>
+<a class="ln" id="ln-18" href="#ln-18"></a><span class="d">!&gt; Write `modules.json`, which other projects can use to link to this one.</span>
+<a class="ln" id="ln-19" href="#ln-19"></a><span class="k">subroutine</span> write_modules(p, s, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-20" href="#ln-20"></a>    <span class="k">type</span>(project_t), <span class="k">intent</span>(in) :: p                    <span class="d">!! the project</span>
+<a class="ln" id="ln-21" href="#ln-21"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s                   <span class="d">!! the settings</span>
+<a class="ln" id="ln-22" href="#ln-22"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-23" href="#ln-23"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-24" href="#ln-24"></a>    <span class="k">type</span>(json_core) :: json
+<a class="ln" id="ln-25" href="#ln-25"></a>    <span class="k">type</span>(json_value), <span class="k">pointer</span> :: root, meta, modules, item
+<a class="ln" id="ln-26" href="#ln-26"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+<a class="ln" id="ln-27" href="#ln-27"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-28" href="#ln-28"></a>
+<a class="ln" id="ln-29" href="#ln-29"></a>    <span class="k">call</span> json%initialize(no_whitespace=<span class="k">.true.</span>)
+<a class="ln" id="ln-30" href="#ln-30"></a>    <span class="k">call</span> json%create_object(root, <span class="s">''</span>)
+<a class="ln" id="ln-31" href="#ln-31"></a>    <span class="k">call</span> json%create_object(meta, <span class="s">'ford-metadata'</span>)
+<a class="ln" id="ln-32" href="#ln-32"></a>    <span class="k">call</span> json%add(root, meta)
+<a class="ln" id="ln-33" href="#ln-33"></a>    <span class="k">call</span> json%add(meta, <span class="s">'version'</span>, <span class="s">'fdoc'</span>)
+<a class="ln" id="ln-34" href="#ln-34"></a>    <span class="k">call</span> json%create_array(modules, <span class="s">'modules'</span>)
+<a class="ln" id="ln-35" href="#ln-35"></a>    <span class="k">call</span> json%add(root, modules)
+<a class="ln" id="ln-36" href="#ln-36"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(p%modules)
+<a class="ln" id="ln-37" href="#ln-37"></a>        <span class="k">if</span> (<span class="k">allocated</span>(p%list%box(p%modules(k))%e%external_url)) <span class="k">cycle</span>
+<a class="ln" id="ln-38" href="#ln-38"></a>        <span class="k">call</span> entity_json(json, p, p%modules(k), <span class="s">''</span>, k, item)
+<a class="ln" id="ln-39" href="#ln-39"></a>        <span class="k">call</span> json%add(modules, item)
+<a class="ln" id="ln-40" href="#ln-40"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-41" href="#ln-41"></a>    <span class="k">call</span> json%serialize(root, text)
+<a class="ln" id="ln-42" href="#ln-42"></a>    <span class="k">call</span> json%destroy(root)
+<a class="ln" id="ln-43" href="#ln-43"></a>    <span class="k">call</span> make_directory(s%output_dir, <span class="k">stat</span>)
+<a class="ln" id="ln-44" href="#ln-44"></a>    <span class="k">call</span> write_whole_file(join_path(s%output_dir, <span class="s">'modules.json'</span>), text, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-45" href="#ln-45"></a><span class="k">end</span> <span class="k">subroutine</span> write_modules
+<a class="ln" id="ln-46" href="#ln-46"></a>
+<a class="ln" id="ln-47" href="#ln-47"></a><span class="d">!&gt; The JSON form of entity `id`, for `modules.json`.</span>
+<a class="ln" id="ln-48" href="#ln-48"></a><span class="k">recursive</span> <span class="k">subroutine</span> entity_json(json, p, id, key, module_index, node)
+<a class="ln" id="ln-49" href="#ln-49"></a>    <span class="k">type</span>(json_core), <span class="k">intent</span>(inout) :: json          <span class="d">!! the JSON handler</span>
+<a class="ln" id="ln-50" href="#ln-50"></a>    <span class="k">type</span>(project_t), <span class="k">intent</span>(in) :: p                <span class="d">!! the project</span>
+<a class="ln" id="ln-51" href="#ln-51"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id                       <span class="d">!! the entity</span>
+<a class="ln" id="ln-52" href="#ln-52"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key             <span class="d">!! its key in the parent's JSON</span>
+<a class="ln" id="ln-53" href="#ln-53"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: module_index             <span class="d">!! position in `p%modules`, or 0 if not a module</span>
+<a class="ln" id="ln-54" href="#ln-54"></a>    <span class="k">type</span>(json_value), <span class="k">pointer</span>, <span class="k">intent</span>(out) :: node  <span class="d">!! the result</span>
+<a class="ln" id="ln-55" href="#ln-55"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: word, url
+<a class="ln" id="ln-56" href="#ln-56"></a>    <span class="k">type</span>(json_value), <span class="k">pointer</span> :: array
+<a class="ln" id="ln-57" href="#ln-57"></a>
+<a class="ln" id="ln-58" href="#ln-58"></a>    <span class="k">call</span> json%create_object(node, key)
+<a class="ln" id="ln-59" href="#ln-59"></a>    <span class="k">associate</span> (e =&gt; p%list%box(id)%e)
+<a class="ln" id="ln-60" href="#ln-60"></a>        <span class="k">call</span> object_word(e, word)
+<a class="ln" id="ln-61" href="#ln-61"></a>        <span class="k">call</span> entity_url(p%list, id, url)
+<a class="ln" id="ln-62" href="#ln-62"></a>        <span class="k">call</span> json%add(node, <span class="s">'name'</span>, e%name)
+<a class="ln" id="ln-63" href="#ln-63"></a>        <span class="k">call</span> json%add(node, <span class="s">'external_url'</span>, <span class="s">'./'</span>//url)
+<a class="ln" id="ln-64" href="#ln-64"></a>        <span class="k">call</span> json%add(node, <span class="s">'obj'</span>, word)
+<a class="ln" id="ln-65" href="#ln-65"></a>        <span class="k">select</span> <span class="k">case</span> (e%<span class="k">kind</span>)
+<a class="ln" id="ln-66" href="#ln-66"></a>        <span class="k">case</span> (E_SUBROUTINE, E_FUNCTION, E_MODPROC)
+<a class="ln" id="ln-67" href="#ln-67"></a>            <span class="k">if</span> (e%iface /= IFACE_NONE) <span class="k">then</span>
+<a class="ln" id="ln-68" href="#ln-68"></a>                <span class="k">call</span> json%add(node, <span class="s">'proctype'</span>, <span class="s">'Interface'</span>)
+<a class="ln" id="ln-69" href="#ln-69"></a>                <span class="k">call</span> json%add(node, <span class="s">'generic'</span>, <span class="s">'False'</span>)
+<a class="ln" id="ln-70" href="#ln-70"></a>                <span class="k">call</span> empty_array(<span class="s">'variables'</span>)
+<a class="ln" id="ln-71" href="#ln-71"></a>            <span class="k">else</span>
+<a class="ln" id="ln-72" href="#ln-72"></a>                <span class="k">call</span> json%add(node, <span class="s">'proctype'</span>, <span class="k">trim</span>(<span class="k">merge</span>(<span class="s">'Function  '</span>, <span class="s">'Subroutine'</span>, e%<span class="k">kind</span> == E_FUNCTION)))
+<a class="ln" id="ln-73" href="#ln-73"></a>                <span class="k">call</span> children(<span class="s">'functions'</span>, [E_FUNCTION], <span class="k">.false.</span>)
+<a class="ln" id="ln-74" href="#ln-74"></a>                <span class="k">call</span> children(<span class="s">'subroutines'</span>, [E_SUBROUTINE], <span class="k">.false.</span>)
+<a class="ln" id="ln-75" href="#ln-75"></a>                <span class="k">call</span> children_iface(<span class="s">'interfaces'</span>, <span class="k">.false.</span>)
+<a class="ln" id="ln-76" href="#ln-76"></a>                <span class="k">call</span> children_iface(<span class="s">'absinterfaces'</span>, <span class="k">.true.</span>)
+<a class="ln" id="ln-77" href="#ln-77"></a>                <span class="k">call</span> children(<span class="s">'types'</span>, [E_TYPE], <span class="k">.false.</span>)
+<a class="ln" id="ln-78" href="#ln-78"></a>                <span class="k">call</span> children(<span class="s">'variables'</span>, [E_VARIABLE], <span class="k">.false.</span>)
+<a class="ln" id="ln-79" href="#ln-79"></a>                <span class="k">call</span> strings(<span class="s">'attribs'</span>, e%attribs)
+<a class="ln" id="ln-80" href="#ln-80"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-81" href="#ln-81"></a>        <span class="k">case</span> (E_MODULE, E_SUBMODULE)
+<a class="ln" id="ln-82" href="#ln-82"></a>            <span class="k">if</span> (module_index &gt; <span class="n">0</span>) <span class="k">call</span> public_dicts(module_index)
+<a class="ln" id="ln-83" href="#ln-83"></a>            <span class="k">call</span> children(<span class="s">'functions'</span>, [E_FUNCTION], <span class="k">.false.</span>)
+<a class="ln" id="ln-84" href="#ln-84"></a>            <span class="k">call</span> children(<span class="s">'subroutines'</span>, [E_SUBROUTINE], <span class="k">.false.</span>)
+<a class="ln" id="ln-85" href="#ln-85"></a>            <span class="k">call</span> children_iface(<span class="s">'interfaces'</span>, <span class="k">.false.</span>)
+<a class="ln" id="ln-86" href="#ln-86"></a>            <span class="k">call</span> children_iface(<span class="s">'absinterfaces'</span>, <span class="k">.true.</span>)
+<a class="ln" id="ln-87" href="#ln-87"></a>            <span class="k">call</span> children(<span class="s">'types'</span>, [E_TYPE], <span class="k">.false.</span>)
+<a class="ln" id="ln-88" href="#ln-88"></a>            <span class="k">call</span> children(<span class="s">'variables'</span>, [E_VARIABLE], <span class="k">.false.</span>)
+<a class="ln" id="ln-89" href="#ln-89"></a>        <span class="k">case</span> (E_INTERFACE)
+<a class="ln" id="ln-90" href="#ln-90"></a>            <span class="k">call</span> json%add(node, <span class="s">'proctype'</span>, <span class="s">'Interface'</span>)
+<a class="ln" id="ln-91" href="#ln-91"></a>            <span class="k">call</span> json%add(node, <span class="s">'generic'</span>, <span class="s">'True'</span>)
+<a class="ln" id="ln-92" href="#ln-92"></a>            <span class="k">call</span> children(<span class="s">'functions'</span>, [E_FUNCTION], <span class="k">.true.</span>)
+<a class="ln" id="ln-93" href="#ln-93"></a>            <span class="k">call</span> children(<span class="s">'subroutines'</span>, [E_SUBROUTINE], <span class="k">.true.</span>)
+<a class="ln" id="ln-94" href="#ln-94"></a>            <span class="k">call</span> empty_array(<span class="s">'variables'</span>)
+<a class="ln" id="ln-95" href="#ln-95"></a>        <span class="k">case</span> (E_TYPE)
+<a class="ln" id="ln-96" href="#ln-96"></a>            <span class="k">call</span> strings(<span class="s">'attribs'</span>, e%attribs)
+<a class="ln" id="ln-97" href="#ln-97"></a>            <span class="k">call</span> children(<span class="s">'variables'</span>, [E_VARIABLE], <span class="k">.false.</span>)
+<a class="ln" id="ln-98" href="#ln-98"></a>            <span class="k">call</span> children(<span class="s">'boundprocs'</span>, [E_BOUNDPROC], <span class="k">.false.</span>)
+<a class="ln" id="ln-99" href="#ln-99"></a>        <span class="k">case</span> (E_BOUNDPROC)
+<a class="ln" id="ln-100" href="#ln-100"></a>            <span class="k">call</span> strings(<span class="s">'attribs'</span>, e%attribs)
+<a class="ln" id="ln-101" href="#ln-101"></a>            <span class="k">call</span> json%add(node, <span class="s">'deferred'</span>, <span class="k">trim</span>(<span class="k">merge</span>(<span class="s">'True '</span>, <span class="s">'False'</span>, e%<span class="k">deferred</span>)))
+<a class="ln" id="ln-102" href="#ln-102"></a>            <span class="k">call</span> json%add(node, <span class="s">'generic'</span>, <span class="k">trim</span>(<span class="k">merge</span>(<span class="s">'True '</span>, <span class="s">'False'</span>, e%<span class="k">generic</span>)))
+<a class="ln" id="ln-103" href="#ln-103"></a>        <span class="k">case</span> (E_VARIABLE)
+<a class="ln" id="ln-104" href="#ln-104"></a>            <span class="k">call</span> strings(<span class="s">'attribs'</span>, e%attribs)
+<a class="ln" id="ln-105" href="#ln-105"></a>            <span class="k">call</span> json%add(node, <span class="s">'vartype'</span>, e%vartype)
+<a class="ln" id="ln-106" href="#ln-106"></a>        <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-107" href="#ln-107"></a>        <span class="k">call</span> json%add(node, <span class="s">'permission'</span>, e%permission)
+<a class="ln" id="ln-108" href="#ln-108"></a>    <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-109" href="#ln-109"></a>
+<a class="ln" id="ln-110" href="#ln-110"></a><span class="k">contains</span>
+<a class="ln" id="ln-111" href="#ln-111"></a>
+<a class="ln" id="ln-112" href="#ln-112"></a>    <span class="d">!&gt; Add an empty array.</span>
+<a class="ln" id="ln-113" href="#ln-113"></a>    <span class="k">subroutine</span> empty_array(name)
+<a class="ln" id="ln-114" href="#ln-114"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! its key</span>
+<a class="ln" id="ln-115" href="#ln-115"></a>        <span class="k">call</span> json%create_array(array, name)
+<a class="ln" id="ln-116" href="#ln-116"></a>        <span class="k">call</span> json%add(node, array)
+<a class="ln" id="ln-117" href="#ln-117"></a>    <span class="k">end</span> <span class="k">subroutine</span> empty_array
+<a class="ln" id="ln-118" href="#ln-118"></a>
+<a class="ln" id="ln-119" href="#ln-119"></a>    <span class="d">!&gt; Add an array of strings.</span>
+<a class="ln" id="ln-120" href="#ln-120"></a>    <span class="k">subroutine</span> strings(name, list)
+<a class="ln" id="ln-121" href="#ln-121"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! its key</span>
+<a class="ln" id="ln-122" href="#ln-122"></a>        <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: list(:)   <span class="d">!! the strings</span>
+<a class="ln" id="ln-123" href="#ln-123"></a>        <span class="k">integer</span> :: j
+<a class="ln" id="ln-124" href="#ln-124"></a>        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: a
+<a class="ln" id="ln-125" href="#ln-125"></a>        <span class="k">call</span> json%create_array(a, name)
+<a class="ln" id="ln-126" href="#ln-126"></a>        <span class="k">call</span> json%add(node, a)
+<a class="ln" id="ln-127" href="#ln-127"></a>        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(list)
+<a class="ln" id="ln-128" href="#ln-128"></a>            <span class="k">call</span> json%add(a, <span class="s">''</span>, list(j)%s)
+<a class="ln" id="ln-129" href="#ln-129"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-130" href="#ln-130"></a>    <span class="k">end</span> <span class="k">subroutine</span> strings
+<a class="ln" id="ln-131" href="#ln-131"></a>
+<a class="ln" id="ln-132" href="#ln-132"></a>    <span class="d">!&gt; Add an array of the visible children of the kinds given.</span>
+<a class="ln" id="ln-133" href="#ln-133"></a>    <span class="k">recursive</span> <span class="k">subroutine</span> children(name, kinds, <span class="k">all</span>)
+<a class="ln" id="ln-134" href="#ln-134"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! its key</span>
+<a class="ln" id="ln-135" href="#ln-135"></a>        <span class="k">integer</span>, <span class="k">intent</span>(in) :: kinds(:)         <span class="d">!! the `E_*` constants</span>
+<a class="ln" id="ln-136" href="#ln-136"></a>        <span class="k">logical</span>, <span class="k">intent</span>(in) :: <span class="k">all</span>              <span class="d">!! true to include those of interfaces</span>
+<a class="ln" id="ln-137" href="#ln-137"></a>        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: a, item
+<a class="ln" id="ln-138" href="#ln-138"></a>        <span class="k">integer</span> :: j, child
+<a class="ln" id="ln-139" href="#ln-139"></a>        <span class="k">call</span> json%create_array(a, name)
+<a class="ln" id="ln-140" href="#ln-140"></a>        <span class="k">call</span> json%add(node, a)
+<a class="ln" id="ln-141" href="#ln-141"></a>        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(p%list%box(id)%e%children)
+<a class="ln" id="ln-142" href="#ln-142"></a>            child = p%list%box(id)%e%children(j)
+<a class="ln" id="ln-143" href="#ln-143"></a>            <span class="k">associate</span> (c =&gt; p%list%box(child)%e)
+<a class="ln" id="ln-144" href="#ln-144"></a>                <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>(c%<span class="k">kind</span> == kinds)) <span class="k">cycle</span>
+<a class="ln" id="ln-145" href="#ln-145"></a>                <span class="k">if</span> (<span class="k">.not.</span> c%visible) <span class="k">cycle</span>
+<a class="ln" id="ln-146" href="#ln-146"></a>                <span class="k">if</span> (c%<span class="k">kind</span> == E_VARIABLE <span class="k">.and.</span> c%var_role /= VAR_PLAIN) <span class="k">cycle</span>
+<a class="ln" id="ln-147" href="#ln-147"></a>                <span class="k">if</span> (c%iface /= IFACE_NONE <span class="k">.and.</span> <span class="k">.not.</span> <span class="k">all</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-148" href="#ln-148"></a>                <span class="k">call</span> entity_json(json, p, child, <span class="s">''</span>, <span class="n">0</span>, item)
+<a class="ln" id="ln-149" href="#ln-149"></a>                <span class="k">call</span> json%add(a, item)
+<a class="ln" id="ln-150" href="#ln-150"></a>            <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-151" href="#ln-151"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-152" href="#ln-152"></a>        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(p%list%box(id)%e%more%inherited)) <span class="k">return</span>
+<a class="ln" id="ln-153" href="#ln-153"></a>        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(p%list%box(id)%e%more%inherited)
+<a class="ln" id="ln-154" href="#ln-154"></a>            child = p%list%box(id)%e%more%inherited(j)
+<a class="ln" id="ln-155" href="#ln-155"></a>            <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>(p%list%box(child)%e%<span class="k">kind</span> == kinds)) <span class="k">cycle</span>
+<a class="ln" id="ln-156" href="#ln-156"></a>            <span class="k">if</span> (<span class="k">.not.</span> contains_string(p%list%box(id)%e%display, p%list%box(child)%e%permission)) <span class="k">cycle</span>
+<a class="ln" id="ln-157" href="#ln-157"></a>            <span class="k">call</span> entity_json(json, p, child, <span class="s">''</span>, <span class="n">0</span>, item)
+<a class="ln" id="ln-158" href="#ln-158"></a>            <span class="k">call</span> json%add(a, item)
+<a class="ln" id="ln-159" href="#ln-159"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-160" href="#ln-160"></a>    <span class="k">end</span> <span class="k">subroutine</span> children
+<a class="ln" id="ln-161" href="#ln-161"></a>
+<a class="ln" id="ln-162" href="#ln-162"></a>    <span class="d">!&gt; Add an array of the visible interfaces.</span>
+<a class="ln" id="ln-163" href="#ln-163"></a>    <span class="k">recursive</span> <span class="k">subroutine</span> children_iface(name, <span class="k">abstract</span>)
+<a class="ln" id="ln-164" href="#ln-164"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! its key</span>
+<a class="ln" id="ln-165" href="#ln-165"></a>        <span class="k">logical</span>, <span class="k">intent</span>(in) :: <span class="k">abstract</span>         <span class="d">!! true for abstract interfaces</span>
+<a class="ln" id="ln-166" href="#ln-166"></a>        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: a, item
+<a class="ln" id="ln-167" href="#ln-167"></a>        <span class="k">integer</span> :: j, child
+<a class="ln" id="ln-168" href="#ln-168"></a>        <span class="k">logical</span> :: wanted
+<a class="ln" id="ln-169" href="#ln-169"></a>        <span class="k">call</span> json%create_array(a, name)
+<a class="ln" id="ln-170" href="#ln-170"></a>        <span class="k">call</span> json%add(node, a)
+<a class="ln" id="ln-171" href="#ln-171"></a>        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(p%list%box(id)%e%children)
+<a class="ln" id="ln-172" href="#ln-172"></a>            child = p%list%box(id)%e%children(j)
+<a class="ln" id="ln-173" href="#ln-173"></a>            <span class="k">associate</span> (c =&gt; p%list%box(child)%e)
+<a class="ln" id="ln-174" href="#ln-174"></a>                <span class="k">if</span> (<span class="k">.not.</span> c%visible) <span class="k">cycle</span>
+<a class="ln" id="ln-175" href="#ln-175"></a>                wanted = (<span class="k">abstract</span> <span class="k">.and.</span> c%iface == IFACE_ABSTRACT) <span class="k">.or.</span> &amp;
+<a class="ln" id="ln-176" href="#ln-176"></a>                         (<span class="k">.not.</span> <span class="k">abstract</span> <span class="k">.and.</span> (c%iface == IFACE_EXPLICIT <span class="k">.or.</span> c%<span class="k">kind</span> == E_INTERFACE))
+<a class="ln" id="ln-177" href="#ln-177"></a>                <span class="k">if</span> (<span class="k">.not.</span> wanted) <span class="k">cycle</span>
+<a class="ln" id="ln-178" href="#ln-178"></a>                <span class="k">call</span> entity_json(json, p, child, <span class="s">''</span>, <span class="n">0</span>, item)
+<a class="ln" id="ln-179" href="#ln-179"></a>                <span class="k">call</span> json%add(a, item)
+<a class="ln" id="ln-180" href="#ln-180"></a>            <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-181" href="#ln-181"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-182" href="#ln-182"></a>    <span class="k">end</span> <span class="k">subroutine</span> children_iface
+<a class="ln" id="ln-183" href="#ln-183"></a>
+<a class="ln" id="ln-184" href="#ln-184"></a>    <span class="d">!&gt; Add the public names of the module.</span>
+<a class="ln" id="ln-185" href="#ln-185"></a>    <span class="k">recursive</span> <span class="k">subroutine</span> public_dicts(which)
+<a class="ln" id="ln-186" href="#ln-186"></a>        <span class="k">integer</span>, <span class="k">intent</span>(in) :: which    <span class="d">!! position in `p%modules`</span>
+<a class="ln" id="ln-187" href="#ln-187"></a>        <span class="k">call</span> dict(<span class="s">'pub_procs'</span>, public_symbols(p, which, <span class="n">1</span>))
+<a class="ln" id="ln-188" href="#ln-188"></a>        <span class="k">call</span> dict(<span class="s">'pub_absints'</span>, public_symbols(p, which, <span class="n">2</span>))
+<a class="ln" id="ln-189" href="#ln-189"></a>        <span class="k">call</span> dict(<span class="s">'pub_types'</span>, public_symbols(p, which, <span class="n">3</span>))
+<a class="ln" id="ln-190" href="#ln-190"></a>        <span class="k">call</span> dict(<span class="s">'pub_vars'</span>, public_symbols(p, which, <span class="n">4</span>))
+<a class="ln" id="ln-191" href="#ln-191"></a>    <span class="k">end</span> <span class="k">subroutine</span> public_dicts
+<a class="ln" id="ln-192" href="#ln-192"></a>
+<a class="ln" id="ln-193" href="#ln-193"></a>    <span class="d">!&gt; Add an object of `symbols`.</span>
+<a class="ln" id="ln-194" href="#ln-194"></a>    <span class="k">recursive</span> <span class="k">subroutine</span> dict(name, symbols)
+<a class="ln" id="ln-195" href="#ln-195"></a>        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name        <span class="d">!! its key</span>
+<a class="ln" id="ln-196" href="#ln-196"></a>        <span class="k">type</span>(symbol_t), <span class="k">intent</span>(in) :: symbols(:)    <span class="d">!! the names</span>
+<a class="ln" id="ln-197" href="#ln-197"></a>        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: object, item
+<a class="ln" id="ln-198" href="#ln-198"></a>        <span class="k">integer</span> :: j
+<a class="ln" id="ln-199" href="#ln-199"></a>        <span class="k">call</span> json%create_object(object, name)
+<a class="ln" id="ln-200" href="#ln-200"></a>        <span class="k">call</span> json%add(node, object)
+<a class="ln" id="ln-201" href="#ln-201"></a>        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(symbols)
+<a class="ln" id="ln-202" href="#ln-202"></a>            <span class="k">if</span> (<span class="k">allocated</span>(p%list%box(symbols(j)%id)%e%external_url)) <span class="k">cycle</span>
+<a class="ln" id="ln-203" href="#ln-203"></a>            <span class="k">call</span> entity_json(json, p, symbols(j)%id, symbols(j)%name, <span class="n">0</span>, item)
+<a class="ln" id="ln-204" href="#ln-204"></a>            <span class="k">call</span> json%add(object, item)
+<a class="ln" id="ln-205" href="#ln-205"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-206" href="#ln-206"></a>    <span class="k">end</span> <span class="k">subroutine</span> dict
+<a class="ln" id="ln-207" href="#ln-207"></a>
+<a class="ln" id="ln-208" href="#ln-208"></a><span class="k">end</span> <span class="k">subroutine</span> entity_json
+<a class="ln" id="ln-209" href="#ln-209"></a>
+<a class="ln" id="ln-210" href="#ln-210"></a><span class="k">end</span> <span class="k">module</span> fdoc_output
+<a class="ln" id="ln-211" href="#ln-211"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

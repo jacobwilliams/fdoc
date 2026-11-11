@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>remove_blanks &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">function</span>remove_blanks<span class="attr attr-pure" title="Has no side effects">pure</span></h1>
+<div class="sig"><span class="k">pure</span> character(len=len(s)-count_blanks(s)) <span class="k">function</span> remove_blanks(<span class="intent attr-in" title="intent(in)">s</span>) <span class="k">result</span>(t)</div>
+<div class="doc">
+<p><code>s</code> without blanks and tabs.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the string</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">character(len=len(s)-count_blanks(s))</td><td class="attributes"><span class="attr attr-private">private</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/ford_link.html">ford_link</a></li><li><a href="../proc/parse_declarator.html">parse_declarator</a></li><li><a href="../proc/parse_procedure_header.html">parse_procedure_header</a></li><li><a href="../proc/parse_type.html">parse_type</a></li><li><a href="../proc/read_attribute_statement.html">read_attribute_statement</a></li><li><a href="../proc/read_declaration.html">read_declaration</a></li><li><a href="../proc/read_submodule.html">read_submodule</a></li><li><a href="../proc/read_type_statement.html">read_type_statement</a></li></ul>
+<div class="graph"><svg width="823pt" height="268pt"
+ viewBox="0 0 823 268" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 263.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/remove_blanks.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-141.6" width="102.6" height="21.6"/><text x="51.3" y="-126.1">remove_blanks</text></a><a href="../proc/parse_type.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="179.4" y="-141.6" width="78.7" height="21.6"/><text x="218.8" y="-126.1">parse_type</text></a><path d="M179,-130.8C159,-130.8 134.2,-130.8 111.8,-130.8"/><polygon fill="#8a93a5" points="111.9,-128.4 104.9,-130.8 111.9,-133.3"/><a href="../proc/parse_declarator.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="162.8" y="-181.6" width="112" height="21.6"/><text x="218.8" y="-166.1">parse_declarator</text></a><path d="M171.2,-159.6C152,-154.9 129.5,-149.5 109.3,-144.6"/><polygon fill="#8a93a5" points="109.9,-142.2 102.5,-142.9 108.8,-147"/><a href="../proc/parse_procedure_header.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="138.6" y="-101.6" width="160.4" height="21.6"/><text x="218.8" y="-86.1">parse_procedure_header</text></a><path d="M171.2,-102C152,-106.7 129.5,-112.1 109.3,-117"/><polygon fill="#8a93a5" points="108.8,-114.6 102.5,-118.7 109.9,-119.4"/><a href="../proc/ford_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="187" y="-22.6" width="63.5" height="21.6"/><text x="218.8" y="-7.1">ford_link</text></a><path d="M186.8,-18.1C171.5,-22.1 153.2,-28.4 138.6,-37.8 107.5,-57.7 80.2,-91.3 65,-112.2"/><polygon fill="#8a93a5" points="63.1,-110.7 61,-117.8 67.1,-113.5"/><a href="../proc/read_submodule.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="347.6" y="-101.6" width="111.2" height="21.6"/><text x="403.2" y="-86.1">read_submodule</text></a><path d="M365.4,-79.6C320.6,-66.4 247.3,-47.1 219.8,-51.8"/><a href="../proc/read_type_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="335" y="-61.6" width="136.5" height="21.6"/><text x="403.2" y="-46.1">read_type_statement</text></a><path d="M334.6,-45.9C300,-44.8 257.4,-45.4 219.8,-51.8"/><path d="M217.8,-51.8C182.1,-57.9 171.6,-56 138.6,-70.8 113.7,-81.9 88.5,-100.5 71.8,-114"/><polygon fill="#8a93a5" points="70.7,-111.8 66.8,-118.1 73.8,-115.6"/><a href="../proc/read_attribute_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="139.3" y="-259.6" width="158.9" height="21.6"/><text x="218.8" y="-244.1">read_attribute_statement</text></a><path d="M168.3,-237.5C158,-234 147.6,-229.5 138.6,-223.8 107.3,-204 79.8,-170.1 64.7,-149.1"/><polygon fill="#8a93a5" points="66.8,-147.8 60.8,-143.5 62.8,-150.7"/><a href="../proc/read_declaration.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="347.6" y="-181.6" width="111.2" height="21.6"/><text x="403.2" y="-166.1">read_declaration</text></a><path d="M365.4,-182C313.5,-196 216.5,-215.2 138.6,-190.8 111.8,-182.4 86.1,-162.5 69.8,-147.9"/><polygon fill="#8a93a5" points="71.8,-146.4 65,-143.4 68.4,-150"/><path d="M350.9,-159.6C324.5,-153.8 292.5,-146.7 266.7,-141.1"/><polygon fill="#8a93a5" points="267.4,-138.7 260,-139.6 266.3,-143.5"/><path d="M347.5,-170.8C327.4,-170.8 304.4,-170.8 283.6,-170.8"/><polygon fill="#8a93a5" points="283.6,-168.4 276.6,-170.8 283.6,-173.3"/><a href="../proc/open_procedure.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="348.7" y="-141.6" width="109.1" height="21.6"/><text x="403.2" y="-126.1">open_procedure</text></a><path d="M348.5,-130.8C322.5,-130.8 291.6,-130.8 266.6,-130.8"/><polygon fill="#8a93a5" points="266.9,-128.4 259.9,-130.8 266.9,-133.3"/><path d="M350.9,-119.6C328.6,-114.7 302.2,-108.9 279.1,-103.8"/><polygon fill="#8a93a5" points="279.8,-101.5 272.5,-102.4 278.8,-106.2"/><a href="../proc/inline_bracket.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="355.9" y="-21.6" width="94.6" height="21.6"/><text x="403.2" y="-6.1">inline_bracket</text></a><path d="M355.7,-11.1C325.9,-11.2 287.8,-11.4 259.4,-11.6"/><polygon fill="#8a93a5" points="259.5,-9.1 252.5,-11.6 259.5,-14"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="527.3" y="-121.6" width="71.5" height="21.6"/><text x="563.1" y="-106.1">open_unit</text></a><path d="M527.1,-106.4C509.6,-104.1 487.9,-101.4 467.6,-98.8"/><polygon fill="#8a93a5" points="468.1,-96.4 460.8,-98 467.5,-101.3"/><path d="M539,-99.6C520.9,-91.1 494.9,-79.4 471.5,-70.8 465.5,-68.6 459.2,-66.5 452.9,-64.5"/><polygon fill="#8a93a5" points="453.9,-62.2 446.5,-62.5 452.4,-66.9"/><path d="M527.1,-115.2C509.3,-117.5 487.1,-120.3 466.5,-122.9"/><polygon fill="#8a93a5" points="466.2,-120.5 459.6,-123.8 466.8,-125.3"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="507.5" y="-181.6" width="111.2" height="21.6"/><text x="563.1" y="-166.1">parse_statement</text></a><path d="M512.7,-182.1C450.4,-196.3 343.4,-220.6 277.4,-235.7"/><polygon fill="#8a93a5" points="276.9,-233.3 270.6,-237.2 278,-238"/><path d="M507.3,-170.8C494.4,-170.8 480.6,-170.8 467.3,-170.8"/><polygon fill="#8a93a5" points="467.7,-168.4 460.7,-170.8 467.7,-173.3"/><a href="../proc/inline.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="536.1" y="-21.6" width="54" height="21.6"/><text x="563.1" y="-6.1">inline</text></a><path d="M535.7,-10.8C514.8,-10.8 485.1,-10.8 459.1,-10.8"/><polygon fill="#8a93a5" points="459.4,-8.4 452.4,-10.8 459.4,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="654.7" y="-161.6" width="70.8" height="21.6"/><text x="690.1" y="-146.1">parse_file</text></a><path d="M654.3,-139.7C639.6,-135 622.5,-129.5 607,-124.5"/><polygon fill="#8a93a5" points="608,-122.3 600.6,-122.5 606.5,-126.9"/><path d="M654.3,-156.4C645.8,-157.7 636.4,-159.2 627.1,-160.7"/><polygon fill="#8a93a5" points="626.9,-158.3 620.4,-161.8 627.7,-163.1"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="663.1" y="-21.6" width="54" height="21.6"/><text x="690.1" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M662.9,-10.8C644.2,-10.8 619,-10.8 598.6,-10.8"/><polygon fill="#8a93a5" points="598.8,-8.4 591.8,-10.8 598.8,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="761.5" y="-161.6" width="54" height="21.6"/><text x="788.5" y="-146.1" fill="white">...</text><path stroke-dasharray="5,2" d="M761.2,-150.8C752.8,-150.8 743.3,-150.8 734.1,-150.8"/><polygon fill="#8a93a5" points="734.2,-148.4 727.2,-150.8 734.2,-153.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">function</span> remove_blanks(s) <span class="k">result</span>(t)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: s   <span class="d">!! the string</span>
+    <span class="k">character</span>(<span class="k">len</span>=<span class="k">len</span>(s) - count_blanks(s)) :: t
+    <span class="k">integer</span> :: k, n
+    n = <span class="n">0</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(s)
+        <span class="k">if</span> (s(k:k) == <span class="s">' '</span> <span class="k">.or.</span> s(k:k) == <span class="k">achar</span>(<span class="n">9</span>)) <span class="k">cycle</span>
+        n = n + <span class="n">1</span>
+        t(n:n) = s(k:k)
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">function</span> remove_blanks</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>end_of_line &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">function</span>end_of_line<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> end_of_line(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">from</span>) <span class="k">result</span>(at)</div>
+<div class="doc">
+<p>The position of the end of the line with position <code>from</code>: of its newline, or after the last line.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-from"><td class="name">from</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>a position</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-at"><td class="name">at</td><td class="type">integer</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/fold_region.html">fold_region</a></li><li><a href="../proc/parse_text.html">parse_text</a></li><li><a href="../proc/read_line_directive.html">read_line_directive</a></li></ul>
+<div class="graph"><svg width="712pt" height="108pt"
+ viewBox="0 0 712 108" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 103.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/end_of_line.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-60.6" width="81.6" height="21.6"/><text x="40.8" y="-45.1">end_of_line</text></a><a href="../proc/parse_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="277.2" y="-59.6" width="75.1" height="21.6"/><text x="314.7" y="-44.1">parse_text</text></a><path d="M276.8,-48.9C228.5,-49.1 144,-49.4 90.5,-49.6"/><polygon fill="#8a93a5" points="90.7,-47.2 83.7,-49.6 90.8,-52.1"/><a href="../proc/read_line_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="117.6" y="-21.6" width="123.5" height="21.6"/><text x="179.4" y="-6.1">read_line_directive</text></a><path d="M276.9,-38.3C261.7,-34 243.8,-28.9 227.6,-24.3"/><polygon fill="#8a93a5" points="228.7,-22 221.3,-22.5 227.4,-26.7"/><path d="M138.9,-22.1C123.7,-26.4 106.2,-31.4 90.3,-35.9"/><polygon fill="#8a93a5" points="89.7,-33.6 83.6,-37.9 91,-38.3"/><a href="../proc/fold_region.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140" y="-99.6" width="78.7" height="21.6"/><text x="179.4" y="-84.1">fold_region</text></a><path d="M139.6,-77.7C124.3,-73.4 106.5,-68.3 90.4,-63.7"/><polygon fill="#8a93a5" points="91.4,-61.4 84,-61.9 90.1,-66.1"/><a href="../proc/parse_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="392.2" y="-59.6" width="70.8" height="21.6"/><text x="427.6" y="-44.1">parse_file</text></a><path d="M391.8,-48.8C382.1,-48.8 371.4,-48.8 361.1,-48.8"/><polygon fill="#8a93a5" points="361.2,-46.4 354.2,-48.8 361.2,-51.3"/><a href="../proc/fold_output.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="388.3" y="-99.6" width="78.7" height="21.6"/><text x="427.6" y="-84.1">fold_output</text></a><path d="M387.9,-88.8C344.4,-88.8 273.9,-88.8 227.3,-88.8"/><polygon fill="#8a93a5" points="227.4,-86.4 220.4,-88.8 227.4,-91.3"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="512.7" y="-99.6" width="91.7" height="21.6"/><text x="558.6" y="-84.1">fypp_process</text></a><path d="M521.3,-77.6C505.7,-72.7 487.3,-67 471.1,-62"/><polygon fill="#8a93a5" points="472.1,-59.7 464.7,-60 470.7,-64.4"/><path d="M512.5,-88.8C500.5,-88.8 487.4,-88.8 475.3,-88.8"/><polygon fill="#8a93a5" points="475.6,-86.4 468.6,-88.8 475.6,-91.3"/><a href="../proc/include_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="503" y="-59.6" width="111.2" height="21.6"/><text x="558.6" y="-44.1">include_directive</text></a><path d="M502.5,-48.8C492.3,-48.8 481.7,-48.8 471.8,-48.8"/><polygon fill="#8a93a5" points="471.9,-46.4 464.9,-48.8 471.9,-51.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="650.2" y="-99.6" width="54" height="21.6"/><text x="677.2" y="-84.1" fill="white">...</text><path stroke-dasharray="5,2" d="M649.8,-88.8C638.8,-88.8 625.8,-88.8 613,-88.8"/><polygon fill="#8a93a5" points="613.2,-86.4 606.2,-88.8 613.2,-91.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="650.2" y="-59.6" width="54" height="21.6"/><text x="677.2" y="-44.1" fill="white">...</text><path stroke-dasharray="5,2" d="M649.8,-48.8C641.6,-48.8 632.4,-48.8 622.9,-48.8"/><polygon fill="#8a93a5" points="623.1,-46.4 616.1,-48.8 623.1,-51.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> end_of_line(text, from) <span class="k">result</span>(at)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: from             <span class="d">!! a position</span>
+    <span class="k">integer</span> :: found
+
+    found = <span class="k">index</span>(text(from:), NL)
+    at = <span class="k">merge</span>(from + found - <span class="n">1</span>, <span class="k">len</span>(text) + <span class="n">1</span>, found &gt; <span class="n">0</span>)
+<span class="k">end</span> <span class="k">function</span> end_of_line</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

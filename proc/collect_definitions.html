@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>collect_definitions &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>collect_definitions<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> collect_definitions(<span class="intent attr-inout" title="intent(inout)">t</span>, <span class="intent attr-inout" title="intent(inout)">lines</span>)</div>
+<div class="doc">
+<p>Remove link references, footnotes and abbreviations from <code>lines</code> and keep them.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/tree_t.html">tree_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the conversion</p></td></tr>
+<tr id="variable-lines"><td class="name">lines</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the lines</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/starts_with.html">starts_with</a></li><li><a href="../proc/strip.html">strip</a></li><li><a href="../proc/push.html">push</a></li><li><a href="../proc/add.html">add</a></li><li><a href="../proc/take.html">take</a></li><li><a href="../proc/ends_with.html">ends_with</a></li><li><a href="../proc/normal_id.html">normal_id</a></li></ul>
+<div class="graph"><svg width="443pt" height="288pt"
+ viewBox="0 0 443 288" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 283.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/collect_definitions.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-161.6" width="117" height="21.6"/><text x="58.5" y="-146.1">collect_definitions</text></a><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="153" y="-279.6" width="76.5" height="21.6"/><text x="191.3" y="-264.1">starts_with</text></a><path d="M68.6,-162.5C84.3,-182.1 118,-222.2 153,-248.8 155.1,-250.4 157.4,-251.9 159.7,-253.4"/><polygon fill="#8a93a5" points="158.2,-255.4 165.4,-256.8 160.7,-251.2"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="164.3" y="-239.6" width="54" height="21.6"/><text x="191.3" y="-224.1">strip</text></a><path d="M79.1,-162.5C101.8,-176 139.3,-198.4 164.4,-213.3"/><polygon fill="#8a93a5" points="162.9,-215.3 170.1,-216.8 165.4,-211.1"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="381" y="-165.6" width="54" height="21.6"/><text x="408" y="-150.1">push</text></a><path d="M104.9,-162.5C120.1,-165.9 137.2,-169.1 153,-170.8 231.1,-179.1 323.3,-168.1 372.2,-160.7"/><polygon fill="#8a93a5" points="372.6,-163.1 379.1,-159.6 371.8,-158.3"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="164.3" y="-161.6" width="54" height="21.6"/><text x="191.3" y="-146.1">add</text></a><path d="M118,-150.8C130.8,-150.8 143.9,-150.8 155.5,-150.8"/><polygon fill="#8a93a5" points="155.4,-153.3 162.4,-150.8 155.4,-148.4"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="164.3" y="-121.6" width="54" height="21.6"/><text x="191.3" y="-106.1">take</text></a><path d="M98,-139C116.5,-133.4 138.3,-126.7 156.1,-121.2"/><polygon fill="#8a93a5" points="156.6,-123.7 162.6,-119.3 155.2,-119"/><a href="../proc/ends_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="154.8" y="-81.6" width="72.9" height="21.6"/><text x="191.3" y="-66.1">ends_with</text></a><path d="M76.8,-139.1C95.4,-126.7 125.9,-106.7 153,-90.8 155.8,-89.2 158.7,-87.5 161.6,-85.9"/><polygon fill="#8a93a5" points="162.5,-88.2 167.5,-82.7 160.2,-83.9"/><a href="../proc/normal_id.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="155.5" y="-41.6" width="71.5" height="21.6"/><text x="191.3" y="-26.1">normal_id</text></a><path d="M68.3,-139.1C83.8,-119.2 117.6,-78 153,-50.8 155.1,-49.2 157.4,-47.6 159.7,-46.2"/><polygon fill="#8a93a5" points="160.6,-48.4 165.4,-42.7 158.1,-44.2"/><a href="../proc/split_words.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="265.5" y="-131.6" width="79.4" height="21.6"/><text x="305.3" y="-116.1">split_words</text></a><path d="M215.3,-41.9C220.2,-44.6 225.1,-47.6 229.5,-50.8 251.7,-66.7 274,-88.6 288.5,-103.7"/><polygon fill="#8a93a5" points="286.5,-105.2 293.1,-108.6 290.1,-101.8"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="268.8" y="-61.6" width="72.9" height="21.6"/><text x="305.3" y="-46.1">lowercase</text></a><path d="M227.4,-37.1C237.8,-38.9 249.4,-41 260.3,-42.9"/><polygon fill="#8a93a5" points="259.7,-45.3 267,-44.1 260.5,-40.5"/><a href="../proc/join.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="278.3" y="-21.6" width="54" height="21.6"/><text x="305.3" y="-6.1">join</text></a><path d="M227.4,-24.5C240.9,-22.1 256.3,-19.4 269.7,-17"/><polygon fill="#8a93a5" points="269.8,-19.4 276.3,-15.8 269,-14.6"/><path d="M339.5,-132C350.2,-135.6 362,-139.6 372.8,-143.3"/><polygon fill="#8a93a5" points="371.9,-145.6 379.3,-145.5 373.5,-140.9"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/markdown_to_html.html">markdown_to_html</a></li></ul>
+<div class="graph"><svg width="639pt" height="130pt"
+ viewBox="0 0 639 130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 125.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/collect_definitions.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="2.2" y="-121.6" width="117" height="21.6"/><text x="60.7" y="-106.1">collect_definitions</text></a><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="157.3" y="-81.6" width="124.2" height="21.6"/><text x="219.5" y="-66.1">markdown_to_html</text></a><path d="M174.4,-82C156.2,-86.7 135,-92.1 115.9,-97"/><polygon fill="#8a93a5" points="115.5,-94.5 109.4,-98.6 116.7,-99.3"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="0" y="-81.6" width="121.3" height="21.6"/><text x="60.7" y="-66.1">stash_html_blocks</text></a><path d="M148.4,-70.8C142.3,-70.8 136.1,-70.8 130,-70.8"/><polygon fill="#8a93a5" points="148.4,-73.3 155.4,-70.8 148.4,-68.4"/><polygon fill="#8a93a5" points="130.2,-68.4 123.2,-70.8 130.2,-73.3"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="4.3" y="-41.6" width="112.7" height="21.6"/><text x="60.7" y="-26.1">render_footnotes</text></a><path d="M166.1,-57.5C149.3,-53.2 130.6,-48.4 113.8,-44.1"/><polygon fill="#8a93a5" points="165.5,-59.8 172.9,-59.2 166.7,-55.1"/><polygon fill="#8a93a5" points="114.6,-41.8 107.2,-42.4 113.3,-46.5"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="317.6" y="-101.6" width="97.5" height="21.6"/><text x="366.3" y="-86.1">markdown_list</text></a><path d="M317.1,-84.1C308.4,-82.9 299.3,-81.7 290.2,-80.4"/><polygon fill="#8a93a5" points="290.6,-78 283.4,-79.5 290,-82.9"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="326.2" y="-61.6" width="80.2" height="21.6"/><text x="366.3" y="-46.1">render_text</text></a><path d="M326.1,-56.2C315,-57.7 302.5,-59.5 290.1,-61.2"/><polygon fill="#8a93a5" points="290.1,-58.7 283.5,-62.1 290.8,-63.6"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="469.2" y="-101.6" width="54" height="21.6"/><text x="496.2" y="-86.1">run</text></a><path d="M468.7,-90.8C455.6,-90.8 439.3,-90.8 423.6,-90.8"/><polygon fill="#8a93a5" points="424,-88.4 417,-90.8 424,-93.3"/><path d="M468.7,-82.5C452,-77.3 430.2,-70.5 411,-64.5"/><polygon fill="#8a93a5" points="411.8,-62.2 404.4,-62.4 410.4,-66.8"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="451.1" y="-61.6" width="90.3" height="21.6"/><text x="496.2" y="-46.1">render_entity</text></a><path d="M450.8,-50.8C439.2,-50.8 426.6,-50.8 414.9,-50.8"/><polygon fill="#8a93a5" points="415,-48.4 408,-50.8 415,-53.3"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="457.9" y="-21.6" width="76.6" height="21.6"/><text x="496.2" y="-6.1">read_page</text></a><path d="M459.2,-22C444.3,-26.7 426.7,-32.2 411,-37.1"/><polygon fill="#8a93a5" points="410.4,-34.8 404.4,-39.2 411.9,-39.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="577.3" y="-61.6" width="54" height="21.6"/><text x="604.3" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.1,-50.8C568.8,-50.8 559.4,-50.8 550,-50.8"/><polygon fill="#8a93a5" points="550.2,-48.4 543.2,-50.8 550.2,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="577.3" y="-21.6" width="54" height="21.6"/><text x="604.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.1,-10.8C566.8,-10.8 554.7,-10.8 543.1,-10.8"/><polygon fill="#8a93a5" points="543.3,-8.4 536.3,-10.8 543.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> collect_definitions(t, lines)
+    <span class="k">type</span>(tree_t), <span class="k">intent</span>(inout) :: t                        <span class="d">!! the conversion</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: lines(:)  <span class="d">!! the lines</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: out(:)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: id, <span class="k">value</span>, url, title, body
+    <span class="k">type</span>(buffer_t) :: b
+    <span class="k">integer</span> :: k, <span class="k">close</span>, at, j
+
+    <span class="k">allocate</span> (out(<span class="n">0</span>))
+    k = <span class="n">1</span>
+    <span class="k">do</span> <span class="k">while</span> (k &lt;= <span class="k">size</span>(lines))
+        <span class="k">associate</span> (line =&gt; lines(k)%s)
+            <span class="k">close</span> = <span class="n">0</span>
+            at = <span class="k">verify</span>(line, <span class="s">' '</span>)
+            <span class="k">if</span> (at &gt;= <span class="n">1</span> <span class="k">.and.</span> at &lt;= <span class="n">4</span>) <span class="k">then</span>
+                <span class="k">if</span> (line(at:at) == <span class="s">'['</span>) <span class="k">close</span> = <span class="k">index</span>(line(at:), <span class="s">']:'</span>) + at - <span class="n">1</span>
+                <span class="k">if</span> (<span class="k">close</span> &gt; at + <span class="n">0</span> <span class="k">.and.</span> <span class="k">index</span>(line(at:<span class="k">close</span> - <span class="n">1</span>), <span class="s">']'</span>) &gt; <span class="n">0</span>) <span class="k">close</span> = <span class="n">0</span>
+                <span class="k">if</span> (<span class="k">close</span> == at - <span class="n">1</span>) <span class="k">close</span> = <span class="n">0</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (at == <span class="n">1</span> <span class="k">.and.</span> starts_with(line, <span class="s">'*['</span>)) <span class="k">then</span>
+                j = <span class="k">index</span>(line, <span class="s">']:'</span>)
+                <span class="k">if</span> (j &gt; <span class="n">3</span>) <span class="k">then</span>
+                    t%abbreviations = [t%abbreviations, map_entry_t(line(<span class="n">3</span>:j - <span class="n">1</span>), strip(line(j + <span class="n">2</span>:)))]
+                    k = k + <span class="n">1</span>
+                    <span class="k">cycle</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (<span class="k">close</span> == <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">call</span> push(out, line)
+                k = k + <span class="n">1</span>
+                <span class="k">cycle</span>
+            <span class="k">end</span> <span class="k">if</span>
+            id = line(at + <span class="n">1</span>:<span class="k">close</span> - <span class="n">1</span>)
+            <span class="k">value</span> = strip(line(<span class="k">close</span> + <span class="n">2</span>:))
+        <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">if</span> (starts_with(id, <span class="s">'^'</span>)) <span class="k">then</span>
+            <span class="c">! a footnote: the rest of the line, and the indented lines and blocks after it</span>
+            <span class="k">call</span> add(b, <span class="k">value</span>)
+            <span class="k">call</span> add(b, NL)
+            k = k + <span class="n">1</span>
+            <span class="k">do</span> <span class="k">while</span> (k &lt;= <span class="k">size</span>(lines))
+                <span class="k">if</span> (starts_with(lines(k)%s, <span class="s">'    '</span>)) <span class="k">then</span>
+                    <span class="k">call</span> add(b, lines(k)%s(<span class="n">5</span>:))
+                    <span class="k">call</span> add(b, NL)
+                <span class="k">else</span> <span class="k">if</span> (<span class="k">len</span>(lines(k)%s) == <span class="n">0</span> <span class="k">.and.</span> k &lt; <span class="k">size</span>(lines)) <span class="k">then</span>
+                    <span class="k">if</span> (<span class="k">.not.</span> starts_with(lines(k + <span class="n">1</span>)%s, <span class="s">'    '</span>)) <span class="k">exit</span>
+                    <span class="k">call</span> add(b, NL)
+                <span class="k">else</span>
+                    <span class="k">exit</span>
+                <span class="k">end</span> <span class="k">if</span>
+                k = k + <span class="n">1</span>
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">call</span> take(b, body)
+            t%notes = [t%notes, footnote_t(id(<span class="n">2</span>:), body, <span class="k">.false.</span>)]
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (<span class="k">len</span>(<span class="k">value</span>) == <span class="n">0</span> <span class="k">.and.</span> k &lt; <span class="k">size</span>(lines)) <span class="k">then</span>
+            k = k + <span class="n">1</span>
+            <span class="k">value</span> = strip(lines(k)%s)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (<span class="k">len</span>(<span class="k">value</span>) == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> push(out, lines(k)%s)
+            k = k + <span class="n">1</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        title = <span class="s">''</span>
+        at = <span class="k">scan</span>(<span class="k">value</span>, <span class="s">' '</span>)
+        <span class="k">if</span> (at &gt; <span class="n">0</span>) <span class="k">then</span>
+            url = <span class="k">value</span>(:at - <span class="n">1</span>)
+            title = strip(<span class="k">value</span>(at + <span class="n">1</span>:))
+            <span class="k">if</span> (<span class="k">len</span>(title) &gt;= <span class="n">2</span> <span class="k">.and.</span> <span class="k">scan</span>(title(<span class="n">1</span>:<span class="n">1</span>), <span class="s">'"''('</span>) &gt; <span class="n">0</span>) <span class="k">then</span>
+                title = title(<span class="n">2</span>:<span class="k">len</span>(title) - <span class="n">1</span>)
+            <span class="k">else</span>
+                <span class="k">call</span> push(out, lines(k)%s)
+                k = k + <span class="n">1</span>
+                <span class="k">cycle</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">else</span>
+            url = <span class="k">value</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (starts_with(url, <span class="s">'&lt;'</span>) <span class="k">.and.</span> ends_with(url, <span class="s">'&gt;'</span>)) url = url(<span class="n">2</span>:<span class="k">len</span>(url) - <span class="n">1</span>)
+        <span class="k">call</span> normal_id(id, <span class="k">value</span>)
+        t%refs = [t%refs, reference_t(<span class="k">value</span>, url, title)]
+        k = k + <span class="n">1</span>
+        <span class="k">if</span> (k &lt;= <span class="k">size</span>(lines) <span class="k">.and.</span> <span class="k">len</span>(title) == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">value</span> = strip(lines(k)%s)
+            <span class="k">if</span> (<span class="k">len</span>(<span class="k">value</span>) &gt;= <span class="n">2</span>) <span class="k">then</span>
+                <span class="k">if</span> (<span class="k">scan</span>(<span class="k">value</span>(<span class="n">1</span>:<span class="n">1</span>), <span class="s">'"''('</span>) &gt; <span class="n">0</span> <span class="k">.and.</span> <span class="k">scan</span>(<span class="k">value</span>(<span class="k">len</span>(<span class="k">value</span>):<span class="k">len</span>(<span class="k">value</span>)), <span class="s">'"'')'</span>) &gt; <span class="n">0</span>) <span class="k">then</span>
+                    t%refs(<span class="k">size</span>(t%refs))%title = <span class="k">value</span>(<span class="n">2</span>:<span class="k">len</span>(<span class="k">value</span>) - <span class="n">1</span>)
+                    k = k + <span class="n">1</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> <span class="k">move_alloc</span>(out, lines)
+<span class="k">end</span> <span class="k">subroutine</span> collect_definitions</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>new_node &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>new_node<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> new_node(<span class="intent attr-inout" title="intent(inout)">t</span>, <span class="intent attr-in" title="intent(in)">parent</span>, <span class="intent attr-in" title="intent(in)">tag</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<div class="doc">
+<p>Add a child with tag <code>tag</code> to node <code>parent</code>, returning it.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/tree_t.html">tree_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the conversion</p></td></tr>
+<tr id="variable-parent"><td class="name">parent</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the parent</p></td></tr>
+<tr id="variable-tag"><td class="name">tag</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the tag</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the new node</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push_int.html">push_int</a></li></ul>
+<div class="graph"><svg width="182pt" height="30pt"
+ viewBox="0 0 182 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/new_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="74.4" height="21.6"/><text x="37.2" y="-6.1">new_node</text></a><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="110.4" y="-21.6" width="63.5" height="21.6"/><text x="142.2" y="-6.1">push_int</text></a><path d="M75.4,-10.8C83.9,-10.8 93.1,-10.8 101.7,-10.8"/><polygon fill="#8a93a5" points="101.6,-13.3 108.6,-10.8 101.6,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/admonition_block.html">admonition_block</a></li><li><a href="../proc/code_block.html">code_block</a></li><li><a href="../proc/definition_block.html">definition_block</a></li><li><a href="../proc/hash_header.html">hash_header</a></li><li><a href="../proc/list_block.html">list_block</a></li><li><a href="../proc/list_indent.html">list_indent</a></li><li><a href="../proc/paragraph.html">paragraph</a></li><li><a href="../proc/parse_block.html">parse_block</a></li><li><a href="../proc/quote_block.html">quote_block</a></li><li><a href="../proc/setext_header.html">setext_header</a></li></ul>
+<div class="graph"><svg width="876pt" height="278pt"
+ viewBox="0 0 876 278" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 273.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/new_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-161.6" width="74.4" height="21.6"/><text x="37.2" y="-146.2">new_node</text></a><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="402" y="-102.6" width="84.5" height="21.6"/><text x="444.2" y="-87.2">parse_block</text></a><path d="M313,-230.8C225.9,-255.4 191,-292 110.4,-250.8 77.5,-234 56.1,-194.4 45.7,-170.4"/><polygon fill="#8a93a5" points="48,-169.5 43.1,-164 43.5,-171.4"/><a href="../proc/list_indent.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="131.7" y="-241.6" width="72.9" height="21.6"/><text x="168.2" y="-226.2">list_indent</text></a><path d="M313,-230.8C280.5,-240 242.2,-239.5 213.3,-237"/><polygon fill="#8a93a5" points="213.8,-234.5 206.6,-236.3 213.3,-239.4"/><a href="../proc/code_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="128.1" y="-201.6" width="80.2" height="21.6"/><text x="168.2" y="-186.2">code_block</text></a><path d="M313,-230.8C303,-233.6 249.6,-217.4 210.7,-204.8"/><polygon fill="#8a93a5" points="211.5,-202.5 204.1,-202.6 210,-207.1"/><a href="../proc/admonition_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="110.4" y="-161.6" width="115.6" height="21.6"/><text x="168.2" y="-146.2">admonition_block</text></a><path d="M313,-230.8C267.8,-243.6 267.8,-192.2 226,-170.8 222,-168.8 217.8,-166.9 213.5,-165.2"/><polygon fill="#8a93a5" points="214.7,-163 207.2,-162.7 212.9,-167.5"/><a href="../proc/hash_header.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="123" y="-121.6" width="90.3" height="21.6"/><text x="168.2" y="-106.2">hash_header</text></a><path d="M438.3,-102.7C424.3,-132.1 380.7,-212.3 315,-230.8"/><path d="M313,-230.8C256.3,-246.8 274.7,-163.9 226,-130.8 223.2,-129 220.3,-127.3 217.3,-125.7"/><polygon fill="#8a93a5" points="218.3,-123.5 210.9,-122.8 216.2,-127.9"/><a href="../proc/setext_header.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="265.6" y="-162.6" width="96.8" height="21.6"/><text x="314" y="-147.2">setext_header</text></a><path d="M422.9,-103.1C407.5,-111.5 385.7,-122.9 366,-131.8 361.8,-133.7 357.4,-135.6 353,-137.4"/><polygon fill="#8a93a5" points="352.1,-135.2 346.5,-140 353.9,-139.7"/><a href="../proc/list_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="280" y="-122.6" width="67.9" height="21.6"/><text x="314" y="-107.2">list_block</text></a><path d="M401.6,-98.3C387.2,-100.6 371,-103.1 356.6,-105.4"/><polygon fill="#8a93a5" points="356.3,-102.9 349.8,-106.4 357.1,-107.8"/><a href="../proc/quote_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="271.7" y="-82.6" width="84.5" height="21.6"/><text x="314" y="-67.2">quote_block</text></a><path d="M401.6,-85.3C389.8,-83.5 376.9,-81.5 364.7,-79.6"/><polygon fill="#8a93a5" points="365.2,-77.2 357.9,-78.5 364.4,-82"/><a href="../proc/definition_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="262" y="-42.6" width="104" height="21.6"/><text x="314" y="-27.2">definition_block</text></a><path d="M422.9,-80.6C407.5,-72.2 385.7,-60.8 366,-51.8 361.8,-49.9 357.4,-48.1 353,-46.2"/><polygon fill="#8a93a5" points="353.9,-44 346.5,-43.6 352.1,-48.5"/><a href="../proc/paragraph.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="131.4" y="-42.6" width="73.7" height="21.6"/><text x="168.2" y="-27.2">paragraph</text></a><path d="M436.7,-80.6C425.1,-62.1 399.2,-25.9 366,-11.8 313.5,10.4 246.3,-4.6 205.6,-17.9"/><polygon fill="#8a93a5" points="204.8,-15.6 199,-20.1 206.4,-20.2"/><path d="M131.5,-220.5C124.3,-217.8 116.9,-214.6 110.4,-210.8 89.7,-199.1 69.2,-181.3 55.4,-168.1"/><polygon fill="#8a93a5" points="57.3,-166.6 50.6,-163.5 53.9,-170.1"/><path d="M130.9,-179.6C116.1,-175 98.7,-169.6 83.1,-164.8"/><polygon fill="#8a93a5" points="84,-162.5 76.5,-162.7 82.5,-167.1"/><path d="M110.2,-150.8C101.3,-150.8 92.2,-150.8 83.6,-150.8"/><polygon fill="#8a93a5" points="83.7,-148.4 76.7,-150.8 83.7,-153.3"/><path d="M130.9,-122.1C116.1,-126.7 98.7,-132.1 83.1,-136.9"/><polygon fill="#8a93a5" points="82.5,-134.5 76.5,-139 84,-139.2"/><path d="M277.8,-140.6C272.3,-138.1 266.8,-135.2 262,-131.8 242.1,-117.9 246.2,-104.3 226,-90.8 203.8,-76.1 195.3,-66.5 169.2,-71.8"/><path d="M284.7,-100.6C249.4,-87.3 191.2,-67.3 169.2,-71.8"/><path d="M271.3,-67.4C242.4,-65.4 203.1,-64.9 169.2,-71.8"/><path d="M277.9,-43.1C248.9,-51.9 206.7,-64.1 169.2,-71.8"/><path d="M167.2,-71.8C141.1,-77.2 133.6,-77.9 110.4,-90.8 89.7,-102.4 69.1,-120.2 55.3,-133.5"/><polygon fill="#8a93a5" points="53.8,-131.5 50.5,-138.1 57.3,-135"/><path d="M261.5,-31.8C245.8,-31.8 228.8,-31.8 213.7,-31.8"/><polygon fill="#8a93a5" points="214,-29.4 207,-31.8 214,-34.3"/><path d="M135.6,-43.1C126.9,-47 117.9,-51.9 110.4,-57.8 84,-78.8 61.6,-111.3 49.1,-131.9"/><polygon fill="#8a93a5" points="47,-130.5 45.5,-137.8 51.2,-133"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="522.5" y="-102.6" width="95.3" height="21.6"/><text x="570.2" y="-87.2">parse_chunks</text></a><path d="M522.3,-91.8C513.5,-91.8 504.2,-91.8 495.3,-91.8"/><polygon fill="#8a93a5" points="495.4,-89.4 488.4,-91.8 495.4,-94.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="653.8" y="-142.6" width="124.2" height="21.6"/><text x="715.9" y="-127.2">markdown_to_html</text></a><path d="M674.5,-120.6C657.4,-115.8 637.2,-110.2 619.3,-105.2"/><polygon fill="#8a93a5" points="620.1,-102.9 612.7,-103.4 618.8,-107.6"/><a href="../proc/parse_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="678" y="-102.6" width="75.8" height="21.6"/><text x="715.9" y="-87.2">parse_one</text></a><path d="M677.5,-91.8C661.9,-91.8 643.5,-91.8 626.4,-91.8"/><polygon fill="#8a93a5" points="626.7,-89.4 619.7,-91.8 626.7,-94.3"/><a href="../proc/parse_text~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="678.4" y="-62.6" width="75.1" height="21.6"/><text x="715.9" y="-47.2">parse_text</text></a><path d="M677.9,-62.1C660.1,-67.1 638.6,-73.1 619.6,-78.4"/><polygon fill="#8a93a5" points="619.1,-75.9 613.1,-80.2 620.5,-80.7"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="814.1" y="-142.6" width="54" height="21.6"/><text x="841.1" y="-127.2" fill="white">...</text><path stroke-dasharray="5,2" d="M813.6,-131.8C805.6,-131.8 796.4,-131.8 786.9,-131.8"/><polygon fill="#8a93a5" points="787,-129.4 780,-131.8 787,-134.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> new_node(t, parent, tag, id)
+    <span class="k">type</span>(tree_t), <span class="k">intent</span>(inout) :: t        <span class="d">!! the conversion</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent           <span class="d">!! the parent</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: tag     <span class="d">!! the tag</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: id              <span class="d">!! the new node</span>
+    <span class="k">type</span>(node_t), <span class="k">allocatable</span> :: grown(:)
+    <span class="k">integer</span> :: k
+
+    <span class="k">if</span> (t%n == <span class="k">size</span>(t%nodes)) <span class="k">then</span>
+        <span class="k">allocate</span> (grown(<span class="n">2</span>*t%n))
+        <span class="k">do</span> k = <span class="n">1</span>, t%n
+            <span class="k">call</span> <span class="k">move_alloc</span>(t%nodes(k)%tag, grown(k)%tag)
+            <span class="k">call</span> <span class="k">move_alloc</span>(t%nodes(k)%text, grown(k)%text)
+            <span class="k">call</span> <span class="k">move_alloc</span>(t%nodes(k)%attrs, grown(k)%attrs)
+            <span class="k">call</span> <span class="k">move_alloc</span>(t%nodes(k)%kids, grown(k)%kids)
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> <span class="k">move_alloc</span>(grown, t%nodes)
+    <span class="k">end</span> <span class="k">if</span>
+    t%n = t%n + <span class="n">1</span>
+    id = t%n
+    t%nodes(id)%tag = tag
+    t%nodes(id)%text = <span class="s">''</span>
+    t%nodes(id)%attrs = <span class="s">''</span>
+    <span class="k">allocate</span> (t%nodes(id)%kids(<span class="n">0</span>))
+    <span class="k">call</span> push_int(t%nodes(parent)%kids, id)
+<span class="k">end</span> <span class="k">subroutine</span> new_node</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

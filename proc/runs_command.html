@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>runs_command &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_input.f90.html">fdoc_input.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_input.html">fdoc_input</a></div>
+<h1><span class="kind">function</span>runs_command</h1>
+<div class="sig">logical <span class="k">function</span> runs_command(<span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-in" title="intent(in)">path</span>)</div>
+<div class="doc">
+<p>True if reading <code>path</code> runs an external preprocessor.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the file</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-runs_command"><td class="name">runs_command</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/contains_string.html">contains_string</a></li><li><a href="../proc/extension_of.html">extension_of</a></li><li><a href="../proc/needs_fypp.html">needs_fypp</a></li></ul>
+<div class="graph"><svg width="464pt" height="110pt"
+ viewBox="0 0 464 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/runs_command.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="104" height="21.6"/><text x="52" y="-46.1">runs_command</text></a><a href="../proc/contains_string.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="257.6" y="-101.6" width="101.8" height="21.6"/><text x="308.5" y="-86.1">contains_string</text></a><path d="M99.8,-62.5C112.7,-65.5 126.9,-68.5 140,-70.8 176,-77.1 216.8,-82 249,-85.4"/><polygon fill="#8a93a5" points="248.8,-87.8 256,-86.1 249.3,-82.9"/><a href="../proc/extension_of.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="264.5" y="-21.6" width="88.1" height="21.6"/><text x="308.5" y="-6.1">extension_of</text></a><path d="M99.8,-39.1C112.7,-36.1 126.9,-33.1 140,-30.8 178.7,-24.1 222.8,-18.9 256.1,-15.5"/><polygon fill="#8a93a5" points="256.1,-18 262.8,-14.8 255.6,-13.1"/><a href="../proc/needs_fypp.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="140" y="-61.6" width="81.6" height="21.6"/><text x="180.8" y="-46.1">needs_fypp</text></a><path d="M104.9,-50.8C113.7,-50.8 122.7,-50.8 131.3,-50.8"/><polygon fill="#8a93a5" points="131.3,-53.3 138.3,-50.8 131.3,-48.4"/><path d="M217.2,-62C231.9,-66.7 249.1,-72.2 264.6,-77.1"/><polygon fill="#8a93a5" points="263.6,-79.4 271,-79.2 265.1,-74.7"/><path d="M217.2,-39.6C231.9,-34.9 249.1,-29.4 264.6,-24.5"/><polygon fill="#8a93a5" points="265.1,-26.9 271,-22.4 263.6,-22.2"/><a href="../proc/starts_word.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="267.7" y="-61.6" width="81.6" height="21.6"/><text x="308.5" y="-46.1">starts_word</text></a><path d="M221.9,-50.8C233.7,-50.8 246.8,-50.8 259,-50.8"/><polygon fill="#8a93a5" points="258.8,-53.3 265.8,-50.8 258.8,-48.4"/><a href="../proc/word_at.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="395.5" y="-61.6" width="60.6" height="21.6"/><text x="425.8" y="-46.1">word_at</text></a><path d="M349.5,-50.8C361.6,-50.8 374.7,-50.8 386.6,-50.8"/><polygon fill="#8a93a5" points="386.5,-53.3 393.5,-50.8 386.5,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/load_project_sources.html">load_project_sources</a></li></ul>
+<div class="graph"><svg width="376pt" height="30pt"
+ viewBox="0 0 376 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/runs_command.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="104" height="21.6"/><text x="52" y="-6.1">runs_command</text></a><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140" y="-21.6" width="138" height="21.6"/><text x="209" y="-6.1">load_project_sources</text></a><path d="M139.6,-10.8C130.8,-10.8 121.9,-10.8 113.3,-10.8"/><polygon fill="#8a93a5" points="113.3,-8.4 106.3,-10.8 113.3,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="314" y="-21.6" width="54" height="21.6"/><text x="341" y="-6.1">run</text></a><path d="M313.7,-10.8C305.6,-10.8 296.2,-10.8 286.4,-10.8"/><polygon fill="#8a93a5" points="286.7,-8.4 279.7,-10.8 286.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">logical</span> <span class="k">function</span> runs_command(s, path)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s       <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the file</span>
+    runs_command = s%preprocess <span class="k">.and.</span> contains_string(s%fpp_extensions, extension_of(path)) <span class="k">.and.</span> &amp;
+                   <span class="k">.not.</span> needs_fypp(s, path)
+<span class="k">end</span> <span class="k">function</span> runs_command</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

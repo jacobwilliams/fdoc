@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>find_sources &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_input.f90.html">fdoc_input.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_input.html">fdoc_input</a></div>
+<h1><span class="kind">subroutine</span>find_sources</h1>
+<div class="sig"><span class="k">subroutine</span> find_sources(<span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-out" title="intent(out)">files</span>)</div>
+<div class="doc">
+<p>The source files of the project, sorted, without those excluded. Fixed-form files are left out
+with a warning, as they are not supported yet.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-files"><td class="name">files</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>paths of the files</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/is_directory.html">is_directory</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/collect_files.html">collect_files</a></li><li><a href="../proc/starts_with.html">starts_with</a></li><li><a href="../proc/glob_matches.html">glob_matches</a></li><li><a href="../proc/contains_string.html">contains_string</a></li><li><a href="../proc/extension_of.html">extension_of</a></li><li><a href="../proc/warn.html">warn</a></li><li><a href="../proc/push.html">push</a></li><li><a href="../proc/sort_strings.html">sort_strings</a></li></ul>
+<div class="graph"><svg width="444pt" height="346pt"
+ viewBox="0 0 444 346" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 341.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/find_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-179.6" width="88.1" height="21.6"/><text x="44.1" y="-164.1">find_sources</text></a><a href="https://jacobwilliams.github.io/fformat/proc/is_directory.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="134.6" y="-337.6" width="80.9" height="21.6"/><text x="175" y="-322.1">is_directory</text></a><path d="M48.8,-180.5C57.6,-206.7 82.4,-270.6 124.1,-306.8 126.1,-308.5 128.2,-310.1 130.5,-311.5"/><polygon fill="#8a93a5" points="128.8,-313.4 136.1,-314.8 131.3,-309.2"/><a href="https://jacobwilliams.github.io/fformat/proc/collect_files.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="134.2" y="-297.6" width="81.6" height="21.6"/><text x="175" y="-282.1">collect_files</text></a><path d="M52.6,-180.4C65.4,-199.4 93.1,-237.5 124.1,-261.8 128.8,-265.5 134.1,-268.8 139.4,-271.8"/><polygon fill="#8a93a5" points="138,-273.8 145.3,-274.9 140.3,-269.4"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="261.9" y="-238.6" width="76.5" height="21.6"/><text x="300.2" y="-223.1">starts_with</text></a><path d="M55.4,-180.4C69.4,-195 95.7,-219.2 124.1,-228.8 166.1,-242.9 217.1,-240.6 253.2,-236.1"/><polygon fill="#8a93a5" points="253.4,-238.5 260,-235.1 252.8,-233.6"/><a href="../proc/glob_matches.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="127.4" y="-219.6" width="95.3" height="21.6"/><text x="175" y="-204.1">glob_matches</text></a><path d="M83.1,-180.6C97.7,-185.1 114.6,-190.4 129.8,-195.1"/><polygon fill="#8a93a5" points="128.8,-197.3 136.2,-197.1 130.2,-192.6"/><a href="../proc/contains_string.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="124.1" y="-179.6" width="101.8" height="21.6"/><text x="175" y="-164.1">contains_string</text></a><path d="M89.1,-168.8C97.6,-168.8 106.6,-168.8 115.5,-168.8"/><polygon fill="#8a93a5" points="115.5,-171.3 122.5,-168.8 115.5,-166.4"/><a href="../proc/extension_of.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="131" y="-139.6" width="88.1" height="21.6"/><text x="175" y="-124.1">extension_of</text></a><path d="M83.1,-157C97.7,-152.5 114.6,-147.2 129.8,-142.5"/><polygon fill="#8a93a5" points="130.2,-145 136.2,-140.5 128.8,-140.3"/><a href="../proc/warn.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="148" y="-99.6" width="54" height="21.6"/><text x="175" y="-84.1">warn</text></a><path d="M58,-157.2C73.1,-144.2 99.1,-123 124.1,-108.8 129.1,-106 134.5,-103.4 139.9,-101"/><polygon fill="#8a93a5" points="140.8,-103.3 146.4,-98.4 139,-98.8"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="273.2" y="-40.6" width="54" height="21.6"/><text x="300.2" y="-25.1">push</text></a><path d="M50.8,-157.1C61.9,-135.9 88.3,-91.3 124.1,-68.8 167.5,-41.6 227.5,-33.2 264.8,-30.7"/><polygon fill="#8a93a5" points="264.5,-33.2 271.3,-30.4 264.2,-28.3"/><a href="../proc/sort_strings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="134.2" y="-21.6" width="81.6" height="21.6"/><text x="175" y="-6.1">sort_strings</text></a><path d="M49.2,-157.4C58.9,-132.4 85,-72.2 124.1,-35.8 128.1,-32.1 132.8,-28.8 137.6,-25.9"/><polygon fill="#8a93a5" points="138.5,-28.2 143.5,-22.7 136.1,-23.9"/><path d="M223,-216C232.9,-217.6 243.5,-219.2 253.4,-220.7"/><polygon fill="#8a93a5" points="252.8,-223.1 260.1,-221.8 253.6,-218.3"/><a href="../proc/draw.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="273.2" y="-99.6" width="54" height="21.6"/><text x="300.2" y="-84.1">draw</text></a><path d="M202.5,-88.8C220.6,-88.8 244.8,-88.8 264.4,-88.8"/><polygon fill="#8a93a5" points="264.3,-91.3 271.3,-88.8 264.3,-86.4"/><path d="M216,-17C231.8,-19.4 249.7,-22.2 264.9,-24.5"/><polygon fill="#8a93a5" points="264.2,-26.9 271.5,-25.5 265,-22"/><a href="../proc/bar_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="374.5" y="-99.6" width="61.4" height="21.6"/><text x="405.2" y="-84.1">bar_text</text></a><path d="M327.5,-88.8C339.2,-88.8 353.2,-88.8 366.1,-88.8"/><polygon fill="#8a93a5" points="365.8,-91.3 372.8,-88.8 365.8,-86.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/load_project_sources.html">load_project_sources</a></li></ul>
+<div class="graph"><svg width="360pt" height="30pt"
+ viewBox="0 0 360 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/find_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="88.1" height="21.6"/><text x="44.1" y="-6.1">find_sources</text></a><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="124.1" y="-21.6" width="138" height="21.6"/><text x="193.1" y="-6.1">load_project_sources</text></a><path d="M123.7,-10.8C114.9,-10.8 105.9,-10.8 97.3,-10.8"/><polygon fill="#8a93a5" points="97.4,-8.4 90.4,-10.8 97.4,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="298.1" y="-21.6" width="54" height="21.6"/><text x="325.1" y="-6.1">run</text></a><path d="M297.8,-10.8C289.7,-10.8 280.3,-10.8 270.6,-10.8"/><polygon fill="#8a93a5" points="270.8,-8.4 263.8,-10.8 270.8,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> find_sources(s, files)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s                       <span class="d">!! the settings</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: files(:)    <span class="d">!! paths of the files</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: found(:), extensions(:), no_exclusions(:)
+    <span class="k">integer</span> :: d, k, j, skipped
+    <span class="k">logical</span> :: keep
+
+    <span class="k">allocate</span> (files(<span class="n">0</span>), no_exclusions(<span class="n">0</span>))
+    extensions = [s%extensions, s%fixed_extensions]
+    skipped = <span class="n">0</span>
+    <span class="k">do</span> d = <span class="n">1</span>, <span class="k">size</span>(s%src_dir)
+        <span class="k">if</span> (<span class="k">.not.</span> is_directory(s%src_dir(d)%s)) <span class="k">cycle</span>
+        <span class="k">call</span> collect_files(s%src_dir(d)%s, extensions, no_exclusions, found)
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(found)
+            keep = <span class="k">.true.</span>
+            <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(s%exclude_dir)
+                <span class="k">if</span> (starts_with(found(k)%s, s%exclude_dir(j)%s//<span class="s">'/'</span>)) keep = <span class="k">.false.</span>
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(s%exclude)
+                <span class="k">if</span> (glob_matches(s%exclude(j)%s, found(k)%s)) keep = <span class="k">.false.</span>
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">if</span> (keep <span class="k">.and.</span> contains_string(s%fixed_extensions, extension_of(found(k)%s)) <span class="k">.and.</span> &amp;
+                <span class="k">.not.</span> contains_string(s%extensions, extension_of(found(k)%s))) <span class="k">then</span>
+                skipped = skipped + <span class="n">1</span>
+                <span class="k">call</span> warn(<span class="s">'skipping fixed-form file (not supported yet): '</span>//found(k)%s)
+                keep = <span class="k">.false.</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (keep) <span class="k">call</span> push(files, found(k)%s)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> sort_strings(files)
+<span class="k">end</span> <span class="k">subroutine</span> find_sources</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

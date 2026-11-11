@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>open_block &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>open_block<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> open_block(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">node</span>)</div>
+<div class="doc">
+<p>Enter block <code>node</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-node"><td class="name">node</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the block</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/append.html">append</a></li><li><a href="../proc/fail.html">fail</a></li></ul>
+<div class="graph"><svg width="183pt" height="70pt"
+ viewBox="0 0 183 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/open_block.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="80.9" height="21.6"/><text x="40.4" y="-26.1">open_block</text></a><a href="../proc/append.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="116.9" y="-61.6" width="57.8" height="21.6"/><text x="145.8" y="-46.1">append</text></a><path d="M81.7,-38.6C90.5,-40.3 99.7,-42.1 108.3,-43.7"/><polygon fill="#8a93a5" points="107.8,-46.1 115.1,-45.1 108.7,-41.3"/><a href="../proc/fail.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="118.8" y="-21.6" width="54" height="21.6"/><text x="145.8" y="-6.1">fail</text></a><path d="M81.7,-23C91.2,-21.2 101.2,-19.2 110.3,-17.5"/><polygon fill="#8a93a5" points="110.6,-19.9 117,-16.2 109.7,-15.1"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/call_directive.html">call_directive</a></li><li><a href="../proc/control_directive.html">control_directive</a></li><li><a href="../proc/def_directive.html">def_directive</a></li><li><a href="../proc/for_directive.html">for_directive</a></li></ul>
+<div class="graph"><svg width="706pt" height="126pt"
+ viewBox="0 0 706 126" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 121.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/open_block.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="80.9" height="21.6"/><text x="40.4" y="-66.1">open_block</text></a><a href="../proc/control_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="242.4" y="-81.6" width="109.1" height="21.6"/><text x="297" y="-66.1">control_directive</text></a><path d="M277.2,-82C259.6,-91.8 232.2,-105.3 206.4,-110.8 167.5,-119.1 155.5,-120.4 116.9,-110.8 98.3,-106.2 79.2,-96 64.9,-87.1"/><polygon fill="#8a93a5" points="66.3,-85.1 59.1,-83.4 63.7,-89.2"/><a href="../proc/for_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="119.1" y="-101.6" width="85.2" height="21.6"/><text x="161.7" y="-86.1">for_directive</text></a><path d="M242.1,-78.9C232.4,-80.3 222.3,-81.9 212.7,-83.3"/><polygon fill="#8a93a5" points="212.5,-80.9 205.9,-84.3 213.2,-85.7"/><a href="../proc/def_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="117.6" y="-61.6" width="88.1" height="21.6"/><text x="161.7" y="-46.1">def_directive</text></a><path d="M242.1,-62.7C233,-61.3 223.4,-59.9 214.3,-58.5"/><polygon fill="#8a93a5" points="214.8,-56.2 207.6,-57.5 214.1,-61"/><a href="../proc/call_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="116.9" y="-21.6" width="89.5" height="21.6"/><text x="161.7" y="-6.1">call_directive</text></a><path d="M270.9,-59.5C249.5,-49.9 218.5,-35.9 195.2,-25.5"/><polygon fill="#8a93a5" points="196.4,-23.3 189,-22.7 194.4,-27.8"/><path d="M118.6,-83.7C109.3,-82.2 99.3,-80.5 89.8,-78.9"/><polygon fill="#8a93a5" points="90.3,-76.5 83,-77.8 89.5,-81.3"/><path d="M117.3,-58.1C108.4,-59.6 99,-61.1 90,-62.7"/><polygon fill="#8a93a5" points="89.8,-60.2 83.3,-63.8 90.6,-65"/><path d="M135.6,-22C129.4,-24.8 122.9,-27.8 116.9,-30.8 101.3,-38.5 84.2,-47.5 70.2,-55.1"/><polygon fill="#8a93a5" points="69.1,-52.9 64.1,-58.4 71.4,-57.2"/><a href="../proc/handle_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="387.5" y="-81.6" width="109.1" height="21.6"/><text x="442" y="-66.1">handle_directive</text></a><path d="M387.4,-70.8C378.5,-70.8 369.2,-70.8 360.2,-70.8"/><polygon fill="#8a93a5" points="360.5,-68.4 353.5,-70.8 360.5,-73.3"/><a href="../proc/parse_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="532.6" y="-81.6" width="75.1" height="21.6"/><text x="570.1" y="-66.1">parse_text</text></a><path d="M532.3,-70.8C523.9,-70.8 514.6,-70.8 505.4,-70.8"/><polygon fill="#8a93a5" points="505.5,-68.4 498.5,-70.8 505.5,-73.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="643.7" y="-81.6" width="54" height="21.6"/><text x="670.7" y="-66.1" fill="white">...</text><path stroke-dasharray="5,2" d="M643.3,-70.8C635,-70.8 625.6,-70.8 616.4,-70.8"/><polygon fill="#8a93a5" points="616.5,-68.4 609.5,-70.8 616.5,-73.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> open_block(c, node)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c    <span class="d">!! the state</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: node         <span class="d">!! the block</span>
+
+    <span class="k">call</span> append(c, node)
+    <span class="k">if</span> (c%depth == MAX_FRAMES) <span class="k">then</span>
+        <span class="k">call</span> fail(c, <span class="s">'blocks are nested too deeply'</span>)
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    c%depth = c%depth + <span class="n">1</span>
+    c%stack(c%depth) = node
+<span class="k">end</span> <span class="k">subroutine</span> open_block</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>search_page &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>search_page<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> search_page(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-out" title="intent(out)">html</span>)</div>
+<div class="doc">
+<p>Render the search results page.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-html"><td class="name">html</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/page_head.html">page_head</a></li><li><a href="../proc/add.html">add</a></li><li><a href="../proc/site_side.html">site_side</a></li><li><a href="../proc/page_foot.html">page_foot</a></li><li><a href="../proc/take.html">take</a></li></ul>
+<div class="graph"><svg width="566pt" height="347pt"
+ viewBox="0 0 566 347" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 342.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/search_page.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-260.6" width="89.6" height="21.6"/><text x="44.8" y="-245.1">search_page</text></a><a href="../proc/page_head.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="125.6" y="-260.6" width="79.5" height="21.6"/><text x="165.3" y="-245.1">page_head</text></a><path d="M90.3,-249.8C99,-249.8 108.2,-249.8 117.1,-249.8"/><polygon fill="#8a93a5" points="116.9,-252.3 123.9,-249.8 116.9,-247.4"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="393" y="-261.6" width="54" height="21.6"/><text x="420" y="-246.1">add</text></a><path d="M78.9,-261.5C125.4,-276.5 212.7,-299.4 287.3,-288.8"/><a href="../proc/site_side.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="132.4" y="-201.6" width="65.7" height="21.6"/><text x="165.3" y="-186.1">site_side</text></a><path d="M69.5,-238C88.2,-228.7 114.3,-215.7 134.5,-205.7"/><polygon fill="#8a93a5" points="135.3,-208 140.5,-202.7 133.1,-203.6"/><a href="../proc/page_foot.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="129.2" y="-338.6" width="72.2" height="21.6"/><text x="165.3" y="-323.1">page_foot</text></a><path d="M63.2,-261.4C79.3,-272.2 104,-288.7 125.6,-302.8 130.2,-305.9 135.3,-309.1 140.1,-312.2"/><polygon fill="#8a93a5" points="138.4,-314.1 145.6,-315.8 141.1,-310"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="138.3" y="-161.6" width="54" height="21.6"/><text x="165.3" y="-146.1">take</text></a><path d="M55.4,-238.2C69.6,-221.8 97.3,-191.3 125.6,-170.8 127.8,-169.2 130.1,-167.7 132.5,-166.2"/><polygon fill="#8a93a5" points="133.7,-168.3 138.6,-162.7 131.3,-164.1"/><path d="M183.9,-260.9C207.1,-274.2 249.3,-294.2 287.3,-288.8"/><path d="M289.3,-288.8C322.5,-284.1 358.9,-272.9 384.7,-263.8"/><polygon fill="#8a93a5" points="385.5,-266.1 391.3,-261.5 383.9,-261.5"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="244.3" y="-260.6" width="88.1" height="21.6"/><text x="288.3" y="-245.1">html_escape</text></a><path d="M205.3,-249.8C214.9,-249.8 225.3,-249.8 235.4,-249.8"/><polygon fill="#8a93a5" points="235.3,-252.3 242.3,-249.8 235.3,-247.4"/><path d="M198.5,-198C232.6,-205.7 288,-218.3 335.7,-229.8 351.8,-233.7 369.7,-238.2 384.7,-242"/><polygon fill="#8a93a5" points="383.9,-244.3 391.3,-243.7 385.1,-239.6"/><path d="M189.4,-202C208.5,-211.4 236,-224.8 257,-235"/><polygon fill="#8a93a5" points="255.7,-237.1 263,-237.9 257.8,-232.7"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="254.8" y="-142.6" width="67.1" height="21.6"/><text x="288.3" y="-127.1">entity_url</text></a><path d="M188,-179.6C193.6,-176.8 199.5,-173.7 205,-170.8 221.1,-162.4 224.7,-159.6 241,-151.8 244.8,-150 248.7,-148.2 252.7,-146.4"/><polygon fill="#8a93a5" points="253.5,-148.8 258.9,-143.7 251.5,-144.3"/><a href="../proc/side_icon.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="253.7" y="-101.6" width="69.3" height="21.6"/><text x="288.3" y="-86.1">side_icon</text></a><path d="M192.6,-179.7C197,-177.2 201.4,-174.2 205,-170.8 227.5,-149.9 218,-132.2 241,-111.8 243.4,-109.7 245.9,-107.9 248.6,-106.1"/><polygon fill="#8a93a5" points="249.7,-108.3 254.6,-102.7 247.3,-104.1"/><a href="../proc/display_name.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="241" y="-41.6" width="94.6" height="21.6"/><text x="288.3" y="-26.1">display_name</text></a><path d="M194.4,-179.6C198.3,-177.1 202,-174.2 205,-170.8 236.2,-135.3 214.3,-109.7 241,-70.8 247.1,-61.9 255.7,-53.8 263.8,-47.2"/><polygon fill="#8a93a5" points="265.2,-49.2 269.2,-43 262.2,-45.3"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="260.2" y="-182.6" width="56.3" height="21.6"/><text x="288.3" y="-167.1">int_text</text></a><path d="M198.4,-185.8C214.9,-183.2 235,-180 252,-177.4"/><polygon fill="#8a93a5" points="252,-179.8 258.5,-176.3 251.2,-175"/><path d="M192.1,-316.6C216.2,-306.9 253.5,-293.6 287.3,-288.8"/><path d="M332.9,-250.1C349.7,-250.3 368.6,-250.4 384.4,-250.5"/><polygon fill="#8a93a5" points="384.3,-253 391.3,-250.6 384.3,-248.1"/><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="377.8" y="-221.6" width="84.5" height="21.6"/><text x="420" y="-206.1">object_word</text></a><path d="M320.2,-143C325.6,-145.5 330.9,-148.5 335.7,-151.8 354.9,-165.4 352.4,-177.2 371.7,-190.8 374.3,-192.7 377.1,-194.4 380.1,-196"/><polygon fill="#8a93a5" points="378.7,-198.1 386.1,-199 380.9,-193.7"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="378.5" y="-181.6" width="83.1" height="21.6"/><text x="420" y="-166.1">page_name</text></a><path d="M322.4,-141.7C338,-146.4 356.9,-152.1 373.8,-157.2"/><polygon fill="#8a93a5" points="373.1,-159.5 380.5,-159.2 374.5,-154.8"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="385.7" y="-141.6" width="68.6" height="21.6"/><text x="420" y="-126.1">url_quote</text></a><path d="M322.4,-131.5C339.1,-131.4 359.4,-131.3 377.1,-131.1"/><polygon fill="#8a93a5" points="377.1,-133.6 384.1,-131.1 377.1,-128.7"/><path d="M323.1,-101.9C327.8,-104.5 332.2,-107.8 335.7,-111.8 372.1,-153.4 334.7,-189.7 371.7,-230.8 375.4,-235 380.2,-238.3 385.3,-241"/><polygon fill="#8a93a5" points="384.1,-243.1 391.5,-243.8 386.1,-238.7"/><a href="../proc/icon_of.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="391.9" y="-61.6" width="56.3" height="21.6"/><text x="420" y="-46.1">icon_of</text></a><path d="M323.4,-80.3C342,-74.6 364.9,-67.5 383.7,-61.7"/><polygon fill="#8a93a5" points="384.3,-64.1 390.3,-59.7 382.9,-59.4"/><a href="../proc/letter_class.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="380" y="-101.6" width="80.1" height="21.6"/><text x="420" y="-86.1">letter_class</text></a><path d="M323.4,-90.8C338.1,-90.8 355.6,-90.8 371.5,-90.8"/><polygon fill="#8a93a5" points="371.2,-93.3 378.2,-90.8 371.2,-88.4"/><a href="../proc/last_separator.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="371.7" y="-21.6" width="96.8" height="21.6"/><text x="420" y="-6.1">last_separator</text></a><path d="M335.8,-23.6C344.6,-22.3 353.9,-20.8 362.9,-19.5"/><polygon fill="#8a93a5" points="363.1,-21.9 369.7,-18.4 362.4,-17.1"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="504.4" y="-221.6" width="54" height="21.6"/><text x="531.4" y="-206.1" fill="white">...</text><path stroke-dasharray="5,2" d="M462.7,-210.8C473.6,-210.8 485.1,-210.8 495.6,-210.8"/><polygon fill="#8a93a5" points="495.6,-213.3 502.6,-210.8 495.6,-208.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="504.4" y="-181.6" width="54" height="21.6"/><text x="531.4" y="-166.1" fill="white">...</text><path stroke-dasharray="5,2" d="M461.8,-170.8C472.9,-170.8 484.8,-170.8 495.6,-170.8"/><polygon fill="#8a93a5" points="495.4,-173.3 502.4,-170.8 495.4,-168.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="504.4" y="-101.6" width="54" height="21.6"/><text x="531.4" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M460.5,-90.8C472,-90.8 484.5,-90.8 495.7,-90.8"/><polygon fill="#8a93a5" points="495.5,-93.3 502.5,-90.8 495.5,-88.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="293pt" height="30pt"
+ viewBox="0 0 293 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/search_page.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="89.6" height="21.6"/><text x="44.8" y="-6.1">search_page</text></a><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="125.6" y="-21.6" width="69.3" height="21.6"/><text x="160.2" y="-6.1">write_site</text></a><path d="M125.2,-10.8C116.8,-10.8 107.6,-10.8 98.6,-10.8"/><polygon fill="#8a93a5" points="98.8,-8.4 91.8,-10.8 98.8,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="230.9" y="-21.6" width="54" height="21.6"/><text x="257.9" y="-6.1">run</text></a><path d="M230.5,-10.8C222.1,-10.8 212.6,-10.8 203.4,-10.8"/><polygon fill="#8a93a5" points="203.6,-8.4 196.6,-10.8 203.6,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> search_page(site, html)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site                    <span class="d">!! the site</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: html  <span class="d">!! the HTML</span>
+    <span class="k">type</span>(buffer_t) :: b
+
+    <span class="k">call</span> page_head(site, <span class="s">'Search'</span>, <span class="n">0</span>, <span class="s">''</span>, <span class="k">.false.</span>, b)
+    <span class="k">call</span> add(b, <span class="s">'&lt;aside class="side"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">call</span> site_side(site, <span class="n">0</span>, <span class="s">''</span>, b)
+    <span class="k">call</span> add(b, <span class="s">'&lt;/aside&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;main&gt;&lt;div class="inner"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;h1&gt;Search&lt;/h1&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">call</span> add(b, <span class="s">'&lt;p class="search-count"&gt;&lt;/p&gt;&lt;div class="search-page"&gt;&lt;/div&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">call</span> page_foot(site, b)
+    <span class="k">call</span> take(b, html)
+<span class="k">end</span> <span class="k">subroutine</span> search_page</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

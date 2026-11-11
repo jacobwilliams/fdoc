@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>check_settings &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">subroutine</span>check_settings</h1>
+<div class="sig"><span class="k">subroutine</span> check_settings(<span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-out" title="intent(out)">stat</span>, <span class="intent attr-out" title="intent(out)">errmsg</span>)</div>
+<div class="doc">
+<p>Validate the project file's settings and derive what depends on them, before the command line
+is applied.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-stat"><td class="name">stat</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>nonzero on failure</p></td></tr>
+<tr id="variable-errmsg"><td class="name">errmsg</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>what is wrong</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/contains_string.html">contains_string</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/sort_strings.html">sort_strings</a></li><li><a href="../proc/push.html">push</a></li><li><a href="../proc/add_intrinsic_modules.html">add_intrinsic_modules</a></li></ul>
+<div class="graph"><svg width="396pt" height="188pt"
+ viewBox="0 0 396 188" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 183.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/check_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-99.6" width="100.4" height="21.6"/><text x="50.2" y="-84.1">check_settings</text></a><a href="../proc/contains_string.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="157.3" y="-179.6" width="101.8" height="21.6"/><text x="208.3" y="-164.1">contains_string</text></a><path d="M64.7,-100.6C80.8,-114 108.9,-135.7 136.4,-148.8 141,-151 145.9,-153 150.9,-154.8"/><polygon fill="#8a93a5" points="150,-157.1 157.4,-157 151.5,-152.4"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="171.8" y="-139.6" width="72.9" height="21.6"/><text x="208.3" y="-124.1">lowercase</text></a><path d="M97.2,-100.6C118.1,-106 142.8,-112.3 163.5,-117.6"/><polygon fill="#8a93a5" points="162.7,-119.9 170,-119.3 163.9,-115.1"/><a href="../proc/sort_strings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="167.5" y="-99.6" width="81.6" height="21.6"/><text x="208.3" y="-84.1">sort_strings</text></a><path d="M101,-88.8C119.5,-88.8 140.4,-88.8 158.8,-88.8"/><polygon fill="#8a93a5" points="158.5,-91.3 165.5,-88.8 158.5,-86.4"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="325.3" y="-80.6" width="54" height="21.6"/><text x="352.3" y="-65.1">push</text></a><path d="M92.5,-77.1C106.3,-73.7 121.9,-70.5 136.4,-68.8 199.9,-61.5 216.3,-68.4 280.1,-68.8 292.1,-68.9 305.1,-69 316.7,-69.2"/><polygon fill="#8a93a5" points="316.4,-71.7 323.4,-69.3 316.4,-66.8"/><a href="../proc/add_intrinsic_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="136.4" y="-21.6" width="143.8" height="21.6"/><text x="208.3" y="-6.1">add_intrinsic_modules</text></a><path d="M67.6,-77.1C84.3,-65.6 111.3,-47.9 136.4,-35.8 144.7,-31.8 153.8,-28.1 162.6,-24.9"/><polygon fill="#8a93a5" points="163.4,-27.2 169.2,-22.5 161.8,-22.6"/><path d="M249.2,-83.5C270.4,-80.6 296.3,-77.2 316.7,-74.4"/><polygon fill="#8a93a5" points="316.9,-76.9 323.6,-73.5 316.3,-72"/><a href="../proc/add_entry.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="316.1" y="-21.6" width="72.2" height="21.6"/><text x="352.3" y="-6.1">add_entry</text></a><path d="M280.3,-10.8C289.5,-10.8 298.8,-10.8 307.4,-10.8"/><polygon fill="#8a93a5" points="307.3,-13.3 314.3,-10.8 307.3,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/run.html">run</a></li></ul>
+<div class="graph"><svg width="198pt" height="30pt"
+ viewBox="0 0 198 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/check_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="100.4" height="21.6"/><text x="50.2" y="-6.1">check_settings</text></a><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="136.4" y="-21.6" width="54" height="21.6"/><text x="163.4" y="-6.1">run</text></a><path d="M136,-10.8C128.1,-10.8 119,-10.8 109.8,-10.8"/><polygon fill="#8a93a5" points="109.9,-8.4 102.9,-10.8 109.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> check_settings(s, <span class="k">stat</span>, errmsg)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: marks(:)
+    <span class="k">integer</span> :: k, j
+
+    <span class="k">stat</span> = <span class="n">0</span>
+    s%relative = s%project_url == <span class="s">''</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(s%fixed_extensions)
+        <span class="k">if</span> (contains_string(s%extensions, s%fixed_extensions(k)%s)) <span class="k">then</span>
+            <span class="k">stat</span> = <span class="n">1</span>
+            errmsg = <span class="s">"Fixed-form extension '"</span>//s%fixed_extensions(k)%s//<span class="s">"' also appears in the free-form extension list"</span>
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(s%extra_mods)
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(s%<span class="k">external</span>)
+            <span class="k">if</span> (s%extra_mods(k)%key == s%<span class="k">external</span>(j)%key) <span class="k">then</span>
+                <span class="k">stat</span> = <span class="n">1</span>
+                errmsg = <span class="s">"extra-mod '"</span>//s%extra_mods(k)%key//<span class="s">"' also appears in external mods"</span>
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(s%display)
+        s%display(k)%s = lowercase(s%display(k)%s)
+    <span class="k">end</span> <span class="k">do</span>
+    s%extensions = [s%extensions, s%fpp_extensions]
+    <span class="k">call</span> sort_strings(s%extensions)
+    <span class="k">call</span> push(s%exclude_dir, s%output_dir)
+    <span class="k">call</span> add_intrinsic_modules(s)
+
+    marks = [string_t(s%docmark), string_t(s%predocmark), string_t(s%docmark_alt), string_t(s%predocmark_alt)]
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(marks)
+        <span class="k">do</span> j = k + <span class="n">1</span>, <span class="k">size</span>(marks)
+            <span class="k">if</span> (marks(k)%s == marks(j)%s <span class="k">.and.</span> <span class="k">len</span>(marks(k)%s) &gt; <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">stat</span> = <span class="n">1</span>
+                errmsg = <span class="s">"Doc comment markers are the same: '"</span>//marks(k)%s//<span class="s">"'"</span>
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> check_settings</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>is_program_unit &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project.f90.html">fdoc_project.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project.html">fdoc_project</a></div>
+<h1><span class="kind">function</span>is_program_unit<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> is_program_unit(<span class="intent attr-in" title="intent(in)">kind</span>)</div>
+<div class="doc">
+<p>True if entities of <code>kind</code> are program units. The permission of a module is what its members get
+by default, so <code>display</code> says nothing about whether the module itself is shown.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-kind"><td class="name">kind</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the kind of entity</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-is_program_unit"><td class="name">is_program_unit</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/prune.html">prune</a></li></ul>
+<div class="graph"><svg width="296pt" height="30pt"
+ viewBox="0 0 296 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_program_unit.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="107.6" height="21.6"/><text x="53.8" y="-6.1">is_program_unit</text></a><a href="../proc/prune.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="143.6" y="-21.6" width="54" height="21.6"/><text x="170.6" y="-6.1">prune</text></a><path d="M143.3,-10.8C135.2,-10.8 125.9,-10.8 116.5,-10.8"/><polygon fill="#8a93a5" points="116.7,-8.4 109.7,-10.8 116.7,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="233.6" y="-21.6" width="54" height="21.6"/><text x="260.6" y="-6.1">run</text></a><path d="M233.2,-10.8C224.8,-10.8 215.3,-10.8 206.4,-10.8"/><polygon fill="#8a93a5" points="206.5,-8.4 199.5,-10.8 206.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> is_program_unit(<span class="k">kind</span>)
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: <span class="k">kind</span>     <span class="d">!! the kind of entity</span>
+    is_program_unit = <span class="k">kind</span> == E_MODULE <span class="k">.or.</span> <span class="k">kind</span> == E_SUBMODULE <span class="k">.or.</span> <span class="k">kind</span> == E_PROGRAM <span class="k">.or.</span> <span class="k">kind</span> == E_BLOCKDATA
+<span class="k">end</span> <span class="k">function</span> is_program_unit</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

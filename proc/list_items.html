@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>list_items &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>list_items<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> list_items(<span class="intent attr-in" title="intent(in)">block</span>, <span class="intent attr-out" title="intent(out)">items</span>)</div>
+<div class="doc">
+<p>The items of a list chunk.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-block"><td class="name">block</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the chunk</p></td></tr>
+<tr id="variable-items"><td class="name">items</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the items</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/split_on.html">split_on</a></li><li><a href="../proc/item_text.html">item_text</a></li><li><a href="../proc/push.html">push</a></li><li><a href="../proc/starts_with.html">starts_with</a></li></ul>
+<div class="graph"><svg width="279pt" height="148pt"
+ viewBox="0 0 279 148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 143.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/list_items.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-79.6" width="68.6" height="21.6"/><text x="34.3" y="-64.1">list_items</text></a><a href="../proc/split_on.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="113.2" y="-139.6" width="59.2" height="21.6"/><text x="142.8" y="-124.1">split_on</text></a><path d="M55.2,-80.5C69,-88.6 87.8,-99.5 104.6,-108.8 107.5,-110.4 110.5,-112.1 113.5,-113.7"/><polygon fill="#8a93a5" points="112.2,-115.8 119.6,-117 114.6,-111.5"/><a href="../proc/item_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="109.3" y="-99.6" width="67.1" height="21.6"/><text x="142.8" y="-84.1">item_text</text></a><path d="M69.3,-75.2C79.3,-77.1 90.3,-79.1 100.7,-81.1"/><polygon fill="#8a93a5" points="100.1,-83.5 107.4,-82.3 101,-78.6"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="217.1" y="-99.6" width="54" height="21.6"/><text x="244.1" y="-84.1">push</text></a><path d="M69.4,-65.8C99.1,-63.9 143.2,-62.8 181.1,-68.8 190.3,-70.2 199.9,-72.8 208.8,-75.6"/><polygon fill="#8a93a5" points="207.8,-77.9 215.3,-77.8 209.4,-73.3"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="104.6" y="-21.6" width="76.5" height="21.6"/><text x="142.8" y="-6.1">starts_with</text></a><path d="M56.9,-57.1C73.3,-48.1 96.2,-35.6 114.1,-25.9"/><polygon fill="#8a93a5" points="115.1,-28.2 120.1,-22.7 112.7,-23.8"/><path d="M171.8,-117.6C183.3,-112.9 196.9,-107.4 209,-102.5"/><polygon fill="#8a93a5" points="209.8,-104.9 215.4,-100 208,-100.3"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/list_block.html">list_block</a></li></ul>
+<div class="graph"><svg width="522pt" height="30pt"
+ viewBox="0 0 522 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/list_items.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="68.6" height="21.6"/><text x="34.3" y="-6.1">list_items</text></a><a href="../proc/list_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="104.6" y="-21.6" width="67.9" height="21.6"/><text x="138.5" y="-6.1">list_block</text></a><path d="M104.3,-10.8C95.8,-10.8 86.6,-10.8 77.7,-10.8"/><polygon fill="#8a93a5" points="77.9,-8.4 70.9,-10.8 77.9,-13.3"/><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="208.4" y="-21.6" width="84.5" height="21.6"/><text x="250.7" y="-6.1">parse_block</text></a><path d="M208,-10.8C199.2,-10.8 189.8,-10.8 181,-10.8"/><polygon fill="#8a93a5" points="181.2,-8.4 174.2,-10.8 181.2,-13.3"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="328.9" y="-21.6" width="95.3" height="21.6"/><text x="376.6" y="-6.1">parse_chunks</text></a><path d="M328.8,-10.8C319.9,-10.8 310.7,-10.8 301.7,-10.8"/><polygon fill="#8a93a5" points="301.8,-8.4 294.8,-10.8 301.8,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="460.3" y="-21.6" width="54" height="21.6"/><text x="487.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M460,-10.8C451.7,-10.8 442.3,-10.8 432.8,-10.8"/><polygon fill="#8a93a5" points="433,-8.4 426,-10.8 433,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> list_items(<span class="k">block</span>, items)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">block</span>                   <span class="d">!! the chunk</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: items(:)    <span class="d">!! the items</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: lines(:)
+    <span class="k">integer</span> :: k, at, spaces, n
+
+    lines = split_on(<span class="k">block</span>, NL)
+    <span class="k">allocate</span> (items(<span class="n">0</span>))
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(lines)
+        <span class="k">associate</span> (line =&gt; lines(k)%s)
+            at = item_text(line, <span class="k">.true.</span>, <span class="k">.true.</span>)
+            n = <span class="k">size</span>(items)
+            spaces = <span class="k">verify</span>(line//<span class="s">'x'</span>, <span class="s">' '</span>) - <span class="n">1</span>
+            <span class="k">if</span> (at &gt; <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">call</span> push(items, line(at:))
+            <span class="k">else</span> <span class="k">if</span> (spaces &gt;= <span class="n">4</span> <span class="k">.and.</span> spaces &lt;= <span class="n">7</span> <span class="k">.and.</span> item_text(line(<span class="n">5</span>:), <span class="k">.true.</span>, <span class="k">.true.</span>) &gt; <span class="n">0</span> <span class="k">.and.</span> n &gt; <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">if</span> (starts_with(items(n)%s, <span class="s">'    '</span>)) <span class="k">then</span>
+                    items(n)%s = items(n)%s//NL//line
+                <span class="k">else</span>
+                    <span class="k">call</span> push(items, line)
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">else</span> <span class="k">if</span> (n &gt; <span class="n">0</span>) <span class="k">then</span>
+                items(n)%s = items(n)%s//NL//line
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> list_items</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

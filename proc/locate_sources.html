@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>locate_sources &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>locate_sources<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> locate_sources(<span class="intent attr-inout" title="intent(inout)">site</span>)</div>
+<div class="doc">
+<p>Find the code of each procedure and type in the text of its file. Files are handled in parallel.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/is_procedure.html">is_procedure</a></li><li><a href="../proc/page_entity.html">page_entity</a></li><li><a href="../proc/wants_source.html">wants_source</a></li><li><a href="../proc/locate_in_file.html">locate_in_file</a></li></ul>
+<div class="graph"><svg width="601pt" height="268pt"
+ viewBox="0 0 601 268" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 263.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/locate_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-199.6" width="101.8" height="21.6"/><text x="50.9" y="-184.1">locate_sources</text></a><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="140.4" y="-259.6" width="89.6" height="21.6"/><text x="185.1" y="-244.1">is_procedure</text></a><path d="M76.7,-200.5C93.8,-208.6 117.1,-219.5 137.8,-228.8 141.7,-230.5 145.8,-232.4 149.9,-234.1"/><polygon fill="#8a93a5" points="148.9,-236.4 156.3,-236.9 150.8,-231.9"/><a href="../proc/page_entity.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="144.3" y="-219.6" width="81.6" height="21.6"/><text x="185.1" y="-204.1">page_entity</text></a><path d="M102.7,-196.5C113.6,-198.1 125.1,-199.9 135.9,-201.5"/><polygon fill="#8a93a5" points="135.2,-203.9 142.5,-202.5 135.9,-199"/><a href="../proc/wants_source.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="137.8" y="-179.6" width="94.6" height="21.6"/><text x="185.1" y="-164.1">wants_source</text></a><path d="M102.7,-181.1C111.4,-179.8 120.5,-178.4 129.3,-177.1"/><polygon fill="#8a93a5" points="129.6,-179.5 136.2,-176.1 128.9,-174.7"/><a href="../proc/locate_in_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140" y="-100.6" width="90.3" height="21.6"/><text x="185.1" y="-85.1">locate_in_file</text></a><path d="M67.6,-177.1C91.2,-159.4 136,-125.9 162.6,-105.9"/><polygon fill="#8a93a5" points="163.9,-108 168.1,-101.8 161,-104.1"/><a href="../proc/is_separate_body.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="268.4" y="-219.6" width="117" height="21.6"/><text x="327" y="-204.1">is_separate_body</text></a><path d="M226.2,-208.8C236.7,-208.8 248.4,-208.8 259.9,-208.8"/><polygon fill="#8a93a5" points="259.7,-211.3 266.7,-208.8 259.7,-206.4"/><a href="../proc/is_shown.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="292.7" y="-259.6" width="68.6" height="21.6"/><text x="327" y="-244.1">is_shown</text></a><path d="M225.5,-220C243.9,-225.3 265.9,-231.6 284.6,-237"/><polygon fill="#8a93a5" points="283.8,-239.3 291.2,-238.8 285.1,-234.6"/><a href="../proc/parse_bool.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="287.6" y="-179.6" width="78.7" height="21.6"/><text x="327" y="-164.1">parse_bool</text></a><path d="M232.7,-168.8C247.7,-168.8 264.4,-168.8 279.4,-168.8"/><polygon fill="#8a93a5" points="279,-171.3 286,-168.8 279,-166.4"/><a href="../proc/lower_in_place.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="276.4" y="-21.6" width="101.1" height="21.6"/><text x="327" y="-6.1">lower_in_place</text></a><path d="M199.1,-78.7C214.7,-65.8 242.1,-44.5 268.4,-30.8 272.4,-28.8 276.6,-26.9 280.8,-25.1"/><polygon fill="#8a93a5" points="281.5,-27.5 287.1,-22.6 279.7,-22.9"/><a href="../proc/construct_lines.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="276.4" y="-139.6" width="101.1" height="21.6"/><text x="327" y="-124.1">construct_lines</text></a><path d="M226.6,-101.1C242.5,-105.5 261,-110.7 277.6,-115.3"/><polygon fill="#8a93a5" points="276.8,-117.6 284.2,-117.1 278.1,-112.9"/><a href="../proc/find_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="286.2" y="-61.6" width="81.6" height="21.6"/><text x="327" y="-46.1">find_source</text></a><path d="M226.6,-78.5C242.7,-74 261.3,-68.8 278,-64.2"/><polygon fill="#8a93a5" points="278.6,-66.6 284.6,-62.3 277.2,-61.8"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="425.8" y="-160.6" width="72.9" height="21.6"/><text x="462.3" y="-145.1">lowercase</text></a><path d="M230.7,-89C271.7,-89.5 333.9,-93.1 385.5,-108.8 404.2,-114.5 423.7,-125.1 438.2,-134.1"/><polygon fill="#8a93a5" points="436.8,-136.1 444,-137.8 439.4,-132"/><path d="M366.5,-163.3C382.4,-161 400.8,-158.4 417.2,-156.1"/><polygon fill="#8a93a5" points="417.5,-158.5 424,-155.1 416.8,-153.7"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="423.3" y="-21.6" width="78" height="21.6"/><text x="462.3" y="-6.1">lower_char</text></a><path d="M378,-10.8C390,-10.8 402.8,-10.8 414.6,-10.8"/><polygon fill="#8a93a5" points="414.5,-13.3 421.5,-10.8 414.5,-8.4"/><a href="../proc/line_has.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="430.9" y="-101.6" width="62.8" height="21.6"/><text x="462.3" y="-86.1">line_has</text></a><path d="M365.5,-62C383.3,-67.4 404.7,-73.8 422.8,-79.2"/><polygon fill="#8a93a5" points="421.9,-81.6 429.3,-81.2 423.3,-76.9"/><a href="../proc/starts_word.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="421.5" y="-61.6" width="81.6" height="21.6"/><text x="462.3" y="-46.1">starts_word</text></a><path d="M368,-50.8C382.1,-50.8 398.1,-50.8 412.8,-50.8"/><polygon fill="#8a93a5" points="412.8,-53.3 419.8,-50.8 412.8,-48.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="539.1" y="-101.6" width="54" height="21.6"/><text x="566.1" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M494.1,-90.8C505.6,-90.8 518.7,-90.8 530.5,-90.8"/><polygon fill="#8a93a5" points="530.3,-93.3 537.3,-90.8 530.3,-88.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="539.1" y="-61.6" width="54" height="21.6"/><text x="566.1" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M503.5,-50.8C512.4,-50.8 521.8,-50.8 530.5,-50.8"/><polygon fill="#8a93a5" points="530.4,-53.3 537.4,-50.8 530.4,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="305pt" height="30pt"
+ viewBox="0 0 305 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/locate_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="101.8" height="21.6"/><text x="50.9" y="-6.1">locate_sources</text></a><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.8" y="-21.6" width="69.3" height="21.6"/><text x="172.5" y="-6.1">write_site</text></a><path d="M137.5,-10.8C129.2,-10.8 120,-10.8 110.9,-10.8"/><polygon fill="#8a93a5" points="111,-8.4 104,-10.8 111,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="243.1" y="-21.6" width="54" height="21.6"/><text x="270.1" y="-6.1">run</text></a><path d="M242.8,-10.8C234.4,-10.8 224.9,-10.8 215.7,-10.8"/><polygon fill="#8a93a5" points="215.9,-8.4 208.9,-10.8 215.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> locate_sources(site)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(inout) :: site     <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: ids(:), starts(:)
+    <span class="k">integer</span> :: k, n, runs, r, file
+
+    <span class="k">allocate</span> (ids(site%p%list%n), starts(site%p%list%n + <span class="n">1</span>))
+    n = <span class="n">0</span>
+    runs = <span class="n">0</span>
+    file = <span class="n">0</span>
+    <span class="k">do</span> k = <span class="n">1</span>, site%p%list%n
+        <span class="k">associate</span> (e =&gt; site%p%list%box(k)%e)
+            <span class="k">if</span> (<span class="k">.not.</span> is_procedure(e%<span class="k">kind</span>) <span class="k">.and.</span> e%<span class="k">kind</span> /= E_TYPE <span class="k">.and.</span> e%<span class="k">kind</span> /= E_MODPROC) <span class="k">cycle</span>
+            <span class="k">if</span> (<span class="k">allocated</span>(e%external_url)) <span class="k">cycle</span>
+            <span class="c">! a hidden body is shown on the page of its interface</span>
+            <span class="k">if</span> (<span class="k">.not.</span> e%visible <span class="k">.and.</span> page_entity(site%p%list, k) == k) <span class="k">cycle</span>
+            <span class="k">if</span> (<span class="k">.not.</span> wants_source(site, k)) <span class="k">cycle</span>
+            n = n + <span class="n">1</span>
+            ids(n) = k
+            <span class="k">if</span> (e%file /= file) <span class="k">then</span>
+                file = e%file
+                runs = runs + <span class="n">1</span>
+                starts(runs) = n
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+    starts(runs + <span class="n">1</span>) = n + <span class="n">1</span>
+    <span class="c">!$omp parallel do schedule(dynamic) num_threads(max(1, site%s%parallel)) default(shared) private(r)</span>
+    <span class="k">do</span> r = <span class="n">1</span>, runs
+        <span class="k">call</span> locate_in_file(site, ids(starts(r):starts(r + <span class="n">1</span>) - <span class="n">1</span>))
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="c">!$omp end parallel do</span>
+<span class="k">end</span> <span class="k">subroutine</span> locate_sources</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

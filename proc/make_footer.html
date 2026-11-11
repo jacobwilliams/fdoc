@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make_footer &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>make_footer<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> make_footer(<span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-out" title="intent(out)">footer</span>)</div>
+<div class="doc">
+<p>The end of every page.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-footer"><td class="name">footer</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/html_escape.html">html_escape</a></li><li><a href="../proc/license_text.html">license_text</a></li><li><a href="../proc/take.html">take</a></li></ul>
+<div class="graph"><svg width="428pt" height="139pt"
+ viewBox="0 0 428 139" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 134.8)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/make_footer.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-80.6" width="86.7" height="21.6"/><text x="43.3" y="-65.1">make_footer</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="365.8" y="-99.6" width="54" height="21.6"/><text x="392.8" y="-84.1">add</text></a><path d="M165.2,-127.8C233.6,-137.7 313.2,-116.4 357.5,-101.5"/><polygon fill="#8a93a5" points="358.1,-103.9 363.9,-99.3 356.5,-99.3"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="241.7" y="-99.6" width="88.1" height="21.6"/><text x="285.8" y="-84.1">html_escape</text></a><path d="M60.2,-81.6C82,-96.8 123.2,-122 163.2,-127.8"/><path d="M165.2,-127.8C199.1,-132.7 236.4,-116.9 260.2,-104"/><polygon fill="#8a93a5" points="261.2,-106.2 266.1,-100.7 258.8,-102"/><a href="../proc/license_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="122.7" y="-80.6" width="83" height="21.6"/><text x="164.2" y="-65.1">license_text</text></a><path d="M87.6,-69.8C96.2,-69.8 105.4,-69.8 114.2,-69.8"/><polygon fill="#8a93a5" points="114,-72.3 121,-69.8 114,-67.4"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.2" y="-40.6" width="54" height="21.6"/><text x="164.2" y="-25.1">take</text></a><path d="M79.3,-58C95,-52.8 113.3,-46.6 128.9,-41.3"/><polygon fill="#8a93a5" points="129.4,-43.7 135.3,-39.2 127.9,-39.1"/><path d="M330.1,-88.8C339.1,-88.8 348.4,-88.8 357.1,-88.8"/><polygon fill="#8a93a5" points="356.9,-91.3 363.9,-88.8 356.9,-86.4"/><path d="M206.1,-65.9C239.5,-63.6 288,-62.2 329.8,-68.8 339,-70.2 348.6,-72.8 357.5,-75.6"/><polygon fill="#8a93a5" points="356.6,-77.9 364,-77.8 358.1,-73.3"/><path d="M206,-76.3C214.7,-77.7 224,-79.1 233.1,-80.6"/><polygon fill="#8a93a5" points="232.5,-83 239.8,-81.7 233.2,-78.1"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="249.3" y="-21.6" width="72.9" height="21.6"/><text x="285.8" y="-6.1">lowercase</text></a><path d="M188,-58.6C206.8,-49.3 233.8,-35.9 254.5,-25.7"/><polygon fill="#8a93a5" points="255.5,-28 260.7,-22.7 253.4,-23.6"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="290pt" height="30pt"
+ viewBox="0 0 290 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/make_footer.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="86.7" height="21.6"/><text x="43.3" y="-6.1">make_footer</text></a><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="122.7" y="-21.6" width="69.3" height="21.6"/><text x="157.3" y="-6.1">write_site</text></a><path d="M122.4,-10.8C114.1,-10.8 105.1,-10.8 96.1,-10.8"/><polygon fill="#8a93a5" points="96.2,-8.4 89.2,-10.8 96.2,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="228" y="-21.6" width="54" height="21.6"/><text x="255" y="-6.1">run</text></a><path d="M227.6,-10.8C219.2,-10.8 209.7,-10.8 200.5,-10.8"/><polygon fill="#8a93a5" points="200.7,-8.4 193.7,-10.8 200.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> make_footer(s, footer)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s                   <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: footer <span class="d">!! the HTML</span>
+    <span class="k">type</span>(buffer_t) :: b
+
+    <span class="k">call</span> add(b, <span class="s">'&lt;footer&gt;'</span>)
+    <span class="k">call</span> html_escape(s%project, b, <span class="k">.false.</span>)
+    <span class="k">if</span> (<span class="k">allocated</span>(s%author)) <span class="k">then</span>
+        <span class="k">call</span> add(b, <span class="s">' was developed by '</span>)
+        <span class="k">call</span> html_escape(s%author, b, <span class="k">.false.</span>)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">if</span> (<span class="k">len</span>(s%license) &gt; <span class="n">0</span>) <span class="k">then</span>
+        <span class="k">call</span> add(b, <span class="s">'. '</span>)
+        <span class="k">call</span> license_text(s%license, b)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">if</span> (s%print_creation_date) <span class="k">then</span>
+        <span class="k">call</span> add(b, <span class="s">'. Generated on '</span>)
+        <span class="k">call</span> html_escape(s%creation_date, b, <span class="k">.false.</span>)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">call</span> add(b, <span class="s">'. Documentation generated by &lt;a href="https://github.com/jacobwilliams/fdoc"&gt;fdoc&lt;/a&gt;.&lt;/footer&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">call</span> take(b, footer)
+<span class="k">end</span> <span class="k">subroutine</span> make_footer</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

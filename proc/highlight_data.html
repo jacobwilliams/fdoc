@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>highlight_data &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_highlight.f90.html">fdoc_highlight.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_highlight.html">fdoc_highlight</a></div>
+<h1><span class="kind">subroutine</span>highlight_data</h1>
+<div class="sig"><span class="k">subroutine</span> highlight_data(<span class="intent attr-in" title="intent(in)">code</span>, <span class="intent attr-in" title="intent(in)">toml</span>, <span class="intent attr-inout" title="intent(inout)">out</span>)</div>
+<div class="doc">
+<p>Write <code>code</code>, JSON or TOML, as highlighted HTML. A key is a string followed by <code>:</code> in JSON, and what
+comes before <code>=</code> at the start of a line or after <code>{</code> or <code>,</code> in TOML.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-code"><td class="name">code</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-toml"><td class="name">toml</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>true for TOML, false for JSON</p></td></tr>
+<tr id="variable-out"><td class="name">out</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li>plain</li><li>line_end</li><li>span</li><li>string_end</li><li>is_key</li><li>line_start</li><li>header_end</li><li>literal</li><li><a href="../proc/html_escape.html">html_escape</a></li></ul>
+<div class="graph"><svg width="317pt" height="49pt"
+ viewBox="0 0 317 49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 44.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/highlight_data.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="95.4" height="21.6"/><text x="47.7" y="-25.1">highlight_data</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="255.5" y="-40.6" width="54" height="21.6"/><text x="282.5" y="-25.1">add</text></a><path d="M96.3,-30.5C107.8,-30.6 120,-30.7 131.4,-30.8 170.5,-31 180.3,-31.1 219.5,-30.8 228.4,-30.7 238,-30.6 246.9,-30.5"/><polygon fill="#8a93a5" points="246.8,-32.9 253.7,-30.3 246.7,-28"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="131.4" y="-21.6" width="88.1" height="21.6"/><text x="175.4" y="-6.1">html_escape</text></a><path d="M96.2,-22.6C104.9,-21.3 113.9,-19.9 122.7,-18.6"/><polygon fill="#8a93a5" points="122.9,-21.1 129.5,-17.6 122.2,-16.2"/><path d="M219.7,-18.6C228.7,-20.3 238.1,-22 246.7,-23.5"/><polygon fill="#8a93a5" points="246.3,-25.9 253.6,-24.8 247.1,-21.1"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/code_block_html.html">code_block_html</a></li></ul>
+<div class="graph"><svg width="665pt" height="70pt"
+ viewBox="0 0 665 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/highlight_data.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="95.4" height="21.6"/><text x="47.7" y="-26.1">highlight_data</text></a><a href="../proc/code_block_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="131.4" y="-41.6" width="112" height="21.6"/><text x="187.3" y="-26.1">code_block_html</text></a><path d="M131.1,-30.8C122.4,-30.8 113.4,-30.8 104.6,-30.8"/><polygon fill="#8a93a5" points="104.9,-28.4 97.9,-30.8 104.9,-33.3"/><a href="../proc/stash_fenced_code.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="279.3" y="-61.6" width="127.2" height="21.6"/><text x="342.9" y="-46.1">stash_fenced_code</text></a><path d="M279,-42.6C270,-41.4 260.7,-40.2 251.7,-39.1"/><polygon fill="#8a93a5" points="252.3,-36.7 245,-38.2 251.6,-41.5"/><a href="../proc/render_code.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="299.2" y="-21.6" width="87.4" height="21.6"/><text x="342.9" y="-6.1">render_code</text></a><path d="M298.7,-16.4C284.1,-18.3 267.5,-20.5 251.7,-22.5"/><polygon fill="#8a93a5" points="251.7,-20.1 245,-23.4 252.3,-24.9"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="442.5" y="-61.6" width="124.2" height="21.6"/><text x="504.6" y="-46.1">markdown_to_html</text></a><path d="M442.3,-50.8C433.4,-50.8 424.2,-50.8 415.1,-50.8"/><polygon fill="#8a93a5" points="415.4,-48.4 408.4,-50.8 415.4,-53.3"/><a href="../proc/render_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="460.5" y="-21.6" width="88.1" height="21.6"/><text x="504.6" y="-6.1">render_node</text></a><path d="M460.4,-10.8C440.3,-10.8 416.3,-10.8 395.3,-10.8"/><polygon fill="#8a93a5" points="395.4,-8.4 388.4,-10.8 395.4,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="602.7" y="-61.6" width="54" height="21.6"/><text x="629.7" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M602.3,-50.8C594.3,-50.8 585,-50.8 575.5,-50.8"/><polygon fill="#8a93a5" points="575.6,-48.4 568.6,-50.8 575.6,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="602.7" y="-21.6" width="54" height="21.6"/><text x="629.7" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M602.3,-10.8C589.2,-10.8 572.9,-10.8 557.4,-10.8"/><polygon fill="#8a93a5" points="557.4,-8.4 550.4,-10.8 557.4,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> highlight_data(code, toml, out)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: code    <span class="d">!! the text</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: toml             <span class="d">!! true for TOML, false for JSON</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: out    <span class="d">!! the HTML</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: BARE = <span class="s">'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-'</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: NUMBER = <span class="s">'0123456789abcdefABCDEFxXoO_.:+-TZ'</span>
+    <span class="k">logical</span> :: key_next
+    <span class="k">integer</span> :: i, j, n
+
+    n = <span class="k">len</span>(code)
+    i = <span class="n">1</span>
+    key_next = <span class="k">.true.</span>
+    <span class="k">do</span> <span class="k">while</span> (i &lt;= n)
+        <span class="k">select</span> <span class="k">case</span> (code(i:i))
+        <span class="k">case</span> (<span class="k">achar</span>(<span class="n">10</span>))
+            <span class="k">call</span> add(out, <span class="k">achar</span>(<span class="n">10</span>))
+            key_next = <span class="k">.true.</span>
+            i = i + <span class="n">1</span>
+        <span class="k">case</span> (<span class="s">' '</span>, <span class="k">achar</span>(<span class="n">9</span>), <span class="k">achar</span>(<span class="n">13</span>))
+            <span class="k">call</span> add(out, code(i:i))
+            i = i + <span class="n">1</span>
+        <span class="k">case</span> (<span class="s">'#'</span>)
+            <span class="k">if</span> (<span class="k">.not.</span> toml) <span class="k">then</span>
+                <span class="k">call</span> plain(i, i)
+                <span class="k">cycle</span>
+            <span class="k">end</span> <span class="k">if</span>
+            j = line_end(i)
+            <span class="k">call</span> span(<span class="s">'c'</span>, i, j)
+            i = j + <span class="n">1</span>
+        <span class="k">case</span> (<span class="s">'"'</span>, <span class="s">"'"</span>)
+            <span class="k">if</span> (code(i:i) == <span class="s">"'"</span> <span class="k">.and.</span> <span class="k">.not.</span> toml) <span class="k">then</span>
+                <span class="k">call</span> plain(i, i)
+                <span class="k">cycle</span>
+            <span class="k">end</span> <span class="k">if</span>
+            j = string_end(i)
+            <span class="k">if</span> (is_key(j)) <span class="k">then</span>
+                <span class="k">call</span> span(<span class="s">'k'</span>, i, j)
+            <span class="k">else</span>
+                <span class="k">call</span> span(<span class="s">'s'</span>, i, j)
+            <span class="k">end</span> <span class="k">if</span>
+            key_next = <span class="k">.false.</span>
+            i = j + <span class="n">1</span>
+        <span class="k">case</span> (<span class="s">'['</span>)
+            <span class="c">! a table header starts a line, and runs to the last `]` before a comment</span>
+            <span class="k">if</span> (toml <span class="k">.and.</span> key_next <span class="k">.and.</span> line_start(i)) <span class="k">then</span>
+                j = header_end(i)
+                <span class="k">call</span> span(<span class="s">'p'</span>, i, j)
+                i = j + <span class="n">1</span>
+                key_next = <span class="k">.false.</span>
+            <span class="k">else</span>
+                <span class="k">call</span> plain(i, i)
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">case</span> (<span class="s">'{'</span>, <span class="s">','</span>)
+            <span class="k">call</span> plain(i, i)
+            key_next = toml
+        <span class="k">case</span> (<span class="s">'0'</span>:<span class="s">'9'</span>, <span class="s">'+'</span>, <span class="s">'-'</span>)
+            j = i
+            <span class="k">do</span> <span class="k">while</span> (j &lt; n)
+                <span class="k">if</span> (<span class="k">index</span>(NUMBER, code(j + <span class="n">1</span>:j + <span class="n">1</span>)) == <span class="n">0</span>) <span class="k">exit</span>
+                j = j + <span class="n">1</span>
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">if</span> (toml <span class="k">.and.</span> key_next <span class="k">.and.</span> is_key(j)) <span class="k">then</span>
+                <span class="k">call</span> span(<span class="s">'k'</span>, i, j)
+            <span class="k">else</span>
+                <span class="k">call</span> span(<span class="s">'n'</span>, i, j)
+            <span class="k">end</span> <span class="k">if</span>
+            key_next = <span class="k">.false.</span>
+            i = j + <span class="n">1</span>
+        <span class="k">case</span> default
+            <span class="k">if</span> (<span class="k">index</span>(BARE, code(i:i)) == <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">call</span> plain(i, i)
+                <span class="k">cycle</span>
+            <span class="k">end</span> <span class="k">if</span>
+            j = i
+            <span class="k">do</span> <span class="k">while</span> (j &lt; n)
+                <span class="k">if</span> (<span class="k">index</span>(BARE//<span class="s">'.'</span>, code(j + <span class="n">1</span>:j + <span class="n">1</span>)) == <span class="n">0</span>) <span class="k">exit</span>
+                j = j + <span class="n">1</span>
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">if</span> (toml <span class="k">.and.</span> key_next <span class="k">.and.</span> is_key(j)) <span class="k">then</span>
+                <span class="k">call</span> span(<span class="s">'k'</span>, i, j)
+            <span class="k">else</span> <span class="k">if</span> (literal(code(i:j))) <span class="k">then</span>
+                <span class="k">call</span> span(<span class="s">'n'</span>, i, j)
+            <span class="k">else</span>
+                <span class="k">call</span> html_escape(code(i:j), out, <span class="k">.false.</span>)
+            <span class="k">end</span> <span class="k">if</span>
+            key_next = <span class="k">.false.</span>
+            i = j + <span class="n">1</span>
+        <span class="k">end</span> <span class="k">select</span>
+    <span class="k">end</span> <span class="k">do</span>
+
+<span class="k">contains</span>
+
+    <span class="d">!&gt; Write `code(first:last)` as it is.</span>
+    <span class="k">subroutine</span> plain(first, last)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: first    <span class="d">!! where it starts</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: last     <span class="d">!! where it ends</span>
+
+        <span class="k">call</span> html_escape(code(first:last), out, <span class="k">.false.</span>)
+        i = last + <span class="n">1</span>
+        key_next = <span class="k">.false.</span>
+    <span class="k">end</span> <span class="k">subroutine</span> plain
+
+    <span class="d">!&gt; Write `code(first:last)` in class `class`.</span>
+    <span class="k">subroutine</span> span(<span class="k">class</span>, first, last)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">class</span>   <span class="d">!! the class</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: first            <span class="d">!! where it starts</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: last             <span class="d">!! where it ends</span>
+
+        <span class="k">call</span> add(out, <span class="s">'&lt;span class="'</span>//<span class="k">class</span>//<span class="s">'"&gt;'</span>)
+        <span class="k">call</span> html_escape(code(first:last), out, <span class="k">.false.</span>)
+        <span class="k">call</span> add(out, <span class="s">'&lt;/span&gt;'</span>)
+    <span class="k">end</span> <span class="k">subroutine</span> span
+
+    <span class="d">!&gt; The end of the line at `at`, before its line feed.</span>
+    <span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> line_end(at)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: at   <span class="d">!! a position in the line</span>
+
+        line_end = <span class="k">index</span>(code(at:), <span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">if</span> (line_end == <span class="n">0</span>) <span class="k">then</span>
+            line_end = n
+        <span class="k">else</span>
+            line_end = at + line_end - <span class="n">2</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">function</span> line_end
+
+    <span class="d">!&gt; True if only blanks come before `at` on its line.</span>
+    <span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> line_start(at)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: at   <span class="d">!! the position</span>
+
+        <span class="k">integer</span> :: k
+
+        line_start = <span class="k">.true.</span>
+        <span class="k">do</span> k = at - <span class="n">1</span>, <span class="n">1</span>, -<span class="n">1</span>
+            <span class="k">if</span> (code(k:k) == <span class="k">achar</span>(<span class="n">10</span>)) <span class="k">return</span>
+            <span class="k">if</span> (code(k:k) /= <span class="s">' '</span> <span class="k">.and.</span> code(k:k) /= <span class="k">achar</span>(<span class="n">9</span>)) <span class="k">then</span>
+                line_start = <span class="k">.false.</span>
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">function</span> line_start
+
+    <span class="d">!&gt; The end of the string that starts at `at`: three quotes in TOML end three, and in a basic string</span>
+    <span class="d">!&gt; a backslash escapes the next character. An unfinished string ends with its line.</span>
+    <span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> string_end(at)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: at   <span class="d">!! where it starts</span>
+        <span class="k">character</span> :: quote
+        <span class="k">integer</span> :: k
+
+        quote = code(at:at)
+        <span class="k">if</span> (toml <span class="k">.and.</span> at + <span class="n">2</span> &lt;= n) <span class="k">then</span>
+            <span class="k">if</span> (code(at:at + <span class="n">2</span>) == <span class="k">repeat</span>(quote, <span class="n">3</span>)) <span class="k">then</span>
+                k = <span class="k">index</span>(code(at + <span class="n">3</span>:), <span class="k">repeat</span>(quote, <span class="n">3</span>))
+                string_end = n
+                <span class="k">if</span> (k &gt; <span class="n">0</span>) string_end = at + <span class="n">2</span> + k + <span class="n">2</span>
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">if</span>
+        k = at + <span class="n">1</span>
+        <span class="k">do</span> <span class="k">while</span> (k &lt;= n)
+            <span class="k">if</span> (code(k:k) == <span class="k">achar</span>(<span class="n">10</span>)) <span class="k">then</span>
+                string_end = k - <span class="n">1</span>
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (code(k:k) == <span class="s">'\'</span> <span class="k">.and.</span> quote == <span class="s">'"'</span>) <span class="k">then</span>
+                k = k + <span class="n">2</span>
+                <span class="k">cycle</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (code(k:k) == quote) <span class="k">then</span>
+                string_end = k
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+            k = k + <span class="n">1</span>
+        <span class="k">end</span> <span class="k">do</span>
+        string_end = n
+    <span class="k">end</span> <span class="k">function</span> string_end
+
+    <span class="d">!&gt; True if what ends at `last` is a key: the next character that is not a blank is `:` in JSON, and</span>
+    <span class="d">!&gt; `=` or a `.` of a dotted key in TOML.</span>
+    <span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> is_key(last)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: last     <span class="d">!! where it ends</span>
+        <span class="k">integer</span> :: k
+
+        is_key = <span class="k">.false.</span>
+        <span class="k">if</span> (toml <span class="k">.and.</span> <span class="k">.not.</span> key_next) <span class="k">return</span>
+        <span class="k">do</span> k = last + <span class="n">1</span>, n
+            <span class="k">if</span> (code(k:k) == <span class="s">' '</span> <span class="k">.or.</span> code(k:k) == <span class="k">achar</span>(<span class="n">9</span>)) <span class="k">cycle</span>
+            <span class="k">if</span> (toml) <span class="k">then</span>
+                is_key = code(k:k) == <span class="s">'='</span> <span class="k">.or.</span> code(k:k) == <span class="s">'.'</span>
+            <span class="k">else</span>
+                is_key = code(k:k) == <span class="s">':'</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">function</span> is_key
+
+    <span class="d">!&gt; The end of the table header that starts at `at`.</span>
+    <span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> header_end(at)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: at   <span class="d">!! where it starts</span>
+        <span class="k">integer</span> :: k, last
+
+        last = line_end(at)
+        header_end = last
+        k = <span class="k">index</span>(code(at:last), <span class="s">']'</span>, back=<span class="k">.true.</span>)
+        <span class="k">if</span> (k &gt; <span class="n">0</span>) header_end = at + k - <span class="n">1</span>
+    <span class="k">end</span> <span class="k">function</span> header_end
+
+    <span class="d">!&gt; True if `word` is a literal of the format.</span>
+    <span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> literal(word)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: word    <span class="d">!! the word</span>
+
+        <span class="k">select</span> <span class="k">case</span> (word)
+        <span class="k">case</span> (<span class="s">'true'</span>, <span class="s">'false'</span>, <span class="s">'inf'</span>, <span class="s">'nan'</span>)
+            literal = word /= <span class="s">'inf'</span> <span class="k">.and.</span> word /= <span class="s">'nan'</span> <span class="k">.or.</span> toml
+        <span class="k">case</span> (<span class="s">'null'</span>)
+            literal = <span class="k">.not.</span> toml
+        <span class="k">case</span> default
+            literal = <span class="k">.false.</span>
+        <span class="k">end</span> <span class="k">select</span>
+    <span class="k">end</span> <span class="k">function</span> literal
+
+<span class="k">end</span> <span class="k">subroutine</span> highlight_data</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>is_type_declaration &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_decl.f90.html">fdoc_decl.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_decl.html">fdoc_decl</a></div>
+<h1><span class="kind">function</span>is_type_declaration</h1>
+<div class="sig">logical <span class="k">function</span> is_type_declaration(<span class="intent attr-in" title="intent(in)">low</span>)</div>
+<div class="doc">
+<p>True if <code>low</code> starts a type declaration rather than, for example, an assignment.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-low"><td class="name">low</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the statement, in lowercase</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-is_type_declaration"><td class="name">is_type_declaration</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/type_keyword.html">type_keyword</a></li></ul>
+<div class="graph"><svg width="378pt" height="70pt"
+ viewBox="0 0 378 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_type_declaration.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="126.4" height="21.6"/><text x="63.2" y="-26.1">is_type_declaration</text></a><a href="../proc/type_keyword.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="162.4" y="-41.6" width="94.6" height="21.6"/><text x="209.7" y="-26.1">type_keyword</text></a><path d="M127.2,-30.8C136,-30.8 144.9,-30.8 153.6,-30.8"/><polygon fill="#8a93a5" points="153.5,-33.3 160.5,-30.8 153.5,-28.4"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="293" y="-61.6" width="76.5" height="21.6"/><text x="331.3" y="-46.1">starts_with</text></a><path d="M257.3,-38.6C266.1,-40.1 275.4,-41.6 284.2,-43.1"/><polygon fill="#8a93a5" points="283.7,-45.5 291,-44.2 284.5,-40.7"/><a href="../proc/word_at.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="301" y="-21.6" width="60.6" height="21.6"/><text x="331.3" y="-6.1">word_at</text></a><path d="M257.3,-23C268.9,-21.1 281.2,-19 292.3,-17.2"/><polygon fill="#8a93a5" points="292.6,-19.6 299.1,-16 291.8,-14.8"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/is_executable.html">is_executable</a></li><li><a href="../proc/parse_statement.html">parse_statement</a></li></ul>
+<div class="graph"><svg width="793pt" height="70pt"
+ viewBox="0 0 793 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_type_declaration.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="126.4" height="21.6"/><text x="63.2" y="-26.1">is_type_declaration</text></a><a href="../proc/is_executable.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="171.1" y="-21.6" width="93.9" height="21.6"/><text x="218" y="-6.1">is_executable</text></a><path d="M170.8,-16.9C159.6,-18.3 147.5,-19.9 135.5,-21.5"/><polygon fill="#8a93a5" points="135.4,-19 128.7,-22.4 136,-23.9"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="162.4" y="-61.6" width="111.2" height="21.6"/><text x="218" y="-46.1">parse_statement</text></a><path d="M162.3,-43.6C153.6,-42.5 144.6,-41.3 135.6,-40.1"/><polygon fill="#8a93a5" points="136.2,-37.7 128.9,-39.3 135.5,-42.6"/><a href="../proc/statement_calls.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="309.7" y="-21.6" width="104.7" height="21.6"/><text x="362" y="-6.1">statement_calls</text></a><path d="M309.4,-10.8C297.7,-10.8 285.4,-10.8 273.7,-10.8"/><polygon fill="#8a93a5" points="273.8,-8.4 266.8,-10.8 273.8,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="450.4" y="-40.6" width="70.8" height="21.6"/><text x="485.8" y="-25.1">parse_file</text></a><path d="M450,-32.5C407.6,-35.9 334.9,-41.6 282.4,-45.8"/><polygon fill="#8a93a5" points="282.4,-43.3 275.6,-46.3 282.8,-48.2"/><path d="M450.2,-24.4C441.6,-23.1 432.1,-21.6 422.7,-20.1"/><polygon fill="#8a93a5" points="423.3,-17.7 416,-19.1 422.5,-22.6"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="557.1" y="-40.6" width="138" height="21.6"/><text x="626.1" y="-25.1">load_project_sources</text></a><path d="M556.8,-29.8C547.6,-29.8 538.3,-29.8 529.8,-29.8"/><polygon fill="#8a93a5" points="529.9,-27.4 522.9,-29.8 529.9,-32.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="731.1" y="-40.6" width="54" height="21.6"/><text x="758.1" y="-25.1" fill="white">...</text><path stroke-dasharray="5,2" d="M730.8,-29.8C722.7,-29.8 713.3,-29.8 703.6,-29.8"/><polygon fill="#8a93a5" points="703.9,-27.4 696.9,-29.8 703.9,-32.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">logical</span> <span class="k">function</span> is_type_declaration(low)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: low     <span class="d">!! the statement, in lowercase</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: word
+    <span class="k">integer</span> :: n, next
+    <span class="k">character</span> :: c
+
+    <span class="k">call</span> type_keyword(low, n, word)
+    is_type_declaration = n &gt; <span class="n">0</span>
+    <span class="k">if</span> (n == <span class="n">0</span> <span class="k">.or.</span> n &gt;= <span class="k">len</span>(low)) <span class="k">return</span>
+    next = n + <span class="k">verify</span>(low(n + <span class="n">1</span>:)//<span class="s">'x'</span>, <span class="s">' '</span>)
+    c = low(n + <span class="n">1</span>:n + <span class="n">1</span>)
+    <span class="k">if</span> (<span class="k">index</span>(<span class="s">'abcdefghijklmnopqrstuvwxyz0123456789_'</span>, c) &gt; <span class="n">0</span>) <span class="k">then</span>
+        is_type_declaration = <span class="k">.false.</span>
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">if</span> (next &gt; <span class="k">len</span>(low)) <span class="k">return</span>
+    <span class="k">if</span> (low(next:next) == <span class="s">'='</span> <span class="k">.or.</span> low(next:next) == <span class="s">'%'</span>) is_type_declaration = <span class="k">.false.</span>
+<span class="k">end</span> <span class="k">function</span> is_type_declaration</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

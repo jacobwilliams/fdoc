@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>is_list &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">function</span>is_list<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> logical <span class="k">function</span> is_list(<span class="intent attr-in" title="intent(in)">tag</span>)</div>
+<div class="doc">
+<p>True if <code>tag</code> is <code>ul</code> or <code>ol</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-tag"><td class="name">tag</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the tag</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-is_list"><td class="name">is_list</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/indent_level.html">indent_level</a></li><li><a href="../proc/list_block.html">list_block</a></li><li><a href="../proc/list_indent.html">list_indent</a></li><li><a href="../proc/parse_block.html">parse_block</a></li></ul>
+<div class="graph"><svg width="793pt" height="110pt"
+ viewBox="0 0 793 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_list.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="54" height="21.6"/><text x="27" y="-46.1">is_list</text></a><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="318.7" y="-61.6" width="84.5" height="21.6"/><text x="361" y="-46.1">parse_block</text></a><path d="M327.1,-62C283.1,-75.7 202.6,-96.3 132.9,-89.8"/><a href="../proc/list_indent.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="209.8" y="-61.6" width="72.9" height="21.6"/><text x="246.3" y="-46.1">list_indent</text></a><path d="M318.3,-50.8C309.6,-50.8 300.3,-50.8 291.5,-50.8"/><polygon fill="#8a93a5" points="291.7,-48.4 284.7,-50.8 291.7,-53.3"/><a href="../proc/list_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="98" y="-21.6" width="67.9" height="21.6"/><text x="131.9" y="-6.1">list_block</text></a><path d="M320.5,-39.6C308.4,-36.4 295.1,-33.2 282.7,-30.8 246.4,-23.7 204.5,-18.3 174.3,-15"/><polygon fill="#8a93a5" points="174.8,-12.6 167.6,-14.2 174.3,-17.4"/><path d="M227.9,-61.9C206.4,-74.6 168,-93.1 132.9,-89.8"/><path d="M130.9,-89.8C104.5,-87.3 76.6,-76.1 56.4,-66.3"/><polygon fill="#8a93a5" points="57.6,-64.2 50.2,-63.2 55.4,-68.5"/><a href="../proc/indent_level.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="90" y="-61.6" width="83.8" height="21.6"/><text x="131.9" y="-46.1">indent_level</text></a><path d="M209.4,-50.8C200.9,-50.8 191.7,-50.8 182.8,-50.8"/><polygon fill="#8a93a5" points="182.8,-48.4 175.8,-50.8 182.8,-53.3"/><path d="M89.6,-50.8C80.8,-50.8 71.6,-50.8 63.1,-50.8"/><polygon fill="#8a93a5" points="63.3,-48.4 56.3,-50.8 63.3,-53.3"/><path d="M102,-22C89.8,-26.8 75.4,-32.4 62.7,-37.3"/><polygon fill="#8a93a5" points="62,-35 56.4,-39.8 63.8,-39.5"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="439.2" y="-61.6" width="95.3" height="21.6"/><text x="486.9" y="-46.1">parse_chunks</text></a><path d="M439,-50.8C430.2,-50.8 420.9,-50.8 412,-50.8"/><polygon fill="#8a93a5" points="412.1,-48.4 405.1,-50.8 412.1,-53.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="570.6" y="-101.6" width="124.2" height="21.6"/><text x="632.7" y="-86.1">markdown_to_html</text></a><path d="M591.2,-79.6C574.1,-74.8 554,-69.2 536.1,-64.2"/><polygon fill="#8a93a5" points="536.9,-61.9 529.5,-62.4 535.6,-66.6"/><a href="../proc/parse_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="594.8" y="-61.6" width="75.8" height="21.6"/><text x="632.7" y="-46.1">parse_one</text></a><path d="M594.3,-50.8C578.7,-50.8 560.3,-50.8 543.2,-50.8"/><polygon fill="#8a93a5" points="543.4,-48.4 536.4,-50.8 543.4,-53.3"/><a href="../proc/parse_text~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="595.1" y="-21.6" width="75.1" height="21.6"/><text x="632.7" y="-6.1">parse_text</text></a><path d="M594.6,-21.1C576.9,-26 555.4,-32 536.3,-37.3"/><polygon fill="#8a93a5" points="535.9,-34.9 529.8,-39.1 537.2,-39.6"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="730.8" y="-101.6" width="54" height="21.6"/><text x="757.8" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M730.4,-90.8C722.3,-90.8 713.1,-90.8 703.6,-90.8"/><polygon fill="#8a93a5" points="703.7,-88.4 696.7,-90.8 703.7,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="730.8" y="-61.6" width="54" height="21.6"/><text x="757.8" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M730.4,-50.8C715.4,-50.8 696.4,-50.8 679.1,-50.8"/><polygon fill="#8a93a5" points="679.3,-48.4 672.3,-50.8 679.3,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="730.8" y="-21.6" width="54" height="21.6"/><text x="757.8" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M730.4,-10.8C715.3,-10.8 696,-10.8 678.7,-10.8"/><polygon fill="#8a93a5" points="678.8,-8.4 671.8,-10.8 678.8,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> is_list(tag)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: tag <span class="d">!! the tag</span>
+    is_list = tag == <span class="s">'ul'</span> <span class="k">.or.</span> tag == <span class="s">'ol'</span>
+<span class="k">end</span> <span class="k">function</span> is_list</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>write_modules &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_output.f90.html">fdoc_output.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_output.html">fdoc_output</a></div>
+<h1><span class="kind">subroutine</span>write_modules</h1>
+<div class="sig"><span class="k">subroutine</span> write_modules(<span class="intent attr-in" title="intent(in)">p</span>, <span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-out" title="intent(out)">stat</span>, <span class="intent attr-out" title="intent(out)">errmsg</span>)</div>
+<div class="doc">
+<p>Write <code>modules.json</code>, which other projects can use to link to this one.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-stat"><td class="name">stat</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>nonzero on failure</p></td></tr>
+<tr id="variable-errmsg"><td class="name">errmsg</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>what is wrong</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/entity_json.html">entity_json</a></li><li><a href="../proc/make_directory.html">make_directory</a></li><li><a href="../proc/write_whole_file.html">write_whole_file</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/join_path.html">join_path</a></li></ul>
+<div class="graph"><svg width="634pt" height="347pt"
+ viewBox="0 0 634 347" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 342.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/write_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="98.2" height="21.6"/><text x="49.1" y="-86.1">write_modules</text></a><a href="../proc/entity_json.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="149.4" y="-259.6" width="76.5" height="21.6"/><text x="187.7" y="-244.1">entity_json</text></a><path d="M60.1,-102.4C83.8,-129.8 143.3,-198.7 171.5,-231.2"/><polygon fill="#8a93a5" points="169.6,-232.8 176,-236.4 173.3,-229.5"/><a href="../proc/make_directory.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="136" y="-121.6" width="103.3" height="21.6"/><text x="187.7" y="-106.1">make_directory</text></a><path d="M99,-98C108.3,-99.3 118,-100.7 127.5,-102.1"/><polygon fill="#8a93a5" points="127,-104.5 134.3,-103.1 127.7,-99.7"/><a href="../proc/write_whole_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="134.2" y="-81.6" width="106.9" height="21.6"/><text x="187.7" y="-66.1">write_whole_file</text></a><path d="M99,-83.6C107.7,-82.4 116.8,-81 125.8,-79.7"/><polygon fill="#8a93a5" points="125.9,-82.2 132.4,-78.7 125.2,-77.3"/><a href="https://jacobwilliams.github.io/fformat/proc/join_path.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="154.1" y="-41.6" width="67.2" height="21.6"/><text x="187.7" y="-26.1">join_path</text></a><path d="M73.4,-79.1C90.2,-70.8 113.4,-59.7 134.2,-50.8 138.7,-48.9 143.4,-47 148.1,-45.1"/><polygon fill="#8a93a5" points="148.9,-47.4 154.6,-42.6 147.2,-42.8"/><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="416.4" y="-338.6" width="84.5" height="21.6"/><text x="458.6" y="-323.1">object_word</text></a><path d="M200.7,-259.9C216.8,-274 246.8,-297.7 277.1,-308.8 319.5,-324.3 370.9,-328.4 408,-329"/><polygon fill="#8a93a5" points="407.7,-331.5 414.7,-329.1 407.7,-326.6"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="295.2" y="-299.6" width="67.1" height="21.6"/><text x="328.7" y="-284.1">entity_url</text></a><path d="M226.3,-259.6C245,-265 267.7,-271.5 286.8,-277"/><polygon fill="#8a93a5" points="286,-279.3 293.4,-278.9 287.3,-274.6"/><a href="../proc/contains_string.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="277.8" y="-259.6" width="101.8" height="21.6"/><text x="328.7" y="-244.1">contains_string</text></a><path d="M226.3,-248.8C239.5,-248.8 254.6,-248.8 269.1,-248.8"/><polygon fill="#8a93a5" points="269,-251.3 276,-248.8 269,-246.4"/><a href="../proc/public_symbols.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="277.1" y="-219.6" width="103.3" height="21.6"/><text x="328.7" y="-204.1">public_symbols</text></a><path d="M226.3,-238C243,-233.2 262.9,-227.4 280.7,-222.3"/><polygon fill="#8a93a5" points="281.1,-224.8 287.2,-220.5 279.8,-220.1"/><a href="../proc/is_windows.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="418.2" y="-161.6" width="80.9" height="21.6"/><text x="458.6" y="-146.1">is_windows</text></a><path d="M207.2,-122C224.5,-131.8 251.6,-145.3 277.1,-150.8 321.4,-160.3 373.2,-159.1 410,-156.2"/><polygon fill="#8a93a5" points="409.8,-158.7 416.5,-155.7 409.3,-153.8"/><a href="../proc/run_command.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="280" y="-141.6" width="97.5" height="21.6"/><text x="328.7" y="-126.1">run_command</text></a><path d="M239.7,-118.1C249.9,-119.6 260.8,-121.2 271.2,-122.7"/><polygon fill="#8a93a5" points="270.7,-125.1 278,-123.7 271.4,-120.2"/><a href="../proc/quoted_path.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="285.4" y="-101.6" width="86.7" height="21.6"/><text x="328.7" y="-86.1">quoted_path</text></a><path d="M239.7,-103.5C251.8,-101.7 264.7,-99.9 276.7,-98.1"/><polygon fill="#8a93a5" points="276.9,-100.6 283.5,-97.2 276.2,-95.7"/><a href="https://jacobwilliams.github.io/fformat/proc/is_directory.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="288.3" y="-61.6" width="80.9" height="21.6"/><text x="328.7" y="-46.1">is_directory</text></a><path d="M220.3,-99.6C227.2,-96.9 234.5,-93.9 241.1,-90.8 257.7,-83.1 260.6,-78.6 277.1,-70.8 281.2,-68.9 285.5,-67 289.8,-65.2"/><polygon fill="#8a93a5" points="290.5,-67.5 296.1,-62.6 288.7,-63"/><a href="https://jacobwilliams.github.io/fformat/proc/write_file.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="295.9" y="-21.6" width="65.7" height="21.6"/><text x="328.7" y="-6.1">write_file</text></a><path d="M220.3,-59.6C227.2,-56.9 234.5,-53.9 241.1,-50.8 257.7,-43.1 260.6,-38.6 277.1,-30.8 281.2,-28.9 285.5,-27 289.8,-25.2"/><polygon fill="#8a93a5" points="290.5,-27.5 296.1,-22.6 288.7,-23"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="536.9" y="-338.6" width="89.6" height="21.6"/><text x="581.7" y="-323.1">is_procedure</text></a><path d="M501.3,-327.8C509.9,-327.8 519,-327.8 528,-327.8"/><polygon fill="#8a93a5" points="527.9,-330.3 534.9,-327.8 527.9,-325.4"/><path d="M362.7,-298.8C377.9,-303.5 396.3,-309.1 412.8,-314.1"/><polygon fill="#8a93a5" points="411.9,-316.4 419.3,-316.1 413.3,-311.7"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="417.1" y="-298.6" width="83.1" height="21.6"/><text x="458.6" y="-283.1">page_name</text></a><path d="M362.7,-288.5C376.7,-288.4 393.3,-288.3 408.6,-288.2"/><polygon fill="#8a93a5" points="408.5,-290.6 415.5,-288.1 408.5,-285.7"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="424.3" y="-258.6" width="68.6" height="21.6"/><text x="458.6" y="-243.1">url_quote</text></a><path d="M362.7,-278.2C379,-273 398.8,-266.7 416.2,-261.1"/><polygon fill="#8a93a5" points="416.6,-263.5 422.5,-259.1 415.1,-258.9"/><path d="M359.7,-102C366.5,-104.8 373.8,-107.8 380.4,-110.8 397.1,-118.4 415.4,-127.8 430,-135.6"/><polygon fill="#8a93a5" points="428.6,-137.7 435.9,-138.8 430.9,-133.3"/><a href="../proc/quoted.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="431.5" y="-101.6" width="54.2" height="21.6"/><text x="458.6" y="-86.1">quoted</text></a><path d="M372.3,-90.8C388.8,-90.8 407.3,-90.8 422.9,-90.8"/><polygon fill="#8a93a5" points="422.7,-93.3 429.7,-90.8 422.7,-88.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="554.7" y="-298.6" width="54" height="21.6"/><text x="581.7" y="-283.1" fill="white">...</text><path stroke-dasharray="5,2" d="M500.6,-287.8C515.3,-287.8 531.6,-287.8 545.7,-287.8"/><polygon fill="#8a93a5" points="545.6,-290.3 552.6,-287.8 545.6,-285.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/run.html">run</a></li></ul>
+<div class="graph"><svg width="196pt" height="30pt"
+ viewBox="0 0 196 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/write_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="98.2" height="21.6"/><text x="49.1" y="-6.1">write_modules</text></a><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="134.2" y="-21.6" width="54" height="21.6"/><text x="161.2" y="-6.1">run</text></a><path d="M133.8,-10.8C125.9,-10.8 116.7,-10.8 107.6,-10.8"/><polygon fill="#8a93a5" points="107.6,-8.4 100.6,-10.8 107.6,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> write_modules(p, s, <span class="k">stat</span>, errmsg)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(in) :: p                    <span class="d">!! the project</span>
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s                   <span class="d">!! the settings</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+    <span class="k">type</span>(json_core) :: json
+    <span class="k">type</span>(json_value), <span class="k">pointer</span> :: root, meta, modules, item
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+    <span class="k">integer</span> :: k
+
+    <span class="k">call</span> json%initialize(no_whitespace=<span class="k">.true.</span>)
+    <span class="k">call</span> json%create_object(root, <span class="s">''</span>)
+    <span class="k">call</span> json%create_object(meta, <span class="s">'ford-metadata'</span>)
+    <span class="k">call</span> json%add(root, meta)
+    <span class="k">call</span> json%add(meta, <span class="s">'version'</span>, <span class="s">'fdoc'</span>)
+    <span class="k">call</span> json%create_array(modules, <span class="s">'modules'</span>)
+    <span class="k">call</span> json%add(root, modules)
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(p%modules)
+        <span class="k">if</span> (<span class="k">allocated</span>(p%list%box(p%modules(k))%e%external_url)) <span class="k">cycle</span>
+        <span class="k">call</span> entity_json(json, p, p%modules(k), <span class="s">''</span>, k, item)
+        <span class="k">call</span> json%add(modules, item)
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> json%serialize(root, text)
+    <span class="k">call</span> json%destroy(root)
+    <span class="k">call</span> make_directory(s%output_dir, <span class="k">stat</span>)
+    <span class="k">call</span> write_whole_file(join_path(s%output_dir, <span class="s">'modules.json'</span>), text, <span class="k">stat</span>, errmsg)
+<span class="k">end</span> <span class="k">subroutine</span> write_modules</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

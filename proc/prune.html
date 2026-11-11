@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>prune &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project.f90.html">fdoc_project.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project.html">fdoc_project</a></div>
+<h1><span class="kind">subroutine</span>prune</h1>
+<div class="sig"><span class="k">subroutine</span> prune(<span class="intent attr-inout" title="intent(inout)">p</span>, <span class="intent attr-in" title="intent(in)">s</span>)</div>
+<div class="doc">
+<p>Hide what should not be displayed.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/is_program_unit.html">is_program_unit</a></li><li><a href="../proc/contains_string.html">contains_string</a></li><li><a href="../proc/is_procedure.html">is_procedure</a></li><li><a href="../proc/reveal_bound_procedures.html">reveal_bound_procedures</a></li></ul>
+<div class="graph"><svg width="655pt" height="267pt"
+ viewBox="0 0 655 267" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 262.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/prune.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-198.6" width="54" height="21.6"/><text x="27" y="-183.1">prune</text></a><a href="../proc/is_program_unit.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="118.9" y="-258.6" width="107.6" height="21.6"/><text x="172.7" y="-243.1">is_program_unit</text></a><path d="M43,-199.5C55.1,-208.4 72.8,-220.4 90,-227.8 96.6,-230.6 103.7,-233.1 110.8,-235.3"/><polygon fill="#8a93a5" points="109.7,-237.5 117.1,-237.1 111.1,-232.8"/><a href="../proc/contains_string.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="121.8" y="-218.6" width="101.8" height="21.6"/><text x="172.7" y="-203.1">contains_string</text></a><path d="M54.7,-191.5C71.1,-193.8 92.8,-196.8 113.1,-199.6"/><polygon fill="#8a93a5" points="112.6,-202 119.8,-200.6 113.2,-197.2"/><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="337.3" y="-179.6" width="89.6" height="21.6"/><text x="382.1" y="-164.1">is_procedure</text></a><path d="M54.8,-186.4C113.2,-183.2 252.7,-175.7 329,-171.6"/><polygon fill="#8a93a5" points="328.7,-174.1 335.6,-171.3 328.5,-169.2"/><a href="../proc/reveal_bound_procedures.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="90" y="-140.6" width="165.5" height="21.6"/><text x="172.7" y="-125.1">reveal_bound_procedures</text></a><path d="M47.6,-176.1C59.6,-169.3 75.4,-160.9 90,-154.8 100,-150.6 111,-146.8 121.6,-143.5"/><polygon fill="#8a93a5" points="122.2,-145.8 128.2,-141.4 120.7,-141.2"/><path d="M233.7,-141.1C263.8,-146.7 299.8,-153.5 328.7,-158.9"/><polygon fill="#8a93a5" points="328.3,-161.4 335.6,-160.2 329.2,-156.5"/><a href="../proc/is_shown.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="543.8" y="-141.6" width="68.6" height="21.6"/><text x="578.1" y="-126.1">is_shown</text></a><path d="M255.9,-130C340.5,-130.2 469.2,-130.5 535,-130.7"/><polygon fill="#8a93a5" points="535,-133.1 542,-130.7 535,-128.2"/><a href="../proc/merge_separate_procedures.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="291.5" y="-101.6" width="181.3" height="21.6"/><text x="382.1" y="-86.1">merge_separate_procedures</text></a><path d="M233.7,-118.5C258.5,-113.9 287.5,-108.4 313.1,-103.6"/><polygon fill="#8a93a5" points="313.4,-106 319.8,-102.3 312.5,-101.2"/><path d="M437.7,-102C468.6,-108.4 506.7,-116.3 535.2,-122.2"/><polygon fill="#8a93a5" points="534.5,-124.5 541.9,-123.5 535.5,-119.7"/><a href="../proc/is_separate_interface.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="508.8" y="-101.6" width="138.7" height="21.6"/><text x="578.1" y="-86.1">is_separate_interface</text></a><path d="M473,-90.8C482,-90.8 491.1,-90.8 500,-90.8"/><polygon fill="#8a93a5" points="499.9,-93.3 506.9,-90.8 499.9,-88.4"/><a href="../proc/is_separate_body.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="519.6" y="-61.6" width="117" height="21.6"/><text x="578.1" y="-46.1">is_separate_body</text></a><path d="M437.7,-79.6C461.6,-74.6 489.7,-68.8 514.4,-63.7"/><polygon fill="#8a93a5" points="514.8,-66.2 521.2,-62.3 513.8,-61.4"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="546.4" y="-21.6" width="63.5" height="21.6"/><text x="578.1" y="-6.1">push_int</text></a><path d="M404,-79.5C428.6,-66.6 470.9,-45.3 508.8,-30.8 518.2,-27.2 528.5,-23.9 538.2,-21"/><polygon fill="#8a93a5" points="538.7,-23.4 544.7,-19.1 537.3,-18.7"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/run.html">run</a></li></ul>
+<div class="graph"><svg width="152pt" height="30pt"
+ viewBox="0 0 152 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/prune.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="54" height="21.6"/><text x="27" y="-6.1">prune</text></a><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="90" y="-21.6" width="54" height="21.6"/><text x="117" y="-6.1">run</text></a><path d="M89.6,-10.8C81.4,-10.8 72.2,-10.8 63.5,-10.8"/><polygon fill="#8a93a5" points="63.5,-8.4 56.5,-10.8 63.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> prune(p, s)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(inout) :: p     <span class="d">!! the project</span>
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s       <span class="d">!! the settings</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">do</span> k = <span class="n">1</span>, p%list%n
+        <span class="k">associate</span> (e =&gt; p%list%box(k)%e)
+            <span class="k">if</span> (e%<span class="k">kind</span> == E_NONE <span class="k">.or.</span> e%parent == <span class="n">0</span>) <span class="k">cycle</span>
+            <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(e%permission)) <span class="k">cycle</span>
+            <span class="k">associate</span> (parent =&gt; p%list%box(e%parent)%e)
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_VARIABLE <span class="k">.and.</span> e%var_role /= VAR_PLAIN) <span class="k">cycle</span>
+                <span class="k">if</span> (<span class="k">allocated</span>(parent%display) <span class="k">.and.</span> <span class="k">.not.</span> is_program_unit(e%<span class="k">kind</span>)) <span class="k">then</span>
+                    <span class="k">if</span> (<span class="k">.not.</span> contains_string(parent%display, e%permission)) e%visible = <span class="k">.false.</span>
+                <span class="k">end</span> <span class="k">if</span>
+                <span class="k">if</span> (s%hide_undoc <span class="k">.and.</span> <span class="k">size</span>(e%doc) == <span class="n">0</span>) e%visible = <span class="k">.false.</span>
+                <span class="k">if</span> (is_procedure(parent%<span class="k">kind</span>) <span class="k">.and.</span> <span class="k">.not.</span> parent%internals) <span class="k">then</span>
+                    e%visible = <span class="k">.false.</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> reveal_bound_procedures(p, s)
+<span class="k">end</span> <span class="k">subroutine</span> prune</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

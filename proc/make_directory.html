@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>make_directory &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_shell.f90.html">fdoc_shell.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_shell.html">fdoc_shell</a></div>
+<h1><span class="kind">subroutine</span>make_directory</h1>
+<div class="sig"><span class="k">subroutine</span> make_directory(<span class="intent attr-in" title="intent(in)">path</span>, <span class="intent attr-out" title="intent(out)">stat</span>)</div>
+<div class="doc">
+<p>Create directory <code>path</code> with those above it, if it does not exist. It is not a failure if something
+else creates it first.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the directory</p></td></tr>
+<tr id="variable-stat"><td class="name">stat</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>nonzero on failure</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/is_windows.html">is_windows</a></li><li><a href="../proc/run_command.html">run_command</a></li><li><a href="../proc/quoted_path.html">quoted_path</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/is_directory.html">is_directory</a></li></ul>
+<div class="graph"><svg width="452pt" height="138pt"
+ viewBox="0 0 452 138" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 134.2)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/make_directory.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="103.3" height="21.6"/><text x="51.6" y="-66.1">make_directory</text></a><a href="../proc/is_windows.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="362.9" y="-110.6" width="80.9" height="21.6"/><text x="403.4" y="-95.1">is_windows</text></a><path d="M73.3,-82.6C90.4,-91.8 115.7,-104.1 139.3,-110.8 208,-130.2 227.5,-127.7 298.8,-129.8"/><a href="../proc/run_command.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="139.3" y="-101.6" width="97.5" height="21.6"/><text x="188" y="-86.1">run_command</text></a><path d="M104.2,-78.5C112.8,-79.8 121.8,-81.1 130.6,-82.4"/><polygon fill="#8a93a5" points="130.1,-84.8 137.4,-83.4 130.8,-80"/><a href="../proc/quoted_path.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="144.7" y="-61.6" width="86.7" height="21.6"/><text x="188" y="-46.1">quoted_path</text></a><path d="M104.2,-63.1C114.7,-61.6 125.8,-59.9 136.3,-58.4"/><polygon fill="#8a93a5" points="136.5,-60.8 143,-57.3 135.7,-56"/><a href="https://jacobwilliams.github.io/fformat/proc/is_directory.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="147.6" y="-21.6" width="80.9" height="21.6"/><text x="188" y="-6.1">is_directory</text></a><path d="M77.5,-59C94.8,-50.9 118.3,-40 139.3,-30.8 143.4,-29 147.7,-27.1 152,-25.3"/><polygon fill="#8a93a5" points="152.8,-27.6 158.3,-22.6 150.9,-23.1"/><path d="M220.4,-62C226,-64.6 231.7,-67.5 236.8,-70.8 268.6,-91.6 260.8,-128.7 298.8,-129.8"/><path d="M300.8,-129.8C325.4,-130.5 352,-122.3 371.8,-114.3"/><polygon fill="#8a93a5" points="372.6,-116.6 378.1,-111.6 370.7,-112.1"/><a href="../proc/quoted.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="272.8" y="-81.6" width="54.2" height="21.6"/><text x="299.8" y="-66.1">quoted</text></a><path d="M231.8,-58.6C242.5,-60.5 253.9,-62.6 264.2,-64.5"/><polygon fill="#8a93a5" points="263.7,-66.9 271,-65.7 264.6,-62.1"/><path d="M327.3,-78.3C335.8,-80.8 345.5,-83.6 355.1,-86.3"/><polygon fill="#8a93a5" points="354.2,-88.6 361.6,-88.2 355.6,-83.9"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/build_graphs.html">build_graphs</a></li><li><a href="../proc/load_external_project.html">load_external_project</a></li><li><a href="../proc/page_directories.html">page_directories</a></li><li><a href="../proc/write_modules.html">write_modules</a></li><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="569pt" height="149pt"
+ viewBox="0 0 569 149" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 144.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/make_directory.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="103.3" height="21.6"/><text x="51.6" y="-66.1">make_directory</text></a><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="164.2" y="-101.6" width="88.8" height="21.6"/><text x="208.6" y="-86.1">build_graphs</text></a><path d="M164,-85.2C148,-83.1 129.6,-80.7 112.4,-78.5"/><polygon fill="#8a93a5" points="112.9,-76.1 105.6,-77.6 112.3,-81"/><a href="../proc/write_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="337.8" y="-140.6" width="98.2" height="21.6"/><text x="386.9" y="-125.1">write_modules</text></a><path d="M337.5,-133C301.9,-134.6 252.6,-135.2 209.6,-129.8"/><a href="../proc/load_external_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="139.3" y="-21.6" width="138.7" height="21.6"/><text x="208.6" y="-6.1">load_external_project</text></a><path d="M165.7,-22C156.9,-24.6 147.7,-27.6 139.3,-30.8 120,-38 99.1,-47.6 82.6,-55.6"/><polygon fill="#8a93a5" points="82,-53.2 76.8,-58.5 84.1,-57.6"/><a href="../proc/page_directories.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="153.4" y="-61.6" width="110.5" height="21.6"/><text x="208.6" y="-46.1">page_directories</text></a><path d="M153,-57.9C139.8,-59.5 125.7,-61.4 112.4,-63.1"/><polygon fill="#8a93a5" points="112.3,-60.6 105.7,-64 112.9,-65.5"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="352.3" y="-100.6" width="69.3" height="21.6"/><text x="386.9" y="-85.1">write_site</text></a><path d="M351.9,-98.8C304.7,-111.2 223.6,-131.5 209.6,-129.8"/><path d="M207.6,-129.8C161,-124 110.8,-101.6 80.6,-86.2"/><polygon fill="#8a93a5" points="82,-84.1 74.7,-83.1 79.8,-88.5"/><path d="M351.9,-90C326.4,-90.1 290.8,-90.3 261.7,-90.5"/><polygon fill="#8a93a5" points="261.7,-88.1 254.7,-90.5 261.7,-93"/><path d="M351.9,-82.3C328.4,-77.1 296.3,-70 268.6,-63.8"/><polygon fill="#8a93a5" points="269.4,-61.5 262,-62.4 268.3,-66.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="501.4" y="-120.6" width="54" height="21.6"/><text x="528.4" y="-105.1">run</text></a><path d="M501.2,-113.6C485.2,-115.8 464.2,-118.9 444.6,-121.7"/><polygon fill="#8a93a5" points="444.4,-119.2 437.8,-122.6 445.1,-124.1"/><path d="M501.2,-106C481.2,-103.2 453.3,-99.2 430.2,-95.9"/><polygon fill="#8a93a5" points="430.7,-93.5 423.5,-94.9 430.1,-98.3"/><a href="../proc/add_external_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="314" y="-21.6" width="145.9" height="21.6"/><text x="386.9" y="-6.1">add_external_modules</text></a><path d="M313.7,-10.8C304.9,-10.8 295.8,-10.8 286.8,-10.8"/><polygon fill="#8a93a5" points="286.8,-8.4 279.8,-10.8 286.8,-13.3"/><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="495.9" y="-21.6" width="65" height="21.6"/><text x="528.4" y="-6.1">correlate</text></a><path d="M495.8,-10.8C487.5,-10.8 478.2,-10.8 468.6,-10.8"/><polygon fill="#8a93a5" points="468.7,-8.4 461.7,-10.8 468.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> make_directory(path, <span class="k">stat</span>)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the directory</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>            <span class="d">!! nonzero on failure</span>
+
+    <span class="k">if</span> (is_windows()) <span class="k">then</span>
+        <span class="k">call</span> run_command(<span class="s">'if not exist '</span>//quoted_path(path)//<span class="s">' mkdir '</span>//quoted_path(path), <span class="k">stat</span>)
+    <span class="k">else</span>
+        <span class="k">call</span> run_command(<span class="s">'mkdir -p '</span>//quoted_path(path), <span class="k">stat</span>)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">if</span> (is_directory(path)) <span class="k">stat</span> = <span class="n">0</span>
+<span class="k">end</span> <span class="k">subroutine</span> make_directory</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

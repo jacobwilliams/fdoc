@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>assign_targets &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>assign_targets<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> assign_targets(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">targets</span>, <span class="intent attr-in" title="intent(in)">v</span>)</div>
+<div class="doc">
+<p>Set the variables <code>targets</code> to <code>v</code>, unpacking it if there are several.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-targets"><td class="name">targets</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the names</p></td></tr>
+<tr id="variable-v"><td class="name">v</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the value</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/define.html">define</a></li><li><a href="../proc/fail.html">fail</a></li></ul>
+<div class="graph"><svg width="438pt" height="70pt"
+ viewBox="0 0 438 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/assign_targets.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="99" height="21.6"/><text x="49.5" y="-26.1">assign_targets</text></a><a href="../proc/define.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="135" y="-61.6" width="54" height="21.6"/><text x="162" y="-46.1">define</text></a><path d="M99.9,-39.7C108.9,-41.4 118,-43 126.4,-44.6"/><polygon fill="#8a93a5" points="125.8,-46.9 133.1,-45.8 126.6,-42.1"/><a href="../proc/fail.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="135" y="-21.6" width="54" height="21.6"/><text x="162" y="-6.1">fail</text></a><path d="M99.9,-21.9C108.9,-20.2 118,-18.6 126.4,-17"/><polygon fill="#8a93a5" points="126.6,-19.5 133.1,-15.8 125.8,-14.7"/><a href="../proc/frame_room.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="225" y="-61.6" width="84.5" height="21.6"/><text x="267.2" y="-46.1">frame_room</text></a><path d="M189.3,-50.8C197.5,-50.8 206.9,-50.8 216.2,-50.8"/><polygon fill="#8a93a5" points="216.2,-53.3 223.2,-50.8 216.2,-48.4"/><a href="../proc/move_value.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="345.4" y="-61.6" width="84.5" height="21.6"/><text x="387.7" y="-46.1">move_value</text></a><path d="M309.6,-50.8C318.3,-50.8 327.6,-50.8 336.6,-50.8"/><polygon fill="#8a93a5" points="336.5,-53.3 343.5,-50.8 336.5,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/render_node.html">render_node</a></li></ul>
+<div class="graph"><svg width="325pt" height="190pt"
+ viewBox="0 0 325 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 185.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/assign_targets.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-181.6" width="99" height="21.6"/><text x="49.5" y="-166.1">assign_targets</text></a><a href="../proc/render_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="136.7" y="-181.6" width="88.1" height="21.6"/><text x="180.8" y="-166.1">render_node</text></a><path d="M136.4,-170.8C127.3,-170.8 117.6,-170.8 108.1,-170.8"/><polygon fill="#8a93a5" points="108.3,-168.4 101.3,-170.8 108.3,-173.3"/><a href="../proc/render_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="5.8" y="-101.6" width="87.4" height="21.6"/><text x="49.5" y="-86.1">render_body</text></a><path d="M144.9,-156.1C141.5,-154.4 138.1,-152.6 135,-150.8 112,-137.7 87.5,-119.9 70.9,-107"/><polygon fill="#8a93a5" points="143.6,-158.2 151,-158.9 145.7,-153.7"/><polygon fill="#8a93a5" points="72.5,-105.2 65.4,-102.8 69.5,-109"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="135" y="-141.6" width="91.7" height="21.6"/><text x="180.8" y="-126.1">fypp_process</text></a><path d="M143.4,-119.6C128.3,-114.9 110.6,-109.4 94.7,-104.5"/><polygon fill="#8a93a5" points="95.4,-102.1 88,-102.4 94,-106.8"/><a href="../proc/call_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="142.2" y="-101.6" width="77.3" height="21.6"/><text x="180.8" y="-86.1">call_macro</text></a><path d="M141.7,-90.8C129.1,-90.8 114.9,-90.8 101.5,-90.8"/><polygon fill="#8a93a5" points="101.8,-88.4 94.8,-90.8 101.8,-93.3"/><a href="../proc/render_loop.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="138.9" y="-61.6" width="83.8" height="21.6"/><text x="180.8" y="-46.1">render_loop</text></a><path d="M143.4,-62C128.3,-66.7 110.6,-72.2 94.7,-77.1"/><polygon fill="#8a93a5" points="94,-74.8 88,-79.2 95.4,-79.5"/><a href="../proc/render_call.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="141.5" y="-21.6" width="78.7" height="21.6"/><text x="180.8" y="-6.1">render_call</text></a><path d="M152.3,-22C146.5,-24.7 140.4,-27.7 135,-30.8 112,-43.9 87.5,-61.7 70.9,-74.6"/><polygon fill="#8a93a5" points="69.5,-72.6 65.4,-78.8 72.5,-76.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="262.7" y="-141.6" width="54" height="21.6"/><text x="289.7" y="-126.1" fill="white">...</text><path stroke-dasharray="5,2" d="M262.3,-130.8C254.1,-130.8 244.8,-130.8 235.6,-130.8"/><polygon fill="#8a93a5" points="235.6,-128.4 228.6,-130.8 235.6,-133.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="262.7" y="-101.6" width="54" height="21.6"/><text x="289.7" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M262.3,-90.8C251.9,-90.8 239.7,-90.8 228,-90.8"/><polygon fill="#8a93a5" points="228.1,-88.4 221.1,-90.8 228.1,-93.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> assign_targets(c, targets, v)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c    <span class="d">!! the state</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: targets(:)   <span class="d">!! the names</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: v      <span class="d">!! the value</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">if</span> (<span class="k">size</span>(targets) == <span class="n">1</span>) <span class="k">then</span>
+        <span class="k">call</span> define(c, targets(<span class="n">1</span>), v)
+    <span class="k">else</span> <span class="k">if</span> (v%<span class="k">kind</span> /= V_LIST <span class="k">.and.</span> v%<span class="k">kind</span> /= V_TUPLE) <span class="k">then</span>
+        <span class="k">call</span> fail(c, <span class="s">'a value cannot be unpacked'</span>)
+    <span class="k">else</span> <span class="k">if</span> (<span class="k">size</span>(v%items) /= <span class="k">size</span>(targets)) <span class="k">then</span>
+        <span class="k">call</span> fail(c, <span class="s">'a value has the wrong number of items to unpack'</span>)
+    <span class="k">else</span>
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(targets)
+            <span class="k">call</span> define(c, targets(k), v%items(k))
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">subroutine</span> assign_targets</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_state &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>set_state<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> set_state(<span class="intent attr-inout" title="intent(inout)">t</span>, <span class="intent attr-in" title="intent(in)">state</span>)</div>
+<div class="doc">
+<p>Enter parser state <code>state</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/tree_t.html">tree_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the conversion</p></td></tr>
+<tr id="variable-state"><td class="name">state</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/admonition_block.html">admonition_block</a></li><li><a href="../proc/definition_block.html">definition_block</a></li><li><a href="../proc/list_block.html">list_block</a></li><li><a href="../proc/list_indent.html">list_indent</a></li><li><a href="../proc/quote_block.html">quote_block</a></li></ul>
+<div class="graph"><svg width="569pt" height="190pt"
+ viewBox="0 0 569 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 185.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/set_state.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="67.2" height="21.6"/><text x="33.6" y="-86.1">set_state</text></a><a href="../proc/list_indent.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="124.5" y="-181.6" width="72.9" height="21.6"/><text x="160.9" y="-166.1">list_indent</text></a><path d="M124.2,-160.5C117,-157.8 109.7,-154.6 103.2,-150.8 83.4,-139.3 64.1,-121.7 51.1,-108.5"/><polygon fill="#8a93a5" points="52.9,-106.8 46.2,-103.5 49.4,-110.3"/><a href="../proc/admonition_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="103.2" y="-141.6" width="115.6" height="21.6"/><text x="160.9" y="-126.1">admonition_block</text></a><path d="M124.7,-119.6C109.5,-114.7 91.7,-109 75.9,-104"/><polygon fill="#8a93a5" points="76.7,-101.7 69.3,-101.9 75.2,-106.3"/><a href="../proc/list_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127" y="-101.6" width="67.9" height="21.6"/><text x="160.9" y="-86.1">list_block</text></a><path d="M126.7,-90.8C111.2,-90.8 92.7,-90.8 76.3,-90.8"/><polygon fill="#8a93a5" points="76.5,-88.4 69.5,-90.8 76.5,-93.3"/><a href="../proc/quote_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="118.7" y="-61.6" width="84.5" height="21.6"/><text x="160.9" y="-46.1">quote_block</text></a><path d="M124.7,-62C109.5,-66.9 91.7,-72.6 75.9,-77.6"/><polygon fill="#8a93a5" points="75.2,-75.3 69.3,-79.7 76.7,-79.9"/><a href="../proc/definition_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="108.9" y="-21.6" width="104" height="21.6"/><text x="160.9" y="-6.1">definition_block</text></a><path d="M121.5,-22.1C115.2,-24.6 108.8,-27.5 103.2,-30.8 83.4,-42.3 64.1,-59.9 51.1,-73.1"/><polygon fill="#8a93a5" points="49.4,-71.3 46.2,-78.1 52.9,-74.8"/><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="254.7" y="-101.6" width="84.5" height="21.6"/><text x="297" y="-86.1">parse_block</text></a><path d="M284.3,-101.9C269.8,-115.1 244.1,-137 218.7,-150.8 214.6,-153.1 210.1,-155.2 205.5,-157.1"/><polygon fill="#8a93a5" points="204.9,-154.7 199.3,-159.6 206.7,-159.3"/><path d="M258.3,-102C242.4,-106.8 223.9,-112.3 207.3,-117.3"/><polygon fill="#8a93a5" points="206.8,-114.9 200.8,-119.2 208.2,-119.5"/><path d="M254.3,-90.8C238.1,-90.8 219.5,-90.8 203.3,-90.8"/><polygon fill="#8a93a5" points="203.6,-88.4 196.6,-90.8 203.6,-93.3"/><path d="M258.3,-79.6C242.4,-74.8 223.9,-69.3 207.3,-64.3"/><polygon fill="#8a93a5" points="208.2,-62.1 200.8,-62.4 206.8,-66.7"/><path d="M284.3,-79.7C269.8,-66.5 244.1,-44.6 218.7,-30.8 215,-28.8 211.1,-26.9 207.1,-25.2"/><polygon fill="#8a93a5" points="208.2,-23 200.7,-22.6 206.3,-27.5"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="375.2" y="-101.6" width="95.3" height="21.6"/><text x="422.9" y="-86.1">parse_chunks</text></a><path d="M375,-90.8C366.2,-90.8 357,-90.8 348,-90.8"/><polygon fill="#8a93a5" points="348.1,-88.4 341.1,-90.8 348.1,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="506.6" y="-101.6" width="54" height="21.6"/><text x="533.6" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M506.3,-90.8C498,-90.8 488.6,-90.8 479.1,-90.8"/><polygon fill="#8a93a5" points="479.3,-88.4 472.3,-90.8 479.3,-93.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">subroutine</span> set_state(t, state)
+    <span class="k">type</span>(tree_t), <span class="k">intent</span>(inout) :: t        <span class="d">!! the conversion</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: state   <span class="d">!! the state</span>
+    t%state = t%state//<span class="s">','</span>//state
+<span class="k">end</span> <span class="k">subroutine</span> set_state</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

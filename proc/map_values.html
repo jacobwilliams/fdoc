@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>map_values &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project_file.f90.html">fdoc_project_file.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project_file.html">fdoc_project_file</a></div>
+<h1><span class="kind">subroutine</span>map_values<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> map_values(<span class="intent attr-inout" title="intent(inout)">table</span>, <span class="intent attr-in" title="intent(in)">sep</span>, <span class="intent attr-inout" title="intent(inout)">values</span>)</div>
+<div class="doc">
+<p>The string entries of <code>table</code> in the form <code>key&lt;sep&gt;value</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-table"><td class="name">table</td><td class="type">type(toml_table)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the table</p></td></tr>
+<tr id="variable-sep"><td class="name">sep</td><td class="type">character(len=1)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the separator</p></td></tr>
+<tr id="variable-values"><td class="name">values</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the entries</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push.html">push</a></li></ul>
+<div class="graph"><svg width="182pt" height="30pt"
+ viewBox="0 0 182 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/map_values.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="84.5" height="21.6"/><text x="42.2" y="-6.1">map_values</text></a><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="120.5" y="-21.6" width="54" height="21.6"/><text x="147.5" y="-6.1">push</text></a><path d="M85.2,-10.8C94.1,-10.8 103.4,-10.8 112,-10.8"/><polygon fill="#8a93a5" points="111.7,-13.3 118.7,-10.8 111.7,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/apply_table.html">apply_table</a></li></ul>
+<div class="graph"><svg width="487pt" height="70pt"
+ viewBox="0 0 487 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/map_values.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="84.5" height="21.6"/><text x="42.2" y="-26.1">map_values</text></a><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="120.5" y="-41.6" width="80.9" height="21.6"/><text x="160.9" y="-26.1">apply_table</text></a><path d="M120.1,-30.8C111.6,-30.8 102.5,-30.8 93.7,-30.8"/><polygon fill="#8a93a5" points="93.8,-28.4 86.8,-30.8 93.8,-33.3"/><a href="../proc/load_fpm_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="237.4" y="-61.6" width="119.9" height="21.6"/><text x="297.4" y="-46.1">load_fpm_settings</text></a><path d="M237,-42C227.9,-40.6 218.7,-39.2 209.9,-37.9"/><polygon fill="#8a93a5" points="210.5,-35.5 203.2,-36.9 209.7,-40.4"/><a href="../proc/apply_toml_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="239.2" y="-21.6" width="116.3" height="21.6"/><text x="297.4" y="-6.1">apply_toml_string</text></a><path d="M239,-19.3C229.3,-20.8 219.5,-22.2 210.1,-23.6"/><polygon fill="#8a93a5" points="209.8,-21.2 203.2,-24.7 210.5,-26.1"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="393.3" y="-61.6" width="85.2" height="21.6"/><text x="435.9" y="-46.1">load_project</text></a><path d="M392.8,-50.8C384.3,-50.8 375.1,-50.8 366,-50.8"/><polygon fill="#8a93a5" points="366.1,-48.4 359.1,-50.8 366.1,-53.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="408.9" y="-21.6" width="54" height="21.6"/><text x="435.9" y="-6.1">run</text></a><path d="M408.6,-10.8C395.8,-10.8 379.9,-10.8 364.2,-10.8"/><polygon fill="#8a93a5" points="364.5,-8.4 357.5,-10.8 364.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> map_values(table, sep, values)
+    <span class="k">type</span>(toml_table), <span class="k">intent</span>(inout) :: table    <span class="d">!! the table</span>
+    <span class="k">character</span>, <span class="k">intent</span>(in) :: sep                <span class="d">!! the separator</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: values(:) <span class="d">!! the entries</span>
+    <span class="k">type</span>(toml_key), <span class="k">allocatable</span> :: keys(:)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+    <span class="k">integer</span> :: k
+
+    <span class="k">call</span> table%get_keys(keys)
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(keys)
+        <span class="k">call</span> get_value(table, keys(k)%key, text, <span class="s">''</span>)
+        <span class="k">call</span> push(values, keys(k)%key//sep//text)
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> map_values</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

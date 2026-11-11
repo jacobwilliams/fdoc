@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>public_symbol &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project.f90.html">fdoc_project.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project.html">fdoc_project</a></div>
+<h1><span class="kind">function</span>public_symbol<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> public_symbol(<span class="intent attr-in" title="intent(in)">p</span>, <span class="intent attr-in" title="intent(in)">which</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">category</span>) <span class="k">result</span>(id)</div>
+<div class="doc">
+<p>The public entity of module <code>which</code> named <code>name</code> in category <code>category</code>, or 0.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-which"><td class="name">which</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>position in <code>p%modules</code></p></td></tr>
+<tr id="variable-name"><td class="name">name</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the name, in lowercase</p></td></tr>
+<tr id="variable-category"><td class="name">category</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the category</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/find_in.html">find_in</a></li></ul>
+<div class="graph"><svg width="423pt" height="30pt"
+ viewBox="0 0 423 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/public_symbol.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="96.8" height="21.6"/><text x="48.4" y="-6.1">public_symbol</text></a><a href="../proc/find_in.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="132.8" y="-21.6" width="54" height="21.6"/><text x="159.8" y="-6.1">find_in</text></a><path d="M97.7,-10.8C106.5,-10.8 115.6,-10.8 123.9,-10.8"/><polygon fill="#8a93a5" points="123.8,-13.3 130.8,-10.8 123.8,-8.4"/><a href="../proc/index_find.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="222.8" y="-21.6" width="73.7" height="21.6"/><text x="259.6" y="-6.1">index_find</text></a><path d="M187.2,-10.8C195.6,-10.8 205,-10.8 214.2,-10.8"/><polygon fill="#8a93a5" points="214,-13.3 221,-10.8 214,-8.4"/><a href="../proc/name_hash.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="332.4" y="-21.6" width="82.3" height="21.6"/><text x="373.6" y="-6.1">name_hash</text></a><path d="M296.7,-10.8C305.3,-10.8 314.6,-10.8 323.7,-10.8"/><polygon fill="#8a93a5" points="323.4,-13.3 330.4,-10.8 323.4,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/find_symbol.html">find_symbol</a></li></ul>
+<div class="graph"><svg width="623pt" height="343pt"
+ viewBox="0 0 623 343" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 338.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/public_symbol.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-181.6" width="96.8" height="21.6"/><text x="48.4" y="-166.1">public_symbol</text></a><a href="../proc/find_symbol.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="132.8" y="-181.6" width="83.8" height="21.6"/><text x="174.7" y="-166.1">find_symbol</text></a><path d="M132.3,-170.8C123.8,-170.8 114.8,-170.8 105.9,-170.8"/><polygon fill="#8a93a5" points="106,-168.4 99,-170.8 106,-173.3"/><a href="../proc/link_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="444.6" y="-241.6" width="80.2" height="21.6"/><text x="484.7" y="-226.1">link_project</text></a><path d="M477.4,-242C466.3,-260.5 441.3,-296.6 408.6,-310.8 344.9,-338.4 312.2,-346.1 252.5,-310.8 207.8,-284.3 187.4,-221.6 179.6,-189.9"/><polygon fill="#8a93a5" points="182.1,-189.6 178.1,-183.3 177.3,-190.7"/><a href="../proc/link_implementation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="265.9" y="-301.6" width="129.3" height="21.6"/><text x="330.6" y="-286.1">link_implementation</text></a><path d="M465.4,-242.1C450.6,-250.9 428.8,-262.9 408.6,-270.8 402.6,-273.1 396.3,-275.3 389.9,-277.2"/><polygon fill="#8a93a5" points="389.3,-274.8 383.3,-279.2 390.7,-279.5"/><a href="../proc/link_module_procedures.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="252.5" y="-261.6" width="156" height="21.6"/><text x="330.6" y="-246.1">link_module_procedures</text></a><path d="M444.1,-236C435.7,-237.1 426.6,-238.3 417.2,-239.5"/><polygon fill="#8a93a5" points="417.1,-237.1 410.5,-240.4 417.7,-241.9"/><a href="../proc/link_binding.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="289" y="-221.6" width="83.1" height="21.6"/><text x="330.6" y="-206.1">link_binding</text></a><path d="M444.1,-225.6C424.8,-223.1 401.3,-220 380.8,-217.3"/><polygon fill="#8a93a5" points="381.3,-214.9 374,-216.4 380.6,-219.7"/><a href="../proc/link_constructor.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="277.8" y="-181.6" width="105.4" height="21.6"/><text x="330.6" y="-166.1">link_constructor</text></a><path d="M465.4,-219.5C450.6,-210.7 428.8,-198.7 408.6,-190.8 402.6,-188.5 396.3,-186.3 389.9,-184.4"/><polygon fill="#8a93a5" points="390.7,-182.1 383.3,-182.4 389.3,-186.8"/><a href="../proc/link_variable.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="287.2" y="-141.6" width="86.7" height="21.6"/><text x="330.6" y="-126.1">link_variable</text></a><path d="M476.3,-219.6C464.3,-202.2 438.7,-168.7 408.6,-150.8 400.5,-146 391.3,-142.3 382.1,-139.6"/><polygon fill="#8a93a5" points="382.9,-137.2 375.5,-137.7 381.6,-142"/><path d="M269.8,-279.6C263.7,-277.2 257.8,-274.3 252.5,-270.8 221.2,-250 197.3,-212.1 185,-189.4"/><polygon fill="#8a93a5" points="187.2,-188.5 181.8,-183.4 182.9,-190.7"/><path d="M274.7,-239.5C267.1,-237.1 259.5,-234.2 252.5,-230.8 229.9,-219.6 207.5,-201.1 192.8,-187.6"/><polygon fill="#8a93a5" points="194.5,-185.8 187.7,-182.8 191.2,-189.4"/><path d="M288.8,-200.2C277.1,-197.2 264.3,-193.9 252.5,-190.8 243.6,-188.5 234,-186 224.8,-183.6"/><polygon fill="#8a93a5" points="225.6,-181.3 218.2,-181.9 224.4,-186"/><path d="M277.5,-170.8C260.7,-170.8 242.1,-170.8 225.5,-170.8"/><polygon fill="#8a93a5" points="225.5,-168.4 218.5,-170.8 225.5,-173.3"/><path d="M286.8,-141.9C275.6,-144.8 263.6,-147.9 252.5,-150.8 243.6,-153.1 234,-155.6 224.8,-158"/><polygon fill="#8a93a5" points="224.4,-155.6 218.2,-159.7 225.6,-160.3"/><a href="../proc/label_item.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="293.7" y="-101.6" width="73.7" height="21.6"/><text x="330.6" y="-86.1">label_item</text></a><path d="M293.6,-96.9C280.3,-100 265.3,-104.5 252.5,-110.8 229.9,-122 207.5,-140.5 192.8,-154"/><polygon fill="#8a93a5" points="191.2,-152.2 187.7,-158.8 194.5,-155.8"/><a href="../proc/variable_type.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="284.7" y="-61.6" width="91.7" height="21.6"/><text x="330.6" y="-46.1">variable_type</text></a><path d="M284.3,-57.3C273.3,-60.2 262,-64.5 252.5,-70.8 221.2,-91.6 197.3,-129.5 185,-152.2"/><polygon fill="#8a93a5" points="182.9,-150.9 181.8,-158.2 187.2,-153.1"/><a href="../proc/inherit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="303.6" y="-21.6" width="54" height="21.6"/><text x="330.6" y="-6.1">inherit</text></a><path d="M303.3,-12.4C287.3,-14.6 267,-19.5 252.5,-30.8 212.1,-62.3 190,-121.2 180.8,-151.6"/><polygon fill="#8a93a5" points="178.5,-150.9 178.9,-158.3 183.2,-152.2"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="560.7" y="-241.6" width="54" height="21.6"/><text x="587.7" y="-226.1">run</text></a><path d="M560.4,-230.8C552.2,-230.8 542.8,-230.8 533.6,-230.8"/><polygon fill="#8a93a5" points="533.7,-228.4 526.7,-230.8 533.7,-233.3"/><a href="../proc/link_calls.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="451.1" y="-101.6" width="67.1" height="21.6"/><text x="484.7" y="-86.1">link_calls</text></a><path d="M450.7,-90.8C428.8,-90.8 399.8,-90.8 375.9,-90.8"/><polygon fill="#8a93a5" points="376.2,-88.4 369.2,-90.8 376.2,-93.3"/><a href="../proc/context_of.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="447.5" y="-61.6" width="74.4" height="21.6"/><text x="484.7" y="-46.1">context_of</text></a><path d="M447.2,-50.8C428.6,-50.8 405.6,-50.8 385,-50.8"/><polygon fill="#8a93a5" points="385.2,-48.4 378.2,-50.8 385.2,-53.3"/><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="452.2" y="-21.6" width="65" height="21.6"/><text x="484.7" y="-6.1">correlate</text></a><path d="M451.8,-10.8C426.7,-10.8 391.9,-10.8 366.2,-10.8"/><polygon fill="#8a93a5" points="366.4,-8.4 359.4,-10.8 366.4,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> public_symbol(p, which, name, category) <span class="k">result</span>(id)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(in) :: p        <span class="d">!! the project</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: which            <span class="d">!! position in `p%modules`</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the name, in lowercase</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: category         <span class="d">!! the category</span>
+
+    id = <span class="n">0</span>
+    <span class="k">if</span> (p%pub(which)%state == <span class="n">0</span>) <span class="k">return</span>
+    <span class="k">select</span> <span class="k">case</span> (category)
+    <span class="k">case</span> (<span class="n">1</span>); id = find_in(p%pub(which)%procs, name)
+    <span class="k">case</span> (<span class="n">2</span>); id = find_in(p%pub(which)%absints, name)
+    <span class="k">case</span> (<span class="n">3</span>); id = find_in(p%pub(which)%types, name)
+    <span class="k">case</span> default; id = find_in(p%pub(which)%vars, name)
+    <span class="k">end</span> <span class="k">select</span>
+<span class="k">end</span> <span class="k">function</span> public_symbol</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

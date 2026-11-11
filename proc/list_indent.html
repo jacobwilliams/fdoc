@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>list_indent &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>list_indent<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> list_indent(<span class="intent attr-inout" title="intent(inout)">t</span>, <span class="intent attr-in" title="intent(in)">parent</span>, <span class="intent attr-in" title="intent(in)">block</span>)</div>
+<div class="doc">
+<p>The indented block processor: <code>block</code> continues a list.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/tree_t.html">tree_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the conversion</p></td></tr>
+<tr id="variable-parent"><td class="name">parent</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the node</p></td></tr>
+<tr id="variable-block"><td class="name">block</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the chunk</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/indent_level.html">indent_level</a></li><li><a href="../proc/loose_detab.html">loose_detab</a></li><li><a href="../proc/set_state.html">set_state</a></li><li><a href="../proc/last_child.html">last_child</a></li><li><a href="../proc/is_list.html">is_list</a></li><li><a href="../proc/parse_one.html">parse_one</a></li><li><a href="../proc/new_node~2.html">new_node</a></li><li><a href="../proc/parse_text~2.html">parse_text</a></li><li><a href="../proc/reset_state.html">reset_state</a></li></ul>
+<div class="graph"><svg width="544pt" height="350pt"
+ viewBox="0 0 544 350" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 345.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/list_indent.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-181.6" width="72.9" height="21.6"/><text x="36.5" y="-166.1">list_indent</text></a><a href="../proc/indent_level.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="109.7" y="-300.6" width="83.8" height="21.6"/><text x="151.6" y="-285.1">indent_level</text></a><path d="M44.5,-182.5C56.1,-201.2 81,-238.5 108.9,-263.8 113.1,-267.6 117.9,-271.1 122.7,-274.3"/><polygon fill="#8a93a5" points="121.1,-276.2 128.4,-277.9 123.7,-272.1"/><a href="../proc/loose_detab.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="108.9" y="-141.6" width="85.2" height="21.6"/><text x="151.6" y="-126.1">loose_detab</text></a><path d="M70.8,-159C83.3,-154.6 97.7,-149.5 110.7,-144.9"/><polygon fill="#8a93a5" points="111.4,-147.2 117.2,-142.6 109.8,-142.6"/><a href="../proc/set_state.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="118" y="-101.6" width="67.2" height="21.6"/><text x="151.6" y="-86.1">set_state</text></a><path d="M49.4,-159.2C63,-146.3 86.3,-125.4 108.9,-110.8 111.5,-109.1 114.3,-107.5 117,-106"/><polygon fill="#8a93a5" points="118.1,-108.2 123.1,-102.8 115.8,-103.9"/><a href="../proc/last_child.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="243.5" y="-341.6" width="68.6" height="21.6"/><text x="277.8" y="-326.1">last_child</text></a><path d="M39.7,-182.6C45.5,-210 64,-278.4 108.9,-309.8 145.7,-335.5 198.4,-338 234.9,-335.9"/><polygon fill="#8a93a5" points="235,-338.3 241.8,-335.4 234.7,-333.4"/><a href="../proc/is_list.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="250.8" y="-261.6" width="54" height="21.6"/><text x="277.8" y="-246.1">is_list</text></a><path d="M47.2,-182.4C59.9,-196.5 83.4,-219.7 108.9,-230.8 152.2,-249.5 207.1,-252.6 242.2,-252.3"/><polygon fill="#8a93a5" points="242.2,-254.8 249.1,-252.2 242.1,-249.9"/><a href="../proc/parse_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="113.6" y="-221.6" width="75.8" height="21.6"/><text x="151.6" y="-206.1">parse_one</text></a><path d="M70.8,-182.6C83.3,-187 97.7,-192.1 110.7,-196.7"/><polygon fill="#8a93a5" points="109.8,-199 117.2,-199 111.4,-194.4"/><a href="../proc/new_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="114.4" y="-61.6" width="74.4" height="21.6"/><text x="151.6" y="-46.1">new_node</text></a><path d="M43.2,-159.2C53.8,-138.9 78.1,-96.8 108.9,-70.8 111,-69.1 113.2,-67.5 115.4,-66"/><polygon fill="#8a93a5" points="116.4,-68.3 121.2,-62.6 113.9,-64.1"/><a href="../proc/parse_text~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="114" y="-181.6" width="75.1" height="21.6"/><text x="151.6" y="-166.1">parse_text</text></a><path d="M73.9,-170.8C84,-170.8 95,-170.8 105.5,-170.8"/><polygon fill="#8a93a5" points="105.3,-173.3 112.3,-170.8 105.3,-168.4"/><a href="../proc/reset_state.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="112.2" y="-21.6" width="78.7" height="21.6"/><text x="151.6" y="-6.1">reset_state</text></a><path d="M40.6,-159.1C48.2,-132.9 69.9,-68.9 108.9,-30.8 110.6,-29.2 112.4,-27.7 114.4,-26.2"/><polygon fill="#8a93a5" points="115.4,-28.5 119.9,-22.7 112.7,-24.4"/><path d="M186.5,-301C201.6,-306 219.4,-311.9 235.3,-317.1"/><polygon fill="#8a93a5" points="234.5,-319.4 241.9,-319.3 236,-314.8"/><path d="M188.5,-278.5C205.5,-273.2 225.7,-266.8 242.5,-261.6"/><polygon fill="#8a93a5" points="243.1,-264 249,-259.5 241.6,-259.3"/><a href="../proc/in_state.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="247.9" y="-301.6" width="59.9" height="21.6"/><text x="277.8" y="-286.1">in_state</text></a><path d="M193.9,-290.1C208.6,-290.3 225,-290.4 239.3,-290.5"/><polygon fill="#8a93a5" points="238.9,-292.9 245.9,-290.6 238.9,-288"/><a href="../proc/split_on.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="248.2" y="-141.6" width="59.2" height="21.6"/><text x="277.8" y="-126.1">split_on</text></a><path d="M194.6,-130.8C209.1,-130.8 225.2,-130.8 239.3,-130.8"/><polygon fill="#8a93a5" points="239.2,-133.3 246.2,-130.8 239.2,-128.4"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="239.6" y="-101.6" width="76.5" height="21.6"/><text x="277.8" y="-86.1">starts_with</text></a><path d="M187.5,-119.6C202.1,-114.9 219.1,-109.4 234.4,-104.5"/><polygon fill="#8a93a5" points="234.8,-106.9 240.7,-102.4 233.3,-102.2"/><a href="../proc/join.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="250.8" y="-61.6" width="54" height="21.6"/><text x="277.8" y="-46.1">join</text></a><path d="M179.9,-119.6C184.8,-117 189.8,-114.1 194.2,-110.8 213.3,-96.5 210.7,-84.7 230.2,-70.8 234.1,-68 238.5,-65.4 243,-63.2"/><polygon fill="#8a93a5" points="243.9,-65.5 249.2,-60.3 241.8,-61"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="230.2" y="-221.6" width="95.3" height="21.6"/><text x="277.8" y="-206.1">parse_chunks</text></a><path d="M189.8,-210.8C199.8,-210.8 210.7,-210.8 221.4,-210.8"/><polygon fill="#8a93a5" points="221.4,-213.3 228.4,-210.8 221.4,-208.4"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="246.1" y="-21.6" width="63.5" height="21.6"/><text x="277.8" y="-6.1">push_int</text></a><path d="M187.5,-39.6C203.3,-34.5 222,-28.4 238.2,-23.2"/><polygon fill="#8a93a5" points="238.6,-25.7 244.5,-21.2 237.1,-21"/><path d="M187.5,-182C202.1,-186.7 219.1,-192.2 234.4,-197.1"/><polygon fill="#8a93a5" points="233.3,-199.4 240.7,-199.2 234.8,-194.7"/><a href="../proc/split_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="234.9" y="-181.6" width="85.9" height="21.6"/><text x="277.8" y="-166.1">split_chunks</text></a><path d="M189.5,-170.8C201,-170.8 213.9,-170.8 226.2,-170.8"/><polygon fill="#8a93a5" points="226.1,-173.3 233.1,-170.8 226.1,-168.4"/><a href="../proc/ends_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="367.3" y="-301.6" width="72.9" height="21.6"/><text x="403.8" y="-286.1">ends_with</text></a><path d="M308.2,-290.8C323.3,-290.8 342.1,-290.8 358.9,-290.8"/><polygon fill="#8a93a5" points="358.5,-293.3 365.5,-290.8 358.5,-288.4"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="376.8" y="-161.6" width="54" height="21.6"/><text x="403.8" y="-146.1">push</text></a><path d="M307.9,-135.5C325.9,-138.4 349.1,-142.1 368.1,-145.2"/><polygon fill="#8a93a5" points="367.6,-147.6 374.9,-146.3 368.4,-142.8"/><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="361.5" y="-221.6" width="84.5" height="21.6"/><text x="403.8" y="-206.1">parse_block</text></a><path d="M325.7,-210.8C334.5,-210.8 343.8,-210.8 352.7,-210.8"/><polygon fill="#8a93a5" points="352.6,-213.3 359.6,-210.8 352.6,-208.4"/><path d="M321.1,-164C336.5,-161.5 353.7,-158.7 368.3,-156.4"/><polygon fill="#8a93a5" points="368.5,-158.8 375,-155.3 367.7,-154"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="482" y="-221.6" width="54" height="21.6"/><text x="509" y="-206.1" fill="white">...</text><path stroke-dasharray="5,2" d="M446.5,-210.8C455.4,-210.8 464.7,-210.8 473.3,-210.8"/><polygon fill="#8a93a5" points="473.1,-213.3 480.1,-210.8 473.1,-208.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/parse_block.html">parse_block</a></li></ul>
+<div class="graph"><svg width="583pt" height="110pt"
+ viewBox="0 0 583 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/list_indent.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="72.9" height="21.6"/><text x="36.5" y="-46.1">list_indent</text></a><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="108.9" y="-61.6" width="84.5" height="21.6"/><text x="151.2" y="-46.1">parse_block</text></a><path d="M108.5,-50.8C100,-50.8 90.9,-50.8 82.3,-50.8"/><polygon fill="#8a93a5" points="82.3,-48.4 75.3,-50.8 82.3,-53.3"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="229.4" y="-61.6" width="95.3" height="21.6"/><text x="277.1" y="-46.1">parse_chunks</text></a><path d="M229.3,-50.8C220.4,-50.8 211.2,-50.8 202.2,-50.8"/><polygon fill="#8a93a5" points="202.3,-48.4 195.3,-50.8 202.3,-53.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="360.8" y="-101.6" width="124.2" height="21.6"/><text x="422.9" y="-86.1">markdown_to_html</text></a><path d="M381.5,-79.6C364.3,-74.8 344.2,-69.2 326.3,-64.2"/><polygon fill="#8a93a5" points="327.1,-61.9 319.7,-62.4 325.8,-66.6"/><a href="../proc/parse_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="385" y="-61.6" width="75.8" height="21.6"/><text x="422.9" y="-46.1">parse_one</text></a><path d="M384.5,-50.8C368.9,-50.8 350.5,-50.8 333.4,-50.8"/><polygon fill="#8a93a5" points="333.6,-48.4 326.6,-50.8 333.6,-53.3"/><a href="../proc/parse_text~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="385.3" y="-21.6" width="75.1" height="21.6"/><text x="422.9" y="-6.1">parse_text</text></a><path d="M384.9,-21.1C367.1,-26 345.6,-32 326.5,-37.3"/><polygon fill="#8a93a5" points="326.1,-34.9 320,-39.1 327.4,-39.6"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="521" y="-101.6" width="54" height="21.6"/><text x="548" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M520.6,-90.8C512.6,-90.8 503.3,-90.8 493.8,-90.8"/><polygon fill="#8a93a5" points="493.9,-88.4 486.9,-90.8 493.9,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="521" y="-61.6" width="54" height="21.6"/><text x="548" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M520.6,-50.8C505.7,-50.8 486.6,-50.8 469.3,-50.8"/><polygon fill="#8a93a5" points="469.5,-48.4 462.5,-50.8 469.5,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="521" y="-21.6" width="54" height="21.6"/><text x="548" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M520.6,-10.8C505.5,-10.8 486.3,-10.8 468.9,-10.8"/><polygon fill="#8a93a5" points="469,-8.4 462,-10.8 469,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> list_indent(t, parent, <span class="k">block</span>)
+    <span class="k">type</span>(tree_t), <span class="k">intent</span>(inout) :: t        <span class="d">!! the conversion</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent           <span class="d">!! the node</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">block</span>   <span class="d">!! the chunk</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: detabbed
+    <span class="k">integer</span> :: level, sibling, last, p, kept
+
+    <span class="k">call</span> indent_level(t, parent, <span class="k">block</span>, level, sibling)
+    <span class="k">call</span> loose_detab(<span class="k">block</span>, level, detabbed)
+    <span class="k">call</span> set_state(t, <span class="s">'detabbed'</span>)
+    <span class="k">if</span> (t%nodes(parent)%tag == <span class="s">'li'</span> <span class="k">.or.</span> t%nodes(parent)%tag == <span class="s">'dd'</span>) <span class="k">then</span>
+        last = last_child(t, parent)
+        kept = parent
+        <span class="k">if</span> (last &gt; <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">if</span> (is_list(t%nodes(last)%tag)) kept = last
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> parse_one(t, kept, detabbed)
+    <span class="k">else</span> <span class="k">if</span> (t%nodes(sibling)%tag == <span class="s">'li'</span>) <span class="k">then</span>
+        <span class="k">call</span> parse_one(t, sibling, detabbed)
+    <span class="k">else</span> <span class="k">if</span> (last_child(t, sibling) &gt; <span class="n">0</span>) <span class="k">then</span>
+        last = last_child(t, sibling)
+        <span class="k">if</span> (t%nodes(last)%tag == <span class="s">'li'</span>) <span class="k">then</span>
+            <span class="k">if</span> (<span class="k">len</span>(t%nodes(last)%text) &gt; <span class="n">0</span>) <span class="k">then</span>
+                <span class="c">! the item's text becomes a paragraph, before any sublist</span>
+                <span class="k">call</span> new_node(t, last, <span class="s">'p'</span>, p)
+                t%nodes(p)%text = t%nodes(last)%text
+                t%nodes(last)%text = <span class="s">''</span>
+                t%nodes(last)%kids = [p, t%nodes(last)%kids(:<span class="k">size</span>(t%nodes(last)%kids) - <span class="n">1</span>)]
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">call</span> parse_text(t, last, detabbed)
+        <span class="k">else</span>
+            <span class="k">call</span> new_node(t, sibling, <span class="s">'li'</span>, p)
+            <span class="k">call</span> parse_one(t, p, detabbed)
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">else</span>
+        <span class="k">call</span> new_node(t, sibling, <span class="s">'li'</span>, p)
+        <span class="k">call</span> parse_one(t, p, detabbed)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">call</span> reset_state(t)
+<span class="k">end</span> <span class="k">subroutine</span> list_indent</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

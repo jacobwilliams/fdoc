@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>adjacency_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-in"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>in</a></li><li><a href="#variable-labels"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>labels</a></li><li><a href="#variable-out"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>out</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_graphs.f90.html">fdoc_graphs.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_graphs.html">fdoc_graphs</a></div>
+<h1><span class="kind">type</span>adjacency_t<span class="attr attr-private">private</span></h1>
+<div class="doc">
+<p>Each direction of one relation, for each entity.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-in"><td class="name">in</td><td class="type">type(<a href="../type/int_list_t.html">int_list_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>what points to each entity</p></td></tr>
+<tr id="variable-labels"><td class="name">labels</td><td class="type">type(<a href="../type/label_list_t.html">label_list_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the labels of <code>out</code></p></td></tr>
+<tr id="variable-out"><td class="name">out</td><td class="type">type(<a href="../type/int_list_t.html">int_list_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>what each entity points to</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Argument of (9)</h3>
+<ul class="chips kinds"><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/add_edge.html">add_edge</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/build_relations.html">build_relations</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/connect.html">connect</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/describe_graph.html">describe_graph</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/draw_graph.html">draw_graph</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/draw_graphs.html">draw_graphs</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/draw_some.html">draw_some</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/neighbours_of.html">neighbours_of</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/visible_calls.html">visible_calls</a></li></ul>
+<h2 id="inherits">Inherits</h2>
+<div class="graph"><svg width="344pt" height="70pt"
+ viewBox="0 0 344 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/adjacency_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="252.6" y="-41.6" width="83.8" height="21.6"/><text x="294.4" y="-26.1">adjacency_t</text></a><a href="../type/int_list_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="117.6" y="-61.6" width="62.1" height="21.6"/><text x="148.7" y="-46.1">int_list_t</text></a><path stroke-dasharray="5,2" d="M251.9,-36.6C231.9,-39.4 208.2,-42.7 188.6,-45.4"/><polygon fill="#8a93a5" points="188.3,-43 181.7,-46.3 189,-47.8"/><text x="219.6" y="-45.2" font-size="11" fill="#8a93a5">out, in</text><a href="../type/label_list_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="110.8" y="-21.6" width="75.8" height="21.6"/><text x="148.7" y="-6.1">label_list_t</text></a><path stroke-dasharray="5,2" d="M251.6,-24.1C245.9,-23.2 240.1,-22.4 234.6,-21.6 221.8,-19.8 207.9,-18 195.1,-16.3"/><polygon fill="#8a93a5" points="195.6,-13.9 188.4,-15.5 195,-18.8"/><text x="219.6" y="-24.2" font-size="11" fill="#8a93a5">labels</text><a href="https://jacobwilliams.github.io/fformat/type/string_t.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-21.6" width="57" height="21.6"/><text x="28.5" y="-6.1">string_t</text></a><path stroke-dasharray="5,2" d="M110.3,-10.8C96.1,-10.8 79.9,-10.8 65.8,-10.8"/><polygon fill="#8a93a5" points="65.8,-8.4 58.8,-10.8 65.8,-13.3"/><text x="83.9" y="-13.4" font-size="11" fill="#8a93a5">text</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: adjacency_t
+    <span class="d">!! Each direction of one relation, for each entity.</span>
+    <span class="k">type</span>(int_list_t), <span class="k">allocatable</span> :: out(:)     <span class="d">!! what each entity points to</span>
+    <span class="k">type</span>(int_list_t), <span class="k">allocatable</span> :: in(:)      <span class="d">!! what points to each entity</span>
+    <span class="k">type</span>(label_list_t), <span class="k">allocatable</span> :: labels(:)    <span class="d">!! the labels of `out`</span>
+<span class="k">end</span> <span class="k">type</span> adjacency_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

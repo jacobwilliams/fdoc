@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>copy_page_files &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>copy_page_files<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> copy_page_files(<span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-in" title="intent(in)">directory</span>, <span class="intent attr-in" title="intent(in)">pages</span>)</div>
+<div class="doc">
+<p>Copy the files and directories that static pages list.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-directory"><td class="name">directory</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the output directory</p></td></tr>
+<tr id="variable-pages"><td class="name">pages</td><td class="type">type(<a href="../type/page_t.html">page_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the pages</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/copy_path.html">copy_path</a></li></ul>
+<div class="graph"><svg width="594pt" height="148pt"
+ viewBox="0 0 594 148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 143.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/copy_page_files.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-80.6" width="108.4" height="21.6"/><text x="54.2" y="-65.1">copy_page_files</text></a><a href="../proc/copy_path.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="144.4" y="-80.6" width="74.4" height="21.6"/><text x="181.6" y="-65.1">copy_path</text></a><path d="M109.1,-69.8C117.9,-69.8 127,-69.8 135.6,-69.8"/><polygon fill="#8a93a5" points="135.6,-72.3 142.6,-69.8 135.6,-67.4"/><a href="https://jacobwilliams.github.io/fformat/proc/is_directory.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="254.7" y="-139.6" width="80.9" height="21.6"/><text x="295.2" y="-124.1">is_directory</text></a><path d="M203.8,-81C221.3,-90.3 246.4,-103.5 265.7,-113.7"/><polygon fill="#8a93a5" points="264.3,-115.8 271.7,-116.9 266.6,-111.5"/><a href="../proc/copy_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="262.3" y="-61.6" width="65.7" height="21.6"/><text x="295.2" y="-46.1">copy_file</text></a><path d="M219.1,-63.6C230.3,-61.7 242.6,-59.6 254,-57.6"/><polygon fill="#8a93a5" points="254.1,-60.1 260.6,-56.5 253.3,-55.3"/><a href="../proc/is_windows.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="505.1" y="-100.6" width="80.9" height="21.6"/><text x="545.5" y="-85.1">is_windows</text></a><path d="M219.1,-73C265.6,-77.1 348.4,-84.3 419.4,-89.8"/><a href="../proc/run_command.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="371.6" y="-21.6" width="97.5" height="21.6"/><text x="420.4" y="-6.1">run_command</text></a><path d="M196.6,-58.7C216.8,-43.6 255.8,-18 294.2,-11.8"/><path d="M296.2,-11.8C317.9,-8.3 342,-7.4 363.2,-7.7"/><polygon fill="#8a93a5" points="362.8,-10.1 369.9,-7.8 362.9,-5.2"/><a href="../proc/quoted_path.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="377" y="-61.6" width="86.7" height="21.6"/><text x="420.4" y="-46.1">quoted_path</text></a><path d="M296.2,-11.8C313.5,-9 355.4,-24.1 385.6,-36.3"/><polygon fill="#8a93a5" points="384.6,-38.6 392,-38.9 386.4,-34"/><path d="M320.1,-62C344.4,-72.5 383.6,-87 419.4,-89.8"/><path d="M421.4,-89.8C446,-91.7 473.6,-91.9 496.3,-91.5"/><polygon fill="#8a93a5" points="496.4,-94 503.3,-91.4 496.3,-89.1"/><path d="M328.2,-40.4C343.2,-35.5 361.2,-29.7 377.2,-24.5"/><polygon fill="#8a93a5" points="377.5,-27 383.5,-22.5 376,-22.3"/><path d="M328.2,-50.8C340.5,-50.8 354.8,-50.8 368.5,-50.8"/><polygon fill="#8a93a5" points="368.3,-53.3 375.3,-50.8 368.3,-48.4"/><path d="M457,-62.1C470.8,-66.4 486.7,-71.5 501.1,-76.1"/><polygon fill="#8a93a5" points="500.1,-78.3 507.6,-78.1 501.6,-73.6"/><a href="../proc/quoted.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="518.5" y="-60.6" width="54.2" height="21.6"/><text x="545.5" y="-45.1">quoted</text></a><path d="M464.1,-50.5C478.9,-50.3 495.4,-50.2 509.6,-50.1"/><polygon fill="#8a93a5" points="509.5,-52.5 516.5,-50 509.5,-47.6"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="312pt" height="30pt"
+ viewBox="0 0 312 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/copy_page_files.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="108.4" height="21.6"/><text x="54.2" y="-6.1">copy_page_files</text></a><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="144.4" y="-21.6" width="69.3" height="21.6"/><text x="179" y="-6.1">write_site</text></a><path d="M144.1,-10.8C135.9,-10.8 126.8,-10.8 117.6,-10.8"/><polygon fill="#8a93a5" points="117.8,-8.4 110.8,-10.8 117.8,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="249.7" y="-21.6" width="54" height="21.6"/><text x="276.7" y="-6.1">run</text></a><path d="M249.3,-10.8C240.9,-10.8 231.4,-10.8 222.2,-10.8"/><polygon fill="#8a93a5" points="222.4,-8.4 215.4,-10.8 222.4,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> copy_page_files(s, directory, pages)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s           <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: directory   <span class="d">!! the output directory</span>
+    <span class="k">type</span>(page_t), <span class="k">intent</span>(in) :: pages(:)        <span class="d">!! the pages</span>
+    <span class="k">integer</span> :: k, j, status
+
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(pages)
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(pages(k)%copies)
+            <span class="k">call</span> copy_path(s%page_dir//<span class="s">'/'</span>//pages(k)%copies(j)%s, directory//<span class="s">'/page/'</span>//pages(k)%copies(j)%s, status)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> copy_page_files</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

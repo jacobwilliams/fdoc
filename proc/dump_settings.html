@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dump_settings &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">function</span>dump_settings</h1>
+<div class="sig">character(len=:) <span class="k">function</span> dump_settings(<span class="intent attr-in" title="intent(in)">s</span>) <span class="k">result</span>(text)</div>
+<div class="doc">
+<p>The settings as a JSON object, for comparison with FORD's. Unset options are <code>null</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-allocatable">allocatable</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li>put_text</li><li>put_logical</li><li>put_list</li><li>put_map</li></ul>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/run.html">run</a></li></ul>
+<div class="graph"><svg width="197pt" height="30pt"
+ viewBox="0 0 197 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/dump_settings.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="99" height="21.6"/><text x="49.5" y="-6.1">dump_settings</text></a><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="135" y="-21.6" width="54" height="21.6"/><text x="162" y="-6.1">run</text></a><path d="M134.5,-10.8C126.5,-10.8 117.3,-10.8 108.1,-10.8"/><polygon fill="#8a93a5" points="108.2,-8.4 101.2,-10.8 108.2,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">function</span> dump_settings(s) <span class="k">result</span>(text)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s       <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+    <span class="k">type</span>(json_core) :: json
+    <span class="k">type</span>(json_value), <span class="k">pointer</span> :: root, group
+    <span class="k">integer</span> :: k
+
+    <span class="k">call</span> json%initialize()
+    <span class="k">call</span> json%create_object(root, <span class="s">''</span>)
+    <span class="k">call</span> put_text(<span class="s">'author'</span>, s%author)
+    <span class="k">call</span> put_text(<span class="s">'author_description'</span>, s%author_description)
+    <span class="k">call</span> put_text(<span class="s">'author_pic'</span>, s%author_pic)
+    <span class="k">call</span> put_text(<span class="s">'bitbucket'</span>, s%bitbucket)
+    <span class="k">call</span> put_text(<span class="s">'css'</span>, s%css)
+    <span class="k">call</span> put_text(<span class="s">'directory'</span>, s%directory)
+    <span class="k">call</span> put_text(<span class="s">'doc_license'</span>, s%doc_license)
+    <span class="k">call</span> put_text(<span class="s">'docmark'</span>, s%docmark)
+    <span class="k">call</span> put_text(<span class="s">'docmark_alt'</span>, s%docmark_alt)
+    <span class="k">call</span> put_text(<span class="s">'email'</span>, s%email)
+    <span class="k">call</span> put_text(<span class="s">'encoding'</span>, s%encoding)
+    <span class="k">call</span> put_text(<span class="s">'facebook'</span>, s%facebook)
+    <span class="k">call</span> put_text(<span class="s">'github'</span>, s%github)
+    <span class="k">call</span> put_text(<span class="s">'gitlab'</span>, s%gitlab)
+    <span class="k">call</span> put_text(<span class="s">'gitter_sidecar'</span>, s%gitter_sidecar)
+    <span class="k">call</span> put_text(<span class="s">'google_plus'</span>, s%google_plus)
+    <span class="k">call</span> put_text(<span class="s">'graph_dir'</span>, s%graph_dir)
+    <span class="k">call</span> put_text(<span class="s">'license'</span>, s%license)
+    <span class="k">call</span> put_text(<span class="s">'logo'</span>, s%logo)
+    <span class="k">call</span> put_text(<span class="s">'linkedin'</span>, s%linkedin)
+    <span class="k">call</span> put_text(<span class="s">'mathjax_config'</span>, s%mathjax_config)
+    <span class="k">call</span> put_text(<span class="s">'md_base_dir'</span>, s%md_base_dir)
+    <span class="k">call</span> put_text(<span class="s">'media_dir'</span>, s%media_dir)
+    <span class="k">call</span> put_text(<span class="s">'output_dir'</span>, s%output_dir)
+    <span class="k">call</span> put_text(<span class="s">'page_dir'</span>, s%page_dir)
+    <span class="k">call</span> put_text(<span class="s">'predocmark'</span>, s%predocmark)
+    <span class="k">call</span> put_text(<span class="s">'predocmark_alt'</span>, s%predocmark_alt)
+    <span class="k">call</span> put_text(<span class="s">'preprocessor'</span>, s%preprocessor)
+    <span class="k">call</span> put_text(<span class="s">'privacy_policy_url'</span>, s%privacy_policy_url)
+    <span class="k">call</span> put_text(<span class="s">'project'</span>, s%project)
+    <span class="k">call</span> put_text(<span class="s">'project_bitbucket'</span>, s%project_bitbucket)
+    <span class="k">call</span> put_text(<span class="s">'project_download'</span>, s%project_download)
+    <span class="k">call</span> put_text(<span class="s">'project_github'</span>, s%project_github)
+    <span class="k">call</span> put_text(<span class="s">'project_gitlab'</span>, s%project_gitlab)
+    <span class="k">call</span> put_text(<span class="s">'project_sourceforge'</span>, s%project_sourceforge)
+    <span class="k">call</span> put_text(<span class="s">'project_url'</span>, s%project_url)
+    <span class="k">call</span> put_text(<span class="s">'project_website'</span>, s%project_website)
+    <span class="k">call</span> put_text(<span class="s">'revision'</span>, s%revision)
+    <span class="k">call</span> put_text(<span class="s">'sort'</span>, s%sort)
+    <span class="k">call</span> put_text(<span class="s">'summary'</span>, s%summary)
+    <span class="k">call</span> put_text(<span class="s">'terms_of_service_url'</span>, s%terms_of_service_url)
+    <span class="k">call</span> put_text(<span class="s">'twitter'</span>, s%twitter)
+    <span class="k">call</span> put_text(<span class="s">'version'</span>, s%version)
+    <span class="k">call</span> put_text(<span class="s">'website'</span>, s%website)
+    <span class="k">call</span> put_text(<span class="s">'year'</span>, s%year)
+    <span class="k">call</span> put_logical(<span class="s">'coloured_edges'</span>, s%coloured_edges)
+    <span class="k">call</span> put_logical(<span class="s">'dbg'</span>, s%dbg)
+    <span class="k">call</span> put_logical(<span class="s">'doxygen'</span>, s%doxygen)
+    <span class="k">call</span> put_logical(<span class="s">'externalize'</span>, s%externalize)
+    <span class="k">call</span> put_logical(<span class="s">'fixed_length_limit'</span>, s%fixed_length_limit)
+    <span class="k">call</span> put_logical(<span class="s">'force'</span>, s%force)
+    <span class="k">call</span> put_logical(<span class="s">'graph'</span>, s%graph)
+    <span class="k">call</span> put_logical(<span class="s">'hide_undoc'</span>, s%hide_undoc)
+    <span class="k">call</span> put_logical(<span class="s">'incl_src'</span>, s%incl_src)
+    <span class="k">call</span> put_logical(<span class="s">'lower'</span>, s%lower)
+    <span class="k">call</span> put_logical(<span class="s">'preprocess'</span>, s%preprocess)
+    <span class="k">call</span> put_logical(<span class="s">'print_creation_date'</span>, s%print_creation_date)
+    <span class="k">call</span> put_logical(<span class="s">'proc_internals'</span>, s%proc_internals)
+    <span class="k">call</span> put_logical(<span class="s">'quiet'</span>, s%quiet)
+    <span class="k">call</span> put_logical(<span class="s">'relative'</span>, s%relative)
+    <span class="k">call</span> put_logical(<span class="s">'search'</span>, s%search)
+    <span class="k">call</span> put_logical(<span class="s">'show_proc_parent'</span>, s%show_proc_parent)
+    <span class="k">call</span> put_logical(<span class="s">'source'</span>, s%source)
+    <span class="k">call</span> put_logical(<span class="s">'warn'</span>, s%warn)
+    <span class="k">call</span> json%add(root, <span class="s">'graph_maxdepth'</span>, s%graph_maxdepth)
+    <span class="k">call</span> json%add(root, <span class="s">'graph_maxnodes'</span>, s%graph_maxnodes)
+    <span class="k">call</span> json%add(root, <span class="s">'max_frontpage_items'</span>, s%max_frontpage_items)
+    <span class="k">call</span> put_list(<span class="s">'copy_subdir'</span>, s%copy_subdir)
+    <span class="k">call</span> put_list(<span class="s">'display'</span>, s%display)
+    <span class="k">call</span> put_list(<span class="s">'exclude'</span>, s%exclude)
+    <span class="k">call</span> put_list(<span class="s">'exclude_dir'</span>, s%exclude_dir)
+    <span class="k">call</span> put_list(<span class="s">'extensions'</span>, s%extensions)
+    <span class="k">call</span> put_list(<span class="s">'extra_vartypes'</span>, s%extra_vartypes)
+    <span class="k">call</span> put_list(<span class="s">'fixed_extensions'</span>, s%fixed_extensions)
+    <span class="k">call</span> put_list(<span class="s">'fpp_extensions'</span>, s%fpp_extensions)
+    <span class="k">call</span> put_list(<span class="s">'html_template_dir'</span>, s%html_template_dir)
+    <span class="k">call</span> put_list(<span class="s">'include'</span>, s%<span class="k">include</span>)
+    <span class="k">call</span> put_list(<span class="s">'macro'</span>, s%macro)
+    <span class="k">call</span> put_list(<span class="s">'md_extensions'</span>, s%md_extensions)
+    <span class="k">call</span> put_list(<span class="s">'src_dir'</span>, s%src_dir)
+    <span class="k">call</span> put_map(<span class="s">'alias'</span>, s%alias)
+    <span class="k">call</span> put_map(<span class="s">'external'</span>, s%<span class="k">external</span>)
+    <span class="k">call</span> put_map(<span class="s">'extra_mods'</span>, s%extra_mods)
+    <span class="k">call</span> json%create_object(group, <span class="s">'extra_filetypes'</span>)
+    <span class="k">call</span> json%add(root, group)
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(s%extra_filetypes)
+        <span class="k">call</span> json%add(group, s%extra_filetypes(k)%extension, s%extra_filetypes(k)%comment)
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> json%serialize(root, text)
+    <span class="k">call</span> json%destroy(root)
+
+<span class="k">contains</span>
+
+    <span class="d">!&gt; Add a text option, `null` if it is not set.</span>
+    <span class="k">subroutine</span> put_text(key, <span class="k">value</span>)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key                 <span class="d">!! the option</span>
+        <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(in) :: <span class="k">value</span>  <span class="d">!! its value</span>
+        <span class="k">if</span> (<span class="k">allocated</span>(<span class="k">value</span>)) <span class="k">then</span>
+            <span class="k">call</span> json%add(root, key, <span class="k">value</span>)
+        <span class="k">else</span>
+            <span class="k">call</span> json%add(root, key)
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">subroutine</span> put_text
+
+    <span class="d">!&gt; Add a logical option.</span>
+    <span class="k">subroutine</span> put_logical(key, <span class="k">value</span>)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the option</span>
+        <span class="k">logical</span>, <span class="k">intent</span>(in) :: <span class="k">value</span>            <span class="d">!! its value</span>
+        <span class="k">call</span> json%add(root, key, <span class="k">value</span>)
+    <span class="k">end</span> <span class="k">subroutine</span> put_logical
+
+    <span class="d">!&gt; Add a list option.</span>
+    <span class="k">subroutine</span> put_list(key, list)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the option</span>
+        <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: list(:)   <span class="d">!! its values</span>
+        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: array
+        <span class="k">integer</span> :: j
+        <span class="k">call</span> json%create_array(array, key)
+        <span class="k">call</span> json%add(root, array)
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(list)
+            <span class="k">call</span> json%add(array, <span class="s">''</span>, list(j)%s)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">subroutine</span> put_list
+
+    <span class="d">!&gt; Add a map option.</span>
+    <span class="k">subroutine</span> put_map(key, map)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key         <span class="d">!! the option</span>
+        <span class="k">type</span>(map_entry_t), <span class="k">intent</span>(in) :: map(:)     <span class="d">!! its entries</span>
+        <span class="k">type</span>(json_value), <span class="k">pointer</span> :: object
+        <span class="k">integer</span> :: j
+        <span class="k">call</span> json%create_object(object, key)
+        <span class="k">call</span> json%add(root, object)
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(map)
+            <span class="k">call</span> json%add(object, map(j)%key, map(j)%<span class="k">value</span>)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">subroutine</span> put_map
+
+<span class="k">end</span> <span class="k">function</span> dump_settings</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

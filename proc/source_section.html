@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>source_section &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>source_section<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> source_section(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-inout" title="intent(inout)">b</span>, <span class="intent attr-in" title="intent(in)">label</span>, <span class="intent attr-in" title="intent(in)">heading</span>)</div>
+<div class="doc">
+<p>Write the source of entity <code>id</code>, if <code>source</code> is set, from the text of its file.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the procedure or type</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+<tr id="variable-label"><td class="name">label</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>what opens it</p></td></tr>
+<tr id="variable-heading"><td class="name">heading</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-optional">optional</span></td><td><p>whether to start the section, by default true</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/wants_source.html">wants_source</a></li><li><a href="../proc/add.html">add</a></li><li><a href="../proc/highlight_fortran.html">highlight_fortran</a></li></ul>
+<div class="graph"><svg width="487pt" height="285pt"
+ viewBox="0 0 487 285" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 281.5)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/source_section.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-139.5" width="101.8" height="21.6"/><text x="50.9" y="-124">source_section</text></a><a href="../proc/wants_source.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="144.3" y="-238.5" width="94.6" height="21.6"/><text x="191.7" y="-223">wants_source</text></a><path d="M68.4,-140.4C93.3,-158.2 140.5,-191.9 168.4,-211.8"/><polygon fill="#8a93a5" points="166.7,-213.6 173.8,-215.7 169.6,-209.6"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="415" y="-120.5" width="54" height="21.6"/><text x="442" y="-105">add</text></a><path d="M67.8,-117C103.7,-91.6 194.6,-31.7 281.5,-10.7 319.5,-1.5 334.7,7.2 369.6,-10.7 402.5,-27.5 423.7,-67.4 433.9,-91.1"/><polygon fill="#8a93a5" points="431.6,-91.8 436.5,-97.3 436.1,-89.9"/><a href="../proc/highlight_fortran.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.8" y="-139.5" width="107.6" height="21.6"/><text x="191.7" y="-124">highlight_fortran</text></a><path d="M102.8,-128.7C111.3,-128.7 120.3,-128.7 129.1,-128.7"/><polygon fill="#8a93a5" points="128.9,-131.1 135.9,-128.7 128.9,-126.2"/><a href="../proc/parse_bool.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="286.2" y="-277.5" width="78.7" height="21.6"/><text x="325.5" y="-262">parse_bool</text></a><path d="M230.8,-239C245.7,-243.4 262.9,-248.5 278.5,-253.1"/><polygon fill="#8a93a5" points="277.6,-255.4 285,-255 279,-250.7"/><path d="M211.3,-117.5C228.7,-107.7 255.8,-94.2 281.5,-88.7 319.8,-80.5 330.8,-83.1 369.6,-88.7 382,-90.5 395.2,-93.9 406.8,-97.5"/><polygon fill="#8a93a5" points="405.8,-99.7 413.2,-99.5 407.3,-95"/><a href="https://jacobwilliams.github.io/fformat/proc/tokenize.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="294.1" y="-119.5" width="62.8" height="21.6"/><text x="325.5" y="-104">tokenize</text></a><path d="M245.9,-120.6C259.2,-118.6 273.1,-116.5 285.5,-114.6"/><polygon fill="#8a93a5" points="285.8,-117 292.3,-113.6 285.1,-112.2"/><a href="../proc/line_start.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="291.9" y="-199.5" width="67.1" height="21.6"/><text x="325.5" y="-184">line_start</text></a><path d="M217.5,-140C238.6,-149.6 269.2,-163.5 292.3,-174"/><polygon fill="#8a93a5" points="291.1,-176.1 298.5,-176.8 293.1,-171.7"/><a href="../proc/is_intrinsic.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="288" y="-41.5" width="75.1" height="21.6"/><text x="325.5" y="-26">is_intrinsic</text></a><path d="M204.8,-117.6C221.5,-102.7 252.6,-75.7 281.5,-55.7 286.1,-52.4 291.3,-49.2 296.3,-46.2"/><polygon fill="#8a93a5" points="297.4,-48.4 302.2,-42.7 294.9,-44.1"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="405.6" y="-258.5" width="72.9" height="21.6"/><text x="442" y="-243">lowercase</text></a><path d="M201.8,-139.9C216.6,-157.3 247.7,-190.8 281.5,-208.7 317.8,-227.9 363.9,-237.9 397.2,-242.9"/><polygon fill="#8a93a5" points="396.6,-245.3 403.8,-243.8 397.3,-240.4"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="281.5" y="-159.5" width="88.1" height="21.6"/><text x="325.5" y="-144">html_escape</text></a><path d="M245.9,-136.8C254.8,-138.1 264,-139.5 272.8,-140.8"/><polygon fill="#8a93a5" points="272.4,-143.3 279.7,-141.9 273.1,-138.4"/><path d="M365.3,-260.2C375.5,-258.5 386.7,-256.7 397.1,-255"/><polygon fill="#8a93a5" points="397.4,-257.4 403.9,-253.8 396.6,-252.6"/><path d="M353.5,-177.4C359,-174.8 364.6,-171.8 369.6,-168.7 389.4,-156.2 409.8,-138.8 423.7,-126.1"/><polygon fill="#8a93a5" points="425,-128.3 428.5,-121.7 421.7,-124.7"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="413.9" y="-199.5" width="56.3" height="21.6"/><text x="442" y="-184">int_text</text></a><path d="M359.3,-188.7C373.7,-188.7 390.6,-188.7 405.3,-188.7"/><polygon fill="#8a93a5" points="405.1,-191.1 412.1,-188.7 405.1,-186.2"/><path d="M359.6,-137.4C374.5,-132.4 391.9,-126.4 406.9,-121.3"/><polygon fill="#8a93a5" points="407.6,-123.6 413.5,-119.1 406,-119"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/page_source.html">page_source</a></li></ul>
+<div class="graph"><svg width="595pt" height="30pt"
+ viewBox="0 0 595 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/source_section.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="101.8" height="21.6"/><text x="50.9" y="-6.1">source_section</text></a><a href="../proc/page_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.8" y="-21.6" width="89.6" height="21.6"/><text x="182.6" y="-6.1">page_source</text></a><path d="M137.3,-10.8C128.9,-10.8 119.9,-10.8 111.1,-10.8"/><polygon fill="#8a93a5" points="111.2,-8.4 104.2,-10.8 111.2,-13.3"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="263.4" y="-21.6" width="81.6" height="21.6"/><text x="304.2" y="-6.1">entity_page</text></a><path d="M263.1,-10.8C254.3,-10.8 245,-10.8 235.9,-10.8"/><polygon fill="#8a93a5" points="236.1,-8.4 229.1,-10.8 236.1,-13.3"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="381" y="-21.6" width="116.3" height="21.6"/><text x="439.2" y="-6.1">write_entity_page</text></a><path d="M380.6,-10.8C371.6,-10.8 362.3,-10.8 353.5,-10.8"/><polygon fill="#8a93a5" points="353.8,-8.4 346.8,-10.8 353.8,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="533.3" y="-21.6" width="54" height="21.6"/><text x="560.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M532.9,-10.8C524.8,-10.8 515.6,-10.8 506.1,-10.8"/><polygon fill="#8a93a5" points="506.3,-8.4 499.3,-10.8 506.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> source_section(site, id, b, label, heading)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site        <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! the procedure or type</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: label   <span class="d">!! what opens it</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in), <span class="k">optional</span> :: heading    <span class="d">!! whether to start the section, by default true</span>
+
+    <span class="k">if</span> (<span class="k">.not.</span> wants_source(site, id)) <span class="k">return</span>
+    <span class="k">associate</span> (e =&gt; site%p%list%box(id)%e)
+        <span class="k">if</span> (e%source_first == <span class="n">0</span>) <span class="k">return</span>
+        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">present</span>(heading)) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;h2 id="source"&gt;Source&lt;/h2&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">else</span> <span class="k">if</span> (heading) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;h2 id="source"&gt;Source&lt;/h2&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;details class="source"&gt;&lt;summary&gt;'</span>//label//<span class="s">'&lt;/summary&gt;'</span>)
+        <span class="k">call</span> add(b, <span class="s">'&lt;pre&gt;&lt;code&gt;'</span>)
+        <span class="k">call</span> highlight_fortran(site%p%list%box(e%file)%e%source_text(e%source_first:e%source_last), b, <span class="k">.false.</span>)
+        <span class="k">call</span> add(b, <span class="s">'&lt;/code&gt;&lt;/pre&gt;&lt;/details&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">subroutine</span> source_section</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

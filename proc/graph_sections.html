@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>graph_sections &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>graph_sections<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> graph_sections(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write the graphs of entity <code>id</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entity</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/graph_heading.html">graph_heading</a></li><li><a href="../proc/uses_section.html">uses_section</a></li><li><a href="../proc/calls_section.html">calls_section</a></li><li><a href="../proc/neighbour_chips.html">neighbour_chips</a></li><li><a href="../proc/add.html">add</a></li></ul>
+<div class="graph"><svg width="603pt" height="368pt"
+ viewBox="0 0 603 368" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 363.8)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/graph_sections.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-132.5" width="102.6" height="21.6"/><text x="51.3" y="-117">graph_sections</text></a><a href="../proc/graph_heading.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="142.9" y="-53.5" width="101.1" height="21.6"/><text x="193.5" y="-38">graph_heading</text></a><path d="M73,-110C97.5,-96.2 138.4,-73.2 165.4,-58"/><polygon fill="#8a93a5" points="166.4,-60.2 171.3,-54.6 164,-55.9"/><a href="../proc/uses_section.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="148.3" y="-208.5" width="90.3" height="21.6"/><text x="193.5" y="-193">uses_section</text></a><path d="M73.9,-133.4C98.3,-146.7 138.2,-168.3 164.8,-182.7"/><polygon fill="#8a93a5" points="163.3,-184.7 170.7,-185.9 165.7,-180.4"/><a href="../proc/calls_section.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="149.1" y="-248.5" width="88.8" height="21.6"/><text x="193.5" y="-233">calls_section</text></a><path d="M59.9,-133.4C73.5,-153.3 103.7,-194 138.6,-217.7 141.3,-219.5 144.2,-221.2 147.2,-222.8"/><polygon fill="#8a93a5" points="146,-225 153.4,-225.8 148.1,-220.5"/><a href="../proc/neighbour_chips.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="138.6" y="-132.5" width="109.8" height="21.6"/><text x="193.5" y="-117">neighbour_chips</text></a><path d="M103.3,-121.7C112,-121.7 121,-121.7 130,-121.7"/><polygon fill="#8a93a5" points="129.9,-124.1 136.9,-121.7 129.9,-119.2"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="541.3" y="-170.5" width="54" height="21.6"/><text x="568.3" y="-155">add</text></a><path d="M58.5,-110C70.6,-88.4 99.7,-42.8 138.6,-22.7 215.3,16.8 245.7,-9.7 331.8,-3.7"/><path d="M333.8,-3.7C411.7,2.8 443.2,4.8 505.3,-42.7 537.7,-67.6 555,-114.4 562.5,-140.6"/><polygon fill="#8a93a5" points="560.1,-141.1 564.3,-147.2 564.9,-139.8"/><path d="M221.5,-31.4C248.7,-20.9 292.3,-6.4 331.8,-3.7"/><a href="../proc/section_id.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="296.3" y="-53.5" width="72.9" height="21.6"/><text x="332.8" y="-38">section_id</text></a><path d="M244.4,-42.7C258.5,-42.7 273.8,-42.7 287.5,-42.7"/><polygon fill="#8a93a5" points="287.3,-45.1 294.3,-42.7 287.3,-40.2"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="417.2" y="-170.5" width="88.1" height="21.6"/><text x="461.2" y="-155">html_escape</text></a><path d="M208.7,-54C225.8,-67.2 255.8,-88.9 284.4,-102.7 324.7,-122.2 373.2,-137.4 409.1,-147.1"/><polygon fill="#8a93a5" points="408.2,-149.4 415.6,-148.9 409.4,-144.7"/><path d="M239,-204.6C292.5,-211.3 384.4,-218 460.2,-198.7"/><path d="M462.2,-198.7C486.4,-192 512.8,-182.1 533.1,-174"/><polygon fill="#8a93a5" points="533.9,-176.3 539.5,-171.5 532.1,-171.8"/><a href="../proc/link_to.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="305.8" y="-248.5" width="54" height="21.6"/><text x="332.8" y="-233">link_to</text></a><path d="M233.1,-208.9C253.3,-214.9 278,-222 297.5,-227.7"/><polygon fill="#8a93a5" points="296.7,-230 304.1,-229.6 298.1,-225.3"/><path d="M206.9,-248.9C251.4,-287.6 405,-408.9 505.3,-337.7 518.7,-328.1 549.6,-222.8 562,-178.8"/><polygon fill="#8a93a5" points="564.2,-179.7 563.8,-172.3 559.5,-178.4"/><path d="M238.3,-237.7C257.3,-237.7 279.3,-237.7 297.1,-237.7"/><polygon fill="#8a93a5" points="297,-240.1 304,-237.7 297,-235.2"/><path d="M248.6,-120.7C311,-120.5 416.4,-123.1 505.3,-139.7 514.4,-141.4 524,-144.1 532.9,-146.9"/><polygon fill="#8a93a5" points="531.9,-149.2 539.4,-149 533.5,-144.5"/><path d="M207.6,-132.8C231.9,-153.3 283.7,-197 312.1,-221.1"/><polygon fill="#8a93a5" points="310.4,-222.8 317.3,-225.5 313.5,-219.1"/><a href="../proc/sort_by_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="284.4" y="-93.5" width="96.8" height="21.6"/><text x="332.8" y="-78">sort_by_name</text></a><path d="M234.2,-110.4C249.8,-106 267.9,-100.8 284.3,-96.2"/><polygon fill="#8a93a5" points="284.6,-98.6 290.7,-94.4 283.3,-93.9"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="424.7" y="-73.5" width="72.9" height="21.6"/><text x="461.2" y="-58">lowercase</text></a><path d="M369.7,-48.4C384.2,-50.7 401.1,-53.4 416.4,-55.8"/><polygon fill="#8a93a5" points="415.9,-58.2 423.2,-56.8 416.6,-53.3"/><path d="M505.5,-159.7C514.5,-159.7 523.9,-159.7 532.5,-159.7"/><polygon fill="#8a93a5" points="532.4,-162.1 539.4,-159.7 532.4,-157.2"/><path d="M360.2,-228.7C385.6,-220.3 425.3,-207.6 460.2,-198.7"/><path d="M350.9,-226.5C367.7,-215.7 394,-198.8 417.2,-184.7 422.3,-181.6 427.9,-178.3 433.3,-175.1"/><polygon fill="#8a93a5" points="434.3,-177.4 439.1,-171.7 431.8,-173.1"/><a href="../proc/page_entity.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="420.4" y="-328.5" width="81.6" height="21.6"/><text x="461.2" y="-313">page_entity</text></a><path d="M347.7,-249C363.8,-261.7 391.4,-282.7 417.2,-297.7 420.1,-299.4 423.3,-301.1 426.4,-302.8"/><polygon fill="#8a93a5" points="425.1,-304.8 432.5,-305.7 427.3,-300.5"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="427.6" y="-288.5" width="67.1" height="21.6"/><text x="461.2" y="-273">entity_url</text></a><path d="M360,-246C377.1,-251.4 399.7,-258.6 419.2,-264.7"/><polygon fill="#8a93a5" points="418.4,-267.1 425.8,-266.8 419.9,-262.4"/><a href="../proc/is_shown.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="426.9" y="-248.5" width="68.6" height="21.6"/><text x="461.2" y="-233">is_shown</text></a><path d="M360,-237.7C376.9,-237.7 399.2,-237.7 418.5,-237.7"/><polygon fill="#8a93a5" points="418.3,-240.1 425.3,-237.7 418.3,-235.2"/><path d="M381.6,-75.1C392.9,-73.3 405,-71.4 416.2,-69.7"/><polygon fill="#8a93a5" points="416.5,-72.1 423.1,-68.6 415.8,-67.2"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="541.3" y="-328.5" width="54" height="21.6"/><text x="568.3" y="-313" fill="white">...</text><path stroke-dasharray="5,2" d="M502.2,-317.7C512.3,-317.7 523,-317.7 532.7,-317.7"/><polygon fill="#8a93a5" points="532.5,-320.1 539.5,-317.7 532.5,-315.2"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="541.3" y="-288.5" width="54" height="21.6"/><text x="568.3" y="-273" fill="white">...</text><path stroke-dasharray="5,2" d="M495.2,-277.7C507.1,-277.7 520.6,-277.7 532.6,-277.7"/><polygon fill="#8a93a5" points="532.6,-280.1 539.6,-277.7 532.6,-275.2"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/entity_page.html">entity_page</a></li></ul>
+<div class="graph"><svg width="629pt" height="30pt"
+ viewBox="0 0 629 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/graph_sections.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="102.6" height="21.6"/><text x="51.3" y="-6.1">graph_sections</text></a><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="138.6" y="-21.6" width="81.6" height="21.6"/><text x="179.4" y="-6.1">entity_page</text></a><path d="M138.1,-10.8C129.6,-10.8 120.5,-10.8 111.5,-10.8"/><polygon fill="#8a93a5" points="111.7,-8.4 104.7,-10.8 111.7,-13.3"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="256.2" y="-21.6" width="116.3" height="21.6"/><text x="314.3" y="-6.1">write_entity_page</text></a><path d="M255.8,-10.8C246.8,-10.8 237.5,-10.8 228.7,-10.8"/><polygon fill="#8a93a5" points="228.9,-8.4 221.9,-10.8 228.9,-13.3"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="408.5" y="-21.6" width="122.8" height="21.6"/><text x="469.9" y="-6.1">write_entity_pages</text></a><path d="M408.2,-10.8C399.2,-10.8 389.9,-10.8 380.8,-10.8"/><polygon fill="#8a93a5" points="381.1,-8.4 374.1,-10.8 381.1,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="567.3" y="-21.6" width="54" height="21.6"/><text x="594.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M567,-10.8C558.9,-10.8 549.6,-10.8 540,-10.8"/><polygon fill="#8a93a5" points="540.1,-8.4 533.1,-10.8 540.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> graph_sections(site, id, b)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site        <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! the entity</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(site%graphs_of(id)%ids)) <span class="k">return</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(site%graphs_of(id)%ids)
+        <span class="k">associate</span> (g =&gt; site%graphs%graphs(site%graphs_of(id)%ids(k)))
+            <span class="k">if</span> (<span class="k">len</span>(g%svg) == <span class="n">0</span>) <span class="k">cycle</span>
+            <span class="k">call</span> graph_heading(g%title, b)
+            <span class="c">! a list goes with the graph of the same thing, above it</span>
+            <span class="k">if</span> (g%title == <span class="s">'Uses'</span>) <span class="k">call</span> uses_section(site, id, <span class="k">.false.</span>, b)
+            <span class="k">if</span> (g%title == <span class="s">'Calls'</span>) <span class="k">call</span> calls_section(site, id, <span class="k">.false.</span>, b)
+            <span class="k">if</span> (g%title == <span class="s">'Used by'</span> <span class="k">.or.</span> g%title == <span class="s">'Called by'</span>) <span class="k">call</span> neighbour_chips(site, g%neighbours, b)
+            <span class="k">call</span> add(b, <span class="s">'&lt;div class="graph"&gt;'</span>//g%svg//<span class="s">'&lt;/div&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> graph_sections</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

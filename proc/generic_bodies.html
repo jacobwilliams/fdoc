@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>generic_bodies &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project.f90.html">fdoc_project.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project.html">fdoc_project</a></div>
+<h1><span class="kind">subroutine</span>generic_bodies<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> generic_bodies(<span class="intent attr-inout" title="intent(inout)">p</span>, <span class="intent attr-in" title="intent(in)">which</span>, <span class="intent attr-in" title="intent(in)">id</span>)</div>
+<div class="doc">
+<p>Add the public bodies of the generic interfaces of module <code>id</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-which"><td class="name">which</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>position in <code>p%modules</code></p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the module</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/is_procedure.html">is_procedure</a></li><li><a href="../proc/add_symbol.html">add_symbol</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li></ul>
+<div class="graph"><svg width="464pt" height="110pt"
+ viewBox="0 0 464 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/generic_bodies.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="102.6" height="21.6"/><text x="51.3" y="-46.1">generic_bodies</text></a><a href="../proc/is_procedure.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="138.6" y="-101.6" width="89.6" height="21.6"/><text x="183.4" y="-86.1">is_procedure</text></a><path d="M90.6,-62.6C105.4,-67.1 122.5,-72.4 137.8,-77.1"/><polygon fill="#8a93a5" points="136.8,-79.4 144.2,-79.1 138.2,-74.7"/><a href="../proc/add_symbol.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="141.1" y="-61.6" width="84.5" height="21.6"/><text x="183.4" y="-46.1">add_symbol</text></a><path d="M103.3,-50.8C112.9,-50.8 122.9,-50.8 132.4,-50.8"/><polygon fill="#8a93a5" points="132.2,-53.3 139.2,-50.8 132.2,-48.4"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="146.9" y="-21.6" width="72.9" height="21.6"/><text x="183.4" y="-6.1">lowercase</text></a><path d="M90.6,-39C105.7,-34.4 123,-29 138.6,-24.3"/><polygon fill="#8a93a5" points="139.1,-26.7 145.1,-22.3 137.7,-22"/><a href="../proc/index_find.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="264.1" y="-81.6" width="73.7" height="21.6"/><text x="301" y="-66.1">index_find</text></a><path d="M226.1,-58C235.6,-59.7 245.7,-61.4 255.4,-63.1"/><polygon fill="#8a93a5" points="254.8,-65.5 262.2,-64.3 255.7,-60.7"/><a href="../proc/index_set.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="265.9" y="-41.6" width="70" height="21.6"/><text x="301" y="-26.1">index_set</text></a><path d="M226.1,-43.6C236.2,-41.8 247,-40 257.2,-38.2"/><polygon fill="#8a93a5" points="257.5,-40.6 264,-37 256.7,-35.8"/><a href="../proc/name_hash.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="373.8" y="-61.6" width="82.3" height="21.6"/><text x="415" y="-46.1">name_hash</text></a><path d="M338,-64.4C346.6,-62.8 356,-61.2 365.1,-59.5"/><polygon fill="#8a93a5" points="365.4,-62 371.8,-58.3 364.5,-57.1"/><path d="M336.5,-37C345.5,-38.6 355.5,-40.4 365.1,-42.1"/><polygon fill="#8a93a5" points="364.7,-44.5 372,-43.3 365.5,-39.7"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/public_names.html">public_names</a></li></ul>
+<div class="graph"><svg width="432pt" height="30pt"
+ viewBox="0 0 432 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/generic_bodies.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="102.6" height="21.6"/><text x="51.3" y="-6.1">generic_bodies</text></a><a href="../proc/public_names.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="138.6" y="-21.6" width="94.6" height="21.6"/><text x="185.9" y="-6.1">public_names</text></a><path d="M138.1,-10.8C129.7,-10.8 120.7,-10.8 111.9,-10.8"/><polygon fill="#8a93a5" points="112.1,-8.4 105.1,-10.8 112.1,-13.3"/><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="269.2" y="-21.6" width="65" height="21.6"/><text x="301.7" y="-6.1">correlate</text></a><path d="M269,-10.8C260.5,-10.8 251.1,-10.8 241.8,-10.8"/><polygon fill="#8a93a5" points="241.8,-8.4 234.8,-10.8 241.8,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="370.2" y="-21.6" width="54" height="21.6"/><text x="397.2" y="-6.1">run</text></a><path d="M370.1,-10.8C361.7,-10.8 352.1,-10.8 342.9,-10.8"/><polygon fill="#8a93a5" points="343.1,-8.4 336.1,-10.8 343.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> generic_bodies(p, which, id)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(inout) :: p     <span class="d">!! the project</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: which            <span class="d">!! position in `p%modules`</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! the module</span>
+    <span class="k">integer</span> :: c, b, child, body
+
+    <span class="k">do</span> c = <span class="n">1</span>, <span class="k">size</span>(p%list%box(id)%e%children)
+        child = p%list%box(id)%e%children(c)
+        <span class="k">if</span> (p%list%box(child)%e%<span class="k">kind</span> /= E_INTERFACE) <span class="k">cycle</span>
+        <span class="k">do</span> b = <span class="n">1</span>, <span class="k">size</span>(p%list%box(child)%e%children)
+            body = p%list%box(child)%e%children(b)
+            <span class="k">associate</span> (e =&gt; p%list%box(body)%e)
+                <span class="k">if</span> (<span class="k">.not.</span> is_procedure(e%<span class="k">kind</span>)) <span class="k">cycle</span>
+                <span class="k">if</span> (e%permission == <span class="s">'public'</span> <span class="k">.or.</span> e%permission == <span class="s">'protected'</span>) <span class="k">then</span>
+                    <span class="k">call</span> add_symbol(p%pub(which)%procs, lowercase(e%name), body)
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> generic_bodies</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

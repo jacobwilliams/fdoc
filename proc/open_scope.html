@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>open_scope &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>open_scope<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> open_scope(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">up</span>)</div>
+<div class="doc">
+<p>Open a scope that also sees frame <code>up</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-up"><td class="name">up</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the frame, or 0; this can be <code>c%frame</code> itself</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/fail.html">fail</a></li></ul>
+<div class="graph"><svg width="183pt" height="30pt"
+ viewBox="0 0 183 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/open_scope.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="85.2" height="21.6"/><text x="42.6" y="-6.1">open_scope</text></a><a href="../proc/fail.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="121.2" y="-21.6" width="54" height="21.6"/><text x="148.2" y="-6.1">fail</text></a><path d="M86.1,-10.8C94.8,-10.8 103.9,-10.8 112.3,-10.8"/><polygon fill="#8a93a5" points="112.2,-13.3 119.2,-10.8 112.2,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/call_macro.html">call_macro</a></li><li><a href="../proc/render_call.html">render_call</a></li></ul>
+<div class="graph"><svg width="670pt" height="70pt"
+ viewBox="0 0 670 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/open_scope.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="85.2" height="21.6"/><text x="42.6" y="-26.1">open_scope</text></a><a href="../proc/call_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="121.2" y="-22.6" width="77.3" height="21.6"/><text x="159.9" y="-7.1">call_macro</text></a><path d="M120.8,-18.1C112.3,-19.5 103.1,-21 94.1,-22.5"/><polygon fill="#8a93a5" points="94,-20 87.5,-23.6 94.8,-24.8"/><a href="../proc/render_call.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="240.3" y="-61.6" width="78.7" height="21.6"/><text x="279.6" y="-46.1">render_call</text></a><path d="M239.8,-47.5C200.1,-44.1 138.2,-38.8 94.5,-35.1"/><polygon fill="#8a93a5" points="94.8,-32.7 87.6,-34.5 94.3,-37.6"/><path d="M244.6,-39.5C231.5,-35.2 216.5,-30.2 202.7,-25.7"/><polygon fill="#8a93a5" points="203.7,-23.4 196.3,-23.5 202.2,-28.1"/><a href="../proc/evaluate_call.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="234.5" y="-21.6" width="90.3" height="21.6"/><text x="279.6" y="-6.1">evaluate_call</text></a><path d="M234.1,-11.2C225.3,-11.3 216.1,-11.3 207.2,-11.4"/><polygon fill="#8a93a5" points="207.4,-9 200.4,-11.5 207.4,-13.9"/><a href="../proc/render_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="360.8" y="-61.6" width="88.1" height="21.6"/><text x="404.8" y="-46.1">render_node</text></a><path d="M360.4,-50.8C349.8,-50.8 338.4,-50.8 327.6,-50.8"/><polygon fill="#8a93a5" points="327.7,-48.4 320.7,-50.8 327.7,-53.3"/><a href="../proc/evaluate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="373.1" y="-21.6" width="63.5" height="21.6"/><text x="404.8" y="-6.1">evaluate</text></a><path d="M372.8,-10.8C360.8,-10.8 346.9,-10.8 333.5,-10.8"/><polygon fill="#8a93a5" points="333.7,-8.4 326.7,-10.8 333.7,-13.3"/><a href="../proc/render_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="484.9" y="-61.6" width="87.4" height="21.6"/><text x="528.6" y="-46.1">render_body</text></a><path d="M484.7,-50.8C476,-50.8 466.7,-50.8 457.7,-50.8"/><polygon fill="#8a93a5" points="457.7,-48.4 450.7,-50.8 457.7,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="501.6" y="-21.6" width="54" height="21.6"/><text x="528.6" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M501.2,-10.8C484.8,-10.8 463.5,-10.8 445.1,-10.8"/><polygon fill="#8a93a5" points="445.5,-8.4 438.5,-10.8 445.5,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="608.3" y="-61.6" width="54" height="21.6"/><text x="635.3" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M607.9,-50.8C599.7,-50.8 590.4,-50.8 581.2,-50.8"/><polygon fill="#8a93a5" points="581.2,-48.4 574.2,-50.8 581.2,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> open_scope(c, up)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c    <span class="d">!! the state</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: up           <span class="d">!! the frame, or 0; this can be `c%frame` itself</span>
+
+    <span class="k">if</span> (c%frame == MAX_FRAMES) <span class="k">then</span>
+        <span class="k">call</span> fail(c, <span class="s">'macro calls are nested too deeply'</span>)
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    c%frames(c%frame + <span class="n">1</span>)%n = <span class="n">0</span>
+    c%frames(c%frame + <span class="n">1</span>)%up = up
+    c%frame = c%frame + <span class="n">1</span>
+<span class="k">end</span> <span class="k">subroutine</span> open_scope</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

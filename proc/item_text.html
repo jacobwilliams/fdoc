@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>item_text &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">function</span>item_text<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> integer <span class="k">function</span> item_text(<span class="intent attr-in" title="intent(in)">line</span>, <span class="intent attr-in" title="intent(in)">ordered</span>, <span class="intent attr-in" title="intent(in)">bullet</span>)</div>
+<div class="doc">
+<p>The position where the item text of a list line starts, or 0 if it is not one.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-line"><td class="name">line</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the line</p></td></tr>
+<tr id="variable-ordered"><td class="name">ordered</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>accept <code>1.</code></p></td></tr>
+<tr id="variable-bullet"><td class="name">bullet</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>accept <code>*</code>, <code>+</code> and <code>-</code></p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-item_text"><td class="name">item_text</td><td class="type">integer</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/is_bullet_item.html">is_bullet_item</a></li><li><a href="../proc/is_ordered_item.html">is_ordered_item</a></li><li><a href="../proc/list_items.html">list_items</a></li></ul>
+<div class="graph"><svg width="690pt" height="109pt"
+ viewBox="0 0 690 109" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 104.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/item_text.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="67.1" height="21.6"/><text x="33.6" y="-46.1">item_text</text></a><a href="../proc/is_ordered_item.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="103.1" y="-100.6" width="107.6" height="21.6"/><text x="157" y="-85.1">is_ordered_item</text></a><path d="M120.8,-78.5C106.8,-74 90.5,-68.8 75.9,-64.1"/><polygon fill="#8a93a5" points="76.8,-61.8 69.4,-62 75.3,-66.5"/><a href="../proc/is_bullet_item.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="246.8" y="-61.6" width="93.9" height="21.6"/><text x="293.7" y="-46.1">is_bullet_item</text></a><path d="M246.6,-50.8C198.2,-50.8 123,-50.8 76.4,-50.8"/><polygon fill="#8a93a5" points="76.5,-48.4 69.5,-50.8 76.5,-53.3"/><a href="../proc/list_items.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="122.7" y="-22.6" width="68.6" height="21.6"/><text x="157" y="-7.1">list_items</text></a><path d="M122.5,-22.6C108,-27.2 90.9,-32.7 75.7,-37.6"/><polygon fill="#8a93a5" points="75.3,-35.1 69.4,-39.6 76.8,-39.8"/><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="376.6" y="-61.6" width="84.5" height="21.6"/><text x="418.9" y="-46.1">parse_block</text></a><path d="M379.2,-62C367,-65.2 353.3,-68.5 340.6,-70.8 300.6,-78 255,-82.8 219.4,-85.7"/><polygon fill="#8a93a5" points="219.3,-83.3 212.5,-86.3 219.7,-88.2"/><path d="M376.2,-50.8C367.6,-50.8 358.5,-50.8 349.5,-50.8"/><polygon fill="#8a93a5" points="349.5,-48.4 342.5,-50.8 349.5,-53.3"/><a href="../proc/list_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="259.8" y="-21.6" width="67.9" height="21.6"/><text x="293.7" y="-6.1">list_block</text></a><path d="M383.2,-39.6C368.5,-34.8 351.1,-29.1 335.7,-24.1"/><polygon fill="#8a93a5" points="336.7,-21.9 329.3,-22 335.2,-26.5"/><path d="M259.4,-11C241.3,-11.2 218.8,-11.3 199.6,-11.5"/><polygon fill="#8a93a5" points="199.8,-9 192.9,-11.5 199.9,-13.9"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="497.1" y="-61.6" width="95.3" height="21.6"/><text x="544.8" y="-46.1">parse_chunks</text></a><path d="M497,-50.8C488.1,-50.8 478.9,-50.8 469.9,-50.8"/><polygon fill="#8a93a5" points="470,-48.4 463,-50.8 470,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="628.5" y="-61.6" width="54" height="21.6"/><text x="655.5" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M628.2,-50.8C619.9,-50.8 610.5,-50.8 601,-50.8"/><polygon fill="#8a93a5" points="601.2,-48.4 594.2,-50.8 601.2,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> item_text(line, ordered, bullet)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line    <span class="d">!! the line</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: ordered          <span class="d">!! accept `1.`</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: bullet           <span class="d">!! accept `*`, `+` and `-`</span>
+    <span class="k">integer</span> :: first, k
+
+    item_text = <span class="n">0</span>
+    first = <span class="k">verify</span>(line, <span class="s">' '</span>)
+    <span class="k">if</span> (first == <span class="n">0</span> <span class="k">.or.</span> first &gt; <span class="n">4</span>) <span class="k">return</span>
+    k = first
+    <span class="k">if</span> (bullet <span class="k">.and.</span> <span class="k">scan</span>(line(k:k), <span class="s">'*+-'</span>) == <span class="n">1</span>) <span class="k">then</span>
+        k = k + <span class="n">1</span>
+    <span class="k">else</span> <span class="k">if</span> (ordered <span class="k">.and.</span> <span class="k">scan</span>(line(k:k), <span class="s">'0123456789'</span>) == <span class="n">1</span>) <span class="k">then</span>
+        k = k + <span class="k">verify</span>(line(k:)//<span class="s">' '</span>, <span class="s">'0123456789'</span>) - <span class="n">1</span>
+        <span class="k">if</span> (k &gt; <span class="k">len</span>(line)) <span class="k">return</span>
+        <span class="k">if</span> (line(k:k) /= <span class="s">'.'</span>) <span class="k">return</span>
+        k = k + <span class="n">1</span>
+    <span class="k">else</span>
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">if</span> (k &gt; <span class="k">len</span>(line)) <span class="k">return</span>
+    <span class="k">if</span> (line(k:k) /= <span class="s">' '</span>) <span class="k">return</span>
+    item_text = k + <span class="k">verify</span>(line(k:)//<span class="s">'x'</span>, <span class="s">' '</span>) - <span class="n">1</span>
+<span class="k">end</span> <span class="k">function</span> item_text</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>locate &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_input.f90.html">fdoc_input.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_input.html">fdoc_input</a></div>
+<h1><span class="kind">function</span>locate<span class="attr attr-private">private</span></h1>
+<div class="sig">character(len=:) <span class="k">function</span> locate(<span class="intent attr-in" title="intent(in)">search</span>, <span class="intent attr-in" title="intent(in)">directory</span>, <span class="intent attr-in" title="intent(in)">name</span>) <span class="k">result</span>(path)</div>
+<div class="doc">
+<p>The path of include file <code>name</code>, or <code>''</code> if it is not found.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-search"><td class="name">search</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>other directories to look in</p></td></tr>
+<tr id="variable-directory"><td class="name">directory</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the directory of the including file</p></td></tr>
+<tr id="variable-name"><td class="name">name</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the file</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-allocatable">allocatable</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/join_path.html">join_path</a></li></ul>
+<div class="graph"><svg width="165pt" height="30pt"
+ viewBox="0 0 165 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/locate.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="54" height="21.6"/><text x="27" y="-6.1">locate</text></a><a href="https://jacobwilliams.github.io/fformat/proc/join_path.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="90" y="-21.6" width="67.2" height="21.6"/><text x="123.6" y="-6.1">join_path</text></a><path d="M54.9,-10.8C63,-10.8 72.3,-10.8 81.2,-10.8"/><polygon fill="#8a93a5" points="81.1,-13.3 88.1,-10.8 81.1,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/expand_includes.html">expand_includes</a></li></ul>
+<div class="graph"><svg width="474pt" height="30pt"
+ viewBox="0 0 474 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/locate.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="54" height="21.6"/><text x="27" y="-6.1">locate</text></a><a href="../proc/expand_includes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="90" y="-21.6" width="112" height="21.6"/><text x="146" y="-6.1">expand_includes</text></a><path d="M89.6,-10.8C80.6,-10.8 71.6,-10.8 63.3,-10.8"/><polygon fill="#8a93a5" points="63.5,-8.4 56.5,-10.8 63.5,-13.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="238" y="-21.6" width="138" height="21.6"/><text x="307" y="-6.1">load_project_sources</text></a><path d="M237.6,-10.8C228.7,-10.8 219.6,-10.8 210.7,-10.8"/><polygon fill="#8a93a5" points="210.9,-8.4 203.9,-10.8 210.9,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="412" y="-21.6" width="54" height="21.6"/><text x="439" y="-6.1">run</text></a><path d="M411.6,-10.8C403.5,-10.8 394.2,-10.8 384.4,-10.8"/><polygon fill="#8a93a5" points="384.7,-8.4 377.7,-10.8 384.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">function</span> locate(search, directory, name) <span class="k">result</span>(path)
+    <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: search(:)     <span class="d">!! other directories to look in</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: directory   <span class="d">!! the directory of the including file</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name        <span class="d">!! the file</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: path
+    <span class="k">logical</span> :: exists
+    <span class="k">integer</span> :: k
+
+    path = join_path(directory, name)
+    <span class="k">inquire</span> (file=path, exist=exists)
+    <span class="k">if</span> (exists) <span class="k">return</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(search)
+        path = join_path(search(k)%s, name)
+        <span class="k">inquire</span> (file=path, exist=exists)
+        <span class="k">if</span> (exists) <span class="k">return</span>
+    <span class="k">end</span> <span class="k">do</span>
+    path = <span class="s">''</span>
+<span class="k">end</span> <span class="k">function</span> locate</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

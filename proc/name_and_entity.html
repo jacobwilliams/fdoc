@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>name_and_entity &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>name_and_entity<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> name_and_entity(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">name</span>, <span class="intent attr-out" title="intent(out)">entity</span>)</div>
+<div class="doc">
+<p>Split <code>name(entity)</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-name"><td class="name">name</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the name</p></td></tr>
+<tr id="variable-entity"><td class="name">entity</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the entity type, or <code>''</code></p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/ford_link.html">ford_link</a></li></ul>
+<div class="graph"><svg width="532pt" height="30pt"
+ viewBox="0 0 532 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/name_and_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="114.1" height="21.6"/><text x="57.1" y="-6.1">name_and_entity</text></a><a href="../proc/ford_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="150.1" y="-21.6" width="63.5" height="21.6"/><text x="181.9" y="-6.1">ford_link</text></a><path d="M149.9,-10.8C141.7,-10.8 132.6,-10.8 123.4,-10.8"/><polygon fill="#8a93a5" points="123.4,-8.4 116.4,-10.8 123.4,-13.3"/><a href="../proc/inline_bracket.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="249.7" y="-21.6" width="94.6" height="21.6"/><text x="297" y="-6.1">inline_bracket</text></a><path d="M249.3,-10.8C240.4,-10.8 231.1,-10.8 222.4,-10.8"/><polygon fill="#8a93a5" points="222.5,-8.4 215.5,-10.8 222.5,-13.3"/><a href="../proc/inline.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="380.3" y="-21.6" width="54" height="21.6"/><text x="407.3" y="-6.1">inline</text></a><path d="M379.8,-10.8C371.6,-10.8 362.2,-10.8 352.7,-10.8"/><polygon fill="#8a93a5" points="353,-8.4 346,-10.8 353,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="470.3" y="-21.6" width="54" height="21.6"/><text x="497.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M469.9,-10.8C461.4,-10.8 452,-10.8 443,-10.8"/><polygon fill="#8a93a5" points="443.2,-8.4 436.2,-10.8 443.2,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> name_and_entity(text, name, entity)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text                    <span class="d">!! the text</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: name      <span class="d">!! the name</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: entity    <span class="d">!! the entity type, or `''`</span>
+    <span class="k">integer</span> :: <span class="k">open</span>
+
+    <span class="k">open</span> = <span class="k">index</span>(text, <span class="s">'('</span>)
+    <span class="k">if</span> (<span class="k">open</span> &gt; <span class="n">0</span>) <span class="k">then</span>
+        name = text(:<span class="k">open</span> - <span class="n">1</span>)
+        entity = text(<span class="k">open</span> + <span class="n">1</span>:<span class="k">len</span>(text) - <span class="n">1</span>)
+    <span class="k">else</span>
+        name = text
+        entity = <span class="s">''</span>
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">subroutine</span> name_and_entity</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

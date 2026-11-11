@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>split_chunks &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>split_chunks<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> split_chunks(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">chunks</span>)</div>
+<div class="doc">
+<p>Split <code>text</code> at blank lines, as <code>text.split('\n\n')</code> does.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-chunks"><td class="name">chunks</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the chunks</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push.html">push</a></li></ul>
+<div class="graph"><svg width="184pt" height="30pt"
+ viewBox="0 0 184 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/split_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="85.9" height="21.6"/><text x="43" y="-6.1">split_chunks</text></a><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="121.9" y="-21.6" width="54" height="21.6"/><text x="148.9" y="-6.1">push</text></a><path d="M86.9,-10.8C95.6,-10.8 104.6,-10.8 113,-10.8"/><polygon fill="#8a93a5" points="113,-13.3 120,-10.8 113,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/markdown_to_html.html">markdown_to_html</a></li><li><a href="../proc/parse_text~2.html">parse_text</a></li></ul>
+<div class="graph"><svg width="639pt" height="150pt"
+ viewBox="0 0 639 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 145.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/split_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="17.7" y="-61.6" width="85.9" height="21.6"/><text x="60.7" y="-46.1">split_chunks</text></a><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="157.3" y="-101.6" width="124.2" height="21.6"/><text x="219.5" y="-86.1">markdown_to_html</text></a><path d="M174.4,-79.6C155.2,-74.7 132.6,-68.9 112.7,-63.8"/><polygon fill="#8a93a5" points="113.5,-61.5 106.1,-62.1 112.3,-66.2"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="0" y="-141.6" width="121.3" height="21.6"/><text x="60.7" y="-126.1">stash_html_blocks</text></a><path d="M166.1,-104.1C149.3,-108.4 130.6,-113.2 113.8,-117.5"/><polygon fill="#8a93a5" points="166.7,-106.5 172.9,-102.4 165.5,-101.8"/><polygon fill="#8a93a5" points="113.3,-115.1 107.2,-119.2 114.6,-119.8"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="4.3" y="-101.6" width="112.7" height="21.6"/><text x="60.7" y="-86.1">render_footnotes</text></a><path d="M148.6,-90.8C140.9,-90.8 133.1,-90.8 125.6,-90.8"/><polygon fill="#8a93a5" points="148.4,-93.3 155.4,-90.8 148.4,-88.4"/><polygon fill="#8a93a5" points="125.9,-88.4 118.9,-90.8 125.9,-93.3"/><a href="../proc/parse_text~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="181.9" y="-61.6" width="75.1" height="21.6"/><text x="219.5" y="-46.1">parse_text</text></a><path d="M181.7,-50.8C161.2,-50.8 135.4,-50.8 113,-50.8"/><polygon fill="#8a93a5" points="113.1,-48.4 106.1,-50.8 113.1,-53.3"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="317.6" y="-141.6" width="97.5" height="21.6"/><text x="366.3" y="-126.1">markdown_list</text></a><path d="M324.6,-119.6C307.4,-114.8 287.2,-109.2 269.2,-104.3"/><polygon fill="#8a93a5" points="270,-101.9 262.6,-102.4 268.7,-106.7"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="326.2" y="-101.6" width="80.2" height="21.6"/><text x="366.3" y="-86.1">render_text</text></a><path d="M326.1,-90.8C315.1,-90.8 302.7,-90.8 290.5,-90.8"/><polygon fill="#8a93a5" points="290.6,-88.4 283.6,-90.8 290.6,-93.3"/><a href="../proc/list_indent.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="329.8" y="-61.6" width="72.9" height="21.6"/><text x="366.3" y="-46.1">list_indent</text></a><path d="M329.5,-50.8C310.2,-50.8 286.2,-50.8 265.6,-50.8"/><polygon fill="#8a93a5" points="265.9,-48.4 258.9,-50.8 265.9,-53.3"/><a href="../proc/quote_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="324.1" y="-21.6" width="84.5" height="21.6"/><text x="366.3" y="-6.1">quote_block</text></a><path d="M324.6,-22C306.2,-27.1 284.4,-33.1 265.6,-38.3"/><polygon fill="#8a93a5" points="265,-36 258.9,-40.2 266.3,-40.7"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="469.2" y="-141.6" width="54" height="21.6"/><text x="496.2" y="-126.1">run</text></a><path d="M468.7,-130.8C455.6,-130.8 439.3,-130.8 423.6,-130.8"/><polygon fill="#8a93a5" points="424,-128.4 417,-130.8 424,-133.3"/><path d="M468.7,-122.5C452,-117.3 430.2,-110.5 411,-104.5"/><polygon fill="#8a93a5" points="411.8,-102.2 404.4,-102.4 410.4,-106.8"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="451.1" y="-101.6" width="90.3" height="21.6"/><text x="496.2" y="-86.1">render_entity</text></a><path d="M450.8,-90.8C439.2,-90.8 426.6,-90.8 414.9,-90.8"/><polygon fill="#8a93a5" points="415,-88.4 408,-90.8 415,-93.3"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="457.9" y="-61.6" width="76.6" height="21.6"/><text x="496.2" y="-46.1">read_page</text></a><path d="M459.2,-62C444.3,-66.7 426.7,-72.2 411,-77.1"/><polygon fill="#8a93a5" points="410.4,-74.8 404.4,-79.2 411.9,-79.4"/><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="453.9" y="-21.6" width="84.5" height="21.6"/><text x="496.2" y="-6.1">parse_block</text></a><path d="M459.2,-22C444.3,-26.7 426.7,-32.2 411,-37.1"/><polygon fill="#8a93a5" points="410.4,-34.8 404.4,-39.2 411.9,-39.4"/><path d="M453.7,-10.8C442.1,-10.8 429.3,-10.8 417.3,-10.8"/><polygon fill="#8a93a5" points="417.6,-8.4 410.6,-10.8 417.6,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="577.3" y="-101.6" width="54" height="21.6"/><text x="604.3" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.1,-90.8C568.8,-90.8 559.4,-90.8 550,-90.8"/><polygon fill="#8a93a5" points="550.2,-88.4 543.2,-90.8 550.2,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="577.3" y="-61.6" width="54" height="21.6"/><text x="604.3" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.1,-50.8C566.8,-50.8 554.7,-50.8 543.1,-50.8"/><polygon fill="#8a93a5" points="543.3,-48.4 536.3,-50.8 543.3,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="577.3" y="-21.6" width="54" height="21.6"/><text x="604.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.1,-10.8C568,-10.8 557.4,-10.8 547.1,-10.8"/><polygon fill="#8a93a5" points="547.3,-8.4 540.3,-10.8 547.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> split_chunks(text, chunks)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text                    <span class="d">!! the text</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: chunks(:)   <span class="d">!! the chunks</span>
+    <span class="k">integer</span> :: start, at
+
+    <span class="k">allocate</span> (chunks(<span class="n">0</span>))
+    start = <span class="n">1</span>
+    <span class="k">do</span>
+        at = <span class="k">index</span>(text(start:), NL//NL)
+        <span class="k">if</span> (at == <span class="n">0</span>) <span class="k">exit</span>
+        <span class="k">call</span> push(chunks, text(start:start + at - <span class="n">2</span>))
+        start = start + at + <span class="n">1</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> push(chunks, text(start:))
+<span class="k">end</span> <span class="k">subroutine</span> split_chunks</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

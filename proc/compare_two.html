@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>compare_two &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>compare_two<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> compare_two(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">op</span>, <span class="intent attr-in" title="intent(in)">a</span>, <span class="intent attr-in" title="intent(in)">b</span>, <span class="intent attr-out" title="intent(out)">holds</span>)</div>
+<div class="doc">
+<p>One comparison.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-op"><td class="name">op</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the comparison</p></td></tr>
+<tr id="variable-a"><td class="name">a</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the first operand</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the second operand</p></td></tr>
+<tr id="variable-holds"><td class="name">holds</td><td class="type">logical</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the result</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/equal.html">equal</a></li><li><a href="../proc/fail.html">fail</a></li></ul>
+<div class="graph"><svg width="190pt" height="70pt"
+ viewBox="0 0 190 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/compare_two.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="92.4" height="21.6"/><text x="46.2" y="-26.1">compare_two</text></a><a href="../proc/equal.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="128.4" y="-61.6" width="54" height="21.6"/><text x="155.4" y="-46.1">equal</text></a><path d="M93.3,-39.4C102.3,-41.1 111.5,-42.8 120,-44.4"/><polygon fill="#8a93a5" points="119.3,-46.7 126.7,-45.6 120.2,-41.9"/><a href="../proc/fail.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="128.4" y="-21.6" width="54" height="21.6"/><text x="155.4" y="-6.1">fail</text></a><path d="M93.3,-22.2C102.3,-20.5 111.5,-18.8 120,-17.2"/><polygon fill="#8a93a5" points="120.2,-19.7 126.7,-16 119.3,-14.9"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/compare.html">compare</a></li></ul>
+<div class="graph"><svg width="333pt" height="390pt"
+ viewBox="0 0 333 390" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 385.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/compare_two.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-381.6" width="92.4" height="21.6"/><text x="46.2" y="-366.1">compare_two</text></a><a href="../proc/compare.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="149" y="-381.6" width="65" height="21.6"/><text x="181.5" y="-366.1">compare</text></a><path d="M148.6,-370.8C134.5,-370.8 117.5,-370.8 101.5,-370.8"/><polygon fill="#8a93a5" points="101.8,-368.4 94.8,-370.8 101.8,-373.3"/><a href="../proc/evaluate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="14.4" y="-201.6" width="63.5" height="21.6"/><text x="46.2" y="-186.1">evaluate</text></a><path d="M140.9,-359.3C136.4,-356.9 132.1,-354.1 128.4,-350.8 84.7,-311.3 61.3,-242.9 52,-209.8"/><polygon fill="#8a93a5" points="139.9,-361.5 147.3,-362.2 142,-357"/><polygon fill="#8a93a5" points="54.4,-209.4 50.2,-203.3 49.7,-210.7"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="135.7" y="-341.6" width="91.7" height="21.6"/><text x="181.5" y="-326.1">fypp_process</text></a><path d="M142.9,-319.6C137.7,-317.1 132.8,-314.2 128.4,-310.8 93.4,-283 67.9,-235.9 55.5,-209.8"/><polygon fill="#8a93a5" points="57.8,-208.8 52.6,-203.4 53.3,-210.8"/><a href="../proc/evaluate_slice.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="133.1" y="-301.6" width="96.8" height="21.6"/><text x="181.5" y="-286.1">evaluate_slice</text></a><path d="M145.4,-279.6C139.5,-277.1 133.7,-274.2 128.4,-270.8 101.7,-253.6 76.5,-226.5 61.5,-208.7"/><polygon fill="#8a93a5" points="63.4,-207.1 57,-203.3 59.6,-210.2"/><a href="../proc/run_clause.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="142.5" y="-261.6" width="78" height="21.6"/><text x="181.5" y="-246.1">run_clause</text></a><path d="M149.8,-239.5C142.7,-236.8 135.3,-233.8 128.4,-230.8 110.7,-223.1 91.3,-213.5 75.9,-205.7"/><polygon fill="#8a93a5" points="77.4,-203.7 70,-202.7 75.2,-208.1"/><a href="../proc/evaluate_fstring.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="128.4" y="-221.6" width="106.2" height="21.6"/><text x="181.5" y="-206.1">evaluate_fstring</text></a><path d="M128.2,-203C114.3,-200.9 99.6,-198.7 86.5,-196.7"/><polygon fill="#8a93a5" points="87,-194.3 79.7,-195.7 86.3,-199.1"/><a href="../proc/evaluate_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="133.5" y="-181.6" width="96.1" height="21.6"/><text x="181.5" y="-166.1">evaluate_args</text></a><path d="M133.2,-177.9C117.9,-180.2 101.1,-182.7 86.5,-184.9"/><polygon fill="#8a93a5" points="86.3,-182.5 79.7,-185.9 87,-187.3"/><a href="../proc/call_method.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="139.3" y="-141.6" width="84.5" height="21.6"/><text x="181.5" y="-126.1">call_method</text></a><path d="M149.8,-142.1C142.7,-144.8 135.3,-147.8 128.4,-150.8 110.7,-158.5 91.3,-168.1 75.9,-175.9"/><polygon fill="#8a93a5" points="75.2,-173.5 70,-178.9 77.4,-177.9"/><a href="../proc/render_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.5" y="-101.6" width="88.1" height="21.6"/><text x="181.5" y="-86.1">render_node</text></a><path d="M145.4,-102C139.5,-104.5 133.7,-107.4 128.4,-110.8 101.7,-128 76.5,-155.1 61.5,-172.9"/><polygon fill="#8a93a5" points="59.6,-171.4 57,-178.3 63.4,-174.5"/><a href="../proc/render_loop.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="139.6" y="-61.6" width="83.8" height="21.6"/><text x="181.5" y="-46.1">render_loop</text></a><path d="M142.9,-62C137.7,-64.5 132.8,-67.4 128.4,-70.8 93.4,-98.6 67.9,-145.7 55.5,-171.8"/><polygon fill="#8a93a5" points="53.3,-170.8 52.6,-178.2 57.8,-172.8"/><a href="../proc/define_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="134.9" y="-21.6" width="93.2" height="21.6"/><text x="181.5" y="-6.1">define_macro</text></a><path d="M141.4,-22.1C136.7,-24.5 132.3,-27.4 128.4,-30.8 84.7,-70.3 61.3,-138.7 52,-171.8"/><polygon fill="#8a93a5" points="49.7,-170.9 50.2,-178.3 54.4,-172.2"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="270.6" y="-341.6" width="54" height="21.6"/><text x="297.6" y="-326.1" fill="white">...</text><path stroke-dasharray="5,2" d="M270.2,-330.8C259.9,-330.8 247.7,-330.8 235.8,-330.8"/><polygon fill="#8a93a5" points="236.1,-328.4 229.1,-330.8 236.1,-333.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="270.6" y="-181.6" width="54" height="21.6"/><text x="297.6" y="-166.1" fill="white">...</text><path stroke-dasharray="5,2" d="M270.2,-170.8C260.6,-170.8 249.4,-170.8 238.3,-170.8"/><polygon fill="#8a93a5" points="238.4,-168.4 231.4,-170.8 238.4,-173.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="270.6" y="-101.6" width="54" height="21.6"/><text x="297.6" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M270.2,-90.8C259.5,-90.8 246.7,-90.8 234.3,-90.8"/><polygon fill="#8a93a5" points="234.3,-88.4 227.3,-90.8 234.3,-93.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> compare_two(c, op, a, b, holds)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c    <span class="d">!! the state</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: op           <span class="d">!! the comparison</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: a      <span class="d">!! the first operand</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: b      <span class="d">!! the second operand</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(out) :: holds       <span class="d">!! the result</span>
+    <span class="k">integer</span> :: k, step
+
+    holds = <span class="k">.false.</span>
+    <span class="k">select</span> <span class="k">case</span> (op)
+    <span class="k">case</span> (C_EQ)
+        holds = equal(a, b)
+    <span class="k">case</span> (C_NE)
+        holds = <span class="k">.not.</span> equal(a, b)
+    <span class="k">case</span> (C_IN, C_NOT_IN)
+        <span class="k">if</span> (b%<span class="k">kind</span> == V_STR <span class="k">.and.</span> a%<span class="k">kind</span> == V_STR) <span class="k">then</span>
+            holds = <span class="k">index</span>(b%text, a%text) &gt; <span class="n">0</span>
+        <span class="k">else</span> <span class="k">if</span> (b%<span class="k">kind</span> == V_LIST <span class="k">.or.</span> b%<span class="k">kind</span> == V_TUPLE <span class="k">.or.</span> b%<span class="k">kind</span> == V_DICT) <span class="k">then</span>
+            step = <span class="k">merge</span>(<span class="n">2</span>, <span class="n">1</span>, b%<span class="k">kind</span> == V_DICT)
+            <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(b%items), step
+                <span class="k">if</span> (equal(a, b%items(k))) holds = <span class="k">.true.</span>
+            <span class="k">end</span> <span class="k">do</span>
+        <span class="k">else</span>
+            <span class="k">call</span> fail(c, <span class="s">"the right operand of 'in' cannot be searched"</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (op == C_NOT_IN) holds = <span class="k">.not.</span> holds
+    <span class="k">case</span> default
+        <span class="k">if</span> (a%<span class="k">kind</span> == V_STR <span class="k">.and.</span> b%<span class="k">kind</span> == V_STR) <span class="k">then</span>
+            <span class="k">select</span> <span class="k">case</span> (op)
+            <span class="k">case</span> (C_LT); holds = <span class="k">llt</span>(a%text, b%text)
+            <span class="k">case</span> (C_GT); holds = <span class="k">lgt</span>(a%text, b%text)
+            <span class="k">case</span> (C_LE); holds = <span class="k">lle</span>(a%text, b%text)
+            <span class="k">case</span> default; holds = <span class="k">lge</span>(a%text, b%text)
+            <span class="k">end</span> <span class="k">select</span>
+        <span class="k">else</span> <span class="k">if</span> (a%<span class="k">kind</span> == V_STR <span class="k">.or.</span> b%<span class="k">kind</span> == V_STR <span class="k">.or.</span> a%<span class="k">kind</span> &gt; V_INT <span class="k">.or.</span> b%<span class="k">kind</span> &gt; V_INT) <span class="k">then</span>
+            <span class="k">call</span> fail(c, <span class="s">'values cannot be ordered'</span>)
+        <span class="k">else</span>
+            <span class="k">select</span> <span class="k">case</span> (op)
+            <span class="k">case</span> (C_LT); holds = a%number &lt; b%number
+            <span class="k">case</span> (C_GT); holds = a%number &gt; b%number
+            <span class="k">case</span> (C_LE); holds = a%number &lt;= b%number
+            <span class="k">case</span> default; holds = a%number &gt;= b%number
+            <span class="k">end</span> <span class="k">select</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">select</span>
+<span class="k">end</span> <span class="k">subroutine</span> compare_two</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

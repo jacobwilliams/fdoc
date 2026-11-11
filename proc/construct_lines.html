@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>construct_lines &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>construct_lines<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> construct_lines(<span class="intent attr-in" title="intent(in)">low</span>, <span class="intent attr-out" title="intent(out)">starts</span>, <span class="intent attr-out" title="intent(out)">stops</span>)</div>
+<div class="doc">
+<p>The lines of <code>low</code> that could start or end a procedure or type.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-low"><td class="name">low</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the file, in lowercase</p></td></tr>
+<tr id="variable-starts"><td class="name">starts</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>where each line starts</p></td></tr>
+<tr id="variable-stops"><td class="name">stops</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>where each line ends</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/locate_in_file.html">locate_in_file</a></li></ul>
+<div class="graph"><svg width="569pt" height="30pt"
+ viewBox="0 0 569 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/construct_lines.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="101.1" height="21.6"/><text x="50.6" y="-6.1">construct_lines</text></a><a href="../proc/locate_in_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.1" y="-21.6" width="90.3" height="21.6"/><text x="182.3" y="-6.1">locate_in_file</text></a><path d="M136.6,-10.8C128.2,-10.8 119.2,-10.8 110.4,-10.8"/><polygon fill="#8a93a5" points="110.6,-8.4 103.6,-10.8 110.6,-13.3"/><a href="../proc/locate_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="263.4" y="-21.6" width="101.8" height="21.6"/><text x="314.3" y="-6.1">locate_sources</text></a><path d="M263,-10.8C254.3,-10.8 245.1,-10.8 236.3,-10.8"/><polygon fill="#8a93a5" points="236.4,-8.4 229.4,-10.8 236.4,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="401.2" y="-21.6" width="69.3" height="21.6"/><text x="435.9" y="-6.1">write_site</text></a><path d="M400.9,-10.8C392.5,-10.8 383.2,-10.8 373.9,-10.8"/><polygon fill="#8a93a5" points="373.9,-8.4 366.9,-10.8 373.9,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="506.5" y="-21.6" width="54" height="21.6"/><text x="533.5" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M506.2,-10.8C497.8,-10.8 488.3,-10.8 479.1,-10.8"/><polygon fill="#8a93a5" points="479.2,-8.4 472.2,-10.8 479.2,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">subroutine</span> construct_lines(low, starts, stops)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: low             <span class="d">!! the file, in lowercase</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: starts(:)  <span class="d">!! where each line starts</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: stops(:)   <span class="d">!! where each line ends</span>
+    <span class="k">integer</span> :: <span class="k">pass</span>, i, j, stop_at, n
+
+    <span class="k">do</span> <span class="k">pass</span> = <span class="n">1</span>, <span class="n">2</span>
+        n = <span class="n">0</span>
+        i = <span class="n">1</span>
+        <span class="k">do</span> <span class="k">while</span> (i &lt;= <span class="k">len</span>(low))
+            j = <span class="k">index</span>(low(i:), <span class="k">achar</span>(<span class="n">10</span>))
+            stop_at = <span class="k">merge</span>(<span class="k">len</span>(low), i + j - <span class="n">2</span>, j == <span class="n">0</span>)
+            <span class="k">if</span> (<span class="k">index</span>(low(i:stop_at), <span class="s">'subroutine'</span>) &gt; <span class="n">0</span> <span class="k">.or.</span> <span class="k">index</span>(low(i:stop_at), <span class="s">'function'</span>) &gt; <span class="n">0</span> <span class="k">.or.</span> &amp;
+                <span class="k">index</span>(low(i:stop_at), <span class="s">'type'</span>) &gt; <span class="n">0</span> <span class="k">.or.</span> <span class="k">index</span>(low(i:stop_at), <span class="s">'procedure'</span>) &gt; <span class="n">0</span>) <span class="k">then</span>
+                n = n + <span class="n">1</span>
+                <span class="k">if</span> (<span class="k">pass</span> == <span class="n">2</span>) <span class="k">then</span>
+                    starts(n) = i
+                    stops(n) = stop_at
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (j == <span class="n">0</span>) <span class="k">exit</span>
+            i = stop_at + <span class="n">2</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (<span class="k">pass</span> == <span class="n">1</span>) <span class="k">allocate</span> (starts(n), stops(n))
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> construct_lines</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

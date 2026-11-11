@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>enum_sections &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>enum_sections<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> enum_sections(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">ids</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write enumerations.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-ids"><td class="name">ids</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the enumerations</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/anchor.html">anchor</a></li><li><a href="../proc/argument_table.html">argument_table</a></li></ul>
+<div class="graph"><svg width="759pt" height="338pt"
+ viewBox="0 0 759 338" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 334.3)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/enum_sections.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-182.3" width="101.8" height="21.6"/><text x="50.9" y="-166.8">enum_sections</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="697.2" y="-113.3" width="54" height="21.6"/><text x="724.2" y="-97.8">add</text></a><path d="M62.5,-159.7C98,-121.7 217.8,-4.5 342.6,-4.5 342.6,-4.5 342.6,-4.5 491.8,-4.5 567.6,-4.5 595,13.4 661.2,-23.5 674.2,-30.7 697.4,-63.5 711.5,-84.5"/><polygon fill="#8a93a5" points="709.3,-85.6 715.2,-90.1 713.4,-82.9"/><a href="../proc/anchor.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="316.5" y="-250.3" width="54.1" height="21.6"/><text x="343.6" y="-234.8">anchor</text></a><path d="M102.2,-183.2C161.2,-197 257.3,-219.5 308.3,-231.4"/><polygon fill="#8a93a5" points="307.5,-233.8 314.9,-233 308.6,-229"/><a href="../proc/argument_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.8" y="-182.3" width="104.7" height="21.6"/><text x="190.2" y="-166.8">argument_table</text></a><path d="M102.7,-171.5C111.3,-171.5 120.4,-171.5 129.3,-171.5"/><polygon fill="#8a93a5" points="129.3,-173.9 136.3,-171.5 129.3,-169"/><a href="../proc/entity_anchor.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="444.6" y="-250.3" width="92.5" height="21.6"/><text x="490.8" y="-234.8">entity_anchor</text></a><path d="M370.9,-239.5C389,-239.5 413.7,-239.5 436,-239.5"/><polygon fill="#8a93a5" points="435.8,-241.9 442.8,-239.5 435.8,-237"/><path d="M344.6,-200.5C404.9,-202.1 559.9,-222.3 616.1,-200.5"/><path d="M212.5,-182.6C230.1,-191.6 255.7,-204.4 278.6,-214.5 288.1,-218.7 298.6,-222.9 308.3,-226.7"/><polygon fill="#8a93a5" points="307.4,-229 314.8,-229.2 309.2,-224.4"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="573.1" y="-132.3" width="88.1" height="21.6"/><text x="617.1" y="-116.8">html_escape</text></a><path d="M344.6,-121.5C419.6,-104.4 509.2,-109.1 564.4,-114.7"/><polygon fill="#8a93a5" points="563.9,-117.2 571.2,-115.5 564.4,-112.3"/><a href="../proc/write_type.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="454" y="-93.3" width="73.6" height="21.6"/><text x="490.8" y="-77.8">write_type</text></a><path d="M219.8,-160.2C249.9,-148.8 298.9,-131.4 342.6,-121.5"/><path d="M344.6,-121.5C378.8,-113.7 417.1,-103.3 445.8,-95.3"/><polygon fill="#8a93a5" points="446.1,-97.7 452.2,-93.4 444.8,-93"/><a href="../proc/badge.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="463.8" y="-172.3" width="54" height="21.6"/><text x="490.8" y="-156.8">badge</text></a><path d="M231,-182.7C261.3,-190.4 304.2,-199.4 342.6,-200.5"/><path d="M344.6,-200.5C384.4,-201.6 428.4,-187.5 457.4,-175.9"/><polygon fill="#8a93a5" points="458.2,-178.3 463.8,-173.3 456.4,-173.7"/><a href="../proc/argument_attributes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="278.6" y="-172.3" width="130" height="21.6"/><text x="343.6" y="-156.8">argument_attributes</text></a><path d="M242.9,-168.1C251.6,-167.5 260.8,-166.9 269.9,-166.3"/><polygon fill="#8a93a5" points="270,-168.7 276.8,-165.8 269.6,-163.8"/><path d="M532.3,-228.2C556.8,-221.1 588.6,-211.2 616.1,-200.5"/><path d="M500.5,-228.4C519.6,-204.2 564.3,-148.2 573.1,-141.5 575.2,-139.8 577.5,-138.2 579.9,-136.8"/><polygon fill="#8a93a5" points="581,-139 586,-133.4 578.7,-134.7"/><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="574.9" y="-250.3" width="84.5" height="21.6"/><text x="617.1" y="-234.8">object_word</text></a><path d="M537.4,-239.5C546.8,-239.5 556.8,-239.5 566.4,-239.5"/><polygon fill="#8a93a5" points="566.1,-241.9 573.1,-239.5 566.1,-237"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="575.6" y="-330.3" width="83.1" height="21.6"/><text x="617.1" y="-314.8">page_name</text></a><path d="M505.3,-250.8C521,-263.5 547.9,-284.5 573.1,-299.5 576,-301.2 579.1,-302.9 582.3,-304.6"/><polygon fill="#8a93a5" points="581,-306.7 588.4,-307.6 583.2,-302.3"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="582.8" y="-290.3" width="68.6" height="21.6"/><text x="617.1" y="-274.8">url_quote</text></a><path d="M526.8,-250.7C541.7,-255.5 559.2,-261.2 574.8,-266.2"/><polygon fill="#8a93a5" points="573.8,-268.4 581.3,-268.3 575.3,-263.8"/><path d="M661.4,-113.6C670.4,-112 679.8,-110.3 688.4,-108.8"/><polygon fill="#8a93a5" points="688.8,-111.2 695.3,-107.5 688,-106.3"/><path d="M528,-85.6C571.8,-89.4 645.3,-95.7 688.5,-99.5"/><polygon fill="#8a93a5" points="688.3,-101.9 695.5,-100.1 688.7,-97"/><path d="M527.8,-93.7C541.7,-98.1 557.7,-103.2 572.3,-107.7"/><polygon fill="#8a93a5" points="571.4,-110 578.8,-109.8 572.9,-105.3"/><a href="../proc/link_to.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="590.1" y="-54.3" width="54" height="21.6"/><text x="617.1" y="-38.8">link_to</text></a><path d="M527.8,-71.2C544.8,-65.9 565,-59.5 581.8,-54.2"/><polygon fill="#8a93a5" points="582.3,-56.6 588.3,-52.2 580.9,-52"/><path d="M515.5,-172.7C546.1,-186.7 597.6,-207.7 616.1,-200.5"/><path d="M618.1,-200.5C637.6,-192.9 644.6,-194.3 661.2,-181.5 683.1,-164.4 701.7,-138 712.7,-120.5"/><polygon fill="#8a93a5" points="714.6,-122.1 716.1,-114.9 710.4,-119.6"/><path d="M518.2,-153C534.3,-147.8 555.2,-141.1 573.6,-135.2"/><polygon fill="#8a93a5" points="573.9,-137.6 579.9,-133.1 572.4,-133"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="580.6" y="-172.3" width="72.9" height="21.6"/><text x="617.1" y="-156.8">lowercase</text></a><path d="M518.2,-161.5C533.9,-161.5 554.2,-161.5 572.2,-161.5"/><polygon fill="#8a93a5" points="571.8,-163.9 578.8,-161.5 571.8,-159"/><path d="M408.7,-161.5C424.7,-161.5 441.2,-161.5 455.2,-161.5"/><polygon fill="#8a93a5" points="455,-163.9 462,-161.5 455,-159"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="697.2" y="-250.3" width="54" height="21.6"/><text x="724.2" y="-234.8" fill="white">...</text><path stroke-dasharray="5,2" d="M659.6,-239.5C669.1,-239.5 679.1,-239.5 688.2,-239.5"/><polygon fill="#8a93a5" points="688.2,-241.9 695.2,-239.5 688.2,-237"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="697.2" y="-330.3" width="54" height="21.6"/><text x="724.2" y="-314.8" fill="white">...</text><path stroke-dasharray="5,2" d="M659,-319.5C668.7,-319.5 679,-319.5 688.4,-319.5"/><polygon fill="#8a93a5" points="688.2,-321.9 695.2,-319.5 688.2,-317"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="697.2" y="-54.3" width="54" height="21.6"/><text x="724.2" y="-38.8" fill="white">...</text><path stroke-dasharray="5,2" d="M644.3,-43.5C657.8,-43.5 674.3,-43.5 688.7,-43.5"/><polygon fill="#8a93a5" points="688.4,-45.9 695.4,-43.5 688.4,-41"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/entity_page.html">entity_page</a></li></ul>
+<div class="graph"><svg width="629pt" height="30pt"
+ viewBox="0 0 629 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/enum_sections.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="101.8" height="21.6"/><text x="50.9" y="-6.1">enum_sections</text></a><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.8" y="-21.6" width="81.6" height="21.6"/><text x="178.6" y="-6.1">entity_page</text></a><path d="M137.5,-10.8C129.1,-10.8 120.1,-10.8 111.2,-10.8"/><polygon fill="#8a93a5" points="111.2,-8.4 104.2,-10.8 111.2,-13.3"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="255.5" y="-21.6" width="116.3" height="21.6"/><text x="313.6" y="-6.1">write_entity_page</text></a><path d="M255.1,-10.8C246,-10.8 236.8,-10.8 228,-10.8"/><polygon fill="#8a93a5" points="228.2,-8.4 221.2,-10.8 228.2,-13.3"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="407.8" y="-21.6" width="122.8" height="21.6"/><text x="469.2" y="-6.1">write_entity_pages</text></a><path d="M407.5,-10.8C398.5,-10.8 389.2,-10.8 380.1,-10.8"/><polygon fill="#8a93a5" points="380.4,-8.4 373.4,-10.8 380.4,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="566.6" y="-21.6" width="54" height="21.6"/><text x="593.6" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M566.3,-10.8C558.2,-10.8 548.9,-10.8 539.3,-10.8"/><polygon fill="#8a93a5" points="539.3,-8.4 532.3,-10.8 539.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> enum_sections(site, ids, b)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site        <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: ids(:)           <span class="d">!! the enumerations</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">if</span> (<span class="k">size</span>(ids) == <span class="n">0</span>) <span class="k">return</span>
+    <span class="k">call</span> add(b, <span class="s">'&lt;h2 id="enumerations"&gt;Enumerations&lt;/h2&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(ids)
+        <span class="k">call</span> add(b, <span class="s">'&lt;div class="item" id="'</span>)
+        <span class="k">call</span> anchor(site, ids(k), b)
+        <span class="k">call</span> add(b, <span class="s">'"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">call</span> argument_table(site, site%p%list%box(ids(k))%e%children, <span class="k">.true.</span>, b)
+        <span class="k">call</span> add(b, <span class="s">'&lt;/div&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> enum_sections</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

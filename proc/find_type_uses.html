@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>find_type_uses &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>find_type_uses<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> find_type_uses(<span class="intent attr-inout" title="intent(inout)">site</span>)</div>
+<div class="doc">
+<p>Find where each type is used, once, so that the page of a type does not search the whole project. A
+specific procedure counts as its generic, which often is the only one with a page. The methods of a
+type are left out, as each of them takes it, and so are local variables.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add_use.html">add_use</a></li><li><a href="../proc/is_shown.html">is_shown</a></li><li><a href="../proc/sort_by_name.html">sort_by_name</a></li></ul>
+<div class="graph"><svg width="352pt" height="110pt"
+ viewBox="0 0 352 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/find_type_uses.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="101.9" height="21.6"/><text x="50.9" y="-46.1">find_type_uses</text></a><a href="../proc/add_use.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="154.1" y="-101.6" width="64.3" height="21.6"/><text x="186.2" y="-86.1">add_use</text></a><path d="M91.2,-62.6C108.5,-67.8 128.8,-73.9 146.1,-79.1"/><polygon fill="#8a93a5" points="145,-81.3 152.4,-80.9 146.4,-76.6"/><a href="../proc/is_shown.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="151.9" y="-61.6" width="68.6" height="21.6"/><text x="186.2" y="-46.1">is_shown</text></a><path d="M102.7,-50.8C116.1,-50.8 130.4,-50.8 143.3,-50.8"/><polygon fill="#8a93a5" points="143,-53.3 150,-50.8 143,-48.4"/><a href="../proc/sort_by_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.9" y="-21.6" width="96.8" height="21.6"/><text x="186.2" y="-6.1">sort_by_name</text></a><path d="M91.2,-39C106.4,-34.5 123.8,-29.2 139.6,-24.5"/><polygon fill="#8a93a5" points="140.2,-26.9 146.2,-22.5 138.8,-22.2"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="275.3" y="-101.6" width="63.5" height="21.6"/><text x="307.1" y="-86.1">push_int</text></a><path d="M218.8,-90.8C233.4,-90.8 250.9,-90.8 266.4,-90.8"/><polygon fill="#8a93a5" points="266.3,-93.3 273.3,-90.8 266.3,-88.4"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="270.6" y="-21.6" width="72.9" height="21.6"/><text x="307.1" y="-6.1">lowercase</text></a><path d="M234.9,-10.8C243.8,-10.8 253.1,-10.8 261.9,-10.8"/><polygon fill="#8a93a5" points="261.6,-13.3 268.6,-10.8 261.6,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="305pt" height="30pt"
+ viewBox="0 0 305 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/find_type_uses.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="101.9" height="21.6"/><text x="50.9" y="-6.1">find_type_uses</text></a><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.9" y="-21.6" width="69.3" height="21.6"/><text x="172.5" y="-6.1">write_site</text></a><path d="M137.6,-10.8C129.2,-10.8 120,-10.8 110.9,-10.8"/><polygon fill="#8a93a5" points="111,-8.4 104,-10.8 111,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="243.2" y="-21.6" width="54" height="21.6"/><text x="270.2" y="-6.1">run</text></a><path d="M242.8,-10.8C234.4,-10.8 224.9,-10.8 215.7,-10.8"/><polygon fill="#8a93a5" points="215.9,-8.4 208.9,-10.8 215.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> find_type_uses(site)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(inout) :: site     <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: generic_of(:)
+    <span class="k">integer</span> :: k, j, slots, parent, owner
+
+    <span class="k">associate</span> (list =&gt; site%p%list)
+        <span class="k">allocate</span> (site%use_slot(list%n), source=<span class="n">0</span>)
+        <span class="k">allocate</span> (generic_of(list%n), source=<span class="n">0</span>)
+        slots = <span class="n">0</span>
+        <span class="k">do</span> k = <span class="n">1</span>, list%n
+            <span class="k">associate</span> (e =&gt; list%box(k)%e)
+                <span class="k">if</span> (e%<span class="k">kind</span> == E_TYPE) <span class="k">then</span>
+                    slots = slots + <span class="n">1</span>
+                    site%use_slot(k) = slots
+                <span class="k">else</span> <span class="k">if</span> (e%<span class="k">kind</span> == E_INTERFACE <span class="k">.and.</span> <span class="k">allocated</span>(e%more%modproc_ids)) <span class="k">then</span>
+                    <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(e%more%modproc_ids)
+                        <span class="k">if</span> (e%more%modproc_ids(j) &gt; <span class="n">0</span>) generic_of(e%more%modproc_ids(j)) = k
+                    <span class="k">end</span> <span class="k">do</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">allocate</span> (site%type_uses(slots))
+        <span class="k">do</span> k = <span class="n">1</span>, list%n
+            <span class="k">associate</span> (v =&gt; list%box(k)%e)
+                <span class="k">if</span> (v%<span class="k">kind</span> /= E_VARIABLE <span class="k">.or.</span> v%proto_id == <span class="n">0</span> <span class="k">.or.</span> v%parent == <span class="n">0</span>) <span class="k">cycle</span>
+                <span class="k">if</span> (site%use_slot(v%proto_id) == <span class="n">0</span>) <span class="k">cycle</span>
+                parent = v%parent
+                <span class="k">associate</span> (uses =&gt; site%type_uses(site%use_slot(v%proto_id)), up =&gt; list%box(parent)%e)
+                    <span class="k">select</span> <span class="k">case</span> (up%<span class="k">kind</span>)
+                    <span class="k">case</span> (E_TYPE)
+                        <span class="k">if</span> (parent /= v%proto_id <span class="k">.and.</span> is_shown(list, parent)) <span class="k">call</span> add_use(uses%components, parent)
+                    <span class="k">case</span> (E_MODULE, E_SUBMODULE)
+                        <span class="k">if</span> (is_shown(list, k)) <span class="k">call</span> add_use(uses%variables, k)
+                    <span class="k">case</span> (E_SUBROUTINE, E_FUNCTION, E_MODPROC)
+                        <span class="k">if</span> (up%bound_to == v%proto_id) <span class="k">cycle</span>
+                        owner = parent
+                        <span class="k">if</span> (list%box(up%parent)%e%<span class="k">kind</span> == E_INTERFACE) owner = up%parent
+                        <span class="k">if</span> (generic_of(parent) &gt; <span class="n">0</span>) owner = generic_of(parent)
+                        <span class="k">if</span> (<span class="k">.not.</span> is_shown(list, owner)) <span class="k">cycle</span>
+                        <span class="k">if</span> (up%<span class="k">result</span> == k) <span class="k">then</span>
+                            <span class="k">call</span> add_use(uses%results, owner)
+                        <span class="k">else</span> <span class="k">if</span> (<span class="k">allocated</span>(up%more%arg_ids)) <span class="k">then</span>
+                            <span class="k">if</span> (<span class="k">findloc</span>(up%more%arg_ids, k, <span class="n">1</span>) &gt; <span class="n">0</span>) <span class="k">call</span> add_use(uses%arguments, owner)
+                        <span class="k">end</span> <span class="k">if</span>
+                    <span class="k">end</span> <span class="k">select</span>
+                <span class="k">end</span> <span class="k">associate</span>
+            <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">do</span> k = <span class="n">1</span>, slots
+            <span class="k">associate</span> (uses =&gt; site%type_uses(k))
+                <span class="k">call</span> sort_by_name(list, uses%arguments)
+                <span class="k">call</span> sort_by_name(list, uses%results)
+                <span class="k">call</span> sort_by_name(list, uses%components)
+                <span class="k">call</span> sort_by_name(list, uses%variables)
+            <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">subroutine</span> find_type_uses</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

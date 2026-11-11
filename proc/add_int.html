@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>add_int &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>add_int<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> add_int(<span class="intent attr-inout" title="intent(inout)">b</span>, <span class="intent attr-in" title="intent(in)">value</span>)</div>
+<div class="doc">
+<p>Write <code>value</code>, not negative, which may be too large for <a href="../proc/int_text.html">int_text</a>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+<tr id="variable-value"><td class="name">value</td><td class="type">integer(kind=int64)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the number</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add_int.html">add_int</a></li><li><a href="../proc/add.html">add</a></li></ul>
+<div class="graph"><svg width="155pt" height="30pt"
+ viewBox="0 0 155 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_int.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="57" height="21.6"/><text x="28.5" y="-6.1">add_int</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="93" y="-21.6" width="54" height="21.6"/><text x="120" y="-6.1">add</text></a><path d="M57.9,-10.8C66.2,-10.8 75.5,-10.8 84.2,-10.8"/><polygon fill="#8a93a5" points="84.2,-13.3 91.2,-10.8 84.2,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/grouped.html">grouped</a></li><li><a href="../proc/number_cell.html">number_cell</a></li><li><a href="../proc/size_text.html">size_text</a></li><li><a href="../proc/stats_cells.html">stats_cells</a></li></ul>
+<div class="graph"><svg width="803pt" height="100pt"
+ viewBox="0 0 803 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 95.7)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_int.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="57" height="21.6"/><text x="28.5" y="-46.1">add_int</text></a><a href="../proc/stats_cells.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="312.4" y="-61.6" width="75.1" height="21.6"/><text x="349.9" y="-46.1">stats_cells</text></a><path d="M317.2,-62C274,-75.9 194.1,-97.1 125.1,-89.8"/><a href="../proc/number_cell.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="191.2" y="-61.6" width="85.2" height="21.6"/><text x="233.8" y="-46.1">number_cell</text></a><path d="M312.2,-50.8C303.5,-50.8 294.1,-50.8 284.9,-50.8"/><polygon fill="#8a93a5" points="285.1,-48.4 278.1,-50.8 285.1,-53.3"/><a href="../proc/size_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="200.9" y="-21.6" width="65.7" height="21.6"/><text x="233.8" y="-6.1">size_text</text></a><path d="M316.8,-39.6C303.7,-35 288.4,-29.6 274.6,-24.7"/><polygon fill="#8a93a5" points="275.5,-22.5 268.1,-22.5 273.9,-27.1"/><path d="M216.2,-62C195.6,-74.8 158.9,-93.4 125.1,-89.8"/><path d="M123.1,-89.8C99.1,-87.2 73.9,-76.2 55.7,-66.5"/><polygon fill="#8a93a5" points="57,-64.4 49.7,-63.2 54.6,-68.7"/><a href="../proc/grouped.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="93" y="-61.6" width="62.1" height="21.6"/><text x="124.1" y="-46.1">grouped</text></a><path d="M190.8,-50.8C182,-50.8 172.7,-50.8 163.9,-50.8"/><polygon fill="#8a93a5" points="163.9,-48.4 156.9,-50.8 163.9,-53.3"/><path d="M92.7,-50.8C84.2,-50.8 74.9,-50.8 66.1,-50.8"/><polygon fill="#8a93a5" points="66.4,-48.4 59.4,-50.8 66.4,-53.3"/><path d="M200.6,-13.9C172.1,-17 129.5,-22.5 93,-30.8 84.2,-32.8 74.7,-35.5 65.9,-38.2"/><polygon fill="#8a93a5" points="65.4,-35.8 59.5,-40.3 66.9,-40.5"/><path d="M202.5,-22C190.2,-26.6 175.9,-31.9 163,-36.7"/><polygon fill="#8a93a5" points="162.3,-34.4 156.6,-39.1 164,-39"/><a href="../proc/stats_total.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="423.5" y="-42.6" width="73.7" height="21.6"/><text x="460.3" y="-27.1">stats_total</text></a><path d="M423.2,-38.1C414.5,-39.6 405.2,-41.3 396.1,-42.9"/><polygon fill="#8a93a5" points="395.9,-40.4 389.4,-44 396.8,-45.2"/><a href="../proc/list_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="533.1" y="-61.6" width="66.4" height="21.6"/><text x="566.3" y="-46.1">list_page</text></a><path d="M532.7,-51.4C521.4,-51.5 508.7,-51.7 497.1,-51.8 464.4,-52 456.2,-52 423.5,-51.8 414.7,-51.7 405.3,-51.6 396.3,-51.5"/><polygon fill="#8a93a5" points="396.4,-49.1 389.3,-51.4 396.3,-54"/><path d="M532.7,-44.8C524.1,-43.3 514.7,-41.6 505.6,-39.9"/><polygon fill="#8a93a5" points="506.2,-37.5 498.9,-38.7 505.4,-42.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="635.6" y="-61.6" width="69.3" height="21.6"/><text x="670.2" y="-46.1">write_site</text></a><path d="M635.3,-50.8C626.6,-50.8 617.2,-50.8 608.2,-50.8"/><polygon fill="#8a93a5" points="608.2,-48.4 601.2,-50.8 608.2,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="740.9" y="-61.6" width="54" height="21.6"/><text x="767.9" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M740.5,-50.8C732.1,-50.8 722.6,-50.8 713.4,-50.8"/><polygon fill="#8a93a5" points="713.6,-48.4 706.6,-50.8 713.6,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> add_int(b, <span class="k">value</span>)
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">integer</span>(int64), <span class="k">intent</span>(in) :: <span class="k">value</span>     <span class="d">!! the number</span>
+
+    <span class="k">if</span> (<span class="k">value</span> &gt;= <span class="n">10</span>) <span class="k">call</span> add_int(b, <span class="k">value</span>/<span class="n">10</span>)
+    <span class="k">call</span> add(b, <span class="k">achar</span>(<span class="k">iachar</span>(<span class="s">'0'</span>) + <span class="k">int</span>(<span class="k">mod</span>(<span class="k">value</span>, <span class="n">10_int64</span>))))
+<span class="k">end</span> <span class="k">subroutine</span> add_int</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

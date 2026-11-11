@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>paragraph &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>paragraph<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> paragraph(<span class="intent attr-inout" title="intent(inout)">t</span>, <span class="intent attr-in" title="intent(in)">parent</span>, <span class="intent attr-in" title="intent(in)">block</span>)</div>
+<div class="doc">
+<p>The paragraph processor. In a tight list an item's text stays in the item.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/tree_t.html">tree_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the conversion</p></td></tr>
+<tr id="variable-parent"><td class="name">parent</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the node</p></td></tr>
+<tr id="variable-block"><td class="name">block</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the chunk</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/in_state.html">in_state</a></li><li><a href="../proc/last_child.html">last_child</a></li><li><a href="../proc/new_node~2.html">new_node</a></li><li><a href="../proc/adjustl_text.html">adjustl_text</a></li><li><a href="../proc/ends_with.html">ends_with</a></li><li><a href="../proc/strip.html">strip</a></li><li><a href="../proc/attribute_list.html">attribute_list</a></li></ul>
+<div class="graph"><svg width="408pt" height="268pt"
+ viewBox="0 0 408 268" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 263.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/paragraph.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-139.6" width="73.7" height="21.6"/><text x="36.8" y="-124.1">paragraph</text></a><a href="../proc/in_state.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="121.9" y="-179.6" width="59.9" height="21.6"/><text x="151.9" y="-164.1">in_state</text></a><path d="M71.1,-140.6C84.5,-145.3 100,-150.8 113.8,-155.7"/><polygon fill="#8a93a5" points="112.8,-157.9 120.2,-158 114.5,-153.3"/><a href="../proc/last_child.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="117.6" y="-219.6" width="68.6" height="21.6"/><text x="151.9" y="-204.1">last_child</text></a><path d="M49.8,-140.4C63.5,-153.3 87,-174.2 109.7,-188.8 112.4,-190.5 115.3,-192.2 118.2,-193.9"/><polygon fill="#8a93a5" points="116.8,-195.9 124.2,-197 119.1,-191.6"/><a href="../proc/new_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="114.7" y="-259.6" width="74.4" height="21.6"/><text x="151.9" y="-244.1">new_node</text></a><path d="M43.7,-140.4C54.3,-160.7 78.8,-202.8 109.7,-228.8 111.7,-230.5 113.9,-232.1 116.1,-233.6"/><polygon fill="#8a93a5" points="114.5,-235.5 121.8,-236.9 117,-231.3"/><a href="../proc/adjustl_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="111.8" y="-139.6" width="80.2" height="21.6"/><text x="151.9" y="-124.1">adjustl_text</text></a><path d="M74.5,-128.8C83.7,-128.8 93.7,-128.8 103.3,-128.8"/><polygon fill="#8a93a5" points="103.1,-131.3 110.1,-128.8 103.1,-126.4"/><a href="../proc/ends_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="233.4" y="-139.6" width="72.9" height="21.6"/><text x="269.9" y="-124.1">ends_with</text></a><path d="M72.5,-117.1C84.2,-113.7 97.4,-110.5 109.7,-108.8 146.9,-103.7 156.9,-103.9 194.2,-108.8 204.7,-110.2 215.8,-112.6 226.2,-115.3"/><polygon fill="#8a93a5" points="225.4,-117.7 232.8,-117.1 226.7,-112.9"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="124.9" y="-61.6" width="54" height="21.6"/><text x="151.9" y="-46.1">strip</text></a><path d="M53,-117C67.3,-106 89.6,-89.3 109.7,-75.8 114.4,-72.6 119.6,-69.3 124.6,-66.2"/><polygon fill="#8a93a5" points="125.8,-68.4 130.5,-62.7 123.2,-64.2"/><a href="../proc/attribute_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="109.7" y="-21.6" width="84.5" height="21.6"/><text x="151.9" y="-6.1">attribute_list</text></a><path d="M43.9,-117.1C54.7,-97.1 79.2,-56.2 109.7,-30.8 111.7,-29.1 113.9,-27.5 116.1,-26.1"/><polygon fill="#8a93a5" points="117,-28.4 121.8,-22.7 114.6,-24.1"/><path d="M182.2,-158.7C196.2,-153.9 213.3,-148 228.6,-142.7"/><polygon fill="#8a93a5" points="229.1,-145.1 234.9,-140.5 227.5,-140.5"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="238.1" y="-259.6" width="63.5" height="21.6"/><text x="269.9" y="-244.1">push_int</text></a><path d="M189.6,-248.8C202.3,-248.8 216.7,-248.8 229.6,-248.8"/><polygon fill="#8a93a5" points="229.4,-251.3 236.4,-248.8 229.4,-246.4"/><a href="../proc/split_words.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="230.2" y="-21.6" width="79.4" height="21.6"/><text x="269.9" y="-6.1">split_words</text></a><path d="M194.4,-10.8C203.2,-10.8 212.5,-10.8 221.5,-10.8"/><polygon fill="#8a93a5" points="221.4,-13.3 228.4,-10.8 221.4,-8.4"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="345.6" y="-21.6" width="54" height="21.6"/><text x="372.6" y="-6.1">push</text></a><path d="M309.8,-10.8C318.7,-10.8 328.1,-10.8 336.8,-10.8"/><polygon fill="#8a93a5" points="336.7,-13.3 343.7,-10.8 336.7,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/definition_block.html">definition_block</a></li><li><a href="../proc/parse_block.html">parse_block</a></li></ul>
+<div class="graph"><svg width="724pt" height="110pt"
+ viewBox="0 0 724 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/paragraph.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="73.7" height="21.6"/><text x="36.8" y="-46.1">paragraph</text></a><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="249.7" y="-61.6" width="84.5" height="21.6"/><text x="291.9" y="-46.1">parse_block</text></a><path d="M249.2,-51.4C237.7,-51.6 225.2,-51.7 213.7,-51.8 167.5,-52.1 155.9,-52.1 109.7,-51.8 101,-51.7 91.7,-51.6 82.8,-51.5"/><polygon fill="#8a93a5" points="82.9,-49.1 75.9,-51.4 82.9,-54"/><a href="../proc/definition_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="109.7" y="-42.6" width="104" height="21.6"/><text x="161.7" y="-27.1">definition_block</text></a><path d="M249.3,-44.6C240.7,-43.4 231.4,-42 222.3,-40.6"/><polygon fill="#8a93a5" points="222.8,-38.2 215.5,-39.6 222,-43.1"/><path d="M109.3,-39.7C100.4,-41.1 91.3,-42.5 82.6,-43.9"/><polygon fill="#8a93a5" points="82.5,-41.4 75.9,-44.9 83.2,-46.3"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="370.2" y="-61.6" width="95.3" height="21.6"/><text x="417.9" y="-46.1">parse_chunks</text></a><path d="M370,-50.8C361.2,-50.8 351.9,-50.8 343,-50.8"/><polygon fill="#8a93a5" points="343.1,-48.4 336.1,-50.8 343.1,-53.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="501.5" y="-101.6" width="124.2" height="21.6"/><text x="563.6" y="-86.1">markdown_to_html</text></a><path d="M522.2,-79.6C505.1,-74.8 484.9,-69.2 467,-64.2"/><polygon fill="#8a93a5" points="467.8,-61.9 460.4,-62.4 466.5,-66.6"/><a href="../proc/parse_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="525.7" y="-61.6" width="75.8" height="21.6"/><text x="563.6" y="-46.1">parse_one</text></a><path d="M525.2,-50.8C509.6,-50.8 491.2,-50.8 474.1,-50.8"/><polygon fill="#8a93a5" points="474.4,-48.4 467.4,-50.8 474.4,-53.3"/><a href="../proc/parse_text~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="526.1" y="-21.6" width="75.1" height="21.6"/><text x="563.6" y="-6.1">parse_text</text></a><path d="M525.6,-21.1C507.8,-26 486.3,-32 467.3,-37.3"/><polygon fill="#8a93a5" points="466.8,-34.9 460.7,-39.1 468.1,-39.6"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="661.7" y="-101.6" width="54" height="21.6"/><text x="688.7" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M661.3,-90.8C653.3,-90.8 644.1,-90.8 634.6,-90.8"/><polygon fill="#8a93a5" points="634.7,-88.4 627.7,-90.8 634.7,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="661.7" y="-61.6" width="54" height="21.6"/><text x="688.7" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M661.3,-50.8C646.4,-50.8 627.3,-50.8 610,-50.8"/><polygon fill="#8a93a5" points="610.3,-48.4 603.3,-50.8 610.3,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="661.7" y="-21.6" width="54" height="21.6"/><text x="688.7" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M661.3,-10.8C646.3,-10.8 627,-10.8 609.6,-10.8"/><polygon fill="#8a93a5" points="609.8,-8.4 602.8,-10.8 609.8,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> paragraph(t, parent, <span class="k">block</span>)
+    <span class="k">type</span>(tree_t), <span class="k">intent</span>(inout) :: t        <span class="d">!! the conversion</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent           <span class="d">!! the node</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">block</span>   <span class="d">!! the chunk</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text, attrs
+    <span class="k">integer</span> :: node, sibling, at
+
+    text = <span class="k">block</span>
+    <span class="k">if</span> (<span class="k">verify</span>(text, <span class="s">' '</span>//NL) == <span class="n">0</span>) <span class="k">return</span>
+    <span class="k">if</span> (in_state(t, <span class="s">'list'</span>)) <span class="k">then</span>
+        sibling = last_child(t, parent)
+        <span class="k">if</span> (sibling &gt; <span class="n">0</span>) <span class="k">then</span>
+            <span class="c">! text after a sublist</span>
+            <span class="k">call</span> new_node(t, parent, <span class="s">'p'</span>, node)
+            t%nodes(node)%text = adjustl_text(text)
+        <span class="k">else</span> <span class="k">if</span> (<span class="k">len</span>(t%nodes(parent)%text) &gt; <span class="n">0</span>) <span class="k">then</span>
+            t%nodes(parent)%text = t%nodes(parent)%text//NL//text
+        <span class="k">else</span>
+            t%nodes(parent)%text = adjustl_text(text)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    attrs = <span class="s">''</span>
+    at = <span class="k">index</span>(text, NL//<span class="s">'{:'</span>, back=<span class="k">.true.</span>)
+    <span class="k">if</span> (at &gt; <span class="n">0</span> <span class="k">.and.</span> ends_with(strip(text), <span class="s">'}'</span>)) <span class="k">then</span>
+        <span class="k">call</span> attribute_list(strip(text(at + <span class="n">3</span>:<span class="k">len_trim</span>(text) - <span class="n">1</span>)), attrs)
+        text = text(:at - <span class="n">1</span>)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">call</span> new_node(t, parent, <span class="s">'p'</span>, node)
+    t%nodes(node)%text = adjustl_text(text)
+    t%nodes(node)%attrs = attrs
+<span class="k">end</span> <span class="k">subroutine</span> paragraph</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

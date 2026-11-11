@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>is_input_directory &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_pages.f90.html">fdoc_pages.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_pages.html">fdoc_pages</a></div>
+<h1><span class="kind">function</span>is_input_directory<span class="attr attr-private">private</span></h1>
+<div class="sig">logical <span class="k">function</span> is_input_directory(<span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-in" title="intent(in)">directory</span>)</div>
+<div class="doc">
+<p>True if <code>directory</code> is an input of the project, so that it not being a page is expected.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-directory"><td class="name">directory</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the directory</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-is_input_directory"><td class="name">is_input_directory</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/contains_string.html">contains_string</a></li></ul>
+<div class="graph"><svg width="262pt" height="30pt"
+ viewBox="0 0 262 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_input_directory.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="116.3" height="21.6"/><text x="58.1" y="-6.1">is_input_directory</text></a><a href="../proc/contains_string.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="152.3" y="-21.6" width="101.8" height="21.6"/><text x="203.2" y="-6.1">contains_string</text></a><path d="M116.9,-10.8C125.7,-10.8 134.8,-10.8 143.7,-10.8"/><polygon fill="#8a93a5" points="143.5,-13.3 150.5,-10.8 143.5,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/read_tree.html">read_tree</a></li></ul>
+<div class="graph"><svg width="438pt" height="30pt"
+ viewBox="0 0 438 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/is_input_directory.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="116.3" height="21.6"/><text x="58.1" y="-6.1">is_input_directory</text></a><a href="../proc/read_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="152.3" y="-21.6" width="70" height="21.6"/><text x="187.3" y="-6.1">read_tree</text></a><path d="M151.9,-10.8C143.7,-10.8 134.6,-10.8 125.5,-10.8"/><polygon fill="#8a93a5" points="125.6,-8.4 118.6,-10.8 125.6,-13.3"/><a href="../proc/load_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="258.3" y="-21.6" width="81.6" height="21.6"/><text x="299.2" y="-6.1">load_pages</text></a><path d="M257.9,-10.8C249.2,-10.8 239.9,-10.8 231.1,-10.8"/><polygon fill="#8a93a5" points="231.3,-8.4 224.3,-10.8 231.3,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="376" y="-21.6" width="54" height="21.6"/><text x="403" y="-6.1">run</text></a><path d="M375.5,-10.8C367.3,-10.8 357.9,-10.8 348.7,-10.8"/><polygon fill="#8a93a5" points="348.8,-8.4 341.8,-10.8 348.8,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">logical</span> <span class="k">function</span> is_input_directory(s, directory)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s           <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: directory   <span class="d">!! the directory</span>
+
+    is_input_directory = contains_string(s%src_dir, directory) <span class="k">.or.</span> contains_string(s%html_template_dir, directory) <span class="k">.or.</span> &amp;
+                         directory == s%output_dir
+    <span class="k">if</span> (<span class="k">allocated</span>(s%media_dir)) is_input_directory = is_input_directory <span class="k">.or.</span> directory == s%media_dir
+    <span class="k">if</span> (<span class="k">allocated</span>(s%graph_dir)) is_input_directory = is_input_directory <span class="k">.or.</span> directory == s%graph_dir
+<span class="k">end</span> <span class="k">function</span> is_input_directory</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

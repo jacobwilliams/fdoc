@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_project_file.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_project_file.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_project_file"><h3><a href="../module/fdoc_project_file.html">fdoc_project_file</a><span class="attr attr-private">private</span></h3>
+<p>Reading settings from a project file, <code>fpm.toml</code> or a TOML string.</p>
+</div>
+<h2 id="files-this-one-depends-on">Files this one depends on</h2>
+<div class="graph"><svg width="414pt" height="89pt"
+ viewBox="0 0 414 89" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 84.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_project_file.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="275" y="-61.6" width="130.8" height="21.6"/><text x="340.3" y="-46.1">fdoc_project_file.f90</text></a><a href="../sourcefile/fdoc_util.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="0" y="-80.6" width="84.5" height="21.6"/><text x="42.3" y="-65.1">fdoc_util.f90</text></a><path d="M290.4,-62.6C274.1,-65.9 255.9,-69.1 239,-70.8 186.6,-76 173.2,-71.1 120.5,-70.8 111.7,-70.7 102.3,-70.6 93.2,-70.5"/><polygon fill="#8a93a5" points="93.5,-68.1 86.5,-70.5 93.4,-73"/><a href="../sourcefile/fdoc_settings.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="123.4" y="-61.6" width="112.7" height="21.6"/><text x="179.7" y="-46.1">fdoc_settings.f90</text></a><path d="M274.4,-50.8C264.6,-50.8 254.5,-50.8 244.7,-50.8"/><polygon fill="#8a93a5" points="244.7,-48.4 237.7,-50.8 244.7,-53.3"/><a href="../sourcefile/fdoc_progress.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="120.5" y="-21.6" width="118.5" height="21.6"/><text x="179.7" y="-6.1">fdoc_progress.f90</text></a><path d="M292.6,-39C274.1,-34.3 252.6,-28.9 233.5,-24.1"/><polygon fill="#8a93a5" points="234.4,-21.8 227,-22.5 233.2,-26.5"/><path d="M123.2,-58.6C113.2,-60 102.8,-61.5 92.9,-62.8"/><polygon fill="#8a93a5" points="92.9,-60.4 86.3,-63.8 93.5,-65.2"/></g>
+</svg>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="787pt" height="261pt"
+ viewBox="0 0 787 261" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 256.9)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_project_file.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-199.6" width="130.8" height="21.6"/><text x="65.4" y="-184.1">fdoc_project_file.f90</text></a><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="718.1" y="-219.6" width="60.7" height="21.6"/><text x="748.5" y="-204.1">fdoc.f90</text></a><path d="M637.1,-247.8C515.4,-259.7 484.2,-245.5 361.9,-247.8"/><a href="../sourcefile/fdoc_pages.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="452.6" y="-219.6" width="103.3" height="21.6"/><text x="504.2" y="-204.1">fdoc_pages.f90</text></a><path d="M726.2,-220C704.9,-230.4 670.7,-244.7 639.1,-247.8"/><path d="M637.1,-247.8C618.6,-249.6 574,-234.9 541.8,-223"/><polygon fill="#8a93a5" points="542.7,-220.7 535.3,-220.6 541,-225.3"/><a href="../sourcefile/fdoc_site.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="594" y="-219.6" width="88.1" height="21.6"/><text x="638.1" y="-204.1">fdoc_site.f90</text></a><path d="M717.9,-208.8C709.5,-208.8 700.2,-208.8 690.9,-208.8"/><polygon fill="#8a93a5" points="691,-206.4 684,-208.8 691,-211.3"/><a href="../sourcefile/fdoc_project.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="307.5" y="-141.6" width="106.9" height="21.6"/><text x="360.9" y="-126.1">fdoc_project.f90</text></a><path d="M717.9,-198.4C706.8,-194.9 694,-191.2 682.1,-188.8 604.7,-172.9 582.6,-185.9 505.2,-169.8"/><path d="M503.2,-169.8C471,-162.2 435,-152.3 407.4,-144.3"/><polygon fill="#8a93a5" points="408.4,-142 401,-142.4 407,-146.7"/><path d="M475.4,-220.1C447.3,-230.6 402.4,-245.1 361.9,-247.8"/><path d="M359.9,-247.8C267,-254.1 160.3,-222.7 104.7,-203.2"/><polygon fill="#8a93a5" points="105.7,-201 98.3,-201 104.1,-205.6"/><path d="M478.2,-197.6C469.4,-193.4 459.3,-188.6 450.4,-183.8 428.4,-172.1 404.2,-157.4 386.7,-146.5"/><polygon fill="#8a93a5" points="388.1,-144.5 380.9,-142.9 385.5,-148.7"/><a href="../sourcefile/fdoc_parser.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="166.8" y="-180.6" width="104.7" height="21.6"/><text x="219.1" y="-165.1">fdoc_parser.f90</text></a><path d="M166.3,-176.3C157.8,-177.4 148.8,-178.5 139.8,-179.6"/><polygon fill="#8a93a5" points="139.8,-177.1 133.1,-180.4 140.4,-182"/><path d="M593.5,-208.8C584.3,-208.8 574.3,-208.8 564.5,-208.8"/><polygon fill="#8a93a5" points="564.5,-206.4 557.5,-208.8 564.5,-211.3"/><path d="M604.7,-197.6C578.2,-188.8 539.7,-177 505.2,-169.8"/><path d="M319.5,-142.1C303.6,-146.5 285.1,-151.7 268.5,-156.3"/><polygon fill="#8a93a5" points="268,-153.9 261.9,-158.1 269.3,-158.6"/><a href="../sourcefile/fdoc_docs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="456.5" y="-141.6" width="95.3" height="21.6"/><text x="504.2" y="-126.1">fdoc_docs.f90</text></a><path d="M456.2,-130.8C445.5,-130.8 434.1,-130.8 423,-130.8"/><polygon fill="#8a93a5" points="423.1,-128.4 416.1,-130.8 423.1,-133.3"/><a href="../sourcefile/fdoc_graphs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="450.4" y="-101.6" width="107.6" height="21.6"/><text x="504.2" y="-86.1">fdoc_graphs.f90</text></a><path d="M463.5,-102C446.6,-106.8 426.9,-112.4 409.3,-117.4"/><polygon fill="#8a93a5" points="408.9,-115 402.8,-119.2 410.2,-119.7"/><a href="../sourcefile/fdoc_links.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="457.3" y="-61.6" width="93.9" height="21.6"/><text x="504.2" y="-46.1">fdoc_links.f90</text></a><path d="M470,-62C463.4,-64.6 456.6,-67.6 450.4,-70.8 425.8,-83.6 399.8,-101.8 382.5,-114.8"/><polygon fill="#8a93a5" points="381.3,-112.6 377.2,-118.8 384.3,-116.5"/><a href="../sourcefile/fdoc_output.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="452.2" y="-21.6" width="104" height="21.6"/><text x="504.2" y="-6.1">fdoc_output.f90</text></a><path d="M466.5,-22C460.9,-24.5 455.3,-27.4 450.4,-30.8 417.7,-53.4 389.1,-90.6 373.8,-112.7"/><polygon fill="#8a93a5" points="371.9,-111.2 370,-118.3 375.9,-113.9"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_project_file
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! Reading settings from a project file, `fpm.toml` or a TOML string.</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="d">!!</span>
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="d">!! A project file starts with Markdown metadata, optionally between `---` lines: `key: value` lines,</span>
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="d">!! with values continued on lines indented by four or more blanks. Metadata ends at the first blank</span>
+<a class="ln" id="ln-6" href="#ln-6"></a><span class="d">!! line, at an end marker, or at a line that fits neither form. The rest of the file is the text of</span>
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="d">!! the front page. An `[extra.ford]` table in `fpm.toml` next to the project file replaces its</span>
+<a class="ln" id="ln-8" href="#ln-8"></a><span class="d">!! metadata, as in FORD; the text of the project file is then used whole. An `[extra.fdoc]` table does</span>
+<a class="ln" id="ln-9" href="#ln-9"></a><span class="d">!! the same and comes first, and can give the front page: its text in `front_page`, or the Markdown</span>
+<a class="ln" id="ln-10" href="#ln-10"></a><span class="d">!! file that holds it in `front_page_file`, relative to `fpm.toml`.</span>
+<a class="ln" id="ln-11" href="#ln-11"></a><span class="k">use</span> tomlf, <span class="k">only</span>: toml_table, toml_array, toml_keyval, toml_key, toml_value, toml_error, toml_load, toml_loads, &amp;
+<a class="ln" id="ln-12" href="#ln-12"></a>                 get_value, <span class="k">len</span>
+<a class="ln" id="ln-13" href="#ln-13"></a><span class="k">use</span> tomlf_constants, <span class="k">only</span>: toml_type
+<a class="ln" id="ln-14" href="#ln-14"></a><span class="k">use</span> ffmt_fs, <span class="k">only</span>: join_path, parent_directory
+<a class="ln" id="ln-15" href="#ln-15"></a><span class="k">use</span> ffmt_strings, <span class="k">only</span>: to_s
+<a class="ln" id="ln-16" href="#ln-16"></a><span class="k">use</span> fdoc_util
+<a class="ln" id="ln-17" href="#ln-17"></a><span class="k">use</span> fdoc_settings, <span class="k">only</span>: settings_t, new_settings, set_option, is_option
+<a class="ln" id="ln-18" href="#ln-18"></a><span class="k">use</span> fdoc_progress, <span class="k">only</span>: warn
+<a class="ln" id="ln-19" href="#ln-19"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-20" href="#ln-20"></a><span class="k">private</span>
+<a class="ln" id="ln-21" href="#ln-21"></a>
+<a class="ln" id="ln-22" href="#ln-22"></a><span class="k">public</span> :: parse_metadata, load_project, apply_toml_string, metadata_t
+<a class="ln" id="ln-23" href="#ln-23"></a>
+<a class="ln" id="ln-24" href="#ln-24"></a><span class="k">type</span> :: meta_item_t
+<a class="ln" id="ln-25" href="#ln-25"></a>    <span class="d">!! A metadata key and the values given for it.</span>
+<a class="ln" id="ln-26" href="#ln-26"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: key
+<a class="ln" id="ln-27" href="#ln-27"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: values(:)
+<a class="ln" id="ln-28" href="#ln-28"></a><span class="k">end</span> <span class="k">type</span> meta_item_t
+<a class="ln" id="ln-29" href="#ln-29"></a>
+<a class="ln" id="ln-30" href="#ln-30"></a><span class="k">type</span> :: metadata_t
+<a class="ln" id="ln-31" href="#ln-31"></a>    <span class="d">!! The metadata of a project file and what follows it.</span>
+<a class="ln" id="ln-32" href="#ln-32"></a>    <span class="k">type</span>(meta_item_t), <span class="k">allocatable</span> :: items(:)
+<a class="ln" id="ln-33" href="#ln-33"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: body(:)      <span class="d">!! the lines after the metadata</span>
+<a class="ln" id="ln-34" href="#ln-34"></a><span class="k">end</span> <span class="k">type</span> metadata_t
+<a class="ln" id="ln-35" href="#ln-35"></a>
+<a class="ln" id="ln-36" href="#ln-36"></a><span class="k">contains</span>
+<a class="ln" id="ln-37" href="#ln-37"></a>
+<a class="ln" id="ln-38" href="#ln-38"></a><span class="d">!&gt; Split project file `text` into metadata and body.</span>
+<a class="ln" id="ln-39" href="#ln-39"></a><span class="k">subroutine</span> parse_metadata(text, meta)
+<a class="ln" id="ln-40" href="#ln-40"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the file</span>
+<a class="ln" id="ln-41" href="#ln-41"></a>    <span class="k">type</span>(metadata_t), <span class="k">intent</span>(out) :: meta   <span class="d">!! the result</span>
+<a class="ln" id="ln-42" href="#ln-42"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: lines(:)
+<a class="ln" id="ln-43" href="#ln-43"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: key, <span class="k">value</span>
+<a class="ln" id="ln-44" href="#ln-44"></a>    <span class="k">integer</span> :: n, current
+<a class="ln" id="ln-45" href="#ln-45"></a>
+<a class="ln" id="ln-46" href="#ln-46"></a>    lines = split_lines(text)
+<a class="ln" id="ln-47" href="#ln-47"></a>    <span class="k">allocate</span> (meta%items(<span class="n">0</span>))
+<a class="ln" id="ln-48" href="#ln-48"></a>    n = <span class="n">1</span>
+<a class="ln" id="ln-49" href="#ln-49"></a>    <span class="k">if</span> (<span class="k">size</span>(lines) &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-50" href="#ln-50"></a>        <span class="k">if</span> (is_marker(lines(<span class="n">1</span>)%s, <span class="s">'-'</span>)) n = <span class="n">2</span>
+<a class="ln" id="ln-51" href="#ln-51"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-52" href="#ln-52"></a>    current = <span class="n">0</span>
+<a class="ln" id="ln-53" href="#ln-53"></a>    <span class="k">do</span> <span class="k">while</span> (n &lt;= <span class="k">size</span>(lines))
+<a class="ln" id="ln-54" href="#ln-54"></a>        <span class="k">associate</span> (line =&gt; lines(n)%s)
+<a class="ln" id="ln-55" href="#ln-55"></a>            <span class="k">if</span> (strip(line) == <span class="s">''</span> <span class="k">.or.</span> is_marker(line, <span class="s">'-'</span>) <span class="k">.or.</span> is_marker(line, <span class="s">'.'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-56" href="#ln-56"></a>                n = n + <span class="n">1</span>
+<a class="ln" id="ln-57" href="#ln-57"></a>                <span class="k">exit</span>
+<a class="ln" id="ln-58" href="#ln-58"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-59" href="#ln-59"></a>            <span class="k">if</span> (match_key(line, key, <span class="k">value</span>)) <span class="k">then</span>
+<a class="ln" id="ln-60" href="#ln-60"></a>                <span class="k">call</span> add_value(meta, key, <span class="k">value</span>, current)
+<a class="ln" id="ln-61" href="#ln-61"></a>            <span class="k">else</span> <span class="k">if</span> (current &gt; <span class="n">0</span> <span class="k">.and.</span> leading_blanks(line) &gt;= <span class="n">4</span>) <span class="k">then</span>
+<a class="ln" id="ln-62" href="#ln-62"></a>                <span class="k">call</span> push(meta%items(current)%values, strip(line))
+<a class="ln" id="ln-63" href="#ln-63"></a>            <span class="k">else</span>
+<a class="ln" id="ln-64" href="#ln-64"></a>                <span class="k">exit</span>
+<a class="ln" id="ln-65" href="#ln-65"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-66" href="#ln-66"></a>        <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-67" href="#ln-67"></a>        n = n + <span class="n">1</span>
+<a class="ln" id="ln-68" href="#ln-68"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-69" href="#ln-69"></a>    meta%body = lines(n:)
+<a class="ln" id="ln-70" href="#ln-70"></a><span class="k">end</span> <span class="k">subroutine</span> parse_metadata
+<a class="ln" id="ln-71" href="#ln-71"></a>
+<a class="ln" id="ln-72" href="#ln-72"></a><span class="d">!&gt; Add a value for `key`, whose position in `meta%items` is returned in `current`.</span>
+<a class="ln" id="ln-73" href="#ln-73"></a><span class="k">subroutine</span> add_value(meta, key, <span class="k">value</span>, current)
+<a class="ln" id="ln-74" href="#ln-74"></a>    <span class="k">type</span>(metadata_t), <span class="k">intent</span>(inout) :: meta <span class="d">!! the metadata</span>
+<a class="ln" id="ln-75" href="#ln-75"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the key</span>
+<a class="ln" id="ln-76" href="#ln-76"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">value</span>   <span class="d">!! the value</span>
+<a class="ln" id="ln-77" href="#ln-77"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: current         <span class="d">!! the item for `key`</span>
+<a class="ln" id="ln-78" href="#ln-78"></a>    <span class="k">type</span>(meta_item_t), <span class="k">allocatable</span> :: items(:)
+<a class="ln" id="ln-79" href="#ln-79"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-80" href="#ln-80"></a>
+<a class="ln" id="ln-81" href="#ln-81"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(meta%items)
+<a class="ln" id="ln-82" href="#ln-82"></a>        <span class="k">if</span> (meta%items(k)%key == key) <span class="k">then</span>
+<a class="ln" id="ln-83" href="#ln-83"></a>            current = k
+<a class="ln" id="ln-84" href="#ln-84"></a>            <span class="k">call</span> push(meta%items(k)%values, <span class="k">value</span>)
+<a class="ln" id="ln-85" href="#ln-85"></a>            <span class="k">return</span>
+<a class="ln" id="ln-86" href="#ln-86"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-87" href="#ln-87"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-88" href="#ln-88"></a>    <span class="k">allocate</span> (items(<span class="k">size</span>(meta%items) + <span class="n">1</span>))
+<a class="ln" id="ln-89" href="#ln-89"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(meta%items)
+<a class="ln" id="ln-90" href="#ln-90"></a>        <span class="k">call</span> <span class="k">move_alloc</span>(meta%items(k)%key, items(k)%key)
+<a class="ln" id="ln-91" href="#ln-91"></a>        <span class="k">call</span> <span class="k">move_alloc</span>(meta%items(k)%values, items(k)%values)
+<a class="ln" id="ln-92" href="#ln-92"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-93" href="#ln-93"></a>    current = <span class="k">size</span>(items)
+<a class="ln" id="ln-94" href="#ln-94"></a>    items(current)%key = key
+<a class="ln" id="ln-95" href="#ln-95"></a>    <span class="k">call</span> push(items(current)%values, <span class="k">value</span>)
+<a class="ln" id="ln-96" href="#ln-96"></a>    <span class="k">call</span> <span class="k">move_alloc</span>(items, meta%items)
+<a class="ln" id="ln-97" href="#ln-97"></a><span class="k">end</span> <span class="k">subroutine</span> add_value
+<a class="ln" id="ln-98" href="#ln-98"></a>
+<a class="ln" id="ln-99" href="#ln-99"></a><span class="d">!&gt; Number of blanks at the start of `line`.</span>
+<a class="ln" id="ln-100" href="#ln-100"></a><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> leading_blanks(line)
+<a class="ln" id="ln-101" href="#ln-101"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line    <span class="d">!! the line</span>
+<a class="ln" id="ln-102" href="#ln-102"></a>    leading_blanks = <span class="k">verify</span>(line, <span class="s">' '</span>) - <span class="n">1</span>
+<a class="ln" id="ln-103" href="#ln-103"></a>    <span class="k">if</span> (leading_blanks &lt; <span class="n">0</span>) leading_blanks = <span class="k">len</span>(line)
+<a class="ln" id="ln-104" href="#ln-104"></a><span class="k">end</span> <span class="k">function</span> leading_blanks
+<a class="ln" id="ln-105" href="#ln-105"></a>
+<a class="ln" id="ln-106" href="#ln-106"></a><span class="d">!&gt; True if `line` is three of `c`, alone or followed by whitespace and anything else.</span>
+<a class="ln" id="ln-107" href="#ln-107"></a><span class="k">pure</span> <span class="k">logical</span> <span class="k">function</span> is_marker(line, c)
+<a class="ln" id="ln-108" href="#ln-108"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line    <span class="d">!! the line</span>
+<a class="ln" id="ln-109" href="#ln-109"></a>    <span class="k">character</span>, <span class="k">intent</span>(in) :: c              <span class="d">!! the marker character</span>
+<a class="ln" id="ln-110" href="#ln-110"></a>    is_marker = <span class="k">len</span>(line) &gt;= <span class="n">3</span>
+<a class="ln" id="ln-111" href="#ln-111"></a>    <span class="k">if</span> (<span class="k">.not.</span> is_marker) <span class="k">return</span>
+<a class="ln" id="ln-112" href="#ln-112"></a>    is_marker = line(<span class="n">1</span>:<span class="n">3</span>) == c//c//c
+<a class="ln" id="ln-113" href="#ln-113"></a>    <span class="k">if</span> (is_marker <span class="k">.and.</span> <span class="k">len</span>(line) &gt; <span class="n">3</span>) is_marker = line(<span class="n">4</span>:<span class="n">4</span>) == <span class="s">' '</span> <span class="k">.or.</span> line(<span class="n">4</span>:<span class="n">4</span>) == <span class="k">achar</span>(<span class="n">9</span>)
+<a class="ln" id="ln-114" href="#ln-114"></a><span class="k">end</span> <span class="k">function</span> is_marker
+<a class="ln" id="ln-115" href="#ln-115"></a>
+<a class="ln" id="ln-116" href="#ln-116"></a><span class="d">!&gt; True if `line` is `key: value`, indented by at most three blanks.</span>
+<a class="ln" id="ln-117" href="#ln-117"></a><span class="k">logical</span> <span class="k">function</span> match_key(line, key, <span class="k">value</span>)
+<a class="ln" id="ln-118" href="#ln-118"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line                <span class="d">!! the line</span>
+<a class="ln" id="ln-119" href="#ln-119"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: key   <span class="d">!! the key, in lowercase</span>
+<a class="ln" id="ln-120" href="#ln-120"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: <span class="k">value</span> <span class="d">!! the value</span>
+<a class="ln" id="ln-121" href="#ln-121"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: KEY_CHARS = &amp;
+<a class="ln" id="ln-122" href="#ln-122"></a>                                   <span class="s">'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-'</span>
+<a class="ln" id="ln-123" href="#ln-123"></a>    <span class="k">integer</span> :: a, b
+<a class="ln" id="ln-124" href="#ln-124"></a>
+<a class="ln" id="ln-125" href="#ln-125"></a>    match_key = <span class="k">.false.</span>
+<a class="ln" id="ln-126" href="#ln-126"></a>    a = leading_blanks(line) + <span class="n">1</span>
+<a class="ln" id="ln-127" href="#ln-127"></a>    <span class="k">if</span> (a &gt; <span class="n">4</span> <span class="k">.or.</span> a &gt; <span class="k">len</span>(line)) <span class="k">return</span>
+<a class="ln" id="ln-128" href="#ln-128"></a>    b = <span class="k">verify</span>(line(a:), KEY_CHARS)
+<a class="ln" id="ln-129" href="#ln-129"></a>    <span class="k">if</span> (b &lt;= <span class="n">1</span>) <span class="k">return</span>
+<a class="ln" id="ln-130" href="#ln-130"></a>    b = a + b - <span class="n">1</span>
+<a class="ln" id="ln-131" href="#ln-131"></a>    <span class="k">if</span> (line(b:b) /= <span class="s">':'</span>) <span class="k">return</span>
+<a class="ln" id="ln-132" href="#ln-132"></a>    key = lowercase(line(a:b - <span class="n">1</span>))
+<a class="ln" id="ln-133" href="#ln-133"></a>    <span class="k">value</span> = strip(line(b + <span class="n">1</span>:))
+<a class="ln" id="ln-134" href="#ln-134"></a>    match_key = <span class="k">.true.</span>
+<a class="ln" id="ln-135" href="#ln-135"></a><span class="k">end</span> <span class="k">function</span> match_key
+<a class="ln" id="ln-136" href="#ln-136"></a>
+<a class="ln" id="ln-137" href="#ln-137"></a><span class="d">!&gt; Read the settings and front page text of the project. Settings come from an `[extra.fdoc]` or</span>
+<a class="ln" id="ln-138" href="#ln-138"></a><span class="d">!&gt; `[extra.ford]` table in `fpm.toml` if there is one, and otherwise from the metadata of the project</span>
+<a class="ln" id="ln-139" href="#ln-139"></a><span class="d">!&gt; file. With no `path` the project file is `ford.md`, if it exists: `[extra.fdoc]` does not need one,</span>
+<a class="ln" id="ln-140" href="#ln-140"></a><span class="d">!&gt; as the text of the front page can be in its `front_page`, or the file named by `front_page_file`.</span>
+<a class="ln" id="ln-141" href="#ln-141"></a><span class="k">subroutine</span> load_project(path, directory, s, body, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-142" href="#ln-142"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path                <span class="d">!! the project file, or `''`</span>
+<a class="ln" id="ln-143" href="#ln-143"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: directory           <span class="d">!! its directory</span>
+<a class="ln" id="ln-144" href="#ln-144"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(out) :: s                  <span class="d">!! the settings</span>
+<a class="ln" id="ln-145" href="#ln-145"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: body  <span class="d">!! the front page text</span>
+<a class="ln" id="ln-146" href="#ln-146"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-147" href="#ln-147"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-148" href="#ln-148"></a>    <span class="k">type</span>(metadata_t) :: meta
+<a class="ln" id="ln-149" href="#ln-149"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text, file, front
+<a class="ln" id="ln-150" href="#ln-150"></a>    <span class="k">logical</span> :: found, exists
+<a class="ln" id="ln-151" href="#ln-151"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-152" href="#ln-152"></a>
+<a class="ln" id="ln-153" href="#ln-153"></a>    s = new_settings()
+<a class="ln" id="ln-154" href="#ln-154"></a>    <span class="k">stat</span> = <span class="n">0</span>
+<a class="ln" id="ln-155" href="#ln-155"></a>    file = path
+<a class="ln" id="ln-156" href="#ln-156"></a>    <span class="k">if</span> (<span class="k">len</span>(file) == <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-157" href="#ln-157"></a>        <span class="k">inquire</span> (file=join_path(directory, <span class="s">'ford.md'</span>), exist=exists)
+<a class="ln" id="ln-158" href="#ln-158"></a>        <span class="k">if</span> (exists) file = join_path(directory, <span class="s">'ford.md'</span>)
+<a class="ln" id="ln-159" href="#ln-159"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-160" href="#ln-160"></a>    text = <span class="s">''</span>
+<a class="ln" id="ln-161" href="#ln-161"></a>    <span class="k">if</span> (<span class="k">len</span>(file) &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-162" href="#ln-162"></a>        <span class="k">call</span> read_whole_file(file, text, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-163" href="#ln-163"></a>        <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-164" href="#ln-164"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-165" href="#ln-165"></a>    <span class="k">call</span> load_fpm_settings(join_path(directory, <span class="s">'fpm.toml'</span>), s, found, front, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-166" href="#ln-166"></a>    <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-167" href="#ln-167"></a>    <span class="k">if</span> (found) <span class="k">then</span>
+<a class="ln" id="ln-168" href="#ln-168"></a>        <span class="k">if</span> (<span class="k">allocated</span>(front)) <span class="k">then</span>
+<a class="ln" id="ln-169" href="#ln-169"></a>            body = front
+<a class="ln" id="ln-170" href="#ln-170"></a>        <span class="k">else</span>
+<a class="ln" id="ln-171" href="#ln-171"></a>            body = text
+<a class="ln" id="ln-172" href="#ln-172"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-173" href="#ln-173"></a>        <span class="k">return</span>
+<a class="ln" id="ln-174" href="#ln-174"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-175" href="#ln-175"></a>    <span class="k">if</span> (<span class="k">len</span>(file) == <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-176" href="#ln-176"></a>        <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-177" href="#ln-177"></a>        errmsg = <span class="s">'no project file: give one, or add an [extra.fdoc] table to fpm.toml'</span>
+<a class="ln" id="ln-178" href="#ln-178"></a>        <span class="k">return</span>
+<a class="ln" id="ln-179" href="#ln-179"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-180" href="#ln-180"></a>    <span class="k">if</span> (ends_with(file, <span class="s">'fpm.toml'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-181" href="#ln-181"></a>        <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-182" href="#ln-182"></a>        errmsg = file//<span class="s">' has no [extra.fdoc] or [extra.ford] table: give the project file instead'</span>
+<a class="ln" id="ln-183" href="#ln-183"></a>        <span class="k">return</span>
+<a class="ln" id="ln-184" href="#ln-184"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-185" href="#ln-185"></a>    <span class="k">call</span> parse_metadata(text, meta)
+<a class="ln" id="ln-186" href="#ln-186"></a>    body = join(meta%body, <span class="k">achar</span>(<span class="n">10</span>))
+<a class="ln" id="ln-187" href="#ln-187"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(meta%items)
+<a class="ln" id="ln-188" href="#ln-188"></a>        <span class="k">associate</span> (item =&gt; meta%items(k))
+<a class="ln" id="ln-189" href="#ln-189"></a>            <span class="k">if</span> (<span class="k">.not.</span> is_option(item%key)) <span class="k">then</span>
+<a class="ln" id="ln-190" href="#ln-190"></a>                <span class="k">call</span> warn(<span class="s">"In '"</span>//file//<span class="s">"': Ignoring unknown Ford metadata key '"</span>//item%key//<span class="s">"'"</span>)
+<a class="ln" id="ln-191" href="#ln-191"></a>                <span class="k">cycle</span>
+<a class="ln" id="ln-192" href="#ln-192"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-193" href="#ln-193"></a>            <span class="k">call</span> set_option(s, item%key, item%values, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-194" href="#ln-194"></a>            <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-195" href="#ln-195"></a>                errmsg = <span class="s">"Error parsing settings from '"</span>//file//<span class="s">"': "</span>//errmsg
+<a class="ln" id="ln-196" href="#ln-196"></a>                <span class="k">return</span>
+<a class="ln" id="ln-197" href="#ln-197"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-198" href="#ln-198"></a>        <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-199" href="#ln-199"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-200" href="#ln-200"></a><span class="k">end</span> <span class="k">subroutine</span> load_project
+<a class="ln" id="ln-201" href="#ln-201"></a>
+<a class="ln" id="ln-202" href="#ln-202"></a><span class="d">!&gt; Read the `[extra.fdoc]` or `[extra.ford]` table of `fpm.toml` file `path`, if there is one.</span>
+<a class="ln" id="ln-203" href="#ln-203"></a><span class="k">subroutine</span> load_fpm_settings(path, s, found, front, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-204" href="#ln-204"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path                <span class="d">!! the file</span>
+<a class="ln" id="ln-205" href="#ln-205"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+<a class="ln" id="ln-206" href="#ln-206"></a>    <span class="k">logical</span>, <span class="k">intent</span>(out) :: found                       <span class="d">!! true if a table exists</span>
+<a class="ln" id="ln-207" href="#ln-207"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: front <span class="d">!! its `front_page`, if it has one</span>
+<a class="ln" id="ln-208" href="#ln-208"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-209" href="#ln-209"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-210" href="#ln-210"></a>    <span class="k">type</span>(toml_table), <span class="k">allocatable</span> :: top
+<a class="ln" id="ln-211" href="#ln-211"></a>    <span class="k">type</span>(toml_table), <span class="k">pointer</span> :: extra, table
+<a class="ln" id="ln-212" href="#ln-212"></a>    <span class="k">type</span>(toml_error), <span class="k">allocatable</span> :: error
+<a class="ln" id="ln-213" href="#ln-213"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: file
+<a class="ln" id="ln-214" href="#ln-214"></a>    <span class="k">logical</span> :: exists
+<a class="ln" id="ln-215" href="#ln-215"></a>
+<a class="ln" id="ln-216" href="#ln-216"></a>    <span class="k">stat</span> = <span class="n">0</span>
+<a class="ln" id="ln-217" href="#ln-217"></a>    found = <span class="k">.false.</span>
+<a class="ln" id="ln-218" href="#ln-218"></a>    <span class="k">inquire</span> (file=path, exist=exists)
+<a class="ln" id="ln-219" href="#ln-219"></a>    <span class="k">if</span> (<span class="k">.not.</span> exists) <span class="k">return</span>
+<a class="ln" id="ln-220" href="#ln-220"></a>    <span class="k">call</span> toml_load(top, path, error=error)
+<a class="ln" id="ln-221" href="#ln-221"></a>    <span class="k">if</span> (<span class="k">allocated</span>(error)) <span class="k">then</span>
+<a class="ln" id="ln-222" href="#ln-222"></a>        <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-223" href="#ln-223"></a>        errmsg = path//<span class="s">': '</span>//error%message
+<a class="ln" id="ln-224" href="#ln-224"></a>        <span class="k">return</span>
+<a class="ln" id="ln-225" href="#ln-225"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-226" href="#ln-226"></a>    <span class="k">call</span> get_value(top, <span class="s">'extra'</span>, extra, requested=<span class="k">.false.</span>)
+<a class="ln" id="ln-227" href="#ln-227"></a>    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">associated</span>(extra)) <span class="k">return</span>
+<a class="ln" id="ln-228" href="#ln-228"></a>    <span class="k">call</span> get_value(extra, <span class="s">'fdoc'</span>, table, requested=<span class="k">.false.</span>)
+<a class="ln" id="ln-229" href="#ln-229"></a>    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">associated</span>(table)) <span class="k">call</span> get_value(extra, <span class="s">'ford'</span>, table, requested=<span class="k">.false.</span>)
+<a class="ln" id="ln-230" href="#ln-230"></a>    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">associated</span>(table)) <span class="k">return</span>
+<a class="ln" id="ln-231" href="#ln-231"></a>    found = <span class="k">.true.</span>
+<a class="ln" id="ln-232" href="#ln-232"></a>    <span class="k">call</span> get_value(table, <span class="s">'front_page'</span>, front)
+<a class="ln" id="ln-233" href="#ln-233"></a>    <span class="k">call</span> get_value(table, <span class="s">'front_page_file'</span>, file)
+<a class="ln" id="ln-234" href="#ln-234"></a>    <span class="k">if</span> (<span class="k">allocated</span>(file)) <span class="k">then</span>
+<a class="ln" id="ln-235" href="#ln-235"></a>        <span class="k">call</span> read_whole_file(join_path(parent_directory(path), file), front, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-236" href="#ln-236"></a>        <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-237" href="#ln-237"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-238" href="#ln-238"></a>    <span class="k">call</span> apply_table(table, s, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-239" href="#ln-239"></a><span class="k">end</span> <span class="k">subroutine</span> load_fpm_settings
+<a class="ln" id="ln-240" href="#ln-240"></a>
+<a class="ln" id="ln-241" href="#ln-241"></a><span class="d">!&gt; Apply `--config` options: TOML with `;` between lines.</span>
+<a class="ln" id="ln-242" href="#ln-242"></a><span class="k">subroutine</span> apply_toml_string(text, s, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-243" href="#ln-243"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text                <span class="d">!! the options</span>
+<a class="ln" id="ln-244" href="#ln-244"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+<a class="ln" id="ln-245" href="#ln-245"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-246" href="#ln-246"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-247" href="#ln-247"></a>    <span class="k">type</span>(toml_table), <span class="k">allocatable</span> :: top
+<a class="ln" id="ln-248" href="#ln-248"></a>    <span class="k">type</span>(toml_error), <span class="k">allocatable</span> :: error
+<a class="ln" id="ln-249" href="#ln-249"></a>
+<a class="ln" id="ln-250" href="#ln-250"></a>    <span class="k">call</span> toml_loads(top, join(split_on(text, <span class="s">';'</span>), <span class="k">achar</span>(<span class="n">10</span>)), error=error)
+<a class="ln" id="ln-251" href="#ln-251"></a>    <span class="k">if</span> (<span class="k">allocated</span>(error)) <span class="k">then</span>
+<a class="ln" id="ln-252" href="#ln-252"></a>        <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-253" href="#ln-253"></a>        errmsg = <span class="s">'--config: '</span>//error%message
+<a class="ln" id="ln-254" href="#ln-254"></a>        <span class="k">return</span>
+<a class="ln" id="ln-255" href="#ln-255"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-256" href="#ln-256"></a>    <span class="k">call</span> apply_table(top, s, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-257" href="#ln-257"></a><span class="k">end</span> <span class="k">subroutine</span> apply_toml_string
+<a class="ln" id="ln-258" href="#ln-258"></a>
+<a class="ln" id="ln-259" href="#ln-259"></a><span class="d">!&gt; Apply the keys of TOML `table` as options.</span>
+<a class="ln" id="ln-260" href="#ln-260"></a><span class="k">subroutine</span> apply_table(table, s, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-261" href="#ln-261"></a>    <span class="k">type</span>(toml_table), <span class="k">intent</span>(inout) :: table            <span class="d">!! the table</span>
+<a class="ln" id="ln-262" href="#ln-262"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+<a class="ln" id="ln-263" href="#ln-263"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-264" href="#ln-264"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-265" href="#ln-265"></a>    <span class="k">type</span>(toml_key), <span class="k">allocatable</span> :: keys(:)
+<a class="ln" id="ln-266" href="#ln-266"></a>    <span class="k">class</span>(toml_value), <span class="k">pointer</span> :: v
+<a class="ln" id="ln-267" href="#ln-267"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: values(:)
+<a class="ln" id="ln-268" href="#ln-268"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: key
+<a class="ln" id="ln-269" href="#ln-269"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-270" href="#ln-270"></a>
+<a class="ln" id="ln-271" href="#ln-271"></a>    <span class="k">stat</span> = <span class="n">0</span>
+<a class="ln" id="ln-272" href="#ln-272"></a>    <span class="k">call</span> table%get_keys(keys)
+<a class="ln" id="ln-273" href="#ln-273"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(keys)
+<a class="ln" id="ln-274" href="#ln-274"></a>        key = keys(k)%key
+<a class="ln" id="ln-275" href="#ln-275"></a>        <span class="k">if</span> (key == <span class="s">'front_page'</span> <span class="k">.or.</span> key == <span class="s">'front_page_file'</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-276" href="#ln-276"></a>        <span class="k">if</span> (<span class="k">.not.</span> is_option(key)) <span class="k">then</span>
+<a class="ln" id="ln-277" href="#ln-277"></a>            <span class="k">call</span> warn(<span class="s">"Ignoring unknown Ford option '"</span>//key//<span class="s">"'"</span>)
+<a class="ln" id="ln-278" href="#ln-278"></a>            <span class="k">cycle</span>
+<a class="ln" id="ln-279" href="#ln-279"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-280" href="#ln-280"></a>        <span class="k">call</span> table%get(key, v)
+<a class="ln" id="ln-281" href="#ln-281"></a>        <span class="k">allocate</span> (values(<span class="n">0</span>))
+<a class="ln" id="ln-282" href="#ln-282"></a>        <span class="k">select</span> <span class="k">type</span> (v)
+<a class="ln" id="ln-283" href="#ln-283"></a>        <span class="k">type</span> <span class="k">is</span> (toml_keyval)
+<a class="ln" id="ln-284" href="#ln-284"></a>            <span class="k">call</span> push(values, scalar_text(table, key, v%get_type()))
+<a class="ln" id="ln-285" href="#ln-285"></a>        <span class="k">type</span> <span class="k">is</span> (toml_array)
+<a class="ln" id="ln-286" href="#ln-286"></a>            <span class="k">call</span> array_values(v, values, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-287" href="#ln-287"></a>        <span class="k">type</span> <span class="k">is</span> (toml_table)
+<a class="ln" id="ln-288" href="#ln-288"></a>            <span class="k">call</span> map_values(v, <span class="k">merge</span>(<span class="s">':'</span>, <span class="s">'='</span>, key == <span class="s">'extra_mods'</span>), values)
+<a class="ln" id="ln-289" href="#ln-289"></a>        <span class="k">class</span> default
+<a class="ln" id="ln-290" href="#ln-290"></a>            <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-291" href="#ln-291"></a>            errmsg = <span class="s">"unexpected value for option '"</span>//key//<span class="s">"'"</span>
+<a class="ln" id="ln-292" href="#ln-292"></a>        <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-293" href="#ln-293"></a>        <span class="k">if</span> (<span class="k">stat</span> == <span class="n">0</span>) <span class="k">call</span> set_option(s, key, values, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-294" href="#ln-294"></a>        <span class="k">deallocate</span> (values)
+<a class="ln" id="ln-295" href="#ln-295"></a>        <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-296" href="#ln-296"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-297" href="#ln-297"></a><span class="k">end</span> <span class="k">subroutine</span> apply_table
+<a class="ln" id="ln-298" href="#ln-298"></a>
+<a class="ln" id="ln-299" href="#ln-299"></a><span class="d">!&gt; A string, integer or logical value of `table` as text.</span>
+<a class="ln" id="ln-300" href="#ln-300"></a><span class="k">function</span> scalar_text(table, key, <span class="k">kind</span>) <span class="k">result</span>(text)
+<a class="ln" id="ln-301" href="#ln-301"></a>    <span class="k">type</span>(toml_table), <span class="k">intent</span>(inout) :: table    <span class="d">!! the table</span>
+<a class="ln" id="ln-302" href="#ln-302"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key         <span class="d">!! the key</span>
+<a class="ln" id="ln-303" href="#ln-303"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: <span class="k">kind</span>                 <span class="d">!! the value's `toml_type`</span>
+<a class="ln" id="ln-304" href="#ln-304"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+<a class="ln" id="ln-305" href="#ln-305"></a>    <span class="k">integer</span> :: i
+<a class="ln" id="ln-306" href="#ln-306"></a>    <span class="k">logical</span> :: flag
+<a class="ln" id="ln-307" href="#ln-307"></a>
+<a class="ln" id="ln-308" href="#ln-308"></a>    text = <span class="s">''</span>
+<a class="ln" id="ln-309" href="#ln-309"></a>    <span class="k">if</span> (<span class="k">kind</span> == toml_type%string) <span class="k">then</span>
+<a class="ln" id="ln-310" href="#ln-310"></a>        <span class="k">call</span> get_value(table, key, text)
+<a class="ln" id="ln-311" href="#ln-311"></a>    <span class="k">else</span> <span class="k">if</span> (<span class="k">kind</span> == toml_type%<span class="k">int</span>) <span class="k">then</span>
+<a class="ln" id="ln-312" href="#ln-312"></a>        <span class="k">call</span> get_value(table, key, i)
+<a class="ln" id="ln-313" href="#ln-313"></a>        text = to_s(i)
+<a class="ln" id="ln-314" href="#ln-314"></a>    <span class="k">else</span> <span class="k">if</span> (<span class="k">kind</span> == toml_type%boolean) <span class="k">then</span>
+<a class="ln" id="ln-315" href="#ln-315"></a>        <span class="k">call</span> get_value(table, key, flag)
+<a class="ln" id="ln-316" href="#ln-316"></a>        text = <span class="k">trim</span>(<span class="k">merge</span>(<span class="s">'true '</span>, <span class="s">'false'</span>, flag))
+<a class="ln" id="ln-317" href="#ln-317"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-318" href="#ln-318"></a><span class="k">end</span> <span class="k">function</span> scalar_text
+<a class="ln" id="ln-319" href="#ln-319"></a>
+<a class="ln" id="ln-320" href="#ln-320"></a><span class="d">!&gt; The items of a TOML array as text. An array of tables is taken to be `extra_filetypes`.</span>
+<a class="ln" id="ln-321" href="#ln-321"></a><span class="k">subroutine</span> array_values(array, values, <span class="k">stat</span>, errmsg)
+<a class="ln" id="ln-322" href="#ln-322"></a>    <span class="k">type</span>(toml_array), <span class="k">intent</span>(inout) :: array            <span class="d">!! the array</span>
+<a class="ln" id="ln-323" href="#ln-323"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: values(:)   <span class="d">!! the items</span>
+<a class="ln" id="ln-324" href="#ln-324"></a>    <span class="k">integer</span>, <span class="k">intent</span>(inout) :: <span class="k">stat</span>                      <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-325" href="#ln-325"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+<a class="ln" id="ln-326" href="#ln-326"></a>    <span class="k">type</span>(toml_table), <span class="k">pointer</span> :: item
+<a class="ln" id="ln-327" href="#ln-327"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text, part
+<a class="ln" id="ln-328" href="#ln-328"></a>    <span class="k">integer</span> :: k, ios
+<a class="ln" id="ln-329" href="#ln-329"></a>
+<a class="ln" id="ln-330" href="#ln-330"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(array)
+<a class="ln" id="ln-331" href="#ln-331"></a>        <span class="k">call</span> get_value(array, k, text, <span class="k">stat</span>=ios)
+<a class="ln" id="ln-332" href="#ln-332"></a>        <span class="k">if</span> (ios == <span class="n">0</span> <span class="k">.and.</span> <span class="k">allocated</span>(text)) <span class="k">then</span>
+<a class="ln" id="ln-333" href="#ln-333"></a>            <span class="k">call</span> push(values, text)
+<a class="ln" id="ln-334" href="#ln-334"></a>            <span class="k">cycle</span>
+<a class="ln" id="ln-335" href="#ln-335"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-336" href="#ln-336"></a>        <span class="k">call</span> get_value(array, k, item, <span class="k">stat</span>=ios)
+<a class="ln" id="ln-337" href="#ln-337"></a>        <span class="k">if</span> (ios /= <span class="n">0</span> <span class="k">.or.</span> <span class="k">.not.</span> <span class="k">associated</span>(item)) <span class="k">then</span>
+<a class="ln" id="ln-338" href="#ln-338"></a>            <span class="k">stat</span> = <span class="n">1</span>
+<a class="ln" id="ln-339" href="#ln-339"></a>            errmsg = <span class="s">'expected strings or tables in an array'</span>
+<a class="ln" id="ln-340" href="#ln-340"></a>            <span class="k">return</span>
+<a class="ln" id="ln-341" href="#ln-341"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-342" href="#ln-342"></a>        text = <span class="s">''</span>
+<a class="ln" id="ln-343" href="#ln-343"></a>        <span class="k">call</span> get_value(item, <span class="s">'extension'</span>, part, <span class="s">''</span>)
+<a class="ln" id="ln-344" href="#ln-344"></a>        text = part
+<a class="ln" id="ln-345" href="#ln-345"></a>        <span class="k">call</span> get_value(item, <span class="s">'comment'</span>, part, <span class="s">''</span>)
+<a class="ln" id="ln-346" href="#ln-346"></a>        text = text//<span class="s">' '</span>//part
+<a class="ln" id="ln-347" href="#ln-347"></a>        <span class="k">call</span> get_value(item, <span class="s">'lexer'</span>, part, <span class="s">''</span>)
+<a class="ln" id="ln-348" href="#ln-348"></a>        <span class="k">if</span> (part /= <span class="s">''</span>) text = text//<span class="s">' '</span>//part
+<a class="ln" id="ln-349" href="#ln-349"></a>        <span class="k">call</span> push(values, text)
+<a class="ln" id="ln-350" href="#ln-350"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-351" href="#ln-351"></a><span class="k">end</span> <span class="k">subroutine</span> array_values
+<a class="ln" id="ln-352" href="#ln-352"></a>
+<a class="ln" id="ln-353" href="#ln-353"></a><span class="d">!&gt; The string entries of `table` in the form `key&lt;sep&gt;value`.</span>
+<a class="ln" id="ln-354" href="#ln-354"></a><span class="k">subroutine</span> map_values(table, sep, values)
+<a class="ln" id="ln-355" href="#ln-355"></a>    <span class="k">type</span>(toml_table), <span class="k">intent</span>(inout) :: table    <span class="d">!! the table</span>
+<a class="ln" id="ln-356" href="#ln-356"></a>    <span class="k">character</span>, <span class="k">intent</span>(in) :: sep                <span class="d">!! the separator</span>
+<a class="ln" id="ln-357" href="#ln-357"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: values(:) <span class="d">!! the entries</span>
+<a class="ln" id="ln-358" href="#ln-358"></a>    <span class="k">type</span>(toml_key), <span class="k">allocatable</span> :: keys(:)
+<a class="ln" id="ln-359" href="#ln-359"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+<a class="ln" id="ln-360" href="#ln-360"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-361" href="#ln-361"></a>
+<a class="ln" id="ln-362" href="#ln-362"></a>    <span class="k">call</span> table%get_keys(keys)
+<a class="ln" id="ln-363" href="#ln-363"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(keys)
+<a class="ln" id="ln-364" href="#ln-364"></a>        <span class="k">call</span> get_value(table, keys(k)%key, text, <span class="s">''</span>)
+<a class="ln" id="ln-365" href="#ln-365"></a>        <span class="k">call</span> push(values, keys(k)%key//sep//text)
+<a class="ln" id="ln-366" href="#ln-366"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-367" href="#ln-367"></a><span class="k">end</span> <span class="k">subroutine</span> map_values
+<a class="ln" id="ln-368" href="#ln-368"></a>
+<a class="ln" id="ln-369" href="#ln-369"></a><span class="k">end</span> <span class="k">module</span> fdoc_project_file
+<a class="ln" id="ln-370" href="#ln-370"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

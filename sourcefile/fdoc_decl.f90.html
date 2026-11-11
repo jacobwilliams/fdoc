@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_decl.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_decl.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_decl"><h3><a href="../module/fdoc_decl.html">fdoc_decl</a><span class="attr attr-private">private</span></h3>
+<p>Reading declarations and procedure headers from the text of a statement.</p>
+</div>
+<h2 id="files-this-one-depends-on">Files this one depends on</h2>
+<div class="graph"><svg width="220pt" height="30pt"
+ viewBox="0 0 220 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_decl.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="120.5" y="-21.6" width="91.7" height="21.6"/><text x="166.4" y="-6.1">fdoc_decl.f90</text></a><a href="../sourcefile/fdoc_util.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="0" y="-21.6" width="84.5" height="21.6"/><text x="42.3" y="-6.1">fdoc_util.f90</text></a><path d="M119.6,-10.8C110.9,-10.8 101.9,-10.8 93.2,-10.8"/><polygon fill="#8a93a5" points="93.4,-8.4 86.4,-10.8 93.4,-13.3"/></g>
+</svg>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="527pt" height="270pt"
+ viewBox="0 0 527 270" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 265.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_decl.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-141.6" width="91.7" height="21.6"/><text x="45.9" y="-126.1">fdoc_decl.f90</text></a><a href="../sourcefile/fdoc_parser.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="127.7" y="-141.6" width="104.7" height="21.6"/><text x="180.1" y="-126.1">fdoc_parser.f90</text></a><path d="M127.6,-130.8C118.8,-130.8 109.6,-130.8 100.8,-130.8"/><polygon fill="#8a93a5" points="100.9,-128.4 93.9,-130.8 100.9,-133.3"/><a href="../sourcefile/fdoc_project.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="268.5" y="-141.6" width="106.9" height="21.6"/><text x="321.9" y="-126.1">fdoc_project.f90</text></a><path d="M268.1,-130.8C259.3,-130.8 250.1,-130.8 241.1,-130.8"/><polygon fill="#8a93a5" points="241.2,-128.4 234.2,-130.8 241.2,-133.3"/><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="434.9" y="-261.6" width="60.7" height="21.6"/><text x="465.2" y="-246.1">fdoc.f90</text></a><path d="M434.4,-242.4C426.5,-239.4 418.3,-235.6 411.4,-230.8 378.6,-208.2 350,-171 334.7,-148.9"/><polygon fill="#8a93a5" points="336.9,-147.7 330.9,-143.3 332.8,-150.4"/><a href="../sourcefile/fdoc_docs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="417.5" y="-221.6" width="95.3" height="21.6"/><text x="465.2" y="-206.1">fdoc_docs.f90</text></a><path d="M431,-199.6C424.4,-197 417.5,-194 411.4,-190.8 386.8,-178 360.8,-159.8 343.4,-146.8"/><polygon fill="#8a93a5" points="345.2,-145.1 338.2,-142.8 342.3,-149"/><a href="../sourcefile/fdoc_graphs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="411.4" y="-181.6" width="107.6" height="21.6"/><text x="465.2" y="-166.1">fdoc_graphs.f90</text></a><path d="M424.5,-159.6C407.6,-154.8 387.9,-149.2 370.3,-144.2"/><polygon fill="#8a93a5" points="371.2,-141.9 363.8,-142.4 369.9,-146.6"/><a href="../sourcefile/fdoc_links.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="418.2" y="-141.6" width="93.9" height="21.6"/><text x="465.2" y="-126.1">fdoc_links.f90</text></a><path d="M417.9,-130.8C407.1,-130.8 395.3,-130.8 383.9,-130.8"/><polygon fill="#8a93a5" points="384.2,-128.4 377.2,-130.8 384.2,-133.3"/><a href="../sourcefile/fdoc_output.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="413.2" y="-101.6" width="104" height="21.6"/><text x="465.2" y="-86.1">fdoc_output.f90</text></a><path d="M424.5,-102C407.6,-106.8 387.9,-112.4 370.3,-117.4"/><polygon fill="#8a93a5" points="369.9,-115 363.8,-119.2 371.2,-119.7"/><a href="../sourcefile/fdoc_pages.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="413.5" y="-61.6" width="103.3" height="21.6"/><text x="465.2" y="-46.1">fdoc_pages.f90</text></a><path d="M431,-62C424.4,-64.6 417.5,-67.6 411.4,-70.8 386.8,-83.6 360.8,-101.8 343.4,-114.8"/><polygon fill="#8a93a5" points="342.3,-112.6 338.2,-118.8 345.2,-116.5"/><a href="../sourcefile/fdoc_site.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="421.1" y="-21.6" width="88.1" height="21.6"/><text x="465.2" y="-6.1">fdoc_site.f90</text></a><path d="M427.5,-22C421.9,-24.5 416.3,-27.4 411.4,-30.8 378.6,-53.4 350,-90.6 334.7,-112.7"/><polygon fill="#8a93a5" points="332.8,-111.2 330.9,-118.3 336.9,-113.9"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_decl
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! Reading declarations and procedure headers from the text of a statement.</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="d">!!</span>
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="d">!! Everything here runs inside the parallel parsing loop, so it does not call functions returning</span>
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="d">!! deferred-length strings (see `example/slen_race.f90`).</span>
+<a class="ln" id="ln-6" href="#ln-6"></a><span class="k">use</span> fdoc_util
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-8" href="#ln-8"></a><span class="k">private</span>
+<a class="ln" id="ln-9" href="#ln-9"></a>
+<a class="ln" id="ln-10" href="#ln-10"></a><span class="k">public</span> :: parse_type, split_attributes, parse_declarator, is_type_declaration, parse_procedure_header
+<a class="ln" id="ln-11" href="#ln-11"></a>
+<a class="ln" id="ln-12" href="#ln-12"></a><span class="k">type</span>, <span class="k">public</span> :: parsed_type_t
+<a class="ln" id="ln-13" href="#ln-13"></a>    <span class="d">!! The type part of a declaration.</span>
+<a class="ln" id="ln-14" href="#ln-14"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: vartype    <span class="d">!! the type keyword, in lowercase</span>
+<a class="ln" id="ln-15" href="#ln-15"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: <span class="k">kind</span>       <span class="d">!! the kind, if any</span>
+<a class="ln" id="ln-16" href="#ln-16"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: strlen     <span class="d">!! the character length, if any</span>
+<a class="ln" id="ln-17" href="#ln-17"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: proto(:)     <span class="d">!! the type or interface name and its arguments, if any</span>
+<a class="ln" id="ln-18" href="#ln-18"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: rest       <span class="d">!! what follows the type</span>
+<a class="ln" id="ln-19" href="#ln-19"></a>    <span class="k">logical</span> :: ok = <span class="k">.false.</span>                     <span class="d">!! false if this is not a type</span>
+<a class="ln" id="ln-20" href="#ln-20"></a><span class="k">end</span> <span class="k">type</span> parsed_type_t
+<a class="ln" id="ln-21" href="#ln-21"></a>
+<a class="ln" id="ln-22" href="#ln-22"></a><span class="k">type</span>, <span class="k">public</span> :: procedure_header_t
+<a class="ln" id="ln-23" href="#ln-23"></a>    <span class="d">!! The parts of a `subroutine` or `function` statement.</span>
+<a class="ln" id="ln-24" href="#ln-24"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: name           <span class="d">!! the name</span>
+<a class="ln" id="ln-25" href="#ln-25"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: prefix         <span class="d">!! what comes before the keyword, without attributes</span>
+<a class="ln" id="ln-26" href="#ln-26"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: attribs(:)       <span class="d">!! the prefix attributes (`pure`, `module`, ...)</span>
+<a class="ln" id="ln-27" href="#ln-27"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: args(:)          <span class="d">!! the dummy arguments</span>
+<a class="ln" id="ln-28" href="#ln-28"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: result_name    <span class="d">!! the name in `result(...)`, if any</span>
+<a class="ln" id="ln-29" href="#ln-29"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: bind_c         <span class="d">!! the text in `bind(...)`, if any</span>
+<a class="ln" id="ln-30" href="#ln-30"></a>    <span class="k">logical</span> :: is_function = <span class="k">.false.</span>                <span class="d">!! true for a function</span>
+<a class="ln" id="ln-31" href="#ln-31"></a>    <span class="k">logical</span> :: ok = <span class="k">.false.</span>                         <span class="d">!! false if this is no such statement</span>
+<a class="ln" id="ln-32" href="#ln-32"></a><span class="k">end</span> <span class="k">type</span> procedure_header_t
+<a class="ln" id="ln-33" href="#ln-33"></a>
+<a class="ln" id="ln-34" href="#ln-34"></a><span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: TYPE_WORDS(*) = [<span class="k">character</span>(<span class="k">len</span>=<span class="n">16</span>) :: <span class="s">'integer'</span>, <span class="s">'real'</span>, <span class="s">'doubleprecision'</span>, <span class="s">'character'</span>, &amp;
+<a class="ln" id="ln-35" href="#ln-35"></a>                                                <span class="s">'complex'</span>, <span class="s">'doublecomplex'</span>, <span class="s">'logical'</span>, <span class="s">'type'</span>, <span class="s">'class'</span>, <span class="s">'procedure'</span>, &amp;
+<a class="ln" id="ln-36" href="#ln-36"></a>                                                <span class="s">'enumerator'</span>]
+<a class="ln" id="ln-37" href="#ln-37"></a>
+<a class="ln" id="ln-38" href="#ln-38"></a><span class="k">contains</span>
+<a class="ln" id="ln-39" href="#ln-39"></a>
+<a class="ln" id="ln-40" href="#ln-40"></a><span class="d">!&gt; The length of the type keyword that `low` starts with, ignoring blanks in `double precision`, or</span>
+<a class="ln" id="ln-41" href="#ln-41"></a><span class="d">!&gt; 0. Its normal spelling is returned in `word`.</span>
+<a class="ln" id="ln-42" href="#ln-42"></a><span class="k">subroutine</span> type_keyword(low, n, word)
+<a class="ln" id="ln-43" href="#ln-43"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: low                 <span class="d">!! the statement, in lowercase</span>
+<a class="ln" id="ln-44" href="#ln-44"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: n                           <span class="d">!! the length of the keyword in `low`</span>
+<a class="ln" id="ln-45" href="#ln-45"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: word  <span class="d">!! the keyword</span>
+<a class="ln" id="ln-46" href="#ln-46"></a>    <span class="k">integer</span> :: k, at
+<a class="ln" id="ln-47" href="#ln-47"></a>
+<a class="ln" id="ln-48" href="#ln-48"></a>    n = <span class="n">0</span>
+<a class="ln" id="ln-49" href="#ln-49"></a>    word = <span class="s">''</span>
+<a class="ln" id="ln-50" href="#ln-50"></a>    <span class="k">if</span> (starts_with(low, <span class="s">'double'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-51" href="#ln-51"></a>        at = <span class="n">7</span> + <span class="k">verify</span>(low(<span class="n">7</span>:)//<span class="s">'x'</span>, <span class="s">' '</span>) - <span class="n">1</span>
+<a class="ln" id="ln-52" href="#ln-52"></a>        <span class="k">if</span> (word_at(low, at, <span class="s">'precision'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-53" href="#ln-53"></a>            n = at + <span class="n">8</span>
+<a class="ln" id="ln-54" href="#ln-54"></a>            word = <span class="s">'double precision'</span>
+<a class="ln" id="ln-55" href="#ln-55"></a>        <span class="k">else</span> <span class="k">if</span> (word_at(low, at, <span class="s">'complex'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-56" href="#ln-56"></a>            n = at + <span class="n">6</span>
+<a class="ln" id="ln-57" href="#ln-57"></a>            word = <span class="s">'double complex'</span>
+<a class="ln" id="ln-58" href="#ln-58"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-59" href="#ln-59"></a>        <span class="k">return</span>
+<a class="ln" id="ln-60" href="#ln-60"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-61" href="#ln-61"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(TYPE_WORDS)
+<a class="ln" id="ln-62" href="#ln-62"></a>        <span class="k">associate</span> (w =&gt; TYPE_WORDS(k))
+<a class="ln" id="ln-63" href="#ln-63"></a>            <span class="k">if</span> (w(<span class="n">1</span>:<span class="n">6</span>) == <span class="s">'double'</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-64" href="#ln-64"></a>            <span class="k">if</span> (starts_with(low, <span class="k">trim</span>(w))) <span class="k">then</span>
+<a class="ln" id="ln-65" href="#ln-65"></a>                n = <span class="k">len_trim</span>(w)
+<a class="ln" id="ln-66" href="#ln-66"></a>                word = <span class="k">trim</span>(w)
+<a class="ln" id="ln-67" href="#ln-67"></a>                <span class="k">return</span>
+<a class="ln" id="ln-68" href="#ln-68"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-69" href="#ln-69"></a>        <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-70" href="#ln-70"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-71" href="#ln-71"></a><span class="k">end</span> <span class="k">subroutine</span> type_keyword
+<a class="ln" id="ln-72" href="#ln-72"></a>
+<a class="ln" id="ln-73" href="#ln-73"></a><span class="d">!&gt; True if `low` starts a type declaration rather than, for example, an assignment.</span>
+<a class="ln" id="ln-74" href="#ln-74"></a><span class="k">logical</span> <span class="k">function</span> is_type_declaration(low)
+<a class="ln" id="ln-75" href="#ln-75"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: low     <span class="d">!! the statement, in lowercase</span>
+<a class="ln" id="ln-76" href="#ln-76"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: word
+<a class="ln" id="ln-77" href="#ln-77"></a>    <span class="k">integer</span> :: n, next
+<a class="ln" id="ln-78" href="#ln-78"></a>    <span class="k">character</span> :: c
+<a class="ln" id="ln-79" href="#ln-79"></a>
+<a class="ln" id="ln-80" href="#ln-80"></a>    <span class="k">call</span> type_keyword(low, n, word)
+<a class="ln" id="ln-81" href="#ln-81"></a>    is_type_declaration = n &gt; <span class="n">0</span>
+<a class="ln" id="ln-82" href="#ln-82"></a>    <span class="k">if</span> (n == <span class="n">0</span> <span class="k">.or.</span> n &gt;= <span class="k">len</span>(low)) <span class="k">return</span>
+<a class="ln" id="ln-83" href="#ln-83"></a>    next = n + <span class="k">verify</span>(low(n + <span class="n">1</span>:)//<span class="s">'x'</span>, <span class="s">' '</span>)
+<a class="ln" id="ln-84" href="#ln-84"></a>    c = low(n + <span class="n">1</span>:n + <span class="n">1</span>)
+<a class="ln" id="ln-85" href="#ln-85"></a>    <span class="k">if</span> (<span class="k">index</span>(<span class="s">'abcdefghijklmnopqrstuvwxyz0123456789_'</span>, c) &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-86" href="#ln-86"></a>        is_type_declaration = <span class="k">.false.</span>
+<a class="ln" id="ln-87" href="#ln-87"></a>        <span class="k">return</span>
+<a class="ln" id="ln-88" href="#ln-88"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-89" href="#ln-89"></a>    <span class="k">if</span> (next &gt; <span class="k">len</span>(low)) <span class="k">return</span>
+<a class="ln" id="ln-90" href="#ln-90"></a>    <span class="k">if</span> (low(next:next) == <span class="s">'='</span> <span class="k">.or.</span> low(next:next) == <span class="s">'%'</span>) is_type_declaration = <span class="k">.false.</span>
+<a class="ln" id="ln-91" href="#ln-91"></a><span class="k">end</span> <span class="k">function</span> is_type_declaration
+<a class="ln" id="ln-92" href="#ln-92"></a>
+<a class="ln" id="ln-93" href="#ln-93"></a><span class="d">!&gt; The length of the kind selector at the start of `text`, which is `(...)`, `*n` or `*(...)`.</span>
+<a class="ln" id="ln-94" href="#ln-94"></a><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> selector_length(text)
+<a class="ln" id="ln-95" href="#ln-95"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+<a class="ln" id="ln-96" href="#ln-96"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-97" href="#ln-97"></a>
+<a class="ln" id="ln-98" href="#ln-98"></a>    selector_length = <span class="n">0</span>
+<a class="ln" id="ln-99" href="#ln-99"></a>    <span class="k">if</span> (<span class="k">len</span>(text) == <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-100" href="#ln-100"></a>    <span class="k">if</span> (text(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'('</span>) <span class="k">then</span>
+<a class="ln" id="ln-101" href="#ln-101"></a>        selector_length = closing_paren(text, <span class="n">1</span>)
+<a class="ln" id="ln-102" href="#ln-102"></a>    <span class="k">else</span> <span class="k">if</span> (text(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'*'</span>) <span class="k">then</span>
+<a class="ln" id="ln-103" href="#ln-103"></a>        k = <span class="n">1</span> + <span class="k">verify</span>(text(<span class="n">2</span>:)//<span class="s">'x'</span>, <span class="s">' '</span>)
+<a class="ln" id="ln-104" href="#ln-104"></a>        <span class="k">if</span> (k &gt; <span class="k">len</span>(text)) <span class="k">return</span>
+<a class="ln" id="ln-105" href="#ln-105"></a>        <span class="k">if</span> (text(k:k) == <span class="s">'('</span>) <span class="k">then</span>
+<a class="ln" id="ln-106" href="#ln-106"></a>            selector_length = closing_paren(text, k)
+<a class="ln" id="ln-107" href="#ln-107"></a>        <span class="k">else</span>
+<a class="ln" id="ln-108" href="#ln-108"></a>            selector_length = k + <span class="k">verify</span>(text(k:)//<span class="s">'x'</span>, <span class="s">'0123456789'</span>) - <span class="n">2</span>
+<a class="ln" id="ln-109" href="#ln-109"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-110" href="#ln-110"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-111" href="#ln-111"></a><span class="k">end</span> <span class="k">function</span> selector_length
+<a class="ln" id="ln-112" href="#ln-112"></a>
+<a class="ln" id="ln-113" href="#ln-113"></a><span class="d">!&gt; Read the type at the start of `line`.</span>
+<a class="ln" id="ln-114" href="#ln-114"></a><span class="k">subroutine</span> parse_type(line, t)
+<a class="ln" id="ln-115" href="#ln-115"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line    <span class="d">!! the statement</span>
+<a class="ln" id="ln-116" href="#ln-116"></a>    <span class="k">type</span>(parsed_type_t), <span class="k">intent</span>(out) :: t   <span class="d">!! the result</span>
+<a class="ln" id="ln-117" href="#ln-117"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: rest, args, word
+<a class="ln" id="ln-118" href="#ln-118"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: parts(:)
+<a class="ln" id="ln-119" href="#ln-119"></a>    <span class="k">integer</span> :: n, k, at, sel
+<a class="ln" id="ln-120" href="#ln-120"></a>    <span class="k">logical</span> :: star
+<a class="ln" id="ln-121" href="#ln-121"></a>
+<a class="ln" id="ln-122" href="#ln-122"></a>    <span class="k">call</span> type_keyword(lowercase(line), n, word)
+<a class="ln" id="ln-123" href="#ln-123"></a>    <span class="k">if</span> (n == <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-124" href="#ln-124"></a>    t%ok = <span class="k">.true.</span>
+<a class="ln" id="ln-125" href="#ln-125"></a>    t%vartype = word
+<a class="ln" id="ln-126" href="#ln-126"></a>    rest = strip(line(n + <span class="n">1</span>:))
+<a class="ln" id="ln-127" href="#ln-127"></a>    sel = selector_length(rest)
+<a class="ln" id="ln-128" href="#ln-128"></a>    t%rest = strip(rest(sel + <span class="n">1</span>:))
+<a class="ln" id="ln-129" href="#ln-129"></a>    <span class="k">if</span> (sel == <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-130" href="#ln-130"></a>        <span class="k">if</span> (t%vartype == <span class="s">'character'</span>) t%strlen = <span class="s">'1'</span>
+<a class="ln" id="ln-131" href="#ln-131"></a>        <span class="k">return</span>
+<a class="ln" id="ln-132" href="#ln-132"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-133" href="#ln-133"></a>    star = rest(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'*'</span>
+<a class="ln" id="ln-134" href="#ln-134"></a>    <span class="k">if</span> (star) <span class="k">then</span>
+<a class="ln" id="ln-135" href="#ln-135"></a>        args = strip(rest(<span class="n">2</span>:sel))
+<a class="ln" id="ln-136" href="#ln-136"></a>        <span class="k">if</span> (args(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'('</span>) args = strip(args(<span class="n">2</span>:<span class="k">len</span>(args) - <span class="n">1</span>))
+<a class="ln" id="ln-137" href="#ln-137"></a>    <span class="k">else</span>
+<a class="ln" id="ln-138" href="#ln-138"></a>        args = strip(rest(<span class="n">2</span>:sel - <span class="n">1</span>))
+<a class="ln" id="ln-139" href="#ln-139"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-140" href="#ln-140"></a>    args = remove_blanks(args)
+<a class="ln" id="ln-141" href="#ln-141"></a>
+<a class="ln" id="ln-142" href="#ln-142"></a>    <span class="k">select</span> <span class="k">case</span> (t%vartype)
+<a class="ln" id="ln-143" href="#ln-143"></a>    <span class="k">case</span> (<span class="s">'type'</span>, <span class="s">'class'</span>, <span class="s">'procedure'</span>)
+<a class="ln" id="ln-144" href="#ln-144"></a>        at = <span class="k">index</span>(args, <span class="s">'('</span>)
+<a class="ln" id="ln-145" href="#ln-145"></a>        <span class="k">if</span> (at &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-146" href="#ln-146"></a>            t%proto = [string_t(args(:at - <span class="n">1</span>)), string_t(args(at + <span class="n">1</span>:<span class="k">len</span>(args) - <span class="n">1</span>))]
+<a class="ln" id="ln-147" href="#ln-147"></a>        <span class="k">else</span>
+<a class="ln" id="ln-148" href="#ln-148"></a>            t%proto = [string_t(args), string_t(<span class="s">''</span>)]
+<a class="ln" id="ln-149" href="#ln-149"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-150" href="#ln-150"></a>    <span class="k">case</span> (<span class="s">'character'</span>)
+<a class="ln" id="ln-151" href="#ln-151"></a>        <span class="k">if</span> (star) <span class="k">then</span>
+<a class="ln" id="ln-152" href="#ln-152"></a>            t%strlen = args
+<a class="ln" id="ln-153" href="#ln-153"></a>            <span class="k">return</span>
+<a class="ln" id="ln-154" href="#ln-154"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-155" href="#ln-155"></a>        parts = top_split(args, <span class="s">','</span>)
+<a class="ln" id="ln-156" href="#ln-156"></a>        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(parts)
+<a class="ln" id="ln-157" href="#ln-157"></a>            <span class="k">associate</span> (p =&gt; parts(k)%s)
+<a class="ln" id="ln-158" href="#ln-158"></a>                <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(t%strlen) <span class="k">.and.</span> starts_with(lowercase(p), <span class="s">'len='</span>)) <span class="k">then</span>
+<a class="ln" id="ln-159" href="#ln-159"></a>                    t%strlen = p(<span class="n">5</span>:)
+<a class="ln" id="ln-160" href="#ln-160"></a>                <span class="k">else</span> <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(t%<span class="k">kind</span>) <span class="k">.and.</span> starts_with(lowercase(p), <span class="s">'kind='</span>)) <span class="k">then</span>
+<a class="ln" id="ln-161" href="#ln-161"></a>                    t%<span class="k">kind</span> = p(<span class="n">6</span>:)
+<a class="ln" id="ln-162" href="#ln-162"></a>                <span class="k">else</span> <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(t%strlen)) <span class="k">then</span>
+<a class="ln" id="ln-163" href="#ln-163"></a>                    t%strlen = p
+<a class="ln" id="ln-164" href="#ln-164"></a>                <span class="k">else</span> <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(t%<span class="k">kind</span>)) <span class="k">then</span>
+<a class="ln" id="ln-165" href="#ln-165"></a>                    t%<span class="k">kind</span> = p
+<a class="ln" id="ln-166" href="#ln-166"></a>                <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-167" href="#ln-167"></a>            <span class="k">end</span> <span class="k">associate</span>
+<a class="ln" id="ln-168" href="#ln-168"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-169" href="#ln-169"></a>        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(t%strlen)) t%strlen = <span class="s">'1'</span>
+<a class="ln" id="ln-170" href="#ln-170"></a>    <span class="k">case</span> default
+<a class="ln" id="ln-171" href="#ln-171"></a>        <span class="k">if</span> (starts_with(lowercase(args), <span class="s">'kind='</span>)) <span class="k">then</span>
+<a class="ln" id="ln-172" href="#ln-172"></a>            t%<span class="k">kind</span> = args(<span class="n">6</span>:)
+<a class="ln" id="ln-173" href="#ln-173"></a>        <span class="k">else</span>
+<a class="ln" id="ln-174" href="#ln-174"></a>            t%<span class="k">kind</span> = args
+<a class="ln" id="ln-175" href="#ln-175"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-176" href="#ln-176"></a>    <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-177" href="#ln-177"></a><span class="k">end</span> <span class="k">subroutine</span> parse_type
+<a class="ln" id="ln-178" href="#ln-178"></a>
+<a class="ln" id="ln-179" href="#ln-179"></a><span class="d">!&gt; Split what follows the type of a declaration into its attributes and the names declared.</span>
+<a class="ln" id="ln-180" href="#ln-180"></a><span class="k">subroutine</span> split_attributes(rest, attributes, names)
+<a class="ln" id="ln-181" href="#ln-181"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: rest                <span class="d">!! what follows the type</span>
+<a class="ln" id="ln-182" href="#ln-182"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: attributes(:)   <span class="d">!! the attributes</span>
+<a class="ln" id="ln-183" href="#ln-183"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: names <span class="d">!! the names declared, with what goes with them</span>
+<a class="ln" id="ln-184" href="#ln-184"></a>    <span class="k">integer</span> :: at
+<a class="ln" id="ln-185" href="#ln-185"></a>
+<a class="ln" id="ln-186" href="#ln-186"></a>    <span class="k">allocate</span> (attributes(<span class="n">0</span>))
+<a class="ln" id="ln-187" href="#ln-187"></a>    at = top_index(rest, <span class="s">'::'</span>)
+<a class="ln" id="ln-188" href="#ln-188"></a>    <span class="k">if</span> (<span class="k">len</span>(rest) &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-189" href="#ln-189"></a>        <span class="k">if</span> (rest(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">','</span> <span class="k">.and.</span> at &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-190" href="#ln-190"></a>            attributes = top_split(rest(<span class="n">2</span>:at - <span class="n">1</span>), <span class="s">','</span>)
+<a class="ln" id="ln-191" href="#ln-191"></a>            names = strip(rest(at + <span class="n">2</span>:))
+<a class="ln" id="ln-192" href="#ln-192"></a>            <span class="k">return</span>
+<a class="ln" id="ln-193" href="#ln-193"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-194" href="#ln-194"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-195" href="#ln-195"></a>    <span class="k">if</span> (at &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-196" href="#ln-196"></a>        names = strip(rest(at + <span class="n">2</span>:))
+<a class="ln" id="ln-197" href="#ln-197"></a>    <span class="k">else</span>
+<a class="ln" id="ln-198" href="#ln-198"></a>        names = strip(rest)
+<a class="ln" id="ln-199" href="#ln-199"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-200" href="#ln-200"></a><span class="k">end</span> <span class="k">subroutine</span> split_attributes
+<a class="ln" id="ln-201" href="#ln-201"></a>
+<a class="ln" id="ln-202" href="#ln-202"></a><span class="d">!&gt; Read one name of a declaration, such as `x(3) = 1`.</span>
+<a class="ln" id="ln-203" href="#ln-203"></a><span class="k">subroutine</span> parse_declarator(text, name, <span class="k">dimension</span>, initial, points)
+<a class="ln" id="ln-204" href="#ln-204"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text                    <span class="d">!! the text</span>
+<a class="ln" id="ln-205" href="#ln-205"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: name      <span class="d">!! the name</span>
+<a class="ln" id="ln-206" href="#ln-206"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: <span class="k">dimension</span> <span class="d">!! the dimensions, if any</span>
+<a class="ln" id="ln-207" href="#ln-207"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: initial   <span class="d">!! the initial value, if any</span>
+<a class="ln" id="ln-208" href="#ln-208"></a>    <span class="k">logical</span>, <span class="k">intent</span>(out) :: points                          <span class="d">!! true if initialized with `=&gt;`</span>
+<a class="ln" id="ln-209" href="#ln-209"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: dec
+<a class="ln" id="ln-210" href="#ln-210"></a>    <span class="k">integer</span> :: at, stop_at
+<a class="ln" id="ln-211" href="#ln-211"></a>
+<a class="ln" id="ln-212" href="#ln-212"></a>    dec = remove_blanks(text)
+<a class="ln" id="ln-213" href="#ln-213"></a>    points = <span class="k">.false.</span>
+<a class="ln" id="ln-214" href="#ln-214"></a>    at = top_index(dec, <span class="s">'='</span>)
+<a class="ln" id="ln-215" href="#ln-215"></a>    <span class="k">if</span> (at &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-216" href="#ln-216"></a>        points = dec(at + <span class="n">1</span>:<span class="k">min</span>(at + <span class="n">1</span>, <span class="k">len</span>(dec))) == <span class="s">'&gt;'</span>
+<a class="ln" id="ln-217" href="#ln-217"></a>        initial = dec(at + <span class="k">merge</span>(<span class="n">2</span>, <span class="n">1</span>, points):)
+<a class="ln" id="ln-218" href="#ln-218"></a>        dec = dec(:at - <span class="n">1</span>)
+<a class="ln" id="ln-219" href="#ln-219"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-220" href="#ln-220"></a>    stop_at = <span class="k">scan</span>(dec, <span class="s">'([*'</span>)
+<a class="ln" id="ln-221" href="#ln-221"></a>    <span class="k">if</span> (stop_at &gt; <span class="n">1</span>) <span class="k">then</span>
+<a class="ln" id="ln-222" href="#ln-222"></a>        <span class="k">dimension</span> = dec(stop_at:)
+<a class="ln" id="ln-223" href="#ln-223"></a>        name = dec(:stop_at - <span class="n">1</span>)
+<a class="ln" id="ln-224" href="#ln-224"></a>    <span class="k">else</span>
+<a class="ln" id="ln-225" href="#ln-225"></a>        name = dec
+<a class="ln" id="ln-226" href="#ln-226"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-227" href="#ln-227"></a><span class="k">end</span> <span class="k">subroutine</span> parse_declarator
+<a class="ln" id="ln-228" href="#ln-228"></a>
+<a class="ln" id="ln-229" href="#ln-229"></a><span class="d">!&gt; Read a `subroutine` or `function` statement.</span>
+<a class="ln" id="ln-230" href="#ln-230"></a><span class="k">subroutine</span> parse_procedure_header(line, h)
+<a class="ln" id="ln-231" href="#ln-231"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line            <span class="d">!! the statement</span>
+<a class="ln" id="ln-232" href="#ln-232"></a>    <span class="k">type</span>(procedure_header_t), <span class="k">intent</span>(out) :: h      <span class="d">!! the result</span>
+<a class="ln" id="ln-233" href="#ln-233"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="k">len</span>(line)) :: low
+<a class="ln" id="ln-234" href="#ln-234"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: prefix
+<a class="ln" id="ln-235" href="#ln-235"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: PREFIXES(*) = [<span class="k">character</span>(<span class="k">len</span>=<span class="n">13</span>) :: <span class="s">'impure'</span>, <span class="s">'pure'</span>, <span class="s">'elemental'</span>, <span class="s">'non_recursive'</span>, &amp;
+<a class="ln" id="ln-236" href="#ln-236"></a>                                                  <span class="s">'recursive'</span>, <span class="s">'module'</span>]
+<a class="ln" id="ln-237" href="#ln-237"></a>    <span class="k">integer</span> :: k, at, <span class="k">open</span>, <span class="k">close</span>, depth, n
+<a class="ln" id="ln-238" href="#ln-238"></a>
+<a class="ln" id="ln-239" href="#ln-239"></a>    low = lowercase(line)
+<a class="ln" id="ln-240" href="#ln-240"></a>    <span class="k">allocate</span> (h%attribs(<span class="n">0</span>), h%args(<span class="n">0</span>))
+<a class="ln" id="ln-241" href="#ln-241"></a>    depth = <span class="n">0</span>
+<a class="ln" id="ln-242" href="#ln-242"></a>    at = <span class="n">0</span>
+<a class="ln" id="ln-243" href="#ln-243"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(low)
+<a class="ln" id="ln-244" href="#ln-244"></a>        <span class="k">if</span> (low(k:k) == <span class="s">'('</span>) depth = depth + <span class="n">1</span>
+<a class="ln" id="ln-245" href="#ln-245"></a>        <span class="k">if</span> (low(k:k) == <span class="s">')'</span>) depth = depth - <span class="n">1</span>
+<a class="ln" id="ln-246" href="#ln-246"></a>        <span class="k">if</span> (depth /= <span class="n">0</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-247" href="#ln-247"></a>        <span class="k">if</span> (word_at(low, k, <span class="s">'subroutine'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-248" href="#ln-248"></a>            at = k + <span class="n">10</span>
+<a class="ln" id="ln-249" href="#ln-249"></a>            <span class="k">exit</span>
+<a class="ln" id="ln-250" href="#ln-250"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-251" href="#ln-251"></a>        <span class="k">if</span> (word_at(low, k, <span class="s">'function'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-252" href="#ln-252"></a>            at = k + <span class="n">8</span>
+<a class="ln" id="ln-253" href="#ln-253"></a>            h%is_function = <span class="k">.true.</span>
+<a class="ln" id="ln-254" href="#ln-254"></a>            <span class="k">exit</span>
+<a class="ln" id="ln-255" href="#ln-255"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-256" href="#ln-256"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-257" href="#ln-257"></a>    <span class="k">if</span> (at == <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-258" href="#ln-258"></a>
+<a class="ln" id="ln-259" href="#ln-259"></a>    prefix = low(<span class="n">1</span>:at - <span class="k">merge</span>(<span class="n">9</span>, <span class="n">11</span>, h%is_function))
+<a class="ln" id="ln-260" href="#ln-260"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(PREFIXES)
+<a class="ln" id="ln-261" href="#ln-261"></a>        n = <span class="k">len_trim</span>(PREFIXES(k))
+<a class="ln" id="ln-262" href="#ln-262"></a>        <span class="k">open</span> = <span class="k">index</span>(prefix, PREFIXES(k) (<span class="n">1</span>:n))
+<a class="ln" id="ln-263" href="#ln-263"></a>        <span class="k">if</span> (<span class="k">open</span> &gt; <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-264" href="#ln-264"></a>            <span class="k">call</span> push(h%attribs, PREFIXES(k) (<span class="n">1</span>:n))
+<a class="ln" id="ln-265" href="#ln-265"></a>            prefix = prefix(:<span class="k">open</span> - <span class="n">1</span>)//prefix(<span class="k">open</span> + n:)
+<a class="ln" id="ln-266" href="#ln-266"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-267" href="#ln-267"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-268" href="#ln-268"></a>    <span class="k">call</span> original_prefix(line, low, at - <span class="k">merge</span>(<span class="n">8</span>, <span class="n">10</span>, h%is_function) - <span class="n">1</span>, h%attribs, prefix)
+<a class="ln" id="ln-269" href="#ln-269"></a>    h%prefix = remove_blanks(prefix)
+<a class="ln" id="ln-270" href="#ln-270"></a>
+<a class="ln" id="ln-271" href="#ln-271"></a>    <span class="k">open</span> = at + <span class="k">verify</span>(line(at:)//<span class="s">'x'</span>, <span class="s">' '</span>) - <span class="n">1</span>
+<a class="ln" id="ln-272" href="#ln-272"></a>    <span class="k">close</span> = <span class="k">open</span> + <span class="k">verify</span>(low(<span class="k">open</span>:)//<span class="s">' '</span>, <span class="s">'abcdefghijklmnopqrstuvwxyz0123456789_'</span>) - <span class="n">2</span>
+<a class="ln" id="ln-273" href="#ln-273"></a>    h%name = line(<span class="k">open</span>:<span class="k">close</span>)
+<a class="ln" id="ln-274" href="#ln-274"></a>    <span class="k">open</span> = <span class="k">close</span> + <span class="k">verify</span>(line(<span class="k">close</span> + <span class="n">1</span>:)//<span class="s">'x'</span>, <span class="s">' '</span>)
+<a class="ln" id="ln-275" href="#ln-275"></a>    <span class="k">close</span> = <span class="k">open</span> - <span class="n">1</span>
+<a class="ln" id="ln-276" href="#ln-276"></a>    <span class="k">if</span> (<span class="k">open</span> &lt;= <span class="k">len</span>(line)) <span class="k">then</span>
+<a class="ln" id="ln-277" href="#ln-277"></a>        <span class="k">if</span> (line(<span class="k">open</span>:<span class="k">open</span>) == <span class="s">'('</span>) <span class="k">then</span>
+<a class="ln" id="ln-278" href="#ln-278"></a>            <span class="k">close</span> = closing_paren(line, <span class="k">open</span>)
+<a class="ln" id="ln-279" href="#ln-279"></a>            <span class="k">if</span> (<span class="k">close</span> == <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-280" href="#ln-280"></a>            <span class="k">if</span> (<span class="k">close</span> &gt; <span class="k">open</span> + <span class="n">1</span>) <span class="k">then</span>
+<a class="ln" id="ln-281" href="#ln-281"></a>                <span class="k">if</span> (<span class="k">len</span>(strip(line(<span class="k">open</span> + <span class="n">1</span>:<span class="k">close</span> - <span class="n">1</span>))) &gt; <span class="n">0</span>) h%args = top_split(line(<span class="k">open</span> + <span class="n">1</span>:<span class="k">close</span> - <span class="n">1</span>), <span class="s">','</span>)
+<a class="ln" id="ln-282" href="#ln-282"></a>            <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-283" href="#ln-283"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-284" href="#ln-284"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-285" href="#ln-285"></a>
+<a class="ln" id="ln-286" href="#ln-286"></a>    <span class="k">do</span> k = <span class="k">close</span> + <span class="n">1</span>, <span class="k">len</span>(low)
+<a class="ln" id="ln-287" href="#ln-287"></a>        <span class="k">if</span> (word_at(low, k, <span class="s">'result'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-288" href="#ln-288"></a>            <span class="k">open</span> = k + <span class="k">index</span>(low(k:), <span class="s">'('</span>) - <span class="n">1</span>
+<a class="ln" id="ln-289" href="#ln-289"></a>            at = closing_paren(low, <span class="k">open</span>)
+<a class="ln" id="ln-290" href="#ln-290"></a>            <span class="k">if</span> (at &gt; <span class="n">0</span>) h%result_name = strip(line(<span class="k">open</span> + <span class="n">1</span>:at - <span class="n">1</span>))
+<a class="ln" id="ln-291" href="#ln-291"></a>        <span class="k">else</span> <span class="k">if</span> (word_at(low, k, <span class="s">'bind'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-292" href="#ln-292"></a>            <span class="k">open</span> = k + <span class="k">index</span>(low(k:), <span class="s">'('</span>) - <span class="n">1</span>
+<a class="ln" id="ln-293" href="#ln-293"></a>            at = closing_paren(low, <span class="k">open</span>)
+<a class="ln" id="ln-294" href="#ln-294"></a>            <span class="k">if</span> (at &gt; <span class="n">0</span>) h%bind_c = strip(line(<span class="k">open</span> + <span class="n">1</span>:at - <span class="n">1</span>))
+<a class="ln" id="ln-295" href="#ln-295"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-296" href="#ln-296"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-297" href="#ln-297"></a>    h%ok = <span class="k">.true.</span>
+<a class="ln" id="ln-298" href="#ln-298"></a><span class="k">end</span> <span class="k">subroutine</span> parse_procedure_header
+<a class="ln" id="ln-299" href="#ln-299"></a>
+<a class="ln" id="ln-300" href="#ln-300"></a><span class="d">!&gt; Set `text` to `line(1:n)` with the words of `attribs` removed, keeping the case of what is left.</span>
+<a class="ln" id="ln-301" href="#ln-301"></a><span class="k">subroutine</span> original_prefix(line, low, n, attribs, text)
+<a class="ln" id="ln-302" href="#ln-302"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: line                <span class="d">!! the statement</span>
+<a class="ln" id="ln-303" href="#ln-303"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: low                 <span class="d">!! the statement, in lowercase</span>
+<a class="ln" id="ln-304" href="#ln-304"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: n                            <span class="d">!! the length of the prefix</span>
+<a class="ln" id="ln-305" href="#ln-305"></a>    <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: attribs(:)            <span class="d">!! the words to remove</span>
+<a class="ln" id="ln-306" href="#ln-306"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: text  <span class="d">!! the result</span>
+<a class="ln" id="ln-307" href="#ln-307"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: lowered
+<a class="ln" id="ln-308" href="#ln-308"></a>    <span class="k">integer</span> :: k, at
+<a class="ln" id="ln-309" href="#ln-309"></a>
+<a class="ln" id="ln-310" href="#ln-310"></a>    text = line(<span class="n">1</span>:n)
+<a class="ln" id="ln-311" href="#ln-311"></a>    lowered = low(<span class="n">1</span>:n)
+<a class="ln" id="ln-312" href="#ln-312"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(attribs)
+<a class="ln" id="ln-313" href="#ln-313"></a>        at = <span class="k">index</span>(lowered, attribs(k)%s)
+<a class="ln" id="ln-314" href="#ln-314"></a>        <span class="k">if</span> (at == <span class="n">0</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-315" href="#ln-315"></a>        text = text(:at - <span class="n">1</span>)//text(at + <span class="k">len</span>(attribs(k)%s):)
+<a class="ln" id="ln-316" href="#ln-316"></a>        lowered = lowered(:at - <span class="n">1</span>)//lowered(at + <span class="k">len</span>(attribs(k)%s):)
+<a class="ln" id="ln-317" href="#ln-317"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-318" href="#ln-318"></a><span class="k">end</span> <span class="k">subroutine</span> original_prefix
+<a class="ln" id="ln-319" href="#ln-319"></a>
+<a class="ln" id="ln-320" href="#ln-320"></a><span class="k">end</span> <span class="k">module</span> fdoc_decl
+<a class="ln" id="ln-321" href="#ln-321"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

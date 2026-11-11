@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_shell.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_shell.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_shell"><h3><a href="../module/fdoc_shell.html">fdoc_shell</a><span class="attr attr-private">private</span></h3>
+<p>What standard Fortran cannot do with the file system, through the shell of the platform: <code>cmd.exe</code> on
+Windows, and <code>sh</code> elsewhere. All commands that differ between them are here. The tests call these
+from several threads, so they do not return deferred-length strings (see <code>example/slen_race.f90</code>).</p>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="881pt" height="225pt"
+ viewBox="0 0 881 225" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 220.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_shell.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-137.6" width="94.6" height="21.6"/><text x="47.3" y="-122.1">fdoc_shell.f90</text></a><a href="../sourcefile/fdoc_graphs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="405.6" y="-176.6" width="107.6" height="21.6"/><text x="459.4" y="-161.1">fdoc_graphs.f90</text></a><path d="M405.4,-165.8C378.9,-165.8 346.3,-165.8 317.1,-165.8"/><a href="../sourcefile/fdoc_project.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="262.7" y="-118.6" width="106.9" height="21.6"/><text x="316.1" y="-103.1">fdoc_project.f90</text></a><path d="M431.2,-154.6C408.6,-145.3 376.4,-132.1 351.9,-122.1"/><polygon fill="#8a93a5" points="353.1,-119.9 345.7,-119.5 351.2,-124.4"/><a href="../sourcefile/fdoc_input.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="130.6" y="-137.6" width="96.1" height="21.6"/><text x="178.7" y="-122.1">fdoc_input.f90</text></a><path d="M130.2,-126.8C121.6,-126.8 112.5,-126.8 103.7,-126.8"/><polygon fill="#8a93a5" points="103.8,-124.4 96.8,-126.8 103.8,-129.3"/><a href="../sourcefile/fdoc_output.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="407.4" y="-216.6" width="104" height="21.6"/><text x="459.4" y="-201.1">fdoc_output.f90</text></a><path d="M426.5,-194.6C391.7,-182.7 338.4,-165.8 317.1,-165.8"/><path d="M422.8,-194.5C416.9,-192 410.9,-189.1 405.6,-185.8 386.9,-174.1 386,-166.4 369.6,-151.8 359.1,-142.4 347,-132.3 337.2,-124.1"/><polygon fill="#8a93a5" points="338.8,-122.3 331.9,-119.8 335.7,-126.1"/><path d="M262.5,-104C225.4,-102.3 174.8,-101.5 130.6,-106.8 119.3,-108.2 107.4,-110.5 96.2,-113.1"/><polygon fill="#8a93a5" points="95.8,-110.7 89.6,-114.7 97,-115.5"/><path d="M262.4,-115.2C253.4,-116.5 244,-117.8 235,-119"/><polygon fill="#8a93a5" points="234.9,-116.6 228.3,-120 235.5,-121.4"/><a href="../sourcefile/fdoc_site.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="688.5" y="-118.6" width="88.1" height="21.6"/><text x="732.6" y="-103.1">fdoc_site.f90</text></a><path d="M458.4,-126.8C393.3,-128.8 382.3,-165.9 317.1,-165.8"/><path d="M315.1,-165.8C232.7,-165.7 211.9,-160.8 130.6,-146.8 120.6,-145.1 109.9,-142.8 99.7,-140.4"/><polygon fill="#8a93a5" points="100.5,-138.1 93.1,-138.9 99.4,-142.9"/><path d="M599.9,-127.8C565.7,-132.6 528.1,-143.2 500.5,-152"/><polygon fill="#8a93a5" points="500,-149.6 494.1,-154.1 501.5,-154.3"/><path d="M688.1,-114.8C662.9,-118.8 630.7,-123.7 601.9,-127.8"/><path d="M599.9,-127.8C538.5,-136.5 522.4,-124.9 460.4,-126.8"/><path d="M458.4,-126.8C432,-127.6 403,-124.5 378.2,-120.5"/><polygon fill="#8a93a5" points="378.7,-118.1 371.4,-119.3 377.9,-122.9"/><a href="../sourcefile/fdoc_pages.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="549.2" y="-99.6" width="103.3" height="21.6"/><text x="600.9" y="-84.1">fdoc_pages.f90</text></a><path d="M688,-101.4C679.4,-100.1 670.1,-98.8 661,-97.5"/><polygon fill="#8a93a5" points="661.5,-95.1 654.2,-96.5 660.8,-99.9"/><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="812.7" y="-118.6" width="60.7" height="21.6"/><text x="843" y="-103.1">fdoc.f90</text></a><path d="M812.2,-117.3C801.1,-120.8 788.3,-124.6 776.7,-127.8 686.6,-152.7 581.1,-177.9 517.6,-192.7"/><polygon fill="#8a93a5" points="517.4,-190.2 511.1,-194.2 518.5,-195"/><path d="M731.6,-49.8C675.6,-36 659.4,-53.7 601.9,-49.8"/><path d="M599.9,-49.8C535.7,-45.4 523.1,3.8 460.4,-10.8"/><path d="M812.4,-107.8C804,-107.8 794.7,-107.8 785.4,-107.8"/><polygon fill="#8a93a5" points="785.5,-105.4 778.5,-107.8 785.5,-110.3"/><a href="../sourcefile/fdoc_docs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="411.7" y="-60.6" width="95.3" height="21.6"/><text x="459.4" y="-45.1">fdoc_docs.f90</text></a><path d="M599.9,-49.8C572.2,-47.9 541.4,-47.7 515.8,-48.1"/><polygon fill="#8a93a5" points="515.8,-45.6 508.8,-48.2 515.8,-50.5"/><a href="../sourcefile/fdoc_links.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="553.9" y="-21.6" width="93.9" height="21.6"/><text x="600.9" y="-6.1">fdoc_links.f90</text></a><path d="M827.2,-96.7C807.2,-82.6 769.9,-58.7 733.6,-49.8"/><path d="M731.6,-49.8C702,-42.5 669.2,-32.6 644,-24.6"/><polygon fill="#8a93a5" points="644.9,-22.3 637.5,-22.6 643.4,-27"/><path d="M731.6,-49.8C713.4,-45.3 667.8,-61.5 635.8,-74.3"/><polygon fill="#8a93a5" points="635,-72 629.4,-76.9 636.8,-76.6"/><path d="M431.2,-61C408.6,-70.3 376.4,-83.5 351.9,-93.5"/><polygon fill="#8a93a5" points="351.2,-91.2 345.7,-96.1 353.1,-95.7"/><path d="M553.7,-5.6C526.3,-3.8 491,-3.7 460.4,-10.8"/><path d="M458.4,-10.8C434.1,-16.5 427.1,-17.1 405.6,-29.8 377,-46.7 349.2,-73.5 332.6,-90.8"/><polygon fill="#8a93a5" points="331.1,-88.9 328,-95.7 334.6,-92.2"/><path d="M549,-92.2C501.1,-95.4 429.3,-100.3 378.3,-103.7"/><polygon fill="#8a93a5" points="378.3,-101.2 371.5,-104.1 378.7,-106.1"/><path d="M559.5,-77.5C543.6,-73.1 525.2,-67.9 508.7,-63.3"/><polygon fill="#8a93a5" points="509.5,-61 502.1,-61.5 508.2,-65.7"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_shell
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! What standard Fortran cannot do with the file system, through the shell of the platform: `cmd.exe` on</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="d">!! Windows, and `sh` elsewhere. All commands that differ between them are here. The tests call these</span>
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="d">!! from several threads, so they do not return deferred-length strings (see `example/slen_race.f90`).</span>
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="k">use</span> ffmt_fs, <span class="k">only</span>: is_directory
+<a class="ln" id="ln-6" href="#ln-6"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="k">private</span>
+<a class="ln" id="ln-8" href="#ln-8"></a>
+<a class="ln" id="ln-9" href="#ln-9"></a><span class="k">public</span> :: quoted, quoted_path, make_directory, remove_directory, copy_file, copy_path
+<a class="ln" id="ln-10" href="#ln-10"></a><span class="k">public</span> :: temporary_directory, run_command
+<a class="ln" id="ln-11" href="#ln-11"></a>
+<a class="ln" id="ln-12" href="#ln-12"></a><span class="k">contains</span>
+<a class="ln" id="ln-13" href="#ln-13"></a>
+<a class="ln" id="ln-14" href="#ln-14"></a><span class="d">!&gt; Run `command` and wait for it. Without `cmdstat`, a program can stop with an error if the command</span>
+<a class="ln" id="ln-15" href="#ln-15"></a><span class="d">!&gt; is not found, which some shells report with status 127.</span>
+<a class="ln" id="ln-16" href="#ln-16"></a><span class="k">subroutine</span> run_command(command, <span class="k">stat</span>)
+<a class="ln" id="ln-17" href="#ln-17"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: command <span class="d">!! the command</span>
+<a class="ln" id="ln-18" href="#ln-18"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>            <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-19" href="#ln-19"></a>    <span class="k">integer</span> :: exit_status, command_status
+<a class="ln" id="ln-20" href="#ln-20"></a>
+<a class="ln" id="ln-21" href="#ln-21"></a>    exit_status = <span class="n">0</span>
+<a class="ln" id="ln-22" href="#ln-22"></a>    <span class="k">call</span> <span class="k">execute_command_line</span>(command, exitstat=exit_status, cmdstat=command_status)
+<a class="ln" id="ln-23" href="#ln-23"></a>    <span class="k">stat</span> = <span class="k">merge</span>(exit_status, command_status, command_status == <span class="n">0</span>)
+<a class="ln" id="ln-24" href="#ln-24"></a><span class="k">end</span> <span class="k">subroutine</span> run_command
+<a class="ln" id="ln-25" href="#ln-25"></a>
+<a class="ln" id="ln-26" href="#ln-26"></a><span class="d">!&gt; True on Windows, which sets the variable `OS` to this value.</span>
+<a class="ln" id="ln-27" href="#ln-27"></a><span class="k">logical</span> <span class="k">function</span> is_windows()
+<a class="ln" id="ln-28" href="#ln-28"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="n">16</span>) :: <span class="k">value</span>
+<a class="ln" id="ln-29" href="#ln-29"></a>    <span class="k">integer</span> :: status
+<a class="ln" id="ln-30" href="#ln-30"></a>
+<a class="ln" id="ln-31" href="#ln-31"></a>    <span class="k">call</span> <span class="k">get_environment_variable</span>(<span class="s">'OS'</span>, <span class="k">value</span>, status=status)
+<a class="ln" id="ln-32" href="#ln-32"></a>    is_windows = status == <span class="n">0</span> <span class="k">.and.</span> <span class="k">value</span> == <span class="s">'Windows_NT'</span>
+<a class="ln" id="ln-33" href="#ln-33"></a><span class="k">end</span> <span class="k">function</span> is_windows
+<a class="ln" id="ln-34" href="#ln-34"></a>
+<a class="ln" id="ln-35" href="#ln-35"></a><span class="d">!&gt; `text` in quotes, as one argument of a command.</span>
+<a class="ln" id="ln-36" href="#ln-36"></a><span class="k">function</span> quoted(text) <span class="k">result</span>(out)
+<a class="ln" id="ln-37" href="#ln-37"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+<a class="ln" id="ln-38" href="#ln-38"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="k">len</span>(text) + <span class="n">2</span>) :: out
+<a class="ln" id="ln-39" href="#ln-39"></a>
+<a class="ln" id="ln-40" href="#ln-40"></a>    <span class="k">if</span> (is_windows()) <span class="k">then</span>
+<a class="ln" id="ln-41" href="#ln-41"></a>        out = <span class="s">'"'</span>//text//<span class="s">'"'</span>
+<a class="ln" id="ln-42" href="#ln-42"></a>    <span class="k">else</span>
+<a class="ln" id="ln-43" href="#ln-43"></a>        out = <span class="s">"'"</span>//text//<span class="s">"'"</span>
+<a class="ln" id="ln-44" href="#ln-44"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-45" href="#ln-45"></a><span class="k">end</span> <span class="k">function</span> quoted
+<a class="ln" id="ln-46" href="#ln-46"></a>
+<a class="ln" id="ln-47" href="#ln-47"></a><span class="d">!&gt; `path` in quotes, with the separator of the platform, as one argument of a command.</span>
+<a class="ln" id="ln-48" href="#ln-48"></a><span class="k">function</span> quoted_path(path) <span class="k">result</span>(out)
+<a class="ln" id="ln-49" href="#ln-49"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the path</span>
+<a class="ln" id="ln-50" href="#ln-50"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="k">len</span>(path) + <span class="n">2</span>) :: out
+<a class="ln" id="ln-51" href="#ln-51"></a>    <span class="k">character</span>(<span class="k">len</span>=<span class="k">len</span>(path)) :: native
+<a class="ln" id="ln-52" href="#ln-52"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-53" href="#ln-53"></a>
+<a class="ln" id="ln-54" href="#ln-54"></a>    native = path
+<a class="ln" id="ln-55" href="#ln-55"></a>    <span class="k">if</span> (is_windows()) <span class="k">then</span>
+<a class="ln" id="ln-56" href="#ln-56"></a>        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(native)
+<a class="ln" id="ln-57" href="#ln-57"></a>            <span class="k">if</span> (native(k:k) == <span class="s">'/'</span>) native(k:k) = <span class="s">'\'</span>
+<a class="ln" id="ln-58" href="#ln-58"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-59" href="#ln-59"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-60" href="#ln-60"></a>    out = quoted(native)
+<a class="ln" id="ln-61" href="#ln-61"></a><span class="k">end</span> <span class="k">function</span> quoted_path
+<a class="ln" id="ln-62" href="#ln-62"></a>
+<a class="ln" id="ln-63" href="#ln-63"></a><span class="d">!&gt; Create directory `path` with those above it, if it does not exist. It is not a failure if something</span>
+<a class="ln" id="ln-64" href="#ln-64"></a><span class="d">!&gt; else creates it first.</span>
+<a class="ln" id="ln-65" href="#ln-65"></a><span class="k">subroutine</span> make_directory(path, <span class="k">stat</span>)
+<a class="ln" id="ln-66" href="#ln-66"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the directory</span>
+<a class="ln" id="ln-67" href="#ln-67"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>            <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-68" href="#ln-68"></a>
+<a class="ln" id="ln-69" href="#ln-69"></a>    <span class="k">if</span> (is_windows()) <span class="k">then</span>
+<a class="ln" id="ln-70" href="#ln-70"></a>        <span class="k">call</span> run_command(<span class="s">'if not exist '</span>//quoted_path(path)//<span class="s">' mkdir '</span>//quoted_path(path), <span class="k">stat</span>)
+<a class="ln" id="ln-71" href="#ln-71"></a>    <span class="k">else</span>
+<a class="ln" id="ln-72" href="#ln-72"></a>        <span class="k">call</span> run_command(<span class="s">'mkdir -p '</span>//quoted_path(path), <span class="k">stat</span>)
+<a class="ln" id="ln-73" href="#ln-73"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-74" href="#ln-74"></a>    <span class="k">if</span> (is_directory(path)) <span class="k">stat</span> = <span class="n">0</span>
+<a class="ln" id="ln-75" href="#ln-75"></a><span class="k">end</span> <span class="k">subroutine</span> make_directory
+<a class="ln" id="ln-76" href="#ln-76"></a>
+<a class="ln" id="ln-77" href="#ln-77"></a><span class="d">!&gt; Delete directory `path` with what it holds, if it exists.</span>
+<a class="ln" id="ln-78" href="#ln-78"></a><span class="k">subroutine</span> remove_directory(path)
+<a class="ln" id="ln-79" href="#ln-79"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the directory</span>
+<a class="ln" id="ln-80" href="#ln-80"></a>    <span class="k">integer</span> :: <span class="k">stat</span>
+<a class="ln" id="ln-81" href="#ln-81"></a>
+<a class="ln" id="ln-82" href="#ln-82"></a>    <span class="k">if</span> (is_windows()) <span class="k">then</span>
+<a class="ln" id="ln-83" href="#ln-83"></a>        <span class="k">call</span> run_command(<span class="s">'if exist '</span>//quoted_path(path)//<span class="s">' rmdir /s /q '</span>//quoted_path(path), <span class="k">stat</span>)
+<a class="ln" id="ln-84" href="#ln-84"></a>    <span class="k">else</span>
+<a class="ln" id="ln-85" href="#ln-85"></a>        <span class="k">call</span> run_command(<span class="s">'rm -rf '</span>//quoted_path(path), <span class="k">stat</span>)
+<a class="ln" id="ln-86" href="#ln-86"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-87" href="#ln-87"></a><span class="k">end</span> <span class="k">subroutine</span> remove_directory
+<a class="ln" id="ln-88" href="#ln-88"></a>
+<a class="ln" id="ln-89" href="#ln-89"></a><span class="d">!&gt; Copy file `from` to `to`.</span>
+<a class="ln" id="ln-90" href="#ln-90"></a><span class="k">subroutine</span> copy_file(from, to, <span class="k">stat</span>)
+<a class="ln" id="ln-91" href="#ln-91"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: from    <span class="d">!! the file</span>
+<a class="ln" id="ln-92" href="#ln-92"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: to      <span class="d">!! the copy</span>
+<a class="ln" id="ln-93" href="#ln-93"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>            <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-94" href="#ln-94"></a>
+<a class="ln" id="ln-95" href="#ln-95"></a>    <span class="k">if</span> (is_windows()) <span class="k">then</span>
+<a class="ln" id="ln-96" href="#ln-96"></a>        <span class="k">call</span> run_command(<span class="s">'copy /y '</span>//quoted_path(from)//<span class="s">' '</span>//quoted_path(to)//<span class="s">' &gt;nul'</span>, <span class="k">stat</span>)
+<a class="ln" id="ln-97" href="#ln-97"></a>    <span class="k">else</span>
+<a class="ln" id="ln-98" href="#ln-98"></a>        <span class="k">call</span> run_command(<span class="s">'cp '</span>//quoted_path(from)//<span class="s">' '</span>//quoted_path(to), <span class="k">stat</span>)
+<a class="ln" id="ln-99" href="#ln-99"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-100" href="#ln-100"></a><span class="k">end</span> <span class="k">subroutine</span> copy_file
+<a class="ln" id="ln-101" href="#ln-101"></a>
+<a class="ln" id="ln-102" href="#ln-102"></a><span class="d">!&gt; Copy file or directory `from` to `to`, with what a directory holds.</span>
+<a class="ln" id="ln-103" href="#ln-103"></a><span class="k">subroutine</span> copy_path(from, to, <span class="k">stat</span>)
+<a class="ln" id="ln-104" href="#ln-104"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: from    <span class="d">!! the file or directory</span>
+<a class="ln" id="ln-105" href="#ln-105"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: to      <span class="d">!! the copy</span>
+<a class="ln" id="ln-106" href="#ln-106"></a>    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>            <span class="d">!! nonzero on failure</span>
+<a class="ln" id="ln-107" href="#ln-107"></a>
+<a class="ln" id="ln-108" href="#ln-108"></a>    <span class="k">if</span> (<span class="k">.not.</span> is_directory(from)) <span class="k">then</span>
+<a class="ln" id="ln-109" href="#ln-109"></a>        <span class="k">call</span> copy_file(from, to, <span class="k">stat</span>)
+<a class="ln" id="ln-110" href="#ln-110"></a>    <span class="k">else</span> <span class="k">if</span> (is_windows()) <span class="k">then</span>
+<a class="ln" id="ln-111" href="#ln-111"></a>        <span class="k">call</span> run_command(<span class="s">'xcopy '</span>//quoted_path(from)//<span class="s">' '</span>//quoted_path(to)//<span class="s">' /e /i /y /q &gt;nul'</span>, <span class="k">stat</span>)
+<a class="ln" id="ln-112" href="#ln-112"></a>    <span class="k">else</span>
+<a class="ln" id="ln-113" href="#ln-113"></a>        <span class="k">call</span> run_command(<span class="s">'cp -R '</span>//quoted_path(from)//<span class="s">' '</span>//quoted_path(to), <span class="k">stat</span>)
+<a class="ln" id="ln-114" href="#ln-114"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-115" href="#ln-115"></a><span class="k">end</span> <span class="k">subroutine</span> copy_path
+<a class="ln" id="ln-116" href="#ln-116"></a>
+<a class="ln" id="ln-117" href="#ln-117"></a><span class="d">!&gt; The directory for temporary files.</span>
+<a class="ln" id="ln-118" href="#ln-118"></a><span class="k">subroutine</span> temporary_directory(path)
+<a class="ln" id="ln-119" href="#ln-119"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: path  <span class="d">!! the directory</span>
+<a class="ln" id="ln-120" href="#ln-120"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: NAMES(*) = [<span class="k">character</span>(<span class="k">len</span>=<span class="n">6</span>) :: <span class="s">'TMPDIR'</span>, <span class="s">'TEMP'</span>, <span class="s">'TMP'</span>]
+<a class="ln" id="ln-121" href="#ln-121"></a>    <span class="k">integer</span> :: k, n, status
+<a class="ln" id="ln-122" href="#ln-122"></a>
+<a class="ln" id="ln-123" href="#ln-123"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(NAMES)
+<a class="ln" id="ln-124" href="#ln-124"></a>        <span class="k">call</span> <span class="k">get_environment_variable</span>(<span class="k">trim</span>(NAMES(k)), length=n, status=status)
+<a class="ln" id="ln-125" href="#ln-125"></a>        <span class="k">if</span> (status /= <span class="n">0</span> <span class="k">.or.</span> n == <span class="n">0</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-126" href="#ln-126"></a>        <span class="k">allocate</span> (<span class="k">character</span>(<span class="k">len</span>=n) :: path)
+<a class="ln" id="ln-127" href="#ln-127"></a>        <span class="k">call</span> <span class="k">get_environment_variable</span>(<span class="k">trim</span>(NAMES(k)), path)
+<a class="ln" id="ln-128" href="#ln-128"></a>        <span class="k">return</span>
+<a class="ln" id="ln-129" href="#ln-129"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-130" href="#ln-130"></a>    path = <span class="k">merge</span>(<span class="s">'.   '</span>, <span class="s">'/tmp'</span>, is_windows())
+<a class="ln" id="ln-131" href="#ln-131"></a>    path = <span class="k">trim</span>(path)
+<a class="ln" id="ln-132" href="#ln-132"></a><span class="k">end</span> <span class="k">subroutine</span> temporary_directory
+<a class="ln" id="ln-133" href="#ln-133"></a>
+<a class="ln" id="ln-134" href="#ln-134"></a><span class="k">end</span> <span class="k">module</span> fdoc_shell
+<a class="ln" id="ln-135" href="#ln-135"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

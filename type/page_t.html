@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>page_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-author"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>author</a></li><li><a href="#variable-copies"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>copies</a></li><li><a href="#variable-date"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>date</a></li><li><a href="#variable-depth"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>depth</a></li><li><a href="#variable-html"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>html</a></li><li><a href="#variable-parent"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>parent</a></li><li><a href="#variable-path"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>path</a></li><li><a href="#variable-title"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>title</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_pages.f90.html">fdoc_pages.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_pages.html">fdoc_pages</a></div>
+<h1><span class="kind">type</span>page_t</h1>
+<div class="doc">
+<p>A static page.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-author"><td class="name">author</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>its author, if any</p></td></tr>
+<tr id="variable-copies"><td class="name">copies</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>files and directories to copy next to it</p></td></tr>
+<tr id="variable-date"><td class="name">date</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>its date, if any</p></td></tr>
+<tr id="variable-depth"><td class="name">depth</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>how many directories below <code>page/</code> it is</p></td></tr>
+<tr id="variable-html"><td class="name">html</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>its text as HTML</p></td></tr>
+<tr id="variable-parent"><td class="name">parent</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>the page above it</p></td></tr>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>its file, relative to <code>page/</code></p></td></tr>
+<tr id="variable-title"><td class="name">title</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>its title</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Argument of (6)</h3>
+<ul class="chips kinds"><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/copy_page_files.html">copy_page_files</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/load_pages.html">load_pages</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/page_directories.html">page_directories</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/read_page.html">read_page</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/read_tree.html">read_tree</a></li><li class="ico-s"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span><a href="../proc/write_site.html">write_site</a></li></ul>
+<h3>Component of (1)</h3>
+<ul class="chips kinds"><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/site_t.html">site_t</a></li></ul>
+<h2 id="inherits">Inherits</h2>
+<div class="graph"><svg width="187pt" height="32pt"
+ viewBox="0 0 187 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 28)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/page_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="124.8" y="-21.6" width="54.2" height="21.6"/><text x="151.9" y="-6.1">page_t</text></a><a href="https://jacobwilliams.github.io/fformat/type/string_t.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-21.6" width="57" height="21.6"/><text x="28.5" y="-6.1">string_t</text></a><path stroke-dasharray="5,2" d="M124,-10.8C106.8,-10.8 84.3,-10.8 65.5,-10.8"/><polygon fill="#8a93a5" points="65.7,-8.4 58.7,-10.8 65.7,-13.3"/><text x="90.9" y="-13.4" font-size="11" fill="#8a93a5">copies</text></g>
+</svg>
+</div>
+<h2 id="inherited-by">Inherited by</h2>
+<div class="graph"><svg width="182pt" height="32pt"
+ viewBox="0 0 182 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 28)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/page_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="54.2" height="21.6"/><text x="27.1" y="-6.1">page_t</text></a><a href="../type/site_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="120.1" y="-21.6" width="54" height="21.6"/><text x="147.1" y="-6.1">site_t</text></a><path stroke-dasharray="5,2" d="M119.6,-10.8C102.9,-10.8 81.1,-10.8 62.9,-10.8"/><polygon fill="#8a93a5" points="63.4,-8.4 56.4,-10.8 63.4,-13.3"/><text x="87.1" y="-13.4" font-size="11" fill="#8a93a5">pages</text></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: page_t
+    <span class="d">!! A static page.</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: title      <span class="d">!! its title</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: path       <span class="d">!! its file, relative to `page/`</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: html       <span class="d">!! its text as HTML</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: author     <span class="d">!! its author, if any</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: date       <span class="d">!! its date, if any</span>
+    <span class="k">integer</span> :: parent = <span class="n">0</span>                       <span class="d">!! the page above it</span>
+    <span class="k">integer</span> :: depth = <span class="n">0</span>                        <span class="d">!! how many directories below `page/` it is</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: copies(:)    <span class="d">!! files and directories to copy next to it</span>
+<span class="k">end</span> <span class="k">type</span> page_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

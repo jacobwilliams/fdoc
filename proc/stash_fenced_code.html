@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stash_fenced_code &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>stash_fenced_code<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> stash_fenced_code(<span class="intent attr-inout" title="intent(inout)">t</span>, <span class="intent attr-inout" title="intent(inout)">lines</span>)</div>
+<div class="doc">
+<p>Replace fenced code blocks by placeholders.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/tree_t.html">tree_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the conversion</p></td></tr>
+<tr id="variable-lines"><td class="name">lines</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the lines</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/fence_length.html">fence_length</a></li><li><a href="../proc/strip.html">strip</a></li><li><a href="../proc/push.html">push</a></li><li><a href="../proc/fence_language.html">fence_language</a></li><li><a href="../proc/add.html">add</a></li><li><a href="../proc/take.html">take</a></li><li><a href="../proc/code_block_html.html">code_block_html</a></li><li><a href="../proc/stash_html.html">stash_html</a></li></ul>
+<div class="graph"><svg width="641pt" height="528pt"
+ viewBox="0 0 641 528" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 524.1)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/stash_fenced_code.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-381.1" width="127.2" height="21.6"/><text x="63.6" y="-365.6">stash_fenced_code</text></a><a href="../proc/fence_length.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="174.7" y="-520.1" width="88.9" height="21.6"/><text x="219.1" y="-504.6">fence_length</text></a><path d="M71.2,-381.9C85.2,-405.3 120.2,-459 163.2,-489.3 165.8,-491.2 168.6,-492.9 171.5,-494.4"/><polygon fill="#8a93a5" points="170.2,-496.5 177.6,-497.3 172.4,-492.1"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="192.1" y="-480.1" width="54" height="21.6"/><text x="219.1" y="-464.6">strip</text></a><path d="M76.4,-381.9C94,-398.8 128.7,-429.9 163.2,-449.3 169.7,-453 177.1,-456.2 184.3,-458.9"/><polygon fill="#8a93a5" points="183.1,-461.1 190.5,-461.2 184.7,-456.5"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="337.9" y="-402.1" width="54" height="21.6"/><text x="364.9" y="-386.6">push</text></a><path d="M128.1,-374.7C189.4,-379.1 280.1,-385.4 329.2,-388.9"/><polygon fill="#8a93a5" points="328.9,-391.3 336.1,-389.3 329.3,-386.4"/><a href="../proc/fence_language.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="165.7" y="-440.1" width="106.9" height="21.6"/><text x="219.1" y="-424.6">fence_language</text></a><path d="M95.3,-382.1C119.9,-391.6 154.7,-404.9 180.9,-415"/><polygon fill="#8a93a5" points="180,-417.3 187.4,-417.5 181.7,-412.7"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="578.8" y="-145.1" width="54" height="21.6"/><text x="605.8" y="-129.6">add</text></a><path d="M68.6,-358.6C86.9,-308 166.9,-107 311.1,-35.3 385.8,1.8 419.3,11.9 497.8,-16.3"/><path d="M499.8,-16.3C519.5,-23.3 527,-21.6 542.8,-35.3 568.8,-57.8 587.6,-93.8 597.3,-115.7"/><polygon fill="#8a93a5" points="594.9,-116.4 600,-121.9 599.4,-114.5"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="337.9" y="-322.1" width="54" height="21.6"/><text x="364.9" y="-306.6">take</text></a><path d="M88.7,-358.6C108.3,-349.6 136.9,-337.7 163.2,-331.3 220.2,-317.4 288.7,-313.2 329.1,-311.8"/><polygon fill="#8a93a5" points="329.1,-314.3 336,-311.7 329,-309.4"/><a href="../proc/code_block_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="163.2" y="-225.1" width="112" height="21.6"/><text x="219.1" y="-209.6">code_block_html</text></a><path d="M76.1,-358.6C103.1,-331.2 170.2,-263 201.5,-231.2"/><polygon fill="#8a93a5" points="203.1,-233.1 206.2,-226.4 199.6,-229.7"/><a href="../proc/stash_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="180.5" y="-362.1" width="77.3" height="21.6"/><text x="219.1" y="-346.6">stash_html</text></a><path d="M127.9,-362.5C142.7,-360.6 158.2,-358.7 172,-357"/><polygon fill="#8a93a5" points="172.3,-359.4 178.9,-356.1 171.7,-354.6"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="326.7" y="-442.1" width="76.5" height="21.6"/><text x="364.9" y="-426.6">starts_with</text></a><path d="M272.9,-430C287.7,-430.2 303.8,-430.5 318.2,-430.7"/><polygon fill="#8a93a5" points="318,-433.1 325,-430.8 318,-428.2"/><path d="M365.9,-272.3C443.1,-287.2 476.9,-316.1 542.8,-273.3 584,-246.6 598.1,-185.5 602.7,-154"/><polygon fill="#8a93a5" points="605.1,-154.3 603.6,-147 600.3,-153.7"/><path d="M232.4,-225.5C249.3,-240.6 281,-267.6 311.1,-286.3 317.1,-290 323.6,-293.5 330.1,-296.7"/><polygon fill="#8a93a5" points="328.8,-298.8 336.1,-299.6 330.9,-294.4"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="462.3" y="-264.1" width="72.9" height="21.6"/><text x="498.8" y="-248.6">lowercase</text></a><path d="M240.3,-225.4C267.5,-239.5 317.7,-263.3 363.9,-272.3"/><path d="M365.9,-272.3C395.5,-278 429.2,-273 455.1,-266.7"/><polygon fill="#8a93a5" points="455.6,-269.1 461.7,-265 454.4,-264.3"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="454.7" y="-66.1" width="88.1" height="21.6"/><text x="498.8" y="-50.6">html_escape</text></a><path d="M236.7,-203.1C254.8,-191 284.7,-171.2 311.1,-155.3 373.7,-117.6 389.6,-108.5 454.7,-75.3 458.2,-73.5 461.9,-71.7 465.6,-69.9"/><polygon fill="#8a93a5" points="466.4,-72.3 471.7,-67.1 464.3,-67.8"/><a href="../proc/highlight_fortran.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="311.1" y="-186.1" width="107.6" height="21.6"/><text x="364.9" y="-170.6">highlight_fortran</text></a><path d="M261.7,-203C278.3,-198.5 297.4,-193.3 314.7,-188.7"/><polygon fill="#8a93a5" points="314.9,-191.1 321,-186.9 313.6,-186.4"/><a href="../proc/highlight_data.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="317.2" y="-66.1" width="95.4" height="21.6"/><text x="364.9" y="-50.6">highlight_data</text></a><path d="M228.1,-203.2C243.2,-182.3 277.6,-136.1 311.1,-101.3 321.2,-90.8 333.4,-80.1 343.6,-71.6"/><polygon fill="#8a93a5" points="344.9,-73.7 348.7,-67.4 341.7,-69.9"/><path d="M257.9,-361.8C280.2,-368 308.2,-375.8 329.8,-381.8"/><polygon fill="#8a93a5" points="328.9,-384.1 336.3,-383.6 330.2,-379.4"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="336.8" y="-362.1" width="56.3" height="21.6"/><text x="364.9" y="-346.6">int_text</text></a><path d="M257.9,-351.3C279.6,-351.3 306.6,-351.3 327.9,-351.3"/><polygon fill="#8a93a5" points="327.9,-353.7 334.9,-351.3 327.9,-348.8"/><path d="M527.4,-66.5C532.7,-69.1 538.1,-72 542.8,-75.3 560.4,-87.3 577.7,-104.3 589.6,-117"/><polygon fill="#8a93a5" points="587.7,-118.5 594.2,-122 591.3,-115.2"/><path d="M393.7,-186.5C429.6,-199.2 493.2,-215.6 542.8,-195.3 564,-186.6 581.8,-166.9 592.8,-152.2"/><polygon fill="#8a93a5" points="594.7,-153.8 596.8,-146.7 590.7,-151"/><path d="M384.6,-186.5C402.5,-197.3 430.4,-214 454.7,-228.3 460.1,-231.4 465.8,-234.8 471.2,-237.9"/><polygon fill="#8a93a5" points="469.9,-240 477.2,-241.4 472.3,-235.8"/><path d="M380.8,-164.1C391.9,-155.4 407.2,-142.4 418.7,-129.3 437.8,-107.6 432.8,-94.1 454.7,-75.3 456.7,-73.6 458.9,-72 461.2,-70.5"/><polygon fill="#8a93a5" points="462.1,-72.8 466.9,-67.1 459.6,-68.6"/><a href="https://jacobwilliams.github.io/fformat/proc/tokenize.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="467.4" y="-186.1" width="62.8" height="21.6"/><text x="498.8" y="-170.6">tokenize</text></a><path d="M419.2,-175.3C432.4,-175.3 446.4,-175.3 458.8,-175.3"/><polygon fill="#8a93a5" points="458.6,-177.7 465.6,-175.3 458.6,-172.8"/><a href="../proc/line_start.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="465.2" y="-146.1" width="67.1" height="21.6"/><text x="498.8" y="-130.6">line_start</text></a><path d="M403,-164C419.9,-158.9 440,-152.8 457.3,-147.6"/><polygon fill="#8a93a5" points="457.6,-150.1 463.6,-145.7 456.2,-145.4"/><a href="../proc/is_intrinsic.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="461.3" y="-106.1" width="75.1" height="21.6"/><text x="498.8" y="-90.6">is_intrinsic</text></a><path d="M380.9,-164.1C398.1,-151.5 427.7,-130.6 454.7,-115.3 457.8,-113.6 461,-111.8 464.3,-110.2"/><polygon fill="#8a93a5" points="465.4,-112.4 470.6,-107.1 463.2,-108"/><path d="M391,-44.1C423.4,-30.2 478.1,-9.2 497.8,-16.3"/><path d="M412.8,-55.3C423.6,-55.3 435.3,-55.3 446.3,-55.3"/><polygon fill="#8a93a5" points="446.1,-57.7 453.1,-55.3 446.1,-52.8"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/markdown_to_html.html">markdown_to_html</a></li></ul>
+<div class="graph"><svg width="645pt" height="130pt"
+ viewBox="0 0 645 130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 125.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/stash_fenced_code.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-121.6" width="127.2" height="21.6"/><text x="63.6" y="-106.1">stash_fenced_code</text></a><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="163.2" y="-81.6" width="124.2" height="21.6"/><text x="225.3" y="-66.1">markdown_to_html</text></a><path d="M179.4,-82C160.9,-86.7 139.3,-92.1 119.8,-97"/><polygon fill="#8a93a5" points="119.3,-94.6 113.1,-98.6 120.5,-99.3"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="2.9" y="-81.6" width="121.3" height="21.6"/><text x="63.6" y="-66.1">stash_html_blocks</text></a><path d="M154.6,-70.8C147.5,-70.8 140.2,-70.8 133,-70.8"/><polygon fill="#8a93a5" points="154.5,-73.3 161.5,-70.8 154.5,-68.4"/><polygon fill="#8a93a5" points="133.2,-68.4 126.2,-70.8 133.2,-73.3"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="7.2" y="-41.6" width="112.7" height="21.6"/><text x="63.6" y="-26.1">render_footnotes</text></a><path d="M171.2,-57.5C153.9,-53.2 134.6,-48.3 117.2,-44"/><polygon fill="#8a93a5" points="170.5,-59.9 177.9,-59.2 171.7,-55.1"/><polygon fill="#8a93a5" points="118.3,-41.7 110.9,-42.4 117.1,-46.5"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="323.4" y="-101.6" width="97.5" height="21.6"/><text x="372.1" y="-86.1">markdown_list</text></a><path d="M322.9,-84.1C314.3,-82.9 305.1,-81.7 296,-80.4"/><polygon fill="#8a93a5" points="296.5,-78 289.2,-79.5 295.8,-82.9"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="332" y="-61.6" width="80.2" height="21.6"/><text x="372.1" y="-46.1">render_text</text></a><path d="M331.9,-56.2C320.8,-57.7 308.3,-59.5 296,-61.2"/><polygon fill="#8a93a5" points="296,-58.7 289.4,-62.1 296.6,-63.6"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="475" y="-101.6" width="54" height="21.6"/><text x="502" y="-86.1">run</text></a><path d="M474.5,-90.8C461.4,-90.8 445.1,-90.8 429.4,-90.8"/><polygon fill="#8a93a5" points="429.8,-88.4 422.8,-90.8 429.8,-93.3"/><path d="M474.5,-82.5C457.9,-77.3 436,-70.5 416.8,-64.5"/><polygon fill="#8a93a5" points="417.7,-62.2 410.2,-62.4 416.2,-66.8"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="456.9" y="-61.6" width="90.3" height="21.6"/><text x="502" y="-46.1">render_entity</text></a><path d="M456.6,-50.8C445,-50.8 432.5,-50.8 420.7,-50.8"/><polygon fill="#8a93a5" points="420.8,-48.4 413.8,-50.8 420.8,-53.3"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="463.7" y="-21.6" width="76.6" height="21.6"/><text x="502" y="-6.1">read_page</text></a><path d="M465,-22C450.1,-26.7 432.5,-32.2 416.8,-37.1"/><polygon fill="#8a93a5" points="416.2,-34.8 410.3,-39.2 417.7,-39.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="583.1" y="-61.6" width="54" height="21.6"/><text x="610.1" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M582.9,-50.8C574.6,-50.8 565.2,-50.8 555.8,-50.8"/><polygon fill="#8a93a5" points="556,-48.4 549,-50.8 556,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="583.1" y="-21.6" width="54" height="21.6"/><text x="610.1" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M582.9,-10.8C572.6,-10.8 560.5,-10.8 548.9,-10.8"/><polygon fill="#8a93a5" points="549.1,-8.4 542.1,-10.8 549.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> stash_fenced_code(t, lines)
+    <span class="k">type</span>(tree_t), <span class="k">intent</span>(inout) :: t                        <span class="d">!! the conversion</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: lines(:)  <span class="d">!! the lines</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: out(:)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: info, html, placeholder, lang
+    <span class="k">type</span>(buffer_t) :: code
+    <span class="k">integer</span> :: k, j, n, m
+    <span class="k">character</span> :: fence
+
+    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>([(<span class="k">index</span>(lines(k)%s, <span class="s">'```'</span>) &gt; <span class="n">0</span> <span class="k">.or.</span> <span class="k">index</span>(lines(k)%s, <span class="s">'~~~'</span>) &gt; <span class="n">0</span>, k=<span class="n">1</span>, <span class="k">size</span>(lines))])) <span class="k">return</span>
+    <span class="k">allocate</span> (out(<span class="n">0</span>))
+    k = <span class="n">1</span>
+    <span class="k">do</span> <span class="k">while</span> (k &lt;= <span class="k">size</span>(lines))
+        n = fence_length(lines(k)%s)
+        j = <span class="n">0</span>
+        <span class="k">if</span> (n &gt; <span class="n">0</span>) <span class="k">then</span>
+            fence = lines(k)%s(<span class="n">1</span>:<span class="n">1</span>)
+            <span class="k">do</span> j = k + <span class="n">1</span>, <span class="k">size</span>(lines)
+                m = fence_length(lines(j)%s)
+                <span class="k">if</span> (m &lt; n) <span class="k">cycle</span>
+                <span class="k">if</span> (lines(j)%s(<span class="n">1</span>:<span class="n">1</span>) == fence <span class="k">.and.</span> <span class="k">len</span>(strip(lines(j)%s(m + <span class="n">1</span>:))) == <span class="n">0</span>) <span class="k">exit</span>
+            <span class="k">end</span> <span class="k">do</span>
+            <span class="k">if</span> (j &gt; <span class="k">size</span>(lines)) j = <span class="n">0</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (j == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> push(out, lines(k)%s)
+            k = k + <span class="n">1</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        info = strip(lines(k)%s(n + <span class="n">1</span>:))
+        <span class="k">call</span> fence_language(info, lang)
+        <span class="k">do</span> m = k + <span class="n">1</span>, j - <span class="n">1</span>
+            <span class="k">call</span> add(code, lines(m)%s)
+            <span class="k">call</span> add(code, NL)
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> take(code, info)
+        <span class="k">call</span> code_block_html(info, lang, html)
+        <span class="k">call</span> stash_html(t, html, placeholder)
+        <span class="k">call</span> push(out, <span class="s">''</span>)
+        <span class="k">call</span> push(out, placeholder)
+        <span class="k">call</span> push(out, <span class="s">''</span>)
+        k = j + <span class="n">1</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> <span class="k">move_alloc</span>(out, lines)
+<span class="k">end</span> <span class="k">subroutine</span> stash_fenced_code</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

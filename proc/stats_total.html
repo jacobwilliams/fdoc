@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>stats_total &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>stats_total<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> stats_total(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">described</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write the row of totals of the list of files.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-described"><td class="name">described</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>true if the table has descriptions</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add_stats.html">add_stats</a></li><li><a href="../proc/add.html">add</a></li><li><a href="../proc/stats_cells.html">stats_cells</a></li></ul>
+<div class="graph"><svg width="502pt" height="223pt"
+ viewBox="0 0 502 223" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 218.9)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/stats_total.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-175.9" width="73.7" height="21.6"/><text x="36.8" y="-160.4">stats_total</text></a><a href="../proc/add_stats.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="111.8" y="-214.9" width="70.8" height="21.6"/><text x="147.2" y="-199.4">add_stats</text></a><path d="M70.3,-176.8C81.9,-180.9 95,-185.7 107.1,-190"/><polygon fill="#8a93a5" points="106,-192.2 113.4,-192.3 107.6,-187.6"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="440.1" y="-96.9" width="54" height="21.6"/><text x="467.1" y="-81.4">add</text></a><path d="M74.2,-171.1C136.5,-180.1 266.9,-193.2 372,-165.1"/><a href="../proc/stats_cells.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="109.7" y="-97.9" width="75.1" height="21.6"/><text x="147.2" y="-82.4">stats_cells</text></a><path d="M53.8,-153.6C72.4,-140.2 103.3,-118 124.2,-102.9"/><polygon fill="#8a93a5" points="125.4,-105.1 129.6,-99 122.5,-101.1"/><path d="M157.8,-76.2C170.6,-62.5 194.8,-39.2 220.7,-28.1 283.1,-1.5 306.4,8 372,-9.1"/><path d="M374,-9.1C408.2,-17.6 437.4,-48.4 453.3,-68.4"/><polygon fill="#8a93a5" points="451.2,-69.7 457.4,-73.8 455.1,-66.7"/><a href="../proc/number_cell.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="220.7" y="-58.9" width="85.2" height="21.6"/><text x="263.4" y="-43.4">number_cell</text></a><path d="M181.2,-75.8C193.8,-71.5 208.2,-66.6 221.4,-62.1"/><polygon fill="#8a93a5" points="222.1,-64.4 228,-59.8 220.6,-59.8"/><a href="../proc/add_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="344.5" y="-96.9" width="57" height="21.6"/><text x="373" y="-81.4">add_int</text></a><path d="M185.2,-86.9C226.9,-86.7 294.3,-86.4 335.8,-86.2"/><polygon fill="#8a93a5" points="335.7,-88.7 342.7,-86.2 335.7,-83.8"/><a href="../proc/size_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="230.5" y="-136.9" width="65.7" height="21.6"/><text x="263.4" y="-121.4">size_text</text></a><path d="M181.2,-98.4C194.1,-102.8 209,-107.9 222.5,-112.5"/><polygon fill="#8a93a5" points="221.3,-114.7 228.8,-114.6 222.9,-110"/><path d="M286.2,-36.9C312.6,-23.9 355.5,-4.8 372,-9.1"/><path d="M296.4,-59.4C309,-63.8 323.5,-69 336.5,-73.6"/><polygon fill="#8a93a5" points="335.5,-75.8 342.9,-75.8 337.1,-71.2"/><a href="../proc/grouped.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="342" y="-136.9" width="62.1" height="21.6"/><text x="373" y="-121.4">grouped</text></a><path d="M278.8,-59.2C294.2,-71.1 319.6,-90.3 342,-106.1 343.9,-107.4 345.9,-108.8 347.9,-110.2"/><polygon fill="#8a93a5" points="346.3,-112.1 353.5,-114 349.1,-108"/><path d="M401.9,-86.1C411.2,-86.1 421.7,-86.1 431.5,-86.1"/><polygon fill="#8a93a5" points="431.4,-88.5 438.4,-86.1 431.4,-83.6"/><path d="M286.2,-137.4C312.6,-150.4 355.5,-169.5 372,-165.1"/><path d="M374,-165.1C408.4,-155.9 437.5,-124.4 453.3,-104"/><polygon fill="#8a93a5" points="455.2,-105.7 457.4,-98.6 451.3,-102.7"/><path d="M294.6,-114.8C307.6,-110 322.9,-104.3 336.4,-99.3"/><polygon fill="#8a93a5" points="337,-101.7 342.8,-97 335.3,-97.1"/><path d="M296.7,-126.1C308.1,-126.1 321.1,-126.1 333.1,-126.1"/><polygon fill="#8a93a5" points="333.1,-128.5 340.1,-126.1 333.1,-123.6"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/list_page.html">list_page</a></li></ul>
+<div class="graph"><svg width="379pt" height="30pt"
+ viewBox="0 0 379 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/stats_total.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="73.7" height="21.6"/><text x="36.8" y="-6.1">stats_total</text></a><a href="../proc/list_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="109.7" y="-21.6" width="66.4" height="21.6"/><text x="142.9" y="-6.1">list_page</text></a><path d="M109.2,-10.8C100.8,-10.8 91.7,-10.8 82.7,-10.8"/><polygon fill="#8a93a5" points="82.8,-8.4 75.8,-10.8 82.8,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="212.1" y="-21.6" width="69.3" height="21.6"/><text x="246.7" y="-6.1">write_site</text></a><path d="M211.8,-10.8C203.1,-10.8 193.7,-10.8 184.7,-10.8"/><polygon fill="#8a93a5" points="184.8,-8.4 177.8,-10.8 184.8,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="317.4" y="-21.6" width="54" height="21.6"/><text x="344.4" y="-6.1">run</text></a><path d="M317,-10.8C308.6,-10.8 299.1,-10.8 289.9,-10.8"/><polygon fill="#8a93a5" points="290.1,-8.4 283.1,-10.8 290.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> stats_total(site, described, b)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site        <span class="d">!! the site</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: described        <span class="d">!! true if the table has descriptions</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">type</span>(file_stats_t) :: total
+    <span class="k">integer</span> :: k
+
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(site%file_stats)
+        <span class="k">call</span> add_stats(total, site%file_stats(k))
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> add(b, <span class="s">'&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;'</span>)
+    <span class="k">call</span> stats_cells(total, b)
+    <span class="k">if</span> (described) <span class="k">call</span> add(b, <span class="s">'&lt;td&gt;&lt;/td&gt;'</span>)
+    <span class="k">call</span> add(b, <span class="s">'&lt;/tr&gt;&lt;/tfoot&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<span class="k">end</span> <span class="k">subroutine</span> stats_total</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>format_string &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>format_string<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> format_string(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">args</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<div class="doc">
+<p><code>text.format(args)</code>, for fields <code>{}</code> and <code>{n}</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the format</p></td></tr>
+<tr id="variable-args"><td class="name">args</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the arguments</p></td></tr>
+<tr id="variable-v"><td class="name">v</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the result</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/fail.html">fail</a></li><li><a href="../proc/digits_value.html">digits_value</a></li><li><a href="../proc/write_value.html">write_value</a></li><li><a href="../proc/take.html">take</a></li><li><a href="../proc/make_string.html">make_string</a></li></ul>
+<div class="graph"><svg width="312pt" height="210pt"
+ viewBox="0 0 312 210" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 206.1)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/format_string.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-121.6" width="90.3" height="21.6"/><text x="45.1" y="-106.1">format_string</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="248.6" y="-200.6" width="54" height="21.6"/><text x="275.6" y="-185.1">add</text></a><path d="M53.2,-122.3C65.5,-140.9 92.5,-176.8 126.3,-190.8 162.8,-205.9 208.9,-202.5 239.9,-197.4"/><polygon fill="#8a93a5" points="240.3,-199.8 246.8,-196.2 239.4,-195"/><a href="../proc/fail.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="141.9" y="-181.6" width="54" height="21.6"/><text x="168.9" y="-166.1">fail</text></a><path d="M69.2,-122.4C85.2,-130.5 107,-141.4 126.3,-150.8 129.8,-152.5 133.4,-154.3 137.1,-156.1"/><polygon fill="#8a93a5" points="135.8,-158.2 143.1,-159 137.9,-153.7"/><a href="../proc/digits_value.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127.3" y="-101.6" width="83.1" height="21.6"/><text x="168.9" y="-86.1">digits_value</text></a><path d="M91.1,-103.4C100.1,-101.9 109.7,-100.4 118.8,-98.9"/><polygon fill="#8a93a5" points="119.1,-101.3 125.6,-97.7 118.3,-96.5"/><a href="../proc/write_value.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="128.8" y="-141.6" width="80.2" height="21.6"/><text x="168.9" y="-126.1">write_value</text></a><path d="M91.1,-118.2C100.6,-119.8 110.7,-121.4 120.4,-123"/><polygon fill="#8a93a5" points="119.9,-125.4 127.2,-124.1 120.7,-120.6"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="141.9" y="-61.6" width="54" height="21.6"/><text x="168.9" y="-46.1">take</text></a><path d="M69.2,-99.2C85.2,-91.1 107,-80.2 126.3,-70.8 129.8,-69.1 133.4,-67.3 137.1,-65.5"/><polygon fill="#8a93a5" points="137.9,-67.9 143.1,-62.6 135.8,-63.4"/><a href="../proc/make_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="126.3" y="-21.6" width="85.2" height="21.6"/><text x="168.9" y="-6.1">make_string</text></a><path d="M55.5,-99.2C69.5,-82.5 97.4,-51.3 126.3,-30.8 128.7,-29.1 131.3,-27.4 134,-25.9"/><polygon fill="#8a93a5" points="134.8,-28.2 139.8,-22.7 132.5,-23.9"/><a href="../proc/is_digit.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="248.2" y="-101.6" width="54.9" height="21.6"/><text x="275.6" y="-86.1">is_digit</text></a><path d="M210.7,-90.8C220.3,-90.8 230.4,-90.8 239.7,-90.8"/><polygon fill="#8a93a5" points="239.5,-93.3 246.5,-90.8 239.5,-88.4"/><path d="M194.3,-142C200,-144.8 206,-147.8 211.5,-150.8 224.7,-158 239,-166.8 250.6,-174.1"/><polygon fill="#8a93a5" points="249,-176 256.2,-177.7 251.6,-171.9"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="247.5" y="-141.6" width="56.3" height="21.6"/><text x="275.6" y="-126.1">int_text</text></a><path d="M209.2,-130.8C218.9,-130.8 229.2,-130.8 238.7,-130.8"/><polygon fill="#8a93a5" points="238.7,-133.3 245.7,-130.8 238.7,-128.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/call_method.html">call_method</a></li></ul>
+<div class="graph"><svg width="330pt" height="390pt"
+ viewBox="0 0 330 390" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 385.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/format_string.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-381.6" width="90.3" height="21.6"/><text x="45.1" y="-366.1">format_string</text></a><a href="../proc/call_method.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.1" y="-381.6" width="84.5" height="21.6"/><text x="179.4" y="-366.1">call_method</text></a><path d="M136.9,-370.8C125.1,-370.8 112,-370.8 99.6,-370.8"/><polygon fill="#8a93a5" points="99.6,-368.4 92.6,-370.8 99.6,-373.3"/><a href="../proc/evaluate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="13.4" y="-201.6" width="63.5" height="21.6"/><text x="45.1" y="-186.1">evaluate</text></a><path d="M132,-355.3C130,-353.9 128,-352.4 126.3,-350.8 82.7,-311.3 59.8,-242.9 50.8,-209.8"/><polygon fill="#8a93a5" points="130.6,-357.3 137.9,-358.8 133.1,-353.1"/><polygon fill="#8a93a5" points="53.2,-209.4 49.1,-203.3 48.5,-210.7"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="133.5" y="-341.6" width="91.7" height="21.6"/><text x="179.4" y="-326.1">fypp_process</text></a><path d="M140.7,-319.6C135.5,-317.2 130.6,-314.2 126.3,-310.8 91.5,-283 66.4,-235.9 54.3,-209.8"/><polygon fill="#8a93a5" points="56.5,-208.8 51.4,-203.5 52.1,-210.8"/><a href="../proc/compare.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="146.9" y="-301.6" width="65" height="21.6"/><text x="179.4" y="-286.1">compare</text></a><path d="M146.5,-281C139.5,-278.2 132.4,-274.8 126.3,-270.8 99.6,-253.5 74.7,-226.2 59.9,-208.4"/><polygon fill="#8a93a5" points="61.9,-206.9 55.6,-203 58.1,-210"/><a href="../proc/evaluate_slice.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="131" y="-261.6" width="96.8" height="21.6"/><text x="179.4" y="-246.1">evaluate_slice</text></a><path d="M147.6,-239.5C140.5,-236.8 133.1,-233.8 126.3,-230.8 108.9,-223.2 90,-213.7 74.8,-206"/><polygon fill="#8a93a5" points="76,-203.8 68.6,-202.8 73.7,-208.2"/><a href="../proc/run_clause.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140.4" y="-221.6" width="78" height="21.6"/><text x="179.4" y="-206.1">run_clause</text></a><path d="M140.1,-205C122.9,-202.4 102.7,-199.4 85.4,-196.7"/><polygon fill="#8a93a5" points="86,-194.3 78.7,-195.7 85.2,-199.2"/><a href="../proc/evaluate_fstring.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="126.3" y="-181.6" width="106.2" height="21.6"/><text x="179.4" y="-166.1">evaluate_fstring</text></a><path d="M126.1,-178.7C112.5,-180.8 98,-182.9 85.2,-184.9"/><polygon fill="#8a93a5" points="85.1,-182.4 78.6,-185.9 85.9,-187.3"/><a href="../proc/evaluate_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="131.3" y="-141.6" width="96.1" height="21.6"/><text x="179.4" y="-126.1">evaluate_args</text></a><path d="M147.6,-142.1C140.5,-144.8 133.1,-147.8 126.3,-150.8 108.9,-158.4 90,-167.9 74.8,-175.6"/><polygon fill="#8a93a5" points="73.7,-173.4 68.6,-178.8 76,-177.8"/><a href="../proc/render_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="135.3" y="-101.6" width="88.1" height="21.6"/><text x="179.4" y="-86.1">render_node</text></a><path d="M142.9,-102.1C137.1,-104.6 131.4,-107.5 126.3,-110.8 99.6,-128.1 74.7,-155.4 59.9,-173.2"/><polygon fill="#8a93a5" points="58.1,-171.6 55.6,-178.6 61.9,-174.7"/><a href="../proc/render_loop.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.5" y="-61.6" width="83.8" height="21.6"/><text x="179.4" y="-46.1">render_loop</text></a><path d="M140.7,-62C135.5,-64.4 130.6,-67.4 126.3,-70.8 91.5,-98.6 66.4,-145.7 54.3,-171.8"/><polygon fill="#8a93a5" points="52.1,-170.8 51.4,-178.1 56.5,-172.8"/><a href="../proc/define_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="132.8" y="-21.6" width="93.2" height="21.6"/><text x="179.4" y="-6.1">define_macro</text></a><path d="M139.2,-22.1C134.5,-24.5 130.1,-27.4 126.3,-30.8 82.7,-70.3 59.8,-138.7 50.8,-171.8"/><polygon fill="#8a93a5" points="48.5,-170.9 49.1,-178.3 53.2,-172.2"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="268.4" y="-341.6" width="54" height="21.6"/><text x="295.4" y="-326.1" fill="white">...</text><path stroke-dasharray="5,2" d="M268,-330.8C257.7,-330.8 245.6,-330.8 233.6,-330.8"/><polygon fill="#8a93a5" points="234,-328.4 227,-330.8 234,-333.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="268.4" y="-141.6" width="54" height="21.6"/><text x="295.4" y="-126.1" fill="white">...</text><path stroke-dasharray="5,2" d="M268,-130.8C258.4,-130.8 247.3,-130.8 236.2,-130.8"/><polygon fill="#8a93a5" points="236.2,-128.4 229.2,-130.8 236.2,-133.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="268.4" y="-101.6" width="54" height="21.6"/><text x="295.4" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M268,-90.8C257.3,-90.8 244.5,-90.8 232.1,-90.8"/><polygon fill="#8a93a5" points="232.2,-88.4 225.2,-90.8 232.2,-93.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> format_string(c, text, args, v)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c            <span class="d">!! the state</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text        <span class="d">!! the format</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: args(:)        <span class="d">!! the arguments</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(out) :: v             <span class="d">!! the result</span>
+    <span class="k">type</span>(buffer_t) :: b
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: joined
+    <span class="k">integer</span> :: i, close_brace, field, automatic, status
+
+    i = <span class="n">1</span>
+    automatic = <span class="n">0</span>
+    <span class="k">do</span> <span class="k">while</span> (i &lt;= <span class="k">len</span>(text))
+        <span class="k">if</span> (text(i:i) /= <span class="s">'{'</span>) <span class="k">then</span>
+            <span class="k">call</span> add(b, text(i:i))
+            i = i + <span class="n">1</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        close_brace = <span class="k">index</span>(text(i:), <span class="s">'}'</span>)
+        <span class="k">if</span> (close_brace == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> fail(c, <span class="s">'a format is not closed: '</span>//text)
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (close_brace == <span class="n">2</span>) <span class="k">then</span>
+            field = automatic
+            automatic = automatic + <span class="n">1</span>
+        <span class="k">else</span>
+            <span class="k">call</span> digits_value(text(i + <span class="n">1</span>:i + close_brace - <span class="n">2</span>), field, status)
+            <span class="k">if</span> (status /= <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">call</span> fail(c, <span class="s">'the format is not supported: '</span>//text)
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (field &gt;= <span class="k">size</span>(args)) <span class="k">then</span>
+            <span class="k">call</span> fail(c, <span class="s">'a format has too few arguments: '</span>//text)
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> write_value(args(field + <span class="n">1</span>), <span class="k">.false.</span>, b)
+        i = i + close_brace
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> take(b, joined)
+    <span class="k">call</span> make_string(joined, v)
+<span class="k">end</span> <span class="k">subroutine</span> format_string</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

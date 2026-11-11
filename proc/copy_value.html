@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>copy_value &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>copy_value<span class="attr attr-elemental" title="Works on each element of arrays of any rank">elemental</span><span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">elemental</span> <span class="k">recursive</span> <span class="k">subroutine</span> copy_value(<span class="intent attr-inout" title="intent(inout)">to</span>, <span class="intent attr-in" title="intent(in)">from</span>)</div>
+<div class="doc">
+<p>Copy a value, with what it holds.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-to"><td class="name">to</td><td class="type">class(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the copy</p></td></tr>
+<tr id="variable-from"><td class="name">from</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the value</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/copy_value.html">copy_value</a></li></ul>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/copy_items.html">copy_items</a></li></ul>
+<div class="graph"><svg width="644pt" height="230pt"
+ viewBox="0 0 644 230" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 225.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/copy_value.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="none" rx="7.2" x="0" y="-111.6" width="136.5" height="21.6"/><text x="96.4" y="-96.1" fill="white">copy_value</text></a><a href="../type/value_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M7.2,-111.6H56.3V-90H7.2A7.2,7.2 0 0 1 0,-97.2V-104.4A7.2,7.2 0 0 1 7.2,-111.6Z"/><text x="28.2" y="-96.1" fill="white">value_t</text></a><rect fill="none" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-111.6" width="136.5" height="21.6"/><a href="../proc/copy_items.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="172.5" y="-111.6" width="80.1" height="21.6"/><text x="212.6" y="-96.1">copy_items</text></a><path d="M172.3,-100.8C164,-100.8 154.9,-100.8 145.8,-100.8"/><polygon fill="#8a93a5" points="145.8,-98.4 138.8,-100.8 145.8,-103.3"/><a href="../proc/items_of.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="305.3" y="-141.6" width="63.5" height="21.6"/><text x="337" y="-126.1">items_of</text></a><path d="M304.8,-123.2C291.5,-119.9 275.8,-116 261.1,-112.4"/><polygon fill="#8a93a5" points="261.9,-110.1 254.5,-110.8 260.8,-114.9"/><a href="../proc/evaluate_slice.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="288.6" y="-91.6" width="96.8" height="21.6"/><text x="337" y="-76.1">evaluate_slice</text></a><path d="M288.3,-88.6C279.5,-90 270.2,-91.5 261.4,-93"/><polygon fill="#8a93a5" points="261,-90.6 254.5,-94.1 261.8,-95.4"/><a href="../proc/call_builtin.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="427.9" y="-221.6" width="75.1" height="21.6"/><text x="465.5" y="-206.1">call_builtin</text></a><path d="M427.7,-201.3C391.3,-191.1 334.6,-173.5 288.6,-150.8 269.3,-141.3 249.1,-127.6 234.5,-116.9"/><polygon fill="#8a93a5" points="236.1,-115 229.1,-112.8 233.2,-119"/><path d="M438.1,-199.5C432.5,-196.9 426.7,-193.9 421.4,-190.8 398.9,-177.6 374.9,-160 358.5,-147.2"/><polygon fill="#8a93a5" points="360.2,-145.4 353.1,-143 357.1,-149.2"/><a href="../proc/define_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="290.4" y="-31.6" width="93.2" height="21.6"/><text x="337" y="-16.1">define_macro</text></a><path d="M318.7,-32.1C297.6,-45.9 261.7,-69.4 237.8,-85"/><polygon fill="#8a93a5" points="236.5,-82.9 232,-88.7 239.2,-87"/><a href="../proc/run_clause.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="426.5" y="-181.6" width="78" height="21.6"/><text x="465.5" y="-166.1">run_clause</text></a><path d="M428.9,-159.6C412.7,-154.4 393.5,-148.4 376.9,-143.1"/><polygon fill="#8a93a5" points="377.9,-140.8 370.5,-141.1 376.4,-145.5"/><a href="../proc/call_method.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="423.2" y="-141.6" width="84.5" height="21.6"/><text x="465.5" y="-126.1">call_method</text></a><path d="M423.1,-130.8C408.4,-130.8 391.9,-130.8 377.4,-130.8"/><polygon fill="#8a93a5" points="377.6,-128.4 370.6,-130.8 377.6,-133.3"/><a href="../proc/render_loop.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="423.6" y="-101.6" width="83.8" height="21.6"/><text x="465.5" y="-86.1">render_loop</text></a><path d="M428.9,-102C412.7,-107.2 393.5,-113.2 376.9,-118.5"/><polygon fill="#8a93a5" points="376.4,-116.1 370.5,-120.5 377.9,-120.8"/><a href="../proc/evaluate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="433.7" y="-61.6" width="63.5" height="21.6"/><text x="465.5" y="-46.1">evaluate</text></a><path d="M433.2,-58.2C421.1,-61.1 406.9,-64.5 393.2,-67.7"/><polygon fill="#8a93a5" points="392.9,-65.3 386.7,-69.3 394,-70"/><a href="../proc/evaluate_call.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="545.6" y="-221.6" width="90.3" height="21.6"/><text x="590.7" y="-206.1">evaluate_call</text></a><path d="M545.2,-210.8C534.2,-210.8 522.5,-210.8 511.4,-210.8"/><polygon fill="#8a93a5" points="511.7,-208.4 504.7,-210.8 511.7,-213.3"/><a href="../proc/render_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="421.4" y="-21.6" width="88.1" height="21.6"/><text x="465.5" y="-6.1">render_node</text></a><path d="M421,-14.2C411.7,-15 401.8,-15.8 392.1,-16.5"/><polygon fill="#8a93a5" points="392.1,-14.1 385.3,-17.1 392.5,-19"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="563.7" y="-61.6" width="54" height="21.6"/><text x="590.7" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M563.3,-50.8C546.6,-50.8 524.7,-50.8 506,-50.8"/><polygon fill="#8a93a5" points="506.2,-48.4 499.2,-50.8 506.2,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="563.7" y="-21.6" width="54" height="21.6"/><text x="590.7" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M563.3,-10.8C550.1,-10.8 533.8,-10.8 518.3,-10.8"/><polygon fill="#8a93a5" points="518.3,-8.4 511.3,-10.8 518.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">elemental</span> <span class="k">subroutine</span> copy_value(to, from)
+    <span class="k">class</span>(value_t), <span class="k">intent</span>(inout) :: to     <span class="d">!! the copy</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: from       <span class="d">!! the value</span>
+    <span class="k">integer</span> :: k
+
+    to%<span class="k">kind</span> = from%<span class="k">kind</span>
+    to%number = from%number
+    <span class="k">if</span> (<span class="k">allocated</span>(to%text)) <span class="k">deallocate</span> (to%text)
+    <span class="k">if</span> (<span class="k">allocated</span>(to%items)) <span class="k">deallocate</span> (to%items)
+    <span class="k">if</span> (<span class="k">allocated</span>(from%text)) to%text = from%text
+    <span class="k">if</span> (<span class="k">allocated</span>(from%items)) <span class="k">then</span>
+        <span class="k">allocate</span> (to%items(<span class="k">size</span>(from%items)))
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(from%items)
+            <span class="k">call</span> copy_value(to%items(k), from%items(k))
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">subroutine</span> copy_value</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>link_context_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-entity"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>entity</a></li><li><a href="#variable-list"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>list</a></li><li><a href="#variable-prefix"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>prefix</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_urls.f90.html">fdoc_urls.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_urls.html">fdoc_urls</a></div>
+<h1><span class="kind">type</span>link_context_t</h1>
+<div class="doc">
+<p>Where a <code>[[name]]</code> link is being read.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-entity"><td class="name">entity</td><td class="type">integer</td><td class="attributes"></td><td class="default">0</td><td><p>the entity being documented, or 0</p></td></tr>
+<tr id="variable-list"><td class="name">list</td><td class="type">type(<a href="../type/entity_list_t.html">entity_list_t</a>)</td><td class="attributes"><span class="attr attr-pointer">pointer</span></td><td class="default">=&gt; null()</td><td><p>the entities</p></td></tr>
+<tr id="variable-prefix"><td class="name">prefix</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>from the page to the root of the site</p></td></tr>
+</tbody>
+</table>
+<h2 id="inherits">Inherits</h2>
+<div class="graph"><svg width="603pt" height="72pt"
+ viewBox="0 0 603 72" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 68)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/link_context_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="500.6" y="-41.6" width="93.9" height="21.6"/><text x="547.6" y="-26.1">link_context_t</text></a><a href="../type/entity_list_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="371.7" y="-41.6" width="79.4" height="21.6"/><text x="411.4" y="-26.1">entity_list_t</text></a><path stroke-dasharray="5,2" d="M499.7,-30.8C486.8,-30.8 472.8,-30.8 459.9,-30.8"/><polygon fill="#8a93a5" points="460.1,-28.4 453.1,-30.8 460.1,-33.3"/><text x="475.9" y="-33.4" font-size="11" fill="#8a93a5">list</text><a href="../type/entity_box_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="212.4" y="-61.6" width="84.5" height="21.6"/><text x="254.7" y="-46.1">entity_box_t</text></a><path stroke-dasharray="5,2" d="M371.4,-35.8C351.4,-38.4 326.8,-41.6 305.5,-44.4"/><polygon fill="#8a93a5" points="305.3,-41.9 298.7,-45.2 305.9,-46.8"/><text x="337.2" y="-44.6" font-size="11" fill="#8a93a5">box</text><a href="../type/name_index_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="206.6" y="-21.6" width="96.1" height="21.6"/><text x="254.7" y="-6.1">name_index_t</text></a><path stroke-dasharray="5,2" d="M371.4,-24.2C365.5,-23.3 359.5,-22.4 353.7,-21.6 340.1,-19.7 325.4,-18 311.6,-16.5"/><polygon fill="#8a93a5" points="311.9,-14 304.6,-15.7 311.3,-18.9"/><text x="337.2" y="-24.2" font-size="11" fill="#8a93a5">names</text><a href="../type/entity_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="91.4" y="-61.6" width="56.3" height="21.6"/><text x="119.5" y="-46.1">entity_t</text></a><path stroke-dasharray="5,2" d="M212.3,-50.8C194.3,-50.8 173.4,-50.8 156.2,-50.8"/><polygon fill="#8a93a5" points="156.5,-48.4 149.5,-50.8 156.5,-53.3"/><text x="177.3" y="-53.4" font-size="11" fill="#8a93a5">e</text><a href="https://jacobwilliams.github.io/fformat/type/string_t.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="91" y="-21.6" width="57" height="21.6"/><text x="119.5" y="-6.1">string_t</text></a><path stroke-dasharray="5,2" d="M206.4,-10.8C190,-10.8 171.9,-10.8 156.5,-10.8"/><polygon fill="#8a93a5" points="156.8,-8.4 149.8,-10.8 156.8,-13.3"/><text x="177.3" y="-13.4" font-size="11" fill="#8a93a5">keys</text><rect fill="#8a93a5" stroke="none" rx="7.2" x="0" y="-61.6" width="54" height="21.6"/><text x="27" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M90.9,-50.8C81.9,-50.8 72,-50.8 62.6,-50.8"/><polygon fill="#8a93a5" points="62.8,-48.4 55.8,-50.8 62.8,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span> :: link_context_t
+    <span class="d">!! Where a `[[name]]` link is being read.</span>
+    <span class="k">type</span>(entity_list_t), <span class="k">pointer</span> :: list =&gt; <span class="k">null</span>()  <span class="d">!! the entities</span>
+    <span class="k">integer</span> :: entity = <span class="n">0</span>                           <span class="d">!! the entity being documented, or 0</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: prefix         <span class="d">!! from the page to the root of the site</span>
+<span class="k">end</span> <span class="k">type</span> link_context_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

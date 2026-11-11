@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lexical_clean &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">function</span>lexical_clean<span class="attr attr-private">private</span></h1>
+<div class="sig">character(len=:) <span class="k">function</span> lexical_clean(<span class="intent attr-in" title="intent(in)">path</span>) <span class="k">result</span>(out)</div>
+<div class="doc">
+<p>Remove empty, <code>.</code> and <code>..</code> components from absolute <code>path</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the path</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-out"><td class="name">out</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-allocatable">allocatable</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/has_drive.html">has_drive</a></li><li><a href="../proc/split_on.html">split_on</a></li><li><a href="../proc/join.html">join</a></li></ul>
+<div class="graph"><svg width="294pt" height="110pt"
+ viewBox="0 0 294 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/lexical_clean.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="88.8" height="21.6"/><text x="44.4" y="-46.1">lexical_clean</text></a><a href="../proc/has_drive.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="124.8" y="-101.6" width="70.8" height="21.6"/><text x="160.2" y="-86.1">has_drive</text></a><path d="M78.9,-62.6C91.5,-67 106,-72.1 119.1,-76.7"/><polygon fill="#8a93a5" points="118.3,-79 125.7,-79 119.9,-74.4"/><a href="../proc/split_on.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="130.6" y="-61.6" width="59.2" height="21.6"/><text x="160.2" y="-46.1">split_on</text></a><path d="M89.7,-50.8C100.4,-50.8 111.6,-50.8 121.9,-50.8"/><polygon fill="#8a93a5" points="121.7,-53.3 128.7,-50.8 121.7,-48.4"/><a href="../proc/join.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="133.2" y="-21.6" width="54" height="21.6"/><text x="160.2" y="-6.1">join</text></a><path d="M78.9,-39C93.4,-33.9 110.4,-28 125,-22.8"/><polygon fill="#8a93a5" points="125.6,-25.2 131.3,-20.6 123.9,-20.6"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="231.6" y="-61.6" width="54" height="21.6"/><text x="258.6" y="-46.1">push</text></a><path d="M190.1,-50.8C200.5,-50.8 212.2,-50.8 223,-50.8"/><polygon fill="#8a93a5" points="222.8,-53.3 229.8,-50.8 222.8,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/resolve_path.html">resolve_path</a></li></ul>
+<div class="graph"><svg width="668pt" height="70pt"
+ viewBox="0 0 668 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/lexical_clean.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="88.8" height="21.6"/><text x="44.4" y="-26.1">lexical_clean</text></a><a href="../proc/resolve_path.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="124.8" y="-41.6" width="88.8" height="21.6"/><text x="169.3" y="-26.1">resolve_path</text></a><path d="M124.6,-30.8C116,-30.8 107,-30.8 98.1,-30.8"/><polygon fill="#8a93a5" points="98.3,-28.4 91.3,-30.8 98.3,-33.3"/><a href="../proc/load_external_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="249.7" y="-61.6" width="138.7" height="21.6"/><text x="319" y="-46.1">load_external_project</text></a><path d="M249.3,-41.5C240.2,-40.3 230.9,-39 222.2,-37.8"/><polygon fill="#8a93a5" points="222.7,-35.4 215.4,-36.9 222,-40.3"/><a href="../proc/finish_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="270.6" y="-21.6" width="96.8" height="21.6"/><text x="319" y="-6.1">finish_settings</text></a><path d="M270.5,-17.2C254.9,-19.3 237.6,-21.7 221.8,-23.8"/><polygon fill="#8a93a5" points="221.8,-21.3 215.2,-24.7 222.5,-26.2"/><a href="../proc/add_external_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="424.4" y="-61.6" width="145.9" height="21.6"/><text x="497.3" y="-46.1">add_external_modules</text></a><path d="M424.1,-50.8C415.3,-50.8 406.2,-50.8 397.2,-50.8"/><polygon fill="#8a93a5" points="397.2,-48.4 390.2,-50.8 397.2,-53.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="470.3" y="-21.6" width="54" height="21.6"/><text x="497.3" y="-6.1">run</text></a><path d="M469.9,-10.8C445.3,-10.8 407.6,-10.8 376.2,-10.8"/><polygon fill="#8a93a5" points="376.4,-8.4 369.4,-10.8 376.4,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="606.3" y="-61.6" width="54" height="21.6"/><text x="633.3" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M605.8,-50.8C597.9,-50.8 588.7,-50.8 579.1,-50.8"/><polygon fill="#8a93a5" points="579.1,-48.4 572.1,-50.8 579.1,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">function</span> lexical_clean(path) <span class="k">result</span>(out)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the path</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: out
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: parts(:), kept(:)
+    <span class="k">integer</span> :: k, n, first
+
+    first = <span class="k">merge</span>(<span class="n">3</span>, <span class="n">1</span>, has_drive(path))
+    parts = split_on(path(first:), <span class="s">'/'</span>)
+    <span class="k">allocate</span> (kept(<span class="k">size</span>(parts)))
+    n = <span class="n">0</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(parts)
+        <span class="k">if</span> (parts(k)%s == <span class="s">''</span> <span class="k">.or.</span> parts(k)%s == <span class="s">'.'</span>) <span class="k">cycle</span>
+        <span class="k">if</span> (parts(k)%s == <span class="s">'..'</span>) <span class="k">then</span>
+            n = <span class="k">max</span>(<span class="n">0</span>, n - <span class="n">1</span>)
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        n = n + <span class="n">1</span>
+        kept(n)%s = parts(k)%s
+    <span class="k">end</span> <span class="k">do</span>
+    out = path(:first - <span class="n">1</span>)//<span class="s">'/'</span>//join(kept(<span class="n">1</span>:n), <span class="s">'/'</span>)
+<span class="k">end</span> <span class="k">function</span> lexical_clean</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>type_uses_section &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>type_uses_section<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> type_uses_section(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write where type <code>id</code> is used, if it is.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the type</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/use_group.html">use_group</a></li></ul>
+<div class="graph"><svg width="585pt" height="290pt"
+ viewBox="0 0 585 290" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 286.2)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/type_uses_section.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-121.2" width="122.1" height="21.6"/><text x="61" y="-105.7">type_uses_section</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="392.3" y="-122.2" width="54" height="21.6"/><text x="419.3" y="-106.7">add</text></a><path d="M123,-118.7C179.2,-125.1 264.9,-131.9 339.2,-125.4 354,-124.1 370,-121.5 383.8,-118.9"/><polygon fill="#8a93a5" points="384.2,-121.3 390.6,-117.5 383.3,-116.5"/><a href="../proc/use_group.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="158.1" y="-102.2" width="75.8" height="21.6"/><text x="196" y="-86.7">use_group</text></a><path d="M123.1,-101.7C132,-100.4 141,-99.1 149.5,-97.9"/><polygon fill="#8a93a5" points="149.8,-100.4 156.4,-96.9 149.1,-95.5"/><path d="M305.6,-111.4C331.7,-111.5 361.2,-111.5 383.4,-111.5"/><polygon fill="#8a93a5" points="383.4,-114 390.4,-111.5 383.4,-109.1"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="276.4" y="-43.2" width="56.3" height="21.6"/><text x="304.6" y="-27.7">int_text</text></a><path d="M217,-80.3C233.8,-71.1 257.7,-57.8 276.2,-47.6"/><polygon fill="#8a93a5" points="277,-49.9 281.9,-44.4 274.6,-45.6"/><a href="../proc/icon_of.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="391.1" y="-82.2" width="56.3" height="21.6"/><text x="419.3" y="-66.7">icon_of</text></a><path d="M234.2,-101.8C254.5,-106.6 280.2,-111.3 303.6,-111.4"/><path d="M305.6,-111.4C321.4,-111.5 358.1,-97.4 385.4,-85.9"/><polygon fill="#8a93a5" points="386.3,-88.2 391.8,-83.2 384.4,-83.7"/><a href="../proc/letter_class.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="379.2" y="-23.2" width="80.1" height="21.6"/><text x="419.3" y="-7.7">letter_class</text></a><path d="M203.1,-80.3C213.8,-62.1 237.9,-26.4 269.9,-12.4 301.4,1.4 340.4,0.8 370.5,-2.9"/><polygon fill="#8a93a5" points="370,-5.3 377.2,-3.9 370.6,-0.5"/><a href="../proc/side_icon.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="269.9" y="-83.2" width="69.3" height="21.6"/><text x="304.6" y="-67.7">side_icon</text></a><path d="M234.3,-84.8C243.1,-83.2 252.6,-81.5 261.6,-79.9"/><polygon fill="#8a93a5" points="261.8,-82.4 268.2,-78.7 260.9,-77.5"/><a href="../proc/link_to.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="277.6" y="-201.2" width="54" height="21.6"/><text x="304.6" y="-185.7">link_to</text></a><path d="M208.8,-102.4C227.5,-119.7 263.8,-153.5 285.7,-173.8"/><polygon fill="#8a93a5" points="283.8,-175.4 290.6,-178.4 287.1,-171.8"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="499.4" y="-23.2" width="78" height="21.6"/><text x="538.3" y="-7.7">lower_char</text></a><path d="M459.6,-12.4C469.6,-12.4 480.4,-12.4 490.7,-12.4"/><polygon fill="#8a93a5" points="490.6,-14.9 497.6,-12.4 490.6,-10"/><path d="M338.2,-83.7C352.6,-88.7 369.5,-94.5 384,-99.6"/><polygon fill="#8a93a5" points="383,-101.8 390.4,-101.8 384.6,-97.2"/><path d="M339.7,-72.1C353.2,-72 368.8,-71.9 382.5,-71.7"/><polygon fill="#8a93a5" points="382.2,-74.2 389.2,-71.7 382.2,-69.3"/><path d="M326.8,-61.1C344.6,-51.7 370.1,-38 389.7,-27.6"/><polygon fill="#8a93a5" points="390.8,-29.8 395.9,-24.4 388.5,-25.5"/><path d="M319.8,-179.3C325.9,-174.5 333,-168.7 339.2,-163.4 355.6,-149.6 357.3,-143.2 375.2,-131.4 378.2,-129.5 381.4,-127.6 384.6,-125.9"/><polygon fill="#8a93a5" points="385.7,-128.1 390.8,-122.8 383.4,-123.7"/><a href="../proc/page_entity.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="378.5" y="-242.2" width="81.6" height="21.6"/><text x="419.3" y="-226.7">page_entity</text></a><path d="M332,-200C346.1,-205.1 363.7,-211.5 379.3,-217.2"/><polygon fill="#8a93a5" points="378.4,-219.5 385.8,-219.6 380.1,-214.9"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="385.7" y="-202.2" width="67.1" height="21.6"/><text x="419.3" y="-186.7">entity_url</text></a><path d="M332,-190.7C345.5,-190.8 362.3,-190.9 377.4,-191.1"/><polygon fill="#8a93a5" points="377.1,-193.5 384.1,-191.1 377.1,-188.6"/><a href="../proc/is_shown.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="385" y="-162.2" width="68.6" height="21.6"/><text x="419.3" y="-146.7">is_shown</text></a><path d="M332,-181.3C345.8,-176.5 362.8,-170.6 378.2,-165.3"/><polygon fill="#8a93a5" points="378.8,-167.7 384.6,-163.1 377.2,-163.1"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="375.2" y="-282.2" width="88.1" height="21.6"/><text x="419.3" y="-266.7">html_escape</text></a><path d="M316.1,-201.4C329.1,-214.5 352.3,-236.5 375.2,-251.4 378,-253.2 380.9,-254.9 383.8,-256.5"/><polygon fill="#8a93a5" points="382.6,-258.6 389.9,-259.6 384.8,-254.2"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="511.3" y="-242.2" width="54" height="21.6"/><text x="538.3" y="-226.7" fill="white">...</text><path stroke-dasharray="5,2" d="M460.6,-231.4C474.3,-231.4 489.4,-231.4 502.6,-231.4"/><polygon fill="#8a93a5" points="502.4,-233.9 509.4,-231.4 502.4,-229"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="511.3" y="-202.2" width="54" height="21.6"/><text x="538.3" y="-186.7" fill="white">...</text><path stroke-dasharray="5,2" d="M453.2,-191.4C468.6,-191.4 487,-191.4 502.6,-191.4"/><polygon fill="#8a93a5" points="502.5,-193.9 509.5,-191.4 502.5,-189"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/type_body.html">type_body</a></li></ul>
+<div class="graph"><svg width="600pt" height="30pt"
+ viewBox="0 0 600 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/type_uses_section.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="122.1" height="21.6"/><text x="61" y="-6.1">type_uses_section</text></a><a href="../proc/type_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="158.1" y="-21.6" width="74.4" height="21.6"/><text x="195.3" y="-6.1">type_body</text></a><path d="M157.8,-10.8C149.5,-10.8 140.5,-10.8 131.4,-10.8"/><polygon fill="#8a93a5" points="131.5,-8.4 124.5,-10.8 131.5,-13.3"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="268.5" y="-21.6" width="81.6" height="21.6"/><text x="309.3" y="-6.1">entity_page</text></a><path d="M268.2,-10.8C259.4,-10.8 250.1,-10.8 241.2,-10.8"/><polygon fill="#8a93a5" points="241.3,-8.4 234.3,-10.8 241.3,-13.3"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="386.1" y="-21.6" width="116.3" height="21.6"/><text x="444.2" y="-6.1">write_entity_page</text></a><path d="M385.7,-10.8C376.7,-10.8 367.4,-10.8 358.6,-10.8"/><polygon fill="#8a93a5" points="358.8,-8.4 351.8,-10.8 358.8,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="538.4" y="-21.6" width="54" height="21.6"/><text x="565.4" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M538,-10.8C529.9,-10.8 520.6,-10.8 511.2,-10.8"/><polygon fill="#8a93a5" points="511.3,-8.4 504.3,-10.8 511.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> type_uses_section(site, id, b)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site        <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id               <span class="d">!! the type</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+
+    <span class="k">associate</span> (uses =&gt; site%type_uses(site%use_slot(id)))
+        <span class="k">if</span> (<span class="k">.not.</span> (<span class="k">allocated</span>(uses%arguments) <span class="k">.or.</span> <span class="k">allocated</span>(uses%results) <span class="k">.or.</span> &amp;
+                   <span class="k">allocated</span>(uses%components) <span class="k">.or.</span> <span class="k">allocated</span>(uses%variables))) <span class="k">return</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;h2 id="uses-of-type"&gt;Where it is used&lt;/h2&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">call</span> use_group(site, <span class="s">'Argument of'</span>, uses%arguments, b)
+        <span class="k">call</span> use_group(site, <span class="s">'Returned by'</span>, uses%results, b)
+        <span class="k">call</span> use_group(site, <span class="s">'Component of'</span>, uses%components, b)
+        <span class="k">call</span> use_group(site, <span class="s">'Module variables'</span>, uses%variables, b)
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">subroutine</span> type_uses_section</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

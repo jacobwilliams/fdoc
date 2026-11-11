@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>merge_separate_procedures &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project.f90.html">fdoc_project.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project.html">fdoc_project</a></div>
+<h1><span class="kind">subroutine</span>merge_separate_procedures<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> merge_separate_procedures(<span class="intent attr-inout" title="intent(inout)">p</span>)</div>
+<div class="doc">
+<p>Make one entity of each separate module procedure whose interface is shown on a page of its own: its
+body is hidden, and what the body has that the interface doesn't, its calls, <code>use</code> statements and
+state, goes to the interface. Calls to any hidden body go to its interface.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/is_separate_interface.html">is_separate_interface</a></li><li><a href="../proc/is_shown.html">is_shown</a></li><li><a href="../proc/is_separate_body.html">is_separate_body</a></li><li><a href="../proc/push_int.html">push_int</a></li></ul>
+<div class="graph"><svg width="517pt" height="148pt"
+ viewBox="0 0 517 148" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 143.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/merge_separate_procedures.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-79.6" width="181.3" height="21.6"/><text x="90.7" y="-64.1">merge_separate_procedures</text></a><a href="../proc/is_separate_interface.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="217.3" y="-139.6" width="138.7" height="21.6"/><text x="286.7" y="-124.1">is_separate_interface</text></a><path d="M127.9,-80.6C153,-88.7 187.1,-99.6 217.3,-108.8 224.3,-110.9 231.6,-113.1 238.9,-115.3"/><polygon fill="#8a93a5" points="237.7,-117.5 245.2,-117.1 239.1,-112.8"/><a href="../proc/is_shown.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="252.4" y="-99.6" width="68.6" height="21.6"/><text x="286.7" y="-84.1">is_shown</text></a><path d="M182.1,-78.1C203.7,-80.4 225.8,-82.6 243.9,-84.5"/><polygon fill="#8a93a5" points="243.2,-86.9 250.5,-85.2 243.7,-82"/><a href="../proc/is_separate_body.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="392" y="-99.6" width="117" height="21.6"/><text x="450.6" y="-84.1">is_separate_body</text></a><path d="M182.2,-64.1C233.3,-62.6 298.4,-62.7 356,-68.8 369.7,-70.2 384.3,-72.8 397.8,-75.7"/><polygon fill="#8a93a5" points="397.2,-78.1 404.6,-77.2 398.3,-73.3"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="254.9" y="-21.6" width="63.5" height="21.6"/><text x="286.7" y="-6.1">push_int</text></a><path d="M130.9,-57.1C164.7,-47 213,-32.5 246.7,-22.5"/><polygon fill="#8a93a5" points="247,-24.9 253,-20.6 245.6,-20.2"/><path d="M333.2,-117.6C352.7,-112.7 375.6,-107.1 395.9,-102.1"/><polygon fill="#8a93a5" points="396.4,-104.5 402.6,-100.4 395.2,-99.7"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/reveal_bound_procedures.html">reveal_bound_procedures</a></li></ul>
+<div class="graph"><svg width="571pt" height="30pt"
+ viewBox="0 0 571 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/merge_separate_procedures.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="181.3" height="21.6"/><text x="90.7" y="-6.1">merge_separate_procedures</text></a><a href="../proc/reveal_bound_procedures.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="217.3" y="-21.6" width="165.5" height="21.6"/><text x="300.1" y="-6.1">reveal_bound_procedures</text></a><path d="M217.1,-10.8C208.4,-10.8 199.6,-10.8 190.7,-10.8"/><polygon fill="#8a93a5" points="190.8,-8.4 183.8,-10.8 190.8,-13.3"/><a href="../proc/prune.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="418.8" y="-21.6" width="54" height="21.6"/><text x="445.8" y="-6.1">prune</text></a><path d="M418.4,-10.8C410.5,-10.8 401.2,-10.8 391.5,-10.8"/><polygon fill="#8a93a5" points="391.7,-8.4 384.7,-10.8 391.7,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="508.8" y="-21.6" width="54" height="21.6"/><text x="535.8" y="-6.1">run</text></a><path d="M508.4,-10.8C499.9,-10.8 490.5,-10.8 481.5,-10.8"/><polygon fill="#8a93a5" points="481.7,-8.4 474.7,-10.8 481.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> merge_separate_procedures(p)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(inout) :: p     <span class="d">!! the project</span>
+    <span class="k">integer</span> :: k, j, m, body
+
+    <span class="k">do</span> k = <span class="n">1</span>, p%list%n
+        <span class="k">if</span> (<span class="k">.not.</span> is_separate_interface(p%list, k)) <span class="k">cycle</span>
+        <span class="c">! only an interface with a page of its own, not a specific procedure of a generic one</span>
+        <span class="k">if</span> (p%list%box(k)%e%iface == IFACE_NONE) <span class="k">cycle</span>
+        <span class="k">if</span> (<span class="k">.not.</span> is_shown(p%list, k)) <span class="k">cycle</span>
+        body = p%list%box(k)%e%implements
+        <span class="k">if</span> (<span class="k">.not.</span> is_separate_body(p%list, body)) <span class="k">cycle</span>
+        p%list%box(body)%e%visible = <span class="k">.false.</span>
+        <span class="k">associate</span> (e =&gt; p%list%box(k)%e, from =&gt; p%list%box(body)%e)
+            <span class="k">if</span> (<span class="k">allocated</span>(from%call_ids)) <span class="k">then</span>
+                <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(e%call_ids)) <span class="k">allocate</span> (e%call_ids(<span class="n">0</span>))
+                <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(from%call_ids)
+                    <span class="k">if</span> (from%call_ids(j) /= k <span class="k">.and.</span> <span class="k">all</span>(e%call_ids /= from%call_ids(j))) &amp;
+                        <span class="k">call</span> push_int(e%call_ids, from%call_ids(j))
+                <span class="k">end</span> <span class="k">do</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (<span class="k">.not.</span> <span class="k">associated</span>(e%more, no_more) <span class="k">.and.</span> <span class="k">.not.</span> <span class="k">associated</span>(from%more, no_more)) <span class="k">then</span>
+                <span class="k">if</span> (<span class="k">allocated</span>(from%more%uses)) <span class="k">then</span>
+                    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(e%more%uses)) <span class="k">allocate</span> (e%more%uses(<span class="n">0</span>))
+                    <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(from%more%uses)
+                        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>([(e%more%uses(m)%<span class="k">module</span> == from%more%uses(j)%<span class="k">module</span>, m=<span class="n">1</span>, <span class="k">size</span>(e%more%uses))])) &amp;
+                            e%more%uses = [e%more%uses, from%more%uses(j)]
+                    <span class="k">end</span> <span class="k">do</span>
+                <span class="k">end</span> <span class="k">if</span>
+                e%more%saved_state = e%more%saved_state <span class="k">.or.</span> from%more%saved_state
+                e%more%common_block = e%more%common_block <span class="k">.or.</span> from%more%common_block
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="c">! calls to a hidden body are calls to its interface</span>
+    <span class="k">do</span> k = <span class="n">1</span>, p%list%n
+        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(p%list%box(k)%e%call_ids)) <span class="k">cycle</span>
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(p%list%box(k)%e%call_ids)
+            body = p%list%box(k)%e%call_ids(j)
+            <span class="k">if</span> (body &lt;= <span class="n">0</span>) <span class="k">cycle</span>
+            <span class="k">if</span> (p%list%box(body)%e%visible <span class="k">.or.</span> <span class="k">.not.</span> is_separate_body(p%list, body)) <span class="k">cycle</span>
+            <span class="k">if</span> (is_shown(p%list, p%list%box(body)%e%implements)) p%list%box(k)%e%call_ids(j) = p%list%box(body)%e%implements
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> merge_separate_procedures</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

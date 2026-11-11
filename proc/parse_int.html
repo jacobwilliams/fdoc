@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>parse_int &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">subroutine</span>parse_int</h1>
+<div class="sig"><span class="k">subroutine</span> parse_int(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">value</span>, <span class="intent attr-out" title="intent(out)">ok</span>)</div>
+<div class="doc">
+<p>Read a decimal integer.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-value"><td class="name">value</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the value</p></td></tr>
+<tr id="variable-ok"><td class="name">ok</td><td class="type">logical</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>false if <code>text</code> is not an integer</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/strip.html">strip</a></li></ul>
+<div class="graph"><svg width="166pt" height="30pt"
+ viewBox="0 0 166 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/parse_int.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="67.9" height="21.6"/><text x="33.9" y="-6.1">parse_int</text></a><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="103.9" y="-21.6" width="54" height="21.6"/><text x="130.9" y="-6.1">strip</text></a><path d="M68.7,-10.8C77.2,-10.8 86.4,-10.8 95,-10.8"/><polygon fill="#8a93a5" points="94.9,-13.3 101.9,-10.8 94.9,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/graphs_wanted.html">graphs_wanted</a></li><li><a href="../proc/set_option.html">set_option</a></li></ul>
+<div class="graph"><svg width="496pt" height="170pt"
+ viewBox="0 0 496 170" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 165.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/parse_int.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-121.6" width="67.9" height="21.6"/><text x="33.9" y="-106.1">parse_int</text></a><a href="../proc/graphs_wanted.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="103.9" y="-151.6" width="103.3" height="21.6"/><text x="155.5" y="-136.1">graphs_wanted</text></a><path d="M109.7,-129.5C99,-126.9 87.6,-124 77.1,-121.4"/><polygon fill="#8a93a5" points="77.7,-119 70.3,-119.7 76.5,-123.8"/><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="118.3" y="-101.6" width="74.4" height="21.6"/><text x="155.5" y="-86.1">set_option</text></a><path d="M118,-96.9C105,-99.1 90.3,-101.5 76.9,-103.8"/><polygon fill="#8a93a5" points="76.8,-101.3 70.3,-104.9 77.6,-106.1"/><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="243.2" y="-161.6" width="88.8" height="21.6"/><text x="287.6" y="-146.1">build_graphs</text></a><path d="M242.9,-147.4C234.2,-146.8 224.9,-146.1 215.8,-145.4"/><polygon fill="#8a93a5" points="216.2,-142.9 209,-144.8 215.8,-147.8"/><a href="../proc/apply_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="248.6" y="-121.6" width="78" height="21.6"/><text x="287.6" y="-106.1">apply_args</text></a><path d="M248.3,-104.9C233.5,-102.6 216.5,-100 201.1,-97.7"/><polygon fill="#8a93a5" points="201.6,-95.2 194.3,-96.6 200.8,-100.1"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="245" y="-81.6" width="85.2" height="21.6"/><text x="287.6" y="-66.1">load_project</text></a><path d="M244.7,-77.2C230.8,-79.4 215.3,-81.8 201.2,-83.9"/><polygon fill="#8a93a5" points="201.1,-81.5 194.6,-85 201.9,-86.3"/><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="247.2" y="-41.6" width="80.9" height="21.6"/><text x="287.6" y="-26.1">apply_table</text></a><path d="M262.3,-42C256,-44.9 249.4,-48 243.2,-50.8 225.1,-59.1 204.8,-68.5 188.5,-76"/><polygon fill="#8a93a5" points="187.5,-73.8 182.2,-79 189.6,-78.2"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="393.3" y="-161.6" width="69.3" height="21.6"/><text x="428" y="-146.1">write_site</text></a><path d="M393.1,-150.8C377.4,-150.8 358.3,-150.8 340.8,-150.8"/><polygon fill="#8a93a5" points="340.8,-148.4 333.8,-150.8 340.8,-153.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="401" y="-121.6" width="54" height="21.6"/><text x="428" y="-106.1">run</text></a><path d="M400.6,-110.8C382.2,-110.8 357.1,-110.8 335.4,-110.8"/><polygon fill="#8a93a5" points="335.4,-108.4 328.4,-110.8 335.4,-113.3"/><path d="M400.6,-103.2C382.3,-97.9 357.5,-90.7 335.8,-84.4"/><polygon fill="#8a93a5" points="336.5,-82.1 329.1,-82.5 335.2,-86.8"/><a href="../proc/load_fpm_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="368" y="-61.6" width="119.9" height="21.6"/><text x="428" y="-46.1">load_fpm_settings</text></a><path d="M367.9,-42.3C357.4,-40.8 346.7,-39.2 336.6,-37.7"/><polygon fill="#8a93a5" points="337.1,-35.3 329.8,-36.8 336.4,-40.2"/><a href="../proc/apply_toml_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="369.8" y="-21.6" width="116.3" height="21.6"/><text x="428" y="-6.1">apply_toml_string</text></a><path d="M369.5,-19.1C358.6,-20.7 347.3,-22.3 336.7,-23.8"/><polygon fill="#8a93a5" points="336.5,-21.4 329.9,-24.8 337.2,-26.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> parse_int(text, <span class="k">value</span>, ok)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">value</span>           <span class="d">!! the value</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(out) :: ok              <span class="d">!! false if `text` is not an integer</span>
+    <span class="k">integer</span> :: ios
+
+    ok = <span class="k">verify</span>(strip(text), <span class="s">'+-0123456789'</span>) == <span class="n">0</span> <span class="k">.and.</span> <span class="k">len</span>(strip(text)) &gt; <span class="n">0</span>
+    <span class="k">value</span> = <span class="n">0</span>
+    <span class="k">if</span> (<span class="k">.not.</span> ok) <span class="k">return</span>
+    <span class="k">read</span> (text, *, iostat=ios) <span class="k">value</span>
+    ok = ios == <span class="n">0</span>
+<span class="k">end</span> <span class="k">subroutine</span> parse_int</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

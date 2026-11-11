@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>find_rule &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>find_rule<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> find_rule(<span class="intent attr-in" title="intent(in)">block</span>, <span class="intent attr-out" title="intent(out)">at</span>, <span class="intent attr-out" title="intent(out)">stop_at</span>)</div>
+<div class="doc">
+<p>Find a line of <code>block</code> that is a horizontal rule.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-block"><td class="name">block</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the chunk</p></td></tr>
+<tr id="variable-at"><td class="name">at</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>where it starts, or 0</p></td></tr>
+<tr id="variable-stop_at"><td class="name">stop_at</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>where it ends</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/is_rule.html">is_rule</a></li></ul>
+<div class="graph"><svg width="162pt" height="30pt"
+ viewBox="0 0 162 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/find_rule.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="64.3" height="21.6"/><text x="32.1" y="-6.1">find_rule</text></a><a href="../proc/is_rule.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="100.3" y="-21.6" width="54" height="21.6"/><text x="127.3" y="-6.1">is_rule</text></a><path d="M65.2,-10.8C73.7,-10.8 83,-10.8 91.6,-10.8"/><polygon fill="#8a93a5" points="91.5,-13.3 98.5,-10.8 91.5,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/parse_block.html">parse_block</a></li></ul>
+<div class="graph"><svg width="574pt" height="110pt"
+ viewBox="0 0 574 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/find_rule.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="64.3" height="21.6"/><text x="32.1" y="-46.1">find_rule</text></a><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="100.3" y="-61.6" width="84.5" height="21.6"/><text x="142.5" y="-46.1">parse_block</text></a><path d="M99.9,-50.8C91.2,-50.8 82.1,-50.8 73.5,-50.8"/><polygon fill="#8a93a5" points="73.5,-48.4 66.5,-50.8 73.5,-53.3"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="220.8" y="-61.6" width="95.3" height="21.6"/><text x="268.4" y="-46.1">parse_chunks</text></a><path d="M220.6,-50.8C211.8,-50.8 202.5,-50.8 193.6,-50.8"/><polygon fill="#8a93a5" points="193.7,-48.4 186.7,-50.8 193.7,-53.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="352.1" y="-101.6" width="124.2" height="21.6"/><text x="414.2" y="-86.1">markdown_to_html</text></a><path d="M372.8,-79.6C355.6,-74.8 335.5,-69.2 317.6,-64.2"/><polygon fill="#8a93a5" points="318.4,-61.9 311,-62.4 317.1,-66.6"/><a href="../proc/parse_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="376.3" y="-61.6" width="75.8" height="21.6"/><text x="414.2" y="-46.1">parse_one</text></a><path d="M375.8,-50.8C360.2,-50.8 341.8,-50.8 324.7,-50.8"/><polygon fill="#8a93a5" points="325,-48.4 318,-50.8 325,-53.3"/><a href="../proc/parse_text~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="376.7" y="-21.6" width="75.1" height="21.6"/><text x="414.2" y="-6.1">parse_text</text></a><path d="M376.2,-21.1C358.4,-26 336.9,-32 317.9,-37.3"/><polygon fill="#8a93a5" points="317.4,-34.9 311.3,-39.1 318.7,-39.6"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="512.3" y="-101.6" width="54" height="21.6"/><text x="539.3" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M511.9,-90.8C503.9,-90.8 494.7,-90.8 485.1,-90.8"/><polygon fill="#8a93a5" points="485.3,-88.4 478.3,-90.8 485.3,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="512.3" y="-61.6" width="54" height="21.6"/><text x="539.3" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M511.9,-50.8C497,-50.8 477.9,-50.8 460.6,-50.8"/><polygon fill="#8a93a5" points="460.8,-48.4 453.8,-50.8 460.8,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="512.3" y="-21.6" width="54" height="21.6"/><text x="539.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M511.9,-10.8C496.9,-10.8 477.6,-10.8 460.2,-10.8"/><polygon fill="#8a93a5" points="460.4,-8.4 453.4,-10.8 460.4,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">subroutine</span> find_rule(<span class="k">block</span>, at, stop_at)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">block</span>   <span class="d">!! the chunk</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: at              <span class="d">!! where it starts, or 0</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: stop_at         <span class="d">!! where it ends</span>
+    <span class="k">integer</span> :: i, j, last
+
+    at = <span class="n">0</span>
+    stop_at = <span class="n">0</span>
+    i = <span class="n">1</span>
+    <span class="k">do</span> <span class="k">while</span> (i &lt;= <span class="k">len</span>(<span class="k">block</span>))
+        j = <span class="k">index</span>(<span class="k">block</span>(i:), NL)
+        last = <span class="k">merge</span>(<span class="k">len</span>(<span class="k">block</span>), i + j - <span class="n">2</span>, j == <span class="n">0</span>)
+        <span class="k">if</span> (is_rule(<span class="k">block</span>(i:last))) <span class="k">then</span>
+            at = i
+            stop_at = last
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (j == <span class="n">0</span>) <span class="k">return</span>
+        i = i + j
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> find_rule</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

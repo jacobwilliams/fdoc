@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>list_block &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>list_block<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> list_block(<span class="intent attr-inout" title="intent(inout)">t</span>, <span class="intent attr-in" title="intent(in)">parent</span>, <span class="intent attr-in" title="intent(in)">block</span>, <span class="intent attr-in" title="intent(in)">tag</span>)</div>
+<div class="doc">
+<p>The list processors.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/tree_t.html">tree_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the conversion</p></td></tr>
+<tr id="variable-parent"><td class="name">parent</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the node</p></td></tr>
+<tr id="variable-block"><td class="name">block</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the chunk</p></td></tr>
+<tr id="variable-tag"><td class="name">tag</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p><code>ol</code> or <code>ul</code></p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/list_items.html">list_items</a></li><li><a href="../proc/last_child.html">last_child</a></li><li><a href="../proc/is_list.html">is_list</a></li><li><a href="../proc/new_node~2.html">new_node</a></li><li><a href="../proc/set_state.html">set_state</a></li><li><a href="../proc/parse_one.html">parse_one</a></li><li><a href="../proc/reset_state.html">reset_state</a></li><li><a href="../proc/starts_with.html">starts_with</a></li></ul>
+<div class="graph"><svg width="532pt" height="309pt"
+ viewBox="0 0 532 309" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 304.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/list_block.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-161.6" width="67.9" height="21.6"/><text x="33.9" y="-146.1">list_block</text></a><a href="../proc/list_items.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="108.9" y="-261.6" width="68.6" height="21.6"/><text x="143.2" y="-246.1">list_items</text></a><path d="M42.7,-162.3C54.4,-179.1 78,-210.3 103.9,-230.8 105.9,-232.4 108.1,-234 110.4,-235.5"/><polygon fill="#8a93a5" points="108.9,-237.4 116.1,-238.9 111.4,-233.2"/><a href="../proc/last_child.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="108.9" y="-221.6" width="68.6" height="21.6"/><text x="143.2" y="-206.1">last_child</text></a><path d="M54.7,-162.6C68.4,-170.7 87.1,-181.6 103.9,-190.8 106.7,-192.4 109.8,-194 112.8,-195.6"/><polygon fill="#8a93a5" points="111.6,-197.7 118.9,-198.8 113.8,-193.4"/><a href="../proc/is_list.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="116.2" y="-181.6" width="54" height="21.6"/><text x="143.2" y="-166.1">is_list</text></a><path d="M68.6,-157.1C81,-159.4 95,-162 107.5,-164.3"/><polygon fill="#8a93a5" points="107,-166.7 114.3,-165.6 107.9,-161.9"/><a href="../proc/new_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="106" y="-141.6" width="74.4" height="21.6"/><text x="143.2" y="-126.1">new_node</text></a><path d="M68.6,-144.5C77.7,-142.8 87.7,-141 97.4,-139.2"/><polygon fill="#8a93a5" points="97.8,-141.6 104.2,-137.9 96.9,-136.8"/><a href="../proc/set_state.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="109.6" y="-101.6" width="67.2" height="21.6"/><text x="143.2" y="-86.1">set_state</text></a><path d="M54.7,-139C68.4,-130.9 87.1,-120 103.9,-110.8 106.7,-109.2 109.8,-107.6 112.8,-106"/><polygon fill="#8a93a5" points="113.8,-108.2 118.9,-102.8 111.6,-103.9"/><a href="../proc/parse_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="105.3" y="-61.6" width="75.8" height="21.6"/><text x="143.2" y="-46.1">parse_one</text></a><path d="M42.7,-139.3C54.4,-122.5 78,-91.3 103.9,-70.8 105.9,-69.2 108.1,-67.6 110.4,-66.1"/><polygon fill="#8a93a5" points="111.4,-68.4 116.1,-62.7 108.9,-64.2"/><a href="../proc/reset_state.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="103.9" y="-21.6" width="78.7" height="21.6"/><text x="143.2" y="-6.1">reset_state</text></a><path d="M39.1,-139.1C47.8,-115.9 70.1,-63.2 103.9,-30.8 105.4,-29.3 107,-28 108.8,-26.7"/><polygon fill="#8a93a5" points="110,-28.8 114.4,-22.9 107.3,-24.7"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="228" y="-300.6" width="76.5" height="21.6"/><text x="266.3" y="-285.1">starts_with</text></a><path d="M37.8,-162.5C44.6,-187.1 64.2,-244.6 103.9,-270.8 137.8,-293.2 184.8,-296.4 219.3,-294.9"/><polygon fill="#8a93a5" points="219.4,-297.4 226.3,-294.5 219.1,-292.5"/><path d="M177.9,-261.7C191.7,-266.1 207.9,-271.3 222.5,-276"/><polygon fill="#8a93a5" points="221.6,-278.3 229,-278.1 223.1,-273.6"/><a href="../proc/split_on.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="236.6" y="-222.6" width="59.2" height="21.6"/><text x="266.3" y="-207.1">split_on</text></a><path d="M177.9,-239.9C193.7,-234.9 212.5,-228.8 228.6,-223.6"/><polygon fill="#8a93a5" points="228.9,-226.1 234.8,-221.6 227.4,-221.4"/><a href="../proc/item_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="232.7" y="-182.6" width="67.1" height="21.6"/><text x="266.3" y="-167.1">item_text</text></a><path d="M168.9,-239.5C173.6,-236.9 178.4,-234 182.6,-230.8 201.3,-216.5 199.3,-205.4 218.6,-191.8 221.1,-190 223.8,-188.3 226.6,-186.8"/><polygon fill="#8a93a5" points="227.7,-189 232.8,-183.6 225.4,-184.6"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="365.2" y="-241.6" width="54" height="21.6"/><text x="392.2" y="-226.1">push</text></a><path d="M177.8,-248.1C224.6,-244.3 309,-237.5 356.5,-233.6"/><polygon fill="#8a93a5" points="356.6,-236.1 363.3,-233.1 356.2,-231.2"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="234.5" y="-141.6" width="63.5" height="21.6"/><text x="266.3" y="-126.1">push_int</text></a><path d="M180.9,-130.8C195.1,-130.8 211.3,-130.8 225.8,-130.8"/><polygon fill="#8a93a5" points="225.5,-133.3 232.5,-130.8 225.5,-128.4"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="218.6" y="-61.6" width="95.3" height="21.6"/><text x="266.3" y="-46.1">parse_chunks</text></a><path d="M181.5,-50.8C190.5,-50.8 200.4,-50.8 210,-50.8"/><polygon fill="#8a93a5" points="209.9,-53.3 216.9,-50.8 209.9,-48.4"/><path d="M296.3,-216.3C314.3,-219 337.5,-222.6 356.5,-225.5"/><polygon fill="#8a93a5" points="356,-227.9 363.3,-226.5 356.8,-223"/><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="349.9" y="-61.6" width="84.5" height="21.6"/><text x="392.2" y="-46.1">parse_block</text></a><path d="M314.1,-50.8C322.9,-50.8 332.2,-50.8 341.1,-50.8"/><polygon fill="#8a93a5" points="341,-53.3 348,-50.8 341,-48.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="470.4" y="-61.6" width="54" height="21.6"/><text x="497.4" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M434.9,-50.8C443.8,-50.8 453.1,-50.8 461.7,-50.8"/><polygon fill="#8a93a5" points="461.5,-53.3 468.5,-50.8 461.5,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/parse_block.html">parse_block</a></li></ul>
+<div class="graph"><svg width="578pt" height="110pt"
+ viewBox="0 0 578 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/list_block.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="67.9" height="21.6"/><text x="33.9" y="-46.1">list_block</text></a><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="103.9" y="-61.6" width="84.5" height="21.6"/><text x="146.1" y="-46.1">parse_block</text></a><path d="M103.5,-50.8C94.9,-50.8 85.8,-50.8 77.2,-50.8"/><polygon fill="#8a93a5" points="77.3,-48.4 70.3,-50.8 77.3,-53.3"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="224.4" y="-61.6" width="95.3" height="21.6"/><text x="272" y="-46.1">parse_chunks</text></a><path d="M224.2,-50.8C215.4,-50.8 206.1,-50.8 197.2,-50.8"/><polygon fill="#8a93a5" points="197.3,-48.4 190.3,-50.8 197.3,-53.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="355.7" y="-101.6" width="124.2" height="21.6"/><text x="417.8" y="-86.1">markdown_to_html</text></a><path d="M376.4,-79.6C359.2,-74.8 339.1,-69.2 321.2,-64.2"/><polygon fill="#8a93a5" points="322,-61.9 314.6,-62.4 320.7,-66.6"/><a href="../proc/parse_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="379.9" y="-61.6" width="75.8" height="21.6"/><text x="417.8" y="-46.1">parse_one</text></a><path d="M379.4,-50.8C363.8,-50.8 345.4,-50.8 328.3,-50.8"/><polygon fill="#8a93a5" points="328.6,-48.4 321.6,-50.8 328.6,-53.3"/><a href="../proc/parse_text~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="380.3" y="-21.6" width="75.1" height="21.6"/><text x="417.8" y="-6.1">parse_text</text></a><path d="M379.8,-21.1C362,-26 340.5,-32 321.5,-37.3"/><polygon fill="#8a93a5" points="321,-34.9 314.9,-39.1 322.3,-39.6"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="515.9" y="-101.6" width="54" height="21.6"/><text x="542.9" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M515.5,-90.8C507.5,-90.8 498.3,-90.8 488.7,-90.8"/><polygon fill="#8a93a5" points="488.9,-88.4 481.9,-90.8 488.9,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="515.9" y="-61.6" width="54" height="21.6"/><text x="542.9" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M515.5,-50.8C500.6,-50.8 481.5,-50.8 464.2,-50.8"/><polygon fill="#8a93a5" points="464.4,-48.4 457.4,-50.8 464.4,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="515.9" y="-21.6" width="54" height="21.6"/><text x="542.9" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M515.5,-10.8C500.5,-10.8 481.2,-10.8 463.8,-10.8"/><polygon fill="#8a93a5" points="464,-8.4 457,-10.8 464,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> list_block(t, parent, <span class="k">block</span>, tag)
+    <span class="k">type</span>(tree_t), <span class="k">intent</span>(inout) :: t        <span class="d">!! the conversion</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent           <span class="d">!! the node</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">block</span>   <span class="d">!! the chunk</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: tag     <span class="d">!! `ol` or `ul`</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: items(:)
+    <span class="k">integer</span> :: sibling, list, item, last, p, k, first
+
+    <span class="k">call</span> list_items(<span class="k">block</span>, items)
+    sibling = last_child(t, parent)
+    first = <span class="n">1</span>
+    list = <span class="n">0</span>
+    <span class="k">if</span> (sibling &gt; <span class="n">0</span>) <span class="k">then</span>
+        <span class="k">if</span> (is_list(t%nodes(sibling)%tag)) list = sibling
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">if</span> (list &gt; <span class="n">0</span>) <span class="k">then</span>
+        last = last_child(t, list)
+        <span class="k">if</span> (last &gt; <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">if</span> (<span class="k">len</span>(t%nodes(last)%text) &gt; <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">call</span> new_node(t, last, <span class="s">'p'</span>, p)
+                t%nodes(p)%text = t%nodes(last)%text
+                t%nodes(last)%text = <span class="s">''</span>
+                t%nodes(last)%kids = [p, t%nodes(last)%kids(:<span class="k">size</span>(t%nodes(last)%kids) - <span class="n">1</span>)]
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> new_node(t, list, <span class="s">'li'</span>, item)
+        <span class="k">call</span> set_state(t, <span class="s">'looselist'</span>)
+        <span class="k">call</span> parse_one(t, item, items(<span class="n">1</span>)%s)
+        <span class="k">call</span> reset_state(t)
+        first = <span class="n">2</span>
+    <span class="k">else</span> <span class="k">if</span> (is_list(t%nodes(parent)%tag)) <span class="k">then</span>
+        list = parent
+    <span class="k">else</span>
+        <span class="k">call</span> new_node(t, parent, tag, list)
+    <span class="k">end</span> <span class="k">if</span>
+
+    <span class="k">call</span> set_state(t, <span class="s">'list'</span>)
+    <span class="k">do</span> k = first, <span class="k">size</span>(items)
+        <span class="k">if</span> (starts_with(items(k)%s, <span class="s">'    '</span>)) <span class="k">then</span>
+            <span class="k">call</span> parse_one(t, last_child(t, list), items(k)%s)
+        <span class="k">else</span>
+            <span class="k">call</span> new_node(t, list, <span class="s">'li'</span>, item)
+            <span class="k">call</span> parse_one(t, item, items(k)%s)
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> reset_state(t)
+<span class="k">end</span> <span class="k">subroutine</span> list_block</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

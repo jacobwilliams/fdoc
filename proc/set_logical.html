@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_logical &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">subroutine</span>set_logical<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> set_logical(<span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-in" title="intent(in)">key</span>, <span class="intent attr-in" title="intent(in)">value</span>)</div>
+<div class="doc">
+<p>Set a logical option.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-key"><td class="name">key</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the option</p></td></tr>
+<tr id="variable-value"><td class="name">value</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>its value</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/set_option.html">set_option</a></li></ul>
+<div class="graph"><svg width="471pt" height="130pt"
+ viewBox="0 0 471 130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 125.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/set_logical.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="75.8" height="21.6"/><text x="37.9" y="-66.1">set_logical</text></a><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="111.8" y="-81.6" width="74.4" height="21.6"/><text x="149" y="-66.1">set_option</text></a><path d="M111.4,-70.8C102.9,-70.8 93.9,-70.8 85.1,-70.8"/><polygon fill="#8a93a5" points="85.3,-68.4 78.3,-70.8 85.3,-73.3"/><a href="../proc/apply_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="225.8" y="-121.6" width="78" height="21.6"/><text x="264.8" y="-106.1">apply_args</text></a><path d="M231.8,-99.6C218.7,-95 203.5,-89.6 189.7,-84.7"/><polygon fill="#8a93a5" points="190.6,-82.5 183.2,-82.5 189,-87.1"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="222.2" y="-81.6" width="85.2" height="21.6"/><text x="264.8" y="-66.1">load_project</text></a><path d="M221.8,-70.8C213,-70.8 203.8,-70.8 195,-70.8"/><polygon fill="#8a93a5" points="195.2,-68.4 188.2,-70.8 195.2,-73.3"/><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="224.4" y="-41.6" width="80.9" height="21.6"/><text x="264.8" y="-26.1">apply_table</text></a><path d="M231.8,-42C218.7,-46.6 203.5,-52 189.7,-56.9"/><polygon fill="#8a93a5" points="189,-54.5 183.2,-59.1 190.6,-59.1"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="376.4" y="-101.6" width="54" height="21.6"/><text x="403.4" y="-86.1">run</text></a><path d="M376.1,-94.7C358.1,-97.3 333.7,-100.9 312.5,-104"/><polygon fill="#8a93a5" points="312.3,-101.5 305.7,-105 313,-106.4"/><path d="M376.1,-86.9C359.1,-84.5 336.5,-81.1 316.2,-78.2"/><polygon fill="#8a93a5" points="316.7,-75.8 309.4,-77.2 316,-80.6"/><a href="../proc/load_fpm_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="343.4" y="-61.6" width="119.9" height="21.6"/><text x="403.4" y="-46.1">load_fpm_settings</text></a><path d="M343.3,-42.1C333.5,-40.7 323.4,-39.2 313.9,-37.8"/><polygon fill="#8a93a5" points="314.5,-35.5 307.2,-36.9 313.8,-40.3"/><a href="../proc/apply_toml_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="345.3" y="-21.6" width="116.3" height="21.6"/><text x="403.4" y="-6.1">apply_toml_string</text></a><path d="M344.9,-19.2C334.5,-20.7 323.8,-22.3 313.8,-23.8"/><polygon fill="#8a93a5" points="313.5,-21.3 307,-24.8 314.3,-26.2"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> set_logical(s, key, <span class="k">value</span>)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s    <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key     <span class="d">!! the option</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: <span class="k">value</span>            <span class="d">!! its value</span>
+
+    <span class="k">select</span> <span class="k">case</span> (key)
+    <span class="k">case</span> (<span class="s">'coloured_edges'</span>); s%coloured_edges = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'dbg'</span>); s%dbg = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'doxygen'</span>); s%doxygen = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'externalize'</span>); s%externalize = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'fixed_length_limit'</span>); s%fixed_length_limit = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'force'</span>); s%force = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'graph'</span>); s%graph = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'hide_undoc'</span>); s%hide_undoc = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'incl_src'</span>); s%incl_src = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'lower'</span>); s%lower = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'preprocess'</span>); s%preprocess = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'print_creation_date'</span>); s%print_creation_date = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'proc_internals'</span>); s%proc_internals = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'quiet'</span>); s%quiet = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'search'</span>); s%search = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'show_proc_parent'</span>); s%show_proc_parent = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'source'</span>); s%source = <span class="k">value</span>
+    <span class="k">case</span> (<span class="s">'warn'</span>); s%warn = <span class="k">value</span>
+    <span class="k">end</span> <span class="k">select</span>
+<span class="k">end</span> <span class="k">subroutine</span> set_logical</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

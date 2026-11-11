@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>add_entry &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">subroutine</span>add_entry<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> add_entry(<span class="intent attr-inout" title="intent(inout)">entries</span>, <span class="intent attr-in" title="intent(in)">key</span>, <span class="intent attr-in" title="intent(in)">value</span>)</div>
+<div class="doc">
+<p>Set <code>key</code> in <code>entries</code>, replacing any entry it has.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-entries"><td class="name">entries</td><td class="type">type(<a href="../type/map_entry_t.html">map_entry_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the map</p></td></tr>
+<tr id="variable-key"><td class="name">key</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the key</p></td></tr>
+<tr id="variable-value"><td class="name">value</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>its value</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/add_intrinsic_modules.html">add_intrinsic_modules</a></li><li><a href="../proc/set_map.html">set_map</a></li></ul>
+<div class="graph"><svg width="608pt" height="150pt"
+ viewBox="0 0 608 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 145.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_entry.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-71.6" width="72.2" height="21.6"/><text x="36.1" y="-56.1">add_entry</text></a><a href="../proc/set_map.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="148" y="-96.6" width="64.3" height="21.6"/><text x="180.1" y="-81.1">set_map</text></a><path d="M147.6,-80.3C128.1,-76.8 102.8,-72.4 81.4,-68.6"/><polygon fill="#8a93a5" points="81.8,-66.2 74.5,-67.4 81,-71"/><a href="../proc/add_intrinsic_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="108.2" y="-51.6" width="143.8" height="21.6"/><text x="180.1" y="-36.1">add_intrinsic_modules</text></a><path d="M108.1,-50.8C99,-52.1 89.8,-53.4 81.3,-54.6"/><polygon fill="#8a93a5" points="81,-52.1 74.4,-55.5 81.7,-57"/><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="301" y="-98.6" width="74.4" height="21.6"/><text x="338.2" y="-83.1">set_option</text></a><path d="M300.6,-87.3C276.7,-87 245.6,-86.6 221.1,-86.3"/><polygon fill="#8a93a5" points="221.3,-83.9 214.2,-86.2 221.2,-88.8"/><a href="../proc/check_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="288" y="-41.6" width="100.4" height="21.6"/><text x="338.2" y="-26.1">check_settings</text></a><path d="M287.8,-34C279.2,-34.5 270,-35.1 260.8,-35.7"/><polygon fill="#8a93a5" points="260.7,-33.2 253.9,-36.1 261,-38.1"/><a href="../proc/apply_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="428" y="-141.6" width="78" height="21.6"/><text x="467" y="-126.1">apply_args</text></a><path d="M432.7,-119.5C416.5,-114 396.9,-107.4 379.9,-101.6"/><polygon fill="#8a93a5" points="381.1,-99.4 373.7,-99.5 379.5,-104.1"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="424.4" y="-101.6" width="85.2" height="21.6"/><text x="467" y="-86.1">load_project</text></a><path d="M424.1,-89.8C411.2,-89.5 397,-89.2 383.9,-88.9"/><polygon fill="#8a93a5" points="384,-86.4 377,-88.7 383.9,-91.3"/><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="426.5" y="-61.6" width="80.9" height="21.6"/><text x="467" y="-46.1">apply_table</text></a><path d="M427.6,-62C413.7,-66.1 397.9,-70.7 383.5,-74.9"/><polygon fill="#8a93a5" points="383.2,-72.4 377.1,-76.7 384.6,-77.1"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="440" y="-21.6" width="54" height="21.6"/><text x="467" y="-6.1">run</text></a><path d="M439.7,-14.9C427.3,-16.9 411.9,-19.3 397,-21.7"/><polygon fill="#8a93a5" points="396.8,-19.2 390.2,-22.7 397.5,-24.1"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="545.6" y="-61.6" width="54" height="21.6"/><text x="572.6" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M545.2,-50.8C536.3,-50.8 526,-50.8 516,-50.8"/><polygon fill="#8a93a5" points="516.2,-48.4 509.2,-50.8 516.2,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> add_entry(entries, key, <span class="k">value</span>)
+    <span class="k">type</span>(map_entry_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: entries(:) <span class="d">!! the map</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key                         <span class="d">!! the key</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">value</span>                       <span class="d">!! its value</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(entries)
+        <span class="k">if</span> (entries(k)%key == key) <span class="k">then</span>
+            entries(k)%<span class="k">value</span> = <span class="k">value</span>
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    entries = [entries, map_entry_t(key, <span class="k">value</span>)]
+<span class="k">end</span> <span class="k">subroutine</span> add_entry</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

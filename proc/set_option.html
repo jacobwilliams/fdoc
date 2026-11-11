@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_option &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">subroutine</span>set_option</h1>
+<div class="sig"><span class="k">subroutine</span> set_option(<span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-in" title="intent(in)">key</span>, <span class="intent attr-in" title="intent(in)">values</span>, <span class="intent attr-out" title="intent(out)">stat</span>, <span class="intent attr-out" title="intent(out)">errmsg</span>)</div>
+<div class="doc">
+<p>Set option <code>key</code>, which must be one (see <a href="../proc/is_option.html">is_option</a>), from its values as text.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-key"><td class="name">key</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the option</p></td></tr>
+<tr id="variable-values"><td class="name">values</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>its values</p></td></tr>
+<tr id="variable-stat"><td class="name">stat</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>nonzero on failure</p></td></tr>
+<tr id="variable-errmsg"><td class="name">errmsg</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>what is wrong</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/in_set.html">in_set</a></li><li>fail</li><li><a href="../proc/parse_bool.html">parse_bool</a></li><li><a href="../proc/set_logical.html">set_logical</a></li><li><a href="../proc/parse_int.html">parse_int</a></li><li><a href="../proc/set_list.html">set_list</a></li><li><a href="../proc/set_map.html">set_map</a></li><li><a href="../proc/join.html">join</a></li><li><a href="../proc/set_text.html">set_text</a></li></ul>
+<div class="graph"><svg width="403pt" height="310pt"
+ viewBox="0 0 403 310" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 305.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-161.6" width="74.4" height="21.6"/><text x="37.2" y="-146.1">set_option</text></a><a href="../proc/in_set.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="122.8" y="-301.6" width="54" height="21.6"/><text x="149.8" y="-286.1">in_set</text></a><path d="M42.7,-162.5C52,-185.7 75.9,-238.3 110.4,-270.8 112.1,-272.4 113.9,-273.9 115.9,-275.3"/><polygon fill="#8a93a5" points="114.2,-277.1 121.4,-278.9 116.9,-273"/><a href="../proc/parse_bool.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="110.4" y="-261.6" width="78.7" height="21.6"/><text x="149.8" y="-246.1">parse_bool</text></a><path d="M46.7,-162.6C59.2,-179.4 83.9,-210.3 110.4,-230.8 112.5,-232.4 114.7,-234 117,-235.4"/><polygon fill="#8a93a5" points="115.4,-237.3 122.7,-238.8 117.9,-233.1"/><a href="../proc/set_logical.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="111.8" y="-221.6" width="75.8" height="21.6"/><text x="149.8" y="-206.1">set_logical</text></a><path d="M59,-162.5C73.4,-170.5 93,-181.4 110.4,-190.8 113.4,-192.4 116.6,-194.1 119.8,-195.8"/><polygon fill="#8a93a5" points="118.5,-197.9 125.9,-199 120.8,-193.6"/><a href="../proc/parse_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="115.8" y="-181.6" width="67.9" height="21.6"/><text x="149.8" y="-166.1">parse_int</text></a><path d="M75.3,-157.5C85.6,-159.4 96.9,-161.4 107.4,-163.3"/><polygon fill="#8a93a5" points="106.8,-165.7 114.1,-164.5 107.7,-160.9"/><a href="../proc/set_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="122.3" y="-141.6" width="54.9" height="21.6"/><text x="149.8" y="-126.1">set_list</text></a><path d="M75.3,-144.1C87.8,-141.8 101.6,-139.3 113.8,-137.1"/><polygon fill="#8a93a5" points="114.1,-139.6 120.5,-135.9 113.2,-134.7"/><a href="../proc/set_map.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="117.6" y="-101.6" width="64.3" height="21.6"/><text x="149.8" y="-86.1">set_map</text></a><path d="M59,-139.1C73.4,-131.1 93,-120.2 110.4,-110.8 113.4,-109.2 116.6,-107.5 119.8,-105.8"/><polygon fill="#8a93a5" points="120.8,-108 125.9,-102.6 118.5,-103.7"/><a href="../proc/join.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="122.8" y="-61.6" width="54" height="21.6"/><text x="149.8" y="-46.1">join</text></a><path d="M46.7,-139C59.2,-122.2 83.9,-91.3 110.4,-70.8 112.5,-69.2 114.7,-67.6 117,-66.2"/><polygon fill="#8a93a5" points="117.9,-68.5 122.7,-62.8 115.4,-64.3"/><a href="../proc/set_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="119.8" y="-21.6" width="59.9" height="21.6"/><text x="149.8" y="-6.1">set_text</text></a><path d="M42.7,-139.1C52,-115.9 75.9,-63.3 110.4,-30.8 112.1,-29.2 113.9,-27.7 115.9,-26.3"/><polygon fill="#8a93a5" points="116.9,-28.6 121.4,-22.7 114.2,-24.5"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="228.4" y="-261.6" width="72.9" height="21.6"/><text x="264.8" y="-246.1">lowercase</text></a><path d="M189.4,-250.8C199.2,-250.8 209.7,-250.8 219.8,-250.8"/><polygon fill="#8a93a5" points="219.6,-253.3 226.6,-250.8 219.6,-248.4"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="237.8" y="-161.6" width="54" height="21.6"/><text x="264.8" y="-146.1">strip</text></a><path d="M184.1,-164.9C198.3,-162.4 215,-159.4 229.4,-156.9"/><polygon fill="#8a93a5" points="229.6,-159.3 236.1,-155.7 228.8,-154.5"/><path d="M172.3,-102C177.8,-104.8 183.7,-107.9 189.1,-110.8 204.5,-118.9 221.6,-128.1 235.5,-135.6"/><polygon fill="#8a93a5" points="234.3,-137.7 241.6,-138.8 236.6,-133.3"/><a href="../proc/split_words.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="225.1" y="-111.6" width="79.4" height="21.6"/><text x="264.8" y="-96.1">split_words</text></a><path d="M182.3,-93.6C192.9,-94.5 205,-95.6 216.5,-96.6"/><polygon fill="#8a93a5" points="216.1,-99 223.3,-97.2 216.6,-94.2"/><a href="../proc/add_entry.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="228.7" y="-71.6" width="72.2" height="21.6"/><text x="264.8" y="-56.1">add_entry</text></a><path d="M182.3,-82.4C194,-79.3 207.7,-75.7 220.3,-72.3"/><polygon fill="#8a93a5" points="220.9,-74.7 227.1,-70.6 219.7,-70"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="340.5" y="-111.6" width="54" height="21.6"/><text x="367.5" y="-96.1">push</text></a><path d="M304.8,-100.8C313.7,-100.8 323,-100.8 331.7,-100.8"/><polygon fill="#8a93a5" points="331.6,-103.3 338.6,-100.8 331.6,-98.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/apply_args.html">apply_args</a></li><li><a href="../proc/apply_table.html">apply_table</a></li><li><a href="../proc/load_project.html">load_project</a></li></ul>
+<div class="graph"><svg width="597pt" height="128pt"
+ viewBox="0 0 597 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 123.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-60.6" width="74.4" height="21.6"/><text x="37.2" y="-45.1">set_option</text></a><a href="../proc/apply_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="248.2" y="-119.6" width="78" height="21.6"/><text x="287.2" y="-104.1">apply_args</text></a><path d="M255.5,-97.5C228.6,-88.2 188.2,-75.6 151.8,-69.8"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="398.7" y="-70.6" width="85.2" height="21.6"/><text x="441.3" y="-55.1">load_project</text></a><path d="M398.5,-66.3C342.1,-73.8 238.7,-83.6 151.8,-69.8"/><path d="M149.8,-69.8C128,-66.1 103.8,-61.8 83.5,-58.1"/><polygon fill="#8a93a5" points="84.2,-55.8 76.9,-56.9 83.3,-60.6"/><a href="../proc/load_fpm_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="227.3" y="-41.6" width="119.9" height="21.6"/><text x="287.2" y="-26.1">load_fpm_settings</text></a><path d="M398.4,-51.8C385.1,-49.3 370.1,-46.4 355.5,-43.6"/><polygon fill="#8a93a5" points="356.3,-41.3 348.9,-42.4 355.3,-46.1"/><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="110.4" y="-41.6" width="80.9" height="21.6"/><text x="150.8" y="-26.1">apply_table</text></a><path d="M110.2,-37.6C101.5,-39 92.3,-40.6 83.5,-42.1"/><polygon fill="#8a93a5" points="83.1,-39.7 76.6,-43.3 83.9,-44.5"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="535.5" y="-70.6" width="54" height="21.6"/><text x="562.5" y="-55.1">run</text></a><path d="M535.2,-69.4C524.3,-73.1 511.4,-77.1 499.5,-79.8 443.5,-92.6 377.8,-100.5 334.7,-104.8"/><polygon fill="#8a93a5" points="334.6,-102.3 327.9,-105.5 335.1,-107.2"/><path d="M535,-59.8C522.6,-59.8 507.2,-59.8 492.6,-59.8"/><polygon fill="#8a93a5" points="492.7,-57.4 485.7,-59.8 492.7,-62.3"/><a href="../proc/apply_toml_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="383.2" y="-21.6" width="116.3" height="21.6"/><text x="441.3" y="-6.1">apply_toml_string</text></a><path d="M535,-48.9C518,-41.9 495.7,-32.7 477.2,-25.1"/><polygon fill="#8a93a5" points="478.3,-23 470.9,-22.6 476.5,-27.5"/><path d="M226.9,-30.8C217.8,-30.8 208.6,-30.8 199.8,-30.8"/><polygon fill="#8a93a5" points="200.1,-28.4 193.1,-30.8 200.1,-33.3"/><path d="M383.1,-6.8C340.1,-4.8 279.7,-4 227.3,-10.8 216.7,-12.2 205.5,-14.6 195,-17.3"/><polygon fill="#8a93a5" points="194.4,-14.9 188.2,-19.1 195.6,-19.7"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> set_option(s, key, values, <span class="k">stat</span>, errmsg)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key                 <span class="d">!! the option</span>
+    <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: values(:)             <span class="d">!! its values</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+    <span class="k">logical</span> :: flag, ok
+    <span class="k">integer</span> :: number
+
+    <span class="k">stat</span> = <span class="n">0</span>
+    <span class="k">if</span> (in_set(LOGICAL_OPTIONS, key)) <span class="k">then</span>
+        <span class="k">if</span> (<span class="k">size</span>(values) /= <span class="n">1</span>) <span class="k">then</span>
+            <span class="k">call</span> fail(<span class="s">"Could not convert option '"</span>//key//<span class="s">"' to bool: expected a single value"</span>)
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> parse_bool(values(<span class="n">1</span>)%s, flag, ok)
+        <span class="k">if</span> (<span class="k">.not.</span> ok) <span class="k">then</span>
+            <span class="k">call</span> fail(<span class="s">"Could not convert option '"</span>//key//<span class="s">"' to bool: expected 'true'/'false', got: "</span>//values(<span class="n">1</span>)%s)
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> set_logical(s, key, flag)
+    <span class="k">else</span> <span class="k">if</span> (in_set(INTEGER_OPTIONS, key)) <span class="k">then</span>
+        <span class="k">call</span> parse_int(values(<span class="n">1</span>)%s, number, ok)
+        <span class="k">if</span> (<span class="k">.not.</span> ok) <span class="k">then</span>
+            <span class="k">call</span> fail(<span class="s">"Could not convert option '"</span>//key//<span class="s">"' to an integer: "</span>//values(<span class="n">1</span>)%s)
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">select</span> <span class="k">case</span> (key)
+        <span class="k">case</span> (<span class="s">'graph_maxdepth'</span>); s%graph_maxdepth = number
+        <span class="k">case</span> (<span class="s">'graph_maxnodes'</span>); s%graph_maxnodes = number
+        <span class="k">case</span> (<span class="s">'graph_project_maxnodes'</span>); s%graph_project_maxnodes = number
+        <span class="k">case</span> (<span class="s">'max_frontpage_items'</span>); s%max_frontpage_items = number
+        <span class="k">case</span> (<span class="s">'parallel'</span>); s%parallel = number
+        <span class="k">end</span> <span class="k">select</span>
+    <span class="k">else</span> <span class="k">if</span> (in_set(LIST_OPTIONS, key)) <span class="k">then</span>
+        <span class="k">call</span> set_list(s, key, values)
+    <span class="k">else</span> <span class="k">if</span> (in_set(MAP_OPTIONS, key)) <span class="k">then</span>
+        <span class="k">call</span> set_map(s, key, values, <span class="k">stat</span>, errmsg)
+    <span class="k">else</span>
+        text = join(values, <span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">call</span> set_text(s, key, text)
+    <span class="k">end</span> <span class="k">if</span>
+
+<span class="k">contains</span>
+
+    <span class="d">!&gt; Record a failure.</span>
+    <span class="k">subroutine</span> fail(msg)
+        <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: msg     <span class="d">!! what is wrong</span>
+        <span class="k">stat</span> = <span class="n">1</span>
+        errmsg = msg
+    <span class="k">end</span> <span class="k">subroutine</span> fail
+
+<span class="k">end</span> <span class="k">subroutine</span> set_option</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

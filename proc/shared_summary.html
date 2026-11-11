@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>shared_summary &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_generics.f90.html">fdoc_generics.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_generics.html">fdoc_generics</a></div>
+<h1><span class="kind">subroutine</span>shared_summary<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> shared_summary(<span class="intent attr-in" title="intent(in)">list</span>, <span class="intent attr-in" title="intent(in)">ids</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write the summary of the procedures <code>ids</code>, if they all have the same one.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-list"><td class="name">list</td><td class="type">type(<a href="../type/entity_list_t.html">entity_list_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entities</p></td></tr>
+<tr id="variable-ids"><td class="name">ids</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the procedures</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li></ul>
+<div class="graph"><svg width="213pt" height="30pt"
+ viewBox="0 0 213 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/shared_summary.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="114.8" height="21.6"/><text x="57.4" y="-6.1">shared_summary</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="150.8" y="-21.6" width="54" height="21.6"/><text x="177.8" y="-6.1">add</text></a><path d="M115.5,-10.8C124.6,-10.8 133.7,-10.8 142,-10.8"/><polygon fill="#8a93a5" points="141.9,-13.3 148.9,-10.8 141.9,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_form.html">write_form</a></li></ul>
+<div class="graph"><svg width="604pt" height="30pt"
+ viewBox="0 0 604 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/shared_summary.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="114.8" height="21.6"/><text x="57.4" y="-6.1">shared_summary</text></a><a href="../proc/write_form.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="150.8" y="-21.6" width="75.1" height="21.6"/><text x="188.4" y="-6.1">write_form</text></a><path d="M150.4,-10.8C142.1,-10.8 133,-10.8 123.9,-10.8"/><polygon fill="#8a93a5" points="124.1,-8.4 117.1,-10.8 124.1,-13.3"/><a href="../proc/write_call_forms.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="261.9" y="-21.6" width="108.3" height="21.6"/><text x="316.1" y="-6.1">write_call_forms</text></a><path d="M261.8,-10.8C252.7,-10.8 243.4,-10.8 234.6,-10.8"/><polygon fill="#8a93a5" points="234.9,-8.4 227.9,-10.8 234.9,-13.3"/><a href="../proc/interface_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="406.2" y="-21.6" width="99.7" height="21.6"/><text x="456.1" y="-6.1">interface_body</text></a><path d="M406,-10.8C397.2,-10.8 388,-10.8 378.9,-10.8"/><polygon fill="#8a93a5" points="379.1,-8.4 372.1,-10.8 379.1,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="541.9" y="-21.6" width="54" height="21.6"/><text x="568.9" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M541.6,-10.8C533.4,-10.8 524,-10.8 514.5,-10.8"/><polygon fill="#8a93a5" points="514.7,-8.4 507.7,-10.8 514.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> shared_summary(list, ids, b)
+    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(in) :: list <span class="d">!! the entities</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: ids(:)           <span class="d">!! the procedures</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">integer</span> :: j
+
+    <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(ids)
+        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(list%box(ids(j))%e%summary)) <span class="k">return</span>
+        <span class="k">if</span> (list%box(ids(j))%e%summary /= list%box(ids(<span class="n">1</span>))%e%summary) <span class="k">return</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> add(b, list%box(ids(<span class="n">1</span>))%e%summary//<span class="k">achar</span>(<span class="n">10</span>))
+<span class="k">end</span> <span class="k">subroutine</span> shared_summary</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

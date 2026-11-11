@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>page_head &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>page_head<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> page_head(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">title</span>, <span class="intent attr-in" title="intent(in)">here</span>, <span class="intent attr-in" title="intent(in)">prefix</span>, <span class="intent attr-in" title="intent(in)">math</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write the start of a page.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-title"><td class="name">title</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the title</p></td></tr>
+<tr id="variable-here"><td class="name">here</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the list page this belongs to, <code>HERE_PAGES</code>, or 0</p></td></tr>
+<tr id="variable-prefix"><td class="name">prefix</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>from the page to the root of the site: <code>../</code> or <code>''</code></p></td></tr>
+<tr id="variable-math"><td class="name">math</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>true to load MathJax</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/html_escape.html">html_escape</a></li></ul>
+<div class="graph"><svg width="302pt" height="49pt"
+ viewBox="0 0 302 49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 44.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/page_head.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="79.5" height="21.6"/><text x="39.7" y="-25.1">page_head</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="239.6" y="-40.6" width="54" height="21.6"/><text x="266.6" y="-25.1">add</text></a><path d="M80.3,-30.4C91.7,-30.6 104.1,-30.7 115.5,-30.8 154.6,-31.1 164.4,-31.1 203.6,-30.8 212.5,-30.7 222.1,-30.6 231,-30.5"/><polygon fill="#8a93a5" points="230.9,-32.9 237.8,-30.3 230.8,-28"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="115.5" y="-21.6" width="88.1" height="21.6"/><text x="159.5" y="-6.1">html_escape</text></a><path d="M80.3,-23.4C88.9,-22 98.1,-20.5 107.1,-19.1"/><polygon fill="#8a93a5" points="107.2,-21.6 113.7,-18 106.4,-16.7"/><path d="M203.9,-18.6C212.8,-20.3 222.2,-22 230.8,-23.5"/><polygon fill="#8a93a5" points="230.4,-25.9 237.7,-24.8 231.2,-21.1"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/entity_page.html">entity_page</a></li><li><a href="../proc/index_page.html">index_page</a></li><li><a href="../proc/list_page.html">list_page</a></li><li><a href="../proc/names_page.html">names_page</a></li><li><a href="../proc/search_page.html">search_page</a></li><li><a href="../proc/static_page.html">static_page</a></li></ul>
+<div class="graph"><svg width="524pt" height="230pt"
+ viewBox="0 0 524 230" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 225.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/page_head.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-121.6" width="79.5" height="21.6"/><text x="39.7" y="-106.1">page_head</text></a><a href="../proc/static_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="119.8" y="-221.6" width="80.9" height="21.6"/><text x="160.3" y="-206.1">static_page</text></a><path d="M130.6,-199.7C125.3,-197.1 120.1,-194.1 115.5,-190.8 91,-173.2 68.1,-146.6 54.3,-129"/><polygon fill="#8a93a5" points="56.4,-127.7 50.2,-123.7 52.5,-130.7"/><a href="../proc/search_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="115.5" y="-181.6" width="89.6" height="21.6"/><text x="160.3" y="-166.1">search_page</text></a><path d="M134.1,-159.6C128,-156.8 121.5,-153.8 115.5,-150.8 100,-143.1 83,-134.1 69.2,-126.6"/><polygon fill="#8a93a5" points="70.5,-124.5 63.1,-123.3 68.1,-128.8"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="119.4" y="-21.6" width="81.6" height="21.6"/><text x="160.3" y="-6.1">entity_page</text></a><path d="M130.6,-21.9C125.3,-24.5 120.1,-27.5 115.5,-30.8 91,-48.4 68.1,-75 54.3,-92.6"/><polygon fill="#8a93a5" points="52.5,-90.9 50.2,-97.9 56.4,-93.9"/><a href="../proc/names_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="115.5" y="-141.6" width="89.6" height="21.6"/><text x="160.3" y="-126.1">names_page</text></a><path d="M115.1,-123.4C106.4,-121.9 97.3,-120.3 88.5,-118.9"/><polygon fill="#8a93a5" points="89,-116.5 81.7,-117.7 88.2,-121.3"/><a href="../proc/list_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127" y="-101.6" width="66.4" height="21.6"/><text x="160.3" y="-86.1">list_page</text></a><path d="M126.6,-96.3C114.8,-98.3 101.2,-100.6 88.4,-102.8"/><polygon fill="#8a93a5" points="88.1,-100.3 81.6,-103.9 88.9,-105.2"/><a href="../proc/index_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="119.4" y="-61.6" width="81.6" height="21.6"/><text x="160.3" y="-46.1">index_page</text></a><path d="M134.1,-62C128,-64.8 121.5,-67.8 115.5,-70.8 100,-78.5 83,-87.5 69.2,-95"/><polygon fill="#8a93a5" points="68.1,-92.8 63.1,-98.3 70.5,-97.1"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="264.5" y="-141.6" width="69.3" height="21.6"/><text x="299.2" y="-126.1">write_site</text></a><path d="M282.5,-141.9C264.3,-154.6 233.2,-175.4 205,-190.8 201.8,-192.6 198.4,-194.3 195,-196"/><polygon fill="#8a93a5" points="194.1,-193.7 188.9,-198.9 196.2,-198.1"/><path d="M264.3,-140.7C247.2,-145.7 226.2,-151.8 207.6,-157.3"/><polygon fill="#8a93a5" points="207,-154.9 201,-159.2 208.4,-159.6"/><path d="M264.3,-130.8C249,-130.8 230.6,-130.8 213.5,-130.8"/><polygon fill="#8a93a5" points="213.8,-128.4 206.8,-130.8 213.8,-133.3"/><path d="M264.3,-120.9C245.4,-115.4 221.7,-108.5 201.8,-102.6"/><polygon fill="#8a93a5" points="202.6,-100.3 195.2,-100.7 201.3,-105"/><path d="M282.5,-119.7C264.3,-107 233.2,-86.2 205,-70.8 201.8,-69 198.4,-67.3 195,-65.6"/><polygon fill="#8a93a5" points="196.2,-63.5 188.9,-62.7 194.1,-67.9"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="241" y="-21.6" width="116.3" height="21.6"/><text x="299.2" y="-6.1">write_entity_page</text></a><path d="M240.9,-10.8C230.5,-10.8 219.7,-10.8 209.6,-10.8"/><polygon fill="#8a93a5" points="209.8,-8.4 202.8,-10.8 209.8,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="427.7" y="-141.6" width="54" height="21.6"/><text x="454.7" y="-126.1">run</text></a><path d="M427.3,-130.8C404,-130.8 369.6,-130.8 342.5,-130.8"/><polygon fill="#8a93a5" points="342.8,-128.4 335.8,-130.8 342.8,-133.3"/><a href="../proc/write_entity_pages.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="393.3" y="-21.6" width="122.8" height="21.6"/><text x="454.7" y="-6.1">write_entity_pages</text></a><path d="M393.1,-10.8C384.1,-10.8 374.8,-10.8 365.7,-10.8"/><polygon fill="#8a93a5" points="365.9,-8.4 358.9,-10.8 365.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> page_head(site, title, here, prefix, math, b)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site        <span class="d">!! the site</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: title   <span class="d">!! the title</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: here             <span class="d">!! the list page this belongs to, `HERE_PAGES`, or 0</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: prefix  <span class="d">!! from the page to the root of the site: `../` or `''`</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: math             <span class="d">!! true to load MathJax</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">associate</span> (s =&gt; site%s)
+        <span class="k">call</span> add(b, <span class="s">'&lt;!DOCTYPE html&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;html lang="en"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;head&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">call</span> add(b, <span class="s">'&lt;meta charset="utf-8"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;'</span>)
+        <span class="k">call</span> add(b, <span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;title&gt;'</span>)
+        <span class="k">call</span> html_escape(title, b, <span class="k">.false.</span>)
+        <span class="k">if</span> (title /= s%project) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">' &amp;ndash; '</span>)
+            <span class="k">call</span> html_escape(s%project, b, <span class="k">.false.</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;/title&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">if</span> (<span class="k">allocated</span>(s%author)) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;meta name="author" content="'</span>)
+            <span class="k">call</span> html_escape(s%author, b, <span class="k">.true.</span>)
+            <span class="k">call</span> add(b, <span class="s">'"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (<span class="k">allocated</span>(s%favicon)) <span class="k">call</span> add(b, <span class="s">'&lt;link rel="icon" href="'</span>//prefix//<span class="s">'favicon.png"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">call</span> add(b, <span class="s">'&lt;link rel="stylesheet" href="'</span>//prefix//<span class="s">'css/fdoc.css"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">if</span> (<span class="k">allocated</span>(s%css)) <span class="k">call</span> add(b, <span class="s">'&lt;link rel="stylesheet" href="'</span>//prefix//<span class="s">'css/user.css"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">call</span> add(b, <span class="s">'&lt;script src="'</span>//prefix//<span class="s">'js/fdoc.js"&gt;&lt;/script&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">call</span> add(b, <span class="s">'&lt;script defer src="'</span>//prefix//<span class="s">'js/sidebar.js"&gt;&lt;/script&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">if</span> (math) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"&gt;'</span>)
+            <span class="k">call</span> add(b, <span class="s">'&lt;/script&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;/head&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;body&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;header class="top"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">call</span> add(b, <span class="s">'&lt;a class="brand" href="'</span>//prefix//<span class="s">'index.html"&gt;'</span>)
+        <span class="k">call</span> html_escape(s%project, b, <span class="k">.false.</span>)
+        <span class="k">if</span> (<span class="k">allocated</span>(s%version)) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;small&gt;'</span>)
+            <span class="k">call</span> html_escape(s%version, b, <span class="k">.false.</span>)
+            <span class="k">call</span> add(b, <span class="s">'&lt;/small&gt;'</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;/a&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;nav&gt;'</span>)
+        <span class="k">do</span> k = <span class="n">1</span>, NUM_LISTS
+            <span class="k">if</span> (<span class="k">size</span>(site%members(k)%ids) == <span class="n">0</span>) <span class="k">cycle</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;a'</span>//<span class="k">trim</span>(<span class="k">merge</span>(<span class="s">' class="here"'</span>, <span class="s">'             '</span>, k == here))//<span class="s">' href="'</span>//prefix//<span class="s">'lists/'</span>// &amp;
+                     <span class="k">trim</span>(LIST_FILE(k))//<span class="s">'.html"&gt;'</span>//<span class="k">trim</span>(LIST_TITLE(k))//<span class="s">'&lt;/a&gt;'</span>)
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;a'</span>//<span class="k">trim</span>(<span class="k">merge</span>(<span class="s">' class="here"'</span>, <span class="s">'             '</span>, here == HERE_INDEX))//<span class="s">' href="'</span>//prefix// &amp;
+                 <span class="s">'lists/names.html"&gt;Index&lt;/a&gt;'</span>)
+        <span class="k">if</span> (<span class="k">size</span>(site%pages) &gt; <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;a'</span>//<span class="k">trim</span>(<span class="k">merge</span>(<span class="s">' class="here"'</span>, <span class="s">'             '</span>, here == HERE_PAGES))// &amp;
+                     <span class="s">' href="'</span>//prefix//<span class="s">'page/index.html"&gt;'</span>)
+            <span class="k">call</span> html_escape(site%pages(<span class="n">1</span>)%title, b, <span class="k">.false.</span>)
+            <span class="k">call</span> add(b, <span class="s">'&lt;/a&gt;'</span>)
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;/nav&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">if</span> (s%search) <span class="k">then</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;div class="search"&gt;&lt;input type="search" placeholder="Search (/)" aria-label="Search"&gt;'</span>)
+            <span class="k">call</span> add(b, <span class="s">'&lt;div class="results"&gt;&lt;/div&gt;&lt;/div&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;button class="theme" title="Change theme" aria-label="Change theme"&gt;&amp;#9680;&lt;/button&gt;'</span>)
+        <span class="k">call</span> add(b, <span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;/header&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;div class="layout"&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">subroutine</span> page_head</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

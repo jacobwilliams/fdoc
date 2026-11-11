@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>find_quote &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>find_quote<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> find_quote(<span class="intent attr-in" title="intent(in)">block</span>, <span class="intent attr-out" title="intent(out)">at</span>)</div>
+<div class="doc">
+<p>Find the first line of <code>block</code> that quotes.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-block"><td class="name">block</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the chunk</p></td></tr>
+<tr id="variable-at"><td class="name">at</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>where it starts, or 0</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/parse_block.html">parse_block</a></li></ul>
+<div class="graph"><svg width="585pt" height="110pt"
+ viewBox="0 0 585 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/find_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="75.1" height="21.6"/><text x="37.6" y="-46.1">find_quote</text></a><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="111.1" y="-61.6" width="84.5" height="21.6"/><text x="153.4" y="-46.1">parse_block</text></a><path d="M110.6,-50.8C102,-50.8 92.8,-50.8 84,-50.8"/><polygon fill="#8a93a5" points="84.3,-48.4 77.3,-50.8 84.3,-53.3"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="231.6" y="-61.6" width="95.3" height="21.6"/><text x="279.3" y="-46.1">parse_chunks</text></a><path d="M231.4,-50.8C222.6,-50.8 213.3,-50.8 204.4,-50.8"/><polygon fill="#8a93a5" points="204.5,-48.4 197.5,-50.8 204.5,-53.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="363" y="-101.6" width="124.2" height="21.6"/><text x="425.1" y="-86.1">markdown_to_html</text></a><path d="M383.6,-79.6C366.5,-74.8 346.4,-69.2 328.5,-64.2"/><polygon fill="#8a93a5" points="329.3,-61.9 321.9,-62.4 328,-66.6"/><a href="../proc/parse_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="387.2" y="-61.6" width="75.8" height="21.6"/><text x="425.1" y="-46.1">parse_one</text></a><path d="M386.7,-50.8C371.1,-50.8 352.7,-50.8 335.6,-50.8"/><polygon fill="#8a93a5" points="335.8,-48.4 328.8,-50.8 335.8,-53.3"/><a href="../proc/parse_text~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="387.5" y="-21.6" width="75.1" height="21.6"/><text x="425.1" y="-6.1">parse_text</text></a><path d="M387,-21.1C369.3,-26 347.8,-32 328.7,-37.3"/><polygon fill="#8a93a5" points="328.3,-34.9 322.2,-39.1 329.6,-39.6"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="523.2" y="-101.6" width="54" height="21.6"/><text x="550.2" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M522.8,-90.8C514.7,-90.8 505.5,-90.8 496,-90.8"/><polygon fill="#8a93a5" points="496.1,-88.4 489.1,-90.8 496.1,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="523.2" y="-61.6" width="54" height="21.6"/><text x="550.2" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M522.8,-50.8C507.8,-50.8 488.7,-50.8 471.5,-50.8"/><polygon fill="#8a93a5" points="471.7,-48.4 464.7,-50.8 471.7,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="523.2" y="-21.6" width="54" height="21.6"/><text x="550.2" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M522.8,-10.8C507.7,-10.8 488.4,-10.8 471.1,-10.8"/><polygon fill="#8a93a5" points="471.2,-8.4 464.2,-10.8 471.2,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">subroutine</span> find_quote(<span class="k">block</span>, at)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">block</span>   <span class="d">!! the chunk</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: at              <span class="d">!! where it starts, or 0</span>
+    <span class="k">integer</span> :: i, j, first
+
+    at = <span class="n">0</span>
+    i = <span class="n">1</span>
+    <span class="k">do</span> <span class="k">while</span> (i &lt;= <span class="k">len</span>(<span class="k">block</span>))
+        first = <span class="k">verify</span>(<span class="k">block</span>(i:)//<span class="s">'x'</span>, <span class="s">' '</span>)
+        <span class="k">if</span> (first &lt;= <span class="n">4</span> <span class="k">.and.</span> i + first - <span class="n">1</span> &lt;= <span class="k">len</span>(<span class="k">block</span>)) <span class="k">then</span>
+            <span class="k">if</span> (<span class="k">block</span>(i + first - <span class="n">1</span>:i + first - <span class="n">1</span>) == <span class="s">'&gt;'</span>) <span class="k">then</span>
+                at = i
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">if</span>
+        j = <span class="k">index</span>(<span class="k">block</span>(i:), NL)
+        <span class="k">if</span> (j == <span class="n">0</span>) <span class="k">return</span>
+        i = i + j
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> find_quote</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

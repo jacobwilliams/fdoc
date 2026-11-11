@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>graph_heading &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>graph_heading<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> graph_heading(<span class="intent attr-in" title="intent(in)">title</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write the heading of a graph, at the level of the other sections of a page.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-title"><td class="name">title</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the title</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/section_id.html">section_id</a></li><li><a href="../proc/html_escape.html">html_escape</a></li></ul>
+<div class="graph"><svg width="342pt" height="89pt"
+ viewBox="0 0 342 89" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 84.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/graph_heading.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="101.1" height="21.6"/><text x="50.6" y="-46.1">graph_heading</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="270.7" y="-80.6" width="54" height="21.6"/><text x="297.7" y="-65.1">add</text></a><path d="M93,-62.5C106.9,-65.9 122.6,-69.1 137.1,-70.8 176,-75.3 186.1,-71.1 225.3,-70.8 237.2,-70.7 250.3,-70.6 262,-70.4"/><polygon fill="#8a93a5" points="261.8,-72.8 268.7,-70.3 261.7,-67.9"/><a href="../proc/section_id.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="144.7" y="-21.6" width="72.9" height="21.6"/><text x="181.2" y="-6.1">section_id</text></a><path d="M89.5,-39C104.2,-34.4 121.3,-29.1 136.5,-24.4"/><polygon fill="#8a93a5" points="136.9,-26.8 142.9,-22.4 135.5,-22.1"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.1" y="-61.6" width="88.1" height="21.6"/><text x="181.2" y="-46.1">html_escape</text></a><path d="M102,-50.8C110.8,-50.8 119.9,-50.8 128.7,-50.8"/><polygon fill="#8a93a5" points="128.4,-53.3 135.4,-50.8 128.4,-48.4"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="261.3" y="-21.6" width="72.9" height="21.6"/><text x="297.7" y="-6.1">lowercase</text></a><path d="M218.1,-10.8C229,-10.8 241.1,-10.8 252.4,-10.8"/><polygon fill="#8a93a5" points="252.4,-13.3 259.4,-10.8 252.4,-8.4"/><path d="M225.5,-58C237.6,-60 250.6,-62.2 262.2,-64.1"/><polygon fill="#8a93a5" points="261.5,-66.4 268.8,-65.2 262.3,-61.6"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/graph_sections.html">graph_sections</a></li><li><a href="../proc/write_graph.html">write_graph</a></li></ul>
+<div class="graph"><svg width="608pt" height="70pt"
+ viewBox="0 0 608 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/graph_heading.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="101.1" height="21.6"/><text x="50.6" y="-26.1">graph_heading</text></a><a href="../proc/graph_sections.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="137.1" y="-61.6" width="102.6" height="21.6"/><text x="188.4" y="-46.1">graph_sections</text></a><path d="M136.8,-43.4C128.1,-42.1 118.9,-40.7 109.9,-39.4"/><polygon fill="#8a93a5" points="110.5,-37 103.2,-38.4 109.8,-41.9"/><a href="../proc/write_graph.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="147.3" y="-21.6" width="82.3" height="21.6"/><text x="188.4" y="-6.1">write_graph</text></a><path d="M147,-16.7C135.4,-18.5 122.4,-20.4 109.8,-22.2"/><polygon fill="#8a93a5" points="109.8,-19.8 103.2,-23.2 110.5,-24.6"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="275.7" y="-61.6" width="81.6" height="21.6"/><text x="316.5" y="-46.1">entity_page</text></a><path d="M275.3,-50.8C266.7,-50.8 257.4,-50.8 248.3,-50.8"/><polygon fill="#8a93a5" points="248.4,-48.4 241.4,-50.8 248.4,-53.3"/><a href="../proc/list_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="283.3" y="-21.6" width="66.4" height="21.6"/><text x="316.5" y="-6.1">list_page</text></a><path d="M283.1,-10.8C269.4,-10.8 253.2,-10.8 238.1,-10.8"/><polygon fill="#8a93a5" points="238.4,-8.4 231.4,-10.8 238.4,-13.3"/><a href="../proc/write_entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="393.3" y="-61.6" width="116.3" height="21.6"/><text x="451.5" y="-46.1">write_entity_page</text></a><path d="M392.9,-50.8C383.9,-50.8 374.6,-50.8 365.8,-50.8"/><polygon fill="#8a93a5" points="366.1,-48.4 359.1,-50.8 366.1,-53.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="416.8" y="-21.6" width="69.3" height="21.6"/><text x="451.5" y="-6.1">write_site</text></a><path d="M416.6,-10.8C398.8,-10.8 377,-10.8 358.3,-10.8"/><polygon fill="#8a93a5" points="358.5,-8.4 351.5,-10.8 358.5,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="545.6" y="-61.6" width="54" height="21.6"/><text x="572.6" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M545.2,-50.8C537.1,-50.8 527.9,-50.8 518.4,-50.8"/><polygon fill="#8a93a5" points="518.6,-48.4 511.6,-50.8 518.6,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="545.6" y="-21.6" width="54" height="21.6"/><text x="572.6" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M545.2,-10.8C530.3,-10.8 511.5,-10.8 494.6,-10.8"/><polygon fill="#8a93a5" points="495.1,-8.4 488.1,-10.8 495.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> graph_heading(title, b)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: title   <span class="d">!! the title</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+
+    <span class="k">call</span> add(b, <span class="s">'&lt;h2 id="'</span>//section_id(title)//<span class="s">'"&gt;'</span>)
+    <span class="k">call</span> html_escape(title, b, <span class="k">.false.</span>)
+    <span class="k">call</span> add(b, <span class="s">'&lt;/h2&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+<span class="k">end</span> <span class="k">subroutine</span> graph_heading</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

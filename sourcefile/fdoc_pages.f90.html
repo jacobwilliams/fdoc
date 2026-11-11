@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_pages.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_pages.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_pages"><h3><a href="../module/fdoc_pages.html">fdoc_pages</a><span class="attr attr-private">private</span></h3>
+<p>Static pages: a tree of Markdown files under <code>page_dir</code>, each directory with an <code>index.md</code>.</p>
+</div>
+<h2 id="files-this-one-depends-on">Files this one depends on</h2>
+<div class="graph"><svg width="1001pt" height="506pt"
+ viewBox="0 0 1001 506" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 501.8)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_pages.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="889.2" y="-247.2" width="103.3" height="21.6"/><text x="940.9" y="-231.7">fdoc_pages.f90</text></a><a href="../sourcefile/fdoc_util.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="0" y="-295.2" width="84.5" height="21.6"/><text x="42.3" y="-279.7">fdoc_util.f90</text></a><path d="M498.9,-479.4C457,-481.8 447.5,-491 405.7,-494.4 347.8,-499 332.9,-498.7 275,-494.4 232.7,-491.3 217.1,-502.1 180.7,-480.4"/><a href="../sourcefile/fdoc_settings.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="123.4" y="-256.2" width="112.7" height="21.6"/><text x="179.7" y="-240.7">fdoc_settings.f90</text></a><path d="M927.1,-248C904.6,-267.5 855.7,-306.5 806.6,-323.4"/><path d="M804.6,-323.4C800.4,-324.8 505.2,-246.5 500.9,-246.4"/><a href="../sourcefile/fdoc_project.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="604.5" y="-334.2" width="106.9" height="21.6"/><text x="658" y="-318.7">fdoc_project.f90</text></a><path d="M804.6,-323.4C777.9,-332.6 746.9,-333.8 720.3,-332.2"/><polygon fill="#8a93a5" points="720.5,-329.7 713.4,-331.7 720.2,-334.6"/><a href="../sourcefile/fdoc_project_file.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="275" y="-374.2" width="130.8" height="21.6"/><text x="340.3" y="-358.7">fdoc_project_file.f90</text></a><path d="M804.6,-323.4C725.8,-350.5 737.6,-413.8 659,-441.4"/><path d="M657,-441.4C605,-459.6 449.1,-404.8 377.7,-377.7"/><polygon fill="#8a93a5" points="378.7,-375.4 371.3,-375.2 376.9,-380"/><a href="../sourcefile/fdoc_markdown.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="594" y="-122.2" width="127.9" height="21.6"/><text x="658" y="-106.7">fdoc_markdown.f90</text></a><path d="M913.5,-224.6C861.9,-201.7 748.2,-151.1 691.9,-126"/><polygon fill="#8a93a5" points="693.1,-123.9 685.7,-123.3 691.1,-128.4"/><a href="../sourcefile/fdoc_docs.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="757.9" y="-247.2" width="95.3" height="21.6"/><text x="805.6" y="-231.7">fdoc_docs.f90</text></a><path d="M888.3,-236.4C879.7,-236.4 870.6,-236.4 861.9,-236.4"/><polygon fill="#8a93a5" points="862.1,-233.9 855.1,-236.4 862.1,-238.8"/><a href="../sourcefile/fdoc_progress.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="120.5" y="-334.2" width="118.5" height="21.6"/><text x="179.7" y="-318.7">fdoc_progress.f90</text></a><path d="M657,-441.4C590.2,-466.6 572.1,-475.2 500.9,-479.4"/><path d="M498.9,-479.4C471.4,-481 464.8,-470.4 441.7,-455.4 423.3,-443.4 424.8,-432.4 405.7,-421.4 379.9,-406.5 370.1,-410.3 341.3,-402.4"/><path d="M139.5,-256.7C124.1,-261.1 106.2,-266.3 90.1,-270.9"/><polygon fill="#8a93a5" points="89.9,-268.4 83.8,-272.7 91.2,-273.1"/><path d="M339.3,-480.4C269,-484.6 241.3,-516.5 180.7,-480.4"/><path d="M178.7,-480.4C155.4,-466.4 140.7,-479.7 120.5,-461.4 72.7,-418 53.1,-339.6 46.3,-303.6"/><polygon fill="#8a93a5" points="48.8,-303.3 45.1,-296.8 43.9,-304.1"/><path d="M644.2,-312.2C618.9,-291.2 559.5,-247.6 500.9,-246.4"/><path d="M647.4,-334.4C624.9,-359.4 565.7,-419.9 500.9,-441.4"/><path d="M498.9,-441.4C490.3,-444.2 350,-404.8 341.3,-402.4"/><a href="../sourcefile/fdoc_model.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="288.7" y="-218.2" width="103.3" height="21.6"/><text x="340.3" y="-202.7">fdoc_model.f90</text></a><path d="M648.9,-312.4C633.7,-292.5 598.6,-250.9 558,-232.4 508.4,-209.7 445.9,-204.6 400.8,-204.5"/><polygon fill="#8a93a5" points="400.8,-202.1 393.8,-204.6 400.8,-207"/><a href="../sourcefile/fdoc_input.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="292.3" y="-452.2" width="96.1" height="21.6"/><text x="340.3" y="-436.7">fdoc_input.f90</text></a><path d="M498.9,-441.4C466.4,-452.2 428,-452.4 397.2,-449.8"/><polygon fill="#8a93a5" points="397.5,-447.4 390.3,-449.2 397,-452.3"/><a href="../sourcefile/fdoc_parser.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="447.5" y="-296.2" width="104.7" height="21.6"/><text x="499.9" y="-280.7">fdoc_parser.f90</text></a><path d="M610.5,-312.1C593.2,-307.9 573.3,-303 555.2,-298.6"/><polygon fill="#8a93a5" points="556,-296.3 548.6,-297 554.8,-301"/><a href="../sourcefile/fdoc_shell.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="132.4" y="-452.2" width="94.6" height="21.6"/><text x="179.7" y="-436.7">fdoc_shell.f90</text></a><path d="M498.9,-441.4C430.4,-464.1 413.3,-476.1 341.3,-480.4"/><path d="M339.3,-480.4C295,-483 245.5,-467.8 213.8,-455.6"/><polygon fill="#8a93a5" points="214.9,-453.4 207.5,-453.2 213.1,-458"/><a href="../sourcefile/fdoc_urls.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="455.5" y="-142.2" width="88.8" height="21.6"/><text x="499.9" y="-126.7">fdoc_urls.f90</text></a><path d="M651.6,-312.4C635.1,-279 584.8,-180.1 558,-156.4 553.6,-152.5 548.5,-149.1 543.2,-146.2"/><polygon fill="#8a93a5" points="544.6,-144.2 537.2,-143.3 542.4,-148.6"/><path d="M292.6,-352.2C286.5,-349.8 280.4,-346.9 275,-343.4 254.8,-330.5 259,-316.4 239,-303.4 216.1,-288.5 207.8,-287.7 180.7,-284.4"/><path d="M288.7,-352.2C283.8,-349.8 279.1,-346.9 275,-343.4 247.5,-319.9 265.2,-295.3 239,-270.4 234.9,-266.5 230.1,-263.2 225.1,-260.4"/><polygon fill="#8a93a5" points="226.3,-258.2 219,-257.2 224.1,-262.6"/><path d="M294.7,-352.1C275.7,-347.3 253.2,-341.7 233.3,-336.7"/><polygon fill="#8a93a5" points="234.1,-334.3 226.7,-335 232.9,-339.1"/><path d="M646.1,-100.3C628.8,-83.3 593.5,-50.8 558,-31.4 534.5,-18.5 527,-18.2 500.9,-12.4"/><path d="M498.9,-12.4C430.5,2.8 409.1,5.1 341.3,-12.4"/><path d="M339.3,-12.4C310.5,-19.8 300.5,-16 275,-31.4 223.5,-62.5 234.5,-101.6 180.7,-128.4"/><path d="M178.7,-128.4C116.9,-159.2 71.4,-231.9 52.7,-266.1"/><polygon fill="#8a93a5" points="50.6,-264.8 49.4,-272.2 54.9,-267.2"/><path d="M593.6,-102.5C513.9,-94.5 375.3,-91.4 275,-147.4 239.4,-167.2 209,-204.8 192.9,-227.2"/><polygon fill="#8a93a5" points="190.9,-225.8 188.9,-233 194.9,-228.6"/><path d="M642.3,-122.5C628,-134.2 606.5,-153.8 594,-175.4 564.1,-227.3 599.3,-261.9 558,-305.4 539.6,-324.8 523.5,-310.1 500.9,-324.4"/><path d="M498.9,-324.4C432.9,-366.2 416.7,-423.1 341.3,-402.4"/><path d="M339.3,-402.4C310.6,-394.5 299.8,-399.9 275,-383.4 253.9,-369.4 260.1,-353.2 239,-339.4 238.5,-339.1 238.1,-338.8 237.7,-338.6"/><polygon fill="#8a93a5" points="239,-336.5 231.6,-335.3 236.7,-340.8"/><a href="../sourcefile/fdoc_buffer.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="289.8" y="-62.2" width="101.1" height="21.6"/><text x="340.3" y="-46.7">fdoc_buffer.f90</text></a><path d="M498.9,-12.4C476.6,-7.4 419.4,-24.4 380.5,-37.5"/><polygon fill="#8a93a5" points="379.7,-35.1 373.9,-39.7 381.3,-39.8"/><a href="../sourcefile/fdoc_highlight.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="441.7" y="-62.2" width="116.3" height="21.6"/><text x="499.9" y="-46.7">fdoc_highlight.f90</text></a><path d="M627.6,-100.1C602.2,-90.3 565.3,-76.2 537.9,-65.6"/><polygon fill="#8a93a5" points="538.9,-63.4 531.5,-63.2 537.2,-68"/><path d="M657,-189.4C588.1,-177.2 570.6,-175.1 500.9,-170.4"/><path d="M498.9,-170.4C426.6,-165.5 413.6,-133.5 341.3,-128.4"/><path d="M657,-189.4C584.2,-176.5 574.7,-247.9 500.9,-246.4"/><path d="M498.9,-246.4C410.9,-244.5 309.2,-244.6 244.9,-244.9"/><polygon fill="#8a93a5" points="245,-242.5 238,-245 245,-247.4"/><path d="M791.8,-247.6C776.2,-261 748.5,-283.5 721.9,-298.4 714.9,-302.3 707.1,-305.9 699.6,-309.1"/><polygon fill="#8a93a5" points="699,-306.7 693.5,-311.6 700.9,-311.2"/><path d="M780.5,-225.2C772.9,-221.3 764.8,-216.6 757.9,-211.4 755.6,-209.7 703.4,-156.7 675.8,-128.5"/><polygon fill="#8a93a5" points="677.7,-127 671,-123.7 674.2,-130.4"/><path d="M763.6,-247.6C683.3,-269.7 512.2,-317.2 500.9,-324.4"/><path d="M498.9,-170.4C477.3,-168.9 424.6,-182.6 386.1,-193.8"/><polygon fill="#8a93a5" points="385.6,-191.4 379.6,-195.7 387,-196.1"/><path d="M777.5,-225.2C748.7,-213.8 701.5,-196.9 659,-189.4"/><path d="M657,-189.4C633.1,-185.2 573.6,-161.6 535.3,-145.9"/><polygon fill="#8a93a5" points="536.3,-143.6 528.9,-143.2 534.4,-148.1"/><path d="M297.5,-196.1C289.9,-193.6 282.1,-190.7 275,-187.4 230.1,-166.8 225,-106.3 180.7,-128.4"/><path d="M303,-430.2C293.5,-426.5 283.5,-421.9 275,-416.4 256.2,-404.3 258.1,-392.9 239,-381.4 191.6,-352.9 169.5,-369 120.5,-343.4 98.6,-331.9 76.4,-314.3 61.5,-301.2"/><polygon fill="#8a93a5" points="63.2,-299.4 56.3,-296.6 59.9,-303.1"/><path d="M322.5,-430.2C308,-419.7 287.4,-402.7 275,-383.4 246.4,-339.1 274.4,-309.4 239,-270.4 235.5,-266.6 231.4,-263.3 227,-260.6"/><polygon fill="#8a93a5" points="228.4,-258.6 221.1,-257.4 226.1,-262.9"/><path d="M297.4,-430.1C289.3,-426.6 281.4,-422.1 275,-416.4 249.4,-393.7 264.1,-371.6 239,-348.4 234.8,-344.6 230,-341.3 225,-338.5"/><polygon fill="#8a93a5" points="226.2,-336.3 218.8,-335.4 224,-340.7"/><path d="M292.2,-441.4C274.4,-441.4 254.1,-441.4 235.7,-441.4"/><polygon fill="#8a93a5" points="236,-438.9 229,-441.4 236,-443.8"/><a href="../sourcefile/fdoc_fypp.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="133.5" y="-412.2" width="92.5" height="21.6"/><text x="179.7" y="-396.7">fdoc_fypp.f90</text></a><path d="M294.7,-430.1C275.7,-425.3 253.2,-419.7 233.3,-414.7"/><polygon fill="#8a93a5" points="234.1,-412.3 226.7,-413 232.9,-417.1"/><path d="M339.3,-284.4C269,-279.9 250.7,-292.9 180.7,-284.4"/><path d="M178.7,-284.4C150.6,-281 119,-280.8 93.4,-281.5"/><polygon fill="#8a93a5" points="93.3,-279.1 86.4,-281.8 93.5,-284"/><path d="M447,-286.5C416.3,-286.9 376.6,-286.6 341.3,-284.4"/><path d="M339.3,-284.4C297.7,-281.7 251.6,-269.3 219.9,-259.1"/><polygon fill="#8a93a5" points="221,-256.9 213.6,-257.1 219.5,-261.6"/><path d="M468.2,-296.6C459.4,-300.4 449.9,-305.1 441.7,-310.4 423.5,-322.2 424.5,-332.6 405.7,-343.4 402.1,-345.5 398.2,-347.4 394.2,-349.1"/><polygon fill="#8a93a5" points="393.4,-346.8 387.8,-351.6 395.2,-351.3"/><path d="M476.3,-274.2C448.8,-260.6 402.1,-237.5 371.5,-222.3"/><polygon fill="#8a93a5" points="372.8,-220.3 365.5,-219.3 370.7,-224.6"/><a href="../sourcefile/fdoc_decl.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="294.5" y="-334.2" width="91.7" height="21.6"/><text x="340.3" y="-318.7">fdoc_decl.f90</text></a><path d="M452,-296.7C434,-301 413.3,-306 394.7,-310.5"/><polygon fill="#8a93a5" points="394.3,-308.1 388.1,-312.1 395.5,-312.8"/><a href="../sourcefile/fdoc_intrinsics.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="281.1" y="-178.2" width="118.5" height="21.6"/><text x="340.3" y="-162.7">fdoc_intrinsics.f90</text></a><path d="M491.3,-274.2C476.9,-254 443.8,-211.1 405.7,-187.4 402.4,-185.3 398.9,-183.5 395.2,-181.8"/><polygon fill="#8a93a5" points="396.4,-179.6 389,-179.2 394.5,-184.2"/><path d="M455,-131.7C423.4,-131.7 379.7,-131.1 341.3,-128.4"/><path d="M339.3,-128.4C269,-123.5 243.8,-96.9 180.7,-128.4"/><path d="M468.6,-142.6C459.7,-146.5 450.1,-151.1 441.7,-156.4 423.8,-167.6 424.2,-177.2 405.7,-187.4 401.9,-189.5 397.8,-191.4 393.6,-193.2"/><polygon fill="#8a93a5" points="393,-190.8 387.4,-195.6 394.8,-195.4"/><path d="M476.6,-120.1C449,-106 401.6,-82 370.9,-66.4"/><polygon fill="#8a93a5" points="372.2,-64.3 364.8,-63.3 369.9,-68.7"/><path d="M468.4,-40.2C429.7,-26.6 365.1,-6.3 341.3,-12.4"/><path d="M441.6,-51.4C427.9,-51.4 413.4,-51.4 399.7,-51.4"/><polygon fill="#8a93a5" points="399.8,-48.9 392.8,-51.4 399.8,-53.8"/><path d="M488.7,-62.4C468.6,-83.9 424.3,-130.5 405.7,-142.4 399.4,-146.4 392.4,-150 385.3,-153.1"/><polygon fill="#8a93a5" points="384.6,-150.7 379.1,-155.6 386.5,-155.2"/></g>
+</svg>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="332pt" height="49pt"
+ viewBox="0 0 332 49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 44.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_pages.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="103.3" height="21.6"/><text x="51.7" y="-25.1">fdoc_pages.f90</text></a><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="263.4" y="-40.6" width="60.7" height="21.6"/><text x="293.7" y="-25.1">fdoc.f90</text></a><path d="M263.2,-30.3C252,-30.5 239.1,-30.7 227.4,-30.8 188.3,-31.1 178.5,-31 139.3,-30.8 130.6,-30.7 121.3,-30.7 112.2,-30.6"/><polygon fill="#8a93a5" points="112.5,-28.1 105.5,-30.5 112.5,-33"/><a href="../sourcefile/fdoc_site.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="139.3" y="-21.6" width="88.1" height="21.6"/><text x="183.4" y="-6.1">fdoc_site.f90</text></a><path d="M263.1,-24.6C254.7,-23.1 245.3,-21.5 235.9,-19.8"/><polygon fill="#8a93a5" points="236.6,-17.5 229.3,-18.7 235.7,-22.3"/><path d="M138.8,-17.2C130.2,-18.4 121.1,-19.8 112.1,-21.1"/><polygon fill="#8a93a5" points="112,-18.6 105.4,-22.1 112.7,-23.5"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_pages
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! Static pages: a tree of Markdown files under `page_dir`, each directory with an `index.md`.</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="k">use</span> ffmt_fs, <span class="k">only</span>: list_directory, dir_entry_t, is_directory, ENTRY_DIR
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="k">use</span> fdoc_util
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="k">use</span> fdoc_settings, <span class="k">only</span>: settings_t
+<a class="ln" id="ln-6" href="#ln-6"></a><span class="k">use</span> fdoc_project, <span class="k">only</span>: project_t
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="k">use</span> fdoc_project_file, <span class="k">only</span>: parse_metadata, metadata_t
+<a class="ln" id="ln-8" href="#ln-8"></a><span class="k">use</span> fdoc_markdown, <span class="k">only</span>: markdown_options_t, dedent
+<a class="ln" id="ln-9" href="#ln-9"></a><span class="k">use</span> fdoc_docs, <span class="k">only</span>: base_options, render_text
+<a class="ln" id="ln-10" href="#ln-10"></a><span class="k">use</span> fdoc_progress, <span class="k">only</span>: warn
+<a class="ln" id="ln-11" href="#ln-11"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-12" href="#ln-12"></a><span class="k">private</span>
+<a class="ln" id="ln-13" href="#ln-13"></a>
+<a class="ln" id="ln-14" href="#ln-14"></a><span class="k">public</span> :: page_t, load_pages, page_file
+<a class="ln" id="ln-15" href="#ln-15"></a>
+<a class="ln" id="ln-16" href="#ln-16"></a><span class="k">type</span> :: page_t
+<a class="ln" id="ln-17" href="#ln-17"></a>    <span class="d">!! A static page.</span>
+<a class="ln" id="ln-18" href="#ln-18"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: title      <span class="d">!! its title</span>
+<a class="ln" id="ln-19" href="#ln-19"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: path       <span class="d">!! its file, relative to `page/`</span>
+<a class="ln" id="ln-20" href="#ln-20"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: html       <span class="d">!! its text as HTML</span>
+<a class="ln" id="ln-21" href="#ln-21"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: author     <span class="d">!! its author, if any</span>
+<a class="ln" id="ln-22" href="#ln-22"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: date       <span class="d">!! its date, if any</span>
+<a class="ln" id="ln-23" href="#ln-23"></a>    <span class="k">integer</span> :: parent = <span class="n">0</span>                       <span class="d">!! the page above it</span>
+<a class="ln" id="ln-24" href="#ln-24"></a>    <span class="k">integer</span> :: depth = <span class="n">0</span>                        <span class="d">!! how many directories below `page/` it is</span>
+<a class="ln" id="ln-25" href="#ln-25"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: copies(:)    <span class="d">!! files and directories to copy next to it</span>
+<a class="ln" id="ln-26" href="#ln-26"></a><span class="k">end</span> <span class="k">type</span> page_t
+<a class="ln" id="ln-27" href="#ln-27"></a>
+<a class="ln" id="ln-28" href="#ln-28"></a><span class="k">contains</span>
+<a class="ln" id="ln-29" href="#ln-29"></a>
+<a class="ln" id="ln-30" href="#ln-30"></a><span class="d">!&gt; The length of the part of `name` that names its page.</span>
+<a class="ln" id="ln-31" href="#ln-31"></a><span class="k">pure</span> <span class="k">integer</span> <span class="k">function</span> stem_length(name)
+<a class="ln" id="ln-32" href="#ln-32"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the name of a Markdown file</span>
+<a class="ln" id="ln-33" href="#ln-33"></a>    <span class="k">integer</span> :: at
+<a class="ln" id="ln-34" href="#ln-34"></a>
+<a class="ln" id="ln-35" href="#ln-35"></a>    stem_length = <span class="k">len</span>(name) - <span class="n">3</span>
+<a class="ln" id="ln-36" href="#ln-36"></a>    at = <span class="k">index</span>(name(:stem_length), <span class="s">'.'</span>, back=<span class="k">.true.</span>)
+<a class="ln" id="ln-37" href="#ln-37"></a>    <span class="k">if</span> (at &gt; <span class="n">1</span>) stem_length = at - <span class="n">1</span>
+<a class="ln" id="ln-38" href="#ln-38"></a><span class="k">end</span> <span class="k">function</span> stem_length
+<a class="ln" id="ln-39" href="#ln-39"></a>
+<a class="ln" id="ln-40" href="#ln-40"></a><span class="d">!&gt; Read the pages of the project into `pages`, parents before children.</span>
+<a class="ln" id="ln-41" href="#ln-41"></a><span class="k">subroutine</span> load_pages(p, s, abbreviations_from, pages)
+<a class="ln" id="ln-42" href="#ln-42"></a>    <span class="k">type</span>(project_t), <span class="k">intent</span>(inout), <span class="k">target</span> :: p                 <span class="d">!! the project</span>
+<a class="ln" id="ln-43" href="#ln-43"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s                           <span class="d">!! the settings</span>
+<a class="ln" id="ln-44" href="#ln-44"></a>    <span class="k">type</span>(markdown_options_t), <span class="k">intent</span>(in) :: abbreviations_from  <span class="d">!! has the abbreviations of the project</span>
+<a class="ln" id="ln-45" href="#ln-45"></a>    <span class="k">type</span>(page_t), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: pages(:)          <span class="d">!! the pages</span>
+<a class="ln" id="ln-46" href="#ln-46"></a>
+<a class="ln" id="ln-47" href="#ln-47"></a>    <span class="k">allocate</span> (pages(<span class="n">0</span>))
+<a class="ln" id="ln-48" href="#ln-48"></a>    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(s%page_dir)) <span class="k">return</span>
+<a class="ln" id="ln-49" href="#ln-49"></a>    <span class="k">call</span> read_tree(p, s, abbreviations_from, s%page_dir, <span class="s">''</span>, <span class="n">0</span>, <span class="n">0</span>, pages)
+<a class="ln" id="ln-50" href="#ln-50"></a><span class="k">end</span> <span class="k">subroutine</span> load_pages
+<a class="ln" id="ln-51" href="#ln-51"></a>
+<a class="ln" id="ln-52" href="#ln-52"></a><span class="d">!&gt; Read the directory `directory` of pages, `location` below the top.</span>
+<a class="ln" id="ln-53" href="#ln-53"></a><span class="k">recursive</span> <span class="k">subroutine</span> read_tree(p, s, base, directory, location, parent, depth, pages)
+<a class="ln" id="ln-54" href="#ln-54"></a>    <span class="k">type</span>(project_t), <span class="k">intent</span>(inout), <span class="k">target</span> :: p         <span class="d">!! the project</span>
+<a class="ln" id="ln-55" href="#ln-55"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s                   <span class="d">!! the settings</span>
+<a class="ln" id="ln-56" href="#ln-56"></a>    <span class="k">type</span>(markdown_options_t), <span class="k">intent</span>(in) :: base        <span class="d">!! has the abbreviations of the project</span>
+<a class="ln" id="ln-57" href="#ln-57"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: directory           <span class="d">!! the directory</span>
+<a class="ln" id="ln-58" href="#ln-58"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: location            <span class="d">!! its path below the top, ending in `/`, or `''`</span>
+<a class="ln" id="ln-59" href="#ln-59"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent                       <span class="d">!! the page above, or 0</span>
+<a class="ln" id="ln-60" href="#ln-60"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: depth                        <span class="d">!! how deep it is</span>
+<a class="ln" id="ln-61" href="#ln-61"></a>    <span class="k">type</span>(page_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: pages(:)    <span class="d">!! the pages</span>
+<a class="ln" id="ln-62" href="#ln-62"></a>    <span class="k">type</span>(dir_entry_t), <span class="k">allocatable</span> :: entries(:)
+<a class="ln" id="ln-63" href="#ln-63"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: names(:), ordered(:), skip(:)
+<a class="ln" id="ln-64" href="#ln-64"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: name, path
+<a class="ln" id="ln-65" href="#ln-65"></a>    <span class="k">logical</span> :: exists
+<a class="ln" id="ln-66" href="#ln-66"></a>    <span class="k">integer</span> :: k, node, <span class="k">stat</span>, index_page
+<a class="ln" id="ln-67" href="#ln-67"></a>
+<a class="ln" id="ln-68" href="#ln-68"></a>    path = directory//<span class="s">'/index.md'</span>
+<a class="ln" id="ln-69" href="#ln-69"></a>    <span class="k">inquire</span> (file=path, exist=exists)
+<a class="ln" id="ln-70" href="#ln-70"></a>    <span class="k">if</span> (<span class="k">.not.</span> exists) <span class="k">then</span>
+<a class="ln" id="ln-71" href="#ln-71"></a>        <span class="k">if</span> (<span class="k">.not.</span> is_input_directory(s, directory)) <span class="k">then</span>
+<a class="ln" id="ln-72" href="#ln-72"></a>            <span class="k">call</span> warn(<span class="s">"Skipping creating page for '"</span>//directory//<span class="s">"' because it does not contain 'index.md'"</span>)
+<a class="ln" id="ln-73" href="#ln-73"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-74" href="#ln-74"></a>        <span class="k">return</span>
+<a class="ln" id="ln-75" href="#ln-75"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-76" href="#ln-76"></a>    <span class="k">call</span> read_page(p, s, base, path, location//<span class="s">'index.html'</span>, parent, depth, pages, ordered, skip)
+<a class="ln" id="ln-77" href="#ln-77"></a>    index_page = <span class="k">size</span>(pages)
+<a class="ln" id="ln-78" href="#ln-78"></a>    <span class="k">if</span> (index_page == <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-79" href="#ln-79"></a>    <span class="k">if</span> (parent &gt; <span class="n">0</span> <span class="k">.and.</span> pages(index_page)%parent /= parent) <span class="k">return</span>
+<a class="ln" id="ln-80" href="#ln-80"></a>    node = index_page
+<a class="ln" id="ln-81" href="#ln-81"></a>
+<a class="ln" id="ln-82" href="#ln-82"></a>    <span class="k">call</span> list_directory(directory, entries, <span class="k">stat</span>)
+<a class="ln" id="ln-83" href="#ln-83"></a>    <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">return</span>
+<a class="ln" id="ln-84" href="#ln-84"></a>    <span class="k">allocate</span> (names(<span class="n">0</span>))
+<a class="ln" id="ln-85" href="#ln-85"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(ordered)
+<a class="ln" id="ln-86" href="#ln-86"></a>        <span class="k">if</span> (ordered(k)%s /= <span class="s">'index.md'</span>) <span class="k">call</span> push(names, ordered(k)%s)
+<a class="ln" id="ln-87" href="#ln-87"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-88" href="#ln-88"></a>    <span class="k">block</span>
+<a class="ln" id="ln-89" href="#ln-89"></a>        <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: listed(:)
+<a class="ln" id="ln-90" href="#ln-90"></a>        <span class="k">allocate</span> (listed(<span class="n">0</span>))
+<a class="ln" id="ln-91" href="#ln-91"></a>        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(entries)
+<a class="ln" id="ln-92" href="#ln-92"></a>            <span class="k">call</span> push(listed, entries(k)%name)
+<a class="ln" id="ln-93" href="#ln-93"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-94" href="#ln-94"></a>        <span class="k">call</span> sort_strings(listed)
+<a class="ln" id="ln-95" href="#ln-95"></a>        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(listed)
+<a class="ln" id="ln-96" href="#ln-96"></a>            <span class="k">if</span> (<span class="k">.not.</span> contains_string(names, listed(k)%s) <span class="k">.and.</span> listed(k)%s /= <span class="s">'index.md'</span>) <span class="k">call</span> push(names, listed(k)%s)
+<a class="ln" id="ln-97" href="#ln-97"></a>        <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-98" href="#ln-98"></a>    <span class="k">end</span> <span class="k">block</span>
+<a class="ln" id="ln-99" href="#ln-99"></a>
+<a class="ln" id="ln-100" href="#ln-100"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(names)
+<a class="ln" id="ln-101" href="#ln-101"></a>        name = names(k)%s
+<a class="ln" id="ln-102" href="#ln-102"></a>        <span class="k">if</span> (name(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'.'</span> <span class="k">.or.</span> name(<span class="k">len</span>(name):<span class="k">len</span>(name)) == <span class="s">'~'</span>) <span class="k">cycle</span>
+<a class="ln" id="ln-103" href="#ln-103"></a>        path = directory//<span class="s">'/'</span>//name
+<a class="ln" id="ln-104" href="#ln-104"></a>        <span class="k">if</span> (contains_string(skip, name)) <span class="k">then</span>
+<a class="ln" id="ln-105" href="#ln-105"></a>            <span class="k">call</span> push(pages(node)%copies, location//name)
+<a class="ln" id="ln-106" href="#ln-106"></a>        <span class="k">else</span> <span class="k">if</span> (is_directory(path)) <span class="k">then</span>
+<a class="ln" id="ln-107" href="#ln-107"></a>            <span class="k">call</span> read_tree(p, s, base, path, location//name//<span class="s">'/'</span>, node, depth + <span class="n">1</span>, pages)
+<a class="ln" id="ln-108" href="#ln-108"></a>        <span class="k">else</span> <span class="k">if</span> (ends_with(name, <span class="s">'.md'</span>)) <span class="k">then</span>
+<a class="ln" id="ln-109" href="#ln-109"></a>            <span class="k">call</span> read_page(p, s, base, path, location//page_file(name), node, depth, pages, ordered, skip)
+<a class="ln" id="ln-110" href="#ln-110"></a>        <span class="k">else</span>
+<a class="ln" id="ln-111" href="#ln-111"></a>            <span class="k">call</span> push(pages(node)%copies, location//name)
+<a class="ln" id="ln-112" href="#ln-112"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-113" href="#ln-113"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-114" href="#ln-114"></a><span class="k">end</span> <span class="k">subroutine</span> read_tree
+<a class="ln" id="ln-115" href="#ln-115"></a>
+<a class="ln" id="ln-116" href="#ln-116"></a><span class="d">!&gt; The HTML file for Markdown file `name`. As in FORD one other suffix goes too: `CI.yml.md` becomes</span>
+<a class="ln" id="ln-117" href="#ln-117"></a><span class="d">!&gt; `CI.html`.</span>
+<a class="ln" id="ln-118" href="#ln-118"></a><span class="k">pure</span> <span class="k">function</span> page_file(name) <span class="k">result</span>(file)
+<a class="ln" id="ln-119" href="#ln-119"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the name of a Markdown file</span>
+<a class="ln" id="ln-120" href="#ln-120"></a>    <span class="k">character</span>(<span class="k">len</span>=stem_length(name) + <span class="n">5</span>) :: file
+<a class="ln" id="ln-121" href="#ln-121"></a>
+<a class="ln" id="ln-122" href="#ln-122"></a>    file = name(:stem_length(name))//<span class="s">'.html'</span>
+<a class="ln" id="ln-123" href="#ln-123"></a><span class="k">end</span> <span class="k">function</span> page_file
+<a class="ln" id="ln-124" href="#ln-124"></a>
+<a class="ln" id="ln-125" href="#ln-125"></a><span class="d">!&gt; True if `directory` is an input of the project, so that it not being a page is expected.</span>
+<a class="ln" id="ln-126" href="#ln-126"></a><span class="k">logical</span> <span class="k">function</span> is_input_directory(s, directory)
+<a class="ln" id="ln-127" href="#ln-127"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s           <span class="d">!! the settings</span>
+<a class="ln" id="ln-128" href="#ln-128"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: directory   <span class="d">!! the directory</span>
+<a class="ln" id="ln-129" href="#ln-129"></a>
+<a class="ln" id="ln-130" href="#ln-130"></a>    is_input_directory = contains_string(s%src_dir, directory) <span class="k">.or.</span> contains_string(s%html_template_dir, directory) <span class="k">.or.</span> &amp;
+<a class="ln" id="ln-131" href="#ln-131"></a>                         directory == s%output_dir
+<a class="ln" id="ln-132" href="#ln-132"></a>    <span class="k">if</span> (<span class="k">allocated</span>(s%media_dir)) is_input_directory = is_input_directory <span class="k">.or.</span> directory == s%media_dir
+<a class="ln" id="ln-133" href="#ln-133"></a>    <span class="k">if</span> (<span class="k">allocated</span>(s%graph_dir)) is_input_directory = is_input_directory <span class="k">.or.</span> directory == s%graph_dir
+<a class="ln" id="ln-134" href="#ln-134"></a><span class="k">end</span> <span class="k">function</span> is_input_directory
+<a class="ln" id="ln-135" href="#ln-135"></a>
+<a class="ln" id="ln-136" href="#ln-136"></a><span class="d">!&gt; Read and render one page, adding it to `pages`.</span>
+<a class="ln" id="ln-137" href="#ln-137"></a><span class="k">subroutine</span> read_page(p, s, base, path, <span class="k">target</span>, parent, depth, pages, ordered, skip)
+<a class="ln" id="ln-138" href="#ln-138"></a>    <span class="k">type</span>(project_t), <span class="k">intent</span>(inout), <span class="k">target</span> :: p         <span class="d">!! the project</span>
+<a class="ln" id="ln-139" href="#ln-139"></a>    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s                   <span class="d">!! the settings</span>
+<a class="ln" id="ln-140" href="#ln-140"></a>    <span class="k">type</span>(markdown_options_t), <span class="k">intent</span>(in) :: base        <span class="d">!! has the abbreviations of the project</span>
+<a class="ln" id="ln-141" href="#ln-141"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path                <span class="d">!! the Markdown file</span>
+<a class="ln" id="ln-142" href="#ln-142"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">target</span>              <span class="d">!! the HTML file, relative to `page/`</span>
+<a class="ln" id="ln-143" href="#ln-143"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent                       <span class="d">!! the page above, or 0</span>
+<a class="ln" id="ln-144" href="#ln-144"></a>    <span class="k">integer</span>, <span class="k">intent</span>(in) :: depth                        <span class="d">!! how deep it is</span>
+<a class="ln" id="ln-145" href="#ln-145"></a>    <span class="k">type</span>(page_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: pages(:)    <span class="d">!! the pages</span>
+<a class="ln" id="ln-146" href="#ln-146"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: ordered(:)  <span class="d">!! its `ordered_subpage`</span>
+<a class="ln" id="ln-147" href="#ln-147"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: skip(:)     <span class="d">!! its `copy_subdir`</span>
+<a class="ln" id="ln-148" href="#ln-148"></a>    <span class="k">type</span>(metadata_t) :: meta
+<a class="ln" id="ln-149" href="#ln-149"></a>    <span class="k">type</span>(markdown_options_t) :: options
+<a class="ln" id="ln-150" href="#ln-150"></a>    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: lines(:)
+<a class="ln" id="ln-151" href="#ln-151"></a>    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text, msg, root, prefix, title, html, author, date
+<a class="ln" id="ln-152" href="#ln-152"></a>    <span class="k">type</span>(page_t) :: page
+<a class="ln" id="ln-153" href="#ln-153"></a>    <span class="k">integer</span> :: k, <span class="k">stat</span>
+<a class="ln" id="ln-154" href="#ln-154"></a>
+<a class="ln" id="ln-155" href="#ln-155"></a>    <span class="k">allocate</span> (ordered(<span class="n">0</span>))
+<a class="ln" id="ln-156" href="#ln-156"></a>    skip = s%copy_subdir
+<a class="ln" id="ln-157" href="#ln-157"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(skip)
+<a class="ln" id="ln-158" href="#ln-158"></a>        skip(k)%s = skip(k)%s(last_separator(skip(k)%s) + <span class="n">1</span>:)
+<a class="ln" id="ln-159" href="#ln-159"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-160" href="#ln-160"></a>    <span class="k">call</span> read_whole_file(path, text, <span class="k">stat</span>, msg)
+<a class="ln" id="ln-161" href="#ln-161"></a>    <span class="k">if</span> (<span class="k">stat</span> /= <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-162" href="#ln-162"></a>        <span class="k">call</span> warn(<span class="s">'could not read '</span>//path//<span class="s">': '</span>//msg)
+<a class="ln" id="ln-163" href="#ln-163"></a>        <span class="k">return</span>
+<a class="ln" id="ln-164" href="#ln-164"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-165" href="#ln-165"></a>    lines = split_lines(text)
+<a class="ln" id="ln-166" href="#ln-166"></a>    <span class="k">call</span> dedent(lines)
+<a class="ln" id="ln-167" href="#ln-167"></a>    <span class="k">call</span> parse_metadata(join(lines, <span class="k">achar</span>(<span class="n">10</span>)), meta)
+<a class="ln" id="ln-168" href="#ln-168"></a>    title = <span class="s">''</span>
+<a class="ln" id="ln-169" href="#ln-169"></a>    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(meta%items)
+<a class="ln" id="ln-170" href="#ln-170"></a>        <span class="k">select</span> <span class="k">case</span> (meta%items(k)%key)
+<a class="ln" id="ln-171" href="#ln-171"></a>        <span class="k">case</span> (<span class="s">'title'</span>); title = join(meta%items(k)%values, <span class="s">' '</span>)
+<a class="ln" id="ln-172" href="#ln-172"></a>        <span class="k">case</span> (<span class="s">'author'</span>); author = join(meta%items(k)%values, <span class="s">' '</span>)
+<a class="ln" id="ln-173" href="#ln-173"></a>        <span class="k">case</span> (<span class="s">'date'</span>); date = join(meta%items(k)%values, <span class="s">' '</span>)
+<a class="ln" id="ln-174" href="#ln-174"></a>        <span class="k">case</span> (<span class="s">'ordered_subpage'</span>); ordered = meta%items(k)%values
+<a class="ln" id="ln-175" href="#ln-175"></a>        <span class="k">case</span> (<span class="s">'copy_subdir'</span>); skip = meta%items(k)%values
+<a class="ln" id="ln-176" href="#ln-176"></a>        <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-177" href="#ln-177"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-178" href="#ln-178"></a>    <span class="k">if</span> (<span class="k">len</span>(title) == <span class="n">0</span>) <span class="k">then</span>
+<a class="ln" id="ln-179" href="#ln-179"></a>        <span class="k">call</span> warn(<span class="s">"Page '"</span>//path//<span class="s">"' has no title metadata"</span>)
+<a class="ln" id="ln-180" href="#ln-180"></a>        <span class="k">return</span>
+<a class="ln" id="ln-181" href="#ln-181"></a>    <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-182" href="#ln-182"></a>
+<a class="ln" id="ln-183" href="#ln-183"></a>    prefix = <span class="k">repeat</span>(<span class="s">'../'</span>, depth + <span class="n">1</span>)
+<a class="ln" id="ln-184" href="#ln-184"></a>    root = prefix(:<span class="k">len</span>(prefix) - <span class="n">1</span>)
+<a class="ln" id="ln-185" href="#ln-185"></a>    <span class="k">call</span> base_options(s, root, options)
+<a class="ln" id="ln-186" href="#ln-186"></a>    <span class="k">if</span> (<span class="k">allocated</span>(base%abbreviations)) options%abbreviations = base%abbreviations
+<a class="ln" id="ln-187" href="#ln-187"></a>    <span class="k">call</span> render_text(p, options, <span class="n">0</span>, prefix, join(meta%body, <span class="k">achar</span>(<span class="n">10</span>)), html)
+<a class="ln" id="ln-188" href="#ln-188"></a>
+<a class="ln" id="ln-189" href="#ln-189"></a>    page%title = title
+<a class="ln" id="ln-190" href="#ln-190"></a>    page%path = <span class="k">target</span>
+<a class="ln" id="ln-191" href="#ln-191"></a>    <span class="k">call</span> <span class="k">move_alloc</span>(html, page%html)
+<a class="ln" id="ln-192" href="#ln-192"></a>    <span class="k">if</span> (<span class="k">allocated</span>(author)) page%author = author
+<a class="ln" id="ln-193" href="#ln-193"></a>    <span class="k">if</span> (<span class="k">allocated</span>(date)) page%date = date
+<a class="ln" id="ln-194" href="#ln-194"></a>    page%parent = parent
+<a class="ln" id="ln-195" href="#ln-195"></a>    page%depth = depth
+<a class="ln" id="ln-196" href="#ln-196"></a>    <span class="k">allocate</span> (page%copies(<span class="n">0</span>))
+<a class="ln" id="ln-197" href="#ln-197"></a>    pages = [pages, page]
+<a class="ln" id="ln-198" href="#ln-198"></a><span class="k">end</span> <span class="k">subroutine</span> read_page
+<a class="ln" id="ln-199" href="#ln-199"></a>
+<a class="ln" id="ln-200" href="#ln-200"></a><span class="k">end</span> <span class="k">module</span> fdoc_pages
+<a class="ln" id="ln-201" href="#ln-201"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

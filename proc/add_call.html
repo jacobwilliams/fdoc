@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>add_call &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">subroutine</span>add_call<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> add_call(<span class="intent attr-in" title="intent(in)">v</span>, <span class="intent attr-in" title="intent(in)">j</span>, <span class="intent attr-inout" title="intent(inout)">e</span>, <span class="intent attr-in" title="intent(in)">associations</span>)</div>
+<div class="doc">
+<p>Add the reference ending at name <code>j</code> to <code>e%more%calls</code>, unless it is intrinsic or already there.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-v"><td class="name">v</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/statement_view_t.html">statement_view_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the statement</p></td></tr>
+<tr id="variable-j"><td class="name">j</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the last name</p></td></tr>
+<tr id="variable-e"><td class="name">e</td><td class="type">type(<a href="../type/entity_t.html">entity_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the entity it is in</p></td></tr>
+<tr id="variable-associations"><td class="name">associations</td><td class="type">type(<a href="../type/association_t.html">association_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the names in scope</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/is_intrinsic.html">is_intrinsic</a></li><li><a href="../proc/ends_with.html">ends_with</a></li><li><a href="../proc/chain_start.html">chain_start</a></li><li><a href="https://jacobwilliams.github.io/fformat/type/statement_view_t.html#boundprocedure-kind_of">kind_of</a></li><li><a href="../proc/push.html">push</a></li></ul>
+<div class="graph"><svg width="393pt" height="188pt"
+ viewBox="0 0 393 188" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 183.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_call.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-99.6" width="62.8" height="21.6"/><text x="31.4" y="-84.1">add_call</text></a><a href="../proc/is_intrinsic.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="100.3" y="-179.6" width="75.1" height="21.6"/><text x="137.8" y="-164.1">is_intrinsic</text></a><path d="M43.4,-100.4C56,-113.2 77.7,-134 98.8,-148.8 101.2,-150.5 103.8,-152.1 106.4,-153.7"/><polygon fill="#8a93a5" points="104.8,-155.6 112.1,-156.9 107.2,-151.3"/><a href="../proc/ends_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="101.4" y="-139.6" width="72.9" height="21.6"/><text x="137.8" y="-124.1">ends_with</text></a><path d="M63.2,-100.6C74.6,-105 87.7,-110 99.7,-114.6"/><polygon fill="#8a93a5" points="98.5,-116.8 105.9,-117 100.3,-112.2"/><a href="../proc/chain_start.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="98.8" y="-99.6" width="78" height="21.6"/><text x="137.8" y="-84.1">chain_start</text></a><path d="M63.7,-88.8C72,-88.8 81.1,-88.8 90.1,-88.8"/><polygon fill="#8a93a5" points="90,-91.3 97,-88.8 90,-86.4"/><a href="https://jacobwilliams.github.io/fformat/type/statement_view_t.html#boundprocedure-kind_of" fill="white" stroke="none"><rect fill="#646d7e" stroke="none" rx="7.2" x="212.8" y="-79.6" width="171.9" height="21.6"/><text x="356.5" y="-64.1" fill="white">kind_of</text></a><a href="https://jacobwilliams.github.io/fformat/type/statement_view_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M220,-79.6H328.4V-58H220A7.2,7.2 0 0 1 212.8,-65.2V-72.4A7.2,7.2 0 0 1 220,-79.6Z"/><text x="270.6" y="-64.1" fill="white">statement_view_t</text></a><path d="M63.7,-77.3C74.7,-73.9 87.2,-70.5 98.8,-68.8 133,-63.8 170.8,-62.7 204.3,-63.2"/><polygon fill="#8a93a5" points="204.1,-65.6 211.1,-63.3 204.2,-60.7"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="110.8" y="-21.6" width="54" height="21.6"/><text x="137.8" y="-6.1">push</text></a><path d="M46.4,-77C59.6,-66 80.2,-49.3 98.8,-35.8 103.1,-32.7 107.7,-29.5 112.3,-26.5"/><polygon fill="#8a93a5" points="113.4,-28.7 117.9,-22.8 110.7,-24.6"/><path d="M177.3,-84C185.6,-82.9 194.7,-81.8 204.2,-80.6"/><polygon fill="#8a93a5" points="204.3,-83 211,-79.7 203.7,-78.2"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/statement_calls.html">statement_calls</a></li></ul>
+<div class="graph"><svg width="582pt" height="30pt"
+ viewBox="0 0 582 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_call.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="62.8" height="21.6"/><text x="31.4" y="-6.1">add_call</text></a><a href="../proc/statement_calls.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="98.8" y="-21.6" width="104.7" height="21.6"/><text x="151.2" y="-6.1">statement_calls</text></a><path d="M98.5,-10.8C89.6,-10.8 80.5,-10.8 72,-10.8"/><polygon fill="#8a93a5" points="72.2,-8.4 65.2,-10.8 72.2,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="239.5" y="-21.6" width="70.8" height="21.6"/><text x="274.9" y="-6.1">parse_file</text></a><path d="M239.4,-10.8C230.8,-10.8 221.3,-10.8 211.9,-10.8"/><polygon fill="#8a93a5" points="212.2,-8.4 205.2,-10.8 212.2,-13.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="346.3" y="-21.6" width="138" height="21.6"/><text x="415.3" y="-6.1">load_project_sources</text></a><path d="M345.9,-10.8C336.7,-10.8 327.5,-10.8 318.9,-10.8"/><polygon fill="#8a93a5" points="319.1,-8.4 312.1,-10.8 319.1,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="520.3" y="-21.6" width="54" height="21.6"/><text x="547.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M520,-10.8C511.9,-10.8 502.5,-10.8 492.8,-10.8"/><polygon fill="#8a93a5" points="493,-8.4 486,-10.8 493,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> add_call(v, j, e, associations)
+    <span class="k">type</span>(statement_view_t), <span class="k">intent</span>(in) :: v     <span class="d">!! the statement</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: j                    <span class="d">!! the last name</span>
+    <span class="k">type</span>(entity_t), <span class="k">intent</span>(inout) :: e          <span class="d">!! the entity it is in</span>
+    <span class="k">type</span>(association_t), <span class="k">intent</span>(in) :: associations(:)  <span class="d">!! the names in scope</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: chain
+    <span class="k">integer</span> :: k, depth, a, first
+    <span class="k">logical</span> :: start
+
+    <span class="k">if</span> (is_intrinsic(v%low(v%lo(j):v%hi(j)))) <span class="k">return</span>
+    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(e%more%calls)) <span class="k">allocate</span> (e%more%calls(<span class="n">0</span>))
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(e%more%calls)
+        <span class="k">if</span> (ends_with(e%more%calls(k)%s, v%low(v%lo(j):v%hi(j)))) <span class="k">then</span>
+            <span class="k">if</span> (e%more%calls(k)%s == v%low(v%lo(j):v%hi(j))) <span class="k">return</span>
+            a = <span class="k">len</span>(e%more%calls(k)%s) - (v%hi(j) - v%lo(j) + <span class="n">1</span>)
+            <span class="k">if</span> (e%more%calls(k)%s(a:a) == <span class="s">'%'</span>) <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+
+    first = chain_start(v, j)
+    chain = <span class="s">''</span>
+    start = <span class="k">.true.</span>
+    depth = v%depth(first)
+    <span class="k">do</span> k = first, j
+        <span class="k">if</span> (v%depth(k) /= depth <span class="k">.or.</span> v%kind_of(k) /= TK_NAME) <span class="k">cycle</span>
+        <span class="k">if</span> (start) <span class="k">then</span>
+            start = <span class="k">.false.</span>
+            chain = v%low(v%lo(k):v%hi(k))
+            <span class="k">do</span> a = <span class="k">size</span>(associations), <span class="n">1</span>, -<span class="n">1</span>
+                <span class="k">if</span> (associations(a)%name == chain) <span class="k">then</span>
+                    chain = associations(a)%chain
+                    <span class="k">exit</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">do</span>
+        <span class="k">else</span>
+            chain = chain//<span class="s">'%'</span>//v%low(v%lo(k):v%hi(k))
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> push(e%more%calls, chain)
+<span class="k">end</span> <span class="k">subroutine</span> add_call</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

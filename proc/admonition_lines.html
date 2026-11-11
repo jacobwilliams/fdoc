@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>admonition_lines &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>admonition_lines<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> admonition_lines(<span class="intent attr-inout" title="intent(inout)">lines</span>)</div>
+<div class="doc">
+<p>Turn <code>@note</code> blocks into a line <code>@note Type</code> followed by indented lines, ending at <code>@endnote</code>, a
+blank line, another admonition, or the end of the text.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-lines"><td class="name">lines</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the lines</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/admonition_start.html">admonition_start</a></li><li><a href="../proc/push.html">push</a></li></ul>
+<div class="graph"><svg width="375pt" height="90pt"
+ viewBox="0 0 375 90" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 85.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/admonition_lines.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="112" height="21.6"/><text x="56" y="-26.1">admonition_lines</text></a><a href="../proc/admonition_start.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="148" y="-61.6" width="110.5" height="21.6"/><text x="203.2" y="-46.1">admonition_start</text></a><path d="M112.7,-38.5C121.4,-39.7 130.5,-40.9 139.4,-42.1"/><polygon fill="#8a93a5" points="139.1,-44.6 146.3,-43.1 139.7,-39.7"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="176.2" y="-21.6" width="54" height="21.6"/><text x="203.2" y="-6.1">push</text></a><path d="M112.7,-23.1C131.2,-20.6 151.3,-17.8 167.8,-15.5"/><polygon fill="#8a93a5" points="167.9,-18 174.5,-14.6 167.2,-13.1"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="294.5" y="-81.6" width="72.9" height="21.6"/><text x="330.9" y="-66.1">lowercase</text></a><path d="M258.6,-59.5C267.8,-60.9 277.2,-62.4 286,-63.8"/><polygon fill="#8a93a5" points="285.5,-66.2 292.8,-64.9 286.3,-61.4"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="303.9" y="-41.6" width="54" height="21.6"/><text x="330.9" y="-26.1">strip</text></a><path d="M258.6,-42.1C271.1,-40.2 284,-38.1 295.4,-36.3"/><polygon fill="#8a93a5" points="295.7,-38.7 302.3,-35.2 295,-33.9"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/markdown_to_html.html">markdown_to_html</a></li></ul>
+<div class="graph"><svg width="639pt" height="130pt"
+ viewBox="0 0 639 130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 125.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/admonition_lines.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="4.7" y="-121.6" width="112" height="21.6"/><text x="60.7" y="-106.1">admonition_lines</text></a><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="157.3" y="-81.6" width="124.2" height="21.6"/><text x="219.5" y="-66.1">markdown_to_html</text></a><path d="M174.4,-82C156.2,-86.7 135,-92.1 115.9,-97"/><polygon fill="#8a93a5" points="115.5,-94.5 109.4,-98.6 116.7,-99.3"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="0" y="-81.6" width="121.3" height="21.6"/><text x="60.7" y="-66.1">stash_html_blocks</text></a><path d="M148.4,-70.8C142.3,-70.8 136.1,-70.8 130,-70.8"/><polygon fill="#8a93a5" points="148.4,-73.3 155.4,-70.8 148.4,-68.4"/><polygon fill="#8a93a5" points="130.2,-68.4 123.2,-70.8 130.2,-73.3"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="4.3" y="-41.6" width="112.7" height="21.6"/><text x="60.7" y="-26.1">render_footnotes</text></a><path d="M166.1,-57.5C149.3,-53.2 130.6,-48.4 113.8,-44.1"/><polygon fill="#8a93a5" points="165.5,-59.8 172.9,-59.2 166.7,-55.1"/><polygon fill="#8a93a5" points="114.6,-41.8 107.2,-42.4 113.3,-46.5"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="317.6" y="-101.6" width="97.5" height="21.6"/><text x="366.3" y="-86.1">markdown_list</text></a><path d="M317.1,-84.1C308.4,-82.9 299.3,-81.7 290.2,-80.4"/><polygon fill="#8a93a5" points="290.6,-78 283.4,-79.5 290,-82.9"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="326.2" y="-61.6" width="80.2" height="21.6"/><text x="366.3" y="-46.1">render_text</text></a><path d="M326.1,-56.2C315,-57.7 302.5,-59.5 290.1,-61.2"/><polygon fill="#8a93a5" points="290.1,-58.7 283.5,-62.1 290.8,-63.6"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="469.2" y="-101.6" width="54" height="21.6"/><text x="496.2" y="-86.1">run</text></a><path d="M468.7,-90.8C455.6,-90.8 439.3,-90.8 423.6,-90.8"/><polygon fill="#8a93a5" points="424,-88.4 417,-90.8 424,-93.3"/><path d="M468.7,-82.5C452,-77.3 430.2,-70.5 411,-64.5"/><polygon fill="#8a93a5" points="411.8,-62.2 404.4,-62.4 410.4,-66.8"/><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="451.1" y="-61.6" width="90.3" height="21.6"/><text x="496.2" y="-46.1">render_entity</text></a><path d="M450.8,-50.8C439.2,-50.8 426.6,-50.8 414.9,-50.8"/><polygon fill="#8a93a5" points="415,-48.4 408,-50.8 415,-53.3"/><a href="../proc/read_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="457.9" y="-21.6" width="76.6" height="21.6"/><text x="496.2" y="-6.1">read_page</text></a><path d="M459.2,-22C444.3,-26.7 426.7,-32.2 411,-37.1"/><polygon fill="#8a93a5" points="410.4,-34.8 404.4,-39.2 411.9,-39.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="577.3" y="-61.6" width="54" height="21.6"/><text x="604.3" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.1,-50.8C568.8,-50.8 559.4,-50.8 550,-50.8"/><polygon fill="#8a93a5" points="550.2,-48.4 543.2,-50.8 550.2,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="577.3" y="-21.6" width="54" height="21.6"/><text x="604.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.1,-10.8C566.8,-10.8 554.7,-10.8 543.1,-10.8"/><polygon fill="#8a93a5" points="543.3,-8.4 536.3,-10.8 543.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> admonition_lines(lines)
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span>, <span class="k">intent</span>(inout) :: lines(:)  <span class="d">!! the lines</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: out(:)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: <span class="k">kind</span>, rest, end_kind, end_rest
+    <span class="k">integer</span> :: k, j, stop_at, blank
+    <span class="k">logical</span> :: explicit
+
+    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">any</span>([(<span class="k">index</span>(lines(k)%s, <span class="s">'@'</span>) &gt; <span class="n">0</span>, k=<span class="n">1</span>, <span class="k">size</span>(lines))])) <span class="k">return</span>
+    <span class="k">allocate</span> (out(<span class="n">0</span>))
+    k = <span class="n">1</span>
+    <span class="k">do</span> <span class="k">while</span> (k &lt;= <span class="k">size</span>(lines))
+        <span class="k">call</span> admonition_start(lines(k)%s, <span class="s">'@'</span>, <span class="k">kind</span>, rest)
+        <span class="k">if</span> (<span class="k">len</span>(<span class="k">kind</span>) == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> push(out, lines(k)%s)
+            k = k + <span class="n">1</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="c">! the end: an end marker if there is one before the next admonition, or the first blank line</span>
+        stop_at = <span class="k">size</span>(lines)
+        blank = <span class="n">0</span>
+        explicit = <span class="k">.false.</span>
+        <span class="k">do</span> j = k + <span class="n">1</span>, <span class="k">size</span>(lines)
+            <span class="k">call</span> admonition_start(lines(j)%s, <span class="s">'@end'</span>, end_kind, end_rest)
+            <span class="k">if</span> (<span class="k">len</span>(end_kind) &gt; <span class="n">0</span>) <span class="k">then</span>
+                stop_at = j
+                explicit = <span class="k">.true.</span>
+                <span class="k">exit</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">call</span> admonition_start(lines(j)%s, <span class="s">'@'</span>, end_kind, end_rest)
+            <span class="k">if</span> (<span class="k">len</span>(end_kind) &gt; <span class="n">0</span>) <span class="k">then</span>
+                stop_at = j - <span class="n">1</span>
+                <span class="k">exit</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (<span class="k">len</span>(lines(j)%s) == <span class="n">0</span> <span class="k">.and.</span> blank == <span class="n">0</span>) blank = j
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (<span class="k">.not.</span> explicit <span class="k">.and.</span> blank &gt; <span class="n">0</span>) stop_at = blank - <span class="n">1</span>
+
+        <span class="k">call</span> push(out, <span class="s">''</span>)
+        <span class="k">call</span> push(out, <span class="s">'@note '</span>//<span class="k">achar</span>(<span class="k">iachar</span>(<span class="k">kind</span>(<span class="n">1</span>:<span class="n">1</span>)) - <span class="n">32</span>)//<span class="k">kind</span>(<span class="n">2</span>:))
+        <span class="k">if</span> (<span class="k">len</span>(rest) &gt; <span class="n">0</span>) <span class="k">call</span> push(out, <span class="s">'    '</span>//rest)
+        <span class="k">do</span> j = k + <span class="n">1</span>, stop_at
+            <span class="k">if</span> (explicit <span class="k">.and.</span> j == stop_at) <span class="k">exit</span>
+            <span class="k">if</span> (<span class="k">len</span>(lines(j)%s) == <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">call</span> push(out, <span class="s">''</span>)
+            <span class="k">else</span>
+                <span class="k">call</span> push(out, <span class="s">'    '</span>//lines(j)%s)
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> push(out, <span class="s">''</span>)
+        <span class="k">if</span> (explicit) <span class="k">then</span>
+            <span class="k">call</span> admonition_start(lines(stop_at)%s, <span class="s">'@end'</span>, end_kind, end_rest)
+            <span class="k">if</span> (<span class="k">len</span>(end_rest) &gt; <span class="n">0</span>) <span class="k">call</span> push(out, end_rest)
+        <span class="k">end</span> <span class="k">if</span>
+        k = stop_at + <span class="n">1</span>
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">call</span> <span class="k">move_alloc</span>(out, lines)
+<span class="k">end</span> <span class="k">subroutine</span> admonition_lines</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

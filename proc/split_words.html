@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>split_words &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">function</span>split_words</h1>
+<div class="sig">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>) <span class="k">function</span> split_words(<span class="intent attr-in" title="intent(in)">text</span>) <span class="k">result</span>(words)</div>
+<div class="doc">
+<p>The blank-separated words of <code>text</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-words"><td class="name">words</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push.html">push</a></li></ul>
+<div class="graph"><svg width="177pt" height="30pt"
+ viewBox="0 0 177 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/split_words.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="79.4" height="21.6"/><text x="39.7" y="-6.1">split_words</text></a><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="115.4" y="-21.6" width="54" height="21.6"/><text x="142.4" y="-6.1">push</text></a><path d="M80.2,-10.8C89,-10.8 98.2,-10.8 106.8,-10.8"/><polygon fill="#8a93a5" points="106.5,-13.3 113.5,-10.8 106.5,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/attribute_list.html">attribute_list</a></li><li><a href="../proc/doxygen_params.html">doxygen_params</a></li><li><a href="../proc/normal_id.html">normal_id</a></li><li><a href="../proc/render_entity.html">render_entity</a></li><li><a href="../proc/set_map.html">set_map</a></li></ul>
+<div class="graph"><svg width="668pt" height="430pt"
+ viewBox="0 0 668 430" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 425.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/split_words.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-201.6" width="79.4" height="21.6"/><text x="39.7" y="-186.1">split_words</text></a><a href="../proc/render_entity.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127.3" y="-366.6" width="90.3" height="21.6"/><text x="172.5" y="-351.1">render_entity</text></a><path d="M151.8,-344.6C140.3,-337.4 126,-327.2 115.4,-315.8 85.3,-283.1 61.3,-236.3 49.2,-210.2"/><polygon fill="#8a93a5" points="51.5,-209.3 46.3,-203.9 47,-211.3"/><a href="../proc/normal_id.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="136.7" y="-306.6" width="71.5" height="21.6"/><text x="172.5" y="-291.1">normal_id</text></a><path d="M157.5,-284.6C134.5,-266.1 88.7,-229.4 61.8,-207.7"/><polygon fill="#8a93a5" points="63.6,-206 56.6,-203.5 60.5,-209.8"/><a href="../proc/attribute_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="130.2" y="-201.6" width="84.5" height="21.6"/><text x="172.5" y="-186.1">attribute_list</text></a><path d="M129.8,-190.8C116.6,-190.8 102,-190.8 88.5,-190.8"/><polygon fill="#8a93a5" points="88.8,-188.4 81.8,-190.8 88.8,-193.3"/><a href="../proc/doxygen_params.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="115.4" y="-156.6" width="114.1" height="21.6"/><text x="172.5" y="-141.1">doxygen_params</text></a><path d="M138.8,-157C121.7,-162.9 100.7,-170.2 82.4,-176.5"/><polygon fill="#8a93a5" points="82,-174 76.2,-178.6 83.6,-178.6"/><a href="../proc/set_map.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140.4" y="-106.6" width="64.3" height="21.6"/><text x="172.5" y="-91.1">set_map</text></a><path d="M147.6,-107.1C137.4,-112.3 125.5,-118.8 115.4,-125.8 94.4,-140.3 72.6,-159.9 58,-173.8"/><polygon fill="#8a93a5" points="56.6,-171.7 53.3,-178.3 60,-175.2"/><a href="../proc/render_documentation.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="265.6" y="-416.6" width="144.5" height="21.6"/><text x="337.8" y="-401.1">render_documentation</text></a><path d="M300.1,-394.6C276,-387.2 244.1,-377.4 218.4,-369.6"/><polygon fill="#8a93a5" points="219.2,-367.2 211.7,-367.5 217.7,-371.9"/><a href="../proc/collect_definitions.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="279.3" y="-366.6" width="117" height="21.6"/><text x="337.8" y="-351.1">collect_definitions</text></a><path d="M306.1,-344.5C279.4,-334.7 240.6,-320.5 211.9,-309.9"/><polygon fill="#8a93a5" points="212.9,-307.7 205.5,-307.6 211.2,-312.3"/><a href="../proc/find_reference.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="289" y="-306.6" width="97.5" height="21.6"/><text x="337.8" y="-291.1">find_reference</text></a><path d="M288.7,-295.8C265.9,-295.8 238.9,-295.8 216.8,-295.8"/><polygon fill="#8a93a5" points="217.1,-293.4 210.1,-295.8 217.1,-298.3"/><a href="../proc/paragraph.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="301" y="-221.6" width="73.7" height="21.6"/><text x="337.8" y="-206.1">paragraph</text></a><path d="M300.6,-206.4C277.8,-203.6 248.3,-200 223.4,-196.9"/><polygon fill="#8a93a5" points="223.9,-194.5 216.6,-196.1 223.3,-199.4"/><a href="../proc/render_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="293.7" y="-181.6" width="88.1" height="21.6"/><text x="337.8" y="-166.1">render_node</text></a><path d="M293.5,-176.1C271.9,-178.7 245.8,-181.9 223.4,-184.7"/><polygon fill="#8a93a5" points="223.2,-182.2 216.6,-185.5 223.8,-187.1"/><a href="../proc/attach_arguments.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="278.6" y="-141.6" width="118.5" height="21.6"/><text x="337.8" y="-126.1">attach_arguments</text></a><path d="M278.3,-136.2C265.3,-137.4 251.4,-138.6 238.1,-139.9"/><polygon fill="#8a93a5" points="238.2,-137.4 231.4,-140.5 238.6,-142.3"/><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="300.6" y="-81.6" width="74.4" height="21.6"/><text x="337.8" y="-66.1">set_option</text></a><path d="M300.1,-76.4C274.4,-80.4 239.8,-85.6 213.4,-89.7"/><polygon fill="#8a93a5" points="213.1,-87.3 206.6,-90.7 213.8,-92.1"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="481.2" y="-421.6" width="54" height="21.6"/><text x="508.2" y="-406.1">run</text></a><path d="M480.8,-410C464,-409.5 441.1,-408.8 418.6,-408.2"/><polygon fill="#8a93a5" points="418.9,-405.7 411.8,-408 418.8,-410.6"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="446" y="-381.6" width="124.2" height="21.6"/><text x="508.2" y="-366.1">markdown_to_html</text></a><path d="M445.9,-365.3C432.6,-364.2 418.4,-362.9 404.9,-361.7"/><polygon fill="#8a93a5" points="405.3,-359.3 398.2,-361.1 404.9,-364.1"/><a href="../proc/inline_bracket.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="460.8" y="-341.6" width="94.6" height="21.6"/><text x="508.2" y="-326.1">inline_bracket</text></a><path d="M460.7,-321.1C440.4,-316.9 416.5,-311.9 395.2,-307.5"/><polygon fill="#8a93a5" points="395.7,-305.1 388.3,-306.1 394.7,-309.9"/><a href="../proc/inline_image.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="464.5" y="-301.6" width="87.4" height="21.6"/><text x="508.2" y="-286.1">inline_image</text></a><path d="M464.2,-292.1C443.3,-292.7 417.9,-293.5 395.4,-294.1"/><polygon fill="#8a93a5" points="395.4,-291.7 388.5,-294.3 395.6,-296.6"/><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="465.9" y="-261.6" width="84.5" height="21.6"/><text x="508.2" y="-246.1">parse_block</text></a><path d="M465.5,-240.9C440.5,-235 408.6,-227.4 383.1,-221.3"/><polygon fill="#8a93a5" points="383.9,-219 376.6,-219.8 382.8,-223.8"/><a href="../proc/definition_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="456.1" y="-221.6" width="104" height="21.6"/><text x="508.2" y="-206.1">definition_block</text></a><path d="M455.7,-210.8C432.6,-210.8 405.5,-210.8 383.3,-210.8"/><polygon fill="#8a93a5" points="383.5,-208.4 376.5,-210.8 383.5,-213.3"/><a href="../proc/render_children.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="455.8" y="-181.6" width="104.7" height="21.6"/><text x="508.2" y="-166.1">render_children</text></a><path d="M455.7,-170.8C435.1,-170.8 411.3,-170.8 390.6,-170.8"/><polygon fill="#8a93a5" points="390.8,-168.4 383.8,-170.8 390.8,-173.3"/><a href="../proc/close_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="471.7" y="-141.6" width="72.9" height="21.6"/><text x="508.2" y="-126.1">close_unit</text></a><path d="M471.5,-130.8C452.4,-130.8 428.2,-130.8 405.8,-130.8"/><polygon fill="#8a93a5" points="405.8,-128.4 398.8,-130.8 405.8,-133.3"/><a href="../proc/apply_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="469.2" y="-101.6" width="78" height="21.6"/><text x="508.2" y="-86.1">apply_args</text></a><path d="M469,-86.3C443.7,-83.3 410.4,-79.3 383.8,-76.1"/><polygon fill="#8a93a5" points="384.1,-73.7 376.9,-75.3 383.6,-78.6"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="465.5" y="-61.6" width="85.2" height="21.6"/><text x="508.2" y="-46.1">load_project</text></a><path d="M465.1,-55.8C440.3,-58.7 409,-62.5 383.8,-65.5"/><polygon fill="#8a93a5" points="383.6,-63 377,-66.3 384.2,-67.9"/><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="467.7" y="-21.6" width="80.9" height="21.6"/><text x="508.2" y="-6.1">apply_table</text></a><path d="M471.8,-22.1C463.4,-24.9 454.4,-27.9 446,-30.8 422.5,-39 396.3,-48.8 375.7,-56.6"/><polygon fill="#8a93a5" points="374.9,-54.3 369.2,-59.1 376.6,-58.9"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="606.3" y="-381.6" width="54" height="21.6"/><text x="633.3" y="-366.1" fill="white">...</text><path stroke-dasharray="5,2" d="M605.9,-370.8C597.8,-370.8 588.6,-370.8 579.1,-370.8"/><polygon fill="#8a93a5" points="579.2,-368.4 572.2,-370.8 579.2,-373.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="606.3" y="-341.6" width="54" height="21.6"/><text x="633.3" y="-326.1" fill="white">...</text><path stroke-dasharray="5,2" d="M605.9,-330.8C593.7,-330.8 578.8,-330.8 564.3,-330.8"/><polygon fill="#8a93a5" points="564.4,-328.4 557.4,-330.8 564.4,-333.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="606.3" y="-301.6" width="54" height="21.6"/><text x="633.3" y="-286.1" fill="white">...</text><path stroke-dasharray="5,2" d="M605.9,-290.8C592.5,-290.8 575.8,-290.8 560.1,-290.8"/><polygon fill="#8a93a5" points="560.5,-288.4 553.5,-290.8 560.5,-293.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="606.3" y="-261.6" width="54" height="21.6"/><text x="633.3" y="-246.1" fill="white">...</text><path stroke-dasharray="5,2" d="M605.9,-250.8C592.1,-250.8 574.9,-250.8 558.8,-250.8"/><polygon fill="#8a93a5" points="559.1,-248.4 552.1,-250.8 559.1,-253.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="606.3" y="-141.6" width="54" height="21.6"/><text x="633.3" y="-126.1" fill="white">...</text><path stroke-dasharray="5,2" d="M605.9,-130.8C590.6,-130.8 570.9,-130.8 553.3,-130.8"/><polygon fill="#8a93a5" points="553.4,-128.4 546.4,-130.8 553.4,-133.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="606.3" y="-21.6" width="54" height="21.6"/><text x="633.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M605.9,-10.8C591.8,-10.8 574,-10.8 557.6,-10.8"/><polygon fill="#8a93a5" points="557.6,-8.4 550.6,-10.8 557.6,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">function</span> split_words(text) <span class="k">result</span>(words)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: words(:)
+    <span class="k">integer</span> :: i, j
+
+    <span class="k">allocate</span> (words(<span class="n">0</span>))
+    i = <span class="n">1</span>
+    <span class="k">do</span>
+        j = <span class="k">verify</span>(text(i:), WHITESPACE)
+        <span class="k">if</span> (j == <span class="n">0</span>) <span class="k">exit</span>
+        i = i + j - <span class="n">1</span>
+        j = <span class="k">scan</span>(text(i:), WHITESPACE)
+        <span class="k">if</span> (j == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">call</span> push(words, text(i:))
+            <span class="k">exit</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> push(words, text(i:i + j - <span class="n">2</span>))
+        i = i + j
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">function</span> split_words</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

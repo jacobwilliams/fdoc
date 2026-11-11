@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>set_map &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">subroutine</span>set_map<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> set_map(<span class="intent attr-inout" title="intent(inout)">s</span>, <span class="intent attr-in" title="intent(in)">key</span>, <span class="intent attr-in" title="intent(in)">values</span>, <span class="intent attr-out" title="intent(out)">stat</span>, <span class="intent attr-out" title="intent(out)">errmsg</span>)</div>
+<div class="doc">
+<p>Set a map option from strings of the form <code>key&lt;sep&gt;value</code>. Empty strings are ignored.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-key"><td class="name">key</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the option</p></td></tr>
+<tr id="variable-values"><td class="name">values</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>its values</p></td></tr>
+<tr id="variable-stat"><td class="name">stat</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>nonzero on failure</p></td></tr>
+<tr id="variable-errmsg"><td class="name">errmsg</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>what is wrong</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/split_words.html">split_words</a></li><li><a href="../proc/add_entry.html">add_entry</a></li><li><a href="../proc/strip.html">strip</a></li></ul>
+<div class="graph"><svg width="278pt" height="110pt"
+ viewBox="0 0 278 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/set_map.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="64.3" height="21.6"/><text x="32.1" y="-46.1">set_map</text></a><a href="../proc/split_words.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="100.3" y="-101.6" width="79.4" height="21.6"/><text x="140" y="-86.1">split_words</text></a><path d="M64.3,-62.6C75.9,-67 89.2,-72 101.3,-76.6"/><polygon fill="#8a93a5" points="100.3,-78.8 107.7,-79 102,-74.2"/><a href="../proc/add_entry.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="103.9" y="-61.6" width="72.2" height="21.6"/><text x="140" y="-46.1">add_entry</text></a><path d="M65.2,-50.8C74.7,-50.8 85.3,-50.8 95.4,-50.8"/><polygon fill="#8a93a5" points="95.2,-53.3 102.2,-50.8 95.2,-48.4"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="113" y="-21.6" width="54" height="21.6"/><text x="140" y="-6.1">strip</text></a><path d="M64.3,-39C77,-34.2 91.8,-28.6 104.8,-23.7"/><polygon fill="#8a93a5" points="105.6,-26 111.2,-21.3 103.8,-21.5"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="215.7" y="-101.6" width="54" height="21.6"/><text x="242.7" y="-86.1">push</text></a><path d="M179.9,-90.8C188.8,-90.8 198.2,-90.8 206.9,-90.8"/><polygon fill="#8a93a5" points="206.8,-93.3 213.8,-90.8 206.8,-88.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/set_option.html">set_option</a></li></ul>
+<div class="graph"><svg width="460pt" height="130pt"
+ viewBox="0 0 460 130" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 125.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/set_map.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="64.3" height="21.6"/><text x="32.1" y="-66.1">set_map</text></a><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="100.3" y="-81.6" width="74.4" height="21.6"/><text x="137.5" y="-66.1">set_option</text></a><path d="M100,-70.8C91.4,-70.8 82.1,-70.8 73.4,-70.8"/><polygon fill="#8a93a5" points="73.6,-68.4 66.6,-70.8 73.6,-73.3"/><a href="../proc/apply_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="214.3" y="-121.6" width="78" height="21.6"/><text x="253.3" y="-106.1">apply_args</text></a><path d="M220.3,-99.6C207.2,-95 191.9,-89.6 178.1,-84.7"/><polygon fill="#8a93a5" points="179.1,-82.5 171.6,-82.5 177.4,-87.1"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="210.7" y="-81.6" width="85.2" height="21.6"/><text x="253.3" y="-66.1">load_project</text></a><path d="M210.2,-70.8C201.5,-70.8 192.2,-70.8 183.4,-70.8"/><polygon fill="#8a93a5" points="183.6,-68.4 176.6,-70.8 183.6,-73.3"/><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="212.8" y="-41.6" width="80.9" height="21.6"/><text x="253.3" y="-26.1">apply_table</text></a><path d="M220.3,-42C207.2,-46.6 191.9,-52 178.1,-56.9"/><polygon fill="#8a93a5" points="177.4,-54.5 171.6,-59.1 179.1,-59.1"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="364.8" y="-101.6" width="54" height="21.6"/><text x="391.8" y="-86.1">run</text></a><path d="M364.5,-94.7C346.5,-97.3 322.2,-100.9 300.9,-104"/><polygon fill="#8a93a5" points="300.7,-101.5 294.2,-105 301.4,-106.4"/><path d="M364.5,-86.9C347.5,-84.5 324.9,-81.1 304.6,-78.2"/><polygon fill="#8a93a5" points="305.1,-75.8 297.9,-77.2 304.4,-80.6"/><a href="../proc/load_fpm_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="331.9" y="-61.6" width="119.9" height="21.6"/><text x="391.8" y="-46.1">load_fpm_settings</text></a><path d="M331.7,-42.1C321.9,-40.7 311.8,-39.2 302.3,-37.8"/><polygon fill="#8a93a5" points="302.9,-35.5 295.7,-36.9 302.2,-40.3"/><a href="../proc/apply_toml_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="333.7" y="-21.6" width="116.3" height="21.6"/><text x="391.8" y="-6.1">apply_toml_string</text></a><path d="M333.3,-19.2C322.9,-20.7 312.2,-22.3 302.2,-23.8"/><polygon fill="#8a93a5" points="302,-21.3 295.4,-24.8 302.7,-26.2"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> set_map(s, key, values, <span class="k">stat</span>, errmsg)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s                <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: key                 <span class="d">!! the option</span>
+    <span class="k">type</span>(string_t), <span class="k">intent</span>(in) :: values(:)             <span class="d">!! its values</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">stat</span>                        <span class="d">!! nonzero on failure</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: errmsg  <span class="d">!! what is wrong</span>
+    <span class="k">type</span>(map_entry_t), <span class="k">allocatable</span> :: entries(:)
+    <span class="k">type</span>(file_type_t), <span class="k">allocatable</span> :: files(:)
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: words(:)
+    <span class="k">character</span> :: sep
+    <span class="k">integer</span> :: k, at
+
+    <span class="k">stat</span> = <span class="n">0</span>
+    <span class="k">if</span> (key == <span class="s">'extra_filetypes'</span>) <span class="k">then</span>
+        <span class="k">allocate</span> (files(<span class="n">0</span>))
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(values)
+            <span class="k">if</span> (<span class="k">len</span>(values(k)%s) == <span class="n">0</span>) <span class="k">cycle</span>
+            words = split_words(values(k)%s)
+            <span class="k">if</span> (<span class="k">size</span>(words) &lt; <span class="n">2</span> <span class="k">.or.</span> <span class="k">size</span>(words) &gt; <span class="n">3</span>) <span class="k">then</span>
+                <span class="k">stat</span> = <span class="n">1</span>
+                errmsg = <span class="s">"Unexpected format for 'extra_filetype': expected 'extension comment [lexer]', got "</span>//values(k)%s
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+            files = [files, file_type_t(words(<span class="n">1</span>)%s, words(<span class="n">2</span>)%s)]
+            <span class="k">if</span> (<span class="k">size</span>(words) == <span class="n">3</span>) files(<span class="k">size</span>(files))%lexer = words(<span class="n">3</span>)%s
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> <span class="k">move_alloc</span>(files, s%extra_filetypes)
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+
+    sep = <span class="k">merge</span>(<span class="s">':'</span>, <span class="s">'='</span>, key == <span class="s">'extra_mods'</span>)
+    <span class="k">allocate</span> (entries(<span class="n">0</span>))
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(values)
+        <span class="k">if</span> (<span class="k">len</span>(values(k)%s) == <span class="n">0</span>) <span class="k">cycle</span>
+        at = <span class="k">index</span>(values(k)%s, sep)
+        <span class="k">if</span> (at == <span class="n">0</span>) <span class="k">then</span>
+            <span class="k">stat</span> = <span class="n">1</span>
+            errmsg = <span class="s">"Error setting option '"</span>//key//<span class="s">"': expected '"</span>//sep//<span class="s">"' in '"</span>//values(k)%s//<span class="s">"'"</span>
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> add_entry(entries, strip(values(k)%s(:at - <span class="n">1</span>)), strip(values(k)%s(at + <span class="n">1</span>:)))
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">select</span> <span class="k">case</span> (key)
+    <span class="k">case</span> (<span class="s">'alias'</span>); <span class="k">call</span> <span class="k">move_alloc</span>(entries, s%alias)
+    <span class="k">case</span> (<span class="s">'external'</span>); <span class="k">call</span> <span class="k">move_alloc</span>(entries, s%<span class="k">external</span>)
+    <span class="k">case</span> (<span class="s">'extra_mods'</span>); <span class="k">call</span> <span class="k">move_alloc</span>(entries, s%extra_mods)
+    <span class="k">end</span> <span class="k">select</span>
+<span class="k">end</span> <span class="k">subroutine</span> set_map</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

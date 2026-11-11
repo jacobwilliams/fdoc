@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_shell &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a class="here" href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Functions</h4><ul><li><a href="../proc/is_windows.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>is_windows</a></li><li><a href="../proc/quoted.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>quoted</a></li><li><a href="../proc/quoted_path.html"><span class="ico ico-f" title="function" aria-hidden="true">F</span>quoted_path</a></li></ul>
+<h4>Subroutines</h4><ul><li><a href="../proc/copy_file.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>copy_file</a></li><li><a href="../proc/copy_path.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>copy_path</a></li><li><a href="../proc/make_directory.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>make_directory</a></li><li><a href="../proc/remove_directory.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>remove_directory</a></li><li><a href="../proc/run_command.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>run_command</a></li><li><a href="../proc/temporary_directory.html"><span class="ico ico-s" title="subroutine" aria-hidden="true">S</span>temporary_directory</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><ul data-list="modules"></ul>
+<h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_shell.f90.html">fdoc_shell.f90</a></div>
+<h1><span class="kind">module</span>fdoc_shell</h1>
+<div class="doc">
+<p>What standard Fortran cannot do with the file system, through the shell of the platform: <code>cmd.exe</code> on
+Windows, and <code>sh</code> elsewhere. All commands that differ between them are here. The tests call these
+from several threads, so they do not return deferred-length strings (see <code>example/slen_race.f90</code>).</p>
+</div>
+<h2 id="uses">Uses</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/module/ffmt_fs.html">ffmt_fs</a></li></ul>
+<div class="graph"><svg width="171pt" height="30pt"
+ viewBox="0 0 171 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_shell.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="90" y="-21.6" width="72.9" height="21.6"/><text x="126.5" y="-6.1">fdoc_shell</text></a><a href="https://jacobwilliams.github.io/fformat/module/ffmt_fs.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="0" y="-21.6" width="54" height="21.6"/><text x="27" y="-6.1">ffmt_fs</text></a><path d="M89.2,-10.8C80.5,-10.8 71.2,-10.8 62.6,-10.8"/><polygon fill="#8a93a5" points="62.8,-8.4 55.8,-10.8 62.8,-13.3"/></g>
+</svg>
+</div>
+<h2 id="used-by">Used by</h2>
+<ul class="chips"><li><a href="../module/fdoc_graphs.html">fdoc_graphs</a></li><li><a href="../module/fdoc_input.html">fdoc_input</a></li><li><a href="../module/fdoc_output.html">fdoc_output</a></li><li><a href="../module/fdoc_project.html">fdoc_project</a></li><li><a href="../module/fdoc_site.html">fdoc_site</a></li></ul>
+<div class="graph"><svg width="745pt" height="225pt"
+ viewBox="0 0 745 225" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 220.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../module/fdoc_shell.html" fill="white" stroke="none"><rect fill="#3657c9" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-137.6" width="72.9" height="21.6"/><text x="36.5" y="-122.1">fdoc_shell</text></a><a href="../module/fdoc_graphs.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="340.6" y="-176.6" width="86" height="21.6"/><text x="383.5" y="-161.1">fdoc_graphs</text></a><path d="M340.2,-165.8C317.3,-165.8 288.6,-165.8 262.9,-165.8"/><a href="../module/fdoc_project.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="219.3" y="-118.6" width="85.2" height="21.6"/><text x="261.9" y="-103.1">fdoc_project</text></a><path d="M359.5,-154.6C340.7,-145.5 314,-132.6 293.5,-122.6"/><polygon fill="#8a93a5" points="294.7,-120.5 287.3,-119.6 292.5,-124.9"/><a href="../module/fdoc_input.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="108.9" y="-137.6" width="74.4" height="21.6"/><text x="146.1" y="-122.1">fdoc_input</text></a><path d="M108.7,-126.8C100.2,-126.8 91,-126.8 82.2,-126.8"/><polygon fill="#8a93a5" points="82.4,-124.4 75.4,-126.8 82.4,-129.3"/><a href="../module/fdoc_output.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="342.4" y="-216.6" width="82.3" height="21.6"/><text x="383.5" y="-201.1">fdoc_output</text></a><path d="M355.6,-194.6C326.3,-182.7 281.2,-165.8 262.9,-165.8"/><path d="M355.6,-194.6C350.4,-192 345.2,-189.1 340.6,-185.8 333.7,-181 300.1,-146.4 279.4,-124.9"/><polygon fill="#8a93a5" points="281.3,-123.4 274.7,-120.1 277.8,-126.8"/><path d="M219.1,-104.3C188.5,-102.6 145.9,-101.7 108.9,-106.8 99.5,-108.1 89.5,-110.3 80.1,-112.8"/><polygon fill="#8a93a5" points="79.5,-110.4 73.4,-114.7 80.8,-115.2"/><path d="M218.9,-114.8C210.2,-116.3 200.9,-117.8 192.1,-119.3"/><polygon fill="#8a93a5" points="191.8,-116.9 185.3,-120.4 192.6,-121.7"/><a href="../module/fdoc_site.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="580.1" y="-118.6" width="66.4" height="21.6"/><text x="613.3" y="-103.1">fdoc_site</text></a><path d="M382.5,-126.8C326.7,-128.9 318.8,-165.9 262.9,-165.8"/><path d="M260.9,-165.8C192.9,-165.7 175.7,-160.2 108.9,-146.8 100,-145 90.6,-142.7 81.7,-140.3"/><polygon fill="#8a93a5" points="82.4,-137.9 75,-138.4 81.1,-142.7"/><path d="M502.3,-127.8C473.7,-132.6 442.5,-142.9 419.4,-151.6"/><polygon fill="#8a93a5" points="418.6,-149.3 413,-154 420.4,-153.8"/><path d="M579.8,-114.1C558.4,-118.2 529.7,-123.5 504.3,-127.8"/><path d="M502.3,-127.8C450.7,-136.5 436.8,-124.9 384.5,-126.8"/><path d="M382.5,-126.8C359.6,-127.6 334.5,-124.3 313.3,-120.2"/><polygon fill="#8a93a5" points="313.9,-117.8 306.5,-118.9 312.9,-122.7"/><a href="../module/fdoc_pages.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="462.5" y="-99.6" width="81.6" height="21.6"/><text x="503.3" y="-84.1">fdoc_pages</text></a><path d="M579.6,-102C571.2,-100.6 561.9,-98.9 552.8,-97.3"/><polygon fill="#8a93a5" points="553.4,-94.9 546,-96.1 552.5,-99.8"/><a href="../module/fdoc.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="682.6" y="-118.6" width="54" height="21.6"/><text x="709.6" y="-103.1">fdoc</text></a><path d="M682.4,-116.4C671.3,-120 658.3,-124.1 646.6,-127.8 571.5,-151.1 483.8,-176.9 431.4,-192.2"/><polygon fill="#8a93a5" points="430.7,-189.8 424.7,-194.2 432.1,-194.5"/><path d="M612.3,-49.8C566.1,-36.9 552.2,-53.7 504.3,-49.8"/><path d="M502.3,-49.8C447.3,-45.4 437.9,3.2 384.5,-10.8"/><path d="M682.1,-107.8C673.8,-107.8 664.5,-107.8 655.5,-107.8"/><polygon fill="#8a93a5" points="655.5,-105.4 648.5,-107.8 655.5,-110.3"/><a href="../module/fdoc_docs.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="346.7" y="-60.6" width="73.7" height="21.6"/><text x="383.5" y="-45.1">fdoc_docs</text></a><path d="M502.3,-49.8C478.2,-47.9 451.2,-47.7 429.2,-48.1"/><polygon fill="#8a93a5" points="429.1,-45.7 422.2,-48.3 429.2,-50.6"/><a href="../module/fdoc_links.html" fill="white" stroke="none"><rect fill="#3657c9" rx="7.2" x="467.2" y="-21.6" width="72.2" height="21.6"/><text x="503.3" y="-6.1">fdoc_links</text></a><path d="M695.7,-96.5C678.5,-82.3 646.5,-58.8 614.3,-49.8"/><path d="M612.3,-49.8C587.6,-42.9 560.5,-33.1 539.6,-25.1"/><polygon fill="#8a93a5" points="540.7,-22.9 533.3,-22.6 539,-27.4"/><path d="M612.3,-49.8C597.2,-45.6 559.8,-61.3 533.3,-74"/><polygon fill="#8a93a5" points="532.4,-71.8 527.1,-77 534.5,-76.2"/><path d="M359.5,-61C340.7,-70.1 314,-83 293.5,-93"/><polygon fill="#8a93a5" points="292.5,-90.7 287.3,-96 294.7,-95.1"/><path d="M466.9,-6.2C443.2,-4.2 411.5,-3.7 384.5,-10.8"/><path d="M382.5,-10.8C362.7,-16 357.4,-18.1 340.6,-29.8 315.5,-47.2 291.5,-73.3 277,-90.4"/><polygon fill="#8a93a5" points="275.3,-88.6 272.7,-95.5 279,-91.7"/><path d="M462.2,-92C421.2,-95.2 357.4,-100.3 313.1,-103.8"/><polygon fill="#8a93a5" points="313,-101.4 306.3,-104.4 313.4,-106.3"/><path d="M468.2,-77.5C455.2,-73.2 440.1,-68.2 426.4,-63.7"/><polygon fill="#8a93a5" points="427.4,-61.4 420,-61.5 425.8,-66.1"/></g>
+</svg>
+</div>
+<h2 id="functions">Functions</h2>
+<div class="item" id="proc-is_windows"><h3><a href="../proc/is_windows.html">is_windows</a><span class="attr attr-private">private</span></h3>
+<div class="sig">logical <span class="k">function</span> is_windows()</div>
+<p>True on Windows, which sets the variable <code>OS</code> to this value.</p>
+</div>
+<div class="item" id="proc-quoted"><h3><a href="../proc/quoted.html">quoted</a></h3>
+<div class="sig">character(len=len(text)+2) <span class="k">function</span> quoted(<span class="intent attr-in" title="intent(in)">text</span>) <span class="k">result</span>(out)</div>
+<p><code>text</code> in quotes, as one argument of a command.</p>
+</div>
+<div class="item" id="proc-quoted_path"><h3><a href="../proc/quoted_path.html">quoted_path</a></h3>
+<div class="sig">character(len=len(path)+2) <span class="k">function</span> quoted_path(<span class="intent attr-in" title="intent(in)">path</span>) <span class="k">result</span>(out)</div>
+<p><code>path</code> in quotes, with the separator of the platform, as one argument of a command.</p>
+</div>
+<h2 id="subroutines">Subroutines</h2>
+<div class="item" id="proc-copy_file"><h3><a href="../proc/copy_file.html">copy_file</a></h3>
+<div class="sig"><span class="k">subroutine</span> copy_file(<span class="intent attr-in" title="intent(in)">from</span>, <span class="intent attr-in" title="intent(in)">to</span>, <span class="intent attr-out" title="intent(out)">stat</span>)</div>
+<p>Copy file <code>from</code> to <code>to</code>.</p>
+</div>
+<div class="item" id="proc-copy_path"><h3><a href="../proc/copy_path.html">copy_path</a></h3>
+<div class="sig"><span class="k">subroutine</span> copy_path(<span class="intent attr-in" title="intent(in)">from</span>, <span class="intent attr-in" title="intent(in)">to</span>, <span class="intent attr-out" title="intent(out)">stat</span>)</div>
+<p>Copy file or directory <code>from</code> to <code>to</code>, with what a directory holds.</p>
+</div>
+<div class="item" id="proc-make_directory"><h3><a href="../proc/make_directory.html">make_directory</a></h3>
+<div class="sig"><span class="k">subroutine</span> make_directory(<span class="intent attr-in" title="intent(in)">path</span>, <span class="intent attr-out" title="intent(out)">stat</span>)</div>
+<p>Create directory <code>path</code> with those above it, if it does not exist. It is not a failure if something
+else creates it first.</p>
+</div>
+<div class="item" id="proc-remove_directory"><h3><a href="../proc/remove_directory.html">remove_directory</a></h3>
+<div class="sig"><span class="k">subroutine</span> remove_directory(<span class="intent attr-in" title="intent(in)">path</span>)</div>
+<p>Delete directory <code>path</code> with what it holds, if it exists.</p>
+</div>
+<div class="item" id="proc-run_command"><h3><a href="../proc/run_command.html">run_command</a></h3>
+<div class="sig"><span class="k">subroutine</span> run_command(<span class="intent attr-in" title="intent(in)">command</span>, <span class="intent attr-out" title="intent(out)">stat</span>)</div>
+<p>Run <code>command</code> and wait for it. Without <code>cmdstat</code>, a program can stop with an error if the command
+is not found, which some shells report with status 127.</p>
+</div>
+<div class="item" id="proc-temporary_directory"><h3><a href="../proc/temporary_directory.html">temporary_directory</a></h3>
+<div class="sig"><span class="k">subroutine</span> temporary_directory(<span class="intent attr-out" title="intent(out)">path</span>)</div>
+<p>The directory for temporary files.</p>
+</div>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

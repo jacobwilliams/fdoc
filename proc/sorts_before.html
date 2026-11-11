@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sorts_before &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">function</span>sorts_before<span class="attr attr-private">private</span></h1>
+<div class="sig">logical <span class="k">function</span> sorts_before(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-in" title="intent(in)">a</span>, <span class="intent attr-in" title="intent(in)">b</span>)</div>
+<div class="doc">
+<p>True if <code>a</code> sorts before <code>b</code>, for the <code>sort</code> setting.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-a"><td class="name">a</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>one entity</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the other</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-sorts_before"><td class="name">sorts_before</td><td class="type">logical</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/starts_with.html">starts_with</a></li><li><a href="../proc/permission_rank.html">permission_rank</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li></ul>
+<div class="graph"><svg width="240pt" height="110pt"
+ viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/sorts_before.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="86.7" height="21.6"/><text x="43.3" y="-46.1">sorts_before</text></a><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="139.3" y="-101.6" width="76.5" height="21.6"/><text x="177.5" y="-86.1">starts_with</text></a><path d="M83.3,-62.6C98.3,-67.1 115.7,-72.4 131.3,-77.1"/><polygon fill="#8a93a5" points="130.4,-79.4 137.8,-79.1 131.8,-74.7"/><a href="../proc/permission_rank.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="122.7" y="-61.6" width="109.8" height="21.6"/><text x="177.5" y="-46.1">permission_rank</text></a><path d="M87.6,-50.8C96.1,-50.8 105.1,-50.8 114,-50.8"/><polygon fill="#8a93a5" points="114,-53.3 121,-50.8 114,-48.4"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="141.1" y="-21.6" width="72.9" height="21.6"/><text x="177.5" y="-6.1">lowercase</text></a><path d="M83.3,-39C99,-34.3 117.2,-28.8 133.3,-23.9"/><polygon fill="#8a93a5" points="133.6,-26.4 139.6,-22 132.2,-21.7"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/sort_ids.html">sort_ids</a></li></ul>
+<div class="graph"><svg width="556pt" height="110pt"
+ viewBox="0 0 556 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/sorts_before.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="86.7" height="21.6"/><text x="43.3" y="-46.1">sorts_before</text></a><a href="../proc/sort_ids.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="122.7" y="-61.6" width="59.9" height="21.6"/><text x="152.6" y="-46.1">sort_ids</text></a><path d="M122.3,-50.8C114,-50.8 104.8,-50.8 95.6,-50.8"/><polygon fill="#8a93a5" points="95.8,-48.4 88.8,-50.8 95.8,-53.3"/><a href="../proc/collect_lists.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="239.2" y="-101.6" width="80.9" height="21.6"/><text x="279.6" y="-86.1">collect_lists</text></a><path d="M243.5,-79.6C227.1,-74.3 207.6,-68.1 190.9,-62.7"/><polygon fill="#8a93a5" points="191.9,-60.5 184.5,-60.7 190.4,-65.1"/><a href="../proc/children_of.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="240.6" y="-61.6" width="78" height="21.6"/><text x="279.6" y="-46.1">children_of</text></a><path d="M240.4,-50.8C224.8,-50.8 206.8,-50.8 191.2,-50.8"/><polygon fill="#8a93a5" points="191.4,-48.4 184.4,-50.8 191.4,-53.3"/><a href="../proc/implemented_here.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="218.6" y="-21.6" width="122.1" height="21.6"/><text x="279.6" y="-6.1">implemented_here</text></a><path d="M243.5,-22C227.1,-27.3 207.6,-33.5 190.9,-38.9"/><polygon fill="#8a93a5" points="190.4,-36.5 184.5,-40.9 191.9,-41.1"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="382.8" y="-101.6" width="69.3" height="21.6"/><text x="417.5" y="-86.1">write_site</text></a><path d="M382.5,-90.8C366.2,-90.8 346.3,-90.8 328.4,-90.8"/><polygon fill="#8a93a5" points="328.9,-88.4 321.9,-90.8 328.9,-93.3"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="376.7" y="-41.6" width="81.6" height="21.6"/><text x="417.5" y="-26.1">entity_page</text></a><path d="M376.4,-36.7C361,-39 343.2,-41.6 327.2,-43.9"/><polygon fill="#8a93a5" points="327,-41.5 320.5,-44.9 327.7,-46.3"/><path d="M376.4,-24.9C367.8,-23.6 358.5,-22.3 349.2,-20.9"/><polygon fill="#8a93a5" points="349.8,-18.5 342.5,-19.9 349.1,-23.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="494.3" y="-101.6" width="54" height="21.6"/><text x="521.3" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M493.8,-90.8C483.7,-90.8 472,-90.8 460.9,-90.8"/><polygon fill="#8a93a5" points="461,-88.4 454,-90.8 461,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="494.3" y="-41.6" width="54" height="21.6"/><text x="521.3" y="-26.1" fill="white">...</text><path stroke-dasharray="5,2" d="M493.8,-30.8C485.6,-30.8 476.3,-30.8 467,-30.8"/><polygon fill="#8a93a5" points="467.2,-28.4 460.2,-30.8 467.2,-33.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">logical</span> <span class="k">function</span> sorts_before(site, a, b)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site    <span class="d">!! the site</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: a            <span class="d">!! one entity</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: b            <span class="d">!! the other</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: mode
+    <span class="k">integer</span> :: pa, pb
+
+    mode = site%s%sort
+    sorts_before = <span class="k">.false.</span>
+    <span class="k">if</span> (mode == <span class="s">'src'</span>) <span class="k">return</span>
+    <span class="k">associate</span> (x =&gt; site%p%list%box(a)%e, y =&gt; site%p%list%box(b)%e)
+        <span class="k">if</span> (starts_with(mode, <span class="s">'permission'</span>)) <span class="k">then</span>
+            pa = permission_rank(x)
+            pb = permission_rank(y)
+            <span class="k">if</span> (pa /= pb) <span class="k">then</span>
+                sorts_before = pa &lt; pb
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (mode == <span class="s">'permission'</span>) <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (starts_with(mode, <span class="s">'type'</span>)) <span class="k">then</span>
+            <span class="k">if</span> (<span class="k">allocated</span>(x%vartype) <span class="k">.and.</span> <span class="k">allocated</span>(y%vartype)) <span class="k">then</span>
+                <span class="k">if</span> (x%vartype /= y%vartype) <span class="k">then</span>
+                    sorts_before = <span class="k">llt</span>(x%vartype, y%vartype)
+                    <span class="k">return</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (mode == <span class="s">'type'</span>) <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        sorts_before = <span class="k">llt</span>(lowercase(x%name), lowercase(y%name))
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">function</span> sorts_before</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

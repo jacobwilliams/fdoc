@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>include_directive &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>include_directive<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> include_directive(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">param</span>, <span class="intent attr-in" title="intent(in)">path</span>)</div>
+<div class="doc">
+<p><code>#:include "file"</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-param"><td class="name">param</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>what follows the directive</p></td></tr>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the file holding the directive</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/fail.html">fail</a></li><li><a href="../proc/last_separator.html">last_separator</a></li><li><a href="../proc/parse_file.html">parse_file</a></li></ul>
+<div class="graph"><svg width="695pt" height="290pt"
+ viewBox="0 0 695 290" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 285.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/include_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-242.6" width="111.2" height="21.6"/><text x="55.6" y="-227.1">include_directive</text></a><a href="../proc/fail.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="331.8" y="-281.6" width="54" height="21.6"/><text x="358.8" y="-266.1">fail</text></a><path d="M104.4,-243.5C118.1,-246.6 133.2,-249.6 147.2,-251.8 208.7,-261.3 281,-266.6 322.9,-269"/><polygon fill="#8a93a5" points="322.7,-271.5 329.9,-269.4 323,-266.6"/><a href="../proc/last_separator.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="147.2" y="-242.6" width="96.8" height="21.6"/><text x="195.6" y="-227.1">last_separator</text></a><path d="M112,-231.8C120.7,-231.8 129.8,-231.8 138.5,-231.8"/><polygon fill="#8a93a5" points="138.3,-234.3 145.3,-231.8 138.3,-229.4"/><a href="../proc/parse_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="160.2" y="-202.6" width="70.8" height="21.6"/><text x="195.6" y="-187.1">parse_file</text></a><path d="M97.3,-220C114.5,-215 134.6,-209.2 152,-204.1"/><polygon fill="#8a93a5" points="152.4,-206.6 158.4,-202.3 151,-201.9"/><path d="M228.2,-202.9C233.7,-205.4 239.2,-208.4 244,-211.8 263.3,-225.4 259.8,-238.7 280,-250.8 293.1,-258.6 309.2,-263.4 323.4,-266.3"/><polygon fill="#8a93a5" points="322.6,-268.7 330,-267.6 323.5,-263.9"/><a href="../proc/read_whole_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="306" y="-241.6" width="105.5" height="21.6"/><text x="358.8" y="-226.1">read_whole_file</text></a><path d="M231.2,-200.2C252.1,-205.2 279.3,-211.8 303.1,-217.6"/><polygon fill="#8a93a5" points="302.5,-219.9 309.8,-219.2 303.6,-215.2"/><a href="../proc/without_carriage_returns.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="280" y="-201.6" width="157.5" height="21.6"/><text x="358.8" y="-186.1">without_carriage_returns</text></a><path d="M231.2,-191.6C243.1,-191.5 257,-191.4 271.2,-191.3"/><polygon fill="#8a93a5" points="271,-193.8 278,-191.3 271,-188.9"/><a href="../proc/parse_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="321.2" y="-141.6" width="75.1" height="21.6"/><text x="358.8" y="-126.1">parse_text</text></a><path d="M226.2,-180.6C252.7,-170.6 291.7,-155.8 320.3,-145"/><polygon fill="#8a93a5" points="321,-147.3 326.7,-142.6 319.3,-142.7"/><a href="https://jacobwilliams.github.io/fformat/proc/read_file.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="503.1" y="-261.6" width="64.3" height="21.6"/><text x="535.3" y="-246.1">read_file</text></a><path d="M411.6,-236.7C438.1,-239.8 469.9,-243.4 494.5,-246.2"/><polygon fill="#8a93a5" points="494.1,-248.7 501.3,-247 494.6,-243.8"/><a href="../proc/skip_blanks.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="494.1" y="-221.6" width="82.3" height="21.6"/><text x="535.3" y="-206.1">skip_blanks</text></a><path d="M382,-142C397.6,-149.9 418.9,-160.8 437.5,-170.8 453.6,-179.4 456.7,-183.5 473.5,-190.8 478.2,-192.9 483.3,-194.9 488.3,-196.7"/><polygon fill="#8a93a5" points="487.4,-199 494.8,-199 489,-194.4"/><a href="../proc/flush_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="500.2" y="-181.6" width="70" height="21.6"/><text x="535.3" y="-166.1">flush_text</text></a><path d="M396.8,-139.3C424.6,-145.7 462.9,-154.5 492,-161.1"/><polygon fill="#8a93a5" points="491.1,-163.4 498.5,-162.6 492.2,-158.7"/><a href="../proc/end_of_line.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="494.4" y="-141.6" width="81.6" height="21.6"/><text x="535.3" y="-126.1">end_of_line</text></a><path d="M396.8,-130.8C422.6,-130.8 457.4,-130.8 485.5,-130.8"/><polygon fill="#8a93a5" points="485.4,-133.3 492.4,-130.8 485.4,-128.4"/><a href="../proc/read_line_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="473.5" y="-101.6" width="123.5" height="21.6"/><text x="535.3" y="-86.1">read_line_directive</text></a><path d="M396.8,-122.3C420.1,-117 450.6,-110 477,-103.9"/><polygon fill="#8a93a5" points="477.3,-106.4 483.6,-102.4 476.2,-101.6"/><a href="../proc/handle_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="480.7" y="-61.6" width="109.1" height="21.6"/><text x="535.3" y="-46.1">handle_directive</text></a><path d="M378.6,-119.6C400.8,-106.7 439,-85.5 473.5,-70.8 478.4,-68.7 483.7,-66.7 488.9,-64.8"/><polygon fill="#8a93a5" points="489.4,-67.2 495.2,-62.6 487.8,-62.6"/><a href="../proc/trim_right.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="501" y="-21.6" width="68.6" height="21.6"/><text x="535.3" y="-6.1">trim_right</text></a><path d="M369.6,-119.6C388,-99.1 429.9,-55.7 473.5,-30.8 479.5,-27.4 486.2,-24.4 492.9,-21.9"/><polygon fill="#8a93a5" points="493.5,-24.3 499.3,-19.7 491.9,-19.7"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="633" y="-221.6" width="54" height="21.6"/><text x="660" y="-206.1" fill="white">...</text><path stroke-dasharray="5,2" d="M576.8,-210.8C592.2,-210.8 609.6,-210.8 624.4,-210.8"/><polygon fill="#8a93a5" points="624.3,-213.3 631.3,-210.8 624.3,-208.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="633" y="-181.6" width="54" height="21.6"/><text x="660" y="-166.1" fill="white">...</text><path stroke-dasharray="5,2" d="M570.4,-170.8C587.2,-170.8 607.4,-170.8 624.3,-170.8"/><polygon fill="#8a93a5" points="624.3,-173.3 631.3,-170.8 624.3,-168.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="633" y="-101.6" width="54" height="21.6"/><text x="660" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M597.3,-90.8C606.6,-90.8 615.9,-90.8 624.3,-90.8"/><polygon fill="#8a93a5" points="624.3,-93.3 631.3,-90.8 624.3,-88.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="633" y="-61.6" width="54" height="21.6"/><text x="660" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M590.1,-50.8C601.8,-50.8 613.8,-50.8 624.6,-50.8"/><polygon fill="#8a93a5" points="624.3,-53.3 631.3,-50.8 624.3,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/control_directive.html">control_directive</a></li></ul>
+<div class="graph"><svg width="610pt" height="30pt"
+ viewBox="0 0 610 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/include_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="111.2" height="21.6"/><text x="55.6" y="-6.1">include_directive</text></a><a href="../proc/control_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="147.2" y="-21.6" width="109.1" height="21.6"/><text x="201.8" y="-6.1">control_directive</text></a><path d="M147.1,-10.8C138.4,-10.8 129.2,-10.8 120.3,-10.8"/><polygon fill="#8a93a5" points="120.3,-8.4 113.3,-10.8 120.3,-13.3"/><a href="../proc/handle_directive.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="292.3" y="-21.6" width="109.1" height="21.6"/><text x="346.8" y="-6.1">handle_directive</text></a><path d="M292.1,-10.8C283.3,-10.8 274,-10.8 265,-10.8"/><polygon fill="#8a93a5" points="265.3,-8.4 258.3,-10.8 265.3,-13.3"/><a href="../proc/parse_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="437.4" y="-21.6" width="75.1" height="21.6"/><text x="474.9" y="-6.1">parse_text</text></a><path d="M437.1,-10.8C428.6,-10.8 419.4,-10.8 410.2,-10.8"/><polygon fill="#8a93a5" points="410.3,-8.4 403.3,-10.8 410.3,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="548.5" y="-21.6" width="54" height="21.6"/><text x="575.5" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M548.1,-10.8C539.8,-10.8 530.4,-10.8 521.1,-10.8"/><polygon fill="#8a93a5" points="521.3,-8.4 514.3,-10.8 521.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> include_directive(c, param, path)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c            <span class="d">!! the state</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: param       <span class="d">!! what follows the directive</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path        <span class="d">!! the file holding the directive</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: name, candidate
+    <span class="k">logical</span> :: exists
+    <span class="k">integer</span> :: k, slash
+
+    <span class="k">if</span> (<span class="k">len</span>(param) &lt; <span class="n">2</span>) <span class="k">then</span>
+        <span class="k">call</span> fail(c, <span class="s">'cannot read the include: '</span>//param)
+        <span class="k">return</span>
+    <span class="k">end</span> <span class="k">if</span>
+    name = param(<span class="n">2</span>:<span class="k">len</span>(param) - <span class="n">1</span>)
+    slash = last_separator(path)
+    candidate = path(:slash)//name
+    <span class="c">!$omp critical (file_io)</span>
+    <span class="k">inquire</span> (file=candidate, exist=exists)
+    k = <span class="n">0</span>
+    <span class="k">do</span> <span class="k">while</span> (<span class="k">.not.</span> exists <span class="k">.and.</span> k &lt; <span class="k">size</span>(c%includes))
+        k = k + <span class="n">1</span>
+        candidate = c%includes(k)%s//<span class="s">'/'</span>//name
+        <span class="k">inquire</span> (file=candidate, exist=exists)
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="c">!$omp end critical (file_io)</span>
+    <span class="k">if</span> (exists) <span class="k">then</span>
+        <span class="k">call</span> parse_file(c, candidate)
+    <span class="k">else</span>
+        <span class="k">call</span> fail(c, <span class="s">'cannot find the include file '</span>//name)
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">subroutine</span> include_directive</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

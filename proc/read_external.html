@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>read_external &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_project.f90.html">fdoc_project.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_project.html">fdoc_project</a></div>
+<h1><span class="kind">subroutine</span>read_external<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> read_external(<span class="intent attr-inout" title="intent(inout)">p</span>, <span class="intent attr-inout" title="intent(inout)">json</span>, <span class="intent attr-in" title="intent(in)">node</span>, <span class="intent attr-in" title="intent(in)">base</span>, <span class="intent attr-in" title="intent(in)">parent</span>, <span class="intent attr-out" title="intent(out)">id</span>)</div>
+<div class="doc">
+<p>Add the entity described by <code>node</code> of an external <code>modules.json</code>, with those inside it.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-json"><td class="name">json</td><td class="type">type(json_core)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the JSON handler</p></td></tr>
+<tr id="variable-node"><td class="name">node</td><td class="type">type(json_value)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-pointer">pointer</span></td><td><p>the entity</p></td></tr>
+<tr id="variable-base"><td class="name">base</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the external project's address, ending in <code>/</code></p></td></tr>
+<tr id="variable-parent"><td class="name">parent</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the entity it goes in, or 0</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the new entity, or 0</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../type/entity_list_t.html#boundprocedure-add">add</a></li><li><a href="../proc/starts_with.html">starts_with</a></li><li><a href="../proc/read_external.html">read_external</a></li></ul>
+<div class="graph"><svg width="376pt" height="70pt"
+ viewBox="0 0 376 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/read_external.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="93.9" height="21.6"/><text x="46.9" y="-26.1">read_external</text></a><a href="../proc/list_add.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="none" rx="7.2" x="129.9" y="-61.6" width="138.6" height="21.6"/><text x="238.9" y="-46.1" fill="white">list_add</text></a><a href="../type/entity_list_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M137.1,-61.6H209.3V-40H137.1A7.2,7.2 0 0 1 129.9,-47.2V-54.4A7.2,7.2 0 0 1 137.1,-61.6Z"/><text x="169.6" y="-46.1" fill="white">entity_list_t</text></a><path d="M94.7,-37C103.1,-38.1 112.1,-39.3 121.2,-40.5"/><polygon fill="#8a93a5" points="120.7,-43 128,-41.4 121.3,-38.1"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="161" y="-21.6" width="76.5" height="21.6"/><text x="199.2" y="-6.1">starts_with</text></a><path d="M94.7,-24.6C113.1,-22.1 134.1,-19.3 152.4,-16.9"/><polygon fill="#8a93a5" points="152.5,-19.4 159.1,-16 151.8,-14.5"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="304.5" y="-61.6" width="63.5" height="21.6"/><text x="336.3" y="-46.1">push_int</text></a><path d="M269,-50.8C278.2,-50.8 287.5,-50.8 296,-50.8"/><polygon fill="#8a93a5" points="295.8,-53.3 302.8,-50.8 295.8,-48.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/load_external_project.html">load_external_project</a></li></ul>
+<div class="graph"><svg width="650pt" height="30pt"
+ viewBox="0 0 650 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/read_external.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="93.9" height="21.6"/><text x="46.9" y="-6.1">read_external</text></a><a href="../proc/load_external_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="129.9" y="-21.6" width="138.7" height="21.6"/><text x="199.3" y="-6.1">load_external_project</text></a><path d="M129.7,-10.8C120.7,-10.8 111.5,-10.8 102.7,-10.8"/><polygon fill="#8a93a5" points="103,-8.4 96,-10.8 103,-13.3"/><a href="../proc/add_external_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="304.6" y="-21.6" width="145.9" height="21.6"/><text x="377.6" y="-6.1">add_external_modules</text></a><path d="M304.3,-10.8C295.5,-10.8 286.4,-10.8 277.5,-10.8"/><polygon fill="#8a93a5" points="277.5,-8.4 270.5,-10.8 277.5,-13.3"/><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="486.5" y="-21.6" width="65" height="21.6"/><text x="519" y="-6.1">correlate</text></a><path d="M486.4,-10.8C478.1,-10.8 468.8,-10.8 459.2,-10.8"/><polygon fill="#8a93a5" points="459.3,-8.4 452.3,-10.8 459.3,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="587.5" y="-21.6" width="54" height="21.6"/><text x="614.5" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M587.5,-10.8C579,-10.8 569.5,-10.8 560.3,-10.8"/><polygon fill="#8a93a5" points="560.4,-8.4 553.4,-10.8 560.4,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> read_external(p, json, node, base, parent, id)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(inout) :: p             <span class="d">!! the project</span>
+    <span class="k">type</span>(json_core), <span class="k">intent</span>(inout) :: json          <span class="d">!! the JSON handler</span>
+    <span class="k">type</span>(json_value), <span class="k">pointer</span>, <span class="k">intent</span>(in) :: node   <span class="d">!! the entity</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: base            <span class="d">!! the external project's address, ending in `/`</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent                   <span class="d">!! the entity it goes in, or 0</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: id                      <span class="d">!! the new entity, or 0</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: LISTS(*) = [<span class="k">character</span>(<span class="k">len</span>=<span class="n">13</span>) :: <span class="s">'pub_procs'</span>, <span class="s">'pub_absints'</span>, <span class="s">'pub_types'</span>, <span class="s">'pub_vars'</span>, &amp;
+                                               <span class="s">'boundprocs'</span>, <span class="s">'variables'</span>]
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: name, url, obj, proctype, text
+    <span class="k">type</span>(json_value), <span class="k">pointer</span> :: list, item
+    <span class="k">logical</span> :: found
+    <span class="k">integer</span> :: k, n, j, child, <span class="k">kind</span>
+
+    id = <span class="n">0</span>
+    <span class="k">call</span> json%get(node, <span class="s">'name'</span>, name, found)
+    <span class="k">if</span> (<span class="k">.not.</span> found) <span class="k">return</span>
+    <span class="k">call</span> json%get(node, <span class="s">'obj'</span>, obj, found)
+    <span class="k">call</span> json%get(node, <span class="s">'proctype'</span>, proctype, found)
+    <span class="k">if</span> (<span class="k">.not.</span> found) proctype = <span class="s">''</span>
+    <span class="k">select</span> <span class="k">case</span> (obj)
+    <span class="k">case</span> (<span class="s">'module'</span>); <span class="k">kind</span> = E_MODULE
+    <span class="k">case</span> (<span class="s">'type'</span>); <span class="k">kind</span> = E_TYPE
+    <span class="k">case</span> (<span class="s">'variable'</span>); <span class="k">kind</span> = E_VARIABLE
+    <span class="k">case</span> (<span class="s">'boundprocedure'</span>); <span class="k">kind</span> = E_BOUNDPROC
+    <span class="k">case</span> (<span class="s">'interface'</span>); <span class="k">kind</span> = E_INTERFACE
+    <span class="k">case</span> default; <span class="k">kind</span> = <span class="k">merge</span>(E_FUNCTION, E_SUBROUTINE, proctype == <span class="s">'Function'</span>)
+    <span class="k">end</span> <span class="k">select</span>
+    id = p%list%add(<span class="k">kind</span>, parent)
+    <span class="k">call</span> json%get(node, <span class="s">'external_url'</span>, url, found)
+    <span class="k">associate</span> (e =&gt; p%list%box(id)%e)
+        e%name = name
+        <span class="k">if</span> (found) <span class="k">then</span>
+            <span class="k">if</span> (starts_with(url, <span class="s">'./'</span>)) url = url(<span class="n">3</span>:)
+            e%external_url = base//url
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> json%get(node, <span class="s">'permission'</span>, text, found)
+        e%permission = <span class="s">'public'</span>
+        <span class="k">if</span> (found) e%permission = text
+        <span class="k">call</span> json%get(node, <span class="s">'vartype'</span>, text, found)
+        e%vartype = <span class="s">''</span>
+        <span class="k">if</span> (found) e%vartype = text
+        <span class="k">allocate</span> (e%attribs(<span class="n">0</span>), e%doc(<span class="n">0</span>), e%meta(<span class="n">0</span>))
+        <span class="c">! variables share one read-only `no_more`</span>
+        <span class="k">if</span> (<span class="k">kind</span> /= E_VARIABLE) <span class="k">allocate</span> (e%more%uses(<span class="n">0</span>), e%more%public_list(<span class="n">0</span>))
+        e%var_role = VAR_PLAIN
+    <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(LISTS)
+        <span class="k">call</span> json%get_child(node, <span class="k">trim</span>(LISTS(k)), list, found)
+        <span class="k">if</span> (<span class="k">.not.</span> found) <span class="k">cycle</span>
+        <span class="k">call</span> json%info(list, n_children=n)
+        <span class="k">do</span> j = <span class="n">1</span>, n
+            <span class="k">call</span> json%get_child(list, j, item, found)
+            <span class="k">call</span> read_external(p, json, item, base, id, child)
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> read_external</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>math &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>math<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> math(<span class="intent attr-in" title="intent(in)">tex</span>, <span class="intent attr-in" title="intent(in)">display</span>, <span class="intent attr-inout" title="intent(inout)">out</span>)</div>
+<div class="doc">
+<p>Write math for MathJax.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-tex"><td class="name">tex</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the TeX</p></td></tr>
+<tr id="variable-display"><td class="name">display</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>true for display math</p></td></tr>
+<tr id="variable-out"><td class="name">out</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li></ul>
+<div class="graph"><svg width="152pt" height="30pt"
+ viewBox="0 0 152 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/math.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="54" height="21.6"/><text x="27" y="-6.1">math</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="90" y="-21.6" width="54" height="21.6"/><text x="117" y="-6.1">add</text></a><path d="M54.9,-10.8C63.1,-10.8 72.4,-10.8 81.1,-10.8"/><polygon fill="#8a93a5" points="81.1,-13.3 88.1,-10.8 81.1,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/inline_backslash.html">inline_backslash</a></li><li><a href="../proc/inline_dollar.html">inline_dollar</a></li></ul>
+<div class="graph"><svg width="531pt" height="190pt"
+ viewBox="0 0 531 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 185.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/math.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="54" height="21.6"/><text x="27" y="-86.1">math</text></a><a href="../proc/inline_backslash.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="90" y="-121.6" width="109.8" height="21.6"/><text x="144.9" y="-106.1">inline_backslash</text></a><path d="M89.7,-101.4C80.6,-99.9 71.4,-98.3 62.9,-96.8"/><polygon fill="#8a93a5" points="63.6,-94.5 56.2,-95.7 62.7,-99.3"/><a href="../proc/inline_dollar.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="103" y="-81.6" width="83.8" height="21.6"/><text x="144.9" y="-66.1">inline_dollar</text></a><path d="M102.7,-77.9C89.8,-80.1 75.7,-82.6 63.2,-84.7"/><polygon fill="#8a93a5" points="62.9,-82.3 56.4,-85.9 63.7,-87.1"/><a href="../proc/inline.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="235.8" y="-101.6" width="54" height="21.6"/><text x="262.8" y="-86.1">inline</text></a><path d="M235.5,-95.3C227.3,-96.8 217.8,-98.4 208.1,-100.1"/><polygon fill="#8a93a5" points="208,-97.6 201.5,-101.2 208.8,-102.4"/><path d="M235.5,-86.3C223.5,-84.2 209,-81.7 195.2,-79.3"/><polygon fill="#8a93a5" points="195.9,-76.9 188.6,-78.2 195.1,-81.8"/><a href="../proc/render_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="335.5" y="-181.6" width="88.1" height="21.6"/><text x="379.6" y="-166.1">render_node</text></a><path d="M343,-159.6C337,-157.1 331.1,-154.2 325.8,-150.8 307.5,-139.2 290.1,-121.5 278.4,-108.4"/><polygon fill="#8a93a5" points="280.2,-106.8 273.8,-103.1 276.5,-110"/><a href="../proc/render_heading.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="326.9" y="-141.6" width="105.5" height="21.6"/><text x="379.6" y="-126.1">render_heading</text></a><path d="M346.3,-119.6C331.2,-114.3 313.1,-108 297.8,-102.6"/><polygon fill="#8a93a5" points="298.9,-100.4 291.5,-100.4 297.3,-105.1"/><a href="../proc/table_row.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="344.2" y="-101.6" width="70.8" height="21.6"/><text x="379.6" y="-86.1">table_row</text></a><path d="M343.8,-90.8C329.4,-90.8 312.7,-90.8 298.2,-90.8"/><polygon fill="#8a93a5" points="298.6,-88.4 291.6,-90.8 298.6,-93.3"/><a href="../proc/write_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="345.3" y="-61.6" width="68.6" height="21.6"/><text x="379.6" y="-46.1">write_link</text></a><path d="M346.3,-62C331.2,-67.3 313.1,-73.6 297.8,-79"/><polygon fill="#8a93a5" points="297.3,-76.5 291.5,-81.2 298.9,-81.2"/><a href="../proc/inline_emphasis.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="325.8" y="-21.6" width="107.6" height="21.6"/><text x="379.6" y="-6.1">inline_emphasis</text></a><path d="M343,-22C337,-24.5 331.1,-27.4 325.8,-30.8 307.5,-42.4 290.1,-60.1 278.4,-73.2"/><polygon fill="#8a93a5" points="276.5,-71.6 273.8,-78.5 280.2,-74.8"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="469.4" y="-181.6" width="54" height="21.6"/><text x="496.4" y="-166.1" fill="white">...</text><path stroke-dasharray="5,2" d="M469.1,-170.8C458.1,-170.8 445,-170.8 432.2,-170.8"/><polygon fill="#8a93a5" points="432.4,-168.4 425.4,-170.8 432.4,-173.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="469.4" y="-101.6" width="54" height="21.6"/><text x="496.4" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M469.1,-90.8C455.6,-90.8 438.7,-90.8 423.4,-90.8"/><polygon fill="#8a93a5" points="423.6,-88.4 416.6,-90.8 423.6,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="469.4" y="-61.6" width="54" height="21.6"/><text x="496.4" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M469.1,-50.8C455.3,-50.8 438.2,-50.8 422.7,-50.8"/><polygon fill="#8a93a5" points="422.8,-48.4 415.8,-50.8 422.8,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> math(tex, display, out)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: tex     <span class="d">!! the TeX</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: display          <span class="d">!! true for display math</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: out    <span class="d">!! the HTML</span>
+
+    <span class="k">if</span> (display) <span class="k">then</span>
+        <span class="k">call</span> add(out, NL//<span class="s">'&lt;script type="math/tex; mode=display"&gt;'</span>)
+    <span class="k">else</span>
+        <span class="k">call</span> add(out, <span class="s">'&lt;script type="math/tex"&gt;'</span>)
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">call</span> add(out, tex)
+    <span class="k">call</span> add(out, <span class="s">'&lt;/script&gt;'</span>)
+    <span class="k">if</span> (display) <span class="k">call</span> add(out, NL)
+<span class="k">end</span> <span class="k">subroutine</span> math</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

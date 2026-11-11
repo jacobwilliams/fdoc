@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>find_source &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>find_source<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> find_source(<span class="intent attr-in" title="intent(in)">low</span>, <span class="intent attr-in" title="intent(in)">starts</span>, <span class="intent attr-in" title="intent(in)">stops</span>, <span class="intent attr-in" title="intent(in)">from</span>, <span class="intent attr-in" title="intent(in)">keyword</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-out" title="intent(out)">found</span>, <span class="intent attr-out" title="intent(out)">first</span>, <span class="intent attr-out" title="intent(out)">last</span>)</div>
+<div class="doc">
+<p>Find the text of the construct <code>keyword name</code> in <code>low</code>, from its first line to its <code>end</code> line.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-low"><td class="name">low</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the file, in lowercase</p></td></tr>
+<tr id="variable-starts"><td class="name">starts</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>where the lines to search start</p></td></tr>
+<tr id="variable-stops"><td class="name">stops</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>where they end</p></td></tr>
+<tr id="variable-from"><td class="name">from</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the line to start from</p></td></tr>
+<tr id="variable-keyword"><td class="name">keyword</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p><code>subroutine</code>, <code>function</code>, <code>procedure</code> or <code>type</code></p></td></tr>
+<tr id="variable-name"><td class="name">name</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the name, in lowercase</p></td></tr>
+<tr id="variable-found"><td class="name">found</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the line where it starts</p></td></tr>
+<tr id="variable-first"><td class="name">first</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>where it starts, or 0</p></td></tr>
+<tr id="variable-last"><td class="name">last</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>where it ends</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/line_has.html">line_has</a></li><li><a href="../proc/starts_word.html">starts_word</a></li></ul>
+<div class="graph"><svg width="403pt" height="69pt"
+ viewBox="0 0 403 69" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 64.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/find_source.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="81.6" height="21.6"/><text x="40.8" y="-25.1">find_source</text></a><a href="../proc/line_has.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="117.6" y="-21.6" width="62.8" height="21.6"/><text x="149" y="-6.1">line_has</text></a><path d="M82.6,-22.5C91.3,-20.9 100.6,-19.3 109.3,-17.7"/><polygon fill="#8a93a5" points="109.5,-20.2 115.9,-16.5 108.6,-15.4"/><a href="../proc/starts_word.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="216.4" y="-60.6" width="81.6" height="21.6"/><text x="257.2" y="-45.1">starts_word</text></a><path d="M82.4,-33.6C118.1,-36.9 170,-41.8 207.9,-45.3"/><polygon fill="#8a93a5" points="207.5,-47.7 214.7,-45.9 207.9,-42.8"/><path d="M180.7,-22.1C192.3,-26.3 205.6,-31.2 217.8,-35.7"/><polygon fill="#8a93a5" points="216.7,-37.9 224.2,-38 218.4,-33.3"/><a href="../proc/word_at.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="334" y="-40.6" width="60.6" height="21.6"/><text x="364.3" y="-25.1">word_at</text></a><path d="M180.6,-13.5C218.7,-16.9 283.7,-22.7 325.1,-26.4"/><polygon fill="#8a93a5" points="324.8,-28.8 332,-27 325.3,-23.9"/><path d="M298.3,-42.2C307.2,-40.5 316.5,-38.7 325.3,-37"/><polygon fill="#8a93a5" points="325.7,-39.5 332.1,-35.8 324.7,-34.7"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/locate_in_file.html">locate_in_file</a></li></ul>
+<div class="graph"><svg width="549pt" height="30pt"
+ viewBox="0 0 549 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/find_source.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="81.6" height="21.6"/><text x="40.8" y="-6.1">find_source</text></a><a href="../proc/locate_in_file.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="117.6" y="-21.6" width="90.3" height="21.6"/><text x="162.8" y="-6.1">locate_in_file</text></a><path d="M117.4,-10.8C108.7,-10.8 99.6,-10.8 90.7,-10.8"/><polygon fill="#8a93a5" points="90.9,-8.4 83.9,-10.8 90.9,-13.3"/><a href="../proc/locate_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="243.9" y="-21.6" width="101.8" height="21.6"/><text x="294.8" y="-6.1">locate_sources</text></a><path d="M243.5,-10.8C234.8,-10.8 225.6,-10.8 216.8,-10.8"/><polygon fill="#8a93a5" points="216.9,-8.4 209.9,-10.8 216.9,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="381.7" y="-21.6" width="69.3" height="21.6"/><text x="416.4" y="-6.1">write_site</text></a><path d="M381.4,-10.8C373,-10.8 363.7,-10.8 354.4,-10.8"/><polygon fill="#8a93a5" points="354.4,-8.4 347.4,-10.8 354.4,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="487" y="-21.6" width="54" height="21.6"/><text x="514" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M486.7,-10.8C478.3,-10.8 468.8,-10.8 459.6,-10.8"/><polygon fill="#8a93a5" points="459.7,-8.4 452.7,-10.8 459.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> find_source(low, starts, stops, from, keyword, name, found, first, last)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: low     <span class="d">!! the file, in lowercase</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: starts(:)        <span class="d">!! where the lines to search start</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: stops(:)         <span class="d">!! where they end</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: from             <span class="d">!! the line to start from</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: keyword <span class="d">!! `subroutine`, `function`, `procedure` or `type`</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name    <span class="d">!! the name, in lowercase</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: found           <span class="d">!! the line where it starts</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: first           <span class="d">!! where it starts, or 0</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: last            <span class="d">!! where it ends</span>
+    <span class="k">integer</span> :: k, at, comment
+
+    first = <span class="n">0</span>
+    last = <span class="n">0</span>
+    found = <span class="n">0</span>
+    <span class="k">do</span> k = from, <span class="k">size</span>(starts)
+        <span class="k">associate</span> (line =&gt; low(starts(k):stops(k)))
+            <span class="k">if</span> (<span class="k">index</span>(line, name) == <span class="n">0</span>) <span class="k">cycle</span>
+            comment = <span class="k">index</span>(line, <span class="s">'!'</span>)
+            <span class="k">if</span> (comment == <span class="n">0</span>) comment = <span class="k">len</span>(line) + <span class="n">1</span>
+            at = line_has(line(:comment - <span class="n">1</span>), keyword, name)
+            <span class="c">! a `module procedure` statement, not a binding</span>
+            <span class="k">if</span> (keyword == <span class="s">'procedure'</span> <span class="k">.and.</span> first == <span class="n">0</span> <span class="k">.and.</span> <span class="k">.not.</span> starts_word(<span class="k">adjustl</span>(line), <span class="s">'module'</span>)) at = <span class="n">0</span>
+            <span class="k">if</span> (at &gt; <span class="n">0</span> <span class="k">.and.</span> first == <span class="n">0</span> <span class="k">.and.</span> <span class="k">.not.</span> starts_word(<span class="k">adjustl</span>(line), <span class="s">'end'</span>)) <span class="k">then</span>
+                first = starts(k)
+                found = k
+            <span class="k">else</span> <span class="k">if</span> (first &gt; <span class="n">0</span> <span class="k">.and.</span> at &gt; <span class="n">0</span> <span class="k">.and.</span> starts_word(<span class="k">adjustl</span>(line), <span class="s">'end'</span>)) <span class="k">then</span>
+                last = stops(k)
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+    first = <span class="n">0</span>
+<span class="k">end</span> <span class="k">subroutine</span> find_source</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>extension_of &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_input.f90.html">fdoc_input.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_input.html">fdoc_input</a></div>
+<h1><span class="kind">function</span>extension_of<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> character(len=merge(0,len(path)-index(path,'.',back=.true.),index(path,'.',back=.true.)==0)) <span class="k">function</span> extension_of(<span class="intent attr-in" title="intent(in)">path</span>) <span class="k">result</span>(ext)</div>
+<div class="doc">
+<p>The extension of <code>path</code>, without the dot, or <code>''</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-path"><td class="name">path</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the path</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-ext"><td class="name">ext</td><td class="type">character(len=merge(0,len(path)-index(path,'.',back=.true.),index(path,'.',back=.true.)==0))</td><td class="attributes"><span class="attr attr-private">private</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/find_sources.html">find_sources</a></li><li><a href="../proc/load_source.html">load_source</a></li><li><a href="../proc/needs_fypp.html">needs_fypp</a></li><li><a href="../proc/runs_command.html">runs_command</a></li></ul>
+<div class="graph"><svg width="747pt" height="122pt"
+ viewBox="0 0 747 122" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 118.1)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/extension_of.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-79.6" width="88.1" height="21.6"/><text x="44.1" y="-64.1">extension_of</text></a><a href="../proc/needs_fypp.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="127.4" y="-99.6" width="81.6" height="21.6"/><text x="168.2" y="-84.1">needs_fypp</text></a><path d="M127.2,-82.3C117.6,-80.7 107.3,-79 97.3,-77.3"/><polygon fill="#8a93a5" points="97.7,-74.9 90.4,-76.2 96.9,-79.8"/><a href="../proc/runs_command.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="248.2" y="-100.6" width="104" height="21.6"/><text x="300.2" y="-85.1">runs_command</text></a><path d="M262.2,-101C226.5,-110.2 171,-120 124.1,-108.8 104.6,-104.1 84.4,-93.8 69.3,-84.8"/><polygon fill="#8a93a5" points="70.9,-82.9 63.6,-81.3 68.3,-87.1"/><path d="M247.8,-89.4C237.9,-89.3 227.6,-89.2 217.8,-89.2"/><polygon fill="#8a93a5" points="217.9,-86.7 210.9,-89.1 217.9,-91.6"/><a href="../proc/find_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="124.1" y="-21.6" width="88.1" height="21.6"/><text x="168.2" y="-6.1">find_sources</text></a><path d="M143.6,-22C124.8,-30.9 98.3,-43.5 77.5,-53.4"/><polygon fill="#8a93a5" points="76.4,-51.2 71.2,-56.4 78.5,-55.6"/><a href="../proc/load_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="257.6" y="-60.6" width="85.2" height="21.6"/><text x="300.2" y="-45.1">load_source</text></a><path d="M257.3,-52.9C213.4,-56.2 144.4,-61.4 97.1,-64.9"/><polygon fill="#8a93a5" points="97.1,-62.5 90.3,-65.4 97.5,-67.3"/><path d="M261.6,-61.1C246.9,-65.5 229.9,-70.6 214.6,-75.2"/><polygon fill="#8a93a5" points="214.2,-72.8 208.2,-77.1 215.6,-77.4"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="510.9" y="-60.6" width="138" height="21.6"/><text x="579.9" y="-45.1">load_project_sources</text></a><path d="M524.5,-61.1C508.6,-64.1 491.1,-67.3 474.9,-69.8 437.1,-75.6 394.5,-80.5 361,-84"/><polygon fill="#8a93a5" points="360.9,-81.6 354.2,-84.7 361.4,-86.5"/><path d="M527.3,-38.5C510.6,-35.2 492,-32 474.9,-29.8 386.1,-18.5 281.9,-13.9 220.9,-12"/><polygon fill="#8a93a5" points="221.2,-9.6 214.1,-11.8 221.1,-14.5"/><a href="../proc/read_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="388.2" y="-60.6" width="86.7" height="21.6"/><text x="431.6" y="-45.1">read_source</text></a><path d="M510.4,-49.8C501.4,-49.8 492.3,-49.8 483.6,-49.8"/><polygon fill="#8a93a5" points="483.6,-47.4 476.6,-49.8 483.6,-52.3"/><path d="M387.9,-49.8C376.1,-49.8 363.3,-49.8 351.2,-49.8"/><polygon fill="#8a93a5" points="351.5,-47.4 344.5,-49.8 351.5,-52.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="684.9" y="-60.6" width="54" height="21.6"/><text x="711.9" y="-45.1">run</text></a><path d="M684.6,-49.8C676.5,-49.8 667.1,-49.8 657.3,-49.8"/><polygon fill="#8a93a5" points="657.6,-47.4 650.6,-49.8 657.6,-52.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">function</span> extension_of(path) <span class="k">result</span>(ext)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: path    <span class="d">!! the path</span>
+    <span class="k">character</span>(<span class="k">len</span>=<span class="k">merge</span>(<span class="n">0</span>, <span class="k">len</span>(path) - <span class="k">index</span>(path, <span class="s">'.'</span>, back=<span class="k">.true.</span>), <span class="k">index</span>(path, <span class="s">'.'</span>, back=<span class="k">.true.</span>) == <span class="n">0</span>)) :: ext
+    ext = path(<span class="k">len</span>(path) - <span class="k">len</span>(ext) + <span class="n">1</span>:)
+<span class="k">end</span> <span class="k">function</span> extension_of</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

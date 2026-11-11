@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>type_tree &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>type_tree<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> type_tree(<span class="intent attr-in" title="intent(in)">site</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write the types of the project as a tree, by what they extend, if any type extends another. A type that
+extends one from elsewhere is at the top, with what it extends.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push_int.html">push_int</a></li><li><a href="../proc/add.html">add</a></li><li><a href="../proc/sort_by_name.html">sort_by_name</a></li><li>tree_node</li></ul>
+<div class="graph"><svg width="577pt" height="422pt"
+ viewBox="0 0 577 422" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 417.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/type_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-295.6" width="68.6" height="21.6"/><text x="34.3" y="-280.1">type_tree</text></a><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="121.2" y="-413.6" width="63.5" height="21.6"/><text x="153" y="-398.1">push_int</text></a><path d="M41.6,-296.4C52.5,-315.4 76.1,-353.4 104.6,-377.8 108.8,-381.4 113.6,-384.6 118.4,-387.5"/><polygon fill="#8a93a5" points="117,-389.5 124.3,-390.8 119.3,-385.2"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="393" y="-239.6" width="54" height="21.6"/><text x="420" y="-224.1">add</text></a><path d="M53.9,-296.4C101.5,-324.5 230.4,-390.3 325.5,-344.8 331.1,-342.1 380.6,-278.5 405.3,-246.7"/><polygon fill="#8a93a5" points="407.1,-248.3 409.5,-241.2 403.2,-245.3"/><a href="../proc/sort_by_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="104.6" y="-61.6" width="96.8" height="21.6"/><text x="153" y="-46.1">sort_by_name</text></a><path d="M39.9,-273.2C50.3,-247 77.1,-181.3 104.6,-128.8 115.6,-107.7 130.1,-84.5 140.1,-68.9"/><polygon fill="#8a93a5" points="142,-70.4 143.8,-63.2 137.9,-67.7"/><a href="../proc/side_icon.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="118.3" y="-295.6" width="69.3" height="21.6"/><text x="153" y="-280.1">side_icon</text></a><path d="M69.4,-284.8C81.9,-284.8 96.4,-284.8 109.6,-284.8"/><polygon fill="#8a93a5" points="109.6,-287.3 116.6,-284.8 109.6,-282.4"/><a href="../proc/link_to.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="126" y="-159.6" width="54" height="21.6"/><text x="153" y="-144.1">link_to</text></a><path d="M45.3,-273.2C65.8,-249.3 112.9,-194.4 137,-166.2"/><polygon fill="#8a93a5" points="138.7,-168 141.4,-161.1 135,-164.8"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="245" y="-21.6" width="72.9" height="21.6"/><text x="281.4" y="-6.1">lowercase</text></a><path d="M189.6,-39.6C204.4,-34.9 221.7,-29.4 237.2,-24.5"/><polygon fill="#8a93a5" points="237.8,-26.9 243.7,-22.4 236.3,-22.2"/><path d="M188,-276.3C203.1,-272.6 221.1,-268.4 237.4,-264.8 288.4,-253.6 347.8,-242.1 384.4,-235.2"/><polygon fill="#8a93a5" points="384.9,-237.6 391.3,-233.9 384,-232.8"/><a href="../proc/icon_of.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="253.3" y="-295.6" width="56.3" height="21.6"/><text x="281.4" y="-280.1">icon_of</text></a><path d="M187.9,-284.8C205.4,-284.8 226.7,-284.8 244.4,-284.8"/><polygon fill="#8a93a5" points="244.3,-287.3 251.3,-284.8 244.3,-282.4"/><a href="../proc/letter_class.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="241.4" y="-335.6" width="80.1" height="21.6"/><text x="281.4" y="-320.1">letter_class</text></a><path d="M187.9,-295.5C203.1,-300.3 221.2,-306.1 237.4,-311.2"/><polygon fill="#8a93a5" points="236.3,-313.4 243.7,-313.2 237.8,-308.7"/><path d="M180.3,-152.9C214.3,-158.6 275.3,-170.2 325.5,-186.8 347.8,-194.2 372,-205.1 390.2,-214"/><polygon fill="#8a93a5" points="388.9,-216.1 396.2,-217 391,-211.7"/><a href="../proc/page_entity.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="240.6" y="-61.6" width="81.6" height="21.6"/><text x="281.4" y="-46.1">page_entity</text></a><path d="M165.3,-137.7C180.8,-122.6 209.9,-95.5 237.4,-75.8 242,-72.5 247.1,-69.2 252.1,-66.2"/><polygon fill="#8a93a5" points="253.2,-68.4 258,-62.7 250.8,-64.2"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="247.9" y="-139.6" width="67.1" height="21.6"/><text x="281.4" y="-124.1">entity_url</text></a><path d="M180.2,-144.7C197.2,-142 219.7,-138.4 239.1,-135.3"/><polygon fill="#8a93a5" points="239.5,-137.8 246,-134.2 238.7,-132.9"/><a href="../proc/is_shown.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="385.7" y="-70.6" width="68.6" height="21.6"/><text x="420" y="-55.1">is_shown</text></a><path d="M174.8,-137.5C191.4,-128.8 215.4,-117 237.4,-108.8 284.2,-91.4 339.9,-77.3 377.2,-68.8"/><polygon fill="#8a93a5" points="377.5,-71.2 383.8,-67.3 376.4,-66.4"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="237.4" y="-217.6" width="88.1" height="21.6"/><text x="281.4" y="-202.1">html_escape</text></a><path d="M178.4,-160C198.3,-169.1 226.7,-182.1 248.4,-192.1"/><polygon fill="#8a93a5" points="247.4,-194.3 254.8,-195 249.4,-189.9"/><a href="../proc/lower_char.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="381" y="-335.6" width="78" height="21.6"/><text x="420" y="-320.1">lower_char</text></a><path d="M321.9,-324.8C337.6,-324.8 355.8,-324.8 372.2,-324.8"/><polygon fill="#8a93a5" points="372,-327.3 379,-324.8 372,-322.4"/><path d="M322.7,-53.5C339.8,-54.6 359.9,-55.9 377.2,-57"/><polygon fill="#8a93a5" points="376.8,-59.5 384,-57.5 377.2,-54.6"/><a href="../proc/is_separate_body.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="361.5" y="-30.6" width="117" height="21.6"/><text x="420" y="-15.1">is_separate_body</text></a><path d="M322.7,-41.7C334.8,-38.9 348.3,-35.8 361.4,-32.9"/><polygon fill="#8a93a5" points="361.6,-35.3 367.9,-31.4 360.5,-30.6"/><a href="../proc/object_word.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="377.8" y="-190.6" width="84.5" height="21.6"/><text x="420" y="-175.1">object_word</text></a><path d="M310.1,-140C325.3,-146 344.3,-153.5 361.5,-159.8 366.9,-161.8 372.7,-163.9 378.4,-165.9"/><polygon fill="#8a93a5" points="377.2,-168.1 384.7,-168.1 378.9,-163.5"/><a href="../proc/page_name.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="378.5" y="-150.6" width="83.1" height="21.6"/><text x="420" y="-135.1">page_name</text></a><path d="M315.5,-131.5C331.9,-132.8 351.9,-134.4 370,-135.9"/><polygon fill="#8a93a5" points="369.5,-138.3 376.7,-136.4 369.9,-133.4"/><a href="../proc/url_quote.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="385.7" y="-110.6" width="68.6" height="21.6"/><text x="420" y="-95.1">url_quote</text></a><path d="M315.5,-121.8C334,-117.8 357.3,-112.9 377.1,-108.7"/><polygon fill="#8a93a5" points="377.5,-111.1 383.8,-107.3 376.5,-106.3"/><path d="M325.6,-213.8C344.6,-216.8 366.5,-220.3 384.4,-223.2"/><polygon fill="#8a93a5" points="384,-225.6 391.3,-224.3 384.7,-220.8"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="514.5" y="-190.6" width="54" height="21.6"/><text x="541.5" y="-175.1" fill="white">...</text><path stroke-dasharray="5,2" d="M462.5,-179.8C476.7,-179.8 492.4,-179.8 505.9,-179.8"/><polygon fill="#8a93a5" points="505.6,-182.3 512.6,-179.8 505.6,-177.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/list_page.html">list_page</a></li></ul>
+<div class="graph"><svg width="374pt" height="30pt"
+ viewBox="0 0 374 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/type_tree.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="68.6" height="21.6"/><text x="34.3" y="-6.1">type_tree</text></a><a href="../proc/list_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="104.6" y="-21.6" width="66.4" height="21.6"/><text x="137.8" y="-6.1">list_page</text></a><path d="M104.1,-10.8C95.7,-10.8 86.5,-10.8 77.7,-10.8"/><polygon fill="#8a93a5" points="77.8,-8.4 70.8,-10.8 77.8,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="207" y="-21.6" width="69.3" height="21.6"/><text x="241.7" y="-6.1">write_site</text></a><path d="M206.8,-10.8C198.1,-10.8 188.7,-10.8 179.7,-10.8"/><polygon fill="#8a93a5" points="179.7,-8.4 172.7,-10.8 179.7,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="312.3" y="-21.6" width="54" height="21.6"/><text x="339.3" y="-6.1">run</text></a><path d="M312,-10.8C303.6,-10.8 294.1,-10.8 284.9,-10.8"/><polygon fill="#8a93a5" points="285.1,-8.4 278.1,-10.8 285.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> type_tree(site, b)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(in) :: site        <span class="d">!! the site</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b      <span class="d">!! the HTML</span>
+    <span class="k">type</span>(index_list_t), <span class="k">allocatable</span> :: children(:)
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: slot(:), roots(:)
+    <span class="k">integer</span> :: k, parent
+
+    <span class="k">associate</span> (types =&gt; site%members(LIST_TYPES)%ids, list =&gt; site%p%list)
+        <span class="k">allocate</span> (slot(list%n), source=<span class="n">0</span>)
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(types)
+            slot(types(k)) = k
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">allocate</span> (children(<span class="k">size</span>(types)), roots(<span class="n">0</span>))
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(types)
+            parent = list%box(types(k))%e%extends_id
+            <span class="k">if</span> (parent &gt; <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">if</span> (slot(parent) &gt; <span class="n">0</span> <span class="k">.and.</span> parent /= types(k)) <span class="k">then</span>
+                    <span class="k">call</span> push_int(children(slot(parent))%ids, types(k))
+                    <span class="k">cycle</span>
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">call</span> push_int(roots, types(k))
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">if</span> (<span class="k">size</span>(roots) == <span class="k">size</span>(types)) <span class="k">return</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;h2 id="hierarchy"&gt;Hierarchy&lt;/h2&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;ul class="tree types"&gt;'</span>)
+        <span class="k">call</span> sort_by_name(list, roots)
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(roots)
+            <span class="k">call</span> tree_node(roots(k), <span class="n">1</span>)
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> add(b, <span class="s">'&lt;/ul&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>)//<span class="s">'&lt;h2 id="all-types"&gt;All types&lt;/h2&gt;'</span>//<span class="k">achar</span>(<span class="n">10</span>))
+    <span class="k">end</span> <span class="k">associate</span>
+
+<span class="k">contains</span>
+
+    <span class="d">!&gt; Write type `id` and what extends it.</span>
+    <span class="k">recursive</span> <span class="k">subroutine</span> tree_node(id, depth)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: id       <span class="d">!! the type</span>
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: depth    <span class="d">!! how deep it is, against a loop in what extends what</span>
+
+        <span class="k">associate</span> (e =&gt; site%p%list%box(id)%e, here =&gt; slot(id))
+            <span class="k">call</span> add(b, <span class="s">'&lt;li&gt;'</span>)
+            <span class="k">if</span> (<span class="k">allocated</span>(children(here)%ids) <span class="k">.and.</span> depth &lt; MAX_NESTING) <span class="k">call</span> add(b, <span class="s">'&lt;details open&gt;&lt;summary&gt;'</span>)
+            <span class="k">call</span> side_icon(e, b)
+            <span class="k">call</span> link_to(site, id, e%name, b)
+            <span class="k">if</span> (e%extends_id &gt; <span class="n">0</span> <span class="k">.and.</span> depth == <span class="n">1</span> <span class="k">.and.</span> <span class="k">allocated</span>(e%more%<span class="k">extends</span>)) <span class="k">then</span>
+                <span class="k">call</span> add(b, <span class="s">' &lt;span class="where"&gt;extends '</span>)
+                <span class="k">call</span> link_to(site, e%extends_id, e%more%<span class="k">extends</span>, b)
+                <span class="k">call</span> add(b, <span class="s">'&lt;/span&gt;'</span>)
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (<span class="k">allocated</span>(children(here)%ids) <span class="k">.and.</span> depth &lt; MAX_NESTING) <span class="k">then</span>
+                <span class="k">call</span> add(b, <span class="s">'&lt;/summary&gt;&lt;ul&gt;'</span>)
+                <span class="k">call</span> sort_by_name(site%p%list, children(here)%ids)
+                <span class="k">block</span>
+                    <span class="k">integer</span> :: j
+
+                    <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(children(here)%ids)
+                        <span class="k">call</span> tree_node(children(here)%ids(j), depth + <span class="n">1</span>)
+                    <span class="k">end</span> <span class="k">do</span>
+                <span class="k">end</span> <span class="k">block</span>
+                <span class="k">call</span> add(b, <span class="s">'&lt;/ul&gt;&lt;/details&gt;'</span>)
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">call</span> add(b, <span class="s">'&lt;/li&gt;'</span>)
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">subroutine</span> tree_node
+
+<span class="k">end</span> <span class="k">subroutine</span> type_tree</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

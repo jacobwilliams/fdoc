@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>apply_attributes &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_parser.f90.html">fdoc_parser.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_parser.html">fdoc_parser</a></div>
+<h1><span class="kind">subroutine</span>apply_attributes<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> apply_attributes(<span class="intent attr-inout" title="intent(inout)">list</span>, <span class="intent attr-in" title="intent(in)">id</span>)</div>
+<div class="doc">
+<p>Apply statements such as <code>public :: x</code> to the entities they name.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-list"><td class="name">list</td><td class="type">type(<a href="../type/entity_list_t.html">entity_list_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the entities</p></td></tr>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the unit</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/apply_one.html">apply_one</a></li><li><a href="../proc/push.html">push</a></li><li><a href="../proc/contains_string.html">contains_string</a></li><li><a href="../proc/mark_common_members.html">mark_common_members</a></li></ul>
+<div class="graph"><svg width="424pt" height="172pt"
+ viewBox="0 0 424 172" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 167.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/apply_attributes.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-84.6" width="106.2" height="21.6"/><text x="53.1" y="-69.1">apply_attributes</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="341.8" y="-123.6" width="72.9" height="21.6"/><text x="378.2" y="-108.1">lowercase</text></a><path d="M100,-85.5C113.5,-88.6 128.4,-91.7 142.2,-93.8 208.3,-103.9 285.7,-108.8 333.1,-111.1"/><polygon fill="#8a93a5" points="333,-113.5 340.1,-111.4 333.2,-108.6"/><a href="../proc/apply_one.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="185.9" y="-84.6" width="74.4" height="21.6"/><text x="223.1" y="-69.1">apply_one</text></a><path d="M106.8,-73.8C129.4,-73.8 155.5,-73.8 177.2,-73.8"/><polygon fill="#8a93a5" points="177,-76.2 184,-73.8 177,-71.3"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="351.2" y="-24.6" width="54" height="21.6"/><text x="378.2" y="-9.1">push</text></a><path d="M65.9,-62.2C81.8,-47.6 111.4,-23.2 142.2,-13.8 210.6,7.3 295.8,-0.5 342.5,-7.5"/><polygon fill="#8a93a5" points="341.9,-9.9 349.2,-8.6 342.7,-5.1"/><a href="../proc/contains_string.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="172.1" y="-44.6" width="101.8" height="21.6"/><text x="223.1" y="-29.1">contains_string</text></a><path d="M103.6,-62C123.3,-57.3 146.1,-51.9 166.4,-47"/><polygon fill="#8a93a5" points="166.9,-49.4 173.2,-45.4 165.8,-44.6"/><a href="../proc/mark_common_members.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="142.2" y="-162.6" width="161.8" height="21.6"/><text x="223.1" y="-147.1">mark_common_members</text></a><path d="M70.7,-85.4C87.9,-97.1 116,-115 142.2,-126.8 151.5,-131 161.7,-134.7 171.6,-138"/><polygon fill="#8a93a5" points="170.6,-140.2 178.1,-140 172.1,-135.6"/><path d="M260.8,-83.1C282.5,-88.6 310.2,-95.7 333.2,-101.5"/><polygon fill="#8a93a5" points="332.5,-103.9 339.9,-103.3 333.7,-99.2"/><path d="M260.5,-66.7C274.3,-63.5 290.1,-59.2 304,-53.8 320.8,-47.2 338.7,-37.5 352.5,-29.3"/><polygon fill="#8a93a5" points="353.7,-31.4 358.5,-25.7 351.2,-27.2"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="340" y="-83.6" width="76.5" height="21.6"/><text x="378.2" y="-68.1">starts_with</text></a><path d="M260.8,-73.5C281.9,-73.4 308.6,-73.2 331.1,-73.1"/><polygon fill="#8a93a5" points="331,-75.5 338,-73 331,-70.6"/><path d="M268.4,-140.5C288.7,-135.3 312.8,-129.2 333.1,-124"/><polygon fill="#8a93a5" points="333.6,-126.4 339.8,-122.3 332.4,-121.6"/><a href="../proc/strip.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="351.2" y="-163.6" width="54" height="21.6"/><text x="378.2" y="-148.1">strip</text></a><path d="M304.2,-152.3C317.7,-152.4 331.1,-152.5 342.6,-152.5"/><polygon fill="#8a93a5" points="342.5,-155 349.5,-152.6 342.5,-150.1"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/close_unit.html">close_unit</a></li></ul>
+<div class="graph"><svg width="594pt" height="30pt"
+ viewBox="0 0 594 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/apply_attributes.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="106.2" height="21.6"/><text x="53.1" y="-6.1">apply_attributes</text></a><a href="../proc/close_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="142.2" y="-21.6" width="72.9" height="21.6"/><text x="178.6" y="-6.1">close_unit</text></a><path d="M141.9,-10.8C133.5,-10.8 124.3,-10.8 115.1,-10.8"/><polygon fill="#8a93a5" points="115.3,-8.4 108.3,-10.8 115.3,-13.3"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="251.1" y="-21.6" width="70.8" height="21.6"/><text x="286.5" y="-6.1">parse_file</text></a><path d="M250.8,-10.8C242.3,-10.8 232.9,-10.8 223.9,-10.8"/><polygon fill="#8a93a5" points="224,-8.4 217,-10.8 224,-13.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="357.9" y="-21.6" width="138" height="21.6"/><text x="426.9" y="-6.1">load_project_sources</text></a><path d="M357.5,-10.8C348.3,-10.8 339.1,-10.8 330.5,-10.8"/><polygon fill="#8a93a5" points="330.7,-8.4 323.7,-10.8 330.7,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="531.9" y="-21.6" width="54" height="21.6"/><text x="558.9" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M531.6,-10.8C523.4,-10.8 514.1,-10.8 504.3,-10.8"/><polygon fill="#8a93a5" points="504.6,-8.4 497.6,-10.8 504.6,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> apply_attributes(list, id)
+    <span class="k">type</span>(entity_list_t), <span class="k">intent</span>(inout) :: list  <span class="d">!! the entities</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: id                   <span class="d">!! the unit</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: name
+    <span class="k">integer</span> :: c, k, child
+
+    <span class="k">associate</span> (u =&gt; list%box(id)%e)
+        <span class="k">do</span> c = <span class="n">1</span>, <span class="k">size</span>(u%children)
+            child = u%children(c)
+            <span class="k">associate</span> (e =&gt; list%box(child)%e)
+                <span class="k">select</span> <span class="k">case</span> (e%<span class="k">kind</span>)
+                <span class="k">case</span> (E_FUNCTION, E_SUBROUTINE, E_TYPE, E_INTERFACE, E_VARIABLE)
+                    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(e%name)) <span class="k">cycle</span>
+                    name = lowercase(e%name)
+                    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(u%more%pending)
+                        <span class="k">if</span> (u%more%pending(k)%name == name) <span class="k">then</span>
+                            <span class="k">call</span> apply_one(e, u, u%more%pending(k)%<span class="k">value</span>)
+                            u%more%pending(k)%name = <span class="s">''</span>
+                        <span class="k">end</span> <span class="k">if</span>
+                    <span class="k">end</span> <span class="k">do</span>
+                    <span class="k">if</span> (<span class="k">allocated</span>(e%permission)) <span class="k">then</span>
+                        <span class="k">if</span> (e%permission == <span class="s">'public'</span>) <span class="k">call</span> push(u%more%public_list, name)
+                    <span class="k">end</span> <span class="k">if</span>
+                <span class="k">end</span> <span class="k">select</span>
+            <span class="k">end</span> <span class="k">associate</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(u%more%pending)
+            <span class="k">if</span> (u%more%pending(k)%<span class="k">value</span> == <span class="s">'public'</span> <span class="k">.and.</span> <span class="k">len</span>(u%more%pending(k)%name) &gt; <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">call</span> push(u%more%public_list, u%more%pending(k)%name)
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">do</span> c = <span class="n">1</span>, <span class="k">size</span>(u%children)
+            child = u%children(c)
+            <span class="k">if</span> (list%box(child)%e%<span class="k">kind</span> /= E_VARIABLE) <span class="k">cycle</span>
+            <span class="k">if</span> (contains_string(list%box(child)%e%attribs, <span class="s">'external'</span>)) list%box(child)%e%var_role = VAR_HIDDEN
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> mark_common_members(list, id)
+    <span class="k">end</span> <span class="k">associate</span>
+<span class="k">end</span> <span class="k">subroutine</span> apply_attributes</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

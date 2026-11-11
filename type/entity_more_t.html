@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>entity_more_t &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a class="here" href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>Components</h4><ul><li><a href="#variable-ancestor"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>ancestor</a></li><li><a href="#variable-arg_ids"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>arg_ids</a></li><li><a href="#variable-args"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>args</a></li><li><a href="#variable-bind_c"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>bind_c</a></li><li><a href="#variable-binding_ids"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>binding_ids</a></li><li><a href="#variable-bindings"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>bindings</a></li><li><a href="#variable-calls"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>calls</a></li><li><a href="#variable-common_block"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>common_block</a></li><li><a href="#variable-descendants"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>descendants</a></li><li><a href="#variable-extends"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>extends</a></li><li><a href="#variable-inherited"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>inherited</a></li><li><a href="#variable-modproc_ids"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>modproc_ids</a></li><li><a href="#variable-modprocs"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>modprocs</a></li><li><a href="#variable-parameters"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>parameters</a></li><li><a href="#variable-parameters_list"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>parameters_list</a></li><li><a href="#variable-parent_submodule"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>parent_submodule</a></li><li><a href="#variable-pending"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>pending</a></li><li><a href="#variable-proto_text"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>proto_text</a></li><li><a href="#variable-public_list"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>public_list</a></li><li><a href="#variable-result_name"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>result_name</a></li><li><a href="#variable-saved_state"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>saved_state</a></li><li><a href="#variable-unknown_calls"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>unknown_calls</a></li><li><a href="#variable-uses"><span class="ico ico-v" title="variable" aria-hidden="true">V</span>uses</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4><ul data-list="types"></ul>
+</aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_model.f90.html">fdoc_model.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_model.html">fdoc_model</a></div>
+<h1><span class="kind">type</span>entity_more_t</h1>
+<div class="doc">
+<p>What only some entities have. Most entities are variables, which share one of these, so an
+entity takes half the memory; this makes up most of the memory used on large projects.</p>
+</div>
+<h2 id="components">Components</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Default</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-ancestor"><td class="name">ancestor</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the ancestor module, in lowercase</p></td></tr>
+<tr id="variable-arg_ids"><td class="name">arg_ids</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the entity of each argument</p></td></tr>
+<tr id="variable-args"><td class="name">args</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>dummy argument names as written</p></td></tr>
+<tr id="variable-bind_c"><td class="name">bind_c</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the text of <code>bind(...)</code>, if any</p></td></tr>
+<tr id="variable-binding_ids"><td class="name">binding_ids</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>what each of <code>bindings</code> is, once found</p></td></tr>
+<tr id="variable-bindings"><td class="name">bindings</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>what it is bound to</p></td></tr>
+<tr id="variable-calls"><td class="name">calls</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p><code>%</code>-separated names of what it calls, in lowercase</p></td></tr>
+<tr id="variable-common_block"><td class="name">common_block</td><td class="type">logical</td><td class="attributes"></td><td class="default">.false.</td><td><p>a procedure with a common block</p></td></tr>
+<tr id="variable-descendants"><td class="name">descendants</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the submodules directly below this entity</p></td></tr>
+<tr id="variable-extends"><td class="name">extends</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the parent type's name as written, if any</p></td></tr>
+<tr id="variable-inherited"><td class="name">inherited</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the components and bindings it inherits</p></td></tr>
+<tr id="variable-modproc_ids"><td class="name">modproc_ids</td><td class="type">integer</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>those procedures, once found</p></td></tr>
+<tr id="variable-modprocs"><td class="name">modprocs</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>procedures listed by <code>module procedure</code></p></td></tr>
+<tr id="variable-parameters"><td class="name">parameters</td><td class="type">type(<a href="../type/attribute_t.html">attribute_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>values from <code>parameter</code> statements</p></td></tr>
+<tr id="variable-parameters_list"><td class="name">parameters_list</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>type parameter names</p></td></tr>
+<tr id="variable-parent_submodule"><td class="name">parent_submodule</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the parent submodule, in lowercase</p></td></tr>
+<tr id="variable-pending"><td class="name">pending</td><td class="type">type(<a href="../type/attribute_t.html">attribute_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>attributes waiting to be applied</p></td></tr>
+<tr id="variable-proto_text"><td class="name">proto_text</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the interface in <code>procedure(...)</code>, if any</p></td></tr>
+<tr id="variable-public_list"><td class="name">public_list</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>names known to be public, in lowercase</p></td></tr>
+<tr id="variable-result_name"><td class="name">result_name</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td class="default"></td><td><p>the result's name as written</p></td></tr>
+<tr id="variable-saved_state"><td class="name">saved_state</td><td class="type">logical</td><td class="attributes"></td><td class="default">.false.</td><td><p>a procedure that keeps values between calls</p></td></tr>
+<tr id="variable-unknown_calls"><td class="name">unknown_calls</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>the names of calls that were not found</p></td></tr>
+<tr id="variable-uses"><td class="name">uses</td><td class="type">type(<a href="../type/use_t.html">use_t</a>)</td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td class="default"></td><td><p>its <code>use</code> statements</p></td></tr>
+</tbody>
+</table>
+<h2 id="uses-of-type">Where it is used</h2>
+<h3>Component of (1)</h3>
+<ul class="chips kinds"><li class="ico-t"><span class="ico ico-t" title="derived type" aria-hidden="true">T</span><a href="../type/entity_t.html">entity_t</a></li></ul>
+<h3>Module variables (1)</h3>
+<ul class="chips kinds"><li class="ico-v"><span class="ico ico-v" title="variable" aria-hidden="true">V</span><a href="../module/fdoc_model.html#variable-no_more">no_more</a></li></ul>
+<h2 id="inherits">Inherits</h2>
+<div class="graph"><svg width="722pt" height="112pt"
+ viewBox="0 0 722 112" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 108.1)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/entity_more_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="621.3" y="-61.6" width="93.2" height="21.6"/><text x="667.9" y="-46.1">entity_more_t</text></a><a href="../type/use_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="157.2" y="-101.6" width="54" height="21.6"/><text x="184.2" y="-86.1">use_t</text></a><path stroke-dasharray="5,2" d="M624.7,-62.6C617.6,-64.2 610.3,-65.7 603.3,-66.8 462.1,-88.4 291.3,-91 219.6,-91"/><polygon fill="#8a93a5" points="219.9,-88.6 212.8,-91 219.8,-93.5"/><text x="420.8" y="-93.6" font-size="11" fill="#8a93a5">uses</text><a href="../type/attribute_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="148.1" y="-61.6" width="72.2" height="21.6"/><text x="184.2" y="-46.1">attribute_t</text></a><path stroke-dasharray="5,2" d="M620.7,-50.8C527.9,-50.8 319.8,-50.8 229,-50.8"/><polygon fill="#8a93a5" points="229.1,-48.4 222.1,-50.8 229.1,-53.3"/><text x="420.8" y="-53.4" font-size="11" fill="#8a93a5">pending, parameters</text><a href="https://jacobwilliams.github.io/fformat/type/string_t.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="155.7" y="-21.6" width="57" height="21.6"/><text x="184.2" y="-6.1">string_t</text></a><path stroke-dasharray="5,2" d="M628.5,-39C620.3,-36.9 611.6,-34.9 603.3,-33.6 463.3,-11.1 293.9,-9.7 221.2,-10.2"/><polygon fill="#8a93a5" points="221.3,-7.8 214.3,-10.3 221.4,-12.7"/><text x="420.8" y="-36.2" font-size="11" fill="#8a93a5">public_list, args, calls, unknown_calls, modprocs, parameters_list, bindings</text><a href="../type/rename_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="0" y="-101.6" width="69.3" height="21.6"/><text x="34.7" y="-86.1">rename_t</text></a><path stroke-dasharray="5,2" d="M156.8,-90.8C134.9,-90.8 103.4,-90.8 78,-90.8"/><polygon fill="#8a93a5" points="78.1,-88.4 71.1,-90.8 78.1,-93.3"/><text x="108.7" y="-93.4" font-size="11" fill="#8a93a5">renames</text></g>
+</svg>
+</div>
+<h2 id="inherited-by">Inherited by</h2>
+<div class="graph"><svg width="569pt" height="32pt"
+ viewBox="0 0 569 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 28)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../type/entity_more_t.html" fill="white" stroke="none"><rect fill="#a15c00" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="93.2" height="21.6"/><text x="46.6" y="-6.1">entity_more_t</text></a><a href="../type/entity_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="154.2" y="-21.6" width="56.3" height="21.6"/><text x="182.4" y="-6.1">entity_t</text></a><path stroke-dasharray="5,2" d="M154,-10.8C139,-10.8 119.9,-10.8 102,-10.8"/><polygon fill="#8a93a5" points="102.4,-8.4 95.4,-10.8 102.4,-13.3"/><text x="123.7" y="-13.4" font-size="11" fill="#8a93a5">more</text><a href="../type/entity_box_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="252.7" y="-21.6" width="84.5" height="21.6"/><text x="294.9" y="-6.1">entity_box_t</text></a><path stroke-dasharray="5,2" d="M252.4,-10.8C241.5,-10.8 229.8,-10.8 219.2,-10.8"/><polygon fill="#8a93a5" points="219.5,-8.4 212.5,-10.8 219.5,-13.3"/><text x="231.6" y="-13.4" font-size="11" fill="#8a93a5">e</text><a href="../type/entity_list_t.html" fill="white" stroke="none"><rect fill="#a15c00" rx="7.2" x="390.9" y="-21.6" width="79.4" height="21.6"/><text x="430.6" y="-6.1">entity_list_t</text></a><path stroke-dasharray="5,2" d="M390.6,-10.8C376.7,-10.8 360.8,-10.8 346.1,-10.8"/><polygon fill="#8a93a5" points="346.1,-8.4 339.1,-10.8 346.1,-13.3"/><text x="364" y="-13.4" font-size="11" fill="#8a93a5">box</text><rect fill="#8a93a5" stroke="none" rx="7.2" x="507.3" y="-21.6" width="54" height="21.6"/><text x="534.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M506.9,-10.8C498.3,-10.8 488.5,-10.8 478.9,-10.8"/><polygon fill="#8a93a5" points="479.1,-8.4 472.1,-10.8 479.1,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">type</span>, <span class="k">public</span> :: entity_more_t
+    <span class="d">!! What only some entities have. Most entities are variables, which share one of these, so an</span>
+    <span class="d">!! entity takes half the memory; this makes up most of the memory used on large projects.</span>
+    <span class="k">type</span>(use_t), <span class="k">allocatable</span> :: uses(:)         <span class="d">!! its `use` statements</span>
+    <span class="k">type</span>(attribute_t), <span class="k">allocatable</span> :: pending(:)    <span class="d">!! attributes waiting to be applied</span>
+    <span class="k">type</span>(attribute_t), <span class="k">allocatable</span> :: parameters(:) <span class="d">!! values from `parameter` statements</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: public_list(:)   <span class="d">!! names known to be public, in lowercase</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: ancestor       <span class="d">!! the ancestor module, in lowercase</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: parent_submodule  <span class="d">!! the parent submodule, in lowercase</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: descendants(:)      <span class="d">!! the submodules directly below this entity</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: args(:)      <span class="d">!! dummy argument names as written</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: arg_ids(:)          <span class="d">!! the entity of each argument</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: result_name    <span class="d">!! the result's name as written</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: bind_c     <span class="d">!! the text of `bind(...)`, if any</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: calls(:)     <span class="d">!! `%`-separated names of what it calls, in lowercase</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: unknown_calls(:) <span class="d">!! the names of calls that were not found</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: modprocs(:)  <span class="d">!! procedures listed by `module procedure`</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: modproc_ids(:)      <span class="d">!! those procedures, once found</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: <span class="k">extends</span>    <span class="d">!! the parent type's name as written, if any</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: parameters_list(:)   <span class="d">!! type parameter names</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: inherited(:)        <span class="d">!! the components and bindings it inherits</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: bindings(:)  <span class="d">!! what it is bound to</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: proto_text <span class="d">!! the interface in `procedure(...)`, if any</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span> :: binding_ids(:)      <span class="d">!! what each of `bindings` is, once found</span>
+    <span class="k">logical</span> :: saved_state = <span class="k">.false.</span>            <span class="d">!! a procedure that keeps values between calls</span>
+    <span class="k">logical</span> :: common_block = <span class="k">.false.</span>          <span class="d">!! a procedure with a common block</span>
+<span class="k">end</span> <span class="k">type</span> entity_more_t</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

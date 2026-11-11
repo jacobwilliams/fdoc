@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>encoded &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>encoded<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> encoded(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-inout" title="intent(inout)">out</span>)</div>
+<div class="doc">
+<p>Write <code>text</code> as numeric character references.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-out"><td class="name">out</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add.html">add</a></li><li><a href="../proc/int_text.html">int_text</a></li></ul>
+<div class="graph"><svg width="165pt" height="70pt"
+ viewBox="0 0 165 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/encoded.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="64.3" height="21.6"/><text x="32.1" y="-26.1">encoded</text></a><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="101.4" y="-61.6" width="54" height="21.6"/><text x="128.4" y="-46.1">add</text></a><path d="M65.1,-37.6C74.1,-39.5 83.9,-41.6 93,-43.5"/><polygon fill="#8a93a5" points="92.3,-45.9 99.7,-44.9 93.4,-41.1"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="100.3" y="-21.6" width="56.3" height="21.6"/><text x="128.4" y="-6.1">int_text</text></a><path d="M65.1,-24C73.6,-22.2 83,-20.2 91.8,-18.4"/><polygon fill="#8a93a5" points="92.1,-20.8 98.5,-16.9 91.1,-16"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/inline_angle.html">inline_angle</a></li></ul>
+<div class="graph"><svg width="516pt" height="190pt"
+ viewBox="0 0 516 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 185.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/encoded.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="64.3" height="21.6"/><text x="32.1" y="-86.1">encoded</text></a><a href="../proc/inline_angle.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="100.3" y="-101.6" width="83.8" height="21.6"/><text x="142.2" y="-86.1">inline_angle</text></a><path d="M100,-90.8C91.3,-90.8 82.2,-90.8 73.6,-90.8"/><polygon fill="#8a93a5" points="73.6,-88.4 66.6,-90.8 73.6,-93.3"/><a href="../proc/inline.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="220.1" y="-101.6" width="54" height="21.6"/><text x="247.1" y="-86.1">inline</text></a><path d="M219.6,-90.8C211.4,-90.8 202,-90.8 192.8,-90.8"/><polygon fill="#8a93a5" points="192.9,-88.4 185.9,-90.8 192.9,-93.3"/><a href="../proc/render_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="319.8" y="-181.6" width="88.1" height="21.6"/><text x="363.9" y="-166.1">render_node</text></a><path d="M327.3,-159.6C321.3,-157.1 315.4,-154.2 310.1,-150.8 291.8,-139.2 274.3,-121.5 262.6,-108.4"/><polygon fill="#8a93a5" points="264.5,-106.8 258.1,-103.1 260.8,-110"/><a href="../proc/render_heading.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="311.1" y="-141.6" width="105.5" height="21.6"/><text x="363.9" y="-126.1">render_heading</text></a><path d="M330.6,-119.6C315.5,-114.3 297.4,-108 282.1,-102.6"/><polygon fill="#8a93a5" points="283.2,-100.4 275.8,-100.4 281.6,-105.1"/><a href="../proc/table_row.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="328.5" y="-101.6" width="70.8" height="21.6"/><text x="363.9" y="-86.1">table_row</text></a><path d="M328.1,-90.8C313.7,-90.8 296.9,-90.8 282.5,-90.8"/><polygon fill="#8a93a5" points="282.8,-88.4 275.8,-90.8 282.8,-93.3"/><a href="../proc/write_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="329.6" y="-61.6" width="68.6" height="21.6"/><text x="363.9" y="-46.1">write_link</text></a><path d="M330.6,-62C315.5,-67.3 297.4,-73.6 282.1,-79"/><polygon fill="#8a93a5" points="281.6,-76.5 275.8,-81.2 283.2,-81.2"/><a href="../proc/inline_emphasis.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="310.1" y="-21.6" width="107.6" height="21.6"/><text x="363.9" y="-6.1">inline_emphasis</text></a><path d="M327.3,-22C321.3,-24.5 315.4,-27.4 310.1,-30.8 291.8,-42.4 274.3,-60.1 262.6,-73.2"/><polygon fill="#8a93a5" points="260.8,-71.6 258.1,-78.5 264.5,-74.8"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="453.7" y="-181.6" width="54" height="21.6"/><text x="480.7" y="-166.1" fill="white">...</text><path stroke-dasharray="5,2" d="M453.4,-170.8C442.4,-170.8 429.2,-170.8 416.5,-170.8"/><polygon fill="#8a93a5" points="416.7,-168.4 409.7,-170.8 416.7,-173.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="453.7" y="-101.6" width="54" height="21.6"/><text x="480.7" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M453.4,-90.8C439.8,-90.8 423,-90.8 407.7,-90.8"/><polygon fill="#8a93a5" points="407.9,-88.4 400.9,-90.8 407.9,-93.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="453.7" y="-61.6" width="54" height="21.6"/><text x="480.7" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M453.4,-50.8C439.6,-50.8 422.5,-50.8 406.9,-50.8"/><polygon fill="#8a93a5" points="407,-48.4 400,-50.8 407,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> encoded(text, out)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: out    <span class="d">!! the HTML</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">len</span>(text)
+        <span class="k">call</span> add(out, <span class="s">'&amp;#'</span>//<span class="k">trim</span>(int_text(<span class="k">iachar</span>(text(k:k))))//<span class="s">';'</span>)
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> encoded</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

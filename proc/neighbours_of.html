@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>neighbours_of &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_graphs.f90.html">fdoc_graphs.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_graphs.html">fdoc_graphs</a></div>
+<h1><span class="kind">subroutine</span>neighbours_of<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> neighbours_of(<span class="intent attr-in" title="intent(in)">p</span>, <span class="intent attr-in" title="intent(in)">relation</span>, <span class="intent attr-in" title="intent(in)">job</span>, <span class="intent attr-out" title="intent(out)">ids</span>)</div>
+<div class="doc">
+<p>What is next to the one root of <code>job</code> in its graph: the first entities that <a href="../proc/describe_graph.html">describe_graph</a> reaches,
+in the same order and within the same limit, so that a list of them matches the drawing.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-relation"><td class="name">relation</td><td class="type">type(<a href="../type/adjacency_t.html">adjacency_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the relation</p></td></tr>
+<tr id="variable-job"><td class="name">job</td><td class="type">type(<a href="../type/graph_job_t.html">graph_job_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the graph</p></td></tr>
+<tr id="variable-ids"><td class="name">ids</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span><span class="attr attr-dimension">dimension(:)</span></td><td><p>the entities next to the root</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li>consider</li></ul>
+<div class="graph"><svg width="204pt" height="30pt"
+ viewBox="0 0 204 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/neighbours_of.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="96.8" height="21.6"/><text x="48.4" y="-6.1">neighbours_of</text></a><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="132.8" y="-21.6" width="63.5" height="21.6"/><text x="164.6" y="-6.1">push_int</text></a><path d="M97.5,-10.8C106.4,-10.8 115.5,-10.8 124.1,-10.8"/><polygon fill="#8a93a5" points="123.9,-13.3 130.9,-10.8 123.9,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/build_graphs.html">build_graphs</a></li></ul>
+<div class="graph"><svg width="425pt" height="30pt"
+ viewBox="0 0 425 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/neighbours_of.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="96.8" height="21.6"/><text x="48.4" y="-6.1">neighbours_of</text></a><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="132.8" y="-21.6" width="88.8" height="21.6"/><text x="177.2" y="-6.1">build_graphs</text></a><path d="M132.6,-10.8C124,-10.8 114.9,-10.8 106,-10.8"/><polygon fill="#8a93a5" points="106,-8.4 99,-10.8 106,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="257.6" y="-21.6" width="69.3" height="21.6"/><text x="292.3" y="-6.1">write_site</text></a><path d="M257.4,-10.8C248.8,-10.8 239.4,-10.8 230.2,-10.8"/><polygon fill="#8a93a5" points="230.3,-8.4 223.3,-10.8 230.3,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="363" y="-21.6" width="54" height="21.6"/><text x="390" y="-6.1">run</text></a><path d="M362.6,-10.8C354.2,-10.8 344.7,-10.8 335.5,-10.8"/><polygon fill="#8a93a5" points="335.7,-8.4 328.7,-10.8 335.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> neighbours_of(p, relation, job, ids)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(in) :: p                <span class="d">!! the project</span>
+    <span class="k">type</span>(adjacency_t), <span class="k">intent</span>(in) :: relation       <span class="d">!! the relation</span>
+    <span class="k">type</span>(graph_job_t), <span class="k">intent</span>(in) :: job            <span class="d">!! the graph</span>
+    <span class="k">integer</span>, <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: ids(:)     <span class="d">!! the entities next to the root</span>
+    <span class="k">integer</span> :: j, other, root
+
+    <span class="k">allocate</span> (ids(<span class="n">0</span>))
+    root = job%roots(<span class="n">1</span>)
+    <span class="k">if</span> (job%max_depth &lt; <span class="n">1</span>) <span class="k">return</span>
+    <span class="k">if</span> (job%forward) <span class="k">then</span>
+        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(relation%out(root)%ids)) <span class="k">return</span>
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(relation%out(root)%ids)
+            <span class="k">call</span> consider(relation%out(root)%ids(j))
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">else</span>
+        <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(relation%in(root)%ids)) <span class="k">return</span>
+        <span class="k">do</span> j = <span class="n">1</span>, <span class="k">size</span>(relation%in(root)%ids)
+            <span class="k">call</span> consider(relation%in(root)%ids(j))
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">if</span>
+
+<span class="k">contains</span>
+
+    <span class="d">!&gt; Add `other` if the graph has room for it.</span>
+    <span class="k">subroutine</span> consider(item)
+        <span class="k">integer</span>, <span class="k">intent</span>(in) :: item     <span class="d">!! the entity</span>
+
+        other = item
+        <span class="k">if</span> (other == root <span class="k">.or.</span> p%list%box(other)%e%<span class="k">kind</span> == E_NONE) <span class="k">return</span>
+        <span class="k">if</span> (<span class="k">any</span>(ids == other)) <span class="k">return</span>
+        <span class="k">if</span> (<span class="k">size</span>(ids) + <span class="n">1</span> &gt;= job%max_nodes) <span class="k">return</span>
+        <span class="k">call</span> push_int(ids, other)
+    <span class="k">end</span> <span class="k">subroutine</span> consider
+
+<span class="k">end</span> <span class="k">subroutine</span> neighbours_of</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fdoc_stats.f90 &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a class="here" href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4><a href="../lists/files.html">Source Files</a></h4><ul data-list="files"></ul>
+<h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<h1><span class="kind">file</span>fdoc_stats.f90</h1>
+<h2 id="contents">Contents</h2>
+<div class="item" id="module-fdoc_stats"><h3><a href="../module/fdoc_stats.html">fdoc_stats</a><span class="attr attr-private">private</span></h3>
+<p>The size of source files: how many lines hold code, comments or nothing. This uses fformat's tokens,
+so that a <code>!</code> in a string is not taken for a comment. It runs in parallel, so nothing here calls a
+function returning a deferred-length string (see <code>example/slen_race.f90</code>).</p>
+</div>
+<h2 id="files-that-depend-on-this-one">Files that depend on this one</h2>
+<div class="graph"><svg width="324pt" height="30pt"
+ viewBox="0 0 324 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../sourcefile/fdoc_stats.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="95.3" height="21.6"/><text x="47.7" y="-6.1">fdoc_stats.f90</text></a><a href="../sourcefile/fdoc_site.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="131.3" y="-21.6" width="88.1" height="21.6"/><text x="175.4" y="-6.1">fdoc_site.f90</text></a><path d="M131.1,-10.8C122.6,-10.8 113.6,-10.8 104.7,-10.8"/><polygon fill="#8a93a5" points="104.8,-8.4 97.8,-10.8 104.8,-13.3"/><a href="../sourcefile/fdoc.f90.html" fill="white" stroke="none"><rect fill="#5c6f2d" rx="7.2" x="255.5" y="-21.6" width="60.7" height="21.6"/><text x="285.8" y="-6.1">fdoc.f90</text></a><path d="M255.2,-10.8C246.8,-10.8 237.5,-10.8 228.2,-10.8"/><polygon fill="#8a93a5" points="228.3,-8.4 221.3,-10.8 228.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<pre class="source"><code><a class="ln" id="ln-1" href="#ln-1"></a><span class="k">module</span> fdoc_stats
+<a class="ln" id="ln-2" href="#ln-2"></a><span class="d">!! The size of source files: how many lines hold code, comments or nothing. This uses fformat's tokens,</span>
+<a class="ln" id="ln-3" href="#ln-3"></a><span class="d">!! so that a `!` in a string is not taken for a comment. It runs in parallel, so nothing here calls a</span>
+<a class="ln" id="ln-4" href="#ln-4"></a><span class="d">!! function returning a deferred-length string (see `example/slen_race.f90`).</span>
+<a class="ln" id="ln-5" href="#ln-5"></a><span class="k">use</span> iso_fortran_env, <span class="k">only</span>: int64
+<a class="ln" id="ln-6" href="#ln-6"></a><span class="k">use</span> ffmt_tokens, <span class="k">only</span>: token_list_t, TK_SPACE, TK_NEWLINE, TK_COMMENT, TK_BOM
+<a class="ln" id="ln-7" href="#ln-7"></a><span class="k">use</span> ffmt_lexer, <span class="k">only</span>: tokenize
+<a class="ln" id="ln-8" href="#ln-8"></a><span class="k">implicit</span> <span class="k">none</span>
+<a class="ln" id="ln-9" href="#ln-9"></a><span class="k">private</span>
+<a class="ln" id="ln-10" href="#ln-10"></a>
+<a class="ln" id="ln-11" href="#ln-11"></a><span class="k">public</span> :: file_stats_t, count_source, add_stats
+<a class="ln" id="ln-12" href="#ln-12"></a>
+<a class="ln" id="ln-13" href="#ln-13"></a><span class="k">type</span> :: file_stats_t
+<a class="ln" id="ln-14" href="#ln-14"></a>    <span class="d">!! The size of a source file, or of several.</span>
+<a class="ln" id="ln-15" href="#ln-15"></a>    <span class="k">integer</span> :: lines = <span class="n">0</span>                <span class="d">!! all lines</span>
+<a class="ln" id="ln-16" href="#ln-16"></a>    <span class="k">integer</span> :: code = <span class="n">0</span>                 <span class="d">!! lines with code, which may also have a comment</span>
+<a class="ln" id="ln-17" href="#ln-17"></a>    <span class="k">integer</span> :: comments = <span class="n">0</span>             <span class="d">!! lines with only a comment</span>
+<a class="ln" id="ln-18" href="#ln-18"></a>    <span class="k">integer</span> :: blank = <span class="n">0</span>                <span class="d">!! lines with nothing</span>
+<a class="ln" id="ln-19" href="#ln-19"></a>    <span class="k">integer</span> :: procedures = <span class="n">0</span>           <span class="d">!! procedures defined in it</span>
+<a class="ln" id="ln-20" href="#ln-20"></a>    <span class="k">integer</span>(int64) :: bytes = <span class="n">0</span>         <span class="d">!! its size</span>
+<a class="ln" id="ln-21" href="#ln-21"></a><span class="k">end</span> <span class="k">type</span> file_stats_t
+<a class="ln" id="ln-22" href="#ln-22"></a>
+<a class="ln" id="ln-23" href="#ln-23"></a><span class="k">contains</span>
+<a class="ln" id="ln-24" href="#ln-24"></a>
+<a class="ln" id="ln-25" href="#ln-25"></a><span class="d">!&gt; Count the lines of `text`. A last line with no line ending counts as a line.</span>
+<a class="ln" id="ln-26" href="#ln-26"></a><span class="k">subroutine</span> count_source(text, stats)
+<a class="ln" id="ln-27" href="#ln-27"></a>    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the source</span>
+<a class="ln" id="ln-28" href="#ln-28"></a>    <span class="k">type</span>(file_stats_t), <span class="k">intent</span>(inout) :: stats  <span class="d">!! where the counts go</span>
+<a class="ln" id="ln-29" href="#ln-29"></a>    <span class="k">type</span>(token_list_t) :: tokens
+<a class="ln" id="ln-30" href="#ln-30"></a>    <span class="k">logical</span> :: code, comment, <span class="k">open</span>
+<a class="ln" id="ln-31" href="#ln-31"></a>    <span class="k">integer</span> :: k
+<a class="ln" id="ln-32" href="#ln-32"></a>
+<a class="ln" id="ln-33" href="#ln-33"></a>    stats%bytes = <span class="k">len</span>(text, int64)
+<a class="ln" id="ln-34" href="#ln-34"></a>    <span class="k">call</span> tokenize(text, tokens)
+<a class="ln" id="ln-35" href="#ln-35"></a>    code = <span class="k">.false.</span>
+<a class="ln" id="ln-36" href="#ln-36"></a>    comment = <span class="k">.false.</span>
+<a class="ln" id="ln-37" href="#ln-37"></a>    <span class="k">open</span> = <span class="k">.false.</span>
+<a class="ln" id="ln-38" href="#ln-38"></a>    <span class="k">do</span> k = <span class="n">1</span>, tokens%n
+<a class="ln" id="ln-39" href="#ln-39"></a>        <span class="k">select</span> <span class="k">case</span> (tokens%tok(k)%<span class="k">kind</span>)
+<a class="ln" id="ln-40" href="#ln-40"></a>        <span class="k">case</span> (TK_NEWLINE)
+<a class="ln" id="ln-41" href="#ln-41"></a>            <span class="k">call</span> end_line()
+<a class="ln" id="ln-42" href="#ln-42"></a>            <span class="k">cycle</span>
+<a class="ln" id="ln-43" href="#ln-43"></a>        <span class="k">case</span> (TK_COMMENT)
+<a class="ln" id="ln-44" href="#ln-44"></a>            comment = <span class="k">.true.</span>
+<a class="ln" id="ln-45" href="#ln-45"></a>        <span class="k">case</span> (TK_SPACE, TK_BOM)
+<a class="ln" id="ln-46" href="#ln-46"></a>            <span class="k">continue</span>
+<a class="ln" id="ln-47" href="#ln-47"></a>        <span class="k">case</span> default
+<a class="ln" id="ln-48" href="#ln-48"></a>            code = <span class="k">.true.</span>
+<a class="ln" id="ln-49" href="#ln-49"></a>        <span class="k">end</span> <span class="k">select</span>
+<a class="ln" id="ln-50" href="#ln-50"></a>        <span class="k">open</span> = <span class="k">.true.</span>
+<a class="ln" id="ln-51" href="#ln-51"></a>    <span class="k">end</span> <span class="k">do</span>
+<a class="ln" id="ln-52" href="#ln-52"></a>    <span class="k">if</span> (<span class="k">open</span>) <span class="k">call</span> end_line()
+<a class="ln" id="ln-53" href="#ln-53"></a>
+<a class="ln" id="ln-54" href="#ln-54"></a><span class="k">contains</span>
+<a class="ln" id="ln-55" href="#ln-55"></a>
+<a class="ln" id="ln-56" href="#ln-56"></a>    <span class="d">!&gt; Count the line that ends here.</span>
+<a class="ln" id="ln-57" href="#ln-57"></a>    <span class="k">subroutine</span> end_line()
+<a class="ln" id="ln-58" href="#ln-58"></a>
+<a class="ln" id="ln-59" href="#ln-59"></a>        stats%lines = stats%lines + <span class="n">1</span>
+<a class="ln" id="ln-60" href="#ln-60"></a>        <span class="k">if</span> (code) <span class="k">then</span>
+<a class="ln" id="ln-61" href="#ln-61"></a>            stats%code = stats%code + <span class="n">1</span>
+<a class="ln" id="ln-62" href="#ln-62"></a>        <span class="k">else</span> <span class="k">if</span> (comment) <span class="k">then</span>
+<a class="ln" id="ln-63" href="#ln-63"></a>            stats%comments = stats%comments + <span class="n">1</span>
+<a class="ln" id="ln-64" href="#ln-64"></a>        <span class="k">else</span>
+<a class="ln" id="ln-65" href="#ln-65"></a>            stats%blank = stats%blank + <span class="n">1</span>
+<a class="ln" id="ln-66" href="#ln-66"></a>        <span class="k">end</span> <span class="k">if</span>
+<a class="ln" id="ln-67" href="#ln-67"></a>        code = <span class="k">.false.</span>
+<a class="ln" id="ln-68" href="#ln-68"></a>        comment = <span class="k">.false.</span>
+<a class="ln" id="ln-69" href="#ln-69"></a>        <span class="k">open</span> = <span class="k">.false.</span>
+<a class="ln" id="ln-70" href="#ln-70"></a>    <span class="k">end</span> <span class="k">subroutine</span> end_line
+<a class="ln" id="ln-71" href="#ln-71"></a>
+<a class="ln" id="ln-72" href="#ln-72"></a><span class="k">end</span> <span class="k">subroutine</span> count_source
+<a class="ln" id="ln-73" href="#ln-73"></a>
+<a class="ln" id="ln-74" href="#ln-74"></a><span class="d">!&gt; Add the counts of `item` to `total`.</span>
+<a class="ln" id="ln-75" href="#ln-75"></a><span class="k">pure</span> <span class="k">subroutine</span> add_stats(total, item)
+<a class="ln" id="ln-76" href="#ln-76"></a>    <span class="k">type</span>(file_stats_t), <span class="k">intent</span>(inout) :: total  <span class="d">!! the total</span>
+<a class="ln" id="ln-77" href="#ln-77"></a>    <span class="k">type</span>(file_stats_t), <span class="k">intent</span>(in) :: item      <span class="d">!! what to add</span>
+<a class="ln" id="ln-78" href="#ln-78"></a>
+<a class="ln" id="ln-79" href="#ln-79"></a>    total%lines = total%lines + item%lines
+<a class="ln" id="ln-80" href="#ln-80"></a>    total%code = total%code + item%code
+<a class="ln" id="ln-81" href="#ln-81"></a>    total%comments = total%comments + item%comments
+<a class="ln" id="ln-82" href="#ln-82"></a>    total%blank = total%blank + item%blank
+<a class="ln" id="ln-83" href="#ln-83"></a>    total%procedures = total%procedures + item%procedures
+<a class="ln" id="ln-84" href="#ln-84"></a>    total%bytes = total%bytes + item%bytes
+<a class="ln" id="ln-85" href="#ln-85"></a><span class="k">end</span> <span class="k">subroutine</span> add_stats
+<a class="ln" id="ln-86" href="#ln-86"></a>
+<a class="ln" id="ln-87" href="#ln-87"></a><span class="k">end</span> <span class="k">module</span> fdoc_stats
+<a class="ln" id="ln-88" href="#ln-88"></a></code></pre>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

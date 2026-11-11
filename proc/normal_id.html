@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>normal_id &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>normal_id<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> normal_id(<span class="intent attr-in" title="intent(in)">id</span>, <span class="intent attr-out" title="intent(out)">out</span>)</div>
+<div class="doc">
+<p><code>id</code> in lowercase, with runs of whitespace as single blanks.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-id"><td class="name">id</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the reference name</p></td></tr>
+<tr id="variable-out"><td class="name">out</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>its normal form</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/split_words.html">split_words</a></li><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li><li><a href="../proc/join.html">join</a></li></ul>
+<div class="graph"><svg width="285pt" height="110pt"
+ viewBox="0 0 285 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/normal_id.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="71.5" height="21.6"/><text x="35.7" y="-46.1">normal_id</text></a><a href="../proc/split_words.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="107.5" y="-101.6" width="79.4" height="21.6"/><text x="147.2" y="-86.1">split_words</text></a><path d="M69,-62.6C81.1,-67 95,-72.1 107.6,-76.7"/><polygon fill="#8a93a5" points="106.5,-78.9 113.9,-79 108.2,-74.3"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="110.7" y="-61.6" width="72.9" height="21.6"/><text x="147.2" y="-46.1">lowercase</text></a><path d="M72.3,-50.8C81.8,-50.8 92.3,-50.8 102.2,-50.8"/><polygon fill="#8a93a5" points="102,-53.3 109,-50.8 102,-48.4"/><a href="../proc/join.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="120.2" y="-21.6" width="54" height="21.6"/><text x="147.2" y="-6.1">join</text></a><path d="M69,-39C82.5,-34.1 98.2,-28.3 111.9,-23.3"/><polygon fill="#8a93a5" points="112.5,-25.7 118.3,-21 110.9,-21.1"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="222.9" y="-101.6" width="54" height="21.6"/><text x="249.9" y="-86.1">push</text></a><path d="M187.1,-90.8C196,-90.8 205.4,-90.8 214.1,-90.8"/><polygon fill="#8a93a5" points="214,-93.3 221,-90.8 214,-88.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/collect_definitions.html">collect_definitions</a></li><li><a href="../proc/find_reference.html">find_reference</a></li></ul>
+<div class="graph"><svg width="640pt" height="190pt"
+ viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 185.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/normal_id.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="71.5" height="21.6"/><text x="35.7" y="-66.1">normal_id</text></a><a href="../proc/collect_definitions.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="107.5" y="-101.6" width="117" height="21.6"/><text x="166" y="-86.1">collect_definitions</text></a><path d="M107.2,-81.8C98.3,-80.4 89.1,-79 80.5,-77.6"/><polygon fill="#8a93a5" points="80.9,-75.2 73.6,-76.6 80.2,-80.1"/><a href="../proc/find_reference.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="117.2" y="-61.6" width="97.5" height="21.6"/><text x="166" y="-46.1">find_reference</text></a><path d="M116.9,-58.3C105,-60.2 92.3,-62.1 80.6,-64"/><polygon fill="#8a93a5" points="80.3,-61.5 73.8,-65 81.1,-66.4"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="260.5" y="-101.6" width="124.2" height="21.6"/><text x="322.6" y="-86.1">markdown_to_html</text></a><path d="M260.1,-90.8C251.3,-90.8 242.2,-90.8 233.3,-90.8"/><polygon fill="#8a93a5" points="233.3,-88.4 226.3,-90.8 233.3,-93.3"/><a href="../proc/inline_bracket.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="275.3" y="-61.6" width="94.6" height="21.6"/><text x="322.6" y="-46.1">inline_bracket</text></a><path d="M275.2,-50.8C258.9,-50.8 240.5,-50.8 223.4,-50.8"/><polygon fill="#8a93a5" points="223.7,-48.4 216.7,-50.8 223.7,-53.3"/><a href="../proc/inline_image.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="278.9" y="-21.6" width="87.4" height="21.6"/><text x="322.6" y="-6.1">inline_image</text></a><path d="M278.5,-21.9C260,-26.7 238.2,-32.4 218.8,-37.4"/><polygon fill="#8a93a5" points="218.3,-35 212.1,-39.1 219.5,-39.7"/><a href="../proc/markdown_list.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="432.7" y="-181.6" width="97.5" height="21.6"/><text x="481.4" y="-166.1">markdown_list</text></a><path d="M442.6,-159.6C435.3,-157 427.7,-154 420.7,-150.8 393.8,-138.2 365.2,-119.8 346,-106.7"/><polygon fill="#8a93a5" points="347.5,-104.8 340.4,-102.8 344.7,-108.8"/><a href="../proc/render_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="441.3" y="-141.6" width="80.2" height="21.6"/><text x="481.4" y="-126.1">render_text</text></a><path d="M440.8,-120.7C421.1,-115.7 397,-109.5 375.8,-104.1"/><polygon fill="#8a93a5" points="376.7,-101.8 369.3,-102.5 375.5,-106.6"/><a href="../proc/stash_html_blocks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="420.7" y="-101.6" width="121.3" height="21.6"/><text x="481.4" y="-86.1">stash_html_blocks</text></a><path d="M420.2,-90.8C411.5,-90.8 402.5,-90.8 393.6,-90.8"/><polygon fill="#8a93a5" points="393.7,-88.4 386.7,-90.8 393.7,-93.3"/><a href="../proc/render_footnotes.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="425.1" y="-61.6" width="112.7" height="21.6"/><text x="481.4" y="-46.1">render_footnotes</text></a><path d="M436.3,-62C417.5,-66.8 395.5,-72.5 375.9,-77.5"/><polygon fill="#8a93a5" points="375.3,-75.1 369.1,-79.2 376.5,-79.8"/><a href="../proc/inline.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="454.4" y="-21.6" width="54" height="21.6"/><text x="481.4" y="-6.1">inline</text></a><path d="M454.2,-17.5C432.8,-22.9 402.1,-30.8 375.8,-37.5"/><polygon fill="#8a93a5" points="375.4,-35.1 369.2,-39.2 376.6,-39.8"/><path d="M454.2,-10.8C432.6,-10.8 401.4,-10.8 374.9,-10.8"/><polygon fill="#8a93a5" points="375,-8.4 368,-10.8 375,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="578.1" y="-181.6" width="54" height="21.6"/><text x="605.1" y="-166.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.7,-170.8C566.2,-170.8 552.3,-170.8 538.7,-170.8"/><polygon fill="#8a93a5" points="538.8,-168.4 531.8,-170.8 538.8,-173.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="578.1" y="-141.6" width="54" height="21.6"/><text x="605.1" y="-126.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.7,-130.8C563.7,-130.8 546.2,-130.8 530,-130.8"/><polygon fill="#8a93a5" points="530.2,-128.4 523.2,-130.8 530.2,-133.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="578.1" y="-21.6" width="54" height="21.6"/><text x="605.1" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M577.7,-10.8C560,-10.8 536.5,-10.8 517.2,-10.8"/><polygon fill="#8a93a5" points="517.3,-8.4 510.3,-10.8 517.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> normal_id(id, out)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: id                  <span class="d">!! the reference name</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: out   <span class="d">!! its normal form</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: words(:)
+
+    words = split_words(lowercase(id))
+    out = join(words, <span class="s">' '</span>)
+<span class="k">end</span> <span class="k">subroutine</span> normal_id</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

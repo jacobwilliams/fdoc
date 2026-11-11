@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>explained_badge &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>explained_badge<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> explained_badge(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">explanation</span>, <span class="intent attr-inout" title="intent(inout)">b</span>)</div>
+<div class="doc">
+<p>Write <code>text</code> as a badge, with an explanation for when the pointer is over it.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the attribute</p></td></tr>
+<tr id="variable-explanation"><td class="name">explanation</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>what it means</p></td></tr>
+<tr id="variable-b"><td class="name">b</td><td class="type">type(<a href="../type/buffer_t.html">buffer_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the HTML</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/badge.html">badge</a></li><li><a href="../proc/take.html">take</a></li><li><a href="../proc/add.html">add</a></li></ul>
+<div class="graph"><svg width="426pt" height="104pt"
+ viewBox="0 0 426 104" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 100.1)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/explained_badge.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-38.8" width="113.4" height="21.6"/><text x="56.7" y="-23.4">explained_badge</text></a><a href="../proc/badge.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="149.4" y="-78.8" width="54" height="21.6"/><text x="176.4" y="-63.4">badge</text></a><path d="M92.4,-39.8C107.9,-45.1 126.1,-51.3 141.5,-56.5"/><polygon fill="#8a93a5" points="140.4,-58.7 147.8,-58.6 141.9,-54.1"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="149.4" y="-38.8" width="54" height="21.6"/><text x="176.4" y="-23.4">take</text></a><path d="M114.2,-28C123.2,-28 132.3,-28 140.6,-28"/><polygon fill="#8a93a5" points="140.5,-30.5 147.5,-28 140.5,-25.6"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="363.5" y="-38.8" width="54" height="21.6"/><text x="390.5" y="-23.4">add</text></a><path d="M102.2,-16.3C117.1,-12.9 133.9,-9.7 149.4,-8 228.1,0.4 249.3,4.3 327.5,-8 336.7,-9.5 346.3,-12 355.2,-14.9"/><polygon fill="#8a93a5" points="354.3,-17.1 361.7,-17 355.8,-12.5"/><path d="M203.7,-79.3C234.4,-90.7 286.5,-104.6 327.5,-88 348.4,-79.6 366.2,-60.4 377.3,-45.9"/><polygon fill="#8a93a5" points="379.1,-47.6 381.3,-40.5 375.1,-44.7"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="247" y="-78.8" width="72.9" height="21.6"/><text x="283.5" y="-63.4">lowercase</text></a><path d="M203.7,-68C214.1,-68 226.5,-68 238.3,-68"/><polygon fill="#8a93a5" points="238.2,-70.5 245.2,-68 238.2,-65.6"/><a href="../proc/html_escape.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="239.4" y="-38.8" width="88.1" height="21.6"/><text x="283.5" y="-23.4">html_escape</text></a><path d="M203.7,-58C216.2,-53.3 231.3,-47.5 245,-42.3"/><polygon fill="#8a93a5" points="245.8,-44.6 251.5,-39.8 244.1,-40"/><path d="M327.8,-28C336.8,-28 346.2,-28 354.8,-28"/><polygon fill="#8a93a5" points="354.6,-30.5 361.6,-28 354.6,-25.6"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/procedure_badges.html">procedure_badges</a></li></ul>
+<div class="graph"><svg width="658pt" height="190pt"
+ viewBox="0 0 658 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 185.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/explained_badge.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="113.4" height="21.6"/><text x="56.7" y="-86.1">explained_badge</text></a><a href="../proc/procedure_badges.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="149.4" y="-101.6" width="122.8" height="21.6"/><text x="210.8" y="-86.1">procedure_badges</text></a><path d="M149.3,-90.8C140.5,-90.8 131.4,-90.8 122.5,-90.8"/><polygon fill="#8a93a5" points="122.6,-88.4 115.6,-90.8 122.6,-93.3"/><a href="../proc/entity_title.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="321.6" y="-161.6" width="72.9" height="21.6"/><text x="358.1" y="-146.1">entity_title</text></a><path d="M329.8,-139.5C306.2,-129.8 272.1,-115.7 246.6,-105.2"/><polygon fill="#8a93a5" points="247.8,-103 240.4,-102.6 246,-107.6"/><a href="../proc/summary_item.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="308.3" y="-101.6" width="99.6" height="21.6"/><text x="358.1" y="-86.1">summary_item</text></a><path d="M307.9,-90.8C299.2,-90.8 290,-90.8 280.9,-90.8"/><polygon fill="#8a93a5" points="281.1,-88.4 274.1,-90.8 281.1,-93.3"/><a href="../proc/list_columns.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="315.1" y="-41.6" width="85.9" height="21.6"/><text x="358.1" y="-26.1">list_columns</text></a><path d="M329.8,-42.1C306.2,-51.8 272.1,-65.9 246.6,-76.4"/><polygon fill="#8a93a5" points="246,-74 240.4,-79 247.8,-78.6"/><a href="../proc/entity_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="461.2" y="-181.6" width="81.6" height="21.6"/><text x="502" y="-166.1">entity_page</text></a><path d="M460.7,-165.1C442.7,-162.6 421.3,-159.6 402.9,-157"/><polygon fill="#8a93a5" points="403.4,-154.6 396.1,-156 402.7,-159.4"/><a href="../proc/summary_section.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="443.9" y="-141.6" width="116.3" height="21.6"/><text x="502" y="-126.1">summary_section</text></a><path d="M461.1,-119.6C444.2,-114.8 424.3,-109.2 406.6,-104.2"/><polygon fill="#8a93a5" points="407.6,-101.9 400.1,-102.4 406.2,-106.6"/><a href="../proc/interface_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="452.2" y="-101.6" width="99.7" height="21.6"/><text x="502" y="-86.1">interface_body</text></a><path d="M451.8,-90.8C440.4,-90.8 428.3,-90.8 416.6,-90.8"/><polygon fill="#8a93a5" points="416.7,-88.4 409.7,-90.8 416.7,-93.3"/><a href="../proc/type_body.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="464.8" y="-61.6" width="74.4" height="21.6"/><text x="502" y="-46.1">type_body</text></a><path d="M464.5,-61.1C447,-66 425.9,-72 407.1,-77.3"/><polygon fill="#8a93a5" points="406.5,-74.9 400.5,-79.1 407.9,-79.6"/><a href="../proc/list_page.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="468.8" y="-21.6" width="66.4" height="21.6"/><text x="502" y="-6.1">list_page</text></a><path d="M468.5,-15.4C451.1,-17.8 429.2,-20.9 409.7,-23.7"/><polygon fill="#8a93a5" points="409.5,-21.2 403,-24.6 410.2,-26.1"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="596.2" y="-181.6" width="54" height="21.6"/><text x="623.2" y="-166.1" fill="white">...</text><path stroke-dasharray="5,2" d="M595.7,-170.8C582.6,-170.8 566.5,-170.8 551.3,-170.8"/><polygon fill="#8a93a5" points="551.5,-168.4 544.5,-170.8 551.5,-173.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="596.2" y="-141.6" width="54" height="21.6"/><text x="623.2" y="-126.1" fill="white">...</text><path stroke-dasharray="5,2" d="M595.7,-130.8C587.7,-130.8 578.4,-130.8 569,-130.8"/><polygon fill="#8a93a5" points="569.1,-128.4 562.1,-130.8 569.1,-133.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="596.2" y="-21.6" width="54" height="21.6"/><text x="623.2" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M595.7,-10.8C580.4,-10.8 560.8,-10.8 543.6,-10.8"/><polygon fill="#8a93a5" points="543.8,-8.4 536.8,-10.8 543.8,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> explained_badge(text, explanation, b)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text        <span class="d">!! the attribute</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: explanation <span class="d">!! what it means</span>
+    <span class="k">type</span>(buffer_t), <span class="k">intent</span>(inout) :: b          <span class="d">!! the HTML</span>
+    <span class="k">type</span>(buffer_t) :: item
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: html
+
+    <span class="k">call</span> badge(text, item)
+    <span class="k">call</span> take(item, html)
+    <span class="k">call</span> add(b, html(:<span class="k">index</span>(html, <span class="s">'&gt;'</span>) - <span class="n">1</span>)//<span class="s">' title="'</span>//explanation//<span class="s">'"'</span>//html(<span class="k">index</span>(html, <span class="s">'&gt;'</span>):))
+<span class="k">end</span> <span class="k">subroutine</span> explained_badge</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>list_add &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_model.f90.html">fdoc_model.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_model.html">fdoc_model</a></div>
+<h1><span class="kind">function</span>list_add<span class="attr attr-private">private</span></h1>
+<div class="sig">integer <span class="k">function</span> list_add(<span class="intent attr-inout" title="intent(inout)">self</span>, <span class="intent attr-in" title="intent(in)">kind</span>, <span class="intent attr-in" title="intent(in)">parent</span>) <span class="k">result</span>(id)</div>
+<div class="doc">
+<p>Add an entity of kind <code>kind</code> inside <code>parent</code>, returning its index.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-self"><td class="name">self</td><td class="type">class(<a href="../type/entity_list_t.html">entity_list_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the list</p></td></tr>
+<tr id="variable-kind"><td class="name">kind</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>one of the <code>E_*</code> constants</p></td></tr>
+<tr id="variable-parent"><td class="name">parent</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the containing entity, or 0</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-id"><td class="name">id</td><td class="type">integer</td><td class="attributes"></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push_int.html">push_int</a></li></ul>
+<div class="graph"><svg width="246pt" height="30pt"
+ viewBox="0 0 246 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/list_add.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="none" rx="7.2" x="0" y="-21.6" width="138.6" height="21.6"/><text x="109" y="-6.1" fill="white">list_add</text></a><a href="../type/entity_list_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M7.2,-21.6H79.4V0H7.2A7.2,7.2 0 0 1 0,-7.2V-14.4A7.2,7.2 0 0 1 7.2,-21.6Z"/><text x="39.7" y="-6.1" fill="white">entity_list_t</text></a><rect fill="none" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="138.6" height="21.6"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="174.6" y="-21.6" width="63.5" height="21.6"/><text x="206.4" y="-6.1">push_int</text></a><path d="M139.5,-10.8C148.5,-10.8 157.5,-10.8 165.9,-10.8"/><polygon fill="#8a93a5" points="165.7,-13.3 172.7,-10.8 165.7,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/add_external_modules.html">add_external_modules</a></li><li><a href="../proc/copy_binding.html">copy_binding</a></li><li><a href="../proc/implicit_variable.html">implicit_variable</a></li><li><a href="../proc/open_procedure.html">open_procedure</a></li><li><a href="../proc/open_unit.html">open_unit</a></li><li><a href="../proc/parse_file~2.html">parse_file</a></li><li><a href="../proc/read_binding.html">read_binding</a></li><li><a href="../proc/read_common.html">read_common</a></li><li><a href="../proc/read_declaration.html">read_declaration</a></li><li><a href="../proc/read_external.html">read_external</a></li><li><a href="../proc/read_final.html">read_final</a></li><li><a href="../proc/read_namelist.html">read_namelist</a></li></ul>
+<div class="graph"><svg width="915pt" height="436pt"
+ viewBox="0 0 915 436" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 431.5)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/list_add.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="none" rx="7.2" x="0" y="-219.6" width="138.6" height="21.6"/><text x="109" y="-204.1" fill="white">list_add</text></a><a href="../type/entity_list_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M7.2,-219.6H79.4V-198H7.2A7.2,7.2 0 0 1 0,-205.2V-212.4A7.2,7.2 0 0 1 7.2,-219.6Z"/><text x="39.7" y="-204.1" fill="white">entity_list_t</text></a><rect fill="none" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-219.6" width="138.6" height="21.6"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="534.2" y="-329.6" width="70.8" height="21.6"/><text x="569.6" y="-314.1">parse_file</text></a><path d="M556,-329.9C537,-346.2 498.9,-375.7 460.6,-388.8 363.8,-421.8 326,-446.2 231.3,-407.8"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="355.5" y="-379.6" width="71.5" height="21.6"/><text x="391.2" y="-364.1">open_unit</text></a><path d="M533.7,-328.7C505.4,-336.7 465.4,-348 435.2,-356.6"/><polygon fill="#8a93a5" points="434.8,-354.2 428.8,-358.4 436.2,-358.9"/><a href="../proc/parse_statement.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="335.6" y="-279.6" width="111.2" height="21.6"/><text x="391.2" y="-264.1">parse_statement</text></a><path d="M533.7,-308.9C506.9,-301.3 469.6,-290.7 440,-282.4"/><polygon fill="#8a93a5" points="440.8,-280 433.4,-280.5 439.4,-284.7"/><path d="M355.3,-379.7C312,-392.8 242.7,-412.4 231.3,-407.8"/><path d="M229.3,-407.8C205.4,-398.1 194.5,-405.2 174.6,-388.8 121,-344.5 89,-265 76.5,-228.3"/><polygon fill="#8a93a5" points="78.8,-227.7 74.3,-221.8 74.2,-229.2"/><a href="../proc/open_procedure.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="175.7" y="-379.6" width="109.1" height="21.6"/><text x="230.3" y="-364.1">open_procedure</text></a><path d="M355.4,-368.8C337.2,-368.8 314.5,-368.8 293.4,-368.8"/><polygon fill="#8a93a5" points="293.6,-366.4 286.6,-368.8 293.6,-371.3"/><path d="M189.9,-357.6C184.5,-355.1 179.3,-352.2 174.6,-348.8 129.8,-315.4 95.4,-257.4 79.7,-227.6"/><polygon fill="#8a93a5" points="82,-226.8 76.6,-221.7 77.7,-229.1"/><a href="../proc/implicit_variable.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="176.8" y="-22.6" width="106.9" height="21.6"/><text x="230.3" y="-7.1">implicit_variable</text></a><path d="M196.4,-23C188.7,-26.6 180.9,-31.2 174.6,-36.8 124.9,-81.1 91.4,-154.8 77.5,-189.6"/><polygon fill="#8a93a5" points="75.4,-188.3 75.1,-195.7 79.9,-190.1"/><a href="../proc/read_declaration.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="174.6" y="-339.6" width="111.2" height="21.6"/><text x="230.3" y="-324.1">read_declaration</text></a><path d="M192.1,-317.6C186.1,-315.1 180,-312.2 174.6,-308.8 138,-285.9 103.4,-248.6 84.8,-226.6"/><polygon fill="#8a93a5" points="86.8,-225.2 80.5,-221.4 83.1,-228.4"/><a href="../proc/read_binding.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="185.5" y="-299.6" width="89.6" height="21.6"/><text x="230.3" y="-284.1">read_binding</text></a><path d="M195.7,-277.5C188.6,-274.9 181.3,-271.9 174.6,-268.8 146.6,-255.7 116.2,-237.8 95.5,-224.9"/><polygon fill="#8a93a5" points="96.8,-222.8 89.6,-221.2 94.2,-227"/><a href="../proc/read_final.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="194.5" y="-259.6" width="71.5" height="21.6"/><text x="230.3" y="-244.1">read_final</text></a><path d="M194.4,-240C174.1,-234.9 148.1,-228.4 125.2,-222.6"/><polygon fill="#8a93a5" points="126,-220.3 118.6,-221 124.8,-225"/><a href="../proc/read_common.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="181.5" y="-219.6" width="97.5" height="21.6"/><text x="230.3" y="-204.1">read_common</text></a><path d="M181.1,-208.8C170.6,-208.8 159.1,-208.8 147.7,-208.8"/><polygon fill="#8a93a5" points="147.9,-206.4 140.9,-208.8 147.9,-211.3"/><a href="../proc/read_namelist.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="182.2" y="-179.6" width="96.1" height="21.6"/><text x="230.3" y="-164.1">read_namelist</text></a><path d="M184.6,-180C166.2,-184.7 144.7,-190.1 125.3,-195"/><polygon fill="#8a93a5" points="124.8,-192.6 118.6,-196.6 126,-197.3"/><a href="../proc/add_external_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="496.6" y="-120.6" width="145.9" height="21.6"/><text x="569.6" y="-105.1">add_external_modules</text></a><path d="M496.1,-113.3C399.2,-118.7 232.6,-130.2 174.6,-148.8 144,-158.6 112.5,-178.3 92.3,-192.5"/><polygon fill="#8a93a5" points="91.1,-190.3 86.8,-196.3 93.9,-194.3"/><a href="../proc/load_external_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="321.9" y="-101.6" width="138.7" height="21.6"/><text x="391.2" y="-86.1">load_external_project</text></a><path d="M496.3,-102C487.4,-101.1 478.2,-100.1 469.2,-99.1"/><polygon fill="#8a93a5" points="469.7,-96.7 462.4,-98.4 469.1,-101.6"/><a href="../proc/read_external.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="183.3" y="-101.6" width="93.9" height="21.6"/><text x="230.3" y="-86.1">read_external</text></a><path d="M200.6,-102C192,-105.8 182.7,-110.6 174.6,-115.8 140.5,-138.1 106.3,-171.1 86.8,-191.2"/><polygon fill="#8a93a5" points="85.1,-189.4 82,-196.2 88.6,-192.8"/><a href="../proc/copy_binding.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="345.7" y="-61.6" width="91" height="21.6"/><text x="391.2" y="-46.1">copy_binding</text></a><path d="M345.5,-44.9C299.6,-41 227.7,-41.3 174.6,-70.8 125.7,-98 92.8,-158.7 78.4,-189.8"/><polygon fill="#8a93a5" points="76.3,-188.5 75.7,-195.9 80.8,-190.6"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="678.5" y="-219.6" width="138" height="21.6"/><text x="747.5" y="-204.1">load_project_sources</text></a><path d="M728.7,-220C697.2,-239.6 631.7,-280.6 595.7,-303.1"/><polygon fill="#8a93a5" points="594.4,-301 589.7,-306.8 597,-305.2"/><a href="../proc/attach_arguments.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="332" y="-21.6" width="118.5" height="21.6"/><text x="391.2" y="-6.1">attach_arguments</text></a><path d="M331.9,-11.2C319.1,-11.2 305.4,-11.3 292.4,-11.4"/><polygon fill="#8a93a5" points="292.5,-9 285.5,-11.5 292.6,-13.9"/><path d="M361.5,-280C340.6,-288 311.5,-299.2 285.9,-308.8 280.7,-310.7 275.3,-312.7 270,-314.7"/><polygon fill="#8a93a5" points="269.3,-312.3 263.6,-317 271,-316.9"/><path d="M335.5,-275.7C318.7,-277.8 300.2,-280.1 283.6,-282.2"/><polygon fill="#8a93a5" points="283.7,-279.7 277.1,-283 284.3,-284.6"/><path d="M335.5,-261.9C315.6,-259.4 293.3,-256.6 274.5,-254.2"/><polygon fill="#8a93a5" points="274.9,-251.8 267.7,-253.4 274.3,-256.7"/><path d="M361.5,-257.6C340.6,-249.6 311.5,-238.4 285.9,-228.8 280.7,-226.9 275.3,-224.9 270,-222.9"/><polygon fill="#8a93a5" points="271,-220.7 263.6,-220.6 269.3,-225.3"/><path d="M378.2,-257.6C359.7,-240.8 322.3,-208.8 285.9,-188.8 282.3,-186.8 278.4,-185 274.5,-183.2"/><polygon fill="#8a93a5" points="275.7,-181.1 268.3,-180.7 273.8,-185.6"/><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="715" y="-120.6" width="65" height="21.6"/><text x="747.5" y="-105.1">correlate</text></a><path d="M714.7,-109.8C696.7,-109.8 673.5,-109.8 651,-109.8"/><polygon fill="#8a93a5" points="651.2,-107.4 644.2,-109.8 651.2,-112.3"/><a href="../proc/inherit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="542.6" y="-80.6" width="54" height="21.6"/><text x="569.6" y="-65.1">inherit</text></a><path d="M714.7,-102.6C683.7,-95.5 637,-84.9 605.2,-77.7"/><polygon fill="#8a93a5" points="605.9,-75.3 598.5,-76.2 604.8,-80.1"/><path d="M321.4,-90.8C309.4,-90.8 297.1,-90.8 285.5,-90.8"/><polygon fill="#8a93a5" points="285.8,-88.4 278.8,-90.8 285.8,-93.3"/><path d="M542.2,-67C516.7,-64.2 477.4,-60 445.4,-56.5"/><polygon fill="#8a93a5" points="445.7,-54.1 438.5,-55.8 445.2,-59"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="852.5" y="-140.6" width="54" height="21.6"/><text x="879.5" y="-125.1">run</text></a><path d="M860.2,-141C837.6,-154.7 799.2,-178 773.9,-193.4"/><polygon fill="#8a93a5" points="772.8,-191.2 768.1,-196.9 775.3,-195.4"/><path d="M852.2,-125.8C833.9,-122.9 809.3,-119.1 788.6,-116"/><polygon fill="#8a93a5" points="789.1,-113.6 781.8,-114.9 788.3,-118.4"/><a href="../proc/close_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="533.1" y="-21.6" width="72.9" height="21.6"/><text x="569.6" y="-6.1">close_unit</text></a><path d="M532.9,-10.8C511.7,-10.8 484.2,-10.8 459.2,-10.8"/><polygon fill="#8a93a5" points="459.3,-8.4 452.3,-10.8 459.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">integer</span> <span class="k">function</span> list_add(self, <span class="k">kind</span>, parent) <span class="k">result</span>(id)
+    <span class="k">class</span>(entity_list_t), <span class="k">intent</span>(inout) :: self     <span class="d">!! the list</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: <span class="k">kind</span>                     <span class="d">!! one of the `E_*` constants</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent                   <span class="d">!! the containing entity, or 0</span>
+    <span class="k">type</span>(entity_box_t), <span class="k">allocatable</span> :: grown(:)
+    <span class="k">integer</span> :: k
+
+    <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(self%box)) <span class="k">allocate</span> (self%box(<span class="n">64</span>))
+    <span class="k">if</span> (self%n == <span class="k">size</span>(self%box)) <span class="k">then</span>
+        <span class="k">allocate</span> (grown(<span class="n">2</span>*self%n))
+        <span class="k">do</span> k = <span class="n">1</span>, self%n
+            <span class="k">call</span> <span class="k">move_alloc</span>(self%box(k)%e, grown(k)%e)
+        <span class="k">end</span> <span class="k">do</span>
+        <span class="k">call</span> <span class="k">move_alloc</span>(grown, self%box)
+    <span class="k">end</span> <span class="k">if</span>
+    self%n = self%n + <span class="n">1</span>
+    id = self%n
+    <span class="k">allocate</span> (self%box(id)%e)
+    self%box(id)%e%<span class="k">kind</span> = <span class="k">kind</span>
+    <span class="k">if</span> (<span class="k">kind</span> == E_VARIABLE) <span class="k">then</span>
+        self%box(id)%e%more =&gt; no_more
+    <span class="k">else</span>
+        <span class="k">allocate</span> (self%box(id)%e%more)
+    <span class="k">end</span> <span class="k">if</span>
+    self%box(id)%e%parent = parent
+    <span class="k">allocate</span> (self%box(id)%e%children(<span class="n">0</span>))
+    <span class="k">if</span> (parent &gt; <span class="n">0</span>) <span class="k">then</span>
+        self%box(id)%e%file = self%box(parent)%e%file
+        <span class="k">call</span> push_int(self%box(parent)%e%children, id)
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">function</span> list_add</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

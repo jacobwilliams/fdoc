@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>indent_level &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>indent_level<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> indent_level(<span class="intent attr-in" title="intent(in)">t</span>, <span class="intent attr-in" title="intent(in)">parent</span>, <span class="intent attr-in" title="intent(in)">block</span>, <span class="intent attr-out" title="intent(out)">level</span>, <span class="intent attr-out" title="intent(out)">node</span>)</div>
+<div class="doc">
+<p>How deep <code>block</code> is in the lists of <code>parent</code>, and the node at that depth.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-t"><td class="name">t</td><td class="type">type(<a href="../type/tree_t.html">tree_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the conversion</p></td></tr>
+<tr id="variable-parent"><td class="name">parent</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the node</p></td></tr>
+<tr id="variable-block"><td class="name">block</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the chunk</p></td></tr>
+<tr id="variable-level"><td class="name">level</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the list depth</p></td></tr>
+<tr id="variable-node"><td class="name">node</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the node at that depth</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/in_state.html">in_state</a></li><li><a href="../proc/last_child.html">last_child</a></li><li><a href="../proc/is_list.html">is_list</a></li></ul>
+<div class="graph"><svg width="305pt" height="110pt"
+ viewBox="0 0 305 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/indent_level.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="83.8" height="21.6"/><text x="41.9" y="-46.1">indent_level</text></a><a href="../proc/in_state.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="124.1" y="-101.6" width="59.9" height="21.6"/><text x="154.1" y="-86.1">in_state</text></a><path d="M75.4,-62.6C88.1,-67.2 102.8,-72.5 115.9,-77.3"/><polygon fill="#8a93a5" points="115,-79.6 122.4,-79.7 116.7,-75"/><a href="../proc/last_child.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="119.8" y="-61.6" width="68.6" height="21.6"/><text x="154.1" y="-46.1">last_child</text></a><path d="M84.6,-50.8C93.2,-50.8 102.4,-50.8 111.1,-50.8"/><polygon fill="#8a93a5" points="111.1,-53.3 118.1,-50.8 111.1,-48.4"/><a href="../proc/is_list.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="127.1" y="-21.6" width="54" height="21.6"/><text x="154.1" y="-6.1">is_list</text></a><path d="M75.4,-39C89,-34 105,-28.3 118.9,-23.2"/><polygon fill="#8a93a5" points="119.6,-25.6 125.3,-20.9 117.9,-21"/><a href="../proc/ends_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="224.4" y="-101.6" width="72.9" height="21.6"/><text x="260.9" y="-86.1">ends_with</text></a><path d="M184.5,-90.8C194.2,-90.8 205.1,-90.8 215.6,-90.8"/><polygon fill="#8a93a5" points="215.4,-93.3 222.4,-90.8 215.4,-88.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/list_indent.html">list_indent</a></li></ul>
+<div class="graph"><svg width="543pt" height="30pt"
+ viewBox="0 0 543 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/indent_level.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="83.8" height="21.6"/><text x="41.9" y="-6.1">indent_level</text></a><a href="../proc/list_indent.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="119.8" y="-21.6" width="72.9" height="21.6"/><text x="156.3" y="-6.1">list_indent</text></a><path d="M119.4,-10.8C111,-10.8 102,-10.8 93.1,-10.8"/><polygon fill="#8a93a5" points="93.2,-8.4 86.2,-10.8 93.2,-13.3"/><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="228.7" y="-21.6" width="84.5" height="21.6"/><text x="271" y="-6.1">parse_block</text></a><path d="M228.3,-10.8C219.6,-10.8 210.3,-10.8 201.5,-10.8"/><polygon fill="#8a93a5" points="201.7,-8.4 194.7,-10.8 201.7,-13.3"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="349.2" y="-21.6" width="95.3" height="21.6"/><text x="396.9" y="-6.1">parse_chunks</text></a><path d="M349,-10.8C340.2,-10.8 330.9,-10.8 322,-10.8"/><polygon fill="#8a93a5" points="322.1,-8.4 315.1,-10.8 322.1,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="480.6" y="-21.6" width="54" height="21.6"/><text x="507.6" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M480.3,-10.8C472,-10.8 462.5,-10.8 453.1,-10.8"/><polygon fill="#8a93a5" points="453.3,-8.4 446.3,-10.8 453.3,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> indent_level(t, parent, <span class="k">block</span>, level, node)
+    <span class="k">type</span>(tree_t), <span class="k">intent</span>(in) :: t           <span class="d">!! the conversion</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: parent           <span class="d">!! the node</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">block</span>   <span class="d">!! the chunk</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: level           <span class="d">!! the list depth</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: node            <span class="d">!! the node at that depth</span>
+    <span class="k">integer</span> :: indent, child
+
+    indent = (<span class="k">verify</span>(<span class="k">block</span>//<span class="s">'x'</span>, <span class="s">' '</span>) - <span class="n">1</span>)/<span class="n">4</span>
+    level = <span class="k">merge</span>(<span class="n">1</span>, <span class="n">0</span>, in_state(t, <span class="s">'list'</span>))
+    node = parent
+    <span class="k">do</span> <span class="k">while</span> (indent &gt; level)
+        child = last_child(t, node)
+        <span class="k">if</span> (child == <span class="n">0</span>) <span class="k">exit</span>
+        <span class="k">if</span> (is_list(t%nodes(child)%tag)) <span class="k">then</span>
+            level = level + <span class="n">1</span>
+        <span class="k">else</span> <span class="k">if</span> (t%nodes(child)%tag /= <span class="s">'li'</span>) <span class="k">then</span>
+            <span class="k">exit</span>
+        <span class="k">end</span> <span class="k">if</span>
+        node = child
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> indent_level</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

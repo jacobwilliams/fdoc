@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>attribute_list &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>attribute_list<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> attribute_list(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">attrs</span>)</div>
+<div class="doc">
+<p>Turn the contents of an attribute list, <code>#id .class key=value</code>, into HTML attributes.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the list</p></td></tr>
+<tr id="variable-attrs"><td class="name">attrs</td><td class="type">character(len=:)</td><td><span class="attr attr-out">out</span></td><td class="attributes"><span class="attr attr-allocatable">allocatable</span></td><td><p>the attributes</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/split_words.html">split_words</a></li></ul>
+<div class="graph"><svg width="298pt" height="30pt"
+ viewBox="0 0 298 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/attribute_list.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="84.5" height="21.6"/><text x="42.2" y="-6.1">attribute_list</text></a><a href="../proc/split_words.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="120.5" y="-21.6" width="79.4" height="21.6"/><text x="160.2" y="-6.1">split_words</text></a><path d="M85.4,-10.8C94.1,-10.8 103.2,-10.8 112,-10.8"/><polygon fill="#8a93a5" points="111.8,-13.3 118.8,-10.8 111.8,-8.4"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="235.9" y="-21.6" width="54" height="21.6"/><text x="262.9" y="-6.1">push</text></a><path d="M200.1,-10.8C209,-10.8 218.4,-10.8 227.1,-10.8"/><polygon fill="#8a93a5" points="227,-13.3 234,-10.8 227,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/paragraph.html">paragraph</a></li><li><a href="../proc/render_node~2.html">render_node</a></li></ul>
+<div class="graph"><svg width="755pt" height="110pt"
+ viewBox="0 0 755 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/attribute_list.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="10.1" y="-91.6" width="84.5" height="21.6"/><text x="52.4" y="-76.1">attribute_list</text></a><a href="../proc/paragraph.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="166" y="-101.6" width="73.7" height="21.6"/><text x="202.8" y="-86.1">paragraph</text></a><path d="M165.5,-88.4C147,-87.1 124.1,-85.6 103.9,-84.2"/><polygon fill="#8a93a5" points="104,-81.8 96.9,-83.7 103.7,-86.6"/><a href="../proc/render_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="158.8" y="-61.6" width="88.1" height="21.6"/><text x="202.8" y="-46.1">render_node</text></a><path d="M158.5,-59.6C141.3,-63 121.4,-67.1 103.5,-70.7"/><polygon fill="#8a93a5" points="103.3,-68.2 97,-72 104.3,-73"/><a href="../proc/render_children.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="0" y="-41.6" width="104.7" height="21.6"/><text x="52.4" y="-26.1">render_children</text></a><path d="M150.1,-43.8C138.3,-42.2 125.6,-40.5 113.5,-38.9"/><polygon fill="#8a93a5" points="149.7,-46.3 157,-44.8 150.4,-41.4"/><polygon fill="#8a93a5" points="113.9,-36.5 106.7,-38 113.3,-41.3"/><a href="../proc/parse_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="441" y="-100.6" width="84.5" height="21.6"/><text x="483.2" y="-85.1">parse_block</text></a><path d="M440.5,-90.4C429,-90.6 416.5,-90.7 405,-90.8 351,-91.1 288.9,-91.1 248.2,-91"/><polygon fill="#8a93a5" points="248.3,-88.5 241.3,-90.9 248.3,-93.4"/><a href="../proc/definition_block.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="301" y="-81.6" width="104" height="21.6"/><text x="353" y="-66.1">definition_block</text></a><path d="M440.6,-83.6C432,-82.4 422.7,-81 413.6,-79.6"/><polygon fill="#8a93a5" points="414,-77.2 406.8,-78.6 413.3,-82.1"/><path d="M300.6,-77.7C283.5,-80 264.6,-82.6 248.2,-84.8"/><polygon fill="#8a93a5" points="247.9,-82.4 241.3,-85.7 248.5,-87.2"/><a href="../proc/parse_chunks.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="561.5" y="-100.6" width="95.3" height="21.6"/><text x="609.1" y="-85.1">parse_chunks</text></a><path d="M561.3,-89.8C552.5,-89.8 543.2,-89.8 534.3,-89.8"/><polygon fill="#8a93a5" points="534.4,-87.4 527.4,-89.8 534.4,-92.3"/><a href="../proc/markdown_to_html.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="140.7" y="-21.6" width="124.2" height="21.6"/><text x="202.8" y="-6.1">markdown_to_html</text></a><path d="M140.6,-19.1C131.5,-20.3 122.2,-21.5 113.2,-22.7"/><polygon fill="#8a93a5" points="113.1,-20.3 106.5,-23.6 113.8,-25.1"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="692.8" y="-100.6" width="54" height="21.6"/><text x="719.8" y="-85.1" fill="white">...</text><path stroke-dasharray="5,2" d="M692.5,-89.8C684.2,-89.8 674.8,-89.8 665.3,-89.8"/><polygon fill="#8a93a5" points="665.5,-87.4 658.5,-89.8 665.5,-92.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="326" y="-21.6" width="54" height="21.6"/><text x="353" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M325.5,-10.8C311,-10.8 292.3,-10.8 273.9,-10.8"/><polygon fill="#8a93a5" points="274,-8.4 267,-10.8 274,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> attribute_list(text, attrs)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text                <span class="d">!! the list</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span>, <span class="k">intent</span>(out) :: attrs <span class="d">!! the attributes</span>
+    <span class="k">type</span>(string_t), <span class="k">allocatable</span> :: words(:)
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: classes, id, others
+    <span class="k">integer</span> :: k, at
+
+    words = split_words(text)
+    classes = <span class="s">''</span>
+    id = <span class="s">''</span>
+    others = <span class="s">''</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(words)
+        <span class="k">associate</span> (w =&gt; words(k)%s)
+            <span class="k">if</span> (w(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'#'</span>) <span class="k">then</span>
+                id = w(<span class="n">2</span>:)
+            <span class="k">else</span> <span class="k">if</span> (w(<span class="n">1</span>:<span class="n">1</span>) == <span class="s">'.'</span>) <span class="k">then</span>
+                <span class="k">if</span> (<span class="k">len</span>(classes) &gt; <span class="n">0</span>) classes = classes//<span class="s">' '</span>
+                classes = classes//w(<span class="n">2</span>:)
+            <span class="k">else</span>
+                at = <span class="k">index</span>(w, <span class="s">'='</span>)
+                <span class="k">if</span> (at &gt; <span class="n">0</span>) others = others//<span class="s">' '</span>//w(:at)//<span class="s">'"'</span>//w(at + <span class="n">1</span>:)//<span class="s">'"'</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">associate</span>
+    <span class="k">end</span> <span class="k">do</span>
+    attrs = others
+    <span class="k">if</span> (<span class="k">len</span>(classes) &gt; <span class="n">0</span>) attrs = <span class="s">' class="'</span>//classes//<span class="s">'"'</span>//attrs
+    <span class="k">if</span> (<span class="k">len</span>(id) &gt; <span class="n">0</span>) attrs = attrs//<span class="s">' id="'</span>//id//<span class="s">'"'</span>
+<span class="k">end</span> <span class="k">subroutine</span> attribute_list</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

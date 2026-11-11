@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>connect &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_graphs.f90.html">fdoc_graphs.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_graphs.html">fdoc_graphs</a></div>
+<h1><span class="kind">subroutine</span>connect<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> connect(<span class="intent attr-inout" title="intent(inout)">relation</span>, <span class="intent attr-in" title="intent(in)">from</span>, <span class="intent attr-in" title="intent(in)">to</span>, <span class="intent attr-in" title="intent(in)">label</span>)</div>
+<div class="doc">
+<p>Add an edge, once. With <code>label</code>, the edge is dashed and labelled: components of a type have one.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-relation"><td class="name">relation</td><td class="type">type(<a href="../type/adjacency_t.html">adjacency_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the relation</p></td></tr>
+<tr id="variable-from"><td class="name">from</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>where it starts</p></td></tr>
+<tr id="variable-to"><td class="name">to</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>where it ends</p></td></tr>
+<tr id="variable-label"><td class="name">label</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-optional">optional</span></td><td><p>its label</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/push_int.html">push_int</a></li><li><a href="../proc/push.html">push</a></li></ul>
+<div class="graph"><svg width="167pt" height="70pt"
+ viewBox="0 0 167 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/connect.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="59.9" height="21.6"/><text x="30" y="-26.1">connect</text></a><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="95.9" y="-61.6" width="63.5" height="21.6"/><text x="127.7" y="-46.1">push_int</text></a><path d="M60.7,-37C69.2,-38.8 78.6,-40.8 87.6,-42.6"/><polygon fill="#8a93a5" points="86.8,-45 94.2,-44 87.8,-40.2"/><a href="../proc/push.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="100.7" y="-21.6" width="54" height="21.6"/><text x="127.7" y="-6.1">push</text></a><path d="M60.7,-24.6C70.8,-22.5 82.1,-20.1 92.4,-18"/><polygon fill="#8a93a5" points="92.7,-20.4 99,-16.6 91.7,-15.6"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/build_relations.html">build_relations</a></li><li><a href="../proc/visible_calls.html">visible_calls</a></li></ul>
+<div class="graph"><svg width="642pt" height="49pt"
+ viewBox="0 0 642 49" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 44.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/connect.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-40.6" width="59.9" height="21.6"/><text x="30" y="-25.1">connect</text></a><a href="../proc/build_relations.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="215.7" y="-40.6" width="98.2" height="21.6"/><text x="264.8" y="-25.1">build_relations</text></a><path d="M215.3,-30.5C203.7,-30.6 191.2,-30.7 179.7,-30.8 142.5,-31 133.2,-31.1 95.9,-30.8 87.2,-30.7 77.8,-30.6 69,-30.5"/><polygon fill="#8a93a5" points="69.3,-28 62.2,-30.4 69.2,-32.9"/><a href="../proc/visible_calls.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="95.9" y="-21.6" width="83.8" height="21.6"/><text x="137.8" y="-6.1">visible_calls</text></a><path d="M215.5,-22.5C206.6,-21.1 197.4,-19.7 188.5,-18.4"/><polygon fill="#8a93a5" points="188.9,-15.9 181.6,-17.3 188.2,-20.8"/><path d="M95.6,-18.2C86.9,-19.8 77.7,-21.4 69.1,-22.9"/><polygon fill="#8a93a5" points="68.7,-20.5 62.3,-24.2 69.6,-25.4"/><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="349.9" y="-40.6" width="88.8" height="21.6"/><text x="394.3" y="-25.1">build_graphs</text></a><path d="M349.5,-29.8C340.7,-29.8 331.5,-29.8 322.4,-29.8"/><polygon fill="#8a93a5" points="322.7,-27.4 315.7,-29.8 322.7,-32.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="474.8" y="-40.6" width="69.3" height="21.6"/><text x="509.4" y="-25.1">write_site</text></a><path d="M474.5,-29.8C465.9,-29.8 456.5,-29.8 447.3,-29.8"/><polygon fill="#8a93a5" points="447.4,-27.4 440.4,-29.8 447.4,-32.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="580.1" y="-40.6" width="54" height="21.6"/><text x="607.1" y="-25.1" fill="white">...</text><path stroke-dasharray="5,2" d="M579.7,-29.8C571.3,-29.8 561.8,-29.8 552.6,-29.8"/><polygon fill="#8a93a5" points="552.8,-27.4 545.8,-29.8 552.8,-32.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> connect(relation, from, to, label)
+    <span class="k">type</span>(adjacency_t), <span class="k">intent</span>(inout) :: relation    <span class="d">!! the relation</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: from                     <span class="d">!! where it starts</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: to                       <span class="d">!! where it ends</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in), <span class="k">optional</span> :: label <span class="d">!! its label</span>
+    <span class="k">integer</span> :: k
+
+    <span class="k">if</span> (from == to <span class="k">.and.</span> <span class="k">.not.</span> <span class="k">present</span>(label)) <span class="k">return</span>
+    <span class="k">if</span> (<span class="k">allocated</span>(relation%out(from)%ids)) <span class="k">then</span>
+        <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(relation%out(from)%ids)
+            <span class="k">if</span> (relation%out(from)%ids(k) /= to) <span class="k">cycle</span>
+            <span class="k">if</span> (<span class="k">present</span>(label)) <span class="k">then</span>
+                <span class="k">if</span> (<span class="k">len</span>(relation%labels(from)%text(k)%s) &gt; <span class="n">0</span>) <span class="k">then</span>
+                    relation%labels(from)%text(k)%s = relation%labels(from)%text(k)%s//<span class="s">', '</span>//label
+                <span class="k">end</span> <span class="k">if</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">end</span> <span class="k">if</span>
+    <span class="k">call</span> push_int(relation%out(from)%ids, to)
+    <span class="k">call</span> push_int(relation%in(to)%ids, from)
+    <span class="k">if</span> (<span class="k">present</span>(label)) <span class="k">then</span>
+        <span class="k">call</span> push(relation%labels(from)%text, label)
+    <span class="k">else</span>
+        <span class="k">call</span> push(relation%labels(from)%text, <span class="s">''</span>)
+    <span class="k">end</span> <span class="k">if</span>
+<span class="k">end</span> <span class="k">subroutine</span> connect</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

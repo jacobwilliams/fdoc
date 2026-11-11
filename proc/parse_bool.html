@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>parse_bool &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">subroutine</span>parse_bool</h1>
+<div class="sig"><span class="k">subroutine</span> parse_bool(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-out" title="intent(out)">value</span>, <span class="intent attr-out" title="intent(out)">ok</span>)</div>
+<div class="doc">
+<p>Read <code>true</code> or <code>false</code>, in any case.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-value"><td class="name">value</td><td class="type">logical</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the value</p></td></tr>
+<tr id="variable-ok"><td class="name">ok</td><td class="type">logical</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>false if <code>text</code> is neither</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html">lowercase</a></li></ul>
+<div class="graph"><svg width="196pt" height="30pt"
+ viewBox="0 0 196 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/parse_bool.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="78.7" height="21.6"/><text x="39.4" y="-6.1">parse_bool</text></a><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="114.7" y="-21.6" width="72.9" height="21.6"/><text x="151.2" y="-6.1">lowercase</text></a><path d="M79.7,-10.8C88.2,-10.8 97.2,-10.8 105.9,-10.8"/><polygon fill="#8a93a5" points="105.9,-13.3 112.9,-10.8 105.9,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/graphs_wanted.html">graphs_wanted</a></li><li><a href="../proc/inherit_display.html">inherit_display</a></li><li><a href="../proc/set_option.html">set_option</a></li><li><a href="../proc/wants_source.html">wants_source</a></li></ul>
+<div class="graph"><svg width="694pt" height="328pt"
+ viewBox="0 0 694 328" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 323.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/parse_bool.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-219.6" width="78.7" height="21.6"/><text x="39.4" y="-204.1">parse_bool</text></a><a href="../proc/graphs_wanted.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="114.7" y="-299.6" width="103.3" height="21.6"/><text x="166.4" y="-284.1">graphs_wanted</text></a><path d="M147.7,-277.5C126.4,-263.8 90.3,-240.7 65.9,-225.1"/><polygon fill="#8a93a5" points="67.2,-223.1 60,-221.4 64.6,-227.2"/><a href="../proc/inherit_display.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="117.6" y="-199.6" width="97.5" height="21.6"/><text x="166.4" y="-184.1">inherit_display</text></a><path d="M117.4,-196.5C107.7,-198 97.5,-199.7 87.8,-201.2"/><polygon fill="#8a93a5" points="87.5,-198.8 81,-202.3 88.3,-203.6"/><a href="../proc/set_option.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="129.2" y="-101.6" width="74.4" height="21.6"/><text x="166.4" y="-86.1">set_option</text></a><path d="M153.8,-101.7C132.1,-122.2 84.9,-166.7 58.8,-191.4"/><polygon fill="#8a93a5" points="57.1,-189.6 53.7,-196.2 60.5,-193.2"/><a href="../proc/wants_source.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="119.1" y="-239.6" width="94.6" height="21.6"/><text x="166.4" y="-224.1">wants_source</text></a><path d="M118.8,-221.4C108.7,-219.7 98.1,-218 87.9,-216.4"/><polygon fill="#8a93a5" points="88.4,-214 81.1,-215.3 87.6,-218.8"/><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="260.5" y="-319.6" width="88.8" height="21.6"/><text x="304.9" y="-304.1">build_graphs</text></a><path d="M260.4,-302.4C249.6,-300.8 237.8,-299.1 226.4,-297.4"/><polygon fill="#8a93a5" points="226.9,-295 219.7,-296.5 226.2,-299.9"/><a href="../proc/parse_file~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="416.4" y="-180.6" width="70.8" height="21.6"/><text x="451.8" y="-165.1">parse_file</text></a><path d="M416.1,-172.1C368,-175.4 280.8,-181.2 223.4,-185"/><polygon fill="#8a93a5" points="223.5,-182.6 216.7,-185.5 223.9,-187.5"/><a href="../proc/open_unit.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="269.2" y="-161.6" width="71.5" height="21.6"/><text x="304.9" y="-146.1">open_unit</text></a><path d="M416.1,-165.2C396.1,-162.6 370.7,-159.3 349.4,-156.5"/><polygon fill="#8a93a5" points="349.9,-154.1 342.6,-155.6 349.2,-158.9"/><path d="M268.8,-160.6C252.6,-165.1 233.2,-170.5 215.6,-175.4"/><polygon fill="#8a93a5" points="215.3,-172.9 209.2,-177.2 216.6,-177.6"/><a href="../proc/apply_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="265.9" y="-121.6" width="78" height="21.6"/><text x="304.9" y="-106.1">apply_args</text></a><path d="M265.5,-105.2C248.9,-102.7 229.2,-99.9 211.9,-97.3"/><polygon fill="#8a93a5" points="212.4,-94.9 205.1,-96.3 211.7,-99.8"/><a href="../proc/load_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="262.3" y="-81.6" width="85.2" height="21.6"/><text x="304.9" y="-66.1">load_project</text></a><path d="M261.9,-77C246.1,-79.3 228.2,-81.9 212.2,-84.2"/><polygon fill="#8a93a5" points="212.1,-81.8 205.5,-85.2 212.8,-86.6"/><a href="../proc/apply_table.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="264.5" y="-41.6" width="80.9" height="21.6"/><text x="304.9" y="-26.1">apply_table</text></a><path d="M275.1,-42.1C268.1,-44.9 260.8,-47.9 254,-50.8 235.3,-58.9 214.5,-68.4 198,-76.2"/><polygon fill="#8a93a5" points="197.4,-73.8 192.1,-79 199.5,-78.2"/><a href="../proc/source_section.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="254" y="-239.6" width="101.8" height="21.6"/><text x="304.9" y="-224.1">source_section</text></a><path d="M253.9,-228.8C243.5,-228.8 232.6,-228.8 222.1,-228.8"/><polygon fill="#8a93a5" points="222.3,-226.4 215.3,-228.8 222.3,-231.3"/><a href="../proc/locate_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="254" y="-279.6" width="101.8" height="21.6"/><text x="304.9" y="-264.1">locate_sources</text></a><path d="M265.5,-257.6C249.4,-252.8 230.5,-247.3 213.6,-242.3"/><polygon fill="#8a93a5" points="214.4,-240 206.9,-240.4 213,-244.7"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="417.2" y="-299.6" width="69.3" height="21.6"/><text x="451.8" y="-284.1">write_site</text></a><path d="M416.9,-293.5C399.4,-295.9 377.7,-298.9 358.1,-301.6"/><polygon fill="#8a93a5" points="358,-299.1 351.4,-302.5 358.6,-304"/><path d="M416.9,-284.1C401.2,-281.9 382.1,-279.3 364.3,-276.9"/><polygon fill="#8a93a5" points="364.9,-274.5 357.7,-275.9 364.3,-279.3"/><a href="../proc/load_project_sources.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="547.8" y="-180.6" width="138" height="21.6"/><text x="616.8" y="-165.1">load_project_sources</text></a><path d="M547.6,-169.8C529.9,-169.8 511.4,-169.8 495.5,-169.8"/><polygon fill="#8a93a5" points="495.9,-167.4 488.9,-169.8 495.9,-172.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="424.8" y="-121.6" width="54" height="21.6"/><text x="451.8" y="-106.1">run</text></a><path d="M424.6,-110.8C404.5,-110.8 376.4,-110.8 352.5,-110.8"/><polygon fill="#8a93a5" points="352.8,-108.4 345.8,-110.8 352.8,-113.3"/><path d="M424.6,-103.6C405.2,-98.2 378.2,-90.7 354.9,-84.3"/><polygon fill="#8a93a5" points="355.6,-82 348.2,-82.5 354.3,-86.7"/><a href="../proc/load_fpm_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="391.9" y="-61.6" width="119.9" height="21.6"/><text x="451.8" y="-46.1">load_fpm_settings</text></a><path d="M391.5,-42.6C378.9,-40.9 365.8,-39.1 353.7,-37.4"/><polygon fill="#8a93a5" points="354.3,-35 347,-36.5 353.6,-39.9"/><a href="../proc/apply_toml_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="393.7" y="-21.6" width="116.3" height="21.6"/><text x="451.8" y="-6.1">apply_toml_string</text></a><path d="M393.6,-18.7C380.5,-20.5 366.7,-22.4 354,-24.2"/><polygon fill="#8a93a5" points="353.9,-21.7 347.3,-25.1 354.6,-26.6"/><a href="../proc/page_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="407" y="-239.6" width="89.6" height="21.6"/><text x="451.8" y="-224.1">page_source</text></a><path d="M406.6,-228.8C393.3,-228.8 378.5,-228.8 364.4,-228.8"/><polygon fill="#8a93a5" points="364.8,-226.4 357.8,-228.8 364.8,-231.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="589.8" y="-239.6" width="54" height="21.6"/><text x="616.8" y="-224.1" fill="white">...</text><path stroke-dasharray="5,2" d="M589.6,-228.8C566.9,-228.8 533.4,-228.8 505.2,-228.8"/><polygon fill="#8a93a5" points="505.6,-226.4 498.6,-228.8 505.6,-231.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> parse_bool(text, <span class="k">value</span>, ok)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(out) :: <span class="k">value</span>           <span class="d">!! the value</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(out) :: ok              <span class="d">!! false if `text` is neither</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: low
+
+    low = lowercase(text)
+    ok = low == <span class="s">'true'</span> <span class="k">.or.</span> low == <span class="s">'false'</span>
+    <span class="k">value</span> = low == <span class="s">'true'</span>
+<span class="k">end</span> <span class="k">subroutine</span> parse_bool</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

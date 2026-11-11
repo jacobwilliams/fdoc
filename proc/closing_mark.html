@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>closing_mark &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_markdown.f90.html">fdoc_markdown.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_markdown.html">fdoc_markdown</a></div>
+<h1><span class="kind">subroutine</span>closing_mark<span class="attr attr-pure" title="Has no side effects">pure</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">pure</span> <span class="k">subroutine</span> closing_mark(<span class="intent attr-in" title="intent(in)">text</span>, <span class="intent attr-in" title="intent(in)">start</span>, <span class="intent attr-in" title="intent(in)">c</span>, <span class="intent attr-in" title="intent(in)">width</span>, <span class="intent attr-out" title="intent(out)">close</span>)</div>
+<div class="doc">
+<p>Find where emphasis of <code>width</code> marks <code>c</code> opened before <code>start</code> closes.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-text"><td class="name">text</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the text</p></td></tr>
+<tr id="variable-start"><td class="name">start</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>where its content starts</p></td></tr>
+<tr id="variable-c"><td class="name">c</td><td class="type">character(len=1)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p><code>*</code> or <code>_</code></p></td></tr>
+<tr id="variable-width"><td class="name">width</td><td class="type">integer</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>how many marks</p></td></tr>
+<tr id="variable-close"><td class="name">close</td><td class="type">integer</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>where the closing marks start, or 0</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/inline_emphasis.html">inline_emphasis</a></li></ul>
+<div class="graph"><svg width="333pt" height="190pt"
+ viewBox="0 0 333 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 185.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/closing_mark.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-181.6" width="91" height="21.6"/><text x="45.5" y="-166.1">closing_mark</text></a><a href="../proc/inline_emphasis.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127" y="-181.6" width="107.6" height="21.6"/><text x="180.8" y="-166.1">inline_emphasis</text></a><path d="M126.7,-170.8C117.9,-170.8 108.8,-170.8 100,-170.8"/><polygon fill="#8a93a5" points="100.2,-168.4 93.2,-170.8 100.2,-173.3"/><a href="../proc/inline.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="18.5" y="-101.6" width="54" height="21.6"/><text x="45.5" y="-86.1">inline</text></a><path d="M138.4,-156.4C134.5,-154.7 130.6,-152.8 127,-150.8 104.4,-138.4 81,-120.3 65.3,-107.2"/><polygon fill="#8a93a5" points="137.1,-158.5 144.5,-159 139,-154"/><polygon fill="#8a93a5" points="67.2,-105.6 60.3,-103 64,-109.3"/><a href="../proc/render_node~2.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="136.7" y="-141.6" width="88.1" height="21.6"/><text x="180.8" y="-126.1">render_node</text></a><path d="M142.3,-119.6C123,-113.8 99.6,-106.7 80.8,-101.1"/><polygon fill="#8a93a5" points="81.6,-98.8 74.2,-99.1 80.2,-103.5"/><a href="../proc/render_heading.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="128.1" y="-101.6" width="105.5" height="21.6"/><text x="180.8" y="-86.1">render_heading</text></a><path d="M127.9,-90.8C112.3,-90.8 95.5,-90.8 81.3,-90.8"/><polygon fill="#8a93a5" points="81.3,-88.4 74.3,-90.8 81.3,-93.3"/><a href="../proc/table_row.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="145.4" y="-61.6" width="70.8" height="21.6"/><text x="180.8" y="-46.1">table_row</text></a><path d="M145.1,-61.2C125.3,-67.2 100.5,-74.6 80.7,-80.5"/><polygon fill="#8a93a5" points="80,-78.2 74,-82.5 81.4,-82.9"/><a href="../proc/write_link.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="146.5" y="-21.6" width="68.6" height="21.6"/><text x="180.8" y="-6.1">write_link</text></a><path d="M146.2,-21.9C139.7,-24.5 133,-27.5 127,-30.8 104.4,-43.2 81,-61.3 65.3,-74.4"/><polygon fill="#8a93a5" points="64,-72.3 60.3,-78.6 67.2,-76"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="270.6" y="-141.6" width="54" height="21.6"/><text x="297.6" y="-126.1" fill="white">...</text><path stroke-dasharray="5,2" d="M270.3,-130.8C259.3,-130.8 246.2,-130.8 233.4,-130.8"/><polygon fill="#8a93a5" points="233.6,-128.4 226.6,-130.8 233.6,-133.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="270.6" y="-61.6" width="54" height="21.6"/><text x="297.6" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M270.3,-50.8C256.7,-50.8 239.9,-50.8 224.6,-50.8"/><polygon fill="#8a93a5" points="224.8,-48.4 217.8,-50.8 224.8,-53.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="270.6" y="-21.6" width="54" height="21.6"/><text x="297.6" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M270.3,-10.8C256.5,-10.8 239.4,-10.8 223.9,-10.8"/><polygon fill="#8a93a5" points="223.9,-8.4 216.9,-10.8 223.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">pure</span> <span class="k">subroutine</span> closing_mark(text, start, c, width, <span class="k">close</span>)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: text    <span class="d">!! the text</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: start            <span class="d">!! where its content starts</span>
+    <span class="k">character</span>, <span class="k">intent</span>(in) :: c              <span class="d">!! `*` or `_`</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(in) :: width            <span class="d">!! how many marks</span>
+    <span class="k">integer</span>, <span class="k">intent</span>(out) :: <span class="k">close</span>           <span class="d">!! where the closing marks start, or 0</span>
+    <span class="k">integer</span> :: k, run
+
+    <span class="k">close</span> = <span class="n">0</span>
+    k = start
+    <span class="k">do</span> <span class="k">while</span> (k &lt;= <span class="k">len</span>(text) - width + <span class="n">1</span>)
+        <span class="k">if</span> (text(k:k) == <span class="s">'\'</span>) <span class="k">then</span>
+            k = k + <span class="n">2</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (text(k:k) == <span class="s">'`'</span>) <span class="k">then</span>
+            run = <span class="k">index</span>(text(k + <span class="n">1</span>:), <span class="s">'`'</span>)
+            <span class="k">if</span> (run &gt; <span class="n">0</span>) k = k + run
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (text(k:k) /= c <span class="k">.or.</span> k == start) <span class="k">then</span>
+            k = k + <span class="n">1</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        run = <span class="k">verify</span>(text(k:)//<span class="s">' '</span>, c) - <span class="n">1</span>
+        <span class="c">! marks with blanks on both sides are ordinary text</span>
+        <span class="k">if</span> (run &lt;= <span class="n">3</span> <span class="k">.and.</span> <span class="k">scan</span>(text(k - <span class="n">1</span>:k - <span class="n">1</span>), <span class="s">' '</span>//NL) == <span class="n">1</span> <span class="k">.and.</span> &amp;
+            (k + run &gt; <span class="k">len</span>(text) <span class="k">.or.</span> <span class="k">scan</span>(text(<span class="k">min</span>(k + run, <span class="k">len</span>(text)):<span class="k">min</span>(k + run, <span class="k">len</span>(text))), <span class="s">' '</span>//NL) == <span class="n">1</span>)) <span class="k">then</span>
+            k = k + run
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">if</span> (run &gt;= width) <span class="k">then</span>
+            <span class="k">if</span> (c == <span class="s">'*'</span>) <span class="k">then</span>
+                <span class="k">close</span> = <span class="k">merge</span>(k, k + run - width, width == <span class="n">1</span>)
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="c">! `_` must not be followed by a word character</span>
+            <span class="k">if</span> (k + run &gt; <span class="k">len</span>(text)) <span class="k">then</span>
+                <span class="k">close</span> = k + run - width
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+            <span class="k">if</span> (<span class="k">index</span>(WORD_CHARS, text(k + run:k + run)) == <span class="n">0</span>) <span class="k">then</span>
+                <span class="k">close</span> = k + run - width
+                <span class="k">return</span>
+            <span class="k">end</span> <span class="k">if</span>
+        <span class="k">end</span> <span class="k">if</span>
+        k = k + run
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> closing_mark</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

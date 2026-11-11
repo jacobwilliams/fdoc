@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>unique_tag &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">subroutine</span>unique_tag</h1>
+<div class="sig"><span class="k">subroutine</span> unique_tag(<span class="intent attr-out" title="intent(out)">tag</span>)</div>
+<div class="doc">
+<p>A number, as text, that another run at the same time is very unlikely to get, for temporary names.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-tag"><td class="name">tag</td><td class="type">character(len=*)</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the number</p></td></tr>
+</tbody>
+</table>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/build_graphs.html">build_graphs</a></li><li><a href="../proc/load_external_project.html">load_external_project</a></li><li><a href="../proc/preprocess.html">preprocess</a></li></ul>
+<div class="graph"><svg width="656pt" height="110pt"
+ viewBox="0 0 656 110" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 105.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/unique_tag.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-61.6" width="78.7" height="21.6"/><text x="39.4" y="-46.1">unique_tag</text></a><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="139.7" y="-101.6" width="88.8" height="21.6"/><text x="184.1" y="-86.1">build_graphs</text></a><path d="M143,-79.6C125.8,-74.7 105.6,-69.1 87.8,-64.1"/><polygon fill="#8a93a5" points="88.6,-61.8 81.2,-62.2 87.2,-66.5"/><a href="../proc/preprocess.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="144.7" y="-61.6" width="78.7" height="21.6"/><text x="184.1" y="-46.1">preprocess</text></a><path d="M144.5,-50.8C127,-50.8 106.2,-50.8 87.8,-50.8"/><polygon fill="#8a93a5" points="88,-48.4 81,-50.8 88,-53.3"/><a href="../proc/load_external_project.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="114.7" y="-21.6" width="138.7" height="21.6"/><text x="184.1" y="-6.1">load_external_project</text></a><path d="M143,-22C125.8,-26.9 105.6,-32.5 87.8,-37.5"/><polygon fill="#8a93a5" points="87.2,-35.1 81.2,-39.4 88.6,-39.8"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="327.8" y="-101.6" width="69.3" height="21.6"/><text x="362.4" y="-86.1">write_site</text></a><path d="M327.4,-90.8C301.8,-90.8 266.3,-90.8 237.1,-90.8"/><polygon fill="#8a93a5" points="237.2,-88.4 230.2,-90.8 237.2,-93.3"/><a href="../proc/load_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="319.8" y="-61.6" width="85.2" height="21.6"/><text x="362.4" y="-46.1">load_source</text></a><path d="M319.6,-50.8C293.3,-50.8 259.3,-50.8 232.1,-50.8"/><polygon fill="#8a93a5" points="232.4,-48.4 225.4,-50.8 232.4,-53.3"/><a href="../proc/add_external_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="289.4" y="-21.6" width="145.9" height="21.6"/><text x="362.4" y="-6.1">add_external_modules</text></a><path d="M289.2,-10.8C280.3,-10.8 271.2,-10.8 262.3,-10.8"/><polygon fill="#8a93a5" points="262.3,-8.4 255.3,-10.8 262.3,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="487.7" y="-101.6" width="54" height="21.6"/><text x="514.7" y="-86.1">run</text></a><path d="M487.5,-90.8C465,-90.8 432,-90.8 405.8,-90.8"/><polygon fill="#8a93a5" points="406,-88.4 399,-90.8 406,-93.3"/><a href="../proc/read_source.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="471.4" y="-61.6" width="86.7" height="21.6"/><text x="514.7" y="-46.1">read_source</text></a><path d="M471,-50.8C453.2,-50.8 432.4,-50.8 413.8,-50.8"/><polygon fill="#8a93a5" points="413.9,-48.4 406.9,-50.8 413.9,-53.3"/><a href="../proc/correlate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="482.2" y="-21.6" width="65" height="21.6"/><text x="514.7" y="-6.1">correlate</text></a><path d="M481.8,-10.8C470.6,-10.8 457.5,-10.8 444.1,-10.8"/><polygon fill="#8a93a5" points="444.3,-8.4 437.3,-10.8 444.3,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="594.1" y="-61.6" width="54" height="21.6"/><text x="621.1" y="-46.1" fill="white">...</text><path stroke-dasharray="5,2" d="M593.7,-50.8C585.4,-50.8 575.9,-50.8 566.5,-50.8"/><polygon fill="#8a93a5" points="566.8,-48.4 559.8,-50.8 566.8,-53.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> unique_tag(tag)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(out) :: tag    <span class="d">!! the number</span>
+    <span class="k">integer</span>(int64) :: clock
+    <span class="k">real</span> :: random
+
+    <span class="k">call</span> random_init(repeatable=<span class="k">.false.</span>, image_distinct=<span class="k">.true.</span>)
+    <span class="k">call</span> <span class="k">random_number</span>(random)
+    <span class="k">call</span> <span class="k">system_clock</span>(clock)
+    <span class="k">write</span> (tag, <span class="s">'(i0,a,i0)'</span>) <span class="k">mod</span>(clock, <span class="n">1000000000_int64</span>), <span class="s">'-'</span>, <span class="k">int</span>(random*<span class="n">1.0e9</span>)
+<span class="k">end</span> <span class="k">subroutine</span> unique_tag</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

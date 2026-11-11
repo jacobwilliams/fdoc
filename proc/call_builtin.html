@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>call_builtin &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_fypp.f90.html">fdoc_fypp.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_fypp.html">fdoc_fypp</a></div>
+<h1><span class="kind">subroutine</span>call_builtin<span class="attr attr-recursive" title="May call itself">recursive</span><span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">recursive</span> <span class="k">subroutine</span> call_builtin(<span class="intent attr-inout" title="intent(inout)">c</span>, <span class="intent attr-in" title="intent(in)">name</span>, <span class="intent attr-in" title="intent(in)">args</span>, <span class="intent attr-out" title="intent(out)">v</span>)</div>
+<div class="doc">
+<p>A builtin function: <code>defined</code>, <code>dict</code>, <code>len</code>, <code>list</code>, <code>range</code>, <code>reversed</code>, <code>str</code>, <code>zip</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-c"><td class="name">c</td><td class="type">type(<a href="../type/fypp_t.html">fypp_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the state</p></td></tr>
+<tr id="variable-name"><td class="name">name</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the function</p></td></tr>
+<tr id="variable-args"><td class="name">args</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the arguments</p></td></tr>
+<tr id="variable-v"><td class="name">v</td><td class="type">type(<a href="../type/value_t.html">value_t</a>)</td><td><span class="attr attr-out">out</span></td><td class="attributes"></td><td><p>the result</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/find_name.html">find_name</a></li><li><a href="../proc/lookup.html">lookup</a></li><li><a href="../proc/make_bool.html">make_bool</a></li><li><a href="../proc/make_int.html">make_int</a></li><li><a href="../proc/items_of.html">items_of</a></li><li><a href="../proc/copy_items.html">copy_items</a></li><li><a href="../proc/write_value.html">write_value</a></li><li><a href="../proc/take.html">take</a></li><li><a href="../proc/make_string.html">make_string</a></li><li><a href="../proc/make_range.html">make_range</a></li><li><a href="../proc/make_zip.html">make_zip</a></li><li><a href="../proc/fail.html">fail</a></li></ul>
+<div class="graph"><svg width="499pt" height="425pt"
+ viewBox="0 0 499 425" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 420.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/call_builtin.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-219.6" width="75.1" height="21.6"/><text x="37.6" y="-204.1">call_builtin</text></a><a href="../proc/find_name.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="116.9" y="-416.6" width="75.1" height="21.6"/><text x="154.4" y="-401.1">find_name</text></a><path d="M40.3,-220.3C45.6,-251 63.8,-335.9 111.1,-385.8 112.5,-387.3 114.1,-388.7 115.7,-390"/><polygon fill="#8a93a5" points="114,-391.8 121.2,-393.7 116.8,-387.8"/><a href="../proc/lookup.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127.4" y="-376.6" width="54" height="21.6"/><text x="154.4" y="-361.1">lookup</text></a><path d="M41.9,-220.3C49.8,-245.9 72.2,-308.6 111.1,-345.8 113.7,-348.3 116.6,-350.5 119.7,-352.4"/><polygon fill="#8a93a5" points="118.5,-354.6 125.8,-355.9 120.9,-350.3"/><a href="../proc/make_bool.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="115.4" y="-336.6" width="78" height="21.6"/><text x="154.4" y="-321.1">make_bool</text></a><path d="M45.7,-220.4C57.5,-239 82.8,-276 111.1,-300.8 115,-304.2 119.4,-307.4 123.9,-310.3"/><polygon fill="#8a93a5" points="122.3,-312.2 129.6,-313.7 124.9,-308"/><a href="../proc/make_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="242.8" y="-267.6" width="67.1" height="21.6"/><text x="276.4" y="-252.1">make_int</text></a><path d="M47.9,-220.2C60.5,-234.5 84.5,-258.3 111.1,-267.8 151.4,-282.1 200.6,-276 234.7,-268.4"/><polygon fill="#8a93a5" points="234.8,-270.8 241.1,-266.9 233.7,-266.1"/><a href="../proc/items_of.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="122.7" y="-140.6" width="63.5" height="21.6"/><text x="154.4" y="-125.1">items_of</text></a><path d="M50.9,-197.1C64.8,-184.5 88.4,-164.1 111.1,-149.8 113.9,-148 116.8,-146.3 119.9,-144.7"/><polygon fill="#8a93a5" points="120.9,-146.9 126,-141.6 118.7,-142.6"/><a href="../proc/copy_items.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="236.3" y="-141.6" width="80.1" height="21.6"/><text x="276.4" y="-126.1">copy_items</text></a><path d="M155.4,-90.8C172.2,-85.4 215.2,-102.5 244.8,-116"/><polygon fill="#8a93a5" points="243.7,-118.2 251.1,-118.9 245.7,-113.7"/><a href="../proc/write_value.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="114.4" y="-61.6" width="80.2" height="21.6"/><text x="154.4" y="-46.1">write_value</text></a><path d="M42.5,-197.3C51.5,-172.7 75.4,-114.3 111.1,-76.8 114.7,-73 118.9,-69.6 123.3,-66.5"/><polygon fill="#8a93a5" points="124.5,-68.7 129,-62.9 121.8,-64.6"/><a href="../proc/take.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="127.4" y="-21.6" width="54" height="21.6"/><text x="154.4" y="-6.1">take</text></a><path d="M40.3,-197.2C45.5,-166.4 63.6,-81 111.1,-30.8 113.7,-28.1 116.7,-25.7 120,-23.6"/><polygon fill="#8a93a5" points="121,-25.8 125.9,-20.2 118.6,-21.5"/><a href="../proc/make_string.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="233.8" y="-101.6" width="85.2" height="21.6"/><text x="276.4" y="-86.1">make_string</text></a><path d="M44.4,-197.2C55.2,-177 79.8,-135.1 111.1,-109.8 127.1,-96.8 133.8,-97.2 153.4,-90.8"/><path d="M155.4,-90.8C177.5,-83.7 203,-82.7 224.8,-83.9"/><polygon fill="#8a93a5" points="224.6,-86.4 231.8,-84.4 225,-81.5"/><a href="../proc/make_range.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="111.1" y="-258.6" width="86.7" height="21.6"/><text x="154.4" y="-243.1">make_range</text></a><path d="M73,-220.5C85.4,-224.7 99.5,-229.5 112.3,-233.8"/><polygon fill="#8a93a5" points="111.3,-236.1 118.7,-236 112.9,-231.5"/><a href="../proc/make_zip.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="119.4" y="-180.6" width="70" height="21.6"/><text x="154.4" y="-165.1">make_zip</text></a><path d="M73,-197.1C85.4,-192.9 99.5,-188.1 112.3,-183.8"/><polygon fill="#8a93a5" points="112.9,-186.1 118.7,-181.6 111.3,-181.5"/><a href="../proc/fail.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="249.4" y="-209.6" width="54" height="21.6"/><text x="276.4" y="-194.1">fail</text></a><path d="M76.1,-207.2C121.3,-205.3 196.7,-202.1 240.7,-200.3"/><polygon fill="#8a93a5" points="240.6,-202.7 247.5,-200 240.4,-197.8"/><path d="M186.6,-130.1C199.2,-130.2 213.9,-130.3 227.7,-130.4"/><polygon fill="#8a93a5" points="227.6,-132.9 234.7,-130.5 227.7,-128"/><path d="M186.6,-119.7C200.8,-115 217.8,-109.5 233.1,-104.5"/><polygon fill="#8a93a5" points="233.6,-107 239.5,-102.5 232.1,-102.3"/><path d="M180.3,-140.9C186.1,-143.7 192.2,-146.7 197.8,-149.8 216.5,-160.1 236.9,-173 252.1,-183"/><polygon fill="#8a93a5" points="250.6,-185 257.8,-186.9 253.3,-180.9"/><a href="../proc/copy_value.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="none" rx="7.2" x="355" y="-141.6" width="136.5" height="21.6"/><text x="451.4" y="-126.1" fill="white">copy_value</text></a><a href="../type/value_t.html" fill="white" stroke="none"><path fill="#a15c00" stroke="none" d="M362.2,-141.6H411.3V-120H362.2A7.2,7.2 0 0 1 355,-127.2V-134.4A7.2,7.2 0 0 1 362.2,-141.6Z"/><text x="383.1" y="-126.1" fill="white">value_t</text></a><path d="M316.6,-130.8C325.8,-130.8 336,-130.8 346.3,-130.8"/><polygon fill="#8a93a5" points="346,-133.3 353,-130.8 346,-128.4"/><a href="../proc/add.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="249.4" y="-61.6" width="54" height="21.6"/><text x="276.4" y="-46.1">add</text></a><path d="M194.7,-50.8C209.6,-50.8 226.3,-50.8 240.7,-50.8"/><polygon fill="#8a93a5" points="240.4,-53.3 247.4,-50.8 240.4,-48.4"/><a href="../proc/int_text.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="248.2" y="-21.6" width="56.3" height="21.6"/><text x="276.4" y="-6.1">int_text</text></a><path d="M189.2,-39.6C205.1,-34.2 224.2,-27.9 240.3,-22.5"/><polygon fill="#8a93a5" points="240.6,-25 246.5,-20.4 239.1,-20.3"/><path d="M198.1,-251C209.8,-251.9 222.4,-252.8 234.1,-253.7"/><polygon fill="#8a93a5" points="233.6,-256.1 240.8,-254.2 234,-251.2"/><path d="M183,-236.6C200.4,-229.4 223,-220.2 241.6,-212.6"/><polygon fill="#8a93a5" points="242.3,-215 247.8,-210.1 240.4,-210.4"/><path d="M189.8,-178.1C205.8,-182 224.9,-186.6 240.9,-190.5"/><polygon fill="#8a93a5" points="240.2,-192.8 247.5,-192.1 241.3,-188"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/evaluate_call.html">evaluate_call</a></li></ul>
+<div class="graph"><svg width="541pt" height="390pt"
+ viewBox="0 0 541 390" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 385.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/call_builtin.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-201.6" width="75.1" height="21.6"/><text x="37.6" y="-186.1">call_builtin</text></a><a href="../proc/evaluate_call.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="111.1" y="-201.6" width="90.3" height="21.6"/><text x="156.2" y="-186.1">evaluate_call</text></a><path d="M110.8,-190.8C102.2,-190.8 93.2,-190.8 84.5,-190.8"/><polygon fill="#8a93a5" points="84.5,-188.4 77.5,-190.8 84.5,-193.3"/><a href="../proc/evaluate.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="237.4" y="-201.6" width="63.5" height="21.6"/><text x="269.2" y="-186.1">evaluate</text></a><path d="M237,-190.8C228.6,-190.8 219.4,-190.8 210.2,-190.8"/><polygon fill="#8a93a5" points="210.4,-188.4 203.4,-190.8 210.4,-193.3"/><a href="../proc/fypp_process.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="344.2" y="-381.6" width="91.7" height="21.6"/><text x="390" y="-366.1">fypp_process</text></a><path d="M349.4,-359.6C344.8,-357.2 340.6,-354.3 336.9,-350.8 296.3,-311.3 279.3,-243.3 273.2,-210.2"/><polygon fill="#8a93a5" points="275.6,-209.8 272,-203.3 270.8,-210.6"/><a href="../proc/compare.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="357.5" y="-341.6" width="65" height="21.6"/><text x="390" y="-326.1">compare</text></a><path d="M357,-322.5C349.9,-319.6 342.7,-315.8 336.9,-310.8 305.1,-283.1 285.3,-236.4 276.2,-210.1"/><polygon fill="#8a93a5" points="278.5,-209.4 274,-203.5 273.9,-210.9"/><a href="../proc/evaluate_slice.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="341.6" y="-301.6" width="96.8" height="21.6"/><text x="390" y="-286.1">evaluate_slice</text></a><path d="M352.5,-279.5C347,-277.1 341.7,-274.2 336.9,-270.8 313.4,-253.9 293.2,-226.9 281.3,-209"/><polygon fill="#8a93a5" points="283.5,-207.7 277.6,-203.2 279.3,-210.4"/><a href="../proc/run_clause.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="351" y="-261.6" width="78" height="21.6"/><text x="390" y="-246.1">run_clause</text></a><path d="M357.3,-239.6C350.5,-236.9 343.4,-233.9 336.9,-230.8 322.2,-223.6 306.5,-214.3 294,-206.4"/><polygon fill="#8a93a5" points="295.5,-204.5 288.3,-202.8 292.9,-208.6"/><a href="../proc/evaluate_fstring.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="336.9" y="-221.6" width="106.2" height="21.6"/><text x="390" y="-206.1">evaluate_fstring</text></a><path d="M336.5,-202C327.5,-200.4 318.2,-198.9 309.6,-197.4"/><polygon fill="#8a93a5" points="310,-195 302.7,-196.3 309.2,-199.9"/><a href="../proc/evaluate_args.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="342" y="-181.6" width="96.1" height="21.6"/><text x="390" y="-166.1">evaluate_args</text></a><path d="M341.7,-178.8C331.1,-180.5 319.9,-182.4 309.7,-184.2"/><polygon fill="#8a93a5" points="309.3,-181.7 302.8,-185.3 310.1,-186.6"/><a href="../proc/call_method.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="347.8" y="-141.6" width="84.5" height="21.6"/><text x="390" y="-126.1">call_method</text></a><path d="M357.3,-142C350.5,-144.7 343.4,-147.7 336.9,-150.8 322.2,-158 306.5,-167.3 294,-175.2"/><polygon fill="#8a93a5" points="292.9,-173 288.3,-178.8 295.5,-177.1"/><a href="../proc/render_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="346" y="-101.6" width="88.1" height="21.6"/><text x="390" y="-86.1">render_node</text></a><path d="M352.5,-102.1C347,-104.5 341.7,-107.4 336.9,-110.8 313.4,-127.7 293.2,-154.7 281.3,-172.6"/><polygon fill="#8a93a5" points="279.3,-171.2 277.6,-178.4 283.5,-173.9"/><a href="../proc/render_loop.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="348.1" y="-61.6" width="83.8" height="21.6"/><text x="390" y="-46.1">render_loop</text></a><path d="M350.6,-62C345.7,-64.4 341,-67.3 336.9,-70.8 305.1,-98.5 285.3,-145.2 276.2,-171.5"/><polygon fill="#8a93a5" points="273.9,-170.7 274,-178.1 278.5,-172.2"/><a href="../proc/define_macro.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="343.4" y="-21.6" width="93.2" height="21.6"/><text x="390" y="-6.1">define_macro</text></a><path d="M349.4,-22C344.8,-24.4 340.6,-27.3 336.9,-30.8 296.3,-70.3 279.3,-138.3 273.2,-171.4"/><polygon fill="#8a93a5" points="270.8,-171 272,-178.3 275.6,-171.8"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="479.1" y="-381.6" width="54" height="21.6"/><text x="506.1" y="-366.1" fill="white">...</text><path stroke-dasharray="5,2" d="M478.7,-370.8C468.4,-370.8 456.2,-370.8 444.3,-370.8"/><polygon fill="#8a93a5" points="444.6,-368.4 437.6,-370.8 444.6,-373.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="479.1" y="-181.6" width="54" height="21.6"/><text x="506.1" y="-166.1" fill="white">...</text><path stroke-dasharray="5,2" d="M478.7,-170.8C469.1,-170.8 457.9,-170.8 446.8,-170.8"/><polygon fill="#8a93a5" points="446.9,-168.4 439.9,-170.8 446.9,-173.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="479.1" y="-101.6" width="54" height="21.6"/><text x="506.1" y="-86.1" fill="white">...</text><path stroke-dasharray="5,2" d="M478.7,-90.8C468,-90.8 455.2,-90.8 442.8,-90.8"/><polygon fill="#8a93a5" points="442.8,-88.4 435.8,-90.8 442.8,-93.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">recursive</span> <span class="k">subroutine</span> call_builtin(c, name, args, v)
+    <span class="k">type</span>(fypp_t), <span class="k">intent</span>(inout) :: c            <span class="d">!! the state</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: name        <span class="d">!! the function</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(in) :: args(:)        <span class="d">!! the arguments</span>
+    <span class="k">type</span>(value_t), <span class="k">intent</span>(out) :: v             <span class="d">!! the result</span>
+    <span class="k">type</span>(value_t), <span class="k">allocatable</span> :: list(:)
+    <span class="k">type</span>(buffer_t) :: b
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: text
+    <span class="k">logical</span> :: found
+    <span class="k">type</span>(value_t) :: unused
+    <span class="k">integer</span> :: k, j, n, id
+
+    <span class="k">select</span> <span class="k">case</span> (name)
+    <span class="k">case</span> (<span class="s">'defined'</span>)
+        id = find_name(c, args(<span class="n">1</span>)%text)
+        found = <span class="k">.false.</span>
+        <span class="k">if</span> (id &gt; <span class="n">0</span>) <span class="k">call</span> lookup(c, id, unused, found)
+        <span class="k">call</span> make_bool(found, v)
+    <span class="k">case</span> (<span class="s">'len'</span>)
+        <span class="k">if</span> (args(<span class="n">1</span>)%<span class="k">kind</span> == V_STR) <span class="k">then</span>
+            <span class="k">call</span> make_int(<span class="k">len</span>(args(<span class="n">1</span>)%text), v)
+        <span class="k">else</span>
+            <span class="k">call</span> items_of(c, args(<span class="n">1</span>), list)
+            <span class="k">if</span> (<span class="k">.not.</span> <span class="k">allocated</span>(c%error)) <span class="k">call</span> make_int(<span class="k">size</span>(list), v)
+        <span class="k">end</span> <span class="k">if</span>
+    <span class="k">case</span> (<span class="s">'list'</span>)
+        v%<span class="k">kind</span> = V_LIST
+        <span class="k">call</span> items_of(c, args(<span class="n">1</span>), v%items)
+    <span class="k">case</span> (<span class="s">'reversed'</span>)
+        <span class="k">call</span> items_of(c, args(<span class="n">1</span>), list)
+        <span class="k">if</span> (<span class="k">allocated</span>(c%error)) <span class="k">return</span>
+        v%<span class="k">kind</span> = V_LIST
+        <span class="k">call</span> copy_items(list(<span class="k">size</span>(list):<span class="n">1</span>:-<span class="n">1</span>), v%items)
+    <span class="k">case</span> (<span class="s">'str'</span>)
+        <span class="k">call</span> write_value(args(<span class="n">1</span>), <span class="k">.false.</span>, b)
+        <span class="k">call</span> take(b, text)
+        <span class="k">call</span> make_string(text, v)
+    <span class="k">case</span> (<span class="s">'range'</span>)
+        <span class="k">call</span> make_range(c, args, v)
+    <span class="k">case</span> (<span class="s">'zip'</span>)
+        <span class="k">call</span> make_zip(c, args, v)
+    <span class="k">case</span> (<span class="s">'dict'</span>)
+        <span class="k">if</span> (args(<span class="n">1</span>)%<span class="k">kind</span> == V_DICT) <span class="k">then</span>
+            v = args(<span class="n">1</span>)
+            <span class="k">return</span>
+        <span class="k">end</span> <span class="k">if</span>
+        <span class="k">call</span> items_of(c, args(<span class="n">1</span>), list)
+        <span class="k">if</span> (<span class="k">allocated</span>(c%error)) <span class="k">return</span>
+        v%<span class="k">kind</span> = V_DICT
+        n = <span class="k">size</span>(list)
+        <span class="k">allocate</span> (v%items(<span class="n">2</span>*n))
+        <span class="k">do</span> k = <span class="n">1</span>, n
+            <span class="k">do</span> j = <span class="n">1</span>, <span class="n">2</span>
+                v%items(<span class="n">2</span>*(k - <span class="n">1</span>) + j) = list(k)%items(j)
+            <span class="k">end</span> <span class="k">do</span>
+        <span class="k">end</span> <span class="k">do</span>
+    <span class="k">case</span> default
+        <span class="k">call</span> fail(c, <span class="s">'the function '</span>//name//<span class="s">' is not supported'</span>)
+    <span class="k">end</span> <span class="k">select</span>
+<span class="k">end</span> <span class="k">subroutine</span> call_builtin</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

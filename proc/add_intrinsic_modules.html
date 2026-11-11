@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>add_intrinsic_modules &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_settings.f90.html">fdoc_settings.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_settings.html">fdoc_settings</a></div>
+<h1><span class="kind">subroutine</span>add_intrinsic_modules<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> add_intrinsic_modules(<span class="intent attr-inout" title="intent(inout)">s</span>)</div>
+<div class="doc">
+<p>Add the modules that come with compilers and common libraries to <code>extra_mods</code>.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/add_entry.html">add_entry</a></li></ul>
+<div class="graph"><svg width="260pt" height="30pt"
+ viewBox="0 0 260 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_intrinsic_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="143.8" height="21.6"/><text x="71.9" y="-6.1">add_intrinsic_modules</text></a><a href="../proc/add_entry.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="179.8" y="-21.6" width="72.2" height="21.6"/><text x="215.9" y="-6.1">add_entry</text></a><path d="M144.7,-10.8C153.7,-10.8 162.7,-10.8 171,-10.8"/><polygon fill="#8a93a5" points="171,-13.3 178,-10.8 171,-8.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/check_settings.html">check_settings</a></li></ul>
+<div class="graph"><svg width="378pt" height="30pt"
+ viewBox="0 0 378 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/add_intrinsic_modules.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="143.8" height="21.6"/><text x="71.9" y="-6.1">add_intrinsic_modules</text></a><a href="../proc/check_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="179.8" y="-21.6" width="100.4" height="21.6"/><text x="229.9" y="-6.1">check_settings</text></a><path d="M179.6,-10.8C171.1,-10.8 162.1,-10.8 153,-10.8"/><polygon fill="#8a93a5" points="153.3,-8.4 146.3,-10.8 153.3,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="316.1" y="-21.6" width="54" height="21.6"/><text x="343.1" y="-6.1">run</text></a><path d="M315.8,-10.8C307.5,-10.8 298.1,-10.8 288.6,-10.8"/><polygon fill="#8a93a5" points="288.7,-8.4 281.7,-10.8 288.7,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> add_intrinsic_modules(s)
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(inout) :: s    <span class="d">!! the settings</span>
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: WIKI = <span class="s">'http://fortranwiki.org/fortran/show/'</span>
+
+    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'iso_fortran_env'</span>, WIKI//<span class="s">'iso_fortran_env'</span>)
+    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'iso_c_binding'</span>, WIKI//<span class="s">'iso_c_binding'</span>)
+    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'ieee_arithmetic'</span>, WIKI//<span class="s">'ieee_arithmetic'</span>)
+    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'ieee_exceptions'</span>, WIKI//<span class="s">'IEEE+arithmetic'</span>)
+    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'ieee_features'</span>, WIKI//<span class="s">'IEEE+arithmetic'</span>)
+    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'openacc'</span>, &amp;
+                   <span class="s">'https://www.openacc.org/sites/default/files/inline-images/Specification/OpenACC.3.0.pdf#page=85'</span>)
+    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'omp_lib'</span>, <span class="s">'https://www.openmp.org/spec-html/5.1/openmpch3.html#x156-1890003'</span>)
+    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'mpi'</span>, <span class="s">'http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node410.htm'</span>)
+    <span class="k">call</span> add_entry(s%extra_mods, <span class="s">'mpi_f08'</span>, <span class="s">'http://www.mpi-forum.org/docs/mpi-3.1/mpi31-report/node409.htm'</span>)
+<span class="k">end</span> <span class="k">subroutine</span> add_intrinsic_modules</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

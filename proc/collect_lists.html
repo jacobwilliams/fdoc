@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>collect_lists &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_site.f90.html">fdoc_site.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_site.html">fdoc_site</a></div>
+<h1><span class="kind">subroutine</span>collect_lists<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> collect_lists(<span class="intent attr-inout" title="intent(inout)">site</span>)</div>
+<div class="doc">
+<p>The members of each list page, in the order of the <code>sort</code> setting.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-site"><td class="name">site</td><td class="type">type(<a href="../type/site_t.html">site_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"></td><td><p>the site</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/list_of.html">list_of</a></li><li><a href="../proc/push_int.html">push_int</a></li><li><a href="../proc/sort_ids.html">sort_ids</a></li></ul>
+<div class="graph"><svg width="547pt" height="150pt"
+ viewBox="0 0 547 150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 145.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/collect_lists.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-101.6" width="80.9" height="21.6"/><text x="40.4" y="-86.1">collect_lists</text></a><a href="../proc/list_of.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="121.6" y="-141.6" width="54" height="21.6"/><text x="148.6" y="-126.1">list_of</text></a><path d="M72.7,-102.6C85.5,-107.4 100.3,-113 113.4,-117.9"/><polygon fill="#8a93a5" points="112.4,-120.1 119.8,-120.3 114.1,-115.6"/><a href="../proc/push_int.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="116.9" y="-101.6" width="63.5" height="21.6"/><text x="148.6" y="-86.1">push_int</text></a><path d="M81.6,-90.8C90.2,-90.8 99.3,-90.8 108,-90.8"/><polygon fill="#8a93a5" points="107.9,-93.3 114.9,-90.8 107.9,-88.4"/><a href="../proc/sort_ids.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="118.7" y="-61.6" width="59.9" height="21.6"/><text x="148.6" y="-46.1">sort_ids</text></a><path d="M72.7,-79C84.6,-74.6 98.2,-69.4 110.5,-64.8"/><polygon fill="#8a93a5" points="111.3,-67.1 117,-62.3 109.6,-62.5"/><a href="../proc/has_page.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="224" y="-141.6" width="71.5" height="21.6"/><text x="259.7" y="-126.1">has_page</text></a><path d="M176.1,-130.8C187.7,-130.8 201.8,-130.8 215,-130.8"/><polygon fill="#8a93a5" points="215,-133.3 222,-130.8 215,-128.4"/><a href="../proc/sorts_before.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="216.4" y="-61.6" width="86.7" height="21.6"/><text x="259.7" y="-46.1">sorts_before</text></a><path d="M178.9,-50.8C187.9,-50.8 198,-50.8 208,-50.8"/><polygon fill="#8a93a5" points="207.8,-53.3 214.8,-50.8 207.8,-48.4"/><a href="../proc/entity_url.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="360.4" y="-141.6" width="67.1" height="21.6"/><text x="394" y="-126.1">entity_url</text></a><path d="M295.8,-130.8C313.1,-130.8 334,-130.8 352,-130.8"/><polygon fill="#8a93a5" points="351.5,-133.3 358.5,-130.8 351.5,-128.4"/><a href="../proc/starts_with.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="355.7" y="-101.6" width="76.5" height="21.6"/><text x="394" y="-86.1">starts_with</text></a><path d="M297.9,-62C313.6,-66.8 331.9,-72.3 348.2,-77.3"/><polygon fill="#8a93a5" points="347.2,-79.5 354.6,-79.2 348.6,-74.8"/><a href="../proc/permission_rank.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="339.1" y="-61.6" width="109.8" height="21.6"/><text x="394" y="-46.1">permission_rank</text></a><path d="M303.3,-50.8C312,-50.8 321.3,-50.8 330.5,-50.8"/><polygon fill="#8a93a5" points="330.4,-53.3 337.4,-50.8 330.4,-48.4"/><a href="https://jacobwilliams.github.io/fformat/proc/lowercase.html" fill="white" stroke="none"><rect fill="#646d7e" rx="7.2" x="357.5" y="-21.6" width="72.9" height="21.6"/><text x="394" y="-6.1">lowercase</text></a><path d="M297.9,-39.6C313.9,-34.7 332.8,-29 349.4,-24"/><polygon fill="#8a93a5" points="350,-26.4 356,-22 348.6,-21.7"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="484.9" y="-141.6" width="54" height="21.6"/><text x="511.9" y="-126.1" fill="white">...</text><path stroke-dasharray="5,2" d="M427.9,-130.8C443,-130.8 460.9,-130.8 476.3,-130.8"/><polygon fill="#8a93a5" points="476,-133.3 483,-130.8 476,-128.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/write_site.html">write_site</a></li></ul>
+<div class="graph"><svg width="284pt" height="30pt"
+ viewBox="0 0 284 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/collect_lists.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="80.9" height="21.6"/><text x="40.4" y="-6.1">collect_lists</text></a><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="116.9" y="-21.6" width="69.3" height="21.6"/><text x="151.5" y="-6.1">write_site</text></a><path d="M116.6,-10.8C108.3,-10.8 99.2,-10.8 90.3,-10.8"/><polygon fill="#8a93a5" points="90.4,-8.4 83.4,-10.8 90.4,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="222.2" y="-21.6" width="54" height="21.6"/><text x="249.2" y="-6.1">run</text></a><path d="M221.8,-10.8C213.4,-10.8 203.9,-10.8 194.7,-10.8"/><polygon fill="#8a93a5" points="194.9,-8.4 187.9,-10.8 194.9,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> collect_lists(site)
+    <span class="k">type</span>(site_t), <span class="k">intent</span>(inout) :: site     <span class="d">!! the site</span>
+    <span class="k">integer</span> :: k, which
+
+    <span class="k">allocate</span> (site%members(NUM_LISTS))
+    <span class="k">do</span> which = <span class="n">1</span>, NUM_LISTS
+        <span class="k">allocate</span> (site%members(which)%ids(<span class="n">0</span>))
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">do</span> k = <span class="n">1</span>, site%p%list%n
+        which = list_of(site, k)
+        <span class="k">if</span> (which &gt; <span class="n">0</span>) <span class="k">call</span> push_int(site%members(which)%ids, k)
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="k">do</span> which = <span class="n">1</span>, NUM_LISTS
+        <span class="k">call</span> sort_ids(site, site%members(which)%ids)
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">subroutine</span> collect_lists</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

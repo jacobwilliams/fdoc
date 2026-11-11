@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>draw_some &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_graphs.f90.html">fdoc_graphs.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_graphs.html">fdoc_graphs</a></div>
+<h1><span class="kind">subroutine</span>draw_some<span class="attr attr-private">private</span></h1>
+<div class="sig"><span class="k">subroutine</span> draw_some(<span class="intent attr-in" title="intent(in)">p</span>, <span class="intent attr-in" title="intent(in)">s</span>, <span class="intent attr-in" title="intent(in)">relations</span>, <span class="intent attr-in" title="intent(in)">jobs</span>, <span class="intent attr-in" title="intent(in)">keep</span>, <span class="intent attr-inout" title="intent(inout)">drawings</span>, <span class="intent attr-inout" title="intent(inout)">descriptions</span>, <span class="intent attr-inout" title="intent(inout)">failed</span>)</div>
+<div class="doc">
+<p>The share of <a href="../proc/draw_graphs.html">draw_graphs</a> of one thread, with working space of its own.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-p"><td class="name">p</td><td class="type">type(<a href="../type/project_t.html">project_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the project</p></td></tr>
+<tr id="variable-s"><td class="name">s</td><td class="type">type(<a href="../type/settings_t.html">settings_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the settings</p></td></tr>
+<tr id="variable-relations"><td class="name">relations</td><td class="type">type(<a href="../type/adjacency_t.html">adjacency_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(NUM_RELATIONS)</span></td><td><p>the relations</p></td></tr>
+<tr id="variable-jobs"><td class="name">jobs</td><td class="type">type(<a href="../type/graph_job_t.html">graph_job_t</a>)</td><td><span class="attr attr-in">in</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the graphs</p></td></tr>
+<tr id="variable-keep"><td class="name">keep</td><td class="type">logical</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>whether to give the descriptions too</p></td></tr>
+<tr id="variable-drawings"><td class="name">drawings</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the drawing of each graph</p></td></tr>
+<tr id="variable-descriptions"><td class="name">descriptions</td><td class="type">type(<a href="https://jacobwilliams.github.io/fformat/type/string_t.html">string_t</a>)</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>the description of each graph, with <code>keep</code></p></td></tr>
+<tr id="variable-failed"><td class="name">failed</td><td class="type">logical</td><td><span class="attr attr-inout">inout</span></td><td class="attributes"><span class="attr attr-dimension">dimension(:)</span></td><td><p>whether the layout of each graph failed</p></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/draw_graph.html">draw_graph</a></li><li><a href="../proc/progress_tick.html">progress_tick</a></li></ul>
+<div class="graph"><svg width="576pt" height="190pt"
+ viewBox="0 0 576 190" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 185.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/draw_some.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-81.6" width="81.6" height="21.6"/><text x="40.8" y="-66.1">draw_some</text></a><a href="../proc/draw_graph.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="121.9" y="-101.6" width="83.1" height="21.6"/><text x="163.5" y="-86.1">draw_graph</text></a><path d="M82.3,-77.5C92.2,-79.2 103,-80.9 113.3,-82.7"/><polygon fill="#8a93a5" points="112.6,-85 119.9,-83.8 113.4,-80.2"/><a href="../proc/progress_tick.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="117.6" y="-61.6" width="91.7" height="21.6"/><text x="163.5" y="-46.1">progress_tick</text></a><path d="M82.3,-64.1C90.9,-62.7 100.1,-61.1 109.1,-59.6"/><polygon fill="#8a93a5" points="109.3,-62.1 115.8,-58.5 108.5,-57.3"/><a href="../proc/describe_graph.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="245.3" y="-121.6" width="104" height="21.6"/><text x="297.3" y="-106.1">describe_graph</text></a><path d="M205.4,-97C215.4,-98.5 226.1,-100.2 236.7,-101.8"/><polygon fill="#8a93a5" points="236.3,-104.2 243.6,-102.8 237.1,-99.3"/><a href="../proc/write_line.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="262.7" y="-21.6" width="69.3" height="21.6"/><text x="297.3" y="-6.1">write_line</text></a><path d="M201.5,-39.6C217.9,-34.6 237.2,-28.7 254.1,-23.6"/><polygon fill="#8a93a5" points="254.8,-26 260.8,-21.6 253.4,-21.3"/><a href="../proc/draw.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="270.3" y="-61.6" width="54" height="21.6"/><text x="297.3" y="-46.1">draw</text></a><path d="M209.5,-50.8C226.5,-50.8 245.5,-50.8 261.5,-50.8"/><polygon fill="#8a93a5" points="261.4,-53.3 268.4,-50.8 261.4,-48.4"/><a href="../proc/grow_edges.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="388.9" y="-181.6" width="85.2" height="21.6"/><text x="431.5" y="-166.1">grow_edges</text></a><path d="M322.3,-121.9C339.7,-130 364,-141.2 385.3,-150.8 389.2,-152.6 393.3,-154.4 397.4,-156.2"/><polygon fill="#8a93a5" points="396.4,-158.4 403.8,-159 398.4,-154"/><a href="../proc/add_node.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="395.4" y="-141.6" width="72.2" height="21.6"/><text x="431.5" y="-126.1">add_node</text></a><path d="M349.8,-118.6C362.2,-120.5 375.3,-122.4 387.2,-124.2"/><polygon fill="#8a93a5" points="386.5,-126.6 393.8,-125.2 387.3,-121.8"/><a href="../proc/add_edge.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="395.4" y="-101.6" width="72.2" height="21.6"/><text x="431.5" y="-86.1">add_edge</text></a><path d="M349.8,-103C362.2,-101.1 375.3,-99.2 387.2,-97.4"/><polygon fill="#8a93a5" points="387.3,-99.8 393.8,-96.4 386.5,-95"/><a href="../proc/bar_text.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="400.9" y="-61.6" width="61.4" height="21.6"/><text x="431.5" y="-46.1">bar_text</text></a><path d="M332.4,-21.1C350.8,-26.7 373.7,-33.6 392.8,-39.4"/><polygon fill="#8a93a5" points="391.8,-41.6 399.2,-41.3 393.2,-36.9"/><a href="../proc/progress_line.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="385.3" y="-21.6" width="92.4" height="21.6"/><text x="431.5" y="-6.1">progress_line</text></a><path d="M332.4,-10.8C345.9,-10.8 361.9,-10.8 376.9,-10.8"/><polygon fill="#8a93a5" points="376.6,-13.3 383.6,-10.8 376.6,-8.4"/><path d="M324.8,-50.8C344,-50.8 370.5,-50.8 392.1,-50.8"/><polygon fill="#8a93a5" points="391.9,-53.3 398.9,-50.8 391.9,-48.4"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="513.8" y="-141.6" width="54" height="21.6"/><text x="540.8" y="-126.1" fill="white">...</text><path stroke-dasharray="5,2" d="M467.9,-130.8C479.9,-130.8 493.3,-130.8 505.2,-130.8"/><polygon fill="#8a93a5" points="505.1,-133.3 512.1,-130.8 505.1,-128.4"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/draw_graphs.html">draw_graphs</a></li></ul>
+<div class="graph"><svg width="535pt" height="30pt"
+ viewBox="0 0 535 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/draw_some.html" fill="white" stroke="none"><rect fill="#1d7a55" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="81.6" height="21.6"/><text x="40.8" y="-6.1">draw_some</text></a><a href="../proc/draw_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="117.6" y="-21.6" width="89.6" height="21.6"/><text x="162.4" y="-6.1">draw_graphs</text></a><path d="M117.2,-10.8C108.5,-10.8 99.4,-10.8 90.6,-10.8"/><polygon fill="#8a93a5" points="90.8,-8.4 83.8,-10.8 90.8,-13.3"/><a href="../proc/build_graphs.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="243.2" y="-21.6" width="88.8" height="21.6"/><text x="287.6" y="-6.1">build_graphs</text></a><path d="M242.8,-10.8C234.1,-10.8 224.9,-10.8 215.9,-10.8"/><polygon fill="#8a93a5" points="215.9,-8.4 208.9,-10.8 215.9,-13.3"/><a href="../proc/write_site.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="368" y="-21.6" width="69.3" height="21.6"/><text x="402.7" y="-6.1">write_site</text></a><path d="M367.7,-10.8C359.2,-10.8 349.8,-10.8 340.5,-10.8"/><polygon fill="#8a93a5" points="340.6,-8.4 333.6,-10.8 340.6,-13.3"/><rect fill="#8a93a5" stroke="none" rx="7.2" x="473.3" y="-21.6" width="54" height="21.6"/><text x="500.3" y="-6.1" fill="white">...</text><path stroke-dasharray="5,2" d="M472.9,-10.8C464.5,-10.8 455,-10.8 445.8,-10.8"/><polygon fill="#8a93a5" points="446,-8.4 439,-10.8 446,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">subroutine</span> draw_some(p, s, relations, jobs, keep, drawings, descriptions, failed)
+    <span class="k">type</span>(project_t), <span class="k">intent</span>(in) :: p                    <span class="d">!! the project</span>
+    <span class="k">type</span>(settings_t), <span class="k">intent</span>(in) :: s                   <span class="d">!! the settings</span>
+    <span class="k">type</span>(adjacency_t), <span class="k">intent</span>(in) :: relations(NUM_RELATIONS)   <span class="d">!! the relations</span>
+    <span class="k">type</span>(graph_job_t), <span class="k">intent</span>(in) :: jobs(:)            <span class="d">!! the graphs</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(in) :: keep                         <span class="d">!! whether to give the descriptions too</span>
+    <span class="k">type</span>(string_t), <span class="k">intent</span>(inout) :: drawings(:)        <span class="d">!! the drawing of each graph</span>
+    <span class="k">type</span>(string_t), <span class="k">intent</span>(inout) :: descriptions(:)    <span class="d">!! the description of each graph, with `keep`</span>
+    <span class="k">logical</span>, <span class="k">intent</span>(inout) :: failed(:)                 <span class="d">!! whether the layout of each graph failed</span>
+    <span class="k">type</span>(walk_t) :: w
+    <span class="k">integer</span> :: k
+
+    <span class="k">allocate</span> (w%marked(p%list%n), source=<span class="n">0</span>)
+    <span class="k">allocate</span> (w%places(p%list%n), w%queue(p%list%n), w%levels(p%list%n), w%from(<span class="n">1024</span>), w%to(<span class="n">1024</span>))
+    <span class="k">allocate</span> (w%more(p%list%n))
+    <span class="c">!$omp do schedule(dynamic)</span>
+    <span class="k">do</span> k = <span class="n">1</span>, <span class="k">size</span>(jobs)
+        <span class="k">call</span> draw_graph(p, s, relations(jobs(k)%relation), jobs(k), keep, w, drawings(k), descriptions(k), failed(k))
+        <span class="k">call</span> progress_tick()
+    <span class="k">end</span> <span class="k">do</span>
+    <span class="c">!$omp end do</span>
+<span class="k">end</span> <span class="k">subroutine</span> draw_some</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>

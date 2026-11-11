@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>strftime &ndash; fdoc</title>
+<meta name="author" content="Jacob Williams">
+<link rel="stylesheet" href="../css/fdoc.css">
+<script src="../js/fdoc.js"></script>
+<script defer src="../js/sidebar.js"></script>
+</head>
+<body>
+<header class="top">
+<a class="brand" href="../index.html">fdoc</a>
+<nav><a href="../lists/files.html">Source Files</a><a href="../lists/modules.html">Modules</a><a class="here" href="../lists/procedures.html">Procedures</a><a href="../lists/absint.html">Abstract Interfaces</a><a href="../lists/types.html">Derived Types</a><a href="../lists/names.html">Index</a></nav>
+<div class="search"><input type="search" placeholder="Search (/)" aria-label="Search"><div class="results"></div></div>
+<button class="theme" title="Change theme" aria-label="Change theme">&#9680;</button>
+</header>
+<div class="layout">
+<aside class="side">
+<h4>On this page</h4><ul><li><a href="#arguments">Arguments</a></li><li><a href="#result">Result</a></li><li><a href="#calls">Calls</a></li><li><a href="#source">Source</a></li></ul>
+<h4><a href="../lists/files.html">Source Files</a></h4><h4><a href="../lists/modules.html">Modules</a></h4><h4><a href="../lists/procedures.html">Procedures</a></h4><ul data-list="procedures"></ul>
+<h4><a href="../lists/absint.html">Abstract Interfaces</a></h4><h4><a href="../lists/types.html">Derived Types</a></h4></aside>
+<main><div class="inner">
+<div class="crumbs"><a href="../sourcefile/fdoc_util.f90.html">fdoc_util.f90</a> <span class="sep">&rsaquo;</span> <a href="../module/fdoc_util.html">fdoc_util</a></div>
+<h1><span class="kind">function</span>strftime</h1>
+<div class="sig">character(len=:) <span class="k">function</span> strftime(<span class="intent attr-in" title="intent(in)">format</span>) <span class="k">result</span>(out)</div>
+<div class="doc">
+<p>The current local time in a <code>strftime</code> format.</p>
+</div>
+<h2 id="arguments">Arguments</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Intent</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-format"><td class="name">format</td><td class="type">character(len=*)</td><td><span class="attr attr-in">in</span></td><td class="attributes"></td><td><p>the format</p></td></tr>
+</tbody>
+</table>
+<h2 id="result">Result</h2>
+<table class="arguments">
+<thead><tr><th>Name</th><th>Type</th><th>Attributes</th><th>Description</th></tr></thead>
+<tbody>
+<tr id="variable-out"><td class="name">out</td><td class="type">character(len=:)</td><td class="attributes"><span class="attr attr-private">private</span><span class="attr attr-allocatable">allocatable</span></td><td></td></tr>
+</tbody>
+</table>
+<h2 id="calls">Calls</h2>
+<ul class="chips"><li><a href="../proc/day_of_year.html">day_of_year</a></li><li><a href="../proc/weekday.html">weekday</a></li></ul>
+<div class="graph"><svg width="187pt" height="70pt"
+ viewBox="0 0 187 70" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 65.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/strftime.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-41.6" width="57" height="21.6"/><text x="28.5" y="-26.1">strftime</text></a><a href="../proc/day_of_year.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="93" y="-61.6" width="86" height="21.6"/><text x="136" y="-46.1">day_of_year</text></a><path d="M57.8,-36.2C66,-37.7 75.2,-39.5 84.4,-41.2"/><polygon fill="#8a93a5" points="83.9,-43.6 91.3,-42.5 84.8,-38.8"/><a href="../proc/weekday.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="103.1" y="-21.6" width="65.7" height="21.6"/><text x="136" y="-6.1">weekday</text></a><path d="M57.8,-25.4C69.1,-23.3 82.3,-20.8 94.6,-18.5"/><polygon fill="#8a93a5" points="95,-20.9 101.4,-17.2 94.1,-16.1"/></g>
+</svg>
+</div>
+<h2 id="called-by">Called by</h2>
+<ul class="chips"><li><a href="../proc/finish_settings.html">finish_settings</a></li></ul>
+<div class="graph"><svg width="288pt" height="30pt"
+ viewBox="0 0 288 30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="scale(1 1) rotate(0) translate(4 25.6)" fill="none" stroke="#8a93a5" font-family="Helvetica,sans-Serif" font-size="13" text-anchor="middle"><a href="../proc/strftime.html" fill="white" stroke="none"><rect fill="#0b7285" stroke="#f0a868" stroke-width="2" rx="7.2" x="0" y="-21.6" width="57" height="21.6"/><text x="28.5" y="-6.1">strftime</text></a><a href="../proc/finish_settings.html" fill="white" stroke="none"><rect fill="#1d7a55" rx="7.2" x="93" y="-21.6" width="96.8" height="21.6"/><text x="141.4" y="-6.1">finish_settings</text></a><path d="M92.7,-10.8C83.9,-10.8 74.9,-10.8 66.4,-10.8"/><polygon fill="#8a93a5" points="66.4,-8.4 59.4,-10.8 66.4,-13.3"/><a href="../proc/run.html" fill="white" stroke="none"><rect fill="#0b7285" rx="7.2" x="225.8" y="-21.6" width="54" height="21.6"/><text x="252.8" y="-6.1">run</text></a><path d="M225.3,-10.8C217.1,-10.8 207.7,-10.8 198.3,-10.8"/><polygon fill="#8a93a5" points="198.5,-8.4 191.5,-10.8 198.5,-13.3"/></g>
+</svg>
+</div>
+<h2 id="source">Source</h2>
+<details class="source"><summary>Show the code</summary><pre><code><span class="k">function</span> strftime(<span class="k">format</span>) <span class="k">result</span>(out)
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">intent</span>(in) :: <span class="k">format</span>  <span class="d">!! the format</span>
+    <span class="k">character</span>(<span class="k">len</span>=:), <span class="k">allocatable</span> :: out
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: MONTHS(<span class="n">12</span>) = [<span class="k">character</span>(<span class="k">len</span>=<span class="n">9</span>) :: <span class="s">'January'</span>, <span class="s">'February'</span>, <span class="s">'March'</span>, <span class="s">'April'</span>, <span class="s">'May'</span>, <span class="s">'June'</span>, &amp;
+                                                 <span class="s">'July'</span>, <span class="s">'August'</span>, <span class="s">'September'</span>, <span class="s">'October'</span>, <span class="s">'November'</span>, <span class="s">'December'</span>]
+    <span class="k">character</span>(<span class="k">len</span>=*), <span class="k">parameter</span> :: DAYS(<span class="n">0</span>:<span class="n">6</span>) = [<span class="k">character</span>(<span class="k">len</span>=<span class="n">9</span>) :: <span class="s">'Sunday'</span>, <span class="s">'Monday'</span>, <span class="s">'Tuesday'</span>, <span class="s">'Wednesday'</span>, <span class="s">'Thursday'</span>, &amp;
+                                                <span class="s">'Friday'</span>, <span class="s">'Saturday'</span>]
+    <span class="k">character</span>(<span class="k">len</span>=<span class="n">32</span>) :: buf
+    <span class="k">integer</span> :: t(<span class="n">8</span>), i, off, yday, wday
+    <span class="k">character</span> :: c
+
+    <span class="k">call</span> <span class="k">date_and_time</span>(values=t)
+    yday = day_of_year(t(<span class="n">1</span>), t(<span class="n">2</span>), t(<span class="n">3</span>))
+    wday = weekday(t(<span class="n">1</span>), t(<span class="n">2</span>), t(<span class="n">3</span>))
+    out = <span class="s">''</span>
+    i = <span class="n">1</span>
+    <span class="k">do</span> <span class="k">while</span> (i &lt;= <span class="k">len</span>(<span class="k">format</span>))
+        c = <span class="k">format</span>(i:i)
+        <span class="k">if</span> (c /= <span class="s">'%'</span> <span class="k">.or.</span> i == <span class="k">len</span>(<span class="k">format</span>)) <span class="k">then</span>
+            out = out//c
+            i = i + <span class="n">1</span>
+            <span class="k">cycle</span>
+        <span class="k">end</span> <span class="k">if</span>
+        i = i + <span class="n">1</span>
+        c = <span class="k">format</span>(i:i)
+        i = i + <span class="n">1</span>
+        <span class="k">select</span> <span class="k">case</span> (c)
+        <span class="k">case</span> (<span class="s">'Y'</span>); <span class="k">write</span> (buf, <span class="s">'(i4.4)'</span>) t(<span class="n">1</span>)
+        <span class="k">case</span> (<span class="s">'y'</span>); <span class="k">write</span> (buf, <span class="s">'(i2.2)'</span>) <span class="k">mod</span>(t(<span class="n">1</span>), <span class="n">100</span>)
+        <span class="k">case</span> (<span class="s">'m'</span>); <span class="k">write</span> (buf, <span class="s">'(i2.2)'</span>) t(<span class="n">2</span>)
+        <span class="k">case</span> (<span class="s">'d'</span>); <span class="k">write</span> (buf, <span class="s">'(i2.2)'</span>) t(<span class="n">3</span>)
+        <span class="k">case</span> (<span class="s">'H'</span>); <span class="k">write</span> (buf, <span class="s">'(i2.2)'</span>) t(<span class="n">5</span>)
+        <span class="k">case</span> (<span class="s">'I'</span>); <span class="k">write</span> (buf, <span class="s">'(i2.2)'</span>) <span class="k">merge</span>(<span class="n">12</span>, <span class="k">mod</span>(t(<span class="n">5</span>), <span class="n">12</span>), <span class="k">mod</span>(t(<span class="n">5</span>), <span class="n">12</span>) == <span class="n">0</span>)
+        <span class="k">case</span> (<span class="s">'M'</span>); <span class="k">write</span> (buf, <span class="s">'(i2.2)'</span>) t(<span class="n">6</span>)
+        <span class="k">case</span> (<span class="s">'S'</span>); <span class="k">write</span> (buf, <span class="s">'(i2.2)'</span>) t(<span class="n">7</span>)
+        <span class="k">case</span> (<span class="s">'f'</span>); <span class="k">write</span> (buf, <span class="s">'(i6.6)'</span>) t(<span class="n">8</span>)*<span class="n">1000</span>
+        <span class="k">case</span> (<span class="s">'j'</span>); <span class="k">write</span> (buf, <span class="s">'(i3.3)'</span>) yday
+        <span class="k">case</span> (<span class="s">'p'</span>); buf = <span class="k">merge</span>(<span class="s">'AM'</span>, <span class="s">'PM'</span>, t(<span class="n">5</span>) &lt; <span class="n">12</span>)
+        <span class="k">case</span> (<span class="s">'B'</span>); buf = MONTHS(t(<span class="n">2</span>))
+        <span class="k">case</span> (<span class="s">'b'</span>); buf = MONTHS(t(<span class="n">2</span>)) (<span class="n">1</span>:<span class="n">3</span>)
+        <span class="k">case</span> (<span class="s">'A'</span>); buf = DAYS(wday)
+        <span class="k">case</span> (<span class="s">'a'</span>); buf = DAYS(wday) (<span class="n">1</span>:<span class="n">3</span>)
+        <span class="k">case</span> (<span class="s">'z'</span>)
+            off = <span class="k">abs</span>(t(<span class="n">4</span>))
+            <span class="k">write</span> (buf, <span class="s">'(a,i2.2,i2.2)'</span>) <span class="k">merge</span>(<span class="s">'+'</span>, <span class="s">'-'</span>, t(<span class="n">4</span>) &gt;= <span class="n">0</span>), off/<span class="n">60</span>, <span class="k">mod</span>(off, <span class="n">60</span>)
+        <span class="k">case</span> (<span class="s">'%'</span>); buf = <span class="s">'%'</span>
+        <span class="k">case</span> default; buf = <span class="s">'%'</span>//c
+        <span class="k">end</span> <span class="k">select</span>
+        out = out//<span class="k">trim</span>(buf)
+    <span class="k">end</span> <span class="k">do</span>
+<span class="k">end</span> <span class="k">function</span> strftime</code></pre></details>
+<footer>fdoc was developed by Jacob Williams. <a rel="license" href="https://opensource.org/licenses/MIT">MIT</a>. Documentation generated by <a href="https://github.com/jacobwilliams/fdoc">fdoc</a>.</footer>
+</div>
+</main>
+</div>
+</body>
+</html>
