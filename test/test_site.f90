@@ -26,7 +26,8 @@ subroutine collect_site(testsuite)
                  new_unittest("external project", test_external), &
                  new_unittest("where a type is used", test_type_uses), &
                  new_unittest("index and tree of types", test_index_tree), &
-                 new_unittest("command line before the checks", test_late_options)]
+                 new_unittest("command line before the checks", test_late_options), &
+                 new_unittest("private procedures bound to a public type", test_bound_private)]
 end subroutine collect_site
 
 !> Write a project with the setting `logo: small.svg` in `root`, and run fdoc on it.
@@ -311,5 +312,68 @@ subroutine test_late_options(error)
     call check(error, found, 'the file of an extension from the command line is read')
     call remove_directory(ROOT)
 end subroutine test_late_options
+
+!> Checks: a private procedure that a public type binds to has a page, which the binding links to, and
+!> the documentation of the body of a separate module procedure, in a submodule, is on the page of its
+!> interface; a private procedure reached only through a generic binding has a page too; one that is
+!> not bound stays hidden.
+subroutine test_bound_private(error)
+    type(error_type), allocatable, intent(out) :: error     !! the failure, if any
+    character(len=*), parameter :: ROOT = 'build/test site bound'
+    character(len=:), allocatable :: text, errmsg
+    type(string_t) :: args(2)
+    logical :: found
+    integer :: stat
+
+    call remove_directory(ROOT)
+    call make_directory(ROOT//'/src', stat)
+    call write_whole_file(ROOT//'/ford.md', 'project: bound'//NL//'src_dir: ./src'//NL//'output_dir: ./doc'//NL// &
+                          NL//'The project.'//NL, stat, errmsg)
+    call write_whole_file(ROOT//'/src/m.f90', &
+                          'module m'//NL//'private'//NL//'public :: ctx'//NL// &
+                          'type :: ctx'//NL//'contains'//NL//'procedure :: geo'//NL// &
+                          'procedure, private :: one'//NL//'generic :: both => one'//NL//'end type ctx'//NL// &
+                          'interface'//NL//'!> Summary of the interface.'//NL// &
+                          'module subroutine geo(self)'//NL//'class(ctx) :: self'//NL//'end subroutine geo'//NL// &
+                          'end interface'//NL//'contains'//NL// &
+                          '!> Only through the generic.'//NL//'subroutine one(self)'//NL//'class(ctx) :: self'//NL// &
+                          'end subroutine one'//NL// &
+                          'subroutine unbound()'//NL//'end subroutine unbound'//NL//'end module m'//NL, stat, errmsg)
+    call check(error, stat, 0, 'the module')
+    if (allocated(error)) return
+    call write_whole_file(ROOT//'/src/s.f90', &
+                          'submodule (m) s'//NL//'contains'//NL//'!> ## Details'//NL//'!>'//NL// &
+                          '!> Text of the body.'//NL//'module procedure geo'//NL//'end procedure geo'//NL// &
+                          'end submodule s'//NL, stat, errmsg)
+    call check(error, stat, 0, 'the submodule')
+    if (allocated(error)) return
+    args(1)%s = '-q'
+    args(2)%s = ROOT//'/ford.md'
+    call check(error, run(args), 0, 'the run')
+    if (allocated(error)) return
+    call read_whole_file(ROOT//'/doc/interface/geo.html', text, stat, errmsg)
+    call check(error, stat, 0, 'the page of the private interface')
+    if (allocated(error)) return
+    call check(error, index(text, 'Summary of the interface.') > 0, 'the documentation of the interface')
+    if (allocated(error)) return
+    call check(error, index(text, '<h2>Details</h2>') > 0 .and. index(text, 'Text of the body.') > 0, &
+               'the documentation of the body')
+    if (allocated(error)) return
+    call check(error, index(text, 'implemented in <a href="../module/s.html">s</a>') > 0, 'where the body is')
+    if (allocated(error)) return
+    call read_whole_file(ROOT//'/doc/type/ctx.html', text, stat, errmsg)
+    call check(error, stat, 0, 'the page of the type')
+    if (allocated(error)) return
+    call check(error, index(text, '<a href="../interface/geo.html">geo</a>') > 0, 'the binding links to the interface')
+    if (allocated(error)) return
+    call check(error, index(text, 'Summary of the interface.') > 0, 'the binding has the summary of the interface')
+    if (allocated(error)) return
+    inquire (file=ROOT//'/doc/proc/one.html', exist=found)
+    call check(error, found, 'a procedure reached through a generic binding')
+    if (allocated(error)) return
+    inquire (file=ROOT//'/doc/proc/unbound.html', exist=found)
+    call check(error, .not. found, 'a private procedure that is not bound')
+    call remove_directory(ROOT)
+end subroutine test_bound_private
 
 end module test_site

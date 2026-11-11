@@ -130,6 +130,7 @@ end function add
 * **Text after a `<`, as in `x<y`, is kept.** FORD's Markdown drops it.
 * **`externalize: false` is honored.** FORD's command line default overrides it.
 * **A few page URLs differ.** A generic interface named after its only procedure gets its own page in `interface/`, where FORD uses `proc/`, and that can shift the `~2` numbers of other pages with the same name.
+* **Private procedures that a shown type binds to are shown.** Whoever can see the type can call them through it, so each gets a page, which the binding links to. FORD lists the interface under the binding but gives it no page. The documentation of the body of a separate module procedure in a submodule that isn't shown goes on the page of its interface.
 * **Calls are found from tokens,** so fdoc finds a few that FORD's regular expressions miss.
 
 ## Benchmarks

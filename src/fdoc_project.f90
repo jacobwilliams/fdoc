@@ -7,7 +7,7 @@ module fdoc_project
 !!   A["load_project_sources: one list of entities"] --> B
 !!   B["correlate: modules from elsewhere, use statements, public names, inheritance"] --> C
 !!   C["link_project: implementations, calls, bindings, submodules"] --> D
-!!   D["prune: hide what is not displayed"]
+!!   D["prune: hide what is not displayed, but keep what a shown binding binds to"]
 !! ```
 !!
 !! Hiding comes last, so that names can still be found in what will not be shown.
@@ -20,6 +20,7 @@ use fdoc_input, only: find_sources, load_source, runs_command, expand_includes
 use fdoc_progress, only: progress_start, progress_tick, progress_finish, warn
 use fdoc_parser, only: parse_file
 use fdoc_shell, only: make_directory, quoted, quoted_path, run_command
+use fdoc_urls, only: is_shown
 implicit none
 private
 
@@ -789,7 +790,49 @@ subroutine prune(p, s)
             end associate
         end associate
     end do
+    call reveal_bound_procedures(p, s)
 end subroutine prune
+
+!> Show the procedures that shown bindings bind to, even if they are private: whoever can see the type
+!> can call them through it.
+subroutine reveal_bound_procedures(p, s)
+    type(project_t), intent(inout) :: p     !! the project
+    type(settings_t), intent(in) :: s       !! the settings
+    integer :: k, j, target
+
+    do k = 1, p%list%n
+        if (p%list%box(k)%e%kind /= E_BOUNDPROC) cycle
+        if (.not. is_shown(p%list, k)) cycle
+        if (.not. allocated(p%list%box(k)%e%more%binding_ids)) cycle
+        do j = 1, size(p%list%box(k)%e%more%binding_ids)
+            target = p%list%box(k)%e%more%binding_ids(j)
+            if (target == 0) cycle
+            if (p%list%box(k)%e%generic) then
+                ! a specific binding of a generic one, which may itself be private
+                if (p%list%box(target)%e%kind /= E_BOUNDPROC) cycle
+                if (.not. allocated(p%list%box(target)%e%more%binding_ids)) cycle
+                if (p%list%box(target)%e%generic .or. size(p%list%box(target)%e%more%binding_ids) /= 1) cycle
+                target = p%list%box(target)%e%more%binding_ids(1)
+                if (target == 0) cycle
+            end if
+            call reveal(target)
+        end do
+    end do
+contains
+    !> Show procedure `id`, unless it is hidden for having no documentation, or its parent is not shown.
+    subroutine reveal(id)
+        integer, intent(in) :: id   !! the procedure
+        associate (e => p%list%box(id)%e)
+            if (e%visible) return
+            if (.not. (is_procedure(e%kind) .or. e%kind == E_MODPROC)) return
+            if (s%hide_undoc .and. size(e%doc) == 0) return
+            if (e%parent > 0) then
+                if (.not. is_shown(p%list, e%parent)) return
+            end if
+            e%visible = .true.
+        end associate
+    end subroutine reveal
+end subroutine reveal_bound_procedures
 
 !> True if entities of `kind` are program units. The permission of a module is what its members get
 !> by default, so `display` says nothing about whether the module itself is shown.

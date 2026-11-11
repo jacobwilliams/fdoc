@@ -695,7 +695,7 @@ subroutine entity_title(site, id, word, b)
     integer, intent(in) :: id               !! the entity
     character(len=*), intent(in) :: word    !! what it is
     type(buffer_t), intent(inout) :: b      !! the HTML
-    integer :: k
+    integer :: k, body
     logical :: open
 
     associate (e => site%p%list%box(id)%e)
@@ -735,8 +735,32 @@ subroutine entity_title(site, id, word, b)
                 call add(b, achar(10)//'</div>'//achar(10))
             end if
         end if
+        body = hidden_body(site, id)
+        if (body > 0) then
+            if (allocated(site%p%list%box(body)%e%html)) then
+                if (len(site%p%list%box(body)%e%html) > 0) then
+                    call add(b, '<div class="doc">'//achar(10))
+                    call add(b, site%p%list%box(body)%e%html)
+                    call add(b, achar(10)//'</div>'//achar(10))
+                end if
+            end if
+        end if
     end associate
 end subroutine entity_title
+
+!> The body of the separate module procedure whose interface is `id`, if it has no page of its own, so
+!> that its documentation goes on the page of the interface; 0 otherwise.
+integer function hidden_body(site, id) result(body)
+    type(site_t), intent(in) :: site    !! the site
+    integer, intent(in) :: id           !! the entity
+
+    body = 0
+    associate (e => site%p%list%box(id)%e)
+        if (e%iface /= IFACE_EXPLICIT .or. e%implements <= 0) return
+        if (is_shown(site%p%list, e%implements)) return
+        body = e%implements
+    end associate
+end function hidden_body
 
 !> The name in the site of the file of the `logo` setting: `logo`, with its extension, or `''` if there
 !> is no such file.
@@ -1087,12 +1111,36 @@ subroutine binding_table(site, ids, b)
                 call badge(t%attribs(j)%s, b)
             end do
             call add(b, '</td><td>')
-            if (allocated(t%html)) call add(b, t%html)
+            call binding_description(site, ids(k), b)
             call add(b, '</td></tr>'//achar(10))
         end associate
     end do
     call add(b, '</tbody>'//achar(10)//'</table>'//achar(10))
 end subroutine binding_table
+
+!> Write the documentation of binding `id`, or else the summary of the one procedure it binds to.
+subroutine binding_description(site, id, b)
+    type(site_t), intent(in) :: site        !! the site
+    integer, intent(in) :: id               !! the binding
+    type(buffer_t), intent(inout) :: b      !! the HTML
+    integer :: target
+
+    associate (t => site%p%list%box(id)%e)
+        if (allocated(t%html)) then
+            if (len(t%html) > 0) then
+                call add(b, t%html)
+                return
+            end if
+        end if
+        if (t%generic .or. t%deferred .or. .not. allocated(t%more%binding_ids)) return
+        if (size(t%more%binding_ids) /= 1) return
+        target = t%more%binding_ids(1)
+        if (target == 0) return
+        if (.not. is_shown(site%p%list, target)) return
+        if (allocated(site%p%list%box(target)%e%summary)) call add(b, site%p%list%box(target)%e%summary)
+    end associate
+end subroutine binding_description
+
 
 !> Write the attributes of argument `e`.
 subroutine argument_attributes(e, b)
@@ -1721,6 +1769,8 @@ logical function uses_math(site, id)
 
     uses_math = has_math(site%p%list%box(id)%e)
     if (uses_math) return
+    if (hidden_body(site, id) > 0) uses_math = has_math(site%p%list%box(hidden_body(site, id))%e)
+    if (uses_math) return
     do k = 1, size(site%p%list%box(id)%e%children)
         uses_math = has_math(site%p%list%box(site%p%list%box(id)%e%children(k))%e)
         if (uses_math) return
@@ -1779,7 +1829,14 @@ subroutine procedure_body(site, id, b)
             call add(b, '<h2 id="result">Result</h2>'//achar(10))
             call argument_table(site, [e%result], .true., b)
         end if
-        if (e%implements > 0) then
+        if (hidden_body(site, id) > 0) then
+            ! the documentation of the body is on this page; say where the body is
+            call add(b, '<div class="meta"><span>implemented in ')
+            associate (unit => site%p%list%box(e%implements)%e%parent)
+                call link_to(site, unit, site%p%list%box(unit)%e%name, b)
+            end associate
+            call add(b, '</span></div>'//achar(10))
+        else if (e%implements > 0) then
             call add(b, '<div class="meta"><span>')
             call add(b, merge('implements  ', 'implemented ', e%kind == E_MODPROC))
             call link_to(site, e%implements, site%p%list%box(e%implements)%e%name, b)
